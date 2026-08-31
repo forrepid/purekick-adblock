@@ -143,6 +143,12 @@ Detaylı sürüm geçmişi ve versiyon bazlı değişiklikler için [CHANGELOG.m
 
 ---
 
+
+---
+
+## 🗺️ Yol Haritası (Roadmap)
+Gelecek sürümlerde eklenecek çoklu yayın (Multi-stream), 15-60s anlık geri sarma (Instant Replay), ses ekolayzırı, anket simülatörü ve planlanan tüm yenilikler için [ROADMAP.md](ROADMAP.md) dosyasını inceleyebilirsiniz.
+
 ## 🚀 Kurulum (Developer Mode)
 
 1. Bu depoyu indirin veya klonlayın:
@@ -159,3 +165,4 @@ Detaylı sürüm geçmişi ve versiyon bazlı değişiklikler için [CHANGELOG.m
 
 ## 📄 Lisans
 Bu proje özel mülkiyet altındadır (Proprietary). Detaylar için [LICENSE](LICENSE) dosyasına göz atabilirsiniz.
+
