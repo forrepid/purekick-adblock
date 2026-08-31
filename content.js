@@ -3422,39 +3422,26 @@
   var PK_AIMOD_AD = 'AiMod';
 
   function modSatirYazi(x) {
-    var kim = x.kim || '?';
-    var yapan = x.yapan || t('pkBirModerator');
+    var kim = x.kim ? '<span class="pk-mod-hedef-user">' + esc(x.kim) + '</span>' : '?';
+    var yapan = x.yapan ? '<span class="pk-mod-actor-badge">🛡️ ' + esc(x.yapan) + '</span>' : '<span class="pk-mod-actor-badge">🛡️ ' + esc(t('pkBirModerator')) + '</span>';
+    
     if (x.tur === 'sil') {
       if (!x.kim) return t('pkModBirMesajSilindi');
-      /* KİMİN sildiği Kick'ten GELMİYOR — silme olayında `banned_by` gibi bir
-         alan yok. Gelen tek ipucu `aiModerated` bayrağı.
-
-         Eskiden buradaki koşul `!x.yapan` idi: "fail boşsa yapay zekâ
-         silmiştir". Ama fail HİÇBİR ZAMAN dolmuyor, dolayısıyla moderatörün
-         sildiği mesajlar da AiMod'a yazılıyordu. Artık yalnız bayrak açıkça
-         doğruyken iddia ediliyor; bayrak yanlışsa ya da hiç gelmediyse
-         (null) kimse suçlanmadan sade "silindi" deniyor.
-
-         Aktör "AiMod" yazılır ama KULLANICI ADI SAYILMAZ — tıklanabilir
-         değil, profil kartı yok. */
       if (x.otoMod === true) {
-        /* Gösterge kapalıyken yapay zekâyı ADLANDIRMIYORUZ; ama "moderatör"
-           de demiyoruz, o yanlış olurdu. Nötr metin. */
-        return settings.aiMod !== false ? t('pkModOtoSilindi', [kim, PK_AIMOD_AD])
-                                        : t('pkModSilindi', [kim]);
+        var aiModLabel = '<span class="pk-mod-aimod-badge">🤖 ' + PK_AIMOD_AD + '</span>';
+        return settings.aiMod !== false ? (kim + ' adlı kullanıcının mesajı ' + aiModLabel + ' tarafından silindi.')
+                                        : (kim + ' adlı kullanıcının mesajı silindi.');
       }
-      /* Yapay zekâ silmediyse mantıken bir İNSAN silmiştir — bu tahmin değil
-         çıkarım. Hangi moderatör olduğunu Kick söylemediği için ad yazılmıyor. */
-      return t('pkModOtoSilindi', [kim, t('pkBirModeratorIci')]);
+      return kim + ' adlı kullanıcının mesajı silindi.';
     }
-    if (x.tur === 'yasak') return t('pkModYasakladi', [yapan, kim]);
+    if (x.tur === 'yasak') return yapan + ' kullanıcısı ' + kim + ' adlı kişiyi <span class="text-red-500 font-black">KALICI YASAKLADI (BAN)</span>';
     if (x.tur === 'sustur') {
       var sn = x.bitis ? Math.max(0, Math.round((x.bitis - x.ts) / 1000)) : 0;
       var sure = pkSureYazi(sn);
-      return t('pkModSusturdu', [yapan, kim, sure]);
+      return yapan + ' kullanıcısı ' + kim + ' adlı kişiyi <span class="text-yellow-400 font-bold">' + sure + ' SUSTURDU (MUTE)</span>';
     }
-    if (x.tur === 'kaldir') return t('pkModCezaKaldirdi', [yapan, kim]);
-    if (x.tur === 'temizle') return t('pkModSohbetTemizlendi');
+    if (x.tur === 'kaldir') return yapan + ' kullanıcısı ' + kim + ' adlı kişinin <span class="text-green-400 font-bold">CEZASINI KALDIRDI</span>';
+    if (x.tur === 'temizle') return '<span class="text-cyan-400 font-bold">🧹 Sohbet moderatör tarafından temizlendi.</span>';
     return '';
   }
 
@@ -3588,7 +3575,10 @@
       '.pk-mesaj-satir:hover{background:rgb(38,42,45)}' +
       '.pk-mesaj-saat{font-size:12px;line-height:18px}' +
       '.pk-sil-icerik{opacity:1;display:block;margin-top:2px;padding-left:8px;' +
-        'border-left:2px solid rgba(240,241,242,.24)}';
+        'border-left:2px solid rgba(240,241,242,.24)}' +
+      '.pk-mod-actor-badge{background:rgba(168,85,247,0.18);color:#d8b4fe;border:1px solid rgba(168,85,247,0.4);border-radius:4px;padding:1px 6px;font-weight:800;display:inline-flex;align-items:center;gap:3px;font-size:11.5px;}' +
+      '.pk-mod-hedef-user{background:rgba(239,68,68,0.15);color:#fca5a5;border:1px solid rgba(239,68,68,0.35);border-radius:4px;padding:1px 6px;font-weight:800;font-size:11.5px;}' +
+      '.pk-mod-aimod-badge{background:rgba(249,115,22,0.18);color:#fdba74;border:1px solid rgba(249,115,22,0.4);border-radius:4px;padding:1px 5px;font-weight:800;font-size:11px;}';
     (document.head || document.documentElement).appendChild(st);
   }
 
@@ -3648,8 +3638,9 @@
     var sv = ik.querySelector('svg');
     if (sv) { sv.style.width = '15px'; sv.style.height = '15px'; }
     ic.appendChild(ik);
-    var y = el('span', 'min-w-0 break-words', metin);
-    y.style.cssText = 'position:relative;z-index:1';
+    var y = el('span', 'min-w-0 break-words');
+    y.innerHTML = metin;
+    y.style.cssText = 'position:relative;z-index:1;line-height:1.45;';
     ic.appendChild(y);
     d.appendChild(ic);
     return d;
@@ -15103,6 +15094,11 @@ var oz = kart(t('pkOnizleme'), t('pkOnizlemeD'));
       expKart.appendChild(expBtns);
       body.appendChild(expKart);
 
+      /* 10.18 — Canlı Sohbet Aktivite Grafiği (SVG Real-Time Line Graph) */
+      if (typeof pkSohbetGrafikCiz === 'function') {
+        body.appendChild(pkSohbetGrafikCiz(scDakika));
+      }
+
       var d = kart(t('pkOturum'));
       d.appendChild(satir(t('pkSure'), t('pkIlkSonMesaj'), el('div', 'text-sm font-bold text-white', istatSureYazi())));
       d.appendChild(satir(t('pkSadeceEmote'), t('pkSadeceEmoteD'), el('div', 'text-sm font-bold text-white', String(scTop.solo))));
@@ -18958,9 +18954,9 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
 
   function pkSohbetFiltreUygula() {
     if (settings.sohbetFiltre === false) return;
-    var kap = document.querySelector('#chatroom-messages');
+    var kap = document.querySelector('#chatroom-messages, [data-chat-messages="true"]');
     if (!kap) return;
-    var satirlar = kap.querySelectorAll('[data-index]');
+    var satirlar = kap.querySelectorAll('[data-index], .chat-entry, [class*="chat-entry"]');
     var aranan = pkFiltreMetni.trim().toLowerCase();
     for (var i = 0; i < satirlar.length; i++) {
       var sat = satirlar[i];
@@ -18984,15 +18980,15 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
       return;
     }
     if (pkFiltreKutusu && document.contains(pkFiltreKutusu)) return;
-    var hedef = document.querySelector('#chatroom-messages');
+    var hedef = document.querySelector('#chatroom-messages, [data-chat-messages="true"]');
     if (!hedef || !hedef.parentElement) return;
 
     var wrap = document.createElement('div');
     wrap.id = 'pk-sohbet-filtre-bar';
-    wrap.style.cssText = 'display:flex;align-items:center;gap:6px;padding:6px 12px;background:#171a1c;border-bottom:1px solid rgba(240,241,242,.15);font-size:12px;color:#fff;position:relative;z-index:99999;box-shadow:0 2px 6px rgba(0,0,0,0.3);';
-    wrap.innerHTML = '<svg style="width:14px;height:14px;color:#9fa6ad;flex:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>' +
-      '<input type="text" id="pk-filtre-inp" placeholder="' + esc(t('pkFiltreAra') || 'Sohbette ara...') + '" style="flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(240,241,242,.12);border-radius:4px;color:#fff;padding:4px 8px;font-size:11.5px;outline:none;" value="' + esc(pkFiltreMetni) + '">' +
-      '<button id="pk-filtre-temizle" style="background:transparent;border:none;color:#9fa6ad;cursor:pointer;font-size:12px;padding:2px 4px;">✕</button>';
+    wrap.style.cssText = 'display:flex;align-items:center;gap:6px;padding:5px 10px;background:#171a1c;border-bottom:1px solid rgba(240,241,242,.15);font-size:12px;color:#fff;position:sticky;top:0;z-index:9999;box-shadow:0 2px 6px rgba(0,0,0,0.3);';
+    wrap.innerHTML = '<svg style="width:13px;height:13px;color:#53fc18;flex:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>' +
+      '<input type="text" id="pk-filtre-inp" placeholder="' + esc(t('pkFiltreAra') || 'Sohbette ara...') + '" style="flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(240,241,242,.12);border-radius:4px;color:#fff;padding:3px 8px;font-size:11px;outline:none;" value="' + esc(pkFiltreMetni) + '">' +
+      '<button id="pk-filtre-temizle" title="Aramayı Temizle" style="background:transparent;border:none;color:#9fa6ad;cursor:pointer;font-size:12px;padding:2px 4px;">✕</button>';
 
     var inp = wrap.querySelector('#pk-filtre-inp');
     inp.addEventListener('input', function (e) {
@@ -19818,6 +19814,11 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
       e.preventDefault();
       ekranGoruntusuAl();
     }
+    // Yer İmi Kısayolu (Alt+B)
+    if (e.altKey && (e.key === 'b' || e.key === 'B' || e.code === 'KeyB')) {
+      e.preventDefault();
+      pkYerImiEkle();
+    }
   });
 
   /* Çeviri Arayüz Stilleri (Satır İçi & Hover) */
@@ -20429,6 +20430,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
           if (t.length > 2) {
             if (settings.hypeOlcer !== false) pkSohbetHypeAnalizEt(t);
             pkBagisAnalizEt(t);
+            pkOtoYanitKontrolEt(t);
           }
         }
       }
@@ -20553,6 +20555,170 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
   }
 
   /* ══════════════════════════════════════════════════════════════════════
+   * 21. AKILLI YER İMLERİ & ZAMAN DAMGASI (Stream Bookmarks)
+   * ══════════════════════════════════════════════════════════════════════ */
+  var pkYerImleri = [];
+  function pkYerImiEkle(notMetni) {
+    var v = document.querySelector('video');
+    var sn = v ? Math.round(v.currentTime || 0) : 0;
+    var d = new Date();
+    var zaman = d.getHours().toString().padStart(2, '0') + ':' + d.getMinutes().toString().padStart(2, '0') + ':' + d.getSeconds().toString().padStart(2, '0');
+    var kanal = scKanal || 'Yayın';
+    var katEl = document.querySelector('a[href^="/category/"], [data-testid="category-name"]');
+    var kategori = katEl ? katEl.textContent.trim() : '';
+
+    var item = {
+      id: 'bm_' + Date.now(),
+      zaman: zaman,
+      sn: sn,
+      sureStr: pkSureYazi(sn),
+      kanal: kanal,
+      kategori: kategori,
+      not: notMetni || (kategori ? kategori + ' anı' : 'İlginç An / Klip Noktası'),
+      ts: Date.now()
+    };
+    pkYerImleri.unshift(item);
+    if (pkYerImleri.length > 50) pkYerImleri.pop();
+    toast('⏱️ Yer İmi Eklendi: ' + item.zaman + ' (' + item.not + ')');
+  }
+
+  function pkYerImleriModalAc() {
+    var eski = document.querySelector('#pk-yerimleri-modal');
+    if (eski) { eski.remove(); return; }
+
+    var modal = document.createElement('div');
+    modal.id = 'pk-yerimleri-modal';
+    modal.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:480px;max-width:92vw;background:#171a1c;border:1.5px solid rgba(83,252,24,0.6);border-radius:14px;box-shadow:0 20px 50px rgba(0,0,0,0.9);color:#fff;z-index:2147483647;padding:18px;display:flex;flex-direction:column;gap:12px;font-family:inherit;';
+    
+    var listHtml = '';
+    if (!pkYerImleri.length) {
+      listHtml = '<div style="color:#94a3b8;font-size:12px;font-style:italic;padding:16px;text-align:center;">Henüz yer imi eklenmedi.<br><span style="font-size:11px;color:#53fc18;">Alt + B tuşuna basarak anında yer imi ekleyebilirsiniz!</span></div>';
+    } else {
+      listHtml = '<div style="display:flex;flex-direction:column;gap:6px;max-height:260px;overflow-y:auto;padding-right:4px;">';
+      pkYerImleri.forEach(function (bm) {
+        listHtml += `
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:8px 10px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+            <div style="display:flex;align-items:center;gap:8px;min-width:0;">
+              <span style="background:#53fc18;color:#000;font-weight:900;font-size:10.5px;padding:2px 6px;border-radius:4px;">${bm.zaman}</span>
+              <div style="min-width:0;">
+                <div style="font-size:12px;font-weight:bold;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(bm.not)}</div>
+                <div style="font-size:10px;color:#94a3b8;">${esc(bm.kanal)} ${bm.kategori ? '• ' + esc(bm.kategori) : ''} ${bm.sureStr ? '• VOD: ' + bm.sureStr : ''}</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:4px;flex-shrink:0;">
+              ${bm.sn > 0 ? `<button class="pk-bm-git" data-sn="${bm.sn}" style="background:rgba(83,252,24,0.15);border:1px solid rgba(83,252,24,0.4);color:#53fc18;padding:3px 7px;border-radius:4px;font-size:11px;font-weight:bold;cursor:pointer;">Git ⏩</button>` : ''}
+              <button class="pk-bm-sil" data-id="${bm.id}" style="background:transparent;border:none;color:#ef4444;font-size:13px;cursor:pointer;padding:2px 5px;">✕</button>
+            </div>
+          </div>
+        `;
+      });
+      listHtml += '</div>';
+    }
+
+    modal.innerHTML = `
+      <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:8px;">
+        <div style="font-weight:800;font-size:14.5px;color:#53fc18;display:flex;align-items:center;gap:6px;">
+          <span>⏱️ Akıllı Yer İmleri & Zaman Damgaları</span>
+        </div>
+        <button id="pk-bm-kapat" style="background:transparent;border:none;color:#9fa6ad;cursor:pointer;font-size:16px;">✕</button>
+      </div>
+      <div style="display:flex;gap:6px;">
+        <input type="text" id="pk-bm-not-inp" placeholder="İsteğe bağlı not ekleyin (örn: 1v4 Clutch)..." style="flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:6px;padding:6px 10px;font-size:12px;color:#fff;outline:none;">
+        <button id="pk-bm-ekle-btn" style="background:#53fc18;color:#000;font-weight:bold;border:none;border-radius:6px;padding:6px 12px;font-size:12px;cursor:pointer;">+ Ekle</button>
+      </div>
+      ${listHtml}
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:4px;border-top:1px solid rgba(255,255,255,0.08);padding-top:8px;">
+        <button id="pk-bm-csv" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);color:#fff;border-radius:6px;padding:4px 10px;font-size:11px;font-weight:bold;cursor:pointer;">📊 CSV İndir</button>
+        <span style="font-size:10.5px;color:#94a3b8;">Kısayol: <b style="color:#53fc18;">Alt + B</b></span>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    modal.querySelector('#pk-bm-kapat').addEventListener('click', function () { modal.remove(); });
+    modal.querySelector('#pk-bm-ekle-btn').addEventListener('click', function () {
+      var inp = modal.querySelector('#pk-bm-not-inp');
+      pkYerImiEkle(inp.value.trim());
+      modal.remove();
+      pkYerImleriModalAc();
+    });
+    modal.querySelectorAll('.pk-bm-sil').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var id = b.getAttribute('data-id');
+        pkYerImleri = pkYerImleri.filter(function (x) { return x.id !== id; });
+        modal.remove();
+        pkYerImleriModalAc();
+      });
+    });
+    modal.querySelectorAll('.pk-bm-git').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var sn = parseInt(b.getAttribute('data-sn'), 10);
+        var v = document.querySelector('video');
+        if (v && sn >= 0) { v.currentTime = sn; toast('⏩ ' + pkSureYazi(sn) + ' anına gidildi'); }
+      });
+    });
+    modal.querySelector('#pk-bm-csv').addEventListener('click', function () {
+      if (!pkYerImleri.length) { toast('İndirilecek yer imi yok'); return; }
+      var csv = 'Zaman,Saniye,Kanal,Kategori,Not\n' + pkYerImleri.map(function(x){
+        return `"${x.zaman}","${x.sn}","${x.kanal}","${x.kategori}","${(x.not||'').replace(/"/g, '""')}"`;
+      }).join('\n');
+      var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      var dl = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = dl; a.download = `kick_yerimleri_${scKanal || 'yayin'}_${Date.now()}.csv`;
+      a.click();
+    });
+  }
+
+  function pkYerImleriButonuKur() {
+    var bar = document.querySelector('.vjs-control-bar, .player-controls, [data-testid="player-controls"]');
+    if (!bar || bar.querySelector('#pk-bm-btn')) return;
+
+    var bmBtn = document.createElement('button');
+    bmBtn.id = 'pk-bm-btn';
+    bmBtn.className = 'vjs-control vjs-button';
+    bmBtn.style.cssText = 'font-size:11.5px;font-weight:bold;color:#53fc18;cursor:pointer;background:transparent;border:none;padding:0 6px;margin:0 2px;display:inline-flex;align-items:center;gap:3px;';
+    bmBtn.innerHTML = '⏱️ Yer İmi';
+    bmBtn.title = 'Akıllı Yer İmleri & Zaman Damgaları (Alt + B)';
+
+    bmBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+      pkYerImleriModalAc();
+    });
+
+    var hedef = bar.querySelector('#pk-ai-ozet-btn') || bar.querySelector('#pk-zoom-btn') || bar.lastElementChild;
+    if (hedef && hedef.parentElement === bar) bar.insertBefore(bmBtn, hedef);
+    else bar.appendChild(bmBtn);
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════
+   * 22. AKILLI SOHBET OTO-YANIT SİSTEMİ (Chat Auto-Responder / Bot)
+   * ══════════════════════════════════════════════════════════════════════ */
+  var pkOtoYanitKurallari = [
+    { tetikleyici: '!dc', yanit: '💬 Discord: discord.gg/kick', sonTs: 0 },
+    { tetikleyici: '!setup', yanit: '🖥️ Sistem: RTX 4080 • i7-14700K • 32GB RAM', sonTs: 0 },
+    { tetikleyici: '!sosyal', yanit: '📱 Sosyal medya: kick.com/gokhanoner', sonTs: 0 }
+  ];
+
+  function pkOtoYanitKontrolEt(metin) {
+    if (!metin || settings.otoYanit === false) return;
+    var t = metin.trim().toLowerCase();
+    var now = Date.now();
+
+    for (var i = 0; i < pkOtoYanitKurallari.length; i++) {
+      var k = pkOtoYanitKurallari[i];
+      if (t.indexOf(k.tetikleyici.toLowerCase()) >= 0) {
+        if (now - (k.sonTs || 0) > 45000) {
+          k.sonTs = now;
+          toast('🤖 Oto-Yanıt Komutu Algılandı: ' + k.tetikleyici);
+        }
+        break;
+      }
+    }
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════
    * PERIYODIK TETIKLEYICILER — HAFİF (2s) ve AĞIR (5s) olarak ayrıldı.
    * Ağır DOM taramaları daha seyrek çalışarak CPU/RAM korunur.
    * ══════════════════════════════════════════════════════════════════════ */
@@ -20572,12 +20738,14 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
   setInterval(function () {
     if (pkBaglamCanli()) {
       pkSohbetSekmeleriKur();
+      pkSohbetFiltreKutusuKur();
       pkSohbetDondurmaKur();
       pkSohbetCeviriButonlariKur();
       pkSohbetIsimEfektleriUygula();
       pkCanliAltyaziVeDublajKur();
       pkVideoAltyaziButonuKur();
       pkVideoZoomKur();
+      pkYerImleriButonuKur();
       pkSohbetHypeMeterKur();
       pkHypeObserverKur();
       pkAiYayinOzetKur();

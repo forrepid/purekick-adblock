@@ -4,6 +4,26 @@ Bu doküman, PureKick eklentisinin tüm sürümlerindeki yenilikleri, hata düze
 
 ---
 
+## 🚀 [10.19.0] - 2026-09-01 (Mega Fonksiyonel Güncelleme)
+
+### ✨ Yeni Fonksiyonel Özellikler
+- **⏱️ Akıllı Zaman Damgası & Yer İmi Sistemi (Stream Bookmarks):**
+  - Yayın sırasında ilginç anları `Alt + B` kısayolu veya video kontrol çubuğundaki `[⏱️ Yer İmi]` butonuyla anında not alarak işaretleyebilme.
+  - Açılır panelde tüm yer imlerini listeleme, VOD izlerken tek tıkla o saniyeye zıplama (`⏩ Git`) ve yer imlerini `CSV` olarak dışa aktarma.
+- **📊 Canlı Sohbet Aktivite Grafiği (Real-Time Chat Activity Graph):**
+  - İstatistik panelinde son 20 dakikalık sohbet mesaj yoğunluğunu (`msg/dk`) çizen SVG canlı çizgi grafiği.
+  - Zirve anları (`🔥 Peak: 140 msg/dk`) otomatik algılanarak parlak sarı ibreyle işaretlenir.
+- **🤖 Akıllı Sohbet Kuralları & Kişisel Oto-Yanıt (Chat Auto-Responder):**
+  - Sohbette belirlenen tetikleyicilere (`!dc`, `!setup`, `!sosyal`) 45 saniyelik anti-spam korumasıyla otomatik hazır yanıt gönderme.
+
+### 🛠️ Kritik Düzeltmeler & İyileştirmeler
+- **🎙️ Canlı Altyazı Konumlandırma Düzeltildi:** Altyazı kutusunun video oynatıcı konteynerinde kaybolması engellendi, `position: relative` ve `bottom: 60px` ile oynatıcı üzerinde net şekilde görünmesi sağlandı.
+- **💰 Bağış & Kicks İstatistikleri İzolasyonu:** Bağış ve hediye abonelikler sekmesi `mesajlar` sekmesinden tamamen ayrı bağımsız bir bloğa dönüştürüldü.
+- **🔍 Sohbet Arama & Filtre Barı Odaklanması:** Filtre çubuğu genel sayfadan alınıp tam olarak aktif chatbox (`#chatroom-messages`) üzerine yapışkan (`sticky`) olarak entegre edildi.
+- **🛡️ Moderasyon Olayları & Kullanıcı Renklendirmesi:** Ban, susturma (Mute), link/mesaj silme olaylarında hedef kullanıcı isimleri (`pk-mod-hedef-user`) kırmızı/sarı etiketle, işlemi yapan moderatör isimleri ise mor/yeşil parıltılı rozetle (`pk-mod-actor-badge`) renklendirildi.
+
+---
+
 ## 🔧 [10.18.1] - 2026-08-31 (Hotfix — Bellek Sızıntısı & Performans)
 
 ### 🚨 Kritik Düzeltmeler (Memory Leak Fix)
