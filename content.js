@@ -15152,16 +15152,21 @@ var oz = kart(t('pkOnizleme'), t('pkOnizlemeD'));
       });
       e.appendChild(ek);
     }
-    body.appendChild(e);
+    if (istatSekme === 'mesajlar') {
+      body.appendChild(e);
 
-    var u = kart(t('pkEnCokEmoteKisi'), t('pkEnCokEmoteKisiD'));
-    var ul = istatSirala(scEmoteKisi, 'emote').filter(function (x) { return x.emote > 0; }).slice(0, 15);
-    if (!ul.length) u.appendChild(el('div', 'text-sm text-subtle', t('pkVeriYok')));
-    else {
-      var uk = el('div', 'flex flex-col gap-2');
-      ul.forEach(function (x, i) { uk.appendChild(istatSiraSatir(i + 1, x.ad, t('pkEmoteSayisi', [String(x.emote)]), t('pkSadeceEmoteEki', [String(x.solo)]))); });
-      u.appendChild(uk);
+      var u = kart(t('pkEnCokEmoteKisi'), t('pkEnCokEmoteKisiD'));
+      var ul = istatSirala(scEmoteKisi, 'emote').filter(function (x) { return x.emote > 0; }).slice(0, 15);
+      if (!ul.length) u.appendChild(el('div', 'text-sm text-subtle', t('pkVeriYok')));
+      else {
+        var uk = el('div', 'flex flex-col gap-2');
+        ul.forEach(function (x, i) { uk.appendChild(istatSiraSatir(i + 1, x.ad, t('pkEmoteSayisi', [String(x.emote)]), t('pkSadeceEmoteEki', [String(x.solo)]))); });
+        u.appendChild(uk);
+      }
+      body.appendChild(u);
+      return;
     }
+
     if (istatSekme === 'bagis') {
       var bk = kart('💰 Canlı Yayın Bağış, Kicks & Blerp İstatistikleri', 'Yayın boyunca gönderilen hediye abonelikler, Kicks bağışları ve sesli uyarılar.');
       
@@ -15186,22 +15191,15 @@ var oz = kart(t('pkOnizleme'), t('pkOnizlemeD'));
       `;
       bk.appendChild(bgGrid);
 
-      // En Çok Destek Olanlar (Lider Tablosu)
       var lidKutu = el('div', 'flex flex-col gap-2 mt-2');
       lidKutu.appendChild(el('div', 'text-sm font-bold text-white', '🏆 En Çok Destek Verenler (Lider Tablosu):'));
-      
       var bagisList = [];
-      for (var u in pkBagisVeri.bagiscilar) {
-        if (Object.prototype.hasOwnProperty.call(pkBagisVeri.bagiscilar, u)) {
-          bagisList.push(Object.assign({ ad: u }, pkBagisVeri.bagiscilar[u]));
+      for (var bKey in pkBagisVeri.bagiscilar) {
+        if (Object.prototype.hasOwnProperty.call(pkBagisVeri.bagiscilar, bKey)) {
+          bagisList.push(Object.assign({ ad: bKey }, pkBagisVeri.bagiscilar[bKey]));
         }
       }
-      bagisList.sort(function(a, b) {
-        var skorA = (a.giftSub * 100) + a.kicks + (a.blerp * 50);
-        var skorB = (b.giftSub * 100) + b.kicks + (b.blerp * 50);
-        return skorB - skorA;
-      });
-
+      bagisList.sort(function(a, b) { return ((b.giftSub*100)+b.kicks+(b.blerp*50)) - ((a.giftSub*100)+a.kicks+(a.blerp*50)); });
       if (!bagisList.length) {
         lidKutu.appendChild(el('div', 'text-xs text-subtle italic', 'Bu oturumda henüz bağış veya hediye abonelik kaydedilmedi.'));
       } else {
@@ -15225,10 +15223,8 @@ var oz = kart(t('pkOnizleme'), t('pkOnizlemeD'));
       }
       bk.appendChild(lidKutu);
 
-      // Canlı Bağış Akışı (Son 20 İşlem)
       var akisKutu = el('div', 'flex flex-col gap-2 mt-4');
       akisKutu.appendChild(el('div', 'text-sm font-bold text-white', '📜 Canlı Bağış & Hediye Akışı (Son Hareketler):'));
-      
       if (!pkBagisVeri.gecmis.length) {
         akisKutu.appendChild(el('div', 'text-xs text-subtle italic', 'Akış bekleniyor...'));
       } else {
@@ -15249,25 +15245,21 @@ var oz = kart(t('pkOnizleme'), t('pkOnizlemeD'));
       }
       bk.appendChild(akisKutu);
 
-      // CSV Olarak İndir Butonu
       var expBtn = el('button', 'mt-4 px-3 py-1.5 rounded bg-primary-base text-black font-bold text-xs hover:brightness-110 cursor-pointer self-start', '📊 Bağış Kayıtlarını CSV İndir');
       expBtn.addEventListener('click', function() {
         var csv = 'Zaman,Kullanici,Tur,Miktar,Detay\n' + pkBagisVeri.gecmis.map(function(x){
-          return `"${x.zaman}","${x.user}","${x.tip}","${x.miktar}","${(x.detay||'').replace(/"/g, '""')}"`;
+          return '"' + x.zaman + '","' + x.user + '","' + x.tip + '","' + x.miktar + '","' + (x.detay||'').replace(/"/g, '""') + '"';
         }).join('\n');
         var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-        var u = URL.createObjectURL(blob);
+        var dl = URL.createObjectURL(blob);
         var a = document.createElement('a');
-        a.href = u; a.download = `kick_bagislar_${scKanal || 'yayin'}_${Date.now()}.csv`;
+        a.href = dl; a.download = 'kick_bagislar_' + (scKanal || 'yayin') + '_' + Date.now() + '.csv';
         a.click();
       });
       bk.appendChild(expBtn);
-
       body.appendChild(bk);
       return;
     }
-
-    body.appendChild(u);
   }
 
   /* ══════════════════════════════════════════════════════════════════════
@@ -18640,12 +18632,20 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     if (!pkAltyaziBox || !document.contains(pkAltyaziBox) || pkAltyaziBox.parentElement !== playerContainer) {
       if (pkAltyaziBox) pkAltyaziBox.remove();
 
+      /* Kapsayıcıya position:relative yoksa ekle — absolute çocuk düzgün konumlansın */
+      var pcPos = window.getComputedStyle(playerContainer).position;
+      if (pcPos === 'static') playerContainer.style.position = 'relative';
+
       pkAltyaziBox = document.createElement('div');
       pkAltyaziBox.id = 'pk-canli-altyazi';
+      var konum = settings.altyaziKonum || 'alt';
+      var pozisyon = konum === 'ust' ? 'top: 12px !important;' : 'bottom: 60px !important;';
       pkAltyaziBox.style.cssText = `
         position: absolute !important;
         left: 50% !important;
+        ${pozisyon}
         transform: translateX(-50%) !important;
+        background: rgba(0, 0, 0, 0.82) !important;
         backdrop-filter: blur(8px) !important;
         text-align: center !important;
         padding: 8px 18px !important;
@@ -18658,6 +18658,9 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
         line-height: 1.45 !important;
         transition: all 0.2s ease !important;
         display: block !important;
+        font-size: ${settings.altyaziFontBoyut || 15}px !important;
+        color: ${settings.altyaziRenk || '#facc15'} !important;
+        font-weight: ${settings.altyaziKalinlik || 600} !important;
       `;
       playerContainer.appendChild(pkAltyaziBox);
 
