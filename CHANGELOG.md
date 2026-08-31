@@ -7,6 +7,11 @@ Bu doküman, PureKick eklentisinin tüm sürümlerindeki yenilikleri, hata düze
 ## 🚀 [10.19.0] - 2026-09-01 (Mega Fonksiyonel Güncelleme)
 
 ### ✨ Yeni Fonksiyonel Özellikler
+- **💰 Canlı Bağış, Kicks & Abonelik Takipçisi (Donation & Subs Audit):**
+  - Yayında gerçekleşen tüm bireysel abonelikler (`Abone`), hediye abonelikler (`Gift Sub`), `Kicks` bağışları, doğrudan para bağışları (`$ / € / ₺`) ve sesli uyarıları (`Blerp`) anlık algılama.
+  - **Tarih & Zaman Damgalı Liste:** Kim abone oldu, ne kadar bağış/kicks attı `YYYY-MM-DD HH:MM:SS` formatında canlı akış tablosunda listelenir.
+  - **Lider Tablosu:** En çok destek olan ilk 15 izleyici destek rozetleriyle (`🎁 hediye`, `🪙 kicks`, `💵 bağış`) sıralanır.
+  - **Kanal Bazlı Dışa Aktarma:** Tek tıkla ilgili kanal adına özel `CSV` ve `TXT` detaylı rapor indirme (`kick_{kanal}_bagis_kicks_{tarih}.csv / .txt`).
 - **⏱️ Akıllı Zaman Damgası & Yer İmi Sistemi (Stream Bookmarks):**
   - Yayın sırasında ilginç anları `Alt + B` kısayolu veya video kontrol çubuğundaki `[⏱️ Yer İmi]` butonuyla anında not alarak işaretleyebilme.
   - Açılır panelde tüm yer imlerini listeleme, VOD izlerken tek tıkla o saniyeye zıplama (`⏩ Git`) ve yer imlerini `CSV` olarak dışa aktarma.

@@ -15164,29 +15164,34 @@ var oz = kart(t('pkOnizleme'), t('pkOnizlemeD'));
     }
 
     if (istatSekme === 'bagis') {
-      var bk = kart('💰 Canlı Yayın Bağış, Kicks & Blerp İstatistikleri', 'Yayın boyunca gönderilen hediye abonelikler, Kicks bağışları ve sesli uyarılar.');
+      var kanalAdi = scKanal || 'Yayıncı';
+      var bk = kart('💰 ' + esc(kanalAdi) + ' — Bağış, Kicks & Abonelik İstatistikleri', 'Yayın boyunca gönderilen abonelikler, hediye sublar, Kicks bağışları ve sesli uyarıların tam listesi.');
       
+      var toplamDestekci = Object.keys(pkBagisVeri.bagiscilar).length;
+      var toplamSubSayisi = (pkBagisVeri.toplamSub || 0) + (pkBagisVeri.toplamGiftSub || 0);
+
       var bgGrid = el('div', 'grid grid-cols-2 gap-3 mb-3');
       bgGrid.innerHTML = `
         <div class="bg-surface-highest p-3 rounded-lg flex flex-col">
-          <span class="text-xs text-subtle font-semibold">🎁 Hediye Abonelikler</span>
-          <span class="text-lg font-black text-primary-base mt-1">${pkBagisVeri.toplamGiftSub} Adet</span>
+          <span class="text-xs text-subtle font-semibold">🎁 Toplam Abone & Hediye Sub</span>
+          <span class="text-lg font-black text-primary-base mt-1">${toplamSubSayisi} Adet <span class="text-xs font-normal text-gray-400">(${pkBagisVeri.toplamSub} Abone + ${pkBagisVeri.toplamGiftSub} Hediye)</span></span>
         </div>
         <div class="bg-surface-highest p-3 rounded-lg flex flex-col">
-          <span class="text-xs text-subtle font-semibold">🪙 Toplam Kicks</span>
-          <span class="text-lg font-black text-yellow-400 mt-1">${pkBagisVeri.toplamKicks.toLocaleString('tr-TR')} Kicks</span>
+          <span class="text-xs text-subtle font-semibold">🪙 Toplam Kicks Bağışı</span>
+          <span class="text-lg font-black text-yellow-400 mt-1">${(pkBagisVeri.toplamKicks || 0).toLocaleString('tr-TR')} Kicks</span>
         </div>
         <div class="bg-surface-highest p-3 rounded-lg flex flex-col">
-          <span class="text-xs text-subtle font-semibold">📢 Blerp / Sesli Bağış</span>
-          <span class="text-lg font-black text-cyan-400 mt-1">${pkBagisVeri.toplamBlerp} Adet</span>
+          <span class="text-xs text-subtle font-semibold">📢 Blerp & Sesli Bağış</span>
+          <span class="text-lg font-black text-cyan-400 mt-1">${pkBagisVeri.toplamBlerp || 0} Adet</span>
         </div>
         <div class="bg-surface-highest p-3 rounded-lg flex flex-col">
-          <span class="text-xs text-subtle font-semibold">🚀 Raid Katılımı</span>
-          <span class="text-lg font-black text-pink-400 mt-1">${pkBagisVeri.toplamRaid.toLocaleString('tr-TR')} İzleyici</span>
+          <span class="text-xs text-subtle font-semibold">👥 Destek Veren Kişi Sayısı</span>
+          <span class="text-lg font-black text-purple-400 mt-1">${toplamDestekci} Kişi</span>
         </div>
       `;
       bk.appendChild(bgGrid);
 
+      // En Çok Destek Verenler (Lider Tablosu)
       var lidKutu = el('div', 'flex flex-col gap-2 mt-2');
       lidKutu.appendChild(el('div', 'text-sm font-bold text-white', '🏆 En Çok Destek Verenler (Lider Tablosu):'));
       var bagisList = [];
@@ -15195,9 +15200,14 @@ var oz = kart(t('pkOnizleme'), t('pkOnizlemeD'));
           bagisList.push(Object.assign({ ad: bKey }, pkBagisVeri.bagiscilar[bKey]));
         }
       }
-      bagisList.sort(function(a, b) { return ((b.giftSub*100)+b.kicks+(b.blerp*50)) - ((a.giftSub*100)+a.kicks+(a.blerp*50)); });
+      bagisList.sort(function(a, b) {
+        var skorA = ((a.giftSub||0)*100) + ((a.sub||0)*100) + (a.kicks||0) + ((a.bagis||0)*50) + ((a.blerp||0)*30);
+        var skorB = ((b.giftSub||0)*100) + ((b.sub||0)*100) + (b.kicks||0) + ((b.bagis||0)*50) + ((b.blerp||0)*30);
+        return skorB - skorA;
+      });
+
       if (!bagisList.length) {
-        lidKutu.appendChild(el('div', 'text-xs text-subtle italic', 'Bu oturumda henüz bağış veya hediye abonelik kaydedilmedi.'));
+        lidKutu.appendChild(el('div', 'text-xs text-subtle italic', 'Bu oturumda henüz bağış veya abonelik kaydedilmedi.'));
       } else {
         var lWrap = el('div', 'flex flex-col gap-1.5 max-h-48 overflow-y-auto pr-1');
         bagisList.slice(0, 15).forEach(function(b, idx) {
@@ -15208,8 +15218,10 @@ var oz = kart(t('pkOnizleme'), t('pkOnizlemeD'));
               <span class="font-bold text-white">${esc(b.ad)}</span>
             </div>
             <div class="flex items-center gap-2 text-[11px] text-gray-300">
-              ${b.giftSub > 0 ? '<span class="text-primary-base font-bold">🎁 ' + b.giftSub + ' sub</span>' : ''}
-              ${b.kicks > 0 ? '<span class="text-yellow-400 font-bold">🪙 ' + b.kicks + ' kicks</span>' : ''}
+              ${b.sub > 0 ? '<span class="text-emerald-400 font-bold">⭐ ' + b.sub + ' sub</span>' : ''}
+              ${b.giftSub > 0 ? '<span class="text-primary-base font-bold">🎁 ' + b.giftSub + ' hediye</span>' : ''}
+              ${b.kicks > 0 ? '<span class="text-yellow-400 font-bold">🪙 ' + b.kicks.toLocaleString('tr-TR') + ' kicks</span>' : ''}
+              ${b.bagis > 0 ? '<span class="text-green-400 font-bold">💵 $' + b.bagis + '</span>' : ''}
               ${b.blerp > 0 ? '<span class="text-cyan-400 font-bold">📢 ' + b.blerp + ' blerp</span>' : ''}
             </div>
           `;
@@ -15219,21 +15231,29 @@ var oz = kart(t('pkOnizleme'), t('pkOnizlemeD'));
       }
       bk.appendChild(lidKutu);
 
+      // Canlı Tarih/Saat Damgalı Bağış & Abonelik Akışı
       var akisKutu = el('div', 'flex flex-col gap-2 mt-4');
-      akisKutu.appendChild(el('div', 'text-sm font-bold text-white', '📜 Canlı Bağış & Hediye Akışı (Son Hareketler):'));
+      akisKutu.appendChild(el('div', 'text-sm font-bold text-white', '📜 Tarih & Zaman Damgalı Canlı Bağış & Abonelik Akışı:'));
       if (!pkBagisVeri.gecmis.length) {
-        akisKutu.appendChild(el('div', 'text-xs text-subtle italic', 'Akış bekleniyor...'));
+        akisKutu.appendChild(el('div', 'text-xs text-subtle italic', 'Akış bekleniyor... (Sohbetteki bağış, kicks ve abonelikler anlık kaydedilir)'));
       } else {
-        var aWrap = el('div', 'flex flex-col gap-1 max-h-40 overflow-y-auto pr-1 text-xs');
-        pkBagisVeri.gecmis.slice(-20).reverse().forEach(function(g) {
-          var item = el('div', 'flex items-center justify-between p-1.5 rounded bg-surface-highest/60 text-[11px]');
+        var aWrap = el('div', 'flex flex-col gap-1.5 max-h-56 overflow-y-auto pr-1 text-xs');
+        pkBagisVeri.gecmis.slice(-40).reverse().forEach(function(g) {
+          var rozetRenk = 'bg-primary-base/20 text-primary-base border-primary-base/40';
+          if (g.tip === 'Kicks') rozetRenk = 'bg-yellow-400/20 text-yellow-400 border-yellow-400/40';
+          else if (g.tip === 'Abone') rozetRenk = 'bg-emerald-400/20 text-emerald-400 border-emerald-400/40';
+          else if (g.tip === 'Bağış') rozetRenk = 'bg-green-400/20 text-green-400 border-green-400/40';
+          else if (g.tip === 'Blerp') rozetRenk = 'bg-cyan-400/20 text-cyan-400 border-cyan-400/40';
+
+          var item = el('div', 'flex items-center justify-between p-2 rounded bg-surface-highest/80 border border-white/5 text-xs');
           item.innerHTML = `
-            <div class="flex items-center gap-1.5">
-              <span class="text-subtle">${g.zaman}</span>
+            <div class="flex items-center gap-2 min-w-0">
+              <span class="text-[10px] text-gray-400 font-mono bg-black/40 px-1.5 py-0.5 rounded">${g.tamTarih || (g.tarih + ' ' + g.zaman)}</span>
+              <span class="px-1.5 py-0.5 rounded text-[10.5px] font-extrabold border ${rozetRenk}">${esc(g.tip)}</span>
               <span class="font-bold text-white">${esc(g.user)}:</span>
-              <span class="text-gray-200">${esc(g.detay)}</span>
+              <span class="text-gray-300 truncate">${esc(g.detay)}</span>
             </div>
-            <span class="font-black ${g.tip === 'Gift Sub' ? 'text-primary-base' : (g.tip === 'Kicks' ? 'text-yellow-400' : 'text-cyan-400')}">${esc(g.miktar)}</span>
+            <span class="font-black text-right ml-2 shrink-0 ${g.tip === 'Gift Sub' || g.tip === 'Abone' ? 'text-primary-base' : (g.tip === 'Kicks' ? 'text-yellow-400' : 'text-cyan-400')}">${esc(g.miktar)}</span>
           `;
           aWrap.appendChild(item);
         });
@@ -15241,18 +15261,52 @@ var oz = kart(t('pkOnizleme'), t('pkOnizlemeD'));
       }
       bk.appendChild(akisKutu);
 
-      var expBtn = el('button', 'mt-4 px-3 py-1.5 rounded bg-primary-base text-black font-bold text-xs hover:brightness-110 cursor-pointer self-start', '📊 Bağış Kayıtlarını CSV İndir');
-      expBtn.addEventListener('click', function() {
-        var csv = 'Zaman,Kullanici,Tur,Miktar,Detay\n' + pkBagisVeri.gecmis.map(function(x){
-          return '"' + x.zaman + '","' + x.user + '","' + x.tip + '","' + x.miktar + '","' + (x.detay||'').replace(/"/g, '""') + '"';
+      // CSV ve TXT Dışa Aktarma Butonları
+      var expBar = el('div', 'flex gap-2 mt-4 pt-3 border-t border-white/10');
+      
+      var expCsvBtn = el('button', 'px-3 py-1.5 rounded bg-primary-base text-black font-black text-xs hover:brightness-110 cursor-pointer flex items-center gap-1.5', '📊 CSV İndir');
+      expCsvBtn.addEventListener('click', function() {
+        if (!pkBagisVeri.gecmis.length) { toast('İndirilecek bağış veya abonelik kaydı bulunamadı.'); return; }
+        var csv = `Tarih,Saat,Kullanici,Islem_Turu,Miktar,Detay\n` + pkBagisVeri.gecmis.map(function(x){
+          return `"${x.tarih || ''}","${x.zaman || ''}","${x.user || ''}","${x.tip || ''}","${x.miktar || ''}","${(x.detay||'').replace(/"/g, '""')}"`;
         }).join('\n');
         var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
         var dl = URL.createObjectURL(blob);
         var a = document.createElement('a');
-        a.href = dl; a.download = 'kick_bagislar_' + (scKanal || 'yayin') + '_' + Date.now() + '.csv';
+        a.href = dl;
+        a.download = `kick_${kanalAdi}_bagis_kicks_${Date.now()}.csv`;
         a.click();
+        toast('📊 CSV İndirildi (' + kanalAdi + ')');
       });
-      bk.appendChild(expBtn);
+
+      var expTxtBtn = el('button', 'px-3 py-1.5 rounded bg-surface-highest text-white font-bold text-xs hover:bg-overlay cursor-pointer flex items-center gap-1.5', '📄 TXT Raporu İndir');
+      expTxtBtn.addEventListener('click', function() {
+        if (!pkBagisVeri.gecmis.length) { toast('İndirilecek bağış veya abonelik kaydı bulunamadı.'); return; }
+        var baslik = `=====================================================\n` +
+          `  ${kanalAdi.toUpperCase()} — BAĞIŞ, KICKS & ABONELİK RAPORU\n` +
+          `  Tarih: ${new Date().toLocaleString('tr-TR')}\n` +
+          `  Toplam Abone & Hediye Sub: ${toplamSubSayisi}\n` +
+          `  Toplam Kicks: ${pkBagisVeri.toplamKicks}\n` +
+          `  Toplam Destekçi: ${toplamDestekci} Kişi\n` +
+          `=====================================================\n\n` +
+          `[ZAMAN DAMGALI CANLI HAREKETLER]:\n`;
+        var satirlar = pkBagisVeri.gecmis.map(function(x, i){
+          return `${i+1}. [${x.tamTarih || (x.tarih + ' ' + x.zaman)}] [${x.tip}] ${x.user} ➔ ${x.miktar} (${x.detay})`;
+        }).join('\n');
+        var txt = baslik + satirlar;
+        var blob = new Blob([txt], { type: 'text/plain;charset=utf-8;' });
+        var dl = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = dl;
+        a.download = `kick_${kanalAdi}_bagis_kicks_${Date.now()}.txt`;
+        a.click();
+        toast('📄 TXT Raporu İndirildi (' + kanalAdi + ')');
+      });
+
+      expBar.appendChild(expCsvBtn);
+      expBar.appendChild(expTxtBtn);
+      bk.appendChild(expBar);
+
       body.appendChild(bk);
       return;
     }
@@ -19229,6 +19283,126 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
         cipBar.appendChild(cip);
       });
     });
+
+  /* ══════════════════════════════════════════════════════════════════════
+   * 18. CANLI BAĞIŞ, KICKS & ABONELİK TAKİPÇİSİ (Donation, Kicks, Subs Audit)
+   * ══════════════════════════════════════════════════════════════════════ */
+  var pkBagisVeri = {
+    toplamSub: 0,
+    toplamGiftSub: 0,
+    toplamKicks: 0,
+    toplamBagisTl: 0,
+    toplamBlerp: 0,
+    toplamRaid: 0,
+    bagiscilar: {},
+    gecmis: []
+  };
+
+  function pkBagisKaydet(user, tip, miktarStr, sayisalMiktar, detay) {
+    if (!user) user = 'Anonim';
+    user = user.trim().replace(/^@/, '');
+    var d = new Date();
+    var zaman = d.getHours().toString().padStart(2, '0') + ':' + d.getMinutes().toString().padStart(2, '0') + ':' + d.getSeconds().toString().padStart(2, '0');
+    var tarih = d.getFullYear() + '-' + (d.getMonth() + 1).toString().padStart(2, '0') + '-' + d.getDate().toString().padStart(2, '0');
+    var tamTarih = tarih + ' ' + zaman;
+
+    if (!pkBagisVeri.bagiscilar[user]) {
+      pkBagisVeri.bagiscilar[user] = { sub: 0, giftSub: 0, kicks: 0, bagis: 0, blerp: 0, sonTs: Date.now() };
+    }
+    var bUser = pkBagisVeri.bagiscilar[user];
+    bUser.sonTs = Date.now();
+
+    if (tip === 'Abone') {
+      pkBagisVeri.toplamSub += sayisalMiktar;
+      bUser.sub += sayisalMiktar;
+    } else if (tip === 'Gift Sub') {
+      pkBagisVeri.toplamGiftSub += sayisalMiktar;
+      bUser.giftSub += sayisalMiktar;
+    } else if (tip === 'Kicks') {
+      pkBagisVeri.toplamKicks += sayisalMiktar;
+      bUser.kicks += sayisalMiktar;
+    } else if (tip === 'Bağış') {
+      pkBagisVeri.toplamBagisTl += sayisalMiktar;
+      bUser.bagis += sayisalMiktar;
+    } else if (tip === 'Blerp') {
+      pkBagisVeri.toplamBlerp += sayisalMiktar;
+      bUser.blerp += sayisalMiktar;
+    } else if (tip === 'Raid') {
+      pkBagisVeri.toplamRaid += sayisalMiktar;
+    }
+
+    pkBagisVeri.gecmis.push({
+      tarih: tarih,
+      zaman: zaman,
+      tamTarih: tamTarih,
+      user: user,
+      tip: tip,
+      miktar: miktarStr,
+      sayisal: sayisalMiktar,
+      detay: detay,
+      ts: Date.now()
+    });
+    if (pkBagisVeri.gecmis.length > 80) pkBagisVeri.gecmis.shift();
+  }
+
+  function pkBagisAnalizEt(text) {
+    if (!text || text.length > 350) return;
+
+    // 1. Hediye Abonelik Toplu (Gift Subs)
+    var mGift = text.match(/([A-Za-z0-9_]+)\s+(?:gifted|hediye\s+etti|gönderdi)\s+(\d+)\s+(?:subscriptions|subs?|abonelik)/i);
+    if (mGift) {
+      pkBagisKaydet(mGift[1], 'Gift Sub', mGift[2] + ' Hediye Sub', parseInt(mGift[2], 10), 'Topluluğa ' + mGift[2] + ' adet abonelik hediye etti');
+      return;
+    }
+    // 2. Hediye Abonelik Tekil
+    var mSingleGift = text.match(/([A-Za-z0-9_]+)\s+gifted a subscription to\s+([A-Za-z0-9_]+)/i) || text.match(/([A-Za-z0-9_]+)\s+adlı kişiye abonelik hediye etti/i);
+    if (mSingleGift) {
+      pkBagisKaydet(mSingleGift[1], 'Gift Sub', '1 Hediye Sub', 1, (mSingleGift[2] ? '@' + mSingleGift[2] : 'Bir kullanıcıya') + ' hediye abonelik');
+      return;
+    }
+
+    // 3. Bireysel Abonelik & Yenileme (Sub / Resub)
+    var mSub = text.match(/([A-Za-z0-9_]+)\s+(?:subscribed|resubscribed|abone oldu|aboneliğini yeniledi)(?:\s+(?:for|boyunca)\s+(\d+)\s+(?:months|ay))?/i);
+    if (mSub) {
+      var ay = mSub[2] ? mSub[2] + ' Aylık' : '1. Ay';
+      pkBagisKaydet(mSub[1], 'Abone', ay + ' Abone', 1, mSub[1] + ' kanala abone oldu (' + ay + ')');
+      return;
+    }
+
+    // 4. Kicks Bağışı
+    var mKicks = text.match(/([A-Za-z0-9_]+)\s+(?:sent|donated|bağışladı|gönderdi)\s+([0-9.,]+)\s+Kicks/i) || text.match(/([0-9.,]+)\s+Kicks/i);
+    if (mKicks) {
+      var uK = mKicks[1] && !/^[0-9.,]+$/.test(mKicks[1]) ? mKicks[1] : 'İzleyici';
+      var kRaw = (mKicks[2] || mKicks[1]).replace(/,/g, '');
+      var kMiktar = parseInt(kRaw, 10) || 100;
+      pkBagisKaydet(uK, 'Kicks', kMiktar.toLocaleString('tr-TR') + ' Kicks', kMiktar, kMiktar + ' Kicks gönderdi');
+      return;
+    }
+
+    // 5. Doğrudan Para Bağışı (Tip / Donation: $, €, ₺)
+    var mTip = text.match(/([A-Za-z0-9_]+)\s+(?:donated|tipped|bağış\s+yaptı|gönderdi)\s+([$€₺]|TL|USD|EUR)?\s*([0-9.,]+)/i);
+    if (mTip) {
+      var sembol = mTip[2] || '$';
+      var miktar = parseFloat(mTip[3].replace(/,/g, '')) || 0;
+      pkBagisKaydet(mTip[1], 'Bağış', sembol + miktar, miktar, mTip[1] + ' bağış yaptı: ' + sembol + miktar);
+      return;
+    }
+
+    // 6. Blerp / Sesli Uyarı
+    if (/Blerp|Sound\s*Alert|Sesli\s*Bağış/i.test(text)) {
+      var mBlerpUser = text.match(/([A-Za-z0-9_]+)\s+(?:played|çaldı|kullandı|sent)\s+Blerp/i) || text.match(/Blerp:\s*([A-Za-z0-9_]+)/i);
+      var bUser = mBlerpUser ? mBlerpUser[1] : 'İzleyici';
+      pkBagisKaydet(bUser, 'Blerp', '1 Blerp', 1, 'Sesli uyarı / Blerp çalındı');
+      return;
+    }
+
+    // 7. Raid Bildirimi
+    var mRaid = text.match(/([A-Za-z0-9_]+)\s+(?:is raiding with|raided with|ile raid yaptı)\s+(\d+)\s+(?:viewers|izleyici)/i);
+    if (mRaid) {
+      pkBagisKaydet(mRaid[1], 'Raid', mRaid[2] + ' İzleyici', parseInt(mRaid[2], 10), mRaid[1] + ' kanalından ' + mRaid[2] + ' kişilik raid');
+      return;
+    }
+  }
 
     function cizGrid(str, forceMod) {
       var grid = modal.querySelector('#pk-ms-grid');
