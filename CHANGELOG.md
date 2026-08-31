@@ -1,6 +1,23 @@
-﻿# 📜 PureKick — Sürüm Geçmişi (Changelog)
+# 📜 PureKick — Sürüm Geçmişi (Changelog)
 
 Bu doküman, PureKick eklentisinin tüm sürümlerindeki yenilikleri, hata düzeltmelerini ve geliştirmeleri kronolojik olarak listeler.
+
+---
+
+## 🔧 [10.18.1] - 2026-08-31 (Hotfix — Bellek Sızıntısı & Performans)
+
+### 🚨 Kritik Düzeltmeler (Memory Leak Fix)
+- **`window.addEventListener` Sızıntısı Giderildi:** `mousemove` ve `mouseup` dinleyicileri her 2 saniyede bir tekrar eklenerek binlerce mükerrer dinleyici birikiyordu. Singleton bayrak (`__pkZoomWindowBound`) ile yalnızca **1 kez** bağlanması garanti altına alındı.
+- **MutationObserver DOM Referans Sızıntısı Giderildi:** Sohbet mesajlarını analiz eden `pkHypeObs` gözlemcisi `node` DOM referanslarını bellekte tutarak Garbage Collector'ün çalışmasını engelliyordu. DOM referansı kaldırıldı, yalnızca `string` (max 300 karakter) alınıyor.
+- **`pkSohbetIsimEfektleriUygula` Optimize Edildi:** Her 2 saniyede tüm sohbet DOM'unu baştan tarayan fonksiyon, `:not([data-pk-efekt-scanned])` seçicisiyle **yalnızca yeni mesajları** tarayacak şekilde hafifletildi.
+- **`pkSohbetCeviriButonlariKur` Optimize Edildi:** Çeviri butonları da aynı mantıkla `:not([data-pk-cevrildi])` seçicisiyle sadece işlenmemiş satırlara ekleniyor.
+- **Dizi & Nesne Boyut Limitleri:** `pkBagisVeri.gecmis` limiti 100→50'ye düşürüldü, `bagiscilar` nesnesi max 30 kişiyle sınırlandırıldı.
+
+### ⚡ Performans İyileştirmeleri
+- **Periyodik Döngü İkiye Bölündü:**
+  - **Hafif döngü (2s):** Yalnızca CSS/stil güncellemeleri (filtre, OLED, tema, font).
+  - **Ağır döngü (5s):** DOM tarama gerektiren kurulum işleri (çeviri butonları, efektler, zoom, hype, altyazı).
+- **Otomatik Bellek Temizleyici (3 dk):** Her 3 dakikada bir eski ve kullanılmayan veri nesnelerini budayan periyodik çöp toplayıcı eklendi.
 
 ---
 
