@@ -1,0 +1,2426 @@
+{
+   "appDesc": {
+      "message": "Блокирует рекламу на Kick.com для плавного просмотра без прерываний, в качестве подписчика."
+   },
+   "badgeCtaSub": {
+      "message": "Войти через Kick"
+   },
+   "badgeCtaTitle": {
+      "message": "Получите значок чата"
+   },
+   "badgeLinkedSub": {
+      "message": "Аккаунт привязан ✓"
+   },
+   "badgeLinkedTitle": {
+      "message": "Значок чата активен"
+   },
+   "btnTitle": {
+      "message": "PureKick — Трансляция без рекламы"
+   },
+   "dropDay": {
+      "message": "Осталось {1} дн."
+   },
+   "dropDays": {
+      "message": "Осталось {1} дн."
+   },
+   "dropHour": {
+      "message": "Осталось {1} ч."
+   },
+   "dropHours": {
+      "message": "Осталось {1} ч."
+   },
+   "dropTitle": {
+      "message": "Посмотреть кампании Drops на Kick"
+   },
+   "dropsEmpty": {
+      "message": "Нет активных дропов"
+   },
+   "dropsTitle": {
+      "message": "Активные дропы"
+   },
+   "footHelp": {
+      "message": "Помощь и поддержка"
+   },
+   "footPrivacy": {
+      "message": "Конфиденциальность"
+   },
+   "pauseBtn": {
+      "message": "Приостановить на этом сайте"
+   },
+   "pkAboneAktifNot": {
+      "message": "Он растёт каждый месяц. Спасибо! 💚"
+   },
+   "pkAboneAy": {
+      "message": "Подписчик {1} мес."
+   },
+   "pkAboneAy1": {
+      "message": "Подписчик 1 мес."
+   },
+   "pkAboneBaslangic": {
+      "message": "Начало"
+   },
+   "pkAboneBitti": {
+      "message": "Ваша подписка закончилась. При продлении значок продолжится с того же места."
+   },
+   "pkAboneDemoBaslik": {
+      "message": "Так вы выглядите в чате как подписчик:"
+   },
+   "pkAboneDemoMesaj": {
+      "message": "привет! 👋"
+   },
+   "pkAboneKidem": {
+      "message": "Ваш стаж"
+   },
+   "pkAboneOl": {
+      "message": "Оформить подписку"
+   },
+   "pkAboneOnceGiris": {
+      "message": "Сначала войдите через Kick — это нужно, чтобы связать подписку с вашим аккаунтом."
+   },
+   "pkAboneSonaErdi": {
+      "message": "Завершена"
+   },
+   "pkAboneYenile": {
+      "message": "Продлить подписку"
+   },
+   "pkAboneYenileme": {
+      "message": "Продление"
+   },
+   "pkAboneYukleniyor": {
+      "message": "Проверяем статус вашей подписки…"
+   },
+   "pkAbonelik": {
+      "message": "Подписка"
+   },
+   "pkAbonelikTanit": {
+      "message": "Станьте подписчиком: значок стажа рядом с именем в чате и выбор цвета имени."
+   },
+   "pkAiMod": {
+      "message": "Отмечать автоудаления"
+   },
+   "pkAiModD": {
+      "message": "Если удалила ИИ-модерация Kick, журнал отличает это от удаления модератором."
+   },
+   "pkAltAdTakibi": {
+      "message": "Отслеживание имени"
+   },
+   "pkAltCezaSebepleri": {
+      "message": "Причины наказаний"
+   },
+   "pkAltGezinme": {
+      "message": "Панель навигации"
+   },
+   "pkAltGizliKanallar": {
+      "message": "Скрытые каналы"
+   },
+   "pkAltGizliKategoriler": {
+      "message": "Скрытые категории"
+   },
+   "pkAltKaliteSes": {
+      "message": "Автовыбор качества и громкости"
+   },
+   "pkAltKartBilgisi": {
+      "message": "Данные карточки"
+   },
+   "pkAltKartSohbeti": {
+      "message": "Чат в карточке"
+   },
+   "pkAltKenarCubugu": {
+      "message": "Боковая панель"
+   },
+   "pkAltModGunlugu": {
+      "message": "Настройки журнала"
+   },
+   "pkAltOtomasyon": {
+      "message": "Автоматизация"
+   },
+   "pkAltOynaticiOzel": {
+      "message": "Возможности плеера"
+   },
+   "pkAltSagTikMenuleri": {
+      "message": "Правый клик и изображения"
+   },
+   "pkAltSohbetGorunum": {
+      "message": "Вид чата"
+   },
+   "pkAltSohbetGorunumD": {
+      "message": "Предпросмотр эмоций."
+   },
+   "pkAltSohbetMesaji": {
+      "message": "Сообщение чата"
+   },
+   "pkAltVideoIstat": {
+      "message": "Видео и панель"
+   },
+   "pkAltVideoVod": {
+      "message": "Плеер и записи"
+   },
+   "pkAltVurgulama": {
+      "message": "Подсветка сообщений"
+   },
+   "pkAninda": {
+      "message": "Изменения применяются сразу."
+   },
+   "pkAnlikOrtZirve": {
+      "message": "Сейчас / средн. / пик"
+   },
+   "pkAralikSec": {
+      "message": "Выбрать диапазон"
+   },
+   "pkArayuzDuzeniD": {
+      "message": "Небольшие дополнения к интерфейсу Kick; ни одно не ломает его вёрстку."
+   },
+   "pkAySayisi": {
+      "message": "{1} мес."
+   },
+   "pkAyarSatiri": {
+      "message": "Настройки чата PureKick"
+   },
+   "pkAyarYedegi": {
+      "message": "Резервная копия настроек"
+   },
+   "pkAyarYedegiD": {
+      "message": "Все настройки и списки в одном файле. Ничего не отправляется на сервер."
+   },
+   "pkAyarlar": {
+      "message": "Настройки PureKick"
+   },
+   "pkAyarlardanAc": {
+      "message": "Включить можно в настройках."
+   },
+   "pkAydir": {
+      "message": "{1} мес."
+   },
+   "pkAzOnce": {
+      "message": "только что"
+   },
+   "pkBaglantiDurum": {
+      "message": "Состояние подключения к чату"
+   },
+   "pkBaglantiDurumD": {
+      "message": "Точка рядом с чатом: идут ли события или прервались."
+   },
+   "pkBaglanti_acik": {
+      "message": "Подключение к чату работает"
+   },
+   "pkBaglanti_bekliyor": {
+      "message": "Ожидание подключения к чату"
+   },
+   "pkBaglanti_kopuk": {
+      "message": "Похоже, подключение к чату потеряно"
+   },
+   "pkBaglanti_sessiz": {
+      "message": "Событий давно не было — возможно, в чате тихо"
+   },
+   "pkBaglantiyiKopyala": {
+      "message": "Копировать ссылку"
+   },
+   "pkBaglantiyiOnizle": {
+      "message": "Предпросмотр ссылки"
+   },
+   "pkBahsedenYok": {
+      "message": "Вас пока никто не упоминал."
+   },
+   "pkBahsedilmeler": {
+      "message": "Упоминания"
+   },
+   "pkBahsedilmelerBos": {
+      "message": "Они собираются здесь, пока отслеживается чат канала."
+   },
+   "pkBahsedilmelerD": {
+      "message": "Собирает сообщения с упоминанием вашего имени."
+   },
+   "pkBahsetRozet": {
+      "message": "Счётчик уведомлений"
+   },
+   "pkBahsetRozetD": {
+      "message": "Показывает красное число на кнопке PureKick, когда упоминают ваше имя. Если выключить, упоминания всё равно собираются — просто без счётчика."
+   },
+   "pkBahsetSes": {
+      "message": "Звук уведомления"
+   },
+   "pkBahsetSesD": {
+      "message": "Проигрывает короткий звук, когда упоминают ваше имя."
+   },
+   "pkBahsetSesSeviye": {
+      "message": "Громкость"
+   },
+   "pkBahsetSesTon": {
+      "message": "Звук"
+   },
+   "pkBahsetSesTonD": {
+      "message": "Играет сразу при выборе — послушайте и решите."
+   },
+   "pkBahsetTikla": {
+      "message": "Кликабельные @упоминания"
+   },
+   "pkBahsetTiklaD": {
+      "message": "Клик по @имя вставляет этого человека в поле чата."
+   },
+   "pkBanDetay": {
+      "message": "Подробности бана"
+   },
+   "pkBanDetayD": {
+      "message": "Нажмите на строку журнала, чтобы увидеть причину, срок, остаток и апелляцию."
+   },
+   "pkBanDoldu": {
+      "message": "Истёк"
+   },
+   "pkBanItiraz": {
+      "message": "Апелляция"
+   },
+   "pkBanItirazVar": {
+      "message": "По этому наказанию открыта апелляция"
+   },
+   "pkBanKalan": {
+      "message": "Осталось"
+   },
+   "pkBanKalici": {
+      "message": "Навсегда"
+   },
+   "pkBanMesaj": {
+      "message": "Сообщение"
+   },
+   "pkBanOtomatik": {
+      "message": "Автоматически"
+   },
+   "pkBanSablon": {
+      "message": "Готовые причины наказания"
+   },
+   "pkBanSablonD": {
+      "message": "Сохраните частые причины; один клик впишет их командой из карточки профиля."
+   },
+   "pkBanSebep": {
+      "message": "Причина"
+   },
+   "pkBanSure": {
+      "message": "Срок"
+   },
+   "pkBanYapan": {
+      "message": "Кем применено"
+   },
+   "pkBindir": {
+      "message": "Наложить чат на видео"
+   },
+   "pkBindirAc": {
+      "message": "Включить наложение"
+   },
+   "pkBindirAcD": {
+      "message": "Слой пропускает клики и не мешает кнопкам плеера."
+   },
+   "pkBindirD": {
+      "message": "Читайте чат даже в полноэкранном режиме."
+   },
+   "pkBindirKonum": {
+      "message": "Положение"
+   },
+   "pkBindirNot": {
+      "message": "Сообщения берутся из существующего чат-соединения Kick; новое не открывается. Скрытые люди остаются скрытыми и здесь."
+   },
+   "pkBirModerator": {
+      "message": "Модератор"
+   },
+   "pkBirModeratorIci": {
+      "message": "модератором"
+   },
+   "pkBirlestir": {
+      "message": "Объединить"
+   },
+   "pkBirlestirD": {
+      "message": "Записываются только настройки из файла, остальное остаётся."
+   },
+   "pkBotYoksay": {
+      "message": "Не подсвечивать ботов"
+   },
+   "pkBotYoksayD": {
+      "message": "Сообщения с меткой бота не получают цветную полосу."
+   },
+   "pkBugun": {
+      "message": "сегодня"
+   },
+   "pkCevrimdisi": {
+      "message": "Не в сети"
+   },
+   "pkCevrimdisiEki": {
+      "message": "Не в сети · {1}"
+   },
+   "pkCezaYok": {
+      "message": "Сейчас никто не в мьюте."
+   },
+   "pkCrossAciklama": {
+      "message": "Действие применяется отдельно в каждом выбранном канале. Список берётся из каналов, где вы модератор."
+   },
+   "pkCrossAra": {
+      "message": "Поиск каналов…"
+   },
+   "pkCrossAyar": {
+      "message": "Кросс-бан · Массовый кросс-бан"
+   },
+   "pkCrossAyarD": {
+      "message": "Добавляет кнопку на карточку профиля и строку «Массовый кросс-бан» в меню PureKick: забаньте, замьютьте или помилуйте одного человека — или целый список — сразу во всех каналах, где вы модератор."
+   },
+   "pkCrossBaslat": {
+      "message": "Начать"
+   },
+   "pkCrossBaslik": {
+      "message": "{1} — действие во всех каналах"
+   },
+   "pkCrossBekleme": {
+      "message": "Пауза между каналами (секунды)"
+   },
+   "pkCrossBitti": {
+      "message": "Готово — успешно: {1}, ошибок: {2}"
+   },
+   "pkCrossDugme": {
+      "message": "Cross-Ban"
+   },
+   "pkCrossDurdur": {
+      "message": "Стоп"
+   },
+   "pkCrossHepsi": {
+      "message": "Выбрать / снять все"
+   },
+   "pkCrossIlerleme": {
+      "message": "{1} / {2} · {3}"
+   },
+   "pkCrossKaldir": {
+      "message": "Разбанить"
+   },
+   "pkCrossKanallar": {
+      "message": "Каналы"
+   },
+   "pkCrossListeYok": {
+      "message": "Не удалось загрузить список — нужно войти в Kick"
+   },
+   "pkCrossModYok": {
+      "message": "Каналы, где вы модератор, не найдены"
+   },
+   "pkCrossNerede": {
+      "message": "Используется кнопкой кросс-бана на карточке профиля или строкой «Массовый кросс-бан» в меню PureKick."
+   },
+   "pkCrossSebep": {
+      "message": "Причина"
+   },
+   "pkCrossSebepIpucu": {
+      "message": "необязательно"
+   },
+   "pkCrossSecili": {
+      "message": "выбрано {1} из {2}"
+   },
+   "pkCrossSure": {
+      "message": "Длительность (минуты)"
+   },
+   "pkCrossSustur": {
+      "message": "Мьют"
+   },
+   "pkCrossTekNot": {
+      "message": "Быстрая модерация выключена; показана только кнопка для всех каналов."
+   },
+   "pkCrossToplu": {
+      "message": "Массовый кросс-бан"
+   },
+   "pkCrossTopluAciklama": {
+      "message": "Применяется к каждому указанному пользователю отдельно в каждом выбранном канале. Список каналов — те, где вы модератор."
+   },
+   "pkCrossTopluAdlar": {
+      "message": "Имена пользователей"
+   },
+   "pkCrossTopluBaslik": {
+      "message": "Массовое действие по каналам"
+   },
+   "pkCrossTopluBekleme": {
+      "message": "Пауза между пользователями (секунды)"
+   },
+   "pkCrossTopluBeklemeNot": {
+      "message": "Один пользователь обрабатывается во всех выбранных каналах подряд. Пауза только при переходе к следующему пользователю — минимум {1} секунд."
+   },
+   "pkCrossTopluIpucu": {
+      "message": "anna, ivan, olga\nили по одному в строке"
+   },
+   "pkCrossTopluSayi": {
+      "message": "пользователей: {1}"
+   },
+   "pkCrossYasakla": {
+      "message": "Забанить"
+   },
+   "pkCrossYukleniyor": {
+      "message": "Загрузка каналов…"
+   },
+   "pkDisaAktar": {
+      "message": "Экспорт"
+   },
+   "pkDkOnce": {
+      "message": "{1} мин назад"
+   },
+   "pkDropsAciklama": {
+      "message": "Активные кампании, которые не стоит пропускать."
+   },
+   "pkDropsMenu": {
+      "message": "Активные дропы - Ежедневная награда"
+   },
+   "pkEkle": {
+      "message": "Добавить"
+   },
+   "pkEkranGoruntusu": {
+      "message": "Скриншот"
+   },
+   "pkEkranGoruntusuAl": {
+      "message": "Сделать скриншот"
+   },
+   "pkEkranGoruntusuD": {
+      "message": "Сохраняет текущий кадр в PNG."
+   },
+   "pkEminMisin": {
+      "message": "Вы уверены?"
+   },
+   "pkEmoteOnizleme": {
+      "message": "Предпросмотр эмоций"
+   },
+   "pkEmoteOnizlemeD": {
+      "message": "Наведите на эмоцию, чтобы увидеть её крупно и с названием."
+   },
+   "pkEmoteSayisi": {
+      "message": "эмоций: {1}"
+   },
+   "pkEmoteYok": {
+      "message": "Эмоции ещё не использовались."
+   },
+   "pkEnAktifSohbet": {
+      "message": "Самые активные в чате"
+   },
+   "pkEnAktifSohbetD": {
+      "message": "Кто больше всех писал в этой сессии."
+   },
+   "pkEnCokEmote": {
+      "message": "Самые популярные эмоции"
+   },
+   "pkEnCokEmoteD": {
+      "message": "Самые частые в чате за эту сессию."
+   },
+   "pkEnCokEmoteKisi": {
+      "message": "Кто больше всех использует эмоции"
+   },
+   "pkEnCokEmoteKisiD": {
+      "message": "Эмоции на человека и число сообщений только из эмоций."
+   },
+   "pkEnYogunDakika": {
+      "message": "Самая активная минута"
+   },
+   "pkEngellemeAyarlari": {
+      "message": "Настройки рекламы"
+   },
+   "pkEngellenenVideo": {
+      "message": "Заблокировано видеорекламы"
+   },
+   "pkEvet": {
+      "message": "да"
+   },
+   "pkEvetSifirla": {
+      "message": "Да, сбросить"
+   },
+   "pkGelenYanitYok": {
+      "message": "В этой сессии его никто не упоминал."
+   },
+   "pkGelenYanitlar": {
+      "message": "Написано ему"
+   },
+   "pkGelismis": {
+      "message": "Дополнительно"
+   },
+   "pkGeri": {
+      "message": "Назад"
+   },
+   "pkGizleIkonu": {
+      "message": "Кнопка скрытия при наведении"
+   },
+   "pkGizleIkonuD": {
+      "message": "Показывает кнопку скрытия в правом верхнем углу при наведении на канал на главной странице, в боковой панели или в категориях. Кнопка рядом с «Поделиться» на странице канала работает отдельно."
+   },
+   "pkGizlemeyiKaldir": {
+      "message": "Показать снова"
+   },
+   "pkGizlenenKanallar": {
+      "message": "Скрытые каналы"
+   },
+   "pkGizlenenKanallarD": {
+      "message": "Эти каналы не показываются в списках, категориях и поиске."
+   },
+   "pkGizlenenKategoriler": {
+      "message": "Скрытые категории"
+   },
+   "pkGizlenenKategorilerD": {
+      "message": "Эти категории и трансляции в них не показываются в списках."
+   },
+   "pkGizlenenleriTemizle": {
+      "message": "Вернуть скрытых: {1}"
+   },
+   "pkGizliMesajTemizle": {
+      "message": "Вернуть скрытых сообщений: {1}"
+   },
+   "pkGorselBuyut": {
+      "message": "Увеличить изображение (CTRL + клик)"
+   },
+   "pkGorselBuyutD": {
+      "message": "CTRL+клик по эмоции, значку или аватару покажет их в полном размере."
+   },
+   "pkGorunurluk": {
+      "message": "Непрозрачность"
+   },
+   "pkGrupCanli": {
+      "message": "Онлайн ({1})"
+   },
+   "pkGrupKapali": {
+      "message": "Офлайн ({1})"
+   },
+   "pkGunOnce": {
+      "message": "{1} дн назад"
+   },
+   "pkGundur": {
+      "message": "{1} дн."
+   },
+   "pkHakkindaEk": {
+      "message": "Дополнительная информация о канале"
+   },
+   "pkHakkindaEkD": {
+      "message": "Добавляет в строку «О канале» под трансляцией значки подписчика, эмоции канала, недавние категории и правила чата, если они заданы."
+   },
+   "pkHata": {
+      "message": "ошибка"
+   },
+   "pkHayir": {
+      "message": "нет"
+   },
+   "pkHazirlanamadi": {
+      "message": "Не удалось подготовить."
+   },
+   "pkHersiSifirla": {
+      "message": "Сбросить всё"
+   },
+   "pkHersiSifirlaD": {
+      "message": "Все настройки и списки удаляются; расширение возвращается к исходному состоянию."
+   },
+   "pkHersiSifirlaUyari": {
+      "message": "Ваши заметки, скрытые каналы и люди, фильтры и точки продолжения будут удалены. Отменить нельзя — возможно, стоит сначала экспортировать."
+   },
+   "pkHesabinEki": {
+      "message": "Ваш аккаунт: {1}"
+   },
+   "pkHizliMod": {
+      "message": "Быстрый мьют"
+   },
+   "pkHizliModD": {
+      "message": "Клик по песочным часам рядом с сообщением открывает полосу длительностей; применяется ваш выбор вместо окна Kick."
+   },
+   "pkHizliModNot": {
+      "message": "Команда только вписывается в поле — отправляете вы, чтобы никого не наказать по ошибке."
+   },
+   "pkHkAboneye": {
+      "message": "только для подписчиков"
+   },
+   "pkHkAy": {
+      "message": "{1} мес."
+   },
+   "pkHkEmoteler": {
+      "message": "Эмоции канала"
+   },
+   "pkHkKategoriler": {
+      "message": "Недавние категории"
+   },
+   "pkHkKurallar": {
+      "message": "Правила чата"
+   },
+   "pkHkRozetler": {
+      "message": "Значки подписчика"
+   },
+   "pkIceAktar": {
+      "message": "Импорт"
+   },
+   "pkIcerikBos": {
+      "message": "Текст (пусто = все сообщения)"
+   },
+   "pkIleri": {
+      "message": "Далее"
+   },
+   "pkIlkSonMesaj": {
+      "message": "От первого сообщения до последнего"
+   },
+   "pkIndiriliyorEki": {
+      "message": "Загрузка · {1}"
+   },
+   "pkIndirmeBitti": {
+      "message": "Готово · {1}"
+   },
+   "pkIndirmeDurdu": {
+      "message": "Загрузка остановлена: {1}"
+   },
+   "pkIndirmeIlerleme": {
+      "message": "{1}% · сегментов: {2}"
+   },
+   "pkIndirmeIptal": {
+      "message": "Отменено · загружено {1}"
+   },
+   "pkIptal": {
+      "message": "Отмена"
+   },
+   "pkIstatBos": {
+      "message": "Пока нет данных. Откройте трансляцию — по мере чата здесь появятся счётчики, активные зрители и эмоции."
+   },
+   "pkIzleyici": {
+      "message": "Зрители"
+   },
+   "pkIzleyiciAnlik": {
+      "message": "Зрители (сейчас)"
+   },
+   "pkIzleyiciOrt": {
+      "message": "Зрители (сред.)"
+   },
+   "pkIzleyiciZirve": {
+      "message": "Зрители (пик)"
+   },
+   "pkKaldir": {
+      "message": "Убрать"
+   },
+   "pkKaliteNot": {
+      "message": "Если нужного качества нет, берётся ближайшее ниже. При «Авто» функция не работает."
+   },
+   "pkKaliteOkunamadi": {
+      "message": "Не удалось прочитать список качеств."
+   },
+   "pkKaliteSecin": {
+      "message": "Выберите качество:"
+   },
+   "pkKanalBilgisi": {
+      "message": "Сведения о канале"
+   },
+   "pkKanalCanli": {
+      "message": "В эфире: {1} · зрителей: {2}"
+   },
+   "pkKanalCevrimdisi": {
+      "message": "Не в сети · подписчиков: {1}"
+   },
+   "pkKanalEngeliKaldir": {
+      "message": "Показывать этот канал снова"
+   },
+   "pkKanalGizleYok": {
+      "message": "Вы ещё никого не скрыли. Наведите на карточку канала и нажмите ✕."
+   },
+   "pkKanalHakkinda": {
+      "message": "Обзор канала {1}"
+   },
+   "pkKanalSahibi": {
+      "message": "Владелец канала"
+   },
+   "pkKanaliGizle": {
+      "message": "Скрыть этот канал"
+   },
+   "pkKanaliTakip": {
+      "message": "Подписан на канал"
+   },
+   "pkKapali": {
+      "message": "без звука"
+   },
+   "pkKapat": {
+      "message": "Закрыть"
+   },
+   "pkKareyiKaydet": {
+      "message": "Сохранить текущий кадр"
+   },
+   "pkKartBilgiNot": {
+      "message": "Запрашивается с собственной точки Kick без куки, один раз на человека, затем хранится в памяти."
+   },
+   "pkKartGenis": {
+      "message": "Широкая карточка профиля"
+   },
+   "pkKartGenisD": {
+      "message": "Расширяет узкую карточку Kick, чтобы информация, заметки и модерация не были стеснены."
+   },
+   "pkKartMesajlar": {
+      "message": "Последние сообщения и ответы"
+   },
+   "pkKartMesajlarD": {
+      "message": "Показывает на карточке профиля последние сообщения пользователя и адресованные ему ответы во вкладках."
+   },
+   "pkKartSabit": {
+      "message": "Закрепление карточки профиля"
+   },
+   "pkKartSabitD": {
+      "message": "Добавляет кнопку на карточку: копия остаётся на экране для чтения."
+   },
+   "pkKartSagTik": {
+      "message": "Меню по правому клику на карточках"
+   },
+   "pkKartSagTikD": {
+      "message": "Правый клик по каналу на главной или в категориях даёт быстрые действия. Shift + правый клик открывает меню браузера."
+   },
+   "pkKartTakipci": {
+      "message": "Число подписчиков в карточке"
+   },
+   "pkKartTakipciD": {
+      "message": "Запрашивается с точки Kick без куки, один раз на человека."
+   },
+   "pkKartYanit": {
+      "message": "Ответы этому человеку"
+   },
+   "pkKartYanitD": {
+      "message": "«Последние сообщения» — что написал он; этот блок — что написали ему."
+   },
+   "pkKartiSabitle": {
+      "message": "Закрепить карточку"
+   },
+   "pkKategoriGizleYok": {
+      "message": "Вы ещё не скрыли ни одной категории. Откройте страницу категории и нажмите кнопку рядом с заголовком."
+   },
+   "pkKategoriGizlemeyiKullan": {
+      "message": "Использовать скрытие категорий"
+   },
+   "pkKategoriGizlemeyiKullanD": {
+      "message": "Выключите — все снова появятся."
+   },
+   "pkKategoriGoster": {
+      "message": "Снова показывать эту категорию"
+   },
+   "pkKatilim": {
+      "message": "Вовлечённость"
+   },
+   "pkKatilimD": {
+      "message": "Доля зрителей, пишущих в чат"
+   },
+   "pkKatilmaTakip": {
+      "message": "Дата регистрации и подписки"
+   },
+   "pkKatilmaTakipD": {
+      "message": "Дата регистрации на Kick, срок подписки на канал и длительность саба."
+   },
+   "pkKaydedildi": {
+      "message": "сохранено"
+   },
+   "pkKaydet": {
+      "message": "Сохранить"
+   },
+   "pkKayitNoktasi": {
+      "message": "Где вы остановились в записи"
+   },
+   "pkKayitNoktasiD": {
+      "message": "Прервали запись — при следующем открытии предложит вернуться на то же место."
+   },
+   "pkKayitNoktasiHatirla": {
+      "message": "Запоминать позицию"
+   },
+   "pkKayitNoktasiHatirlaD": {
+      "message": "Позиция хранится только на вашем устройстве."
+   },
+   "pkKayitliNTemizle": {
+      "message": "Очистить сохранённых позиций: {1}"
+   },
+   "pkKaynagiYeniSekmede": {
+      "message": "Открыть источник в новой вкладке ↗"
+   },
+   "pkKaynakBulunuyor": {
+      "message": "Ищем источник…"
+   },
+   "pkKaynakYok": {
+      "message": "Источник этой трансляции не найден."
+   },
+   "pkKelimeVurgu": {
+      "message": "Выделять в чате"
+   },
+   "pkKelimeVurguD": {
+      "message": "Сообщения с этими словами получают ту же зелёную полосу, что и приоритетные люди."
+   },
+   "pkKenarGrup": {
+      "message": "Разделить онлайн / офлайн"
+   },
+   "pkKenarGrupD": {
+      "message": "Делит список подписок на две части: каналы в эфире остаются открытыми сверху, офлайн — свёрнутыми; нажмите на заголовок, чтобы открыть. Ограничение Kick в 10 каналов тоже снимается."
+   },
+   "pkKendiMenum": {
+      "message": "Открывать своё меню"
+   },
+   "pkKendiMenumD": {
+      "message": "Shift + правый клик всегда открывает меню браузера."
+   },
+   "pkKezSayisi": {
+      "message": "{1}×"
+   },
+   "pkKickIleGiris": {
+      "message": "Войти через Kick"
+   },
+   "pkKickeKatildi": {
+      "message": "Регистрация на Kick"
+   },
+   "pkKisaDakika": {
+      "message": "мин"
+   },
+   "pkKisaGun": {
+      "message": "д"
+   },
+   "pkKisaSaat": {
+      "message": "ч"
+   },
+   "pkKisiGizleme": {
+      "message": "Скрыть человека"
+   },
+   "pkKisiGizlemeD": {
+      "message": "Их сообщения исчезнут только у вас."
+   },
+   "pkKisiGizli": {
+      "message": "Скрыто людей: {1}."
+   },
+   "pkKisiMesajYok": {
+      "message": "В этой сессии сообщений от пользователя не было."
+   },
+   "pkKisiOncelikliSayi": {
+      "message": "Приоритетных людей: {1}."
+   },
+   "pkKonumSagAlt": {
+      "message": "Справа внизу"
+   },
+   "pkKonumSagUst": {
+      "message": "Справа вверху"
+   },
+   "pkKonumSolAlt": {
+      "message": "Слева внизу"
+   },
+   "pkKonumSolUst": {
+      "message": "Слева вверху"
+   },
+   "pkKopyaKorumasi": {
+      "message": "Некоторые трансляции защищены от копирования — браузер блокирует захват."
+   },
+   "pkKorumaAcikMetin": {
+      "message": "Реклама Kick блокируется."
+   },
+   "pkKorumaKapaliMetin": {
+      "message": "Защита приостановлена."
+   },
+   "pkKullaniciAdi": {
+      "message": "Имя пользователя"
+   },
+   "pkKullaniciAdiBos": {
+      "message": "Имя пользователя (пусто = все)"
+   },
+   "pkKullaniciBul": {
+      "message": "Найти пользователя"
+   },
+   "pkKullaniciNotlari": {
+      "message": "Заметки о пользователях"
+   },
+   "pkKullaniciNotlariD": {
+      "message": "Хранит личную заметку в карточке профиля."
+   },
+   "pkKuralAdvertising": {
+      "message": "Реклама"
+   },
+   "pkKuralBullying": {
+      "message": "Травля"
+   },
+   "pkKuralDoxxing": {
+      "message": "Раскрытие данных"
+   },
+   "pkKuralDrugs": {
+      "message": "Наркотики"
+   },
+   "pkKuralExtremism": {
+      "message": "Экстремизм"
+   },
+   "pkKuralGambling": {
+      "message": "Азартные игры"
+   },
+   "pkKuralHarassment": {
+      "message": "Домогательства"
+   },
+   "pkKuralHate": {
+      "message": "Разжигание ненависти"
+   },
+   "pkKuralHateSpeech": {
+      "message": "Разжигание ненависти"
+   },
+   "pkKuralHatefulConduct": {
+      "message": "Ненавистническое поведение"
+   },
+   "pkKuralIllegal": {
+      "message": "Незаконный контент"
+   },
+   "pkKuralIllegalActivity": {
+      "message": "Незаконная деятельность"
+   },
+   "pkKuralImpersonation": {
+      "message": "Выдача себя за другого"
+   },
+   "pkKuralKabul": {
+      "message": "Автоматически принимать правила чата"
+   },
+   "pkKuralKabulD": {
+      "message": "Подтверждает за вас окно с правилами при входе на канал, где они заданы. По умолчанию выключено — согласие даётся от вашего имени, включение оставляем вам."
+   },
+   "pkKuralMisinfo": {
+      "message": "Дезинформация"
+   },
+   "pkKuralMisinformation": {
+      "message": "Дезинформация"
+   },
+   "pkKuralNudity": {
+      "message": "Обнажённость"
+   },
+   "pkKuralProfanity": {
+      "message": "Нецензурная лексика"
+   },
+   "pkKuralScam": {
+      "message": "Мошенничество"
+   },
+   "pkKuralSelfHarm": {
+      "message": "Самоповреждение"
+   },
+   "pkKuralSexual": {
+      "message": "Сексуальный контент"
+   },
+   "pkKuralSexualContent": {
+      "message": "Сексуальный контент"
+   },
+   "pkKuralSpam": {
+      "message": "Спам"
+   },
+   "pkKuralTerrorism": {
+      "message": "Терроризм"
+   },
+   "pkKuralThreats": {
+      "message": "Угрозы"
+   },
+   "pkKuralUnderage": {
+      "message": "Несовершеннолетние"
+   },
+   "pkKuralViolence": {
+      "message": "Насилие"
+   },
+   "pkKuralWeapons": {
+      "message": "Оружие"
+   },
+   "pkKurtarilanBaslik": {
+      "message": "Чат очищен — последних сообщений: {1}"
+   },
+   "pkMBahset": {
+      "message": "Упомянуть этого человека"
+   },
+   "pkMDaralt": {
+      "message": "Свернуть"
+   },
+   "pkMGenislet": {
+      "message": "Развернуть"
+   },
+   "pkMGizle": {
+      "message": "Скрыть это сообщение"
+   },
+   "pkMKopyala": {
+      "message": "Копировать текст"
+   },
+   "pkMenuArayuz": {
+      "message": "Интерфейс"
+   },
+   "pkMenuKenar": {
+      "message": "Боковая панель"
+   },
+   "pkMenuKullaniciKarti": {
+      "message": "Карточка пользователя"
+   },
+   "pkMenuSohbet": {
+      "message": "Чат"
+   },
+   "pkMesajEylemleri": {
+      "message": "Действия при наведении"
+   },
+   "pkMesajEylemleriD": {
+      "message": "Наведите на сообщение: копировать, упомянуть, время, свернуть, скрыть."
+   },
+   "pkMesajGizli": {
+      "message": "Вы скрыли это сообщение"
+   },
+   "pkMesajSayisi": {
+      "message": "сообщений: {1}"
+   },
+   "pkMesajYok": {
+      "message": "Пока нет сообщений."
+   },
+   "pkMesajiGizle": {
+      "message": "Скрыть"
+   },
+   "pkMesajiGoster": {
+      "message": "Показать"
+   },
+   "pkMesajlar": {
+      "message": "Сообщения"
+   },
+   "pkMesajlariGoster": {
+      "message": "Показать сообщения"
+   },
+   "pkMesajlariniGizle": {
+      "message": "Скрыть их сообщения"
+   },
+   "pkModBirMesajSilindi": {
+      "message": "Сообщение удалено"
+   },
+   "pkModBos": {
+      "message": "С момента входа модерации не было. Здесь появятся баны, мьюты и удаления."
+   },
+   "pkModCezaKaldirdi": {
+      "message": "{1} снял наказание с {2}"
+   },
+   "pkModGunlugu": {
+      "message": "Журнал модерации"
+   },
+   "pkModGunluguD": {
+      "message": "Удалённые сообщения, баны/мьюты и активные наказания."
+   },
+   "pkModIzle": {
+      "message": "Отслеживать события чата"
+   },
+   "pkModIzleD": {
+      "message": "Слушает существующее соединение Kick; новое не открывается."
+   },
+   "pkModOtoSilindi": {
+      "message": "Сообщение {1} удалено {2}"
+   },
+   "pkModSekmeOlaylar": {
+      "message": "Модерация"
+   },
+   "pkModSekmeSilinen": {
+      "message": "Удалённые сообщения"
+   },
+   "pkModSekmeSustur": {
+      "message": "Таймауты"
+   },
+   "pkModSerit": {
+      "message": "Панель модерации в чате"
+   },
+   "pkModSeritD": {
+      "message": "Добавляет полосу вверху чата; нажатие открывает панель модерации."
+   },
+   "pkModSilindi": {
+      "message": "Сообщение от {1} удалено"
+   },
+   "pkModSohbetTemizlendi": {
+      "message": "Чат очищен"
+   },
+   "pkModSohbette": {
+      "message": "Показывать действия модерации в чате"
+   },
+   "pkModSohbetteD": {
+      "message": "Баны, таймауты и очистка чата отображаются в ленте чата. Kick показывает их только модераторам."
+   },
+   "pkModSusturdu": {
+      "message": "{1} замьютил {2} на {3}"
+   },
+   "pkModYasakladi": {
+      "message": "{1} забанил {2}"
+   },
+   "pkModerasyon": {
+      "message": "Модерация"
+   },
+   "pkMsjKisa": {
+      "message": "{1} сообщ."
+   },
+   "pkNot1015a": {
+      "message": "Массовое удаление сообщений — убирает все сообщения с выбранными словами"
+   },
+   "pkNot1015b": {
+      "message": "Автосообщение переписано: настройки по каналам, собственное окно бота, работа в фоне"
+   },
+   "pkNot1015c": {
+      "message": "Повторяющиеся одинаковые сообщения теперь записываются полностью — статистика и массовое удаление считали не всё"
+   },
+   "pkNot1015d": {
+      "message": "Знакомство с возможностями при первом запуске; открыть заново — в разделе «Дополнительно»"
+   },
+   "pkNot1015e": {
+      "message": "Cross-Ban указывает в причине бана исходный канал и того, кто его выдал"
+   },
+   "pkNot1015f": {
+      "message": "В карточке профиля видна точная дата подписки на канал"
+   },
+   "pkNot1015g": {
+      "message": "Исправлено скачивание записи — оно обрывалось после первого фрагмента"
+   },
+   "pkNot101a": {
+      "message": "Объявления в меню и значок уведомлений"
+   },
+   "pkNot102a": {
+      "message": "Реклама в записях заблокирована"
+   },
+   "pkNot102b": {
+      "message": "Скрытие каналов"
+   },
+   "pkNot102c": {
+      "message": "Значки везде, где встречается имя пользователя"
+   },
+   "pkNot105a": {
+      "message": "Статистика чата, упоминания, заметки о пользователях и журнал модерации"
+   },
+   "pkNot105b": {
+      "message": "Подсветка ролей, скрытие людей и приоритетные люди"
+   },
+   "pkNot105c": {
+      "message": "Статистика видео, время эфира, автокачество и перемотка"
+   },
+   "pkNot105d": {
+      "message": "Наложение чата на видео и меню по правому клику в плеере"
+   },
+   "pkNot105e": {
+      "message": "Интерфейс переведён на 7 языков"
+   },
+   "pkNot107a": {
+      "message": "Режим «только блокировка рекламы» — отключить всё остальное одним нажатием"
+   },
+   "pkNot107b": {
+      "message": "Боковая панель: закреплённые каналы, разделение онлайн/офлайн и предпросмотр трансляции"
+   },
+   "pkNot107c": {
+      "message": "Автоматическое качество и громкость; значки, эмоуты и правила в разделе «О канале»"
+   },
+   "pkNot107d": {
+      "message": "Заметно быстрее главная страница и меньше подтормаживаний"
+   },
+   "pkNot107e": {
+      "message": "Значок на панели инструментов теперь сразу открывает панель настроек"
+   },
+   "pkNot107f": {
+      "message": "Удалённые сообщения отмечены в чате; новые сверху в журналах модерации и чата"
+   },
+   "pkNot107g": {
+      "message": "Панель модерации над чатом — нажмите, чтобы открыть события, удалённые сообщения и таймауты"
+   },
+   "pkNotPlaceholder": {
+      "message": "Оставьте себе заметку об этом человеке…"
+   },
+   "pkNotun": {
+      "message": "Ваша заметка"
+   },
+   "pkOdulAlindi": {
+      "message": "Сегодняшняя награда получена 🎉"
+   },
+   "pkOdulBaslik": {
+      "message": "Ежедневная награда"
+   },
+   "pkOdulGirisGerek": {
+      "message": "Нужно войти в Kick"
+   },
+   "pkOdulHata": {
+      "message": "Не удалось получить статус"
+   },
+   "pkOdulIlerleme": {
+      "message": "{1} / {2} просмотрено"
+   },
+   "pkOdulKontrol": {
+      "message": "Проверка статуса…"
+   },
+   "pkOdulYok": {
+      "message": "Сегодня нет задания на просмотр"
+   },
+   "pkOmAciklama": {
+      "message": "Сообщения отправляются от вашего аккаунта. Поле ввода не трогается — черновик не пропадёт."
+   },
+   "pkOmAdet": {
+      "message": "Интервал"
+   },
+   "pkOmAdetD": {
+      "message": "Количество сообщений · минимум {1}"
+   },
+   "pkOmAdetEtiket": {
+      "message": "каждые {1} сообщений"
+   },
+   "pkOmAdim1": {
+      "message": "1. Выберите канал"
+   },
+   "pkOmAdim2": {
+      "message": "2. Как отправлять?"
+   },
+   "pkOmAdim3": {
+      "message": "3. Укажите интервал"
+   },
+   "pkOmAdim4": {
+      "message": "4. Напишите объявление"
+   },
+   "pkOmAralik": {
+      "message": "Объявление по интервалу"
+   },
+   "pkOmAralikD": {
+      "message": "Отправляет тексты из списка по очереди."
+   },
+   "pkOmAyar": {
+      "message": "Автосообщение"
+   },
+   "pkOmAyarD": {
+      "message": "Отправляет объявления через заданные промежутки и автоматически отвечает на команды. От вашего аккаунта."
+   },
+   "pkOmBaskaKanal": {
+      "message": "Вы настраиваете {1}. При сохранении откроется окно бота для {1}."
+   },
+   "pkOmBaslat": {
+      "message": "Запустить"
+   },
+   "pkOmBaslik": {
+      "message": "Автосообщение"
+   },
+   "pkOmDk": {
+      "message": "Интервал"
+   },
+   "pkOmDkD": {
+      "message": "Минуты · минимум {1}"
+   },
+   "pkOmEkle": {
+      "message": "Сохранить команду"
+   },
+   "pkOmEksikKip": {
+      "message": "Перед сохранением выберите способ отправки."
+   },
+   "pkOmEksikKomut": {
+      "message": "Перед сохранением добавьте хотя бы одну команду."
+   },
+   "pkOmEksikMetin": {
+      "message": "Перед сохранением напишите хотя бы одно объявление."
+   },
+   "pkOmKanalSecD": {
+      "message": "На каком канале будет работать бот? Показаны только каналы, где вы модератор, и ваш собственный."
+   },
+   "pkOmKanalSecin": {
+      "message": "Выберите канал"
+   },
+   "pkOmKanalYok": {
+      "message": "Каналов, где вы модератор, не найдено."
+   },
+   "pkOmKayitli": {
+      "message": "Сохранённые команды"
+   },
+   "pkOmKipDk": {
+      "message": "По минутам"
+   },
+   "pkOmKipMesaj": {
+      "message": "По числу сообщений"
+   },
+   "pkOmKomut": {
+      "message": "Ответы на команды"
+   },
+   "pkOmKomutAd": {
+      "message": "Команда"
+   },
+   "pkOmKomutAdIpucu": {
+      "message": "!test"
+   },
+   "pkOmKomutCevap": {
+      "message": "Ответ на эту команду"
+   },
+   "pkOmKomutCevapIpucu": {
+      "message": "Привет!"
+   },
+   "pkOmKomutD": {
+      "message": "Если кто-то напишет команду, отправляется сохранённый ответ."
+   },
+   "pkOmKomutIpucu": {
+      "message": "!test = Привет!\n!discord = discord.gg/..."
+   },
+   "pkOmKomutSil": {
+      "message": "Удалить"
+   },
+   "pkOmKomutYok": {
+      "message": "Команд пока нет."
+   },
+   "pkOmMenu": {
+      "message": "Автосообщение"
+   },
+   "pkOmMetinD": {
+      "message": "Одно объявление в строке. Несколько строк отправляются по очереди."
+   },
+   "pkOmMetinIpucu": {
+      "message": "Discord: ...\nНе забудьте подписаться!"
+   },
+   "pkOmNerede": {
+      "message": "Используется строкой «Автосообщение» в меню PureKick."
+   },
+   "pkOmNot": {
+      "message": "Команда должна быть в начале сообщения. На одну команду ответ не чаще одного раза в 10 секунд; ваши сообщения ничего не запускают."
+   },
+   "pkOmOnayBaslik": {
+      "message": "Запустить бота?"
+   },
+   "pkOmOnayGizle": {
+      "message": "Больше не показывать"
+   },
+   "pkOmOnayKomut": {
+      "message": "Откроется окно бота для {1}, и он начнёт отвечать на команды. Закроете окно — бот остановится."
+   },
+   "pkOmOnayMetin": {
+      "message": "Объявления начнут уходить в {1} с выбранным интервалом. Бот работает в этом окне; закроете вкладку — он остановится."
+   },
+   "pkOmOzet": {
+      "message": "объявлений: {1} · команд: {2}"
+   },
+   "pkOmPopoutD": {
+      "message": "Бот работает в этом окне. При сохранении настройки закрываются, а бот продолжает работу; закроете вкладку — бот остановится, откроете снова — продолжит."
+   },
+   "pkOmSecAciklama": {
+      "message": "Выберите канал — откроется его окно бота, и настройки вы завершите там. Бот работает в этом окне."
+   },
+   "pkOmYetkiYok": {
+      "message": "На этом канале автосообщения недоступны — вы не модератор. Выберите ниже канал, где у вас есть права."
+   },
+   "pkOncelikCikar": {
+      "message": "Убрать приоритет"
+   },
+   "pkOncelikTemizleN": {
+      "message": "Очистить приоритеты ({1})"
+   },
+   "pkOncelikliKisiler": {
+      "message": "Приоритетные люди"
+   },
+   "pkOncelikliKisilerD": {
+      "message": "Их сообщения отмечаются зелёной полосой."
+   },
+   "pkOncelikliYap": {
+      "message": "Сделать приоритетным"
+   },
+   "pkOnizleme": {
+      "message": "Предпросмотр в боковой панели"
+   },
+   "pkOnizlemeD": {
+      "message": "Наведите на канал в левом меню — откроется карточка."
+   },
+   "pkOnizlemeKarti": {
+      "message": "Карточка предпросмотра"
+   },
+   "pkOnizlemeKartiD": {
+      "message": "Превью, название, категория и число зрителей."
+   },
+   "pkOtoClaim": {
+      "message": "Автоматически получать ежедневную награду"
+   },
+   "pkOtoClaimD": {
+      "message": "Получает за вас ежедневную награду Kick за время просмотра, когда условие выполнено. Только это задание — больше ничего."
+   },
+   "pkOtoSes": {
+      "message": "Автогромкость"
+   },
+   "pkOtoSesD": {
+      "message": "Открывает каждую трансляцию с нужной вам громкостью."
+   },
+   "pkOtoSesNot": {
+      "message": "«Авто» запоминает последнюю выставленную вами громкость и применяет её к каждой трансляции. Если измените её во время эфира, значение не перезапишется."
+   },
+   "pkOtoTiyatro": {
+      "message": "Автоматический режим театра"
+   },
+   "pkOtoTiyatroD": {
+      "message": "Один раз расширяет плеер при входе на канал."
+   },
+   "pkOtomatikKalite": {
+      "message": "Автовыбор качества"
+   },
+   "pkOtomatikKaliteD": {
+      "message": "Один раз выбирает ваше качество при входе на канал."
+   },
+   "pkOturum": {
+      "message": "Сессия"
+   },
+   "pkOturumSuresiEki": {
+      "message": "Длительность сессии: {1}"
+   },
+   "pkOynatmaHizi": {
+      "message": "Скорость воспроизведения"
+   },
+   "pkOzellikKapali": {
+      "message": "Эта функция сейчас выключена."
+   },
+   "pkPaneliAc": {
+      "message": "Открыть панель"
+   },
+   "pkParcaListesi": {
+      "message": "Получаем список сегментов…"
+   },
+   "pkParcaYok": {
+      "message": "нет сегментов"
+   },
+   "pkProfilBuyuk": {
+      "message": "Показать аватар крупно"
+   },
+   "pkProfilKartiBilgisi": {
+      "message": "Данные карточки профиля"
+   },
+   "pkProfilKartiBilgisiD": {
+      "message": "Нажмите на человека в чате, чтобы увидеть историю в карточке."
+   },
+   "pkProfiliAc": {
+      "message": "Открыть профиль"
+   },
+   "pkPureKick": {
+      "message": "PureKick"
+   },
+   "pkPureKickAciklama": {
+      "message": "Блокировщик рекламы для Kick."
+   },
+   "pkRenkleriSifirla": {
+      "message": "Вернуть цвета по умолчанию"
+   },
+   "pkRolEtiket": {
+      "message": "Роль"
+   },
+   "pkRolNot": {
+      "message": "Роли берутся из собственного чат-соединения Kick, поэтому распознаются только те, кто пишет после открытия страницы."
+   },
+   "pkRolVurgulama": {
+      "message": "Подсветка ролей"
+   },
+   "pkRolVurgulamaD": {
+      "message": "Сообщения стримера, модератора, VIP и подписчика получают цветную полосу."
+   },
+   "pkRol_bot": {
+      "message": "Бот"
+   },
+   "pkRol_broadcaster": {
+      "message": "Стример"
+   },
+   "pkRol_founder": {
+      "message": "Основатель"
+   },
+   "pkRol_moderator": {
+      "message": "Модератор"
+   },
+   "pkRol_og": {
+      "message": "OG"
+   },
+   "pkRol_staff": {
+      "message": "Команда Kick"
+   },
+   "pkRol_sub_gifter": {
+      "message": "Дарит подписки"
+   },
+   "pkRol_subscriber": {
+      "message": "Подписчик"
+   },
+   "pkRol_verified": {
+      "message": "Подтверждённый"
+   },
+   "pkRol_vip": {
+      "message": "VIP"
+   },
+   "pkSaOnce": {
+      "message": "{1} ч назад"
+   },
+   "pkSabitKaldir": {
+      "message": "Открепить"
+   },
+   "pkSabitKanalAyar": {
+      "message": "Закреплённые каналы сверху"
+   },
+   "pkSabitKanalAyarD": {
+      "message": "Наведите курсор на канал в боковой панели, чтобы появилась кнопка закрепления. Закреплённые каналы остаются вверху списка подписок."
+   },
+   "pkSabitKanallar": {
+      "message": "Закрепление каналов"
+   },
+   "pkSabitKanallarD": {
+      "message": "Держите каналы, на которые вы подписаны, вверху списка."
+   },
+   "pkSabitle": {
+      "message": "Закрепить"
+   },
+   "pkSadeceEmote": {
+      "message": "Сообщения только из эмоций"
+   },
+   "pkSadeceEmoteD": {
+      "message": "Сообщения совсем без текста"
+   },
+   "pkSadeceEmoteEki": {
+      "message": "сообщений только из эмоций: {1}"
+   },
+   "pkSadeceEmoteMesajlari": {
+      "message": "Сообщения только из эмоций"
+   },
+   "pkSadeceReklam": {
+      "message": "Только блокировка рекламы"
+   },
+   "pkSadeceReklamAcik": {
+      "message": "Включена только блокировка рекламы. Включение любой другой функции выйдет из этого режима."
+   },
+   "pkSadeceReklamBtn": {
+      "message": "Включить"
+   },
+   "pkSadeceReklamD": {
+      "message": "Отключает все остальные функции и оставляет только блокировку рекламы."
+   },
+   "pkSadeceReklamRozet": {
+      "message": "Активно"
+   },
+   "pkSagTikMenusu": {
+      "message": "Меню по правому клику в плеере"
+   },
+   "pkSagTikMenusuD": {
+      "message": "Работает только поверх видео."
+   },
+   "pkSayfaReklamlari": {
+      "message": "Реклама на странице"
+   },
+   "pkSayfaReklamlariD": {
+      "message": "Скрывает рекламные блоки в интерфейсе Kick."
+   },
+   "pkScEtiket": {
+      "message": "Метка статуса участника"
+   },
+   "pkScEtiketD": {
+      "message": "Показывает рядом с именами в списке «В чате» или «Не в сети 5 мин»."
+   },
+   "pkScFiltre": {
+      "message": "Фильтр участников"
+   },
+   "pkScFiltreD": {
+      "message": "Добавляет над списком кнопки Все / В чате / Не в сети."
+   },
+   "pkScSayac": {
+      "message": "Улучшенный счётчик участников"
+   },
+   "pkScSayacD": {
+      "message": "Показывает, сколько людей вы видели за сессию, даже если Kick занижает свой счётчик."
+   },
+   "pkSebepYazin": {
+      "message": "Введите причину…"
+   },
+   "pkSebepYok": {
+      "message": "Вы ещё не добавили причин."
+   },
+   "pkSecili": {
+      "message": "Выбрано: {1}"
+   },
+   "pkSekmeGenel": {
+      "message": "Обзор"
+   },
+   "pkSekmeHakkinda": {
+      "message": "О расширении"
+   },
+   "pkSekmeIci": {
+      "message": "Открывать ссылки на странице"
+   },
+   "pkSekmeIciD": {
+      "message": "Ссылки YouTube, X, Instagram, Reddit, клипы Kick, клипы Twitch и Streamable в чате открываются в небольшом плеере."
+   },
+   "pkSekmeIciNot": {
+      "message": "Встроенно открываются только эти сайты; незнакомая ссылка — в новой вкладке. CTRL+клик всегда открывает вкладку."
+   },
+   "pkSendenBahsedenler": {
+      "message": "Кто вас упомянул"
+   },
+   "pkSes": {
+      "message": "Громкость"
+   },
+   "pkSesBip": {
+      "message": "Бип"
+   },
+   "pkSesCinlama": {
+      "message": "Звонок"
+   },
+   "pkSesDamla": {
+      "message": "Капля"
+   },
+   "pkSesKapali": {
+      "message": "Выкл."
+   },
+   "pkSesOto": {
+      "message": "Авто"
+   },
+   "pkSesPuf": {
+      "message": "Пуф"
+   },
+   "pkSifirdan": {
+      "message": "С нуля"
+   },
+   "pkSifirdanD": {
+      "message": "Всё текущее удаляется и заменяется файлом."
+   },
+   "pkSilAciklama": {
+      "message": "Сообщения с триггером удаляются; никого не блокируют. Сообщения стримера, модераторов и ваши собственные пропускаются."
+   },
+   "pkSilAyar": {
+      "message": "Массовое удаление сообщений"
+   },
+   "pkSilAyarD": {
+      "message": "Удаляет сообщения, содержащие выбранные слова или фразы. Когда включено, в меню PureKick появляется строка «Массовое удаление сообщений»."
+   },
+   "pkSilBaslik": {
+      "message": "Массовое удаление сообщений"
+   },
+   "pkSilGecmis": {
+      "message": "Применить к уже полученным сообщениям"
+   },
+   "pkSilMenu": {
+      "message": "Массовое удаление сообщений"
+   },
+   "pkSilNerede": {
+      "message": "Используется из строки «Массовое удаление сообщений» в меню PureKick."
+   },
+   "pkSilNot": {
+      "message": "Это окно можно закрыть при включённом наблюдении; оно остановится при выходе из канала или отключении настройки. Просмотр истории охватывает только сообщения этой сессии."
+   },
+   "pkSilSayac": {
+      "message": "Удалено: {1}"
+   },
+   "pkSilTetikD": {
+      "message": "По одному слову или фразе в строке. Разделение по строкам, потому что во фразе могут быть запятые."
+   },
+   "pkSilYetkiYok": {
+      "message": "На этом канале массовое удаление недоступно — вы не модератор."
+   },
+   "pkSilindiEtiket": {
+      "message": "(удалено)"
+   },
+   "pkSilinenGoster": {
+      "message": "Показывать удалённые сообщения"
+   },
+   "pkSilinenGosterD": {
+      "message": "Удалённые сообщения остаются видимыми — приглушёнными и с пометкой «(удалено)»."
+   },
+   "pkSilinenYok": {
+      "message": "Пока нет удалённых сообщений."
+   },
+   "pkSohbetCikarildi": {
+      "message": "Убрано из чата этой сессии; никакие данные не покидают устройство."
+   },
+   "pkSohbetEdenler": {
+      "message": "Участники чата"
+   },
+   "pkSohbetIstatistikleri": {
+      "message": "Статистика чата"
+   },
+   "pkSohbetIstatistikleriBaslik": {
+      "message": "Статистика чата"
+   },
+   "pkSohbetIstatistikleriD": {
+      "message": "Сообщений/мин, самые активные, использование эмоций."
+   },
+   "pkSohbetKaydi": {
+      "message": "Журнал чата"
+   },
+   "pkSohbetciIpucu": {
+      "message": "Kick: {1} · PureKick увидел {2} человек за сессию"
+   },
+   "pkSohbetciListesi": {
+      "message": "Список участников чата"
+   },
+   "pkSohbetciListesiD": {
+      "message": "Возможности, которые PureKick добавляет к списку зрителей Kick."
+   },
+   "pkSohbette": {
+      "message": "В чате"
+   },
+   "pkSonGuncellemeEki": {
+      "message": "Обновлено: {1}"
+   },
+   "pkSonMesajiIpucu": {
+      "message": "Последнее сообщение: {1} · всего {2}"
+   },
+   "pkSonMesajlar": {
+      "message": "Последние сообщения"
+   },
+   "pkSonucSayisiN": {
+      "message": "результатов: {1}"
+   },
+   "pkSonucYok": {
+      "message": "Ничего не найдено."
+   },
+   "pkSsAyarlari": {
+      "message": "Поведение скриншота"
+   },
+   "pkSsBirincil": {
+      "message": "Обычный клик"
+   },
+   "pkSsIkincil": {
+      "message": "CTRL + клик"
+   },
+   "pkSsIndir": {
+      "message": "Скачать файлом"
+   },
+   "pkSsPano": {
+      "message": "Копировать в буфер"
+   },
+   "pkSure": {
+      "message": "Длительность"
+   },
+   "pkSureDakika": {
+      "message": "{1} мин"
+   },
+   "pkSureDakika1": {
+      "message": "1 мин"
+   },
+   "pkSureGun": {
+      "message": "{1} дн"
+   },
+   "pkSureGun1": {
+      "message": "1 дн"
+   },
+   "pkSureSaat": {
+      "message": "{1} ч"
+   },
+   "pkSureSaat1": {
+      "message": "1 ч"
+   },
+   "pkSureSaniye": {
+      "message": "{1} с"
+   },
+   "pkSureSaniye1": {
+      "message": "1 с"
+   },
+   "pkSureSecenek": {
+      "message": "Варианты длительности"
+   },
+   "pkSureSecenekD": {
+      "message": "Длительности, которые появляются при клике на песочные часы рядом с сообщением. В минутах, через запятую (1440 = 1 день)."
+   },
+   "pkSurumEki": {
+      "message": "Версия {1}"
+   },
+   "pkSurumNotlari": {
+      "message": "Что нового"
+   },
+   "pkSurumNotlariD": {
+      "message": "Что изменилось в каждой версии."
+   },
+   "pkSusturmaBitis": {
+      "message": "Заканчивается: {1}"
+   },
+   "pkTAcikMenuKapat": {
+      "message": "Сначала закройте открытое меню"
+   },
+   "pkTAyarlarIndirildi": {
+      "message": "Настройки экспортированы"
+   },
+   "pkTBaglantiKopyalandi": {
+      "message": "Ссылка скопирована в буфер обмена"
+   },
+   "pkTCrossAdGir": {
+      "message": "Введите хотя бы одно имя пользователя"
+   },
+   "pkTCrossKanalSec": {
+      "message": "Выберите хотя бы один канал"
+   },
+   "pkTGizlenenlerTemiz": {
+      "message": "Список скрытых очищен"
+   },
+   "pkTGoruntuHazirDegil": {
+      "message": "Изображение не готово"
+   },
+   "pkTIndirmeDesteklenmiyor": {
+      "message": "Этот браузер не умеет писать в файл"
+   },
+   "pkTIndirmeSuruyor": {
+      "message": "Загрузка уже идёт"
+   },
+   "pkTKaldiginYer": {
+      "message": "Вы остановились на: {1}"
+   },
+   "pkTKaliteMenusuAcilmadi": {
+      "message": "Меню качества не открылось"
+   },
+   "pkTKaliteMenusuYok": {
+      "message": "Меню качества плеера не найдено"
+   },
+   "pkTKaliteOynaticiya": {
+      "message": "Качество оставлено плееру"
+   },
+   "pkTKaliteYok": {
+      "message": "На этой трансляции нет {1}"
+   },
+   "pkTKanalEngelKalkti": {
+      "message": "{1} больше не скрыт"
+   },
+   "pkTKanalGizlemeKalkti": {
+      "message": "Канал снова виден"
+   },
+   "pkTKanalGizlendi": {
+      "message": "Канал скрыт"
+   },
+   "pkTKartAcilamadi": {
+      "message": "Не удалось открыть карточку — в чате нужно хотя бы одно сообщение"
+   },
+   "pkTKartSabitlendi": {
+      "message": "Карточка закреплена — её можно перетащить"
+   },
+   "pkTKategoriGizlendi": {
+      "message": "Категория скрыта"
+   },
+   "pkTKategoriGorunur": {
+      "message": "Категория снова видна"
+   },
+   "pkTKayitNoktalariTemiz": {
+      "message": "Сохранённые позиции очищены"
+   },
+   "pkTKelimeKaydedildi": {
+      "message": "Отслеживаемые слова сохранены"
+   },
+   "pkTKisiGizlendi": {
+      "message": "Сообщения {1} скрыты"
+   },
+   "pkTKisiGorunur": {
+      "message": "{1} снова виден"
+   },
+   "pkTKisiOncelikli": {
+      "message": "{1} теперь в приоритете"
+   },
+   "pkTKisiSohbetteYok": {
+      "message": "В чате не осталось видимых сообщений этого человека"
+   },
+   "pkTKomutYazildi": {
+      "message": "Команда вписана в поле чата"
+   },
+   "pkTKopyalanamadi": {
+      "message": "Не удалось скопировать текст"
+   },
+   "pkTKopyalandi": {
+      "message": "Текст скопирован в буфер обмена"
+   },
+   "pkTKorumaAcildi": {
+      "message": "Защита включена"
+   },
+   "pkTKorumaDuraklatildi": {
+      "message": "Защита приостановлена"
+   },
+   "pkTKullaniciBulunamadi": {
+      "message": "Такой пользователь не найден"
+   },
+   "pkTMesajlarGeriGeldi": {
+      "message": "Скрытые сообщения возвращены"
+   },
+   "pkTModGunluguKapali": {
+      "message": "Журнал модерации выключен"
+   },
+   "pkTOdulAlindi": {
+      "message": "🎉 Ежедневная награда получена"
+   },
+   "pkTOmKaydedildi": {
+      "message": "Настройки автосообщения сохранены"
+   },
+   "pkTOmKomutBosluk": {
+      "message": "Команда не может содержать пробелы"
+   },
+   "pkTOmKomutEklendi": {
+      "message": "Команда сохранена"
+   },
+   "pkTOmKomutEksik": {
+      "message": "Введите команду и ответ"
+   },
+   "pkTOmKomutGuncellendi": {
+      "message": "Ответ команды обновлён"
+   },
+   "pkTOmPencereAcildi": {
+      "message": "Окно бота открыто для {1}"
+   },
+   "pkTOncelikKalkti": {
+      "message": "Приоритет с {1} снят"
+   },
+   "pkTOnceliklerTemiz": {
+      "message": "Приоритеты очищены"
+   },
+   "pkTOturumGeriYuklendi": {
+      "message": "Предыдущая сессия восстановлена"
+   },
+   "pkTOynaticiYok": {
+      "message": "Плеер не найден"
+   },
+   "pkTOynaticiYokNokta": {
+      "message": "Плеер не найден."
+   },
+   "pkTOzellikAcildi": {
+      "message": "{1}: включено"
+   },
+   "pkTOzellikKapatildi": {
+      "message": "{1}: выключено"
+   },
+   "pkTPanoDesteklenmiyor": {
+      "message": "Этот браузер не копирует изображения, будет скачано"
+   },
+   "pkTRenklerSifirlandi": {
+      "message": "Цвета ролей сброшены"
+   },
+   "pkTSadeceReklam": {
+      "message": "Включена только блокировка рекламы"
+   },
+   "pkTSeritYok": {
+      "message": "Панель управления плеера Kick сейчас скрыта. Наведите курсор на плеер и попробуйте снова."
+   },
+   "pkTSifirlanamadi": {
+      "message": "Не удалось сбросить"
+   },
+   "pkTSifirlandi": {
+      "message": "Всё сброшено, страница перезагружается"
+   },
+   "pkTSilBasladi": {
+      "message": "Наблюдение включено — {1} триггеров"
+   },
+   "pkTSilDurdu": {
+      "message": "Наблюдение остановлено"
+   },
+   "pkTSilEslesmeYok": {
+      "message": "Совпадающих сообщений нет"
+   },
+   "pkTSohbetAlaniYok": {
+      "message": "Область чата не найдена"
+   },
+   "pkTSohbetKutusuYok": {
+      "message": "Поле чата не найдено"
+   },
+   "pkTSsAlinamadi": {
+      "message": "Не удалось сделать скриншот"
+   },
+   "pkTSsKaydedildi": {
+      "message": "Скриншот сохранён"
+   },
+   "pkTSsPanoya": {
+      "message": "Скриншот скопирован в буфер обмена"
+   },
+   "pkTSsYasak": {
+      "message": "На этой трансляции скриншот невозможен"
+   },
+   "pkTSureKaydedildi": {
+      "message": "Варианты длительности сохранены"
+   },
+   "pkTSusturmaHata": {
+      "message": "Не удалось замьютить ({1})"
+   },
+   "pkTSusturuldu": {
+      "message": "{1} — мьют на {2}"
+   },
+   "pkTTemaKaydedildi": {
+      "message": "Цвет темы сохранён"
+   },
+   "pkTTemaVarsayilan": {
+      "message": "Тема сброшена к стандартной"
+   },
+   "pkTToBasladi": {
+      "message": "Наблюдение включено — триггеров: {1}"
+   },
+   "pkTToDurdu": {
+      "message": "Наблюдение остановлено"
+   },
+   "pkTToEslesmeYok": {
+      "message": "Совпадений нет"
+   },
+   "pkTToTetikGir": {
+      "message": "Введите хотя бы один триггерный текст"
+   },
+   "pkTVodIndirildi": {
+      "message": "Запись загружена"
+   },
+   "pkTYedekAlinamadi": {
+      "message": "Не удалось создать копию"
+   },
+   "pkTYedekCokBuyuk": {
+      "message": "Файл слишком большой"
+   },
+   "pkTYedekOkunamadi": {
+      "message": "Не удалось прочитать файл"
+   },
+   "pkTYedekUygulanamadi": {
+      "message": "Не удалось загрузить настройки"
+   },
+   "pkTYedekUygulandi": {
+      "message": "Настройки загружены, страница перезагружается"
+   },
+   "pkTYetkiKaydedildi": {
+      "message": "Роли обновлены"
+   },
+   "pkTYetkiKismi": {
+      "message": "Не удалось применить: {1}"
+   },
+   "pkTakipKelime": {
+      "message": "Отслеживаемые слова"
+   },
+   "pkTakipKelimeD": {
+      "message": "Отслеживает эти слова наряду с вашим именем. Через запятую."
+   },
+   "pkTakipKelimeOrnek": {
+      "message": "розыгрыш, код, сервер"
+   },
+   "pkTakipciEki": {
+      "message": "подписчиков: {1}"
+   },
+   "pkTakipciSayisi": {
+      "message": "Подписчиков"
+   },
+   "pkTamEkranSon": {
+      "message": "Кнопка полного экрана в конце"
+   },
+   "pkTamEkranSonD": {
+      "message": "Перемещает кнопку полного экрана Kick в правый край."
+   },
+   "pkTanArac": {
+      "message": "Инструменты модератора"
+   },
+   "pkTanAracD": {
+      "message": "Они ВЫКЛЮЧЕНЫ: действуют в чате от вашего имени, поэтому включать — ваше решение. Меню PureKick › Модерация."
+   },
+   "pkTanBaslik": {
+      "message": "Знакомство"
+   },
+   "pkTanBaslikD": {
+      "message": "Показывает возможности PureKick страница за страницей."
+   },
+   "pkTanBitir": {
+      "message": "Начать"
+   },
+   "pkTanGoster": {
+      "message": "Показать знакомство"
+   },
+   "pkTanHos": {
+      "message": "Добро пожаловать в PureKick"
+   },
+   "pkTanHosD": {
+      "message": "Набор инструментов, чтобы смотреть Kick без рекламы и вести чат. Большинство функций ниже уже ВКЛЮЧЕНЫ — делать ничего не нужно. Нажимайте «Далее» справа внизу, чтобы посмотреть."
+   },
+   "pkTanKart": {
+      "message": "Карточка профиля"
+   },
+   "pkTanKartD": {
+      "message": "Карточка при клике по нику в чате."
+   },
+   "pkTanKenar": {
+      "message": "Боковая панель"
+   },
+   "pkTanKenarD": {
+      "message": "Список подписок и страница канала."
+   },
+   "pkTanListe": {
+      "message": "Список участников"
+   },
+   "pkTanListeD": {
+      "message": "Дополнения к списку зрителей Kick."
+   },
+   "pkTanMod": {
+      "message": "Модерация"
+   },
+   "pkTanModD": {
+      "message": "Удалённые сообщения, баны и муты становятся видимыми."
+   },
+   "pkTanReklam": {
+      "message": "Реклама"
+   },
+   "pkTanReklamD": {
+      "message": "Всё, что выключите, действует сразу."
+   },
+   "pkTanSohbet": {
+      "message": "Чат"
+   },
+   "pkTanSohbetD": {
+      "message": "Вы решаете, кого выделить и кого не видеть."
+   },
+   "pkTanSon": {
+      "message": "Готово"
+   },
+   "pkTanSonD": {
+      "message": "Все настройки — в кнопке PK под чатом. Это знакомство можно открыть заново в разделе «Дополнительно»."
+   },
+   "pkTanVideo": {
+      "message": "Видео и плеер"
+   },
+   "pkTanVideoD": {
+      "message": "Дополнения на панели плеера."
+   },
+   "pkTemaAciklama": {
+      "message": "Меняет цвет интерфейса Kick."
+   },
+   "pkTemaKickYesili": {
+      "message": "Зелёный Kick"
+   },
+   "pkTemaKirmizi": {
+      "message": "Красный"
+   },
+   "pkTemaMavi": {
+      "message": "Синий"
+   },
+   "pkTemaMor": {
+      "message": "Фиолетовый"
+   },
+   "pkTemaPembe": {
+      "message": "Розовый"
+   },
+   "pkTemaSari": {
+      "message": "Жёлтый"
+   },
+   "pkTemaTurkuaz": {
+      "message": "Бирюзовый"
+   },
+   "pkTemaTuruncu": {
+      "message": "Оранжевый"
+   },
+   "pkTemizlemeKoru": {
+      "message": "Сохранять сообщения при очистке чата"
+   },
+   "pkTemizlemeKoruD": {
+      "message": "Если модератор очистит чат, последние сообщения останутся в отдельном блоке."
+   },
+   "pkTemizlenenAlan": {
+      "message": "Очищено рекламных блоков"
+   },
+   "pkTiyatroNav": {
+      "message": "Верхняя панель в режиме театра"
+   },
+   "pkTiyatroNavD": {
+      "message": "Наведите курсор к самому верху — панель вернётся, выходить из режима не нужно."
+   },
+   "pkTiyatroyaAl": {
+      "message": "Включать режим театра при входе"
+   },
+   "pkTiyatroyaAlD": {
+      "message": "Не трогает, если уже широко; одна попытка на канал."
+   },
+   "pkToAciklama": {
+      "message": "Каждый, кто напишет триггерный текст, получает мьют на выбранное время. Стример, модераторы и вы пропускаются; каждый человек обрабатывается один раз."
+   },
+   "pkToAyar": {
+      "message": "Массовый мьют"
+   },
+   "pkToAyarD": {
+      "message": "Автоматически мьютит любого, кто напишет выбранное вами слово или фразу. При включении в меню PureKick появляется строка «Массовый мьют»."
+   },
+   "pkToBaslat": {
+      "message": "Запустить наблюдение"
+   },
+   "pkToBaslik": {
+      "message": "Массовый мьют"
+   },
+   "pkToDurdur": {
+      "message": "Остановить наблюдение"
+   },
+   "pkToGecmis": {
+      "message": "Применить к уже полученным сообщениям"
+   },
+   "pkToMenu": {
+      "message": "Массовый мьют"
+   },
+   "pkToNerede": {
+      "message": "Используется строкой «Массовый мьют» в меню PureKick."
+   },
+   "pkToNot": {
+      "message": "Окно можно закрыть, наблюдение продолжится; оно остановится при выходе из канала или отключении настройки."
+   },
+   "pkToSayac": {
+      "message": "Замьючено: {1}"
+   },
+   "pkToSure": {
+      "message": "Длительность мьюта"
+   },
+   "pkToSureD": {
+      "message": "Тот же список, что и у быстрого мьюта. Меняется в Модерация › Карточка пользователя."
+   },
+   "pkToTamKelime": {
+      "message": "Совпадение целого слова"
+   },
+   "pkToTamKelimeD": {
+      "message": "Включено: «код» совпадёт, «кодинг» — нет. Выключено: совпадёт любое сообщение с этим текстом."
+   },
+   "pkToTetik": {
+      "message": "Триггерные тексты"
+   },
+   "pkToTetikD": {
+      "message": "По одному слову или фразе в строке. Разделение по строкам, потому что во фразе может быть запятая."
+   },
+   "pkToTetikIpucu": {
+      "message": "бесплатные kicks\nfollow4follow\nсмотри мою био"
+   },
+   "pkTumu": {
+      "message": "Все"
+   },
+   "pkUyarHiz": {
+      "message": "Адаптивная скорость"
+   },
+   "pkUyarHizD": {
+      "message": "Если отстали от эфира, ускоряет, чтобы догнать."
+   },
+   "pkUyarHizNot": {
+      "message": "Картинка не прыгает: позиция не меняется, только скорость до 1,25x и обратно к 1x у края."
+   },
+   "pkVeriYok": {
+      "message": "Пока нет данных."
+   },
+   "pkVideoBilgisiD": {
+      "message": "Открывается кнопкой на панели плеера."
+   },
+   "pkVideoIstatistikleri": {
+      "message": "Статистика видео"
+   },
+   "pkVideoIstatistikleriD": {
+      "message": "Разрешение, FPS, битрейт, потерянные кадры, буфер."
+   },
+   "pkVideoReklamlari": {
+      "message": "Видеореклама"
+   },
+   "pkVideoReklamlariD": {
+      "message": "Блокирует рекламу до и во время эфира."
+   },
+   "pkVideonunYuzdesi": {
+      "message": "Процент от видео"
+   },
+   "pkVodIndir": {
+      "message": "Скачать эту запись"
+   },
+   "pkVodIndirBaslik": {
+      "message": "Скачать запись"
+   },
+   "pkVodIndirKisa": {
+      "message": "Скачать VOD"
+   },
+   "pkVodIndirNot": {
+      "message": "Трансляция пишется на диск по сегментам; память вкладки не забивается."
+   },
+   "pkVodReklamlari": {
+      "message": "Реклама в записях"
+   },
+   "pkVodReklamlariD": {
+      "message": "Пропускает рекламу в начале записей."
+   },
+   "pkVodTsNotN": {
+      "message": "Файл сохраняется как .ts (откроют VLC/MPV). Длительность {1} мин."
+   },
+   "pkVsAg": {
+      "message": "Состояние сети"
+   },
+   "pkVsBitHizi": {
+      "message": "Битрейт"
+   },
+   "pkVsCanliUzaklik": {
+      "message": "Отставание от эфира"
+   },
+   "pkVsCozunurluk": {
+      "message": "Разрешение"
+   },
+   "pkVsDuraklatildi": {
+      "message": "Пауза"
+   },
+   "pkVsDusenKare": {
+      "message": "Потерянные кадры"
+   },
+   "pkVsHazir": {
+      "message": "Готовность"
+   },
+   "pkVsKonum": {
+      "message": "Позиция"
+   },
+   "pkVsTampon": {
+      "message": "Буфер"
+   },
+   "pkVurguMuaf": {
+      "message": "Исключены из подсветки"
+   },
+   "pkVurguMuafD": {
+      "message": "Люди из этого списка не подсвечиваются, какая бы у них ни была роль."
+   },
+   "pkWebSitesi": {
+      "message": "Сайт"
+   },
+   "pkYanSohbet": {
+      "message": "Перетаскивание бокового чата"
+   },
+   "pkYanSohbetD": {
+      "message": "Позволяет перемещать отдельное окно чата мышью."
+   },
+   "pkYanit": {
+      "message": "Ответы"
+   },
+   "pkYanitD": {
+      "message": "Сообщения в ответ на другие"
+   },
+   "pkYanitlarBaslik": {
+      "message": "Ответы"
+   },
+   "pkYaziliyor": {
+      "message": "запись…"
+   },
+   "pkYedekBos": {
+      "message": "В файле нет настроек для применения"
+   },
+   "pkYedekBozuk": {
+      "message": "Это не корректный JSON"
+   },
+   "pkYedekNot": {
+      "message": "В копию входят настройки, заметки, скрытые каналы и люди, фильтры и точки продолжения."
+   },
+   "pkYedekOzet": {
+      "message": "В файле разделов: {1} · {2}"
+   },
+   "pkYedekYabanci": {
+      "message": "Это не резервная копия PureKick"
+   },
+   "pkYeniSekmedeAc": {
+      "message": "Открыть в новой вкладке ↗"
+   },
+   "pkYenilik": {
+      "message": "Новое в этой версии"
+   },
+   "pkYetkiAciklama": {
+      "message": "Выдавайте или снимайте VIP, OG и модератора в этом канале. Показывается только в вашем канале."
+   },
+   "pkYetkiBaslik": {
+      "message": "{1} · Роли"
+   },
+   "pkYetkiDugme": {
+      "message": "Изменить роли"
+   },
+   "pkYetkiMod": {
+      "message": "Модератор"
+   },
+   "pkYetkiOg": {
+      "message": "OG"
+   },
+   "pkYetkiOkunamadi": {
+      "message": "Не удалось прочитать роли."
+   },
+   "pkYetkiVip": {
+      "message": "VIP"
+   },
+   "pkYildir": {
+      "message": "{1} г."
+   },
+   "pkYonetimPaneli": {
+      "message": "Панель управления PureKick"
+   },
+   "pkYorumDengeli": {
+      "message": "эмоции и текст сбалансированы"
+   },
+   "pkYorumEmoteCok": {
+      "message": "большинство сообщений — только эмоции"
+   },
+   "pkYorumEmoteFazla": {
+      "message": "эмоций больше, чем текста"
+   },
+   "pkYorumHizli": {
+      "message": "Чат идёт быстро"
+   },
+   "pkYorumVeriYok": {
+      "message": "Для выводов нужно больше данных. Заполнится по мере чата."
+   },
+   "pkYorumZirve": {
+      "message": "самая активная минута {1}"
+   },
+   "pkYukseklik": {
+      "message": "Высота"
+   },
+   "pkYuzde": {
+      "message": "Проценты"
+   },
+   "pkZamanAsimi": {
+      "message": "Получил таймаут"
+   },
+   "pkZirveDakika": {
+      "message": "{1} — сообщений за минуту: {2}"
+   },
+   "popupBadges": {
+      "message": "Значки"
+   },
+   "startBtn": {
+      "message": "Включить защиту"
+   },
+   "statusActive": {
+      "message": "Трансляция без рекламы активна"
+   },
+   "statusPaused": {
+      "message": "Защита приостановлена"
+   },
+   "themeColor": {
+      "message": "Цвет темы"
+   },
+   "themeReset": {
+      "message": "Сбросить (по умолчанию Kick)"
+   }
+}

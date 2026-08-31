@@ -1,0 +1,2459 @@
+{
+   "appDesc": {
+      "message": "Kick.com'da reklamları engelle; akıcı, kesintisiz, abone kalitesinde yayın."
+   },
+   "badgeCtaSub": {
+      "message": "Kick ile giriş yap"
+   },
+   "badgeCtaTitle": {
+      "message": "Sohbet Rozeti Kazan"
+   },
+   "badgeLinkedSub": {
+      "message": "Hesabın bağlı ✓"
+   },
+   "badgeLinkedTitle": {
+      "message": "Sohbet Rozeti Aktif"
+   },
+   "btnTitle": {
+      "message": "PureKick — Reklamsız Yayın"
+   },
+   "dropDay": {
+      "message": "{1} gün kaldı"
+   },
+   "dropDays": {
+      "message": "{1} gün kaldı"
+   },
+   "dropHour": {
+      "message": "{1} saat kaldı"
+   },
+   "dropHours": {
+      "message": "{1} saat kaldı"
+   },
+   "dropTitle": {
+      "message": "Kick'teki Drop kampanyalarını gör"
+   },
+   "dropsEmpty": {
+      "message": "Aktif drop bulunmamaktadır"
+   },
+   "dropsTitle": {
+      "message": "Aktif Droplar"
+   },
+   "footHelp": {
+      "message": "Yardım & Destek"
+   },
+   "footPrivacy": {
+      "message": "Gizlilik"
+   },
+   "pauseBtn": {
+      "message": "Bu sitede duraklat"
+   },
+   "pkAboneAktifNot": {
+      "message": "Desteğin sürdükçe her ay büyür. Teşekkürler! 💚"
+   },
+   "pkAboneAy": {
+      "message": "{1} Aylık Destekçi"
+   },
+   "pkAboneAy1": {
+      "message": "1 Aylık Destekçi"
+   },
+   "pkAboneBaslangic": {
+      "message": "Başlangıç"
+   },
+   "pkAboneBitti": {
+      "message": "Aboneliğin sona erdi. Yenilersen rozetin kaldığı yerden devam eder."
+   },
+   "pkAboneDemoBaslik": {
+      "message": "Destekçi olunca sohbette böyle görünürsün:"
+   },
+   "pkAboneDemoMesaj": {
+      "message": "selam! 👋"
+   },
+   "pkAboneKidem": {
+      "message": "Kıdemin"
+   },
+   "pkAboneOl": {
+      "message": "Abone Ol"
+   },
+   "pkAboneOnceGiris": {
+      "message": "Önce Kick ile giriş yap — aboneliğini hesabınla eşleyebilmemiz için gerekli."
+   },
+   "pkAboneSonaErdi": {
+      "message": "Sona erdi"
+   },
+   "pkAboneYenile": {
+      "message": "Aboneliği Yenile"
+   },
+   "pkAboneYenileme": {
+      "message": "Yenileme"
+   },
+   "pkAboneYukleniyor": {
+      "message": "Abonelik durumun kontrol ediliyor…"
+   },
+   "pkAbonelik": {
+      "message": "Abonelik"
+   },
+   "pkAbonelikTanit": {
+      "message": "Destekçi ol, sohbette adının yanında kıdem rozetin görünsün ve ismini istediğin renge boya."
+   },
+   "pkAiMod": {
+      "message": "Otomatik silmeleri ayrı göster"
+   },
+   "pkAiModD": {
+      "message": "Kick'in yapay zekâ moderasyonu silmişse günlükte moderatör silmesinden ayrılır."
+   },
+   "pkAltAdTakibi": {
+      "message": "Ad takibi"
+   },
+   "pkAltCezaSebepleri": {
+      "message": "Ceza sebepleri"
+   },
+   "pkAltGezinme": {
+      "message": "Gezinme çubuğu"
+   },
+   "pkAltGizliKanallar": {
+      "message": "Gizlenen kanallar"
+   },
+   "pkAltGizliKategoriler": {
+      "message": "Gizlenen kategoriler"
+   },
+   "pkAltKaliteSes": {
+      "message": "Otomatik kalite ve ses"
+   },
+   "pkAltKartBilgisi": {
+      "message": "Kart bilgisi"
+   },
+   "pkAltKartSohbeti": {
+      "message": "Kart sohbeti"
+   },
+   "pkAltKenarCubugu": {
+      "message": "Kenar çubuğu"
+   },
+   "pkAltModGunlugu": {
+      "message": "Günlük ayarları"
+   },
+   "pkAltOtomasyon": {
+      "message": "Otomasyon"
+   },
+   "pkAltOynaticiOzel": {
+      "message": "Oynatıcı özellikleri"
+   },
+   "pkAltSagTikMenuleri": {
+      "message": "Sağ tık ve görseller"
+   },
+   "pkAltSohbetGorunum": {
+      "message": "Sohbet görünümü"
+   },
+   "pkAltSohbetGorunumD": {
+      "message": "Emote önizlemesi."
+   },
+   "pkAltSohbetMesaji": {
+      "message": "Sohbet mesajı"
+   },
+   "pkAltVideoIstat": {
+      "message": "Video ve şerit"
+   },
+   "pkAltVideoVod": {
+      "message": "Video oynatıcı ve VOD"
+   },
+   "pkAltVurgulama": {
+      "message": "Mesaj vurgulama"
+   },
+   "pkAninda": {
+      "message": "Kapattığın seçenek anında devreye girer."
+   },
+   "pkAnlikOrtZirve": {
+      "message": "Anlık / ortalama / zirve"
+   },
+   "pkAralikSec": {
+      "message": "Aralık seç"
+   },
+   "pkArayuzDuzeniD": {
+      "message": "Kick arayüzüne küçük eklemeler; hiçbiri Kick'in kendi düzenini bozmaz."
+   },
+   "pkAySayisi": {
+      "message": "{1} ay"
+   },
+   "pkAyarSatiri": {
+      "message": "PureKick Sohbet Ayarları"
+   },
+   "pkAyarYedegi": {
+      "message": "Ayar yedeği"
+   },
+   "pkAyarYedegiD": {
+      "message": "Tüm ayarların ve listelerin tek bir dosyada. Sunucuya hiçbir şey gitmez."
+   },
+   "pkAyarlar": {
+      "message": "PureKick ayarları"
+   },
+   "pkAyarlardanAc": {
+      "message": "Ayarlar bölümünden açabilirsin."
+   },
+   "pkAydir": {
+      "message": "{1} aydır"
+   },
+   "pkAzOnce": {
+      "message": "az önce"
+   },
+   "pkBaglantiDurum": {
+      "message": "Sohbet bağlantı durumu"
+   },
+   "pkBaglantiDurumD": {
+      "message": "Sohbetin yanında küçük bir nokta: olay akıyor mu, kesildi mi."
+   },
+   "pkBaglanti_acik": {
+      "message": "Sohbet bağlantısı çalışıyor"
+   },
+   "pkBaglanti_bekliyor": {
+      "message": "Sohbet bağlantısı bekleniyor"
+   },
+   "pkBaglanti_kopuk": {
+      "message": "Sohbet bağlantısı kopmuş görünüyor"
+   },
+   "pkBaglanti_sessiz": {
+      "message": "Bir süredir olay gelmedi — sohbet sakin olabilir"
+   },
+   "pkBaglantiyiKopyala": {
+      "message": "Bağlantıyı kopyala"
+   },
+   "pkBaglantiyiOnizle": {
+      "message": "Bağlantıyı Önizle"
+   },
+   "pkBahsedenYok": {
+      "message": "Şu ana kadar senden bahseden olmadı."
+   },
+   "pkBahsedilmeler": {
+      "message": "Bahsedilmeler"
+   },
+   "pkBahsedilmelerBos": {
+      "message": "Bir kanalın sohbeti izlendikçe burada birikir."
+   },
+   "pkBahsedilmelerD": {
+      "message": "Sohbette adın geçtiğinde ayrı kutuda toplar."
+   },
+   "pkBahsetRozet": {
+      "message": "Bildirim sayacı"
+   },
+   "pkBahsetRozetD": {
+      "message": "Adın geçtiğinde PureKick düğmesinde kırmızı sayı çıkar. Kapatırsan bahsedilmeler yine toplanır, yalnız sayı görünmez."
+   },
+   "pkBahsetSes": {
+      "message": "Bildirim sesi"
+   },
+   "pkBahsetSesD": {
+      "message": "Adın geçtiğinde kısa bir ses çalar."
+   },
+   "pkBahsetSesSeviye": {
+      "message": "Ses seviyesi"
+   },
+   "pkBahsetSesTon": {
+      "message": "Ses"
+   },
+   "pkBahsetSesTonD": {
+      "message": "Seçtiğinde hemen çalar — dinleyip karar ver."
+   },
+   "pkBahsetTikla": {
+      "message": "Tıklanabilir @bahsetme"
+   },
+   "pkBahsetTiklaD": {
+      "message": "Mesajdaki @ad yazısına tıklayınca o kişi sohbet kutusuna yazılır."
+   },
+   "pkBanDetay": {
+      "message": "Detaylı ban bilgisi"
+   },
+   "pkBanDetayD": {
+      "message": "Günlükte bir satıra tıklayınca sebep, süre, kalan zaman ve itiraz durumu açılır."
+   },
+   "pkBanDoldu": {
+      "message": "Doldu"
+   },
+   "pkBanItiraz": {
+      "message": "İtiraz"
+   },
+   "pkBanItirazVar": {
+      "message": "Bu ceza için itiraz açılmış"
+   },
+   "pkBanKalan": {
+      "message": "Kalan"
+   },
+   "pkBanKalici": {
+      "message": "Kalıcı"
+   },
+   "pkBanMesaj": {
+      "message": "Mesaj"
+   },
+   "pkBanOtomatik": {
+      "message": "Otomatik"
+   },
+   "pkBanSablon": {
+      "message": "Hazır ceza sebepleri"
+   },
+   "pkBanSablonD": {
+      "message": "Sık kullandığın sebepleri kaydet; profil kartından tek tıkla komut olarak yazılır."
+   },
+   "pkBanSebep": {
+      "message": "Sebep"
+   },
+   "pkBanSure": {
+      "message": "Süre"
+   },
+   "pkBanYapan": {
+      "message": "Uygulayan"
+   },
+   "pkBindir": {
+      "message": "Sohbeti yayının üstüne bindir"
+   },
+   "pkBindirAc": {
+      "message": "Bindirmeyi aç"
+   },
+   "pkBindirAcD": {
+      "message": "Katman tıklamaları geçirir; oynatıcı düğmelerini engellemez."
+   },
+   "pkBindirD": {
+      "message": "Tam ekranda da sohbeti okumaya devam edersin."
+   },
+   "pkBindirKonum": {
+      "message": "Konum"
+   },
+   "pkBindirNot": {
+      "message": "Mesajlar Kick'in mevcut sohbet bağlantısından okunur; yeni bağlantı açılmaz. Gizlediğin kişiler burada da görünmez."
+   },
+   "pkBirModerator": {
+      "message": "Bir moderatör"
+   },
+   "pkBirModeratorIci": {
+      "message": "bir moderatör"
+   },
+   "pkBirlestir": {
+      "message": "Birleştir"
+   },
+   "pkBirlestirD": {
+      "message": "Yalnız dosyadaki ayarlar yazılır, gerisi olduğu gibi kalır."
+   },
+   "pkBotYoksay": {
+      "message": "Botları vurgulama"
+   },
+   "pkBotYoksayD": {
+      "message": "Bot rozeti taşıyanların mesajları renk şeridi almaz."
+   },
+   "pkBugun": {
+      "message": "bugün"
+   },
+   "pkCevrimdisi": {
+      "message": "Çevrimdışı"
+   },
+   "pkCevrimdisiEki": {
+      "message": "Çevrimdışı · {1}"
+   },
+   "pkCezaYok": {
+      "message": "Şu anda süreli cezası olan kimse yok."
+   },
+   "pkCrossAciklama": {
+      "message": "İşlem seçtiğin her kanalda ayrı ayrı uygulanır. Kanal listesi, moderatör olduğun kanallardan gelir."
+   },
+   "pkCrossAra": {
+      "message": "Kanal ara…"
+   },
+   "pkCrossAyar": {
+      "message": "Cross-Ban · Toplu Cross-Ban"
+   },
+   "pkCrossAyarD": {
+      "message": "Profil kartına bir düğme, PureKick menüsüne de \"Toplu Cross-Ban\" satırı ekler: moderatör olduğun kanalların hepsinde tek kişiyi ya da bir listeyi tek seferde yasaklayabilir, susturabilir ya da affedebilirsin."
+   },
+   "pkCrossBaslat": {
+      "message": "Başlat"
+   },
+   "pkCrossBaslik": {
+      "message": "{1} — kanallar arası işlem"
+   },
+   "pkCrossBekleme": {
+      "message": "Kanallar arası bekleme (saniye)"
+   },
+   "pkCrossBitti": {
+      "message": "Bitti — {1} başarılı, {2} başarısız"
+   },
+   "pkCrossDugme": {
+      "message": "Cross-Ban"
+   },
+   "pkCrossDurdur": {
+      "message": "Durdur"
+   },
+   "pkCrossHepsi": {
+      "message": "Hepsini seç / bırak"
+   },
+   "pkCrossIlerleme": {
+      "message": "{1} / {2} · {3}"
+   },
+   "pkCrossKaldir": {
+      "message": "Yasağı kaldır"
+   },
+   "pkCrossKanallar": {
+      "message": "Kanallar"
+   },
+   "pkCrossListeYok": {
+      "message": "Kanal listesi alınamadı — Kick’e giriş yapmış olman gerekiyor"
+   },
+   "pkCrossModYok": {
+      "message": "Moderatör olduğun bir kanal bulunamadı"
+   },
+   "pkCrossNerede": {
+      "message": "Profil kartındaki Cross-Ban düğmesinden ya da PureKick menüsündeki \"Toplu Cross-Ban\" satırından kullanılır."
+   },
+   "pkCrossSebep": {
+      "message": "Sebep"
+   },
+   "pkCrossSebepIpucu": {
+      "message": "isteğe bağlı"
+   },
+   "pkCrossSecili": {
+      "message": "{1} / {2} seçili"
+   },
+   "pkCrossSure": {
+      "message": "Süre (dakika)"
+   },
+   "pkCrossSustur": {
+      "message": "Sustur"
+   },
+   "pkCrossTekNot": {
+      "message": "Hızlı moderasyon kapalı; yalnız kanallar arası işlem düğmesi görünüyor."
+   },
+   "pkCrossToplu": {
+      "message": "Toplu Cross-Ban"
+   },
+   "pkCrossTopluAciklama": {
+      "message": "Yazdığın her kullanıcıya, seçtiğin her kanalda ayrı ayrı uygulanır. Kanal listesi, moderatör olduğun kanallardan gelir."
+   },
+   "pkCrossTopluAdlar": {
+      "message": "Kullanıcı adları"
+   },
+   "pkCrossTopluBaslik": {
+      "message": "Toplu kanallar arası işlem"
+   },
+   "pkCrossTopluBekleme": {
+      "message": "Kullanıcılar arası bekleme (saniye)"
+   },
+   "pkCrossTopluBeklemeNot": {
+      "message": "Bir kullanıcı seçili kanalların hepsinde arka arkaya işlenir. Bekleme yalnız sıradaki kullanıcıya geçerken — en az {1} saniye."
+   },
+   "pkCrossTopluIpucu": {
+      "message": "ahmet, mehmet, ayse\nya da alt alta yaz"
+   },
+   "pkCrossTopluSayi": {
+      "message": "{1} kullanıcı"
+   },
+   "pkCrossYasakla": {
+      "message": "Yasakla"
+   },
+   "pkCrossYukleniyor": {
+      "message": "Kanallar yükleniyor…"
+   },
+   "pkDisaAktar": {
+      "message": "Dışa aktar"
+   },
+   "pkDkOnce": {
+      "message": "{1} dk önce"
+   },
+   "pkDropsAciklama": {
+      "message": "Kaçırmaman gereken aktif kampanyalar."
+   },
+   "pkDropsMenu": {
+      "message": "Aktif Droplar - Günlük Ödül"
+   },
+   "pkEkle": {
+      "message": "Ekle"
+   },
+   "pkEkranGoruntusu": {
+      "message": "Ekran görüntüsü"
+   },
+   "pkEkranGoruntusuAl": {
+      "message": "Ekran görüntüsü al"
+   },
+   "pkEkranGoruntusuD": {
+      "message": "O anki kareyi PNG olarak indirir."
+   },
+   "pkEminMisin": {
+      "message": "Emin misin?"
+   },
+   "pkEmoteOnizleme": {
+      "message": "Emote önizleme"
+   },
+   "pkEmoteOnizlemeD": {
+      "message": "Bir emotenin üstüne gelince büyük hâli ve adı görünür."
+   },
+   "pkEmoteSayisi": {
+      "message": "{1} emote"
+   },
+   "pkEmoteYok": {
+      "message": "Henüz emote kullanılmadı."
+   },
+   "pkEnAktifSohbet": {
+      "message": "En Aktif Sohbet Edenler"
+   },
+   "pkEnAktifSohbetD": {
+      "message": "Bu oturumda en çok mesaj yazanlar."
+   },
+   "pkEnCokEmote": {
+      "message": "En Çok Kullanılan Emoteler"
+   },
+   "pkEnCokEmoteD": {
+      "message": "Bu oturumda sohbette en sık geçenler."
+   },
+   "pkEnCokEmoteKisi": {
+      "message": "En Çok Emote Kullananlar"
+   },
+   "pkEnCokEmoteKisiD": {
+      "message": "Kişi başına emote ve \"sadece emote\" mesaj sayısı."
+   },
+   "pkEnYogunDakika": {
+      "message": "En yoğun dakika"
+   },
+   "pkEngellemeAyarlari": {
+      "message": "Reklam Ayarları"
+   },
+   "pkEngellenenVideo": {
+      "message": "Engellenen video reklamı"
+   },
+   "pkEvet": {
+      "message": "evet"
+   },
+   "pkEvetSifirla": {
+      "message": "Evet, sıfırla"
+   },
+   "pkGelenYanitYok": {
+      "message": "Bu oturumda ondan bahseden olmadı."
+   },
+   "pkGelenYanitlar": {
+      "message": "Ona yazılanlar"
+   },
+   "pkGelismis": {
+      "message": "Gelişmiş"
+   },
+   "pkGeri": {
+      "message": "Geri"
+   },
+   "pkGizleIkonu": {
+      "message": "Kanalın üstüne gelince gizle düğmesi"
+   },
+   "pkGizleIkonuD": {
+      "message": "Ana sayfa, kenar çubuğu ve kategorilerde bir kanalın üstüne gelince sağ üst köşede gizle düğmesi çıkar. Kanal sayfasındaki paylaş düğmesinin yanındaki düğme bundan bağımsızdır."
+   },
+   "pkGizlemeyiKaldir": {
+      "message": "Gizlemeyi Kaldır"
+   },
+   "pkGizlenenKanallar": {
+      "message": "Gizlenen kanallar"
+   },
+   "pkGizlenenKanallarD": {
+      "message": "Bu kanallar listelerde, kategorilerde ve aramada görünmez."
+   },
+   "pkGizlenenKategoriler": {
+      "message": "Gizlenen kategoriler"
+   },
+   "pkGizlenenKategorilerD": {
+      "message": "Bu kategoriler ve içindeki yayın kartları listelerde görünmez."
+   },
+   "pkGizlenenleriTemizle": {
+      "message": "Gizlenen {1} kişiyi geri getir"
+   },
+   "pkGizliMesajTemizle": {
+      "message": "Gizlenen {1} mesajı geri getir"
+   },
+   "pkGorselBuyut": {
+      "message": "Görseli büyüt (CTRL + tık)"
+   },
+   "pkGorselBuyutD": {
+      "message": "Emote, rozet ve avatarları tam boyutta görmek için CTRL basılı tıkla."
+   },
+   "pkGorunurluk": {
+      "message": "Görünürlük"
+   },
+   "pkGrupCanli": {
+      "message": "Çevrimiçi ({1})"
+   },
+   "pkGrupKapali": {
+      "message": "Çevrimdışı ({1})"
+   },
+   "pkGunOnce": {
+      "message": "{1} gün önce"
+   },
+   "pkGundur": {
+      "message": "{1} gündür"
+   },
+   "pkHakkindaEk": {
+      "message": "Kanal hakkında ek bilgi"
+   },
+   "pkHakkindaEkD": {
+      "message": "Yayının altındaki Hakkında satırına abone rozetlerini, kanal emotelerini, son kategorileri ve varsa sohbet kurallarını ekler."
+   },
+   "pkHata": {
+      "message": "hata"
+   },
+   "pkHayir": {
+      "message": "hayır"
+   },
+   "pkHazirlanamadi": {
+      "message": "Hazırlanamadı."
+   },
+   "pkHersiSifirla": {
+      "message": "Her şeyi sıfırla"
+   },
+   "pkHersiSifirlaD": {
+      "message": "Bütün ayarlar ve listeler silinir, eklenti ilk günkü hâline döner."
+   },
+   "pkHersiSifirlaUyari": {
+      "message": "Notların, gizlediğin kanal ve kişiler, filtrelerin ve kayıt noktaların silinecek. Bu işlem geri alınamaz — önce dışa aktarmak isteyebilirsin."
+   },
+   "pkHesabinEki": {
+      "message": "Hesabın: {1}"
+   },
+   "pkHizliMod": {
+      "message": "Hızlı susturma"
+   },
+   "pkHizliModD": {
+      "message": "Sohbette bir mesajın yanındaki kum saatine bastığında süre şeridi açılır; Kick’in kendi penceresi yerine seçtiğin süre uygulanır."
+   },
+   "pkHizliModNot": {
+      "message": "Komut yalnızca kutuya yazılır — göndermek sende. Böylece yanlışlıkla ceza verilmez."
+   },
+   "pkHkAboneye": {
+      "message": "abonelere özel"
+   },
+   "pkHkAy": {
+      "message": "{1} ay"
+   },
+   "pkHkEmoteler": {
+      "message": "Kanal emoteleri"
+   },
+   "pkHkKategoriler": {
+      "message": "Son kategoriler"
+   },
+   "pkHkKurallar": {
+      "message": "Sohbet kuralları"
+   },
+   "pkHkRozetler": {
+      "message": "Abone rozetleri"
+   },
+   "pkIceAktar": {
+      "message": "İçe yükle"
+   },
+   "pkIcerikBos": {
+      "message": "İçerik (boş = tüm mesajlar)"
+   },
+   "pkIleri": {
+      "message": "İleri"
+   },
+   "pkIlkSonMesaj": {
+      "message": "İlk mesajdan son mesaja"
+   },
+   "pkIndiriliyorEki": {
+      "message": "İndiriliyor · {1}"
+   },
+   "pkIndirmeBitti": {
+      "message": "Bitti · {1}"
+   },
+   "pkIndirmeDurdu": {
+      "message": "İndirme durdu: {1}"
+   },
+   "pkIndirmeIlerleme": {
+      "message": "{1}% · {2} parça"
+   },
+   "pkIndirmeIptal": {
+      "message": "İptal edildi · {1} indirilmişti"
+   },
+   "pkIptal": {
+      "message": "İptal"
+   },
+   "pkIstatBos": {
+      "message": "Henüz veri yok. Bir yayına gir, sohbet aktıkça mesaj sayısı, en aktif kişiler ve emote kullanımı burada görünecek."
+   },
+   "pkIzleyici": {
+      "message": "İzleyici"
+   },
+   "pkIzleyiciAnlik": {
+      "message": "İzleyici (anlık)"
+   },
+   "pkIzleyiciOrt": {
+      "message": "İzleyici (ort.)"
+   },
+   "pkIzleyiciZirve": {
+      "message": "İzleyici (zirve)"
+   },
+   "pkKaldir": {
+      "message": "Kaldır"
+   },
+   "pkKaliteNot": {
+      "message": "Yayında seçtiğin kalite yoksa bir altındaki kullanılır. \"Otomatik\" seçiliyken bu özellik hiç çalışmaz."
+   },
+   "pkKaliteOkunamadi": {
+      "message": "Kalite listesi okunamadı."
+   },
+   "pkKaliteSecin": {
+      "message": "Kalite seçin:"
+   },
+   "pkKanalBilgisi": {
+      "message": "Kanal bilgisi"
+   },
+   "pkKanalCanli": {
+      "message": "Canlı: {1} · {2} izleyici"
+   },
+   "pkKanalCevrimdisi": {
+      "message": "Çevrimdışı · {1} takipçi"
+   },
+   "pkKanalEngeliKaldir": {
+      "message": "Bu kanalın gizlemesini kaldır"
+   },
+   "pkKanalGizleYok": {
+      "message": "Henüz kimseyi gizlemedin. Bir kanal kartının üstüne gelip ✕ butonuna basarak gizleyebilirsin."
+   },
+   "pkKanalHakkinda": {
+      "message": "{1} Hakkında Genel Bakış"
+   },
+   "pkKanalSahibi": {
+      "message": "Kanal sahibi"
+   },
+   "pkKanaliGizle": {
+      "message": "Bu kanalı gizle"
+   },
+   "pkKanaliTakip": {
+      "message": "Kanalı takip"
+   },
+   "pkKapali": {
+      "message": "kapalı"
+   },
+   "pkKapat": {
+      "message": "Kapat"
+   },
+   "pkKareyiKaydet": {
+      "message": "Şu anki kareyi kaydet"
+   },
+   "pkKartBilgiNot": {
+      "message": "Bilgi Kick'in kendi ucundan çerez gönderilmeden alınır; kişi başına bir kez sorulup bellekte tutulur."
+   },
+   "pkKartGenis": {
+      "message": "Geniş profil kartı"
+   },
+   "pkKartGenisD": {
+      "message": "Kick’in dar kartını genişletir; eklenen bilgi, not ve moderasyon blokları sıkışmaz."
+   },
+   "pkKartMesajlar": {
+      "message": "Son mesajlar ve gelen yanıtlar"
+   },
+   "pkKartMesajlarD": {
+      "message": "Profil kartında kişinin son mesajları ve ona yazılan yanıtlar sekmeli olarak gösterilir."
+   },
+   "pkKartSabit": {
+      "message": "Profil kartını sabitleme"
+   },
+   "pkKartSabitD": {
+      "message": "Kartta bir düğme çıkar; bastığında kartın okunabilir bir kopyası ekranda kalır."
+   },
+   "pkKartSagTik": {
+      "message": "Yayın kartlarında sağ tık menüsü"
+   },
+   "pkKartSagTikD": {
+      "message": "Ana sayfada ve kategorilerde bir kanala sağ tıklayınca kısayollar çıkar. Shift + sağ tık tarayıcı menüsünü açar."
+   },
+   "pkKartTakipci": {
+      "message": "Kartta takipçi sayısı"
+   },
+   "pkKartTakipciD": {
+      "message": "Kick'in kendi ucundan çerezsiz alınır, kişi başına bir kez."
+   },
+   "pkKartYanit": {
+      "message": "Karta gelen yanıtlar"
+   },
+   "pkKartYanitD": {
+      "message": "\"Son Mesajlar\" onun yazdıklarını gösterir; bu blok ona yazılanları."
+   },
+   "pkKartiSabitle": {
+      "message": "Kartı sabitle"
+   },
+   "pkKategoriGizleYok": {
+      "message": "Henüz kategori gizlemedin. Bir kategori sayfasına girip başlığın yanındaki \"Kategoriyi Gizle\" düğmesini kullanabilirsin."
+   },
+   "pkKategoriGizlemeyiKullan": {
+      "message": "Kategori gizlemeyi kullan"
+   },
+   "pkKategoriGizlemeyiKullanD": {
+      "message": "Kapatırsan hepsi tekrar görünür."
+   },
+   "pkKategoriGoster": {
+      "message": "Bu kategoriyi tekrar göster"
+   },
+   "pkKatilim": {
+      "message": "Katılım"
+   },
+   "pkKatilimD": {
+      "message": "Sohbete yazanların izleyiciye oranı"
+   },
+   "pkKatilmaTakip": {
+      "message": "Katılma ve takip bilgisi"
+   },
+   "pkKatilmaTakipD": {
+      "message": "Kick'e katılma tarihi, kanalı ne zamandır takip ettiği, abonelik süresi."
+   },
+   "pkKaydedildi": {
+      "message": "kaydedildi"
+   },
+   "pkKaydet": {
+      "message": "Kaydet"
+   },
+   "pkKayitNoktasi": {
+      "message": "Geçmiş yayında kaldığın yer"
+   },
+   "pkKayitNoktasiD": {
+      "message": "Bir geçmiş yayını yarıda bırakırsan, tekrar açtığında kaldığın saniyeye dönmeni önerir."
+   },
+   "pkKayitNoktasiHatirla": {
+      "message": "Kayıt noktasını hatırla"
+   },
+   "pkKayitNoktasiHatirlaD": {
+      "message": "Konum yalnızca cihazında tutulur."
+   },
+   "pkKayitliNTemizle": {
+      "message": "Kayıtlı {1} konumu temizle"
+   },
+   "pkKaynagiYeniSekmede": {
+      "message": "Kaynağı yeni sekmede aç ↗"
+   },
+   "pkKaynakBulunuyor": {
+      "message": "Kaynak bulunuyor…"
+   },
+   "pkKaynakYok": {
+      "message": "Bu yayının kaynağı bulunamadı."
+   },
+   "pkKelimeVurgu": {
+      "message": "Kelimeyi sohbette vurgula"
+   },
+   "pkKelimeVurguD": {
+      "message": "Bu kelimelerin geçtiği mesajlar, öncelikli kişilerdeki gibi yeşil şeritle işaretlenir."
+   },
+   "pkKenarGrup": {
+      "message": "Çevrimiçi / çevrimdışı ayır"
+   },
+   "pkKenarGrupD": {
+      "message": "Takip listesini ikiye ayırır: yayında olanlar üstte açık, çevrimdışı olanlar kapalı durur — başlığa tıklayınca açılır. Kick'in 10 kanallık sınırı da kalkar."
+   },
+   "pkKendiMenum": {
+      "message": "Kendi menümü aç"
+   },
+   "pkKendiMenumD": {
+      "message": "Shift + sağ tık her zaman tarayıcının kendi menüsünü açar."
+   },
+   "pkKezSayisi": {
+      "message": "{1} kez"
+   },
+   "pkKickIleGiris": {
+      "message": "Kick ile giriş yap"
+   },
+   "pkKickeKatildi": {
+      "message": "Kick'e katıldı"
+   },
+   "pkKisaDakika": {
+      "message": "dk"
+   },
+   "pkKisaGun": {
+      "message": "gün"
+   },
+   "pkKisaSaat": {
+      "message": "sa"
+   },
+   "pkKisiGizleme": {
+      "message": "Kişi gizleme"
+   },
+   "pkKisiGizlemeD": {
+      "message": "Seçtiğin kişinin mesajları yalnızca sende görünmez."
+   },
+   "pkKisiGizli": {
+      "message": "{1} kişi gizli."
+   },
+   "pkKisiMesajYok": {
+      "message": "Bu oturumda bu kullanıcıdan mesaj görülmedi."
+   },
+   "pkKisiOncelikliSayi": {
+      "message": "{1} kişi öncelikli."
+   },
+   "pkKonumSagAlt": {
+      "message": "Sağ alt"
+   },
+   "pkKonumSagUst": {
+      "message": "Sağ üst"
+   },
+   "pkKonumSolAlt": {
+      "message": "Sol alt"
+   },
+   "pkKonumSolUst": {
+      "message": "Sol üst"
+   },
+   "pkKopyaKorumasi": {
+      "message": "Bazı yayınlar kopya korumalı olabilir; o durumda tarayıcı görüntü almayı engeller."
+   },
+   "pkKorumaAcikMetin": {
+      "message": "Kick reklamları engelleniyor."
+   },
+   "pkKorumaKapaliMetin": {
+      "message": "Koruma duraklatıldı."
+   },
+   "pkKullaniciAdi": {
+      "message": "Kullanıcı adı"
+   },
+   "pkKullaniciAdiBos": {
+      "message": "Kullanıcı adı (boş = herkes)"
+   },
+   "pkKullaniciBul": {
+      "message": "Kullanıcı bul"
+   },
+   "pkKullaniciNotlari": {
+      "message": "Kullanıcı notları"
+   },
+   "pkKullaniciNotlariD": {
+      "message": "Profil kartında kişiye özel not tutar."
+   },
+   "pkKuralAdvertising": {
+      "message": "Reklam"
+   },
+   "pkKuralBullying": {
+      "message": "Zorbalık"
+   },
+   "pkKuralDoxxing": {
+      "message": "Kişisel bilgi paylaşımı"
+   },
+   "pkKuralDrugs": {
+      "message": "Uyuşturucu"
+   },
+   "pkKuralExtremism": {
+      "message": "Aşırıcılık"
+   },
+   "pkKuralGambling": {
+      "message": "Kumar"
+   },
+   "pkKuralHarassment": {
+      "message": "Taciz"
+   },
+   "pkKuralHate": {
+      "message": "Nefret söylemi"
+   },
+   "pkKuralHateSpeech": {
+      "message": "Nefret söylemi"
+   },
+   "pkKuralHatefulConduct": {
+      "message": "Nefret söylemi"
+   },
+   "pkKuralIllegal": {
+      "message": "Yasa dışı içerik"
+   },
+   "pkKuralIllegalActivity": {
+      "message": "Yasa dışı içerik"
+   },
+   "pkKuralImpersonation": {
+      "message": "Taklit"
+   },
+   "pkKuralKabul": {
+      "message": "Sohbet kurallarını otomatik kabul et"
+   },
+   "pkKuralKabulD": {
+      "message": "Kuralları olan bir kanala girince çıkan onay kutusunu senin yerine kabul eder. Kapalı gelir — senin adına onay veren bir işlem olduğu için açmayı sana bırakıyoruz."
+   },
+   "pkKuralMisinfo": {
+      "message": "Yanlış bilgi"
+   },
+   "pkKuralMisinformation": {
+      "message": "Yanlış bilgi"
+   },
+   "pkKuralNudity": {
+      "message": "Çıplaklık"
+   },
+   "pkKuralProfanity": {
+      "message": "Küfür"
+   },
+   "pkKuralScam": {
+      "message": "Dolandırıcılık"
+   },
+   "pkKuralSelfHarm": {
+      "message": "Kendine zarar"
+   },
+   "pkKuralSexual": {
+      "message": "Cinsel içerik"
+   },
+   "pkKuralSexualContent": {
+      "message": "Cinsel içerik"
+   },
+   "pkKuralSpam": {
+      "message": "Spam"
+   },
+   "pkKuralTerrorism": {
+      "message": "Terörizm"
+   },
+   "pkKuralThreats": {
+      "message": "Tehdit"
+   },
+   "pkKuralUnderage": {
+      "message": "Yaş sınırı"
+   },
+   "pkKuralViolence": {
+      "message": "Şiddet"
+   },
+   "pkKuralWeapons": {
+      "message": "Silah"
+   },
+   "pkKurtarilanBaslik": {
+      "message": "Sohbet temizlendi — son {1} mesaj"
+   },
+   "pkMBahset": {
+      "message": "Bu kişiden bahset"
+   },
+   "pkMDaralt": {
+      "message": "Daralt"
+   },
+   "pkMGenislet": {
+      "message": "Genişlet"
+   },
+   "pkMGizle": {
+      "message": "Bu mesajı gizle"
+   },
+   "pkMKopyala": {
+      "message": "Metni kopyala"
+   },
+   "pkMenuArayuz": {
+      "message": "Arayüz"
+   },
+   "pkMenuKenar": {
+      "message": "Kenar Çubuğu"
+   },
+   "pkMenuKullaniciKarti": {
+      "message": "Kullanıcı kartı"
+   },
+   "pkMenuSohbet": {
+      "message": "Sohbet"
+   },
+   "pkMesajEylemleri": {
+      "message": "Mesaj üstü eylemler"
+   },
+   "pkMesajEylemleriD": {
+      "message": "Bir mesajın üstüne gelince kopyala, bahset, saat, daralt ve gizle düğmeleri çıkar."
+   },
+   "pkMesajGizli": {
+      "message": "Bu mesajı gizledin"
+   },
+   "pkMesajSayisi": {
+      "message": "{1} mesaj"
+   },
+   "pkMesajYok": {
+      "message": "Henüz mesaj yok."
+   },
+   "pkMesajiGizle": {
+      "message": "Gizle"
+   },
+   "pkMesajiGoster": {
+      "message": "Göster"
+   },
+   "pkMesajlar": {
+      "message": "Mesajlar"
+   },
+   "pkMesajlariGoster": {
+      "message": "Mesajları göster"
+   },
+   "pkMesajlariniGizle": {
+      "message": "Mesajlarını gizle"
+   },
+   "pkModBirMesajSilindi": {
+      "message": "Bir mesaj silindi"
+   },
+   "pkModBos": {
+      "message": "Bu kanala girdiğinden beri moderasyon işlemi olmadı. Ban, susturma ve silme burada görünür."
+   },
+   "pkModCezaKaldirdi": {
+      "message": "{1}, {2} kullanıcısının cezasını kaldırdı"
+   },
+   "pkModGunlugu": {
+      "message": "Moderasyon günlüğü"
+   },
+   "pkModGunluguD": {
+      "message": "Silinen mesajlar, ban/susturma ve aktif cezalar."
+   },
+   "pkModIzle": {
+      "message": "Sohbet olaylarını izle"
+   },
+   "pkModIzleD": {
+      "message": "Kick'in mevcut bağlantısı dinlenir, yeni bağlantı açılmaz."
+   },
+   "pkModOtoSilindi": {
+      "message": "{1} adlı kullanıcının mesajı {2} tarafından silindi"
+   },
+   "pkModSekmeOlaylar": {
+      "message": "Moderasyon"
+   },
+   "pkModSekmeSilinen": {
+      "message": "Silinen Mesajlar"
+   },
+   "pkModSekmeSustur": {
+      "message": "Susturmalar"
+   },
+   "pkModSerit": {
+      "message": "Sohbette moderasyon şeridi"
+   },
+   "pkModSeritD": {
+      "message": "Sohbetin en üstüne bir şerit koyar; tıklayınca moderasyon paneli açılır."
+   },
+   "pkModSilindi": {
+      "message": "{1} adlı kullanıcının mesajı silindi"
+   },
+   "pkModSohbetTemizlendi": {
+      "message": "Sohbet temizlendi"
+   },
+   "pkModSohbette": {
+      "message": "Moderasyon olaylarını sohbette göster"
+   },
+   "pkModSohbetteD": {
+      "message": "Ban, susturma ve sohbet temizleme sohbet akışında görünür. Kick bunları yalnız moderatörlere gösteriyor."
+   },
+   "pkModSusturdu": {
+      "message": "{1}, {2} kullanıcısını {3} süreyle susturdu"
+   },
+   "pkModYasakladi": {
+      "message": "{1}, {2} kullanıcısını yasakladı"
+   },
+   "pkModerasyon": {
+      "message": "Moderasyon"
+   },
+   "pkMsjKisa": {
+      "message": "{1} msj"
+   },
+   "pkNot1015a": {
+      "message": "Toplu Mesaj Silme — belirlediğin kelimeyi geçen mesajları topluca siler"
+   },
+   "pkNot1015b": {
+      "message": "Otomatik Mesaj yeniden yazıldı: kanal başına ayar, kendi bot penceresi, arka planda çalışma"
+   },
+   "pkNot1015c": {
+      "message": "Sohbette aynı metin üst üste yazılınca artık hepsi kaydediliyor — istatistik ve toplu silme eksik çalışıyordu"
+   },
+   "pkNot1015d": {
+      "message": "İlk kurulumda özellikleri tanıtan sayfa; Gelişmiş bölümünden yeniden açılabilir"
+   },
+   "pkNot1015e": {
+      "message": "Cross-Ban ban sebebine kaynak kanalı ve işlemi yapanı yazıyor"
+   },
+   "pkNot1015f": {
+      "message": "Profil kartında kanalı takip tarihi tam olarak yazıyor"
+   },
+   "pkNot1015g": {
+      "message": "Geçmiş yayın indirme düzeltildi — ilk parçadan sonra duruyordu"
+   },
+   "pkNot101a": {
+      "message": "Menü duyuruları ve bildirim rozeti"
+   },
+   "pkNot102a": {
+      "message": "Geçmiş yayın reklamları engellendi"
+   },
+   "pkNot102b": {
+      "message": "Kanal gizleme"
+   },
+   "pkNot102c": {
+      "message": "Rozetler kullanıcı adının geçtiği her yerde"
+   },
+   "pkNot105a": {
+      "message": "Sohbet istatistikleri, bahsedilmeler, kullanıcı notları ve moderasyon günlüğü"
+   },
+   "pkNot105b": {
+      "message": "Rol vurgulama, kişi gizleme ve öncelikli kişiler"
+   },
+   "pkNot105c": {
+      "message": "Video istatistikleri, yayın süresi, otomatik kalite ve geri/ileri sarma"
+   },
+   "pkNot105d": {
+      "message": "Sohbeti yayının üstüne bindirme ve oynatıcıda sağ tık menüsü"
+   },
+   "pkNot105e": {
+      "message": "Arayüz 7 dile çevrildi"
+   },
+   "pkNot107a": {
+      "message": "Sadece reklam engelleyici modu — tek tıkla diğer her şeyi kapat"
+   },
+   "pkNot107b": {
+      "message": "Kenar çubuğu: sabitlenen kanallar, çevrimiçi/çevrimdışı ayrımı ve yayın önizlemesi"
+   },
+   "pkNot107c": {
+      "message": "Otomatik kalite ve ses; kanal Hakkında bölümünde rozet, emote ve kural bilgileri"
+   },
+   "pkNot107d": {
+      "message": "Ana sayfada belirgin hızlanma ve takılmaların giderilmesi"
+   },
+   "pkNot107e": {
+      "message": "Araç çubuğu simgesi artık doğrudan ayar panelini açıyor"
+   },
+   "pkNot107f": {
+      "message": "Silinen mesajlar sohbette işaretli; moderasyon ve sohbet kaydında en yeni üstte"
+   },
+   "pkNot107g": {
+      "message": "Sohbetin üstünde moderasyon şeridi — tıklayınca olaylar, silinenler ve susturmalar açılır"
+   },
+   "pkNotPlaceholder": {
+      "message": "Bu kişi hakkında kendine not bırak…"
+   },
+   "pkNotun": {
+      "message": "Notun"
+   },
+   "pkOdulAlindi": {
+      "message": "Bugünkü ödül alındı 🎉"
+   },
+   "pkOdulBaslik": {
+      "message": "Günlük Ödül"
+   },
+   "pkOdulGirisGerek": {
+      "message": "Kick'e giriş yapman gerekiyor"
+   },
+   "pkOdulHata": {
+      "message": "Ödül durumu alınamadı"
+   },
+   "pkOdulIlerleme": {
+      "message": "{1} / {2} izlendi"
+   },
+   "pkOdulKontrol": {
+      "message": "Durum kontrol ediliyor…"
+   },
+   "pkOdulYok": {
+      "message": "Bugün izleme görevi yok"
+   },
+   "pkOmAciklama": {
+      "message": "Mesajlar senin hesabından gönderilir. Sohbet kutusuna dokunulmaz; yazmakta olduğun mesaj bozulmaz."
+   },
+   "pkOmAdet": {
+      "message": "Aralık"
+   },
+   "pkOmAdetD": {
+      "message": "Mesaj sayısı · en az {1}"
+   },
+   "pkOmAdetEtiket": {
+      "message": "{1} mesajda bir"
+   },
+   "pkOmAdim1": {
+      "message": "1. Kanalı seç"
+   },
+   "pkOmAdim2": {
+      "message": "2. Nasıl gönderilsin?"
+   },
+   "pkOmAdim3": {
+      "message": "3. Aralığı yaz"
+   },
+   "pkOmAdim4": {
+      "message": "4. Duyuru metnini yaz"
+   },
+   "pkOmAralik": {
+      "message": "Aralıklı duyuru"
+   },
+   "pkOmAralikD": {
+      "message": "Listedeki metinleri sırayla gönderir."
+   },
+   "pkOmAyar": {
+      "message": "Otomatik Mesaj"
+   },
+   "pkOmAyarD": {
+      "message": "Belirli aralıklarla duyuru gönderir ve komutlara otomatik cevap verir. Senin hesabından yazar."
+   },
+   "pkOmBaskaKanal": {
+      "message": "{1} kanalını düzenliyorsun. Kaydet’e basınca {1} için bot penceresi açılır."
+   },
+   "pkOmBaslat": {
+      "message": "Başlat"
+   },
+   "pkOmBaslik": {
+      "message": "Otomatik Mesaj"
+   },
+   "pkOmDk": {
+      "message": "Aralık"
+   },
+   "pkOmDkD": {
+      "message": "Dakika · en az {1}"
+   },
+   "pkOmEkle": {
+      "message": "Komutu kaydet"
+   },
+   "pkOmEksikKip": {
+      "message": "Kaydetmek için nasıl gönderileceğini seç."
+   },
+   "pkOmEksikKomut": {
+      "message": "Kaydetmek için en az bir komut ekle."
+   },
+   "pkOmEksikMetin": {
+      "message": "Kaydetmek için en az bir duyuru metni yaz."
+   },
+   "pkOmKanalSecD": {
+      "message": "Botu hangi kanalda çalıştıracaksın? Yalnız moderatör olduğun kanallar ve kendi kanalın listelenir."
+   },
+   "pkOmKanalSecin": {
+      "message": "Kanal seç"
+   },
+   "pkOmKanalYok": {
+      "message": "Moderatör olduğun bir kanal bulunamadı."
+   },
+   "pkOmKayitli": {
+      "message": "Kayıtlı komutlar"
+   },
+   "pkOmKipDk": {
+      "message": "Dakikaya göre"
+   },
+   "pkOmKipMesaj": {
+      "message": "Mesaj sayısına göre"
+   },
+   "pkOmKomut": {
+      "message": "Komut cevapları"
+   },
+   "pkOmKomutAd": {
+      "message": "Komut"
+   },
+   "pkOmKomutAdIpucu": {
+      "message": "!test"
+   },
+   "pkOmKomutCevap": {
+      "message": "Bu komuta verilecek cevap"
+   },
+   "pkOmKomutCevapIpucu": {
+      "message": "Merhaba!"
+   },
+   "pkOmKomutD": {
+      "message": "Sohbete komutu yazan olursa kayıtlı cevap gönderilir."
+   },
+   "pkOmKomutIpucu": {
+      "message": "!test = Merhaba!\n!discord = discord.gg/..."
+   },
+   "pkOmKomutSil": {
+      "message": "Sil"
+   },
+   "pkOmKomutYok": {
+      "message": "Henüz kayıtlı komut yok."
+   },
+   "pkOmMenu": {
+      "message": "Otomatik Mesaj"
+   },
+   "pkOmMetinD": {
+      "message": "Her satır bir duyuru. Birden çok satır yazarsan sırayla gönderilir."
+   },
+   "pkOmMetinIpucu": {
+      "message": "Discord: ...\nKanala abone olmayı unutma!"
+   },
+   "pkOmNerede": {
+      "message": "PureKick menüsündeki \"Otomatik Mesaj\" satırından kullanılır."
+   },
+   "pkOmNot": {
+      "message": "Komut mesajın başında olmalı. Aynı komuta 10 saniyede bir cevap verilir; kendi mesajların hiçbir şeyi tetiklemez."
+   },
+   "pkOmOnayBaslik": {
+      "message": "Botu başlat?"
+   },
+   "pkOmOnayGizle": {
+      "message": "Bir daha gösterme"
+   },
+   "pkOmOnayKomut": {
+      "message": "{1} kanalı için bot penceresi açılır ve komutlara cevap vermeye başlar. Pencereyi kapatırsan bot durur."
+   },
+   "pkOmOnayMetin": {
+      "message": "{1} kanalında duyurular seçtiğin aralıkla gönderilmeye başlayacak. Bot bu pencerede çalışır; sekmeyi kapatırsan durur."
+   },
+   "pkOmOzet": {
+      "message": "{1} duyuru · {2} komut"
+   },
+   "pkOmPopoutD": {
+      "message": "Bot bu pencerede çalışır. Kaydedince ayarlar kapanır, bot çalışmaya devam eder; sekmeyi kapatırsan bot durur, yeniden açınca kaldığı yerden sürer."
+   },
+   "pkOmSecAciklama": {
+      "message": "Kanalı seç — o kanalın bot penceresi açılır ve ayarların kalanını orada yaparsın. Bot o pencerede çalışır."
+   },
+   "pkOmYetkiYok": {
+      "message": "Bu kanalda otomatik mesaj kullanamazsın — moderatör değilsin. Aşağıdan yetkili olduğun bir kanal seçebilirsin."
+   },
+   "pkOncelikCikar": {
+      "message": "Öncelikten çıkar"
+   },
+   "pkOncelikTemizleN": {
+      "message": "Öncelikleri temizle ({1})"
+   },
+   "pkOncelikliKisiler": {
+      "message": "Öncelikli kişiler"
+   },
+   "pkOncelikliKisilerD": {
+      "message": "Seçtiğin kişilerin mesajları yeşil çizgiyle işaretlenir."
+   },
+   "pkOncelikliYap": {
+      "message": "Öncelikli yap"
+   },
+   "pkOnizleme": {
+      "message": "Kenar çubuğu önizlemesi"
+   },
+   "pkOnizlemeD": {
+      "message": "Sol menüde bir kanalın üstüne gelince küçük kart açılır."
+   },
+   "pkOnizlemeKarti": {
+      "message": "Önizleme kartı"
+   },
+   "pkOnizlemeKartiD": {
+      "message": "Yayın küçük resmi, başlık, kategori ve izleyici sayısı."
+   },
+   "pkOtoClaim": {
+      "message": "Günlük ödülü otomatik al"
+   },
+   "pkOtoClaimD": {
+      "message": "Kick'in günlük izleme ödülünü, şartı dolduğunda senin yerine alır. Sadece izleyerek hak edilen görevi alır; başka hiçbir şeye dokunmaz."
+   },
+   "pkOtoSes": {
+      "message": "Otomatik ses"
+   },
+   "pkOtoSesD": {
+      "message": "Her yayında sesi istediğin seviyede açar."
+   },
+   "pkOtoSesNot": {
+      "message": "\"Otomatik\" son bıraktığın ses seviyesini hatırlar ve her yayında onu uygular. Yayın ortasında sesi değiştirirsen üstüne yazmaz."
+   },
+   "pkOtoTiyatro": {
+      "message": "Otomatik tiyatro modu"
+   },
+   "pkOtoTiyatroD": {
+      "message": "Kanala girince oynatıcıyı bir kez genişletir."
+   },
+   "pkOtomatikKalite": {
+      "message": "Otomatik kalite"
+   },
+   "pkOtomatikKaliteD": {
+      "message": "Kanala girince tercih ettiğin kaliteyi bir kez seçer."
+   },
+   "pkOturum": {
+      "message": "Oturum"
+   },
+   "pkOturumSuresiEki": {
+      "message": "Oturum Süresi: {1}"
+   },
+   "pkOynatmaHizi": {
+      "message": "Oynatma hızı"
+   },
+   "pkOzellikKapali": {
+      "message": "Bu özellik şu anda kapalı."
+   },
+   "pkPaneliAc": {
+      "message": "Paneli aç"
+   },
+   "pkParcaListesi": {
+      "message": "Parça listesi alınıyor…"
+   },
+   "pkParcaYok": {
+      "message": "parça yok"
+   },
+   "pkProfilBuyuk": {
+      "message": "Profil resmini büyük gör"
+   },
+   "pkProfilKartiBilgisi": {
+      "message": "Profil kartı bilgisi"
+   },
+   "pkProfilKartiBilgisiD": {
+      "message": "Sohbette bir kişiye tıklayınca kartında geçmişi görünür."
+   },
+   "pkProfiliAc": {
+      "message": "Profili aç"
+   },
+   "pkPureKick": {
+      "message": "PureKick"
+   },
+   "pkPureKickAciklama": {
+      "message": "Kick için reklam engelleyici."
+   },
+   "pkRenkleriSifirla": {
+      "message": "Renkleri varsayılana döndür"
+   },
+   "pkRolEtiket": {
+      "message": "Rol"
+   },
+   "pkRolNot": {
+      "message": "Roller Kick'in kendi sohbet bağlantısından okunur; yalnız sen sayfayı açtıktan sonra yazan kişiler tanınır."
+   },
+   "pkRolVurgulama": {
+      "message": "Rol vurgulama"
+   },
+   "pkRolVurgulamaD": {
+      "message": "Yayıncı, moderatör, VIP ve abone mesajları renk şeridiyle ayrılır."
+   },
+   "pkRol_bot": {
+      "message": "Bot"
+   },
+   "pkRol_broadcaster": {
+      "message": "Yayıncı"
+   },
+   "pkRol_founder": {
+      "message": "Kurucu"
+   },
+   "pkRol_moderator": {
+      "message": "Moderatör"
+   },
+   "pkRol_og": {
+      "message": "OG"
+   },
+   "pkRol_staff": {
+      "message": "Kick ekibi"
+   },
+   "pkRol_sub_gifter": {
+      "message": "Abonelik hediye eden"
+   },
+   "pkRol_subscriber": {
+      "message": "Abone"
+   },
+   "pkRol_verified": {
+      "message": "Doğrulanmış"
+   },
+   "pkRol_vip": {
+      "message": "VIP"
+   },
+   "pkSaOnce": {
+      "message": "{1} sa önce"
+   },
+   "pkSabitKaldir": {
+      "message": "Sabitlemeyi kaldır"
+   },
+   "pkSabitKanalAyar": {
+      "message": "Sabitlenen kanallar üstte"
+   },
+   "pkSabitKanalAyarD": {
+      "message": "Kenar çubuğunda bir kanalın üstüne gelince raptiye çıkar. Sabitlediğin kanallar takip listesinin en üstünde kalır."
+   },
+   "pkSabitKanallar": {
+      "message": "Kanal Sabitleme"
+   },
+   "pkSabitKanallarD": {
+      "message": "Takip ettiğin kanalları listenin en üstünde tut."
+   },
+   "pkSabitle": {
+      "message": "Sabitle"
+   },
+   "pkSadeceEmote": {
+      "message": "Sadece emote mesajı"
+   },
+   "pkSadeceEmoteD": {
+      "message": "Hiç yazı içermeyenler"
+   },
+   "pkSadeceEmoteEki": {
+      "message": "{1} sadece emote mesajı"
+   },
+   "pkSadeceEmoteMesajlari": {
+      "message": "Sadece Emote Mesajları"
+   },
+   "pkSadeceReklam": {
+      "message": "Sadece Reklam Engelleyici"
+   },
+   "pkSadeceReklamAcik": {
+      "message": "Yalnızca reklam engelleme açık. Başka bir özelliği açarsan bu moddan çıkarsın."
+   },
+   "pkSadeceReklamBtn": {
+      "message": "Aktif Et"
+   },
+   "pkSadeceReklamD": {
+      "message": "Diğer tüm özellikleri kapatır, yalnızca reklam engelleme açık kalır."
+   },
+   "pkSadeceReklamRozet": {
+      "message": "Aktif"
+   },
+   "pkSagTikMenusu": {
+      "message": "Oynatıcıda sağ tık menüsü"
+   },
+   "pkSagTikMenusuD": {
+      "message": "Yalnız videonun üstünde devreye girer."
+   },
+   "pkSayfaReklamlari": {
+      "message": "Sayfa reklamları"
+   },
+   "pkSayfaReklamlariD": {
+      "message": "Kick arayüzündeki reklam alanlarını gizler."
+   },
+   "pkScEtiket": {
+      "message": "Sohbetçi durum etiketi"
+   },
+   "pkScEtiketD": {
+      "message": "Listedeki isimlerin yanında “Sohbette” ya da “Çevrimdışı 5dk” yazar."
+   },
+   "pkScFiltre": {
+      "message": "Sohbetçi filtresi"
+   },
+   "pkScFiltreD": {
+      "message": "Listenin üstüne Tümü / Sohbette / Çevrimdışı düğmeleri eklenir."
+   },
+   "pkScSayac": {
+      "message": "Gelişmiş sohbetçi sayısı"
+   },
+   "pkScSayacD": {
+      "message": "Kick sayıyı düşürse bile oturum boyunca gördüğün kişi sayısı gösterilir."
+   },
+   "pkSebepYazin": {
+      "message": "Sebep yaz…"
+   },
+   "pkSebepYok": {
+      "message": "Henüz hazır sebep eklemedin."
+   },
+   "pkSecili": {
+      "message": "{1} seçili"
+   },
+   "pkSekmeGenel": {
+      "message": "Genel Bakış"
+   },
+   "pkSekmeHakkinda": {
+      "message": "Hakkında"
+   },
+   "pkSekmeIci": {
+      "message": "Bağlantıları sayfa içinde aç"
+   },
+   "pkSekmeIciD": {
+      "message": "Sohbetteki YouTube, X, Instagram, Reddit, Kick klip, Twitch klip ve Streamable bağlantıları küçük bir oynatıcıda açılır."
+   },
+   "pkSekmeIciNot": {
+      "message": "Yalnız bu siteler açılır; tanınmayan bağlantı her zamanki gibi yeni sekmede açılır. CTRL ile tıklarsan yine yeni sekme."
+   },
+   "pkSendenBahsedenler": {
+      "message": "Senden bahsedenler"
+   },
+   "pkSes": {
+      "message": "Ses"
+   },
+   "pkSesBip": {
+      "message": "Bip"
+   },
+   "pkSesCinlama": {
+      "message": "Çınlama"
+   },
+   "pkSesDamla": {
+      "message": "Damla"
+   },
+   "pkSesKapali": {
+      "message": "Kapalı"
+   },
+   "pkSesOto": {
+      "message": "Otomatik"
+   },
+   "pkSesPuf": {
+      "message": "Puf"
+   },
+   "pkSifirdan": {
+      "message": "Sıfırdan"
+   },
+   "pkSifirdanD": {
+      "message": "Mevcut her şey silinir, yerine dosyadaki gelir."
+   },
+   "pkSilAciklama": {
+      "message": "Tetikleyici metni geçen mesajlar silinir; kimse susturulmaz. Yayıncının, moderatörlerin ve senin mesajların atlanır."
+   },
+   "pkSilAyar": {
+      "message": "Toplu Mesaj Silme"
+   },
+   "pkSilAyarD": {
+      "message": "Belirlediğin kelime ya da cümleyi içeren mesajları siler. Açıkken PureKick menüsüne \"Toplu Mesaj Silme\" satırı gelir."
+   },
+   "pkSilBaslik": {
+      "message": "Toplu Mesaj Silme"
+   },
+   "pkSilGecmis": {
+      "message": "Şu ana kadarki mesajlara uygula"
+   },
+   "pkSilMenu": {
+      "message": "Toplu Mesaj Silme"
+   },
+   "pkSilNerede": {
+      "message": "PureKick menüsündeki \"Toplu Mesaj Silme\" satırından kullanılır."
+   },
+   "pkSilNot": {
+      "message": "Canlı izleme açıkken bu pencereyi kapatabilirsin; kanaldan çıkınca ya da ayarı kapatınca durur. Geçmiş taraması yalnız bu oturumda görülen mesajları kapsar."
+   },
+   "pkSilSayac": {
+      "message": "Silinen: {1}"
+   },
+   "pkSilTetikD": {
+      "message": "Her satıra bir kelime ya da cümle. Cümlede virgül geçebildiği için satır satır ayrılıyor."
+   },
+   "pkSilYetkiYok": {
+      "message": "Bu kanalda toplu silme kullanamazsın — moderatör değilsin."
+   },
+   "pkSilindiEtiket": {
+      "message": "(silindi)"
+   },
+   "pkSilinenGoster": {
+      "message": "Silinen mesajları göster"
+   },
+   "pkSilinenGosterD": {
+      "message": "Silinen mesaj kaybolmaz; soluk görünüp yanına \"(silindi)\" yazılır."
+   },
+   "pkSilinenYok": {
+      "message": "Henüz silinen mesaj yok."
+   },
+   "pkSohbetCikarildi": {
+      "message": "Bu oturumda izlediğin sohbetten çıkarıldı; hiçbir veri dışarı gönderilmez."
+   },
+   "pkSohbetEdenler": {
+      "message": "Sohbet Edenler"
+   },
+   "pkSohbetIstatistikleri": {
+      "message": "Sohbet istatistikleri"
+   },
+   "pkSohbetIstatistikleriBaslik": {
+      "message": "Sohbet İstatistikleri"
+   },
+   "pkSohbetIstatistikleriD": {
+      "message": "Mesaj/dk, en aktif kişiler, emote kullanımı."
+   },
+   "pkSohbetKaydi": {
+      "message": "Sohbet Kaydı"
+   },
+   "pkSohbetciIpucu": {
+      "message": "Kick: {1} · PureKick bu oturumda {2} kişi gördü"
+   },
+   "pkSohbetciListesi": {
+      "message": "Sohbetçi listesi"
+   },
+   "pkSohbetciListesiD": {
+      "message": "Kick'in izleyici listesine PureKick'in eklediği özellikler."
+   },
+   "pkSohbette": {
+      "message": "Sohbette"
+   },
+   "pkSonGuncellemeEki": {
+      "message": "Son Güncelleme: {1}"
+   },
+   "pkSonMesajiIpucu": {
+      "message": "Son mesajı: {1} · toplam {2} mesaj"
+   },
+   "pkSonMesajlar": {
+      "message": "Son Mesajlar"
+   },
+   "pkSonucSayisiN": {
+      "message": "{1} sonuç"
+   },
+   "pkSonucYok": {
+      "message": "Sonuç yok."
+   },
+   "pkSsAyarlari": {
+      "message": "Ekran görüntüsü davranışı"
+   },
+   "pkSsBirincil": {
+      "message": "Normal tık"
+   },
+   "pkSsIkincil": {
+      "message": "CTRL + tık"
+   },
+   "pkSsIndir": {
+      "message": "Dosyaya indir"
+   },
+   "pkSsPano": {
+      "message": "Panoya kopyala"
+   },
+   "pkSure": {
+      "message": "Süre"
+   },
+   "pkSureDakika": {
+      "message": "{1} dakika"
+   },
+   "pkSureDakika1": {
+      "message": "1 dakika"
+   },
+   "pkSureGun": {
+      "message": "{1} gün"
+   },
+   "pkSureGun1": {
+      "message": "1 gün"
+   },
+   "pkSureSaat": {
+      "message": "{1} saat"
+   },
+   "pkSureSaat1": {
+      "message": "1 saat"
+   },
+   "pkSureSaniye": {
+      "message": "{1} saniye"
+   },
+   "pkSureSaniye1": {
+      "message": "1 saniye"
+   },
+   "pkSureSecenek": {
+      "message": "Süre seçenekleri"
+   },
+   "pkSureSecenekD": {
+      "message": "Sohbetteki kum saati düğmesine bastığında çıkacak süreler. Dakika olarak, virgülle ayır (1440 = 1 gün)."
+   },
+   "pkSurumEki": {
+      "message": "Sürüm {1}"
+   },
+   "pkSurumNotlari": {
+      "message": "Sürüm notları"
+   },
+   "pkSurumNotlariD": {
+      "message": "Her sürümde ne değişti."
+   },
+   "pkSusturmaBitis": {
+      "message": "Bitiyor: {1}"
+   },
+   "pkTAcikMenuKapat": {
+      "message": "Önce açık menüyü kapat"
+   },
+   "pkTAyarlarIndirildi": {
+      "message": "Ayarlar dışa aktarıldı"
+   },
+   "pkTBaglantiKopyalandi": {
+      "message": "Bağlantı panoya kopyalandı"
+   },
+   "pkTCrossAdGir": {
+      "message": "En az bir kullanıcı adı yaz"
+   },
+   "pkTCrossKanalSec": {
+      "message": "En az bir kanal seçmelisin"
+   },
+   "pkTGizlenenlerTemiz": {
+      "message": "Gizlenen kişiler temizlendi"
+   },
+   "pkTGoruntuHazirDegil": {
+      "message": "Görüntü hazır değil"
+   },
+   "pkTIndirmeDesteklenmiyor": {
+      "message": "Bu tarayıcı dosyaya yazmayı desteklemiyor"
+   },
+   "pkTIndirmeSuruyor": {
+      "message": "Zaten bir indirme sürüyor"
+   },
+   "pkTKaldiginYer": {
+      "message": "Kaldığın yer: {1}"
+   },
+   "pkTKaliteMenusuAcilmadi": {
+      "message": "Kalite menüsü açılmadı"
+   },
+   "pkTKaliteMenusuYok": {
+      "message": "Oynatıcı kalite menüsü bulunamadı"
+   },
+   "pkTKaliteOynaticiya": {
+      "message": "Kalite oynatıcıya bırakıldı"
+   },
+   "pkTKaliteYok": {
+      "message": "Bu yayında {1} yok"
+   },
+   "pkTKanalEngelKalkti": {
+      "message": "{1} engeli kaldırıldı"
+   },
+   "pkTKanalGizlemeKalkti": {
+      "message": "Kanal gizlemesi kaldırıldı"
+   },
+   "pkTKanalGizlendi": {
+      "message": "Kanal gizlendi"
+   },
+   "pkTKartAcilamadi": {
+      "message": "Kart açılamadı — sohbette en az bir mesaj olmalı"
+   },
+   "pkTKartSabitlendi": {
+      "message": "Kart sabitlendi — sürükleyebilirsin"
+   },
+   "pkTKategoriGizlendi": {
+      "message": "Kategori gizlendi"
+   },
+   "pkTKategoriGorunur": {
+      "message": "Kategori tekrar görünür"
+   },
+   "pkTKayitNoktalariTemiz": {
+      "message": "Kayıt noktaları temizlendi"
+   },
+   "pkTKelimeKaydedildi": {
+      "message": "Takip edilen kelimeler kaydedildi"
+   },
+   "pkTKisiGizlendi": {
+      "message": "{1} mesajları gizlendi"
+   },
+   "pkTKisiGorunur": {
+      "message": "{1} tekrar görünür"
+   },
+   "pkTKisiOncelikli": {
+      "message": "{1} öncelikli"
+   },
+   "pkTKisiSohbetteYok": {
+      "message": "Bu kişinin sohbette görünen mesajı kalmadı"
+   },
+   "pkTKomutYazildi": {
+      "message": "Komut sohbet kutusuna yazıldı"
+   },
+   "pkTKopyalanamadi": {
+      "message": "Metin kopyalanamadı"
+   },
+   "pkTKopyalandi": {
+      "message": "Metin panoya kopyalandı"
+   },
+   "pkTKorumaAcildi": {
+      "message": "Koruma açıldı"
+   },
+   "pkTKorumaDuraklatildi": {
+      "message": "Koruma duraklatıldı"
+   },
+   "pkTKullaniciBulunamadi": {
+      "message": "Böyle bir kullanıcı bulunamadı"
+   },
+   "pkTMesajlarGeriGeldi": {
+      "message": "Gizlenen mesajlar geri geldi"
+   },
+   "pkTModGunluguKapali": {
+      "message": "Moderasyon günlüğü kapalı"
+   },
+   "pkTOdulAlindi": {
+      "message": "🎉 Günlük ödül alındı"
+   },
+   "pkTOmKaydedildi": {
+      "message": "Otomatik mesaj ayarları kaydedildi"
+   },
+   "pkTOmKomutBosluk": {
+      "message": "Komut boşluk içeremez"
+   },
+   "pkTOmKomutEklendi": {
+      "message": "Komut kaydedildi"
+   },
+   "pkTOmKomutEksik": {
+      "message": "Komut ve cevabı birlikte yaz"
+   },
+   "pkTOmKomutGuncellendi": {
+      "message": "Komutun cevabı güncellendi"
+   },
+   "pkTOmPencereAcildi": {
+      "message": "{1} için bot penceresi açıldı"
+   },
+   "pkTOncelikKalkti": {
+      "message": "{1} önceliği kaldırıldı"
+   },
+   "pkTOnceliklerTemiz": {
+      "message": "Öncelikler temizlendi"
+   },
+   "pkTOturumGeriYuklendi": {
+      "message": "Önceki oturum geri yüklendi"
+   },
+   "pkTOynaticiYok": {
+      "message": "Oynatıcı bulunamadı"
+   },
+   "pkTOynaticiYokNokta": {
+      "message": "Oynatıcı bulunamadı."
+   },
+   "pkTOzellikAcildi": {
+      "message": "{1} açıldı"
+   },
+   "pkTOzellikKapatildi": {
+      "message": "{1} kapatıldı"
+   },
+   "pkTPanoDesteklenmiyor": {
+      "message": "Bu tarayıcı görsel kopyalamayı desteklemiyor, indiriliyor"
+   },
+   "pkTRenklerSifirlandi": {
+      "message": "Rol renkleri sıfırlandı"
+   },
+   "pkTSadeceReklam": {
+      "message": "Sadece reklam engelleyici açıldı"
+   },
+   "pkTSeritYok": {
+      "message": "Kick’in oynatıcı düğmeleri şu an kapalı. Oynatıcının üzerine gelip tekrar dene."
+   },
+   "pkTSifirlanamadi": {
+      "message": "Sıfırlanamadı"
+   },
+   "pkTSifirlandi": {
+      "message": "Her şey sıfırlandı, sayfa yenileniyor"
+   },
+   "pkTSilBasladi": {
+      "message": "Canlı izleme açık — {1} tetikleyici"
+   },
+   "pkTSilDurdu": {
+      "message": "Canlı izleme durduruldu"
+   },
+   "pkTSilEslesmeYok": {
+      "message": "Eşleşen mesaj yok"
+   },
+   "pkTSohbetAlaniYok": {
+      "message": "Sohbet alanı bulunamadı"
+   },
+   "pkTSohbetKutusuYok": {
+      "message": "Sohbet kutusu bulunamadı"
+   },
+   "pkTSsAlinamadi": {
+      "message": "Ekran görüntüsü alınamadı"
+   },
+   "pkTSsKaydedildi": {
+      "message": "Ekran görüntüsü kaydedildi"
+   },
+   "pkTSsPanoya": {
+      "message": "Ekran görüntüsü panoya kopyalandı"
+   },
+   "pkTSsYasak": {
+      "message": "Bu yayında ekran görüntüsü alınamıyor"
+   },
+   "pkTSureKaydedildi": {
+      "message": "Süre seçenekleri kaydedildi"
+   },
+   "pkTSusturmaHata": {
+      "message": "Susturma başarısız ({1})"
+   },
+   "pkTSusturuldu": {
+      "message": "{1} · {2} susturuldu"
+   },
+   "pkTTemaKaydedildi": {
+      "message": "Tema rengi kaydedildi"
+   },
+   "pkTTemaVarsayilan": {
+      "message": "Tema varsayılana döndü"
+   },
+   "pkTToBasladi": {
+      "message": "Canlı izleme açık — {1} tetikleyici"
+   },
+   "pkTToDurdu": {
+      "message": "Canlı izleme durduruldu"
+   },
+   "pkTToEslesmeYok": {
+      "message": "Eşleşen kimse yok"
+   },
+   "pkTToTetikGir": {
+      "message": "En az bir tetikleyici metin yaz"
+   },
+   "pkTVodIndirildi": {
+      "message": "Geçmiş yayın indirildi"
+   },
+   "pkTYedekAlinamadi": {
+      "message": "Yedek alınamadı"
+   },
+   "pkTYedekCokBuyuk": {
+      "message": "Dosya çok büyük"
+   },
+   "pkTYedekOkunamadi": {
+      "message": "Dosya okunamadı"
+   },
+   "pkTYedekUygulanamadi": {
+      "message": "Ayarlar yüklenemedi"
+   },
+   "pkTYedekUygulandi": {
+      "message": "Ayarlar yüklendi, sayfa yenileniyor"
+   },
+   "pkTYetkiKaydedildi": {
+      "message": "Yetkiler güncellendi"
+   },
+   "pkTYetkiKismi": {
+      "message": "{1} yetki uygulanamadı"
+   },
+   "pkTakipKelime": {
+      "message": "Takip edilen kelimeler"
+   },
+   "pkTakipKelimeD": {
+      "message": "Adının yanında bu kelimeleri de takip eder. Virgülle ayır."
+   },
+   "pkTakipKelimeOrnek": {
+      "message": "çekiliş, kod, sunucu"
+   },
+   "pkTakipciEki": {
+      "message": "{1} takipçi"
+   },
+   "pkTakipciSayisi": {
+      "message": "Takipçi"
+   },
+   "pkTamEkranSon": {
+      "message": "Tam ekran düğmesi en sonda"
+   },
+   "pkTamEkranSonD": {
+      "message": "Kick'in tam ekran düğmesini şeridin en sağına taşır."
+   },
+   "pkTanArac": {
+      "message": "Moderatör araçları"
+   },
+   "pkTanAracD": {
+      "message": "Bunlar KAPALI geliyor — sohbete senin adına işlem yapıyorlar, açmayı sana bırakıyoruz. PureKick menüsü › Moderasyon’dan açılır."
+   },
+   "pkTanBaslik": {
+      "message": "Tanıtım"
+   },
+   "pkTanBaslikD": {
+      "message": "PureKick’in ne yapabildiğini sayfa sayfa gösterir."
+   },
+   "pkTanBitir": {
+      "message": "Başla"
+   },
+   "pkTanGoster": {
+      "message": "Tanıtımı göster"
+   },
+   "pkTanHos": {
+      "message": "PureKick’e hoş geldin"
+   },
+   "pkTanHosD": {
+      "message": "Kick’i reklamsız izlemen ve sohbeti yönetmen için bir araç seti. Aşağıdaki özelliklerin çoğu şu anda AÇIK — hiçbir şey yapmana gerek yok. Sağ alttaki İleri ile hepsine göz atabilirsin."
+   },
+   "pkTanKart": {
+      "message": "Profil kartı"
+   },
+   "pkTanKartD": {
+      "message": "Sohbette bir isme tıklayınca çıkan kart genişliyor."
+   },
+   "pkTanKenar": {
+      "message": "Kenar çubuğu"
+   },
+   "pkTanKenarD": {
+      "message": "Takip listesi ve kanal sayfası."
+   },
+   "pkTanListe": {
+      "message": "Sohbetçi listesi"
+   },
+   "pkTanListeD": {
+      "message": "Kick’in izleyici listesine eklenenler."
+   },
+   "pkTanMod": {
+      "message": "Moderasyon"
+   },
+   "pkTanModD": {
+      "message": "Silinen mesajlar, ban ve susturmalar görünür oluyor."
+   },
+   "pkTanReklam": {
+      "message": "Reklamlar"
+   },
+   "pkTanReklamD": {
+      "message": "Kapattığın seçenek anında devreye girer."
+   },
+   "pkTanSohbet": {
+      "message": "Sohbet"
+   },
+   "pkTanSohbetD": {
+      "message": "Kimi öne çıkaracağını, kimi görmeyeceğini sen seçiyorsun."
+   },
+   "pkTanSon": {
+      "message": "Hazırsın"
+   },
+   "pkTanSonD": {
+      "message": "Bütün ayarlar sohbetin altındaki PK düğmesinde. Bu tanıtıma Gelişmiş bölümünden yeniden ulaşabilirsin."
+   },
+   "pkTanVideo": {
+      "message": "Video ve oynatıcı"
+   },
+   "pkTanVideoD": {
+      "message": "Oynatıcı şeridine eklenenler."
+   },
+   "pkTemaAciklama": {
+      "message": "Kick arayüzünün rengini değiştirir."
+   },
+   "pkTemaKickYesili": {
+      "message": "Kick yeşili"
+   },
+   "pkTemaKirmizi": {
+      "message": "Kırmızı"
+   },
+   "pkTemaMavi": {
+      "message": "Mavi"
+   },
+   "pkTemaMor": {
+      "message": "Mor"
+   },
+   "pkTemaPembe": {
+      "message": "Pembe"
+   },
+   "pkTemaSari": {
+      "message": "Sarı"
+   },
+   "pkTemaTurkuaz": {
+      "message": "Turkuaz"
+   },
+   "pkTemaTuruncu": {
+      "message": "Turuncu"
+   },
+   "pkTemizlemeKoru": {
+      "message": "Sohbet temizlenince mesajları koru"
+   },
+   "pkTemizlemeKoruD": {
+      "message": "Moderatör sohbeti temizlerse son mesajlar ayrı bir kutuda kalır."
+   },
+   "pkTemizlenenAlan": {
+      "message": "Temizlenen reklam alanı"
+   },
+   "pkTiyatroNav": {
+      "message": "Tiyatro modunda üst menü"
+   },
+   "pkTiyatroNavD": {
+      "message": "Ekranın en üstüne gelince gezinme çubuğu geri gelir; moddan çıkmana gerek kalmaz."
+   },
+   "pkTiyatroyaAl": {
+      "message": "Kanala girince tiyatroya al"
+   },
+   "pkTiyatroyaAlD": {
+      "message": "Zaten genişse dokunmaz; kanal başına tek deneme."
+   },
+   "pkToAciklama": {
+      "message": "Tetikleyici metni yazan herkes seçtiğin süreyle susturulur. Yayıncı, moderatörler ve sen atlanır; aynı kişi bir kez işlenir."
+   },
+   "pkToAyar": {
+      "message": "Toplu TimeOut"
+   },
+   "pkToAyarD": {
+      "message": "Belirlediğin kelime ya da cümleyi yazan herkesi otomatik susturur. Açıkken PureKick menüsüne \"Toplu TimeOut\" satırı gelir."
+   },
+   "pkToBaslat": {
+      "message": "Canlı izlemeyi başlat"
+   },
+   "pkToBaslik": {
+      "message": "Toplu TimeOut"
+   },
+   "pkToDurdur": {
+      "message": "Canlı izlemeyi durdur"
+   },
+   "pkToGecmis": {
+      "message": "Şu ana kadarki mesajlara uygula"
+   },
+   "pkToMenu": {
+      "message": "Toplu TimeOut"
+   },
+   "pkToNerede": {
+      "message": "PureKick menüsündeki \"Toplu TimeOut\" satırından kullanılır."
+   },
+   "pkToNot": {
+      "message": "Canlı izleme açıkken bu pencereyi kapatabilirsin; kanaldan çıkınca ya da ayarı kapatınca durur."
+   },
+   "pkToSayac": {
+      "message": "Susturulan: {1}"
+   },
+   "pkToSure": {
+      "message": "Susturma süresi"
+   },
+   "pkToSureD": {
+      "message": "Hızlı susturma süreleriyle aynı liste. Değiştirmek için Moderasyon › Kullanıcı kartı."
+   },
+   "pkToTamKelime": {
+      "message": "Tam kelime eşleşmesi"
+   },
+   "pkToTamKelimeD": {
+      "message": "Açıkken \"kod\" yazanı yakalar, \"kodlama\" yazanı yakalamaz. Kapatırsan metnin geçtiği her mesaj eşleşir."
+   },
+   "pkToTetik": {
+      "message": "Tetikleyici metinler"
+   },
+   "pkToTetikD": {
+      "message": "Her satıra bir kelime ya da cümle. Cümlede virgül geçebildiği için satır satır ayrılıyor."
+   },
+   "pkToTetikIpucu": {
+      "message": "çekiliş linki\nbedava kicks\nfollow4follow"
+   },
+   "pkTumu": {
+      "message": "Tümü"
+   },
+   "pkUyarHiz": {
+      "message": "Uyarlanabilir hız"
+   },
+   "pkUyarHizD": {
+      "message": "Canlıdan geride kalınca hızı artırıp farkı sessizce kapatır."
+   },
+   "pkUyarHizNot": {
+      "message": "Görüntü zıplamaz: konuma dokunulmaz, yalnız hız 1.25x'e çıkar ve kenara varınca 1x'e döner."
+   },
+   "pkVeriYok": {
+      "message": "Henüz veri yok."
+   },
+   "pkVideoBilgisiD": {
+      "message": "Oynatıcı şeridindeki düğmeden açılır."
+   },
+   "pkVideoIstatistikleri": {
+      "message": "Video istatistikleri"
+   },
+   "pkVideoIstatistikleriD": {
+      "message": "Çözünürlük, FPS, bit hızı, düşen kare, tampon."
+   },
+   "pkVideoReklamlari": {
+      "message": "Video reklamları"
+   },
+   "pkVideoReklamlariD": {
+      "message": "Yayın öncesi ve arası reklamları engeller."
+   },
+   "pkVideonunYuzdesi": {
+      "message": "Videonun yüzdesi"
+   },
+   "pkVodIndir": {
+      "message": "Bu geçmiş yayını diske indir"
+   },
+   "pkVodIndirBaslik": {
+      "message": "Geçmiş Yayını İndir"
+   },
+   "pkVodIndirKisa": {
+      "message": "VOD İndir"
+   },
+   "pkVodIndirNot": {
+      "message": "Yayın parça parça doğrudan diske yazılır; sekme belleği dolmaz."
+   },
+   "pkVodReklamlari": {
+      "message": "Geçmiş yayın reklamları"
+   },
+   "pkVodReklamlariD": {
+      "message": "Geçmiş yayınların başındaki reklamı atlar."
+   },
+   "pkVodTsNotN": {
+      "message": "Dosya .ts olarak kaydedilir (VLC/MPV oynatır). Yayın uzunluğu {1} dk."
+   },
+   "pkVsAg": {
+      "message": "Ağ durumu"
+   },
+   "pkVsBitHizi": {
+      "message": "Bit hızı"
+   },
+   "pkVsCanliUzaklik": {
+      "message": "Canlıya uzaklık"
+   },
+   "pkVsCozunurluk": {
+      "message": "Çözünürlük"
+   },
+   "pkVsDuraklatildi": {
+      "message": "Duraklatıldı"
+   },
+   "pkVsDusenKare": {
+      "message": "Düşen kare"
+   },
+   "pkVsHazir": {
+      "message": "Hazır durumu"
+   },
+   "pkVsKonum": {
+      "message": "Konum"
+   },
+   "pkVsTampon": {
+      "message": "Tampon"
+   },
+   "pkVurguMuaf": {
+      "message": "Vurgulamadan muaf tutulanlar"
+   },
+   "pkVurguMuafD": {
+      "message": "Buraya yazdığın kişiler rolleri ne olursa olsun renk şeridi almaz."
+   },
+   "pkWebSitesi": {
+      "message": "Web sitesi"
+   },
+   "pkYanSohbet": {
+      "message": "Yan sohbeti sürükle"
+   },
+   "pkYanSohbetD": {
+      "message": "Ayrı pencereye alınan sohbet kutusu fareyle taşınabilir."
+   },
+   "pkYanit": {
+      "message": "Yanıt"
+   },
+   "pkYanitD": {
+      "message": "Başka mesaja yanıt verilenler"
+   },
+   "pkYanitlarBaslik": {
+      "message": "Yanıtlar"
+   },
+   "pkYaziliyor": {
+      "message": "yazılıyor…"
+   },
+   "pkYedekBos": {
+      "message": "Dosyada uygulanacak bir ayar yok"
+   },
+   "pkYedekBozuk": {
+      "message": "Bu dosya geçerli bir JSON değil"
+   },
+   "pkYedekNot": {
+      "message": "Yedeğe ayarlar, notlar, gizlenen kanal ve kişiler, filtreler ve kayıt noktaları girer."
+   },
+   "pkYedekOzet": {
+      "message": "Dosyada {1} bölüm var · {2}"
+   },
+   "pkYedekYabanci": {
+      "message": "Bu dosya bir PureKick yedeği değil"
+   },
+   "pkYeniSekmedeAc": {
+      "message": "Yeni sekmede aç ↗"
+   },
+   "pkYenilik": {
+      "message": "Bu sürümde yeni"
+   },
+   "pkYetkiAciklama": {
+      "message": "Bu kanaldaki VIP, OG ve moderatör yetkilerini verip alabilirsin. Yalnız kendi kanalında görünür."
+   },
+   "pkYetkiBaslik": {
+      "message": "{1} · Yetkiler"
+   },
+   "pkYetkiDugme": {
+      "message": "Yetkileri düzenle"
+   },
+   "pkYetkiMod": {
+      "message": "Moderatör"
+   },
+   "pkYetkiOg": {
+      "message": "OG"
+   },
+   "pkYetkiOkunamadi": {
+      "message": "Yetkiler okunamadı."
+   },
+   "pkYetkiVip": {
+      "message": "VIP"
+   },
+   "pkYildir": {
+      "message": "{1} yıldır"
+   },
+   "pkYonetimPaneli": {
+      "message": "PureKick Yönetim Paneli"
+   },
+   "pkYorumDengeli": {
+      "message": "emote ve yazı dengeli"
+   },
+   "pkYorumEmoteCok": {
+      "message": "mesajların çoğu sadece emote"
+   },
+   "pkYorumEmoteFazla": {
+      "message": "emoteler yazıdan fazla"
+   },
+   "pkYorumHizli": {
+      "message": "Sohbet hızlı akıyor"
+   },
+   "pkYorumVeriYok": {
+      "message": "Yorum yapmadan önce biraz daha veri lazım. Sohbet aktıkça burası dolacak."
+   },
+   "pkYorumZirve": {
+      "message": "en yoğun dakika {1}"
+   },
+   "pkYukseklik": {
+      "message": "Yükseklik"
+   },
+   "pkYuzde": {
+      "message": "Yüzde"
+   },
+   "pkZamanAsimi": {
+      "message": "Zaman aşımına uğradı"
+   },
+   "pkZirveDakika": {
+      "message": "{1} — o dakikada {2} mesaj"
+   },
+   "popupBadges": {
+      "message": "Rozetler"
+   },
+   "startBtn": {
+      "message": "Korumayı başlat"
+   },
+   "statusActive": {
+      "message": "Reklamsız Yayın Aktif"
+   },
+   "statusPaused": {
+      "message": "Koruma Duraklatıldı"
+   },
+   "themeColor": {
+      "message": "Tema Rengi"
+   },
+   "themeReset": {
+      "message": "Sıfırla (Kick varsayılanı)"
+   },
+   "pkFiltreAra": {
+      "message": "Sohbette ara..."
+   },
+   "pkSohbetFiltre": {
+      "message": "Sohbet arama ve filtreleme"
+   },
+   "pkCokluYayin": {
+      "message": "Çoklu Yayın (Multi-Stream)"
+   },
+   "pkKlipAl": {
+      "message": "Canlı Klip Al"
+   },
+   "pkSohbetTts": {
+      "message": "Sohbet Metin Okuma (TTS)"
+   },
+   "pkEmoteSpamFiltre": {
+      "message": "Emote Spam Küçültücü"
+   },
+   "pkIzlemeSureTakip": {
+      "message": "İzleme süresi takibi"
+   },
+   "pkKanalNotlari": {
+      "message": "Kanal Notları"
+   },
+   "pkYayinBildirim": {
+      "message": "Canlı yayın başladı bildirimleri"
+   },
+   "pkIzlemeSureleriBaslik": {
+      "message": "İzleme Süreleri"
+   },
+   "pkSohbetCeviri": {
+      "message": "Anlık Sohbet Çevirisi"
+   }
+}

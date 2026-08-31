@@ -1,0 +1,68 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "icons/icon16.png",
+         "32": "icons/icon32.png"
+      },
+      "default_title": "PureKick"
+   },
+   "author": {
+      "email": "info@codebb.co"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "all_frames": false,
+      "js": [ "page/react-kalkan.js", "page/worker-hook.js", "page/googletag-stub.js" ],
+      "matches": [ "https://kick.com/*", "https://*.kick.com/*" ],
+      "run_at": "document_start",
+      "world": "MAIN"
+   }, {
+      "all_frames": false,
+      "js": [ "content.js" ],
+      "matches": [ "https://kick.com/*", "https://*.kick.com/*" ],
+      "run_at": "document_start",
+      "world": "ISOLATED"
+   }, {
+      "all_frames": false,
+      "js": [ "page/recolor.js" ],
+      "matches": [ "https://kick.com/*", "https://*.kick.com/*" ],
+      "run_at": "document_start",
+      "world": "ISOLATED"
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+   },
+   "declarative_net_request": {
+      "rule_resources": [ {
+         "enabled": false,
+         "id": "ad_rules",
+         "path": "rules/ad-domains.json"
+      } ]
+   },
+   "default_locale": "en",
+   "description": "__MSG_appDesc__",
+   "externally_connectable": {
+      "matches": [ "https://purekick.pumpzera.cc/*" ]
+   },
+   "homepage_url": "https://purekick.pumpzera.cc",
+   "host_permissions": [ "https://kick.com/*", "https://*.kick.com/*" ],
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvlTcob1t05+4M5Kfwlpd5sgtGCzgaVZYhmC0CXRxy9V1BeyL2SdG1I5q+GSGuYhZK3lbdpX4Hqx95lC/S2u65dO5rTEeS5whoHzW5AtIxsmPE5+lD+R8JxPAM//pACAcwq4nrfug598K1EFVSSI1uaX2VxXxNmT8mhOu+1EZQOaapoyjSK85L/oF5OsstVPdewQdatSlZetME9im3eHCMjqzVgESO8fypuGxSeGLkduCKJ73Cmkecmsrbnd1hO2mBhC7UGDnZ/B/Z3/N6Gc8uBLlJPJew1ZTzB0UVuVzJ9pDEVarYt4AmeQRKdXjBroxTzJUJplRfWj1QRqLL+4H0wIDAQAB",
+   "manifest_version": 3,
+   "name": "PureKick - Ad Blocker for Kick",
+   "permissions": [ "storage", "declarativeNetRequest", "alarms", "notifications" ],
+   "short_name": "PureKick",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "10.18",
+   "web_accessible_resources": [ {
+      "matches": [ "https://kick.com/*", "https://*.kick.com/*" ],
+      "resources": [ "rozetler/*.png", "profil-kartlari/*" ]
+   } ]
+}
