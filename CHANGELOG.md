@@ -29,10 +29,7 @@ Bu doküman, PureKick eklentisinin tüm sürümlerindeki yenilikleri, hata düze
   - Efekt iptal seçeneği: `🚫 Efektsiz (Orijinal / Varsayılan)`.
   - Seçilen efektin hem sohbetteki kullanıcı adında hem de açılan Profil Pop-up Kartında canlı gösterilmesi.
 
-### 🛠️ Düzeltmeler & İyileştirmeler
-- `background.js` ve `content.js` arasındaki tüm ayar anahtarları eşitlendi, ayarların kalıcı kaydedilmesi garantiye alındı.
-- Altyazı kutusunun tam ekran ve tiyatro modlarında en üstte (`z-index: 2147483647`) net görünmesi sağlandı.
-- JavaScript parantez ve sözdizimi hataları derleyici ile taranıp sıfırlandı.
+
 
 ---
 
