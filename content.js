@@ -3422,26 +3422,25 @@
   var PK_AIMOD_AD = 'AiMod';
 
   function modSatirYazi(x) {
-    var kim = x.kim ? '<span class="pk-mod-hedef-user">' + esc(x.kim) + '</span>' : '?';
-    var yapan = x.yapan ? '<span class="pk-mod-actor-badge">🛡️ ' + esc(x.yapan) + '</span>' : '<span class="pk-mod-actor-badge">🛡️ ' + esc(t('pkBirModerator')) + '</span>';
+    var kim = x.kim || '?';
+    var yapan = x.yapan || t('pkBirModerator');
     
     if (x.tur === 'sil') {
       if (!x.kim) return t('pkModBirMesajSilindi');
       if (x.otoMod === true) {
-        var aiModLabel = '<span class="pk-mod-aimod-badge">🤖 ' + PK_AIMOD_AD + '</span>';
-        return settings.aiMod !== false ? (kim + ' adlı kullanıcının mesajı ' + aiModLabel + ' tarafından silindi.')
-                                        : (kim + ' adlı kullanıcının mesajı silindi.');
+        return settings.aiMod !== false ? t('pkModOtoSilindi', [kim, PK_AIMOD_AD])
+                                        : t('pkModSilindi', [kim]);
       }
-      return kim + ' adlı kullanıcının mesajı silindi.';
+      return t('pkModOtoSilindi', [kim, t('pkBirModeratorIci')]);
     }
-    if (x.tur === 'yasak') return yapan + ' kullanıcısı ' + kim + ' adlı kişiyi <span class="text-red-500 font-black">KALICI YASAKLADI (BAN)</span>';
+    if (x.tur === 'yasak') return t('pkModYasakladi', [yapan, kim]);
     if (x.tur === 'sustur') {
       var sn = x.bitis ? Math.max(0, Math.round((x.bitis - x.ts) / 1000)) : 0;
       var sure = pkSureYazi(sn);
-      return yapan + ' kullanıcısı ' + kim + ' adlı kişiyi <span class="text-yellow-400 font-bold">' + sure + ' SUSTURDU (MUTE)</span>';
+      return t('pkModSusturdu', [yapan, kim, sure]);
     }
-    if (x.tur === 'kaldir') return yapan + ' kullanıcısı ' + kim + ' adlı kişinin <span class="text-green-400 font-bold">CEZASINI KALDIRDI</span>';
-    if (x.tur === 'temizle') return '<span class="text-cyan-400 font-bold">🧹 Sohbet moderatör tarafından temizlendi.</span>';
+    if (x.tur === 'kaldir') return t('pkModCezaKaldirdi', [yapan, kim]);
+    if (x.tur === 'temizle') return t('pkModSohbetTemizlendi');
     return '';
   }
 
@@ -3968,6 +3967,22 @@
         .forEach(function (p) { ad.style.removeProperty(p); });
       ad.removeAttribute('data-pk-grad');
       ad.style.setProperty('color', zorRenk, 'important');
+      ad.style.fontWeight = '800';
+      ad.style.padding = '0 3px';
+      ad.style.borderRadius = '3px';
+      if (zorRenk === '#c084fc') {
+        ad.style.background = 'rgba(192, 132, 252, 0.12)';
+        ad.style.border = '1px solid rgba(192, 132, 252, 0.3)';
+      } else if (zorRenk === '#ef4444') {
+        ad.style.background = 'rgba(239, 68, 68, 0.12)';
+        ad.style.border = '1px solid rgba(239, 68, 68, 0.3)';
+      } else if (zorRenk === '#53fc18') {
+        ad.style.background = 'rgba(83, 252, 24, 0.12)';
+        ad.style.border = '1px solid rgba(83, 252, 24, 0.3)';
+      } else if (zorRenk === '#38bdf8') {
+        ad.style.background = 'rgba(56, 189, 248, 0.12)';
+        ad.style.border = '1px solid rgba(56, 189, 248, 0.3)';
+      }
     }
     ad.addEventListener('click', function (e) {
       e.preventDefault(); e.stopPropagation();
@@ -4086,9 +4101,10 @@
      Renk satırın SONUCUNU bir bakışta veriyor; cümleyi okumadan "kötü mü
      iyi mi" anlaşılıyor. Kendi rol rengi/abonelik gradyanı burada
      kapatılıyor (bkz. `sade`) — o üç renkle karışıp anlamı bulandırıyordu. */
-  var MOD_RENK_MOD  = '#00c7ff';    // Kick moderatör rozetinin gradyan ucu
-  var MOD_RENK_CEZA = '#fb1818';    // Kick `text-danger-base` (ölçüldü)
-  var MOD_RENK_AF   = '#53fc18';    // Kick birincil yeşili — sohbetteki af şeridiyle aynı
+  var MOD_RENK_MOD  = '#c084fc';    // Mor moderatör rozet rengi
+  var MOD_RENK_CEZA = '#ef4444';    // Canlı kırmızı ceza rengi
+  var MOD_RENK_AF   = '#53fc18';    // Kick birincil yeşili — af rengi
+  var MOD_RENK_SIL  = '#38bdf8';    // Silinen mesaj hedef kullanıcı rengi
 
   /* Cümleyi adlara göre parçalara böler: [{m:'düz metin'} | {ad:'Ali',renk}].
      UZUNDAN KISAYA eşleşir — kısa ad uzun adın içinde kalıp onu bölmesin
@@ -4116,13 +4132,11 @@
 
   /* Bir moderasyon olayının hangi adı hangi renkte olacağı. */
   function modAdaylar(x) {
-    /* `sil` ve `temizle` renksiz: ikisi de ceza/af değil, ayrıca kendi
-       sekmelerinde duruyorlar. */
     var hedef = '';
     if (x.tur === 'yasak' || x.tur === 'sustur') hedef = MOD_RENK_CEZA;
     else if (x.tur === 'kaldir') hedef = MOD_RENK_AF;
+    else if (x.tur === 'sil') hedef = MOD_RENK_SIL;
     return [
-      /* AiMod ve "bir moderatör" burada YOK: ikisi de kullanıcı adı değil. */
       x.yapan ? { ad: x.yapan, renk: MOD_RENK_MOD } : null,
       x.kim ? { ad: x.kim, renk: hedef } : null
     ].filter(Boolean);
