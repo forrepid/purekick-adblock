@@ -19687,10 +19687,11 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
 
     var kap = document.querySelector('#chatroom-messages, [data-chat-messages="true"]');
     if (!kap) return;
-    var satirlar = kap.querySelectorAll('[data-index], .chat-entry, [class*="chat-entry"]');
+    /* Sadece henüz işlenmemiş satırları tara */
+    var satirlar = kap.querySelectorAll('[data-index]:not([data-pk-cevrildi]), .chat-entry:not([data-pk-cevrildi]), [class*="chat-entry"]:not([data-pk-cevrildi])');
     for (var i = 0; i < satirlar.length; i++) {
       var sat = satirlar[i];
-      if (sat.querySelector('.pk-ceviri-btn') || sat.getAttribute('data-pk-cevrildi')) continue;
+      if (sat.querySelector('.pk-ceviri-btn')) { sat.setAttribute('data-pk-cevrildi', '1'); continue; }
 
       var metinKapsayici = sat.querySelector('[class*="chat-entry-content"], [class*="break-words"], .chat-entry') || sat;
 
@@ -19998,27 +19999,20 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
   function pkSohbetIsimEfektleriUygula() {
     var kap = document.querySelector('#chatroom-messages, [data-chat-messages="true"]');
     if (!kap) return;
-    var adElList = kap.querySelectorAll('[data-chat-entry-user], [class*="chat-entry-username"], button[class*="font-bold"]');
-    
     var myName = (settings.mentionAd || localStorage.getItem('pk_user_name') || '').toLowerCase();
+    if (!myName) return;
     var myHolo = settings.holoKartEfekt || 'pikachu';
 
+    /* Sadece henüz işaretlenmemiş elemanları tara — data-pk-efekt-scanned olmayan */
+    var adElList = kap.querySelectorAll('[data-chat-entry-user]:not([data-pk-efekt-scanned]), [class*="chat-entry-username"]:not([data-pk-efekt-scanned]), button[class*="font-bold"]:not([data-pk-efekt-scanned])');
     for (var i = 0; i < adElList.length; i++) {
       var el = adElList[i];
+      el.setAttribute('data-pk-efekt-scanned', '1');
       var uText = (el.textContent || '').trim().replace(/^@/, '').toLowerCase();
-      
-      if (myName && uText === myName) {
-        var prevEfekt = el.getAttribute('data-pk-name-effect');
-        if (prevEfekt !== myHolo) {
-          // Eski sınıfları temizle
-          if (prevEfekt) el.classList.remove('pk-chat-holo-name', 'pk-name-' + prevEfekt);
-          
-          if (myHolo && myHolo !== 'varsayilan' && myHolo !== 'yok') {
-            el.setAttribute('data-pk-name-effect', myHolo);
-            el.classList.add('pk-chat-holo-name', 'pk-name-' + myHolo);
-          } else {
-            el.removeAttribute('data-pk-name-effect');
-          }
+      if (uText === myName) {
+        if (myHolo && myHolo !== 'varsayilan' && myHolo !== 'yok') {
+          el.setAttribute('data-pk-name-effect', myHolo);
+          el.classList.add('pk-chat-holo-name', 'pk-name-' + myHolo);
         }
       }
     }
@@ -20216,20 +20210,23 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
       if (video) video.style.cursor = 'grabbing';
     });
 
-    window.addEventListener('mousemove', function (e) {
-      if (!pkIsPanning) return;
-      pkPanX = (e.clientX - pkStartX);
-      pkPanY = (e.clientY - pkStartY);
-      pkVideoZoomUygula();
-    });
+    if (!window.__pkZoomWindowBound) {
+      window.__pkZoomWindowBound = true;
+      window.addEventListener('mousemove', function (e) {
+        if (!pkIsPanning) return;
+        pkPanX = (e.clientX - pkStartX);
+        pkPanY = (e.clientY - pkStartY);
+        pkVideoZoomUygula();
+      }, { passive: true });
 
-    window.addEventListener('mouseup', function () {
-      if (pkIsPanning) {
-        pkIsPanning = false;
-        var video = document.querySelector('video');
-        if (video && pkZoomLevel > 1) video.style.cursor = 'grab';
-      }
-    });
+      window.addEventListener('mouseup', function () {
+        if (pkIsPanning) {
+          pkIsPanning = false;
+          var video = document.querySelector('video');
+          if (video && pkZoomLevel > 1) video.style.cursor = 'grab';
+        }
+      }, { passive: true });
+    }
 
     // Kontrol çubuğuna Zoom butonu ekle
     var bar = document.querySelector('.vjs-control-bar, .player-controls, [data-testid="player-controls"]');
@@ -20376,11 +20373,11 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     }
 
     pkBagisVeri.gecmis.push({ zaman: zaman, user: user, tip: tip, miktar: miktarStr, detay: detay, ts: Date.now() });
-    if (pkBagisVeri.gecmis.length > 100) pkBagisVeri.gecmis.shift();
+    if (pkBagisVeri.gecmis.length > 50) pkBagisVeri.gecmis.shift();
   }
 
-  function pkBagisAnalizEt(text, node) {
-    if (!text) return;
+  function pkBagisAnalizEt(text) {
+    if (!text || text.length > 300) return; /* çok uzun metinleri atla — performans */
 
     // 1. Hediye Abonelik
     var mGift = text.match(/([A-Za-z0-9_]+)\s+(?:gifted|hediye\s+etti|gönderdi)\s+(\d+)\s+(?:subscriptions|subs?|abonelik)/i);
@@ -20424,11 +20421,12 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     for (var m = 0; m < mutations.length; m++) {
       var added = mutations[m].addedNodes;
       for (var n = 0; n < added.length; n++) {
-        var node = added[n];
-        if (node.nodeType === 1) {
-          var t = node.textContent || '';
-          if (settings.hypeOlcer !== false) pkSohbetHypeAnalizEt(t);
-          pkBagisAnalizEt(t, node);
+        if (added[n].nodeType === 1) {
+          var t = (added[n].textContent || '').slice(0, 300); /* max 300 char — bellek koruması */
+          if (t.length > 2) {
+            if (settings.hypeOlcer !== false) pkSohbetHypeAnalizEt(t);
+            pkBagisAnalizEt(t);
+          }
         }
       }
     }
@@ -20551,16 +20549,27 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     else bar.appendChild(ozBtn);
   }
 
-  // 10.18 Mega Periyodik Tetikleyiciler
+  /* ══════════════════════════════════════════════════════════════════════
+   * PERIYODIK TETIKLEYICILER — HAFİF (2s) ve AĞIR (5s) olarak ayrıldı.
+   * Ağır DOM taramaları daha seyrek çalışarak CPU/RAM korunur.
+   * ══════════════════════════════════════════════════════════════════════ */
+
+  // HAFİF — CSS/stil güncelleme, 2 saniyede bir
   setInterval(function () {
     if (pkBaglamCanli()) {
-      pkSohbetSekmeleriKur();
-      pkSohbetDondurmaKur();
       pkVideoFiltreleriUygula();
       pkOledModUygula();
       pkAydinlikTemaUygula();
       pkSadeceSesModuUygula();
       pkSohbetFontUygula();
+    }
+  }, 2000);
+
+  // AĞIR — DOM tarama gerektiren kurulum işleri, 5 saniyede bir
+  setInterval(function () {
+    if (pkBaglamCanli()) {
+      pkSohbetSekmeleriKur();
+      pkSohbetDondurmaKur();
       pkSohbetCeviriButonlariKur();
       pkSohbetIsimEfektleriUygula();
       pkCanliAltyaziVeDublajKur();
@@ -20573,7 +20582,20 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
       pkAnaSayfaStreamDurdur();
       pkCevrimdisiGizleUygula();
     }
-  }, 2000);
+  }, 5000);
+
+  // BELLEK TEMİZLEYİCİ — Her 3 dakikada bir eski verileri buda
+  setInterval(function () {
+    // pkBagisVeri.gecmis 50 ile sınırlı (push'ta budanıyor)
+    // pkYayinGecmisi 50 ile sınırlı (push'ta budanıyor)
+    // bagiscilar nesnesinde 30'dan fazla kişi varsa en eskileri kaldır
+    var bKeys = Object.keys(pkBagisVeri.bagiscilar);
+    if (bKeys.length > 30) {
+      bKeys.sort(function (a, b) { return pkBagisVeri.bagiscilar[a].sonTs - pkBagisVeri.bagiscilar[b].sonTs; });
+      var fazla = bKeys.length - 30;
+      for (var i = 0; i < fazla; i++) delete pkBagisVeri.bagiscilar[bKeys[i]];
+    }
+  }, 180000);
 
   setTimeout(pushConfigToPage, 1500);
 })();
