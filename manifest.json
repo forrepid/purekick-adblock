@@ -60,7 +60,7 @@
    "permissions": [ "storage", "declarativeNetRequest", "alarms", "notifications" ],
    "short_name": "PureKick",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "10.19.2",
+   "version": "10.19.3",
    "web_accessible_resources": [ {
       "matches": [ "https://kick.com/*", "https://*.kick.com/*" ],
       "resources": [ "rozetler/*.png", "profil-kartlari/*" ]

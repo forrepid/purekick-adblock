@@ -4,6 +4,16 @@ Bu doküman, PureKick eklentisinin tüm sürümlerindeki yenilikleri, hata düze
 
 ---
 
+## 🚀 [10.19.3] - 2026-09-05 (Profil Kartı: Bilgi, Sohbet & Kullanıcı Notları Onarımı)
+
+### 🛠️ Kritik Düzeltmeler
+- **👤 Profil Kartı Algılama & Seçici Genişletmesi:** Kick'in güncellenen kullanıcı kartı DOM yapısı (`div.bg-surface-highest, div[data-chat-user-card], div[data-testid="user-profile-card"], div.bg-surface-base, div[role="dialog"]`) ve kullanıcı adı seçicileri genişletilerek kartın eksiksiz yakalanması sağlandı.
+- **ℹ️ Kart Bilgisi (Katılma & Takip Tarihi):** VOD, video ve popout sohbet sayfalarında kanal adının boş kalmasından kaynaklanan bilgi çekememe hatası giderildi (`sayfaSlug() || scMevcutKanal() || scKanal`). Kanal API'sine ek olarak doğrudan kullanıcı API fallback'i eklendi.
+- **💬 Kart Sohbeti (Son Mesajlar):** Profil kartı açıldığında kullanıcının sohbete attığı son mesajlar ve ona yazılan yanıtlar sekmesi stabil hale getirildi.
+- **📝 Kullanıcı Notları:** Not kutusunun `undefined` / `false` kontrolü onarıldı, karttaki yerleşimi sekme bloğunun hemen üstüne sabitlendi ve ayar açılıp kapandığında anında canlı karta yansıtılması sağlandı.
+
+---
+
 ## 🚀 [10.19.2] - 2026-09-05 (Eklenti Menüsü & Panel Arkaplan Düzeltmesi)
 
 ### 🎨 Kritik Arayüz & Görünüm Düzeltmeleri

@@ -2954,9 +2954,9 @@
 
   function processProfilePopups() {
     mukerrerRozetSatiriTemizle();
-    var cards = document.querySelectorAll('div.bg-surface-highest');
+    var cards = document.querySelectorAll('div.bg-surface-highest, div[data-chat-user-card], div[data-testid="user-profile-card"], div.bg-surface-base, div[role="dialog"]');
     for (var i = 0; i < cards.length; i++) {
-      var nameEl = cards[i].querySelector('a.select-text.font-semibold');
+      var nameEl = cards[i].querySelector('a.select-text.font-semibold, a[href^="/"].select-text, a[href^="/"], [class*="username"], h4');
       if (!nameEl) continue;
       /* Sabitlenmiş kopyanın içine girme: o canlı kart değil, donuk görüntü.
          Girersek her turda blok ekleyip kart üstüne kart yığıyoruz. */
@@ -2964,15 +2964,18 @@
       /* İç içe adaylarda yalnız EN İÇTEKİ işlensin — dış kap da aynı ismi
          gördüğü için ikinci kez işlenip blokları çoğaltıyordu. */
       if (pkIcAdayVar(cards[i])) continue;
-      // Rozetler rozet verisine bağlı; "Son Mesajlar" ve kaydırma bağlı DEĞİL.
-      /* ÖLÇÜ ÖNCE: içerik blokları genişliğe göre yerleşsin. */
-      var uName = (nameEl.textContent || '').trim();
+      
+      var uName = (nameEl.textContent || '').trim().replace(/^@/, '');
+      if (!uName) continue;
+
       try { kartGenislet(cards[i]); } catch (e) {}
       try { injectProfilKartiTemasi(cards[i], uName); } catch (e) {}
       if (badgeActive() && badgeMaps) { try { injectPopupBadges(cards[i], nameEl); } catch (e) {} }
       try { surukleYap(tasinacakKap(cards[i])); } catch (e) {}
       try { profilKartiIkonlari(cards[i]); } catch (e) {}
       try { hdAvatarKur(cards[i]); } catch (e) {}
+      try { injectPopupBilgi(cards[i], uName); } catch (e) {}
+      try { injectPopupNot(cards[i], uName); } catch (e) {}
       try { injectPopupMesajlar(cards[i], uName); } catch (e) {}
       try { injectPopupYanitlar(cards[i], uName); } catch (e) {}
       try { injectPopupModer(cards[i]); } catch (e) {}
@@ -11662,14 +11665,14 @@
      Mesaj listesinin ÜSTÜNE konur ki kart açılınca hemen görünsün. */
   function injectPopupNot(kart, ad) {
     var eski = kart.querySelector(':scope > .pk-not');
-    if (!settings.notlar) { if (eski) eski.remove(); return; }
+    if (settings.notlar === false) { if (eski) eski.remove(); return; }
     if (eski && eski.getAttribute('data-pk-not') === (ad || '')) return;   // aynı kişi → dokunma
     if (eski) eski.remove();
 
-    var kutu = el('div', 'pk-not flex flex-col gap-2');
+    var kutu = el('div', 'pk-not flex flex-col gap-2 my-1');
     kutu.setAttribute('data-pk-not', ad || '');
     var bas = el('div', 'flex items-center justify-between gap-2');
-    bas.appendChild(el('div', 'text-md font-bold text-white lg:font-semibold', t('pkNotun')));
+    bas.appendChild(el('div', 'text-sm font-bold text-white', t('pkNotun')));
     var durum = el('div', 'text-xs text-subtle', '');
     bas.appendChild(durum);
     kutu.appendChild(bas);
@@ -11677,7 +11680,7 @@
     var alan = el('textarea', 'bg-surface-highest border-outline-decorative rounded border px-3 py-2 text-sm text-white');
     alan.placeholder = t('pkNotPlaceholder');
     alan.value = notOku(ad);
-    alan.style.cssText = 'width:100%;min-height:64px;max-height:120px;resize:vertical;outline:none;font-family:inherit';
+    alan.style.cssText = 'width:100%;min-height:60px;max-height:120px;resize:vertical;outline:none;font-family:inherit;background:#171a1d;border:1px solid rgba(255,255,255,0.12);';
     /* Her tuşta storage'a yazmayalım — yazmayı bıraktıktan 600ms sonra kaydeder. */
     var zaman = 0;
     alan.addEventListener('input', function () {
@@ -11695,7 +11698,7 @@
     });
     kutu.appendChild(alan);
 
-    var pm = kart.querySelector(':scope > .pk-pm');
+    var pm = kart.querySelector(':scope > .pk-sekme-kap, :scope > .pk-pm');
     if (pm) kart.insertBefore(kutu, pm); else kart.appendChild(kutu);
   }
 
@@ -11752,10 +11755,24 @@
           '/users/' + encodeURIComponent(nick), { credentials: 'omit' })
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (j) {
-        if (!j) { kartBilgi[k] = 'yok'; return; }
-        kartBilgi[k] = { created: j.created_at || '', takip: j.following_since || '',
-                         abone: j.subscribed_for || 0, mod: !!j.is_moderator, sahip: !!j.is_channel_owner };
-        bitince(kartBilgi[k]);
+        if (j) {
+          kartBilgi[k] = { created: j.created_at || '', takip: j.following_since || '',
+                           abone: j.subscribed_for || 0, mod: !!j.is_moderator, sahip: !!j.is_channel_owner };
+          bitince(kartBilgi[k]);
+        } else {
+          // Fallback: Kullanıcının genel profilini sorgula
+          fetch('https://kick.com/api/v1/users/' + encodeURIComponent(nick), { credentials: 'omit' })
+            .then(function (r2) { return r2.ok ? r2.json() : null; })
+            .then(function (j2) {
+              if (j2) {
+                kartBilgi[k] = { created: j2.created_at || (j2.user && j2.user.created_at) || '', takip: '', abone: 0, mod: false, sahip: false };
+                bitince(kartBilgi[k]);
+              } else {
+                kartBilgi[k] = 'yok';
+              }
+            })
+            .catch(function () { kartBilgi[k] = 'yok'; });
+        }
       })
       .catch(function () { kartBilgi[k] = 'yok'; });
   }
@@ -11781,7 +11798,8 @@
     /* İKİSİ DE KAPALIYSA kutu hiç durmasın. Ayrı ayrı kapatılabiliyorlar:
        biri kapalı diğeri açıkken kutu yine gerekiyor. */
     if (!bilgiAcik && !tkAcik) { if (eski) eski.remove(); return; }
-    var kanal = sayfaSlug(); if (!kanal || !ad) return;
+    var kanal = sayfaSlug() || scMevcutKanal() || scKanal || '';
+    if (!kanal || !ad) return;
     var slug = String(ad).toLowerCase();
 
     /* Takipçi verisi elde mi; yoksa iste (gelince processProfilePopups çağırır). */
@@ -11806,7 +11824,7 @@
        bırakmak kart genişleyince yetmedi. Blok artık KULLANICI ADI
        SATIRININ ALTINA giriyor; üst şerit tamamen Kick'in kalıyor.
        Ad satırı bulunamazsa eski yere düşüyor — blok hiç görünmemesindense. */
-    var adKok = kart.querySelector('a.select-text.font-semibold');
+    var adKok = kart.querySelector('a.select-text.font-semibold, a[href^="/"].select-text, a[href^="/"], [class*="username"], h4');
     while (adKok && adKok.parentElement && adKok.parentElement !== kart) adKok = adKok.parentElement;
     if (adKok && adKok.parentElement === kart) {
       if (adKok.nextSibling) kart.insertBefore(kutu, adKok.nextSibling);
@@ -16480,9 +16498,12 @@ s.appendChild(satir(t('pkSohbetIstatistikleri'), t('pkSohbetIstatistikleriD'),
   /* ════════ KULLANICI KARTI › NOTLAR ════════ */
   function bolumKartNotlar(body) {
     var s = kart(t('pkKullaniciNotlari'), t('pkKullaniciNotlariD'));
-s.appendChild(satir(t('pkKullaniciNotlari'), t('pkKullaniciNotlariD'),
+    s.appendChild(satir(t('pkKullaniciNotlari'), t('pkKullaniciNotlariD'),
       anahtar(settings.notlar !== false, function (v) {
-        sendBg({ type: 'setSettings', payload: { notlar: v } }); settings.notlar = v; panelCiz();
+        sendBg({ type: 'setSettings', payload: { notlar: v } });
+        settings.notlar = v;
+        processProfilePopups();
+        panelCiz();
         toast(ozellikToast(v, 'pkKullaniciNotlari'));
       })));
     body.appendChild(s);
@@ -16492,9 +16513,12 @@ s.appendChild(satir(t('pkKullaniciNotlari'), t('pkKullaniciNotlariD'),
   /* ════════ KULLANICI KARTI ════════ */
   function bolumKartBilgisi(body) {
     var pb = kart(t('pkAltKartBilgisi'), t('pkProfilKartiBilgisiD'));
-pb.appendChild(satir(t('pkKatilmaTakip'), t('pkKatilmaTakipD'),
+    pb.appendChild(satir(t('pkKatilmaTakip'), t('pkKatilmaTakipD'),
       anahtar(settings.kartBilgi !== false, function (v) {
-        sendBg({ type: 'setSettings', payload: { kartBilgi: v } }); settings.kartBilgi = v; panelCiz();
+        sendBg({ type: 'setSettings', payload: { kartBilgi: v } });
+        settings.kartBilgi = v;
+        processProfilePopups();
+        panelCiz();
         toast(ozellikToast(v, 'pkProfilKartiBilgisi'));
       })));
 pb.appendChild(el('div', 'text-xs text-subtle',
