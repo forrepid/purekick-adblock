@@ -218,6 +218,12 @@
    "pkBaglantiyiOnizle": {
       "message": "Bağlantıyı Önizle"
    },
+   "pkChatOnizle": {
+      "message": "Chatte önizleme görüntüle"
+   },
+   "pkChatOnizleKapat": {
+      "message": "Önizlemeyi kapat"
+   },
    "pkBahsedenYok": {
       "message": "Şu ana kadar senden bahseden olmadı."
    },

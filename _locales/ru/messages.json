@@ -218,6 +218,12 @@
    "pkBaglantiyiOnizle": {
       "message": "Предпросмотр ссылки"
    },
+   "pkChatOnizle": {
+      "message": "Просмотр в чате"
+   },
+   "pkChatOnizleKapat": {
+      "message": "Закрыть предпросмотр"
+   },
    "pkBahsedenYok": {
       "message": "Вас пока никто не упоминал."
    },

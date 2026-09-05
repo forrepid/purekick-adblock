@@ -218,6 +218,12 @@
    "pkBaglantiyiOnizle": {
       "message": "Aperçu du lien"
    },
+   "pkChatOnizle": {
+      "message": "Afficher l'aperçu dans le chat"
+   },
+   "pkChatOnizleKapat": {
+      "message": "Fermer l'aperçu"
+   },
    "pkBahsedenYok": {
       "message": "Personne ne t'a encore mentionné."
    },

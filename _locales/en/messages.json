@@ -218,6 +218,12 @@
    "pkBaglantiyiOnizle": {
       "message": "Preview the link"
    },
+   "pkChatOnizle": {
+      "message": "View preview in chat"
+   },
+   "pkChatOnizleKapat": {
+      "message": "Close preview"
+   },
    "pkBahsedenYok": {
       "message": "Nobody has mentioned you yet."
    },

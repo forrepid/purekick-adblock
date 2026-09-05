@@ -218,6 +218,12 @@
    "pkBaglantiyiOnizle": {
       "message": "Link-Vorschau"
    },
+   "pkChatOnizle": {
+      "message": "Vorschau im Chat anzeigen"
+   },
+   "pkChatOnizleKapat": {
+      "message": "Vorschau schließen"
+   },
    "pkBahsedenYok": {
       "message": "Bisher hat dich niemand erwähnt."
    },

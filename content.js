@@ -9130,6 +9130,23 @@
       var mt = y.match(/^\/([\w-]+)/);
       if (mt) return { tur: 'twitch', src: 'https://clips.twitch.tv/embed?clip=' + encodeURIComponent(mt[1]) + '&parent=' + location.hostname };
     }
+    // X (Twitter)
+    if (h === 'twitter.com' || h === 'x.com') {
+      var tm = y.match(/\/status(?:es)?\/(\d+)/);
+      if (tm) return { tur: 'x', src: 'https://platform.twitter.com/embed/Tweet.html?id=' + tm[1] + '&theme=dark' };
+    }
+    // Instagram
+    if (h === 'instagram.com') {
+      var im = y.match(/^\/(?:share\/)?(p|reels?|tv)\/([\w-]+)/);
+      if (im) {
+        var tur = im[1] === 'reels' ? 'reel' : im[1];
+        return { tur: 'instagram', src: 'https://www.instagram.com/' + tur + '/' + im[2] + '/embed' };
+      }
+    }
+    // Reddit
+    if (h === 'reddit.com') {
+      if (/^\/r\/[^/]+\/comments\//.test(y)) return { tur: 'reddit', src: 'https://www.redditmedia.com' + y + '/?embed=true&theme=dark' };
+    }
     return null;
   }
 
@@ -17886,7 +17903,10 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     Instagram:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>',
     Reddit:     '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" opacity=".25"/><path d="M17 11.5a1.5 1.5 0 0 0-2.6-1 7.6 7.6 0 0 0-3.6-.9l.7-3.2 2.2.5a1.2 1.2 0 1 0 .2-1l-2.8-.6a.5.5 0 0 0-.6.4l-.9 3.9a7.6 7.6 0 0 0-3.6.9 1.5 1.5 0 1 0-1.7 2.4 3 3 0 0 0 0 .6c0 2.3 2.7 4.1 6 4.1s6-1.8 6-4.1a3 3 0 0 0 0-.6 1.5 1.5 0 0 0 .7-1.4zM8.5 13a1.2 1.2 0 1 1 1.2 1.2A1.2 1.2 0 0 1 8.5 13zm6.4 3.2a4.3 4.3 0 0 1-2.9.9 4.3 4.3 0 0 1-2.9-.9.4.4 0 0 1 .5-.6 3.6 3.6 0 0 0 2.4.7 3.6 3.6 0 0 0 2.4-.7.4.4 0 0 1 .5.6zm-.6-2a1.2 1.2 0 1 1 1.2-1.2 1.2 1.2 0 0 1-1.2 1.2z"/></svg>',
     Streamable: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg>',
-    Kick:       '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h5v6l4-6h6l-6 9 6 9h-6l-4-6v6H3z"/></svg>'
+    Kick:       '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h5v6l4-6h6l-6 9 6 9h-6l-4-6v6H3z"/></svg>',
+    Twitch:     '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M2.149 0l-1.612 4.119v16.8h5.008v3.081h3.224l3.045-3.081h4.657l6.08-6.155V0H2.149zm19.164 13.025l-3.582 3.626h-4.657l-3.045 3.081v-3.081H6.448V1.765h14.865v11.26zm-8.597-7.387h2.149v6.157h-2.149V5.638zm-5.014 0h2.149v6.157H7.702V5.638z"/></svg>',
+    'Görsel':   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>',
+    Web:        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>'
   };
 
   function lpEmbed(ham) {
@@ -17911,16 +17931,11 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
         if (tm) return { ad: 'Tweet', url: 'https://platform.twitter.com/embed/Tweet.html?id=' + tm[1] + '&theme=dark', oran: 0 };
       }
       if (h === 'instagram.com') {
-        /* `reels` (çoğul) Instagram'ın kendi kullandığı biçim; gömme adresi
-           tekil `reel` istiyor. Eski desen çoğulu hiç tanımıyordu — bağlantı
-           önizleme düğmesi bu yüzden çıkmıyordu. */
         var im = p.match(/^\/(?:share\/)?(p|reels?|tv)\/([\w-]+)/);
         if (im) {
           var tur = im[1] === 'reels' ? 'reel' : im[1];
           return { ad: 'Instagram', url: 'https://www.instagram.com/' + tur + '/' + im[2] + '/embed', oran: 125 };
         }
-        /* PROFİL (kullanıcı istedi). Instagram'ın gezinme yolları profil
-           DEĞİL — elenmezse "/explore" da profil sanılırdı. */
         var igAtla = { explore: 1, stories: 1, accounts: 1, direct: 1, reels: 1,
                        reel: 1, p: 1, tv: 1, share: 1, about: 1, developer: 1,
                        legal: 1, privacy: 1, terms: 1, challenge: 1 };
@@ -17932,16 +17947,17 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
       if (h === 'reddit.com') {
         if (/^\/r\/[^/]+\/comments\//.test(p)) return { ad: 'Reddit', url: 'https://www.redditmedia.com' + p + '/?embed=true&theme=dark', oran: 0 };
       }
-      /* Lightshot (prnt.sc) EKLENEMİYOR — denendi, geri alındı.
-         Sayfa çerçevelenmeyi reddediyor ("prnt.sc bağlanmayı reddetti").
-         Doğrudan görsel (`img.lightshot.app/...jpg`) çapraz kaynak yükleniyor
-         ve hotlink koruması yok, ama adresteki kısa kod görsel adına
-         ÇEVRİLEMİYOR (kod `BfBfooloKcTr`, görsel `iAybOg-QRC-uawSBz19jyg`);
-         görsel adını öğrenmek sayfayı indirmeyi, o da yeni host iznini
-         gerektiriyor — istenmedi. */
       if (h === 'streamable.com') {
         var sm = p.match(/^\/(?:e\/)?(\w+)/);
         if (sm) return { ad: 'Streamable', url: 'https://streamable.com/e/' + sm[1], oran: 56.25 };
+      }
+      if (h === 'clips.twitch.tv') {
+        var tcm = p.match(/^\/([\w-]+)/);
+        if (tcm) return { ad: 'Twitch', url: 'https://clips.twitch.tv/embed?clip=' + encodeURIComponent(tcm[1]) + '&parent=' + location.hostname, oran: 56.25 };
+      }
+      if (h === 'twitch.tv') {
+        var twm = p.match(/\/clip\/([\w-]+)/);
+        if (twm) return { ad: 'Twitch', url: 'https://clips.twitch.tv/embed?clip=' + encodeURIComponent(twm[1]) + '&parent=' + location.hostname, oran: 56.25 };
       }
       if (h === 'kick.com') {
         var km = p.match(/^\/([^/]+)\/clips?\/([\w-]+)/);
@@ -17949,6 +17965,17 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
         var cm = p.match(/^\/([^/]+)$/);
         if (cm && !NON_CHANNEL[cm[1].toLowerCase()]) return { ad: 'Kick', url: 'https://player.kick.com/' + cm[1], oran: 56.25 };
       }
+
+      // Doğrudan resim/video bağlantıları (.png, .jpg, .gif, .mp4 vb.)
+      if (/\.(png|jpe?g|webp|gif|svg)(\?.*)?$/i.test(p)) {
+        return { ad: 'Görsel', url: ham, medya: 'img', oran: 0 };
+      }
+      if (/\.(mp4|webm|ogg)(\?.*)?$/i.test(p)) {
+        return { ad: 'Görsel', url: ham, medya: 'video', oran: 56.25 };
+      }
+
+      // Diğer tüm web siteleri için genel bağlantı önizlemesi
+      return { ad: 'Web', url: ham, web: true, domain: h, oran: 0 };
     } catch (e) {}
     return null;
   }
@@ -17999,17 +18026,48 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     kutu.appendChild(bas);
 
     var cer = el('div', 'bg-black');
-    cer.style.cssText = bilgi.oran ? ('position:relative;width:100%;padding-top:' + bilgi.oran + '%')
-                                   : 'position:relative;width:100%;height:70vh';
-    var f = el('iframe', '');
-    f.src = bilgi.url;
-    f.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture; clipboard-write');
-    // no-referrer YouTube embed'ini bozuyor (Error 153 — olculdu). 'origin' yalnizca
-    // https://kick.com gonderir, tam adres sizmaz; YouTube da kabul eder.
-    f.setAttribute('referrerpolicy', 'origin');
-    f.setAttribute('loading', 'lazy');
-    f.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0';
-    cer.appendChild(f);
+    if (bilgi.medya === 'img') {
+      cer.style.cssText = 'position:relative;width:100%;max-height:75vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0f1115';
+      var img = el('img', '');
+      img.src = bilgi.url;
+      img.style.cssText = 'max-width:100%;max-height:75vh;object-fit:contain;display:block';
+      cer.appendChild(img);
+    } else if (bilgi.medya === 'video') {
+      cer.style.cssText = 'position:relative;width:100%;max-height:75vh;background:#000';
+      var vid = el('video', '');
+      vid.src = bilgi.url;
+      vid.controls = true;
+      vid.autoplay = true;
+      vid.style.cssText = 'width:100%;max-height:75vh;display:block';
+      cer.appendChild(vid);
+    } else if (bilgi.web) {
+      cer.style.cssText = 'position:relative;width:100%;padding:24px 20px;background:#181b20;display:flex;flex-direction:column;gap:16px';
+      var card = el('div', 'flex items-center gap-3 p-3 rounded border border-outline-decorative bg-surface-base');
+      var fv = el('img', 'rounded shrink-0');
+      fv.src = 'https://www.google.com/s2/favicons?domain=' + encodeURIComponent(bilgi.domain || '') + '&sz=32';
+      fv.style.cssText = 'width:24px;height:24px';
+      card.appendChild(fv);
+      var info = el('div', 'min-w-0 flex-1');
+      var dm = el('div', 'text-sm font-semibold text-white truncate', bilgi.domain || '');
+      var ln = el('div', 'text-xs text-subtle truncate', bilgi.url);
+      info.appendChild(dm);
+      info.appendChild(ln);
+      card.appendChild(info);
+      cer.appendChild(card);
+      var gv = el('div', 'text-xs text-subtle flex items-center gap-2');
+      gv.innerHTML = '<span style="color:#00e701">●</span> ' + t('pkSekmeIciNot');
+      cer.appendChild(gv);
+    } else {
+      cer.style.cssText = bilgi.oran ? ('position:relative;width:100%;padding-top:' + bilgi.oran + '%')
+                                     : 'position:relative;width:100%;height:70vh';
+      var f = el('iframe', '');
+      f.src = bilgi.url;
+      f.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture; clipboard-write');
+      f.setAttribute('referrerpolicy', 'origin');
+      f.setAttribute('loading', 'lazy');
+      f.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0';
+      cer.appendChild(f);
+    }
     kutu.appendChild(cer);
 
     var alt = el('div', 'px-4 py-2 border-t border-outline-decorative shrink-0');
@@ -18056,7 +18114,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
   }
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') lpKapat(); });
 
-  /* ---- Sohbet mesajına buton ekle ---- */
+  /* ---- Sohbet mesajına buton ve inline önizleme paneli ekle ---- */
   function lpMesaj(msg) {
     try {
       if (!msg || msg.getAttribute('data-pk-lp')) return;      // aynı mesajı bir kez işle
@@ -18071,44 +18129,125 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
       msg.setAttribute('data-pk-lp', bulunan.length ? '1' : '0');
       if (!bulunan.length) return;
 
-      /* Buton mesaj BALONUNUN İÇİNE girer, [data-index] satırının altına değil.
-         Balon: rounded-lg + break-word taşıyan div (padding + hover zemini
-         onda). Dışına
-         konunca buton balonun solunda/altında boşlukta duruyordu.
-         Not: Kick'in sohbeti sanallaştırılmış liste ama yüksekliği DİNAMİK ölçüyor —
-         buton eklenince satır boşluğu tam buton kadar büyüyor (ölçüldü), bindirme olmuyor. */
-      /* SONDAKİ `s` YOK — BİLEREK. Kick iki balon türünü farklı adlandırıyor
-         (canlıda ölçüldü):
-             normal : "… rounded-lg px-2 break-words …"
-             YANIT  : "… rounded-lg px-2 py-1 wrap-break-word …"
-         `"wrap-break-word"` içinde `"break-words"` geçmiyor; eski seçici
-         yanıtlarda boş dönüp `|| msg` yedeğine düşüyordu ve düğme balonun
-         değil SATIRIN içine girip taşıyordu (balon 312px, satır 336px).
-         `break-word` ikisini de yakalıyor; ölçüldü: 21 mesajın 21'inde tam
-         bir eşleşme, fazladan kap yok. */
       var balon = msg.querySelector('div[class*="break-word"][class*="rounded-lg"]') || msg;
-      /* `pk-lp` işareti şart: bu blok mesaj balonunun İÇİNDE duruyor, işaretsiz
-         kalsa "Son Mesajlar" ayıklaması buton yazısını mesaj metni sanardı. */
-      var sira = el('div', 'pk-lp flex flex-col gap-1 mt-1');
+      var sira = el('div', 'pk-lp flex flex-col gap-1.5 mt-1.5');
+
       bulunan.forEach(function (b) {
-        /* Ölçüler UYDURMA DEĞİL: Kick'in sohbet panelindeki kendi küçük butonu canlı
-           ölçüldü → h-8 (32px) · text-sm (14px) · font-semibold (600) · rounded (4px)
-           · gap-2 (8px). Bizimki 28px/12px ile ufak kalıyordu, artık birebir aynı.
-           Renk: bg-secondary-base (PureKick grisi) + Kick'in ince kenarlığı.
-           Genişlik: mesaj balonunca yayılır (sohbet paneli daraldıkça uyar). */
-        var btn = el('button', 'group relative box-border inline-flex items-center justify-center gap-2 ' +
-                               'whitespace-nowrap rounded font-semibold text-sm text-white ' +
-                               'bg-secondary-base hover:brightness-125 border border-outline-decorative ' +
-                               'transition-all betterhover:active:scale-[0.98] h-8 px-3 w-full');
-        btn.style.cssText = 'max-width:100%';
-        var ik = el('span', 'inline-flex shrink-0'); ik.style.cssText = 'width:14px;height:14px';
-        ik.innerHTML = LP_ICONS[b.ad] || LP_ICONS.Kick;
-        var s = ik.querySelector('svg'); if (s) { s.style.width = '14px'; s.style.height = '14px'; }
-        btn.appendChild(ik);
-        btn.appendChild(document.createTextNode(t('pkBaglantiyiOnizle')));   // platform zaten ikondan belli
-        btn.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); lpAc(b); });
-        sira.appendChild(btn);
+        var wrap = el('div', 'flex flex-col gap-1 w-full');
+
+        // Üst buton satırı (Küçük panel)
+        var btnBar = el('div', 'flex items-center gap-1.5 w-full');
+
+        // 1. "Chatte önizleme görüntüle" butonu
+        var inlineBtn = el('button', 'group relative box-border inline-flex items-center justify-between gap-2 ' +
+                                     'whitespace-nowrap rounded font-semibold text-xs text-white ' +
+                                     'bg-surface-base hover:bg-secondary-base border border-outline-decorative ' +
+                                     'transition-all betterhover:active:scale-[0.98] h-7 px-2.5 flex-1 min-w-0');
+        inlineBtn.style.cssText = 'max-width:100%;cursor:pointer';
+
+        var sol = el('div', 'flex items-center gap-1.5 min-w-0 truncate');
+        var ik = el('span', 'inline-flex shrink-0'); ik.style.cssText = 'width:13px;height:13px';
+        ik.innerHTML = LP_ICONS[b.ad] || LP_ICONS.Web;
+        var s = ik.querySelector('svg'); if (s) { s.style.width = '13px'; s.style.height = '13px'; }
+        sol.appendChild(ik);
+
+        var txt = el('span', 'truncate text-xs', t('pkChatOnizle'));
+        sol.appendChild(txt);
+        inlineBtn.appendChild(sol);
+
+        var chevron = el('span', 'text-subtle group-hover:text-white shrink-0 inline-flex items-center');
+        chevron.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px;display:block"><path d="M7 10l5 5 5-5z"/></svg>';
+        inlineBtn.appendChild(chevron);
+        btnBar.appendChild(inlineBtn);
+
+        // 2. Pencerede/Sekmede Aç butonu (ikon butonu)
+        var modalBtn = el('button', 'inline-flex items-center justify-center shrink-0 rounded text-subtle ' +
+                                    'hover:text-white hover:bg-secondary-base border border-outline-decorative transition-all');
+        modalBtn.style.cssText = 'width:28px;height:28px;padding:0;cursor:pointer';
+        modalBtn.title = t('pkBaglantiyiOnizle');
+        modalBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px"><path d="M15 3h6v6M10 14L21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>';
+        modalBtn.addEventListener('click', function (e) {
+          e.preventDefault(); e.stopPropagation();
+          lpAc(b);
+        });
+        btnBar.appendChild(modalBtn);
+        wrap.appendChild(btnBar);
+
+        // Chat içi açılır/kapanır inline panel
+        var inlinePanel = el('div', 'pk-inline-preview hidden rounded overflow-hidden border border-outline-decorative bg-black/40');
+        inlinePanel.style.cssText = 'width:100%;margin-top:2px;transition:all .2s ease-in-out';
+
+        var yuklendi = false;
+        function renderInlineContent() {
+          if (yuklendi) return;
+          yuklendi = true;
+          inlinePanel.innerHTML = '';
+
+          if (b.medya === 'img') {
+            var pImg = el('img', 'w-full rounded');
+            pImg.src = b.url;
+            pImg.loading = 'lazy';
+            pImg.style.cssText = 'max-height:260px;object-fit:contain;display:block;margin:0 auto;background:#111';
+            inlinePanel.appendChild(pImg);
+          } else if (b.medya === 'video') {
+            var pVid = el('video', 'w-full rounded');
+            pVid.src = b.url;
+            pVid.controls = true;
+            pVid.style.cssText = 'max-height:260px;display:block;background:#000';
+            inlinePanel.appendChild(pVid);
+          } else if (b.web) {
+            var wBox = el('div', 'p-2.5 flex flex-col gap-1.5 bg-surface-base');
+            var top = el('div', 'flex items-center gap-2');
+            var fav = el('img', 'rounded shrink-0');
+            fav.src = 'https://www.google.com/s2/favicons?domain=' + encodeURIComponent(b.domain || '') + '&sz=32';
+            fav.style.cssText = 'width:16px;height:16px';
+            top.appendChild(fav);
+            var dName = el('span', 'text-xs font-bold text-white truncate', b.domain || 'Bağlantı');
+            top.appendChild(dName);
+            wBox.appendChild(top);
+
+            var uText = el('div', 'text-[11px] text-subtle truncate', b.url);
+            wBox.appendChild(uText);
+
+            var aGo = el('a', 'text-[11px] text-primary-base hover:underline inline-flex items-center gap-1 mt-0.5', t('pkYeniSekmedeAc') + ' ↗');
+            aGo.href = b.url;
+            aGo.target = '_blank';
+            aGo.rel = 'noopener noreferrer';
+            wBox.appendChild(aGo);
+            inlinePanel.appendChild(wBox);
+          } else {
+            // YouTube, X, Kick, Twitch, Instagram, Reddit, Streamable gömme oynatıcı
+            var box = el('div', 'relative w-full bg-black');
+            box.style.cssText = b.oran ? ('padding-top:' + Math.min(b.oran, 75) + '%') : 'height:240px';
+            var ifr = el('iframe', 'absolute inset-0 w-full h-full border-0');
+            ifr.src = b.url;
+            ifr.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture');
+            ifr.setAttribute('referrerpolicy', 'origin');
+            ifr.setAttribute('loading', 'lazy');
+            box.appendChild(ifr);
+            inlinePanel.appendChild(box);
+          }
+        }
+
+        inlineBtn.addEventListener('click', function (e) {
+          e.preventDefault(); e.stopPropagation();
+          var gizli = inlinePanel.classList.contains('hidden');
+          if (gizli) {
+            renderInlineContent();
+            inlinePanel.classList.remove('hidden');
+            txt.textContent = t('pkChatOnizleKapat');
+            chevron.style.transform = 'rotate(180deg)';
+          } else {
+            inlinePanel.classList.add('hidden');
+            txt.textContent = t('pkChatOnizle');
+            chevron.style.transform = 'rotate(0deg)';
+          }
+        });
+
+        wrap.appendChild(inlinePanel);
+        sira.appendChild(wrap);
       });
+
       balon.appendChild(sira);   // balonun ICINE
     } catch (e) {}
   }
