@@ -4,6 +4,17 @@ Bu doküman, PureKick eklentisinin tüm sürümlerindeki yenilikleri, hata düze
 
 ---
 
+## 🚀 [10.19.4] - 2026-09-05 (Canlı Profil Kartı Koleksiyon Arkaplanı & Holo Efekti Düzeltmesi)
+
+### 🎨 Kritik Görsel & Tema Onarımı
+- **🎴 Koleksiyon & Özel Kart Arkaplanı Canlı Karta Doğrudan Bağlandı:** Ayarlarda seçilen koleksiyon kartının canlı Kick profil kartında görünmemesi sorunu çözüldü.
+  - Arka plan görseli (`background-image`) dış taşıyıcı yerine doğrudan kullanıcının tıkladığı asıl Kick profil kartına (`card`) uygulandı.
+  - Kick'in kartın üst yarısını örten varsayılan banner görseli gizlendi ve içteki tüm opak gri/siyah alt bloklar şeffaflaştırılarak arkadaki kart illüstrasyonunun baştan aşağı net görünmesi sağlandı.
+  - Modüller (bilgi, kullanıcı notları, mesajlar) yarı saydam koyu cam efekti (`backdrop-filter: blur`) ile tasarlanarak hem okunabilirlik hem de kart görselinin güzelliği korundu.
+- **⚡ Canlı Holo Efekti & Çerçeve Parıltısı:** Seçilen holo efekti (`⚡ Pikachu Spark` vb.) doğrudan kartın kendi gövdesine eklenerek kartın etrafındaki altın sarısı neon parıltısı ve animasyon aktif hale getirildi.
+
+---
+
 ## 🚀 [10.19.3] - 2026-09-05 (Profil Kartı: Bilgi, Sohbet & Kullanıcı Notları Onarımı)
 
 ### 🛠️ Kritik Düzeltmeler

@@ -2894,14 +2894,12 @@
   function injectProfilKartiTemasi(card, username) {
     if (!card || !username) return;
     var kap = tasinacakKap(card) || card;
-    if (kap.getAttribute('data-pk-holo-kart')) return;
-    kap.setAttribute('data-pk-holo-kart', '1');
 
     chrome.storage.local.get(['pkProfilKartlari', 'settings'], function (res) {
       var s = (res && res.settings) || settings || {};
       var profiller = (res && res.pkProfilKartlari) || {};
-      var uKey = username.toLowerCase();
-      var benKey = (s.mentionAd || localStorage.getItem('pk_user_name') || '').toLowerCase();
+      var uKey = String(username).toLowerCase().trim().replace(/^@/, '');
+      var benKey = String(s.mentionAd || localStorage.getItem('pk_user_name') || '').toLowerCase().trim().replace(/^@/, '');
 
       var profil = profiller[uKey] || (benKey && uKey === benKey ? s : null) || s;
       
@@ -2916,7 +2914,7 @@
         bgUrl = yerelBase64;
       } else if (kartTipi === 'ozel' && ozelUrl) {
         bgUrl = ozelUrl;
-      } else if (kartTipi === 'koleksiyon' && dosyaAdi) {
+      } else if (dosyaAdi) {
         try {
           bgUrl = chrome.runtime.getURL('profil-kartlari/' + dosyaAdi);
         } catch (e) {
@@ -2924,30 +2922,64 @@
         }
       }
 
-      // İçteki opak gri Kick zeminlerini şeffaflaştır (2. Madde Düzeltmesi)
-      card.style.setProperty('background', 'transparent', 'important');
-      card.style.setProperty('background-color', 'transparent', 'important');
-      var icBloklar = card.querySelectorAll('.bg-surface-base, .bg-surface-lowest, .bg-surface-lower, .bg-surface-highest, [class*="bg-surface"]');
-      for (var bi = 0; bi < icBloklar.length; bi++) {
-        icBloklar[bi].style.setProperty('background-color', 'rgba(15, 23, 42, 0.45)', 'important');
-        icBloklar[bi].style.setProperty('backdrop-filter', 'blur(3px)', 'important');
-      }
+      var imza = uKey + '|' + dosyaAdi + '|' + holoEfekt + '|' + kartTipi;
+      if (card.getAttribute('data-pk-tema-imza') === imza) return;
+      card.setAttribute('data-pk-tema-imza', imza);
 
       if (bgUrl) {
-        kap.style.setProperty('background-image', 'linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.70)), url("' + bgUrl + '")', 'important');
-        kap.style.setProperty('background-size', 'cover', 'important');
-        kap.style.setProperty('background-position', 'center', 'important');
-        kap.style.setProperty('border-radius', '12px', 'important');
+        // 1. Arka planı hem doğrudan KARTIN KENDİSİNE hem de dış kaplamaya uygula
+        var bgCss = 'linear-gradient(rgba(15, 23, 42, 0.45), rgba(15, 23, 42, 0.75)), url("' + bgUrl + '")';
+        card.style.setProperty('background-image', bgCss, 'important');
+        card.style.setProperty('background-size', 'cover', 'important');
+        card.style.setProperty('background-position', 'center', 'important');
+        card.style.setProperty('background-repeat', 'no-repeat', 'important');
+        card.style.setProperty('border-radius', '16px', 'important');
+        card.style.setProperty('overflow', 'hidden', 'important');
+
+        if (kap && kap !== card) {
+          kap.style.setProperty('border-radius', '16px', 'important');
+          kap.style.setProperty('overflow', 'visible', 'important');
+        }
+
+        // 2. Kick'in varsayılan banner görselini gizle (arkadaki koleksiyon kartı engellenmesin)
+        var bannerImg = card.querySelector('img[src*="banner" i], [class*="banner"] img, div.relative > img:not([alt*="avatar" i]):not([class*="avatar" i])');
+        if (bannerImg) {
+          bannerImg.style.setProperty('opacity', '0', 'important');
+          bannerImg.style.setProperty('pointer-events', 'none', 'important');
+          if (bannerImg.parentElement) bannerImg.parentElement.style.setProperty('background', 'transparent', 'important');
+        }
+
+        // 3. Kartın içindeki tüm opak gri/siyah zeminleri saydamlaştır
+        var icBloklar = card.querySelectorAll('.bg-surface-base, .bg-surface-lowest, .bg-surface-lower, .bg-surface-highest, [class*="bg-surface"], div.p-4');
+        for (var bi = 0; bi < icBloklar.length; bi++) {
+          icBloklar[bi].style.setProperty('background', 'transparent', 'important');
+          icBloklar[bi].style.setProperty('background-color', 'transparent', 'important');
+        }
+
+        // 4. PureKick modüllerini (bilgi, notlar, mesajlar) yarı saydam şık cam kart yap
+        var pkModuller = card.querySelectorAll('.pk-bilgi, .pk-not, .pk-sekme-kap');
+        for (var pi = 0; pi < pkModuller.length; pi++) {
+          pkModuller[pi].style.setProperty('background-color', 'rgba(15, 23, 42, 0.65)', 'important');
+          pkModuller[pi].style.setProperty('backdrop-filter', 'blur(6px)', 'important');
+          pkModuller[pi].style.setProperty('border-radius', '10px', 'important');
+          pkModuller[pi].style.setProperty('padding', '8px', 'important');
+        }
       }
 
-      // Kartın içindeki Kullanıcı Adına Canlı İsim Efektini Uygula
-      var nameEl = card.querySelector('a.select-text.font-semibold, [class*="font-semibold"], h4, [class*="username"]');
+      // 5. Kartın etrafına Holo Parıltısını ve Çerçeve Efektini Ekle
+      if (holoEfekt && holoEfekt !== 'varsayilan' && holoEfekt !== 'yok') {
+        // Önceki holo sınıflarını temizle
+        var eskiler = Array.from(card.classList).filter(function (c) { return c.indexOf('pk-holo-') === 0; });
+        eskiler.forEach(function (c) { card.classList.remove(c); if (kap) kap.classList.remove(c); });
+        
+        card.classList.add('pk-holo-' + holoEfekt);
+        if (kap && kap !== card) kap.classList.add('pk-holo-' + holoEfekt);
+      }
+
+      // 6. Kartın içindeki Kullanıcı Adına Canlı İsim Efektini Uygula
+      var nameEl = card.querySelector('a.select-text.font-semibold, a[href^="/"].select-text, a[href^="/"], [class*="username"], h4');
       if (nameEl && holoEfekt && holoEfekt !== 'varsayilan' && holoEfekt !== 'yok') {
         nameEl.classList.add('pk-chat-holo-name', 'pk-name-' + holoEfekt);
-      }
-
-      if (holoEfekt && holoEfekt !== 'varsayilan' && holoEfekt !== 'yok') {
-        kap.classList.add('pk-holo-' + holoEfekt);
       }
     });
   }
