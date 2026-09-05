@@ -3327,6 +3327,34 @@
     /* Sayaç/kayıt/bahsedilme buradan besleniyor. `settings.modGunluk`
        kapısının ÜSTÜNDE: moderasyon günlüğü kapalıyken de istatistik akmalı. */
     if (d.ad === 'ChatMessageEvent') { try { scOlaydanMesaj(d); } catch (e) {} }
+
+    // 10.19 — Canlı Soket Bağış, Hediye Sub ve Kicks Olayları
+    if (d.ad === 'GiftedSubscriptionsEvent') {
+      try {
+        var adet = d.adet || 1;
+        pkBagisKaydet(d.kim, 'Gift Sub', adet + ' Hediye Sub', adet, 'Topluluğa ' + adet + ' adet hediye abonelik');
+      } catch (e) {}
+      return;
+    }
+    if (d.ad === 'SubscriptionEvent') {
+      try {
+        var sure = (d.ay || 1) + '. Ay';
+        pkBagisKaydet(d.kim, 'Abone', sure + ' Abone', 1, d.kim + ' kanala abone oldu (' + sure + ')');
+      } catch (e) {}
+      return;
+    }
+    if (d.ad === 'LivestreamReactionEvent' && d.kicks > 0) {
+      try {
+        pkBagisKaydet(d.kim, 'Kicks', d.kicks + ' Kicks', d.kicks, d.kicks + ' Kicks desteği');
+      } catch (e) {}
+      return;
+    }
+    if (d.ad === 'ChatMessageEvent' && d.kicks > 0) {
+      try {
+        pkBagisKaydet(d.kim, 'Kicks', d.kicks + ' Kicks', d.kicks, d.kicks + ' Kicks gönderdi');
+      } catch (e) {}
+    }
+
     /* Ban/susturma/ban kaldırma/temizleme sohbet akışına yazılır. Kick
        bunları yalnız modlara gösteriyor, normal izleyici hiç görmüyordu.
        `settings.modGunluk` kapısının ÜSTÜNDE: günlük kapalıyken de görünsün. */
@@ -4182,9 +4210,22 @@
       /* Adlar CÜMLENİN İÇİNDE tıklanabilir ve renkli. Eskiden hedef ad ayrıca
          başa da ekleniyordu: aynı ad iki kez görünüyordu. */
       modAdBol(modSatirYazi(x), modAdaylar(x)).forEach(function (p) {
-        /* ROZETSİZ: ad cümlenin içinde, rozet satırı kaydırıyor. */
-        if (p.ad) sag.appendChild(pkAdOgesi(p.ad, null, p.renk || null, true));
-        else sag.appendChild(document.createTextNode(p.m));
+        if (p.ad) {
+          var adEl = pkAdOgesi(p.ad, null, p.renk || null, true);
+          // Moderasyon yapan kişi: Mod ise 🛡️, Yayıncı ise 👑, Bot ise 🤖
+          if (x.yapan && p.ad.toLowerCase() === x.yapan.toLowerCase()) {
+            var k = p.ad.toLowerCase();
+            var rol = kisiRol[k];
+            var rolIkon = '🛡️';
+            if (rol === 'broadcaster' || (scKanal && scKanal.toLowerCase() === k)) rolIkon = '👑';
+            else if (rol === 'bot' || k === 'aimod') rolIkon = '🤖';
+            var rTag = el('span', 'font-black mr-1 text-xs', rolIkon);
+            adEl.insertBefore(rTag, adEl.firstChild);
+          }
+          sag.appendChild(adEl);
+        } else {
+          sag.appendChild(document.createTextNode(p.m));
+        }
       });
       if (x.tur === 'sil' && x.metin) pkGosterAcKapa(sag, x.metin);
       r.appendChild(sag);
@@ -4212,16 +4253,23 @@
     liste.appendChild(el('div', 'text-xs text-subtle', t('pkSonucSayisiN', [String(adlar.length)])));
     adlar.forEach(function (k) {
       var bitis = aktifSusturma[k];
-      var r = el('div', 'bg-surface-highest rounded flex flex-col gap-0.5');
-      r.style.cssText = 'padding:8px 10px';
+      var r = el('div', 'bg-surface-highest rounded flex flex-col gap-1 border border-red-500/20');
+      r.style.cssText = 'padding:10px 12px; margin-bottom:4px; border-left:3px solid #ef4444;';
       var ust = el('div', 'flex items-center justify-between gap-2');
-      ust.appendChild(pkAdOgesi(susturmaAdi[k] || k, null, null, true));
-      var kalan = el('span', 'text-sm font-bold text-primary-base shrink-0', pkSusturmaKalan(bitis - Date.now()));
+      
+      var adKapsayici = el('div', 'flex items-center gap-1.5');
+      var cezaIkon = el('span', 'text-xs font-black text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/30', '🚫 Susturuldu');
+      adKapsayici.appendChild(cezaIkon);
+      var adEl = pkAdOgesi(susturmaAdi[k] || k, 'text-base font-black', MOD_RENK_CEZA, true);
+      adKapsayici.appendChild(adEl);
+      ust.appendChild(adKapsayici);
+
+      var kalan = el('span', 'text-sm font-black text-primary-base shrink-0 bg-primary-base/10 px-2 py-0.5 rounded', pkSusturmaKalan(bitis - Date.now()));
       kalan.setAttribute('data-pk-kalan', String(bitis));      // sayaç bunu günceller
       ust.appendChild(kalan);
       r.appendChild(ust);
-      r.appendChild(el('div', 'text-sm', t('pkZamanAsimi')));
-      r.appendChild(el('div', 'text-xs text-subtle', t('pkSusturmaBitis', [pkTarihSaat(bitis)])));
+      r.appendChild(el('div', 'text-xs text-gray-300 font-medium', t('pkZamanAsimi')));
+      r.appendChild(el('div', 'text-[11px] text-subtle', t('pkSusturmaBitis', [pkTarihSaat(bitis)])));
       liste.appendChild(r);
     });
   }
@@ -19298,6 +19346,62 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
       });
     });
 
+    function cizGrid(str, forceMod) {
+      var grid = modal.querySelector('#pk-ms-grid');
+      grid.innerHTML = '';
+      var kanallar = str.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+      if (!kanallar.length) kanallar = [currentKanal || 'kick'];
+      
+      var count = Math.min(6, kanallar.length);
+      var mod = forceMod || (count === 1 ? '1' : (count === 2 ? '2' : (count <= 4 ? '4' : '6')));
+
+      if (mod === '1') {
+        grid.style.gridTemplateColumns = '1fr';
+        grid.style.gridTemplateRows = '1fr';
+      } else if (mod === '2') {
+        grid.style.gridTemplateColumns = '1fr 1fr';
+        grid.style.gridTemplateRows = '1fr';
+      } else if (mod === '4') {
+        grid.style.gridTemplateColumns = '1fr 1fr';
+        grid.style.gridTemplateRows = '1fr 1fr';
+      } else if (mod === '6') {
+        grid.style.gridTemplateColumns = '1fr 1fr 1fr';
+        grid.style.gridTemplateRows = '1fr 1fr';
+      }
+
+      kanallar.slice(0, 6).forEach(function (k) {
+        var box = document.createElement('div');
+        box.style.cssText = 'position:relative;background:#000;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.08);';
+        box.innerHTML = '<iframe src="https://player.kick.com/' + encodeURIComponent(k) + '?muted=true" style="width:100%;height:100%;border:none;" allowfullscreen></iframe>' +
+          '<div style="position:absolute;top:6px;left:6px;background:rgba(0,0,0,.7);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;color:#53fc18;">' + esc(k) + '</div>' +
+          '<button class="pk-ms-sil" style="position:absolute;top:6px;right:6px;background:rgba(0,0,0,.7);border:none;color:#ef4444;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;cursor:pointer;">✕</button>';
+        
+        box.querySelector('.pk-ms-sil').addEventListener('click', function () {
+          var inp = modal.querySelector('#pk-ms-input');
+          var arr = inp.value.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+          arr = arr.filter(function (x) { return x.toLowerCase() !== k.toLowerCase(); });
+          inp.value = arr.join(', ');
+          cizGrid(inp.value);
+        });
+
+        grid.appendChild(box);
+      });
+    }
+
+    modal.querySelector('#pk-ms-yukle').addEventListener('click', function () {
+      cizGrid(modal.querySelector('#pk-ms-input').value);
+    });
+    modal.querySelector('#pk-ms-grid-1').addEventListener('click', function () { cizGrid(modal.querySelector('#pk-ms-input').value, '1'); });
+    modal.querySelector('#pk-ms-grid-2').addEventListener('click', function () { cizGrid(modal.querySelector('#pk-ms-input').value, '2'); });
+    modal.querySelector('#pk-ms-grid-4').addEventListener('click', function () { cizGrid(modal.querySelector('#pk-ms-input').value, '4'); });
+    modal.querySelector('#pk-ms-grid-6').addEventListener('click', function () { cizGrid(modal.querySelector('#pk-ms-input').value, '6'); });
+    modal.querySelector('#pk-ms-kapat').addEventListener('click', function () {
+      modal.remove();
+    });
+
+    cizGrid(currentKanal);
+  }
+
   /* ══════════════════════════════════════════════════════════════════════
    * 18. CANLI BAĞIŞ, KICKS & ABONELİK TAKİPÇİSİ (Donation, Kicks, Subs Audit)
    * ══════════════════════════════════════════════════════════════════════ */
@@ -19359,8 +19463,31 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     if (pkBagisVeri.gecmis.length > 80) pkBagisVeri.gecmis.shift();
   }
 
-  function pkBagisAnalizEt(text) {
-    if (!text || text.length > 350) return;
+  function pkBagisAnalizEt(input) {
+    if (!input) return;
+    var text = '';
+    
+    // DOM Elementi geldiyse doğrudan element içerisindeki semantik verileri tara
+    if (typeof input === 'object' && input.nodeType === 1) {
+      // Kicks ikonu veya kicks miktarı elementi var mı?
+      var kicksEl = input.querySelector('[class*="kicks"], [data-kicks], img[alt*="Kicks" i], img[src*="kicks" i]');
+      var userEl = input.querySelector('button.font-bold, a[href^="/"], [class*="username"]');
+      var uAd = userEl ? (userEl.textContent || '').trim() : '';
+
+      if (kicksEl && uAd) {
+        var rawK = (kicksEl.textContent || input.textContent || '').match(/([0-9.,]+)\s*Kicks/i);
+        if (rawK) {
+          var kVal = parseInt(rawK[1].replace(/,/g, ''), 10) || 100;
+          pkBagisKaydet(uAd, 'Kicks', kVal.toLocaleString('tr-TR') + ' Kicks', kVal, kVal + ' Kicks desteği');
+          return;
+        }
+      }
+      text = (input.textContent || '').slice(0, 400);
+    } else {
+      text = String(input || '').slice(0, 400);
+    }
+
+    if (!text || text.length < 3) return;
 
     // 1. Hediye Abonelik Toplu (Gift Subs)
     var mGift = text.match(/([A-Za-z0-9_]+)\s+(?:gifted|hediye\s+etti|gönderdi)\s+(\d+)\s+(?:subscriptions|subs?|abonelik)/i);
@@ -19418,61 +19545,6 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     }
   }
 
-    function cizGrid(str, forceMod) {
-      var grid = modal.querySelector('#pk-ms-grid');
-      grid.innerHTML = '';
-      var kanallar = str.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
-      if (!kanallar.length) kanallar = [currentKanal || 'kick'];
-      
-      var count = Math.min(6, kanallar.length);
-      var mod = forceMod || (count === 1 ? '1' : (count === 2 ? '2' : (count <= 4 ? '4' : '6')));
-
-      if (mod === '1') {
-        grid.style.gridTemplateColumns = '1fr';
-        grid.style.gridTemplateRows = '1fr';
-      } else if (mod === '2') {
-        grid.style.gridTemplateColumns = '1fr 1fr';
-        grid.style.gridTemplateRows = '1fr';
-      } else if (mod === '4') {
-        grid.style.gridTemplateColumns = '1fr 1fr';
-        grid.style.gridTemplateRows = '1fr 1fr';
-      } else if (mod === '6') {
-        grid.style.gridTemplateColumns = '1fr 1fr 1fr';
-        grid.style.gridTemplateRows = '1fr 1fr';
-      }
-
-      kanallar.slice(0, 6).forEach(function (k) {
-        var box = document.createElement('div');
-        box.style.cssText = 'position:relative;background:#000;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.08);';
-        box.innerHTML = '<iframe src="https://player.kick.com/' + encodeURIComponent(k) + '?muted=true" style="width:100%;height:100%;border:none;" allowfullscreen></iframe>' +
-          '<div style="position:absolute;top:6px;left:6px;background:rgba(0,0,0,.7);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;color:#53fc18;">' + esc(k) + '</div>' +
-          '<button class="pk-ms-sil" style="position:absolute;top:6px;right:6px;background:rgba(0,0,0,.7);border:none;color:#ef4444;padding:2px 6px;border-radius:4px;font-size:11px;font-weight:900;cursor:pointer;">✕</button>';
-        
-        box.querySelector('.pk-ms-sil').addEventListener('click', function () {
-          var inp = modal.querySelector('#pk-ms-input');
-          var arr = inp.value.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
-          arr = arr.filter(function (x) { return x.toLowerCase() !== k.toLowerCase(); });
-          inp.value = arr.join(', ');
-          cizGrid(inp.value);
-        });
-
-        grid.appendChild(box);
-      });
-    }
-
-    modal.querySelector('#pk-ms-yukle').addEventListener('click', function () {
-      cizGrid(modal.querySelector('#pk-ms-input').value);
-    });
-    modal.querySelector('#pk-ms-grid-1').addEventListener('click', function () { cizGrid(modal.querySelector('#pk-ms-input').value, '1'); });
-    modal.querySelector('#pk-ms-grid-2').addEventListener('click', function () { cizGrid(modal.querySelector('#pk-ms-input').value, '2'); });
-    modal.querySelector('#pk-ms-grid-4').addEventListener('click', function () { cizGrid(modal.querySelector('#pk-ms-input').value, '4'); });
-    modal.querySelector('#pk-ms-grid-6').addEventListener('click', function () { cizGrid(modal.querySelector('#pk-ms-input').value, '6'); });
-    modal.querySelector('#pk-ms-kapat').addEventListener('click', function () {
-      modal.remove();
-    });
-
-    cizGrid(currentKanal);
-  }
 
   /* ----------------------------------------------------------------------
    * 6. SOHBET METİN OKUMA (TTS - Text-to-Speech)
@@ -20529,84 +20601,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
   /* ══════════════════════════════════════════════════════════════════════
    * 20. BAĞIŞ, KICKS, HEDİYE ABONELİK & BLERP İSTATİSTİK MOTORU
    * ══════════════════════════════════════════════════════════════════════ */
-  var pkBagisVeri = {
-    toplamGiftSub: 0,
-    toplamKicks: 0,
-    toplamBlerp: 0,
-    toplamTip: 0,
-    toplamRaid: 0,
-    bagiscilar: {},
-    gecmis: []
-  };
-
-  function pkBagisKaydet(user, tip, miktarStr, sayisalMiktar, detay) {
-    if (!user) user = 'Anonim';
-    user = user.trim().replace(/^@/, '');
-    var d = new Date();
-    var zaman = d.getHours().toString().padStart(2, '0') + ':' + d.getMinutes().toString().padStart(2, '0');
-
-    if (!pkBagisVeri.bagiscilar[user]) {
-      pkBagisVeri.bagiscilar[user] = { giftSub: 0, kicks: 0, blerp: 0, sonTs: Date.now() };
-    }
-    var bUser = pkBagisVeri.bagiscilar[user];
-    bUser.sonTs = Date.now();
-
-    if (tip === 'Gift Sub') {
-      pkBagisVeri.toplamGiftSub += sayisalMiktar;
-      bUser.giftSub += sayisalMiktar;
-    } else if (tip === 'Kicks') {
-      pkBagisVeri.toplamKicks += sayisalMiktar;
-      bUser.kicks += sayisalMiktar;
-    } else if (tip === 'Blerp') {
-      pkBagisVeri.toplamBlerp += sayisalMiktar;
-      bUser.blerp += sayisalMiktar;
-    } else if (tip === 'Raid') {
-      pkBagisVeri.toplamRaid += sayisalMiktar;
-    }
-
-    pkBagisVeri.gecmis.push({ zaman: zaman, user: user, tip: tip, miktar: miktarStr, detay: detay, ts: Date.now() });
-    if (pkBagisVeri.gecmis.length > 50) pkBagisVeri.gecmis.shift();
-  }
-
-  function pkBagisAnalizEt(text) {
-    if (!text || text.length > 300) return; /* çok uzun metinleri atla — performans */
-
-    // 1. Hediye Abonelik
-    var mGift = text.match(/([A-Za-z0-9_]+)\s+(?:gifted|hediye\s+etti|gönderdi)\s+(\d+)\s+(?:subscriptions|subs?|abonelik)/i);
-    if (mGift) {
-      pkBagisKaydet(mGift[1], 'Gift Sub', mGift[2] + ' Sub', parseInt(mGift[2], 10), 'Topluluğa ' + mGift[2] + ' hediye abonelik');
-      return;
-    }
-    var mSingleGift = text.match(/([A-Za-z0-9_]+)\s+gifted a subscription to\s+([A-Za-z0-9_]+)/i);
-    if (mSingleGift) {
-      pkBagisKaydet(mSingleGift[1], 'Gift Sub', '1 Sub', 1, '@' + mSingleGift[2] + ' adlı kullanıcıya abonelik');
-      return;
-    }
-
-    // 2. Kicks Bağışı
-    var mKicks = text.match(/([A-Za-z0-9_]+)\s+(?:sent|donated|bağışladı|gönderdi)\s+(\d+)\s+Kicks/i) || text.match(/(\d+)\s+Kicks/i);
-    if (mKicks) {
-      var u = mKicks[1] && !/^\d+$/.test(mKicks[1]) ? mKicks[1] : 'İzleyici';
-      var kMiktar = parseInt(mKicks[2] || mKicks[1], 10) || 100;
-      pkBagisKaydet(u, 'Kicks', kMiktar + ' Kicks', kMiktar, kMiktar + ' Kicks desteği');
-      return;
-    }
-
-    // 3. Blerp / Sesli Bağış
-    if (/Blerp|Sound\s*Alert/i.test(text)) {
-      var mBlerpUser = text.match(/([A-Za-z0-9_]+)\s+(?:played|çaldı|kullandı|sent)\s+Blerp/i) || text.match(/Blerp:\s*([A-Za-z0-9_]+)/i);
-      var bUser = mBlerpUser ? mBlerpUser[1] : 'İzleyici';
-      pkBagisKaydet(bUser, 'Blerp', '1 Blerp', 1, 'Sesli uyarı / Blerp çalındı');
-      return;
-    }
-
-    // 4. Raid Bildirimi
-    var mRaid = text.match(/([A-Za-z0-9_]+)\s+(?:is raiding with|raided with|ile raid yaptı)\s+(\d+)\s+(?:viewers|izleyici)/i);
-    if (mRaid) {
-      pkBagisKaydet(mRaid[1], 'Raid', mRaid[2] + ' İzleyici', parseInt(mRaid[2], 10), mRaid[1] + ' kanalından ' + mRaid[2] + ' kişilik raid');
-      return;
-    }
-  }
+  // Bağış analizleri yukarıdaki tek ve yetkili pkBagisAnalizEt üzerinden yürütülür.
 
   // Sohbet akarken mesajları Hype ve Bağış analizine besle
   var pkHypeObs = new MutationObserver(function (mutations) {
@@ -20614,10 +20609,11 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
       var added = mutations[m].addedNodes;
       for (var n = 0; n < added.length; n++) {
         if (added[n].nodeType === 1) {
-          var t = (added[n].textContent || '').slice(0, 300); /* max 300 char — bellek koruması */
+          var elNode = added[n];
+          var t = (elNode.textContent || '').slice(0, 300); /* max 300 char — bellek koruması */
           if (t.length > 2) {
             if (settings.hypeOlcer !== false) pkSohbetHypeAnalizEt(t);
-            pkBagisAnalizEt(t);
+            pkBagisAnalizEt(elNode); // Doğrudan elementin zengin semantiği analiz edilir
             pkOtoYanitKontrolEt(t);
           }
         }

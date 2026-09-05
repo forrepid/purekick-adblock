@@ -499,6 +499,9 @@ function pkLog() {
              ad === 'ChatMessageSentEvent' ||
              ad === 'UserBannedEvent' || ad === 'UserUnbannedEvent' ||
              ad === 'ChatroomClearEvent' ||
+             ad === 'GiftedSubscriptionsEvent' || ad === 'SubscriptionEvent' ||
+             ad === 'LuckyUsersWhoGotGiftSubscriptionsEvent' || ad === 'LivestreamReactionEvent' ||
+             ad === 'StreamHostEvent' ||
              /* Yayın bitti: toplanan sohbet verisi bu olayda silinir.
                 Kick bunu kanal kanalında yayınlıyor; `connection.bind`
                 bağlantıdaki TÜM mesajları gördüğü için buraya da düşüyor. */
@@ -544,33 +547,30 @@ function pkLog() {
             y.kim = (d.sender && d.sender.username) || '';
             y.metin = String(d.content || '').slice(0, 300);
             y.ts = Date.parse(d.created_at) || Date.now();
-            /* Rol: Kick'in KENDİ rozet listesinden okunuyor. DOM'dan rol
-               çıkarmak dile ve tema değişikliğine bağımlı; burada tür alanı
-               sabit ve İngilizce. Yalnız EN YÜKSEK rol geçiriliyor. */
             y.rol = enYuksekRol(d.sender && d.sender.identity && d.sender.identity.badges);
-            /* İsim rengi: Kick sohbette ismi bu renkle basıyor (satır içi
-               `style="color: …"`). Bindirme aynı rengi kullansın diye
-               kaynağından geçiriyoruz — DOM'dan kazımak yarışa açık
-               (mesaj henüz basılmamış olabiliyor) ve işaretleme değişince
-               sessizce boşa düşerdi. */
             y.renk = (d.sender && d.sender.identity && d.sender.identity.color) || '';
-            /* Yanıt mı: Kick alıntılanan mesajı metadata'da gönderiyor. */
             y.yanit = !!(d.metadata && (d.metadata.original_message || d.metadata.original_sender));
+            y.kicks = (d.metadata && d.metadata.kicks) || d.kicks || 0;
+            y.tip = d.type || '';
+          } else if (ad === 'GiftedSubscriptionsEvent') {
+            y.kim = d.gifter_username || (d.gifter && d.gifter.username) || 'Topluluk Üyesi';
+            var alicilar = Array.isArray(d.gifted_usernames) ? d.gifted_usernames : [];
+            y.adet = alicilar.length || parseInt(d.count || 1, 10);
+            y.alicilar = alicilar.slice(0, 10);
+            y.ts = Date.parse(d.created_at) || Date.now();
+          } else if (ad === 'SubscriptionEvent') {
+            y.kim = d.username || (d.user && d.user.username) || 'Abone';
+            y.ay = d.months || d.duration || 1;
+            y.ts = Date.parse(d.created_at) || Date.now();
+          } else if (ad === 'LivestreamReactionEvent') {
+            y.kim = d.username || 'İzleyici';
+            y.reaksiyon = d.reaction || '';
+            y.kicks = parseInt(d.kicks || d.amount || 0, 10);
+            y.ts = Date.now();
           } else if (ad === 'MessageDeletedEvent') {
             y.id = (d.message && d.message.id) || d.id || '';
-            /* Kick SİLENİ bildirmiyor: ban olayındaki `banned_by`ın burada
-               karşılığı yok. Verdiği tek ipucu yapay zekâ moderasyonu bayrağı.
-               Alan hiç gelmemişse `null` bırakılıyor — "bilmiyoruz" ile
-               "hayır" aynı şey değil; arayüz ikisinde de kimseyi suçlamıyor.
-               Bu alan camelCase geliyor; şema snake_case'e dönerse diye
-               ikisi de okunuyor. */
             var om = (d.aiModerated != null) ? d.aiModerated : d.ai_moderated;
             y.otoMod = (om == null) ? null : !!om;
-            /* ÇİĞNENEN KURAL(LAR) — Kick yalnız yapay zekâ silmelerinde
-               gönderiyor ("bullying" gibi). `aiModerated` ile aynı camelCase
-               tuhaflığı burada da var, ikisi de okunuyor. Dizi olmayan ya da
-               metin olmayan değerler eleniyor; dört taneyle sınırlı, sohbet
-               satırına sığmayacak kadar uzun etiket dizisi olmasın. */
             var kr = d.violatedRules || d.violated_rules;
             y.kural = Array.isArray(kr)
               ? kr.filter(function (x) { return typeof x === 'string' && x; }).slice(0, 4)
@@ -581,8 +581,6 @@ function pkLog() {
                       (d.unbanned_by && d.unbanned_by.username) || '';
             y.kalici = !!d.permanent;
             y.bitis = d.expires_at || '';
-            /* 10.5 — sebep ve itiraz durumu. Kick bu alanları her olayda
-               göndermiyor; yoksa boş geçilir, arayüz eksikliği tolere ediyor. */
             y.sebep = String(d.reason || (d.ban && d.ban.reason) || '').slice(0, 200);
             y.itiraz = !!(d.unban_request || d.has_unban_request);
             y.ts = Date.now();

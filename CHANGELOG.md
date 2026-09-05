@@ -4,6 +4,21 @@ Bu doküman, PureKick eklentisinin tüm sürümlerindeki yenilikleri, hata düze
 
 ---
 
+## 🚀 [10.19.1] - 2026-09-05 (Susturmalar, Moderatör İkonları & Canlı Bağış/Kicks Düzeltmesi)
+
+### 🛠️ Kritik Düzeltmeler & Geliştirmeler
+- **🚫 Susturmalar Sekmesi Kullanıcı İsmi:** Susturulan kullanıcı ismi soluk metinden kurtarılıp canlı kırmızı ceza rozeti (`MOD_RENK_CEZA`), büyük kalın yazı ve `🚫 Susturuldu` etiketiyle belirginleştirildi.
+- **🛡️👑🤖 Moderasyon Yapan Kişi İkonları:** Moderasyon ve silinen mesajlar listesinde işlemi yapan kişinin kimliğine göre özel rol simgesi eklendi:
+  - Moderatör ise: `🛡️` simgesi
+  - Kanal yayıncısı ise: `👑` simgesi
+  - Bot / AiMod ise: `🤖` simgesi
+- **💰 Bağış & Kicks İstatistik Motoru Tamamen Onarıldı:**
+  - **Pusher WebSocket Entegrasyonu:** `GiftedSubscriptionsEvent`, `SubscriptionEvent`, `LuckyUsersWhoGotGiftSubscriptionsEvent` ve `LivestreamReactionEvent` (Kicks) olayları doğrudan Kick'in yerel soketinden dinlenerek izole dünyaya anlık aktarılmaya başlandı.
+  - **Kapsam Çakışması Giderildi:** Dosya içinde closure içinde kalarak ezilen ve listenin boş kalmasına neden olan mükerrer `pkBagisVeri` bloğu temizlendi; veriler küresel alana taşındı.
+  - **Zengin DOM Algılama:** Kick sohbetinde Kicks rozetleri, hediye kartları ve sistem mesajları doğrudan DOM element semantiği taranarak eksiksiz listeleniyor.
+
+---
+
 ## 🚀 [10.19.0] - 2026-09-01 (Mega Fonksiyonel Güncelleme)
 
 ### ✨ Yeni Fonksiyonel Özellikler
