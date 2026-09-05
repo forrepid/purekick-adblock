@@ -4,6 +4,16 @@ Bu doküman, PureKick eklentisinin tüm sürümlerindeki yenilikleri, hata düze
 
 ---
 
+## 🚀 [10.19.5] - 2026-09-05 (Anında Canlı Efekt Uygulama, Arkaplan Maskeleme & Arayüz Çakışma Düzeltmesi)
+
+### 🎨 Kritik Görsel & Canlı Tetikleme Düzeltmeleri
+- **⚡ Sayfa Yenilemesiz (F5 Olmadan) Canlı Uygulama:** Ayarlar panelinde Koleksiyon Kartı, Yerel Arkaplan, Özel URL veya Holo İsim Efekti seçildiğinde veya değiştirildiğinde sayfa yenileme zorunluluğu ortadan kaldırıldı; canlı sohbetteki isimler ve açık profil kartı anında güncelleniyor.
+- **🎴 Profil Kartı Arkaplan Maskeleme Onarımı:** Dış taşıyıcı kabın (`kap`) ve Kick'in ara sarmalayıcılarının opak `rgb(23,26,28)` rengiyle temayı örtmesi engellendi; şeffaflık ve cam parlaklığı dinamik olarak sağlandı.
+- **📺 Üst Üste Binme & Video Başlık Çakışması Giderildi:** Aydınlık mod veya stil güncellemelerinde kanal sekme menüsünün ("Ana Sayfa", "Hakkımda", "Videolar") yayın oynatıcı üzerine taşması ve metin çakışması önlendi; oynatıcı ve kanal başlığı z-index ve container korumasına alındı.
+- **💬 Sohbet Arama & Sekme Çubukları Stabilizasyonu:** Sohbet üst çubuğundaki filtre ve sekme panellerinin `sticky` çakışması `relative flex` akışına dönüştürülerek mesaj alanını kapatmaları engellendi.
+
+---
+
 ## 🚀 [10.19.4] - 2026-09-05 (Canlı Profil Kartı Koleksiyon Arkaplanı & Holo Efekti Düzeltmesi)
 
 ### 🎨 Kritik Görsel & Tema Onarımı

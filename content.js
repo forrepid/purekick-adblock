@@ -2868,14 +2868,16 @@
     if (kap && kap !== kart) {
       kap.style.setProperty('width', g + 'px', 'important');
       kap.style.setProperty('max-width', 'calc(100vw - 24px)', 'important');
-      /* ÇERÇEVE + ZEMİN. Kart yayının/sayfanın üstünde süzülüyordu, arkası
-         okunmayı zorlaştırıyordu. Zemin rengi Kick'in KENDİ kap rengi
-         (ölçüldü: rgb(23,26,28)) — uydurma bir renk değil; moderasyon
-         görünümündeki kartın zemini de bu. Kenarlık ve gölge kartı
-         arkasındaki içerikten ayırıyor. */
-      kap.style.setProperty('background-color', 'rgb(23,26,28)', 'important');
+      /* ÇERÇEVE + ZEMİN. Eğer özel tema veya holo kart yoksa varsayılan Kick kap rengini koru; 
+         özel tema varsa transparan bırakarak temanın görünmesini sağla. */
+      var temaVar = kart.getAttribute('data-pk-tema-imza') || (settings.kartTipi && settings.kartTipi !== 'varsayilan');
+      if (!temaVar) {
+        kap.style.setProperty('background-color', 'rgb(23,26,28)', 'important');
+      } else {
+        kap.style.setProperty('background', 'transparent', 'important');
+      }
       kap.style.setProperty('border', '1px solid rgba(255,255,255,.10)', 'important');
-      kap.style.setProperty('border-radius', '10px', 'important');
+      kap.style.setProperty('border-radius', '12px', 'important');
       kap.style.setProperty('box-shadow', '0 12px 32px rgba(0,0,0,.55)', 'important');
     } else {
       /* Kap bulunamadıysa (yapı değişmiş) karta yazmaktan başka yol yok. */
@@ -2922,7 +2924,7 @@
         }
       }
 
-      var imza = uKey + '|' + dosyaAdi + '|' + holoEfekt + '|' + kartTipi;
+      var imza = uKey + '|' + dosyaAdi + '|' + holoEfekt + '|' + kartTipi + '|' + (bgUrl ? bgUrl.length : 0);
       if (card.getAttribute('data-pk-tema-imza') === imza) return;
       card.setAttribute('data-pk-tema-imza', imza);
 
@@ -2938,6 +2940,8 @@
 
         if (kap && kap !== card) {
           kap.style.setProperty('border-radius', '16px', 'important');
+          kap.style.setProperty('background', 'transparent', 'important');
+          kap.style.setProperty('background-color', 'transparent', 'important');
           kap.style.setProperty('overflow', 'visible', 'important');
         }
 
@@ -2946,11 +2950,14 @@
         if (bannerImg) {
           bannerImg.style.setProperty('opacity', '0', 'important');
           bannerImg.style.setProperty('pointer-events', 'none', 'important');
-          if (bannerImg.parentElement) bannerImg.parentElement.style.setProperty('background', 'transparent', 'important');
+          if (bannerImg.parentElement) {
+            bannerImg.parentElement.style.setProperty('background', 'transparent', 'important');
+            bannerImg.parentElement.style.setProperty('background-color', 'transparent', 'important');
+          }
         }
 
         // 3. Kartın içindeki tüm opak gri/siyah zeminleri saydamlaştır
-        var icBloklar = card.querySelectorAll('.bg-surface-base, .bg-surface-lowest, .bg-surface-lower, .bg-surface-highest, [class*="bg-surface"], div.p-4');
+        var icBloklar = card.querySelectorAll('.bg-surface-base, .bg-surface-lowest, .bg-surface-lower, .bg-surface-highest, [class*="bg-surface"], div.p-4, div.flex-col');
         for (var bi = 0; bi < icBloklar.length; bi++) {
           icBloklar[bi].style.setProperty('background', 'transparent', 'important');
           icBloklar[bi].style.setProperty('background-color', 'transparent', 'important');
@@ -16640,16 +16647,19 @@ pb.appendChild(satir(t('pkKartTakipci'), t('pkKartTakipciD'),
       sendBg({ type: 'setSettings', payload: { kartTipi: 'koleksiyon' } });
       settings.kartTipi = 'koleksiyon';
       panelCiz();
+      try { processProfilePopups(); } catch (e) {}
     });
     btnYerel.addEventListener('click', function () {
       sendBg({ type: 'setSettings', payload: { kartTipi: 'yerel' } });
       settings.kartTipi = 'yerel';
       panelCiz();
+      try { processProfilePopups(); } catch (e) {}
     });
     btnOzel.addEventListener('click', function () {
       sendBg({ type: 'setSettings', payload: { kartTipi: 'ozel' } });
       settings.kartTipi = 'ozel';
       panelCiz();
+      try { processProfilePopups(); } catch (e) {}
     });
 
     if (curTip === 'yerel') {
@@ -16681,6 +16691,8 @@ pb.appendChild(satir(t('pkKartTakipci'), t('pkKartTakipciD'),
           settings.kartTipi = 'yerel';
           toast('Görsel başarıyla profil kartınıza yüklendi!');
           panelCiz();
+          try { pkSohbetIsimEfektleriUygula(true); } catch (e) {}
+          try { processProfilePopups(); } catch (e) {}
         };
         reader.readAsDataURL(file);
       });
@@ -16710,6 +16722,8 @@ pb.appendChild(satir(t('pkKartTakipci'), t('pkKartTakipciD'),
         settings.kartTipi = 'ozel';
         toast('Özel profil kartı görseli kaydedildi');
         panelCiz();
+        try { pkSohbetIsimEfektleriUygula(true); } catch (e) {}
+        try { processProfilePopups(); } catch (e) {}
       });
       ozelKutu.appendChild(ozelInp);
       kWrap.appendChild(ozelKutu);
@@ -16730,6 +16744,8 @@ pb.appendChild(satir(t('pkKartTakipci'), t('pkKartTakipciD'),
           settings.kartTipi = 'koleksiyon';
           toast('Koleksiyon kartı seçildi: ' + dosya);
           panelCiz();
+          try { pkSohbetIsimEfektleriUygula(true); } catch (e) {}
+          try { processProfilePopups(); } catch (e) {}
         });
         grid.appendChild(item);
       });
@@ -16750,6 +16766,8 @@ pb.appendChild(satir(t('pkKartTakipci'), t('pkKartTakipciD'),
         settings.holoKartEfekt = h.id;
         toast('Efekt seçildi: ' + h.ad);
         panelCiz();
+        try { pkSohbetIsimEfektleriUygula(true); } catch (e) {}
+        try { processProfilePopups(); } catch (e) {}
       });
       holoBtns.appendChild(btn);
     });
@@ -19165,7 +19183,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
 
     var wrap = document.createElement('div');
     wrap.id = 'pk-sohbet-filtre-bar';
-    wrap.style.cssText = 'display:flex;align-items:center;gap:6px;padding:5px 10px;background:#171a1c;border-bottom:1px solid rgba(240,241,242,.15);font-size:12px;color:#fff;position:sticky;top:0;z-index:9999;box-shadow:0 2px 6px rgba(0,0,0,0.3);';
+    wrap.style.cssText = 'display:flex;align-items:center;gap:6px;padding:5px 10px;background:#171a1c;border-bottom:1px solid rgba(240,241,242,.15);font-size:12px;color:#fff;position:relative;width:100%;box-sizing:border-box;flex-shrink:0;z-index:10;box-shadow:0 2px 6px rgba(0,0,0,0.3);';
     wrap.innerHTML = '<svg style="width:13px;height:13px;color:#53fc18;flex:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>' +
       '<input type="text" id="pk-filtre-inp" placeholder="' + esc(t('pkFiltreAra') || 'Sohbette ara...') + '" style="flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(240,241,242,.12);border-radius:4px;color:#fff;padding:3px 8px;font-size:11px;outline:none;" value="' + esc(pkFiltreMetni) + '">' +
       '<button id="pk-filtre-temizle" title="Aramayı Temizle" style="background:transparent;border:none;color:#9fa6ad;cursor:pointer;font-size:12px;padding:2px 4px;">✕</button>';
@@ -19840,7 +19858,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
 
     var bar = document.createElement('div');
     bar.id = 'pk-sohbet-sekmeler';
-    bar.style.cssText = 'display:flex;gap:4px;padding:4px 8px;background:#171a1c;border-bottom:1px solid rgba(240,241,242,.08);font-size:11px;overflow-x:auto;z-index:20;';
+    bar.style.cssText = 'display:flex;gap:4px;padding:4px 8px;background:#171a1c;border-bottom:1px solid rgba(240,241,242,.08);font-size:11px;overflow-x:auto;position:relative;width:100%;box-sizing:border-box;flex-shrink:0;z-index:10;';
     
     var sekmeler = [
       { id: 'tumu', ad: 'Tümü' },
@@ -20330,23 +20348,28 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
   pkHoloKartStilleriKur();
 
   /* Sohbetteki Kullanıcı Adı İsim & Holo Aurası Uygulayıcısı */
-  function pkSohbetIsimEfektleriUygula() {
-    var kap = document.querySelector('#chatroom-messages, [data-chat-messages="true"]');
-    if (!kap) return;
-    var myName = (settings.mentionAd || localStorage.getItem('pk_user_name') || '').toLowerCase();
+  function pkSohbetIsimEfektleriUygula(force) {
+    var myName = (settings.mentionAd || localStorage.getItem('pk_user_name') || '').toLowerCase().trim().replace(/^@/, '');
     if (!myName) return;
     var myHolo = settings.holoKartEfekt || 'pikachu';
 
-    /* Sadece henüz işaretlenmemiş elemanları tara — data-pk-efekt-scanned olmayan */
-    var adElList = kap.querySelectorAll('[data-chat-entry-user]:not([data-pk-efekt-scanned]), [class*="chat-entry-username"]:not([data-pk-efekt-scanned]), button[class*="font-bold"]:not([data-pk-efekt-scanned])');
+    var secici = '[data-chat-entry-user], [class*="chat-entry-username"], button[class*="font-bold"], a.select-text, span.select-text';
+    var adElList = document.querySelectorAll(secici);
+
     for (var i = 0; i < adElList.length; i++) {
       var el = adElList[i];
-      el.setAttribute('data-pk-efekt-scanned', '1');
       var uText = (el.textContent || '').trim().replace(/^@/, '').toLowerCase();
       if (uText === myName) {
+        // Eski efektleri temizle
+        var eskiler = Array.from(el.classList).filter(function (c) { return c.indexOf('pk-name-') === 0; });
+        eskiler.forEach(function (c) { el.classList.remove(c); });
+        el.classList.remove('pk-chat-holo-name');
+
         if (myHolo && myHolo !== 'varsayilan' && myHolo !== 'yok') {
           el.setAttribute('data-pk-name-effect', myHolo);
           el.classList.add('pk-chat-holo-name', 'pk-name-' + myHolo);
+        } else {
+          el.removeAttribute('data-pk-name-effect');
         }
       }
     }
@@ -20355,26 +20378,34 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
   /* 15. Aydınlık Tema (Beyaz / Yeşil Light Theme) - Kapsamlı Arayüz & Font Çevirici */
   function pkAydinlikTemaUygula() {
     var lightCss = `
-      /* Ana Zemin ve Gövdeler (PureKick panelleri hariç) */
-      body, html, main, nav:not([data-pk="nav"]), header, aside, #chatroom-messages, 
-      .bg-surface-base:not(#pk-panel):not(#pk-ayar-panel):not(#pk-panel *):not(#pk-ayar-panel *),
-      .bg-surface-lowest:not(#pk-panel):not(#pk-ayar-panel):not(#pk-panel *):not(#pk-ayar-panel *),
-      .bg-surface-lower:not(#pk-panel):not(#pk-ayar-panel):not(#pk-panel *):not(#pk-ayar-panel *),
-      .bg-surface-highest:not(#pk-panel):not(#pk-ayar-panel):not(#pk-panel *):not(#pk-ayar-panel *), 
-      [class*="bg-surface"]:not(#pk-panel):not(#pk-ayar-panel):not(#pk-panel *):not(#pk-ayar-panel *),
-      div[role="dialog"]:not(.pk-holo-kart):not(#pk-panel):not(#pk-ayar-panel) {
+      /* Ana Zemin ve Gövdeler (PureKick panelleri ve Video/Yayın alanı hariç) */
+      body, html, main, nav:not([data-pk="nav"]):not([class*="channel"]):not([class*="player"]), aside, #chatroom-messages, 
+      .bg-surface-base:not(#pk-panel):not(#pk-ayar-panel):not(#pk-panel *):not(#pk-ayar-panel *):not([class*="player"]):not([class*="player"] *),
+      .bg-surface-lowest:not(#pk-panel):not(#pk-ayar-panel):not(#pk-panel *):not(#pk-ayar-panel *):not([class*="player"]):not([class*="player"] *),
+      .bg-surface-lower:not(#pk-panel):not(#pk-ayar-panel):not(#pk-panel *):not(#pk-ayar-panel *):not([class*="player"]):not([class*="player"] *),
+      .bg-surface-highest:not(#pk-panel):not(#pk-ayar-panel):not(#pk-panel *):not(#pk-ayar-panel *):not([class*="player"]):not([class*="player"] *), 
+      [class*="bg-surface"]:not(#pk-panel):not(#pk-ayar-panel):not(#pk-panel *):not(#pk-ayar-panel *):not([class*="player"]):not([class*="player"] *) {
         background-color: #f8fafc !important;
         color: #0f172a !important;
       }
 
-      /* Font Renkleri (PureKick panelleri hariç) */
-      [class*="text-white"]:not(#pk-panel *):not(#pk-ayar-panel *),
-      .text-white:not(#pk-panel *):not(#pk-ayar-panel *),
-      h1:not(#pk-panel *):not(#pk-ayar-panel *),
-      h2:not(#pk-panel *):not(#pk-ayar-panel *),
-      h3:not(#pk-panel *):not(#pk-ayar-panel *), 
-      a:not(.text-primary-base):not(#pk-panel *):not(#pk-ayar-panel *),
-      button:not(.bg-primary-base):not(.pk-holo-btn):not(#pk-panel *):not(#pk-ayar-panel *) {
+      /* Video/Yayın Alanı ve Oynatıcı Dokunulmazlığı (Üst üste binme & siyah zemin koruması) */
+      #channel-subnav, [class*="channel-nav"], [class*="stream-tabs"], [class*="player-wrapper"], [data-surface="player"], [data-vjs-player] {
+        position: relative !important;
+        z-index: 10 !important;
+      }
+      div:has(> video), [data-dashjs-player], .vjs-tech, video {
+        background: #000 !important;
+      }
+
+      /* Font Renkleri (PureKick panelleri ve Video Oynatıcı Denetimleri hariç) */
+      [class*="text-white"]:not(#pk-panel *):not(#pk-ayar-panel *):not([class*="player"] *):not([class*="vjs"] *),
+      .text-white:not(#pk-panel *):not(#pk-ayar-panel *):not([class*="player"] *):not([class*="vjs"] *),
+      h1:not(#pk-panel *):not(#pk-ayar-panel *):not([class*="player"] *),
+      h2:not(#pk-panel *):not(#pk-ayar-panel *):not([class*="player"] *),
+      h3:not(#pk-panel *):not(#pk-ayar-panel *):not([class*="player"] *), 
+      a:not(.text-primary-base):not(#pk-panel *):not(#pk-ayar-panel *):not([class*="player"] *),
+      button:not(.bg-primary-base):not(.pk-holo-btn):not(#pk-panel *):not(#pk-ayar-panel *):not([class*="player"] *):not([class*="vjs"] *) {
         color: #0f172a !important;
       }
 
