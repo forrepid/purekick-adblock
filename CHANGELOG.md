@@ -4,6 +4,15 @@ Bu doküman, PureKick eklentisinin tüm sürümlerindeki yenilikleri, hata düze
 
 ---
 
+## 🚀 [10.19.2] - 2026-09-05 (Eklenti Menüsü & Panel Arkaplan Düzeltmesi)
+
+### 🎨 Kritik Arayüz & Görünüm Düzeltmeleri
+- **🛡️ Eklenti Yönetim Paneli Arkaplanı Düzeltildi:** PureKick yönetim panelinin (`#pk-panel`) ve sohbet içi ayar panelinin (`#pk-ayar-panel`) arkaplanının şeffaflaşması, sol menü ve içerik kartlarının arkasındaki yayının görünmesi sorunu giderildi.
+  - Panellere garantili koyu tema zemini (`#0e1012 !important` ve `#171a1c !important`), opak kart zeminleri ve belirgin derinlik gölgeleri eklendi.
+- **🛡️ Aydınlık Tema & OLED Mod İzolasyonu:** Aydınlık tema (`pkAydinlikTemaUygula`) ve OLED mod stillerinin PureKick'in kendi yönetim panellerindeki metinleri ve butonları beyaza/şeffafa boyayarak menüyü bozması engellendi; PureKick panelleri bu global kurallardan tamamen muaf tutuldu.
+
+---
+
 ## 🚀 [10.19.1] - 2026-09-05 (Susturmalar, Moderatör İkonları & Canlı Bağış/Kicks Düzeltmesi)
 
 ### 🛠️ Kritik Düzeltmeler & Geliştirmeler

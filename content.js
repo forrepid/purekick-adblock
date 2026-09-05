@@ -833,7 +833,13 @@
          ölçüldü) — `.pk-tip::after` kuralı zaten onu çiziyor, ayrıca bir
          şey gerekmiyor. Kapatma kuralı KALDIRILDI: ok kapalıyken kutu
          havada duruyordu. */
-      '.pk-tip-oyn{}' + isiltiCss() + aboneCss() + susStilKur();
+      '.pk-tip-oyn{}' + isiltiCss() + aboneCss() + susStilKur() +
+      '#pk-panel{background-color:#0e1012 !important;color:#fff !important;box-shadow:0 0 35px rgba(0,0,0,0.9) !important}' +
+      '#pk-panel [data-pk="nav"]{background-color:#121518 !important;border-right:1px solid rgba(255,255,255,0.08) !important}' +
+      '#pk-panel [data-pk="body"]{background-color:#0e1012 !important;color:#fff !important}' +
+      '#pk-panel .bg-surface-lowest,#pk-panel .bg-surface-base,#pk-panel .bg-surface-highest{background-color:#171a1d !important}' +
+      '#pk-ayar-panel,#pk-ayar-panel>div{background-color:#171a1c !important;color:#fff !important}' +
+      '#pk-ayar-panel .bg-surface-base,#pk-ayar-panel .bg-surface-highest{background-color:#1f2327 !important}';
     var s = document.createElement('style'); s.id = 'pk-badge-style'; s.textContent = css;
     (document.head || document.documentElement).appendChild(s); badgeStyleAdded = true;
   }
@@ -10058,6 +10064,7 @@
     kap.id = PK_PANEL_ID;
 
     var kok = el('div', PK_PANEL_KOK_SINIF);
+    kok.style.cssText = 'background-color:#171a1c !important;color:#ffffff !important;border:1px solid rgba(255,255,255,0.12);box-shadow:0 -8px 25px rgba(0,0,0,0.7);border-top-left-radius:8px;border-top-right-radius:8px;';
     kap.appendChild(kok);
 
     /* Başlık şeridi — Kick'inkiyle aynı 42px ve aynı hizalama. */
@@ -17717,25 +17724,25 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
   function panelKur() {
     if (panelEl && document.contains(panelEl)) return panelEl;
     var g = panelGeo();
-    panelEl = el('div', 'bg-surface-lowest flex flex-col');
+    panelEl = el('div', 'flex flex-col');
     panelEl.id = PANEL_ID;
-    panelEl.style.cssText = 'position:fixed;top:' + g.top + 'px;left:' + g.left + 'px;right:0;bottom:0;z-index:401;display:none';
+    panelEl.style.cssText = 'position:fixed;top:' + g.top + 'px;left:' + g.left + 'px;right:0;bottom:0;z-index:99999;display:none;background-color:#0e1012 !important;color:#ffffff !important;box-shadow:0 0 35px rgba(0,0,0,0.9);font-family:inherit;';
 
-    var head = el('div', 'flex items-center justify-between gap-4 px-6 border-b border-outline-decorative shrink-0');
-    head.style.height = '60px';
+    var head = el('div', 'flex items-center justify-between gap-4 px-6 shrink-0');
+    head.style.cssText = 'height:60px;background-color:#14171a !important;border-bottom:1px solid rgba(255,255,255,0.08) !important;';
     var sol = el('div', 'flex items-center gap-3');
     var ikon = el('div', 'flex items-center justify-center rounded');
-    ikon.style.cssText = 'width:32px;height:32px;background:#0f0f0f';
+    ikon.style.cssText = 'width:32px;height:32px;background:#1e2327;border:1px solid rgba(83,252,24,0.3)';
     ikon.innerHTML = SHIELD;
     // SHIELD'in kendi width/height'ı yok (menüde CSS'ten alıyordu, panelde o CSS yok) → burada ölçülendir
     var logoSvg = ikon.querySelector('svg');
     if (logoSvg) { logoSvg.style.width = '19px'; logoSvg.style.height = '19px'; logoSvg.style.display = 'block'; }
-    ikon.style.color = '#fff';
+    ikon.style.color = '#53fc18';
     sol.appendChild(ikon);
     sol.appendChild(el('div', 'text-lg font-bold text-white', t('pkYonetimPaneli')));
     head.appendChild(sol);
-    var kapat = el('button', 'text-subtle hover:text-white transition-all', '✕');
-    kapat.style.cssText = 'font-size:20px;line-height:1;padding:6px';
+    var kapat = el('button', 'text-gray-400 hover:text-white transition-all cursor-pointer', '✕');
+    kapat.style.cssText = 'font-size:20px;line-height:1;padding:6px;background:transparent;border:none;';
     kapat.addEventListener('click', panelKapat);
     head.appendChild(kapat);
     panelEl.appendChild(head);
@@ -17743,14 +17750,15 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     /* İki sütun: solda kategori menüsü, sağda seçilen sayfa.
        Menü kendi içinde kayar; içerik alanı ayrı kayar. */
     var govde = el('div', 'flex-1 min-w-0 flex');
-    govde.style.cssText = 'overflow:hidden';
+    govde.style.cssText = 'overflow:hidden;background-color:#0e1012 !important;';
 
-    var nav = el('div', 'shrink-0 overflow-y-auto border-r border-outline-decorative bg-surface-lowest');
-    nav.style.cssText = 'width:264px;padding:12px 8px';
+    var nav = el('div', 'shrink-0 overflow-y-auto');
+    nav.style.cssText = 'width:264px;padding:12px 8px;background-color:#121518 !important;border-right:1px solid rgba(255,255,255,0.08) !important;';
     nav.setAttribute('data-pk', 'nav');
     govde.appendChild(nav);
 
     var icerik = el('div', 'flex-1 min-w-0 overflow-y-auto p-6 flex flex-col gap-4');
+    icerik.style.cssText = 'background-color:#0e1012 !important;color:#ffffff !important;';
     icerik.setAttribute('data-pk', 'body');
     govde.appendChild(icerik);
 
@@ -19870,7 +19878,13 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
 
   /* 7. OLED True Black Modu */
   function pkOledModUygula() {
-    var oledCss = 'body, html, main, nav, header, aside, #chatroom-messages, .bg-surface-base, .bg-surface-lowest, .bg-surface-lower, .bg-surface-highest, [class*="bg-surface"] { background-color: #000000 !important; } .border-outline-region, [class*="border-"] { border-color: rgba(255,255,255,0.08) !important; }';
+    var oledCss = 'body, html, main, nav:not([data-pk="nav"]), header, aside, #chatroom-messages, ' +
+      '.bg-surface-base:not(#pk-panel):not(#pk-ayar-panel), ' +
+      '.bg-surface-lowest:not(#pk-panel):not(#pk-ayar-panel), ' +
+      '.bg-surface-lower:not(#pk-panel):not(#pk-ayar-panel), ' +
+      '.bg-surface-highest:not(#pk-panel):not(#pk-ayar-panel), ' +
+      '[class*="bg-surface"]:not(#pk-panel):not(#pk-panel *):not(#pk-ayar-panel):not(#pk-ayar-panel *) { background-color: #000000 !important; } ' +
+      '.border-outline-region, [class*="border-"]:not(#pk-panel *):not(#pk-ayar-panel *) { border-color: rgba(255,255,255,0.08) !important; }';
     pkStilGuncelle('pk-oled-style', oledCss, !!settings.oledMod);
   }
 
@@ -20285,22 +20299,55 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
   /* 15. Aydınlık Tema (Beyaz / Yeşil Light Theme) - Kapsamlı Arayüz & Font Çevirici */
   function pkAydinlikTemaUygula() {
     var lightCss = `
-      /* Ana Zemin ve Gövdeler */
-      body, html, main, nav, header, aside, #chatroom-messages, 
-      .bg-surface-base, .bg-surface-lowest, .bg-surface-lower, .bg-surface-highest, 
-      [class*="bg-surface"], [class*="bg-[#"], div[role="dialog"]:not(.pk-holo-kart) {
+      /* Ana Zemin ve Gövdeler (PureKick panelleri hariç) */
+      body, html, main, nav:not([data-pk="nav"]), header, aside, #chatroom-messages, 
+      .bg-surface-base:not(#pk-panel):not(#pk-ayar-panel):not(#pk-panel *):not(#pk-ayar-panel *),
+      .bg-surface-lowest:not(#pk-panel):not(#pk-ayar-panel):not(#pk-panel *):not(#pk-ayar-panel *),
+      .bg-surface-lower:not(#pk-panel):not(#pk-ayar-panel):not(#pk-panel *):not(#pk-ayar-panel *),
+      .bg-surface-highest:not(#pk-panel):not(#pk-ayar-panel):not(#pk-panel *):not(#pk-ayar-panel *), 
+      [class*="bg-surface"]:not(#pk-panel):not(#pk-ayar-panel):not(#pk-panel *):not(#pk-ayar-panel *),
+      div[role="dialog"]:not(.pk-holo-kart):not(#pk-panel):not(#pk-ayar-panel) {
         background-color: #f8fafc !important;
         color: #0f172a !important;
       }
 
-      /* Font Renkleri - Beyazdan Koyu Antrasite */
-      [class*="text-white"], .text-white, h1, h2, h3, h4, h5, h6, 
-      a:not(.text-primary-base), button:not(.bg-primary-base):not(.pk-holo-btn) {
+      /* Font Renkleri (PureKick panelleri hariç) */
+      [class*="text-white"]:not(#pk-panel *):not(#pk-ayar-panel *),
+      .text-white:not(#pk-panel *):not(#pk-ayar-panel *),
+      h1:not(#pk-panel *):not(#pk-ayar-panel *),
+      h2:not(#pk-panel *):not(#pk-ayar-panel *),
+      h3:not(#pk-panel *):not(#pk-ayar-panel *), 
+      a:not(.text-primary-base):not(#pk-panel *):not(#pk-ayar-panel *),
+      button:not(.bg-primary-base):not(.pk-holo-btn):not(#pk-panel *):not(#pk-ayar-panel *) {
         color: #0f172a !important;
       }
 
+      /* PureKick Yönetim ve Ayar Paneli Dokunulmazlık & Orijinal Koyu Tema */
+      #pk-panel, #pk-panel [data-pk="body"], #pk-panel [data-pk="nav"] {
+        background-color: #0e1012 !important;
+        color: #ffffff !important;
+      }
+      #pk-panel * {
+        color: #ffffff;
+      }
+      #pk-panel .text-subtle {
+        color: #94a3b8 !important;
+      }
+      #pk-ayar-panel, #pk-ayar-panel > div, #pk-ayar-panel [data-pk-ayar-sayfa] {
+        background-color: #171a1c !important;
+        color: #ffffff !important;
+      }
+      #pk-ayar-panel * {
+        color: #ffffff;
+      }
+      #pk-ayar-panel .text-subtle {
+        color: #94a3b8 !important;
+      }
+
       /* Kenarlıklar ve Ayrıcılar */
-      [class*="border-"], .border-outline-region, .border-outline-decorative {
+      [class*="border-"]:not(#pk-panel *):not(#pk-ayar-panel *),
+      .border-outline-region:not(#pk-panel *):not(#pk-ayar-panel *),
+      .border-outline-decorative:not(#pk-panel *):not(#pk-ayar-panel *) {
         border-color: rgba(0, 0, 0, 0.12) !important;
       }
 
