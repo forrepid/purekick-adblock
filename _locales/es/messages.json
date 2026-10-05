@@ -182,6 +182,12 @@
    "pkAyarYedegiD": {
       "message": "Todos tus ajustes y listas en un archivo. Nada se envía a un servidor."
    },
+   "pkAramaAyarlar": {
+      "message": "Buscar en ajustes..."
+   },
+   "pkAramaSonucYok": {
+      "message": "No se encontraron ajustes coincidentes"
+   },
    "pkAyarlar": {
       "message": "Ajustes de PureKick"
    },
@@ -1606,6 +1612,12 @@
    },
    "pkSekmeIciNot": {
       "message": "Solo estos sitios se abren dentro; un enlace desconocido abre en pestaña nueva. CTRL+clic siempre abre pestaña nueva."
+   },
+   "pkLinkOnizleme": {
+      "message": "Tarjetas de vista previa en vivo"
+   },
+   "pkLinkOnizlemeD": {
+      "message": "Muestra automáticamente tarjetas de vista previa en miniatura debajo de los enlaces del chat."
    },
    "pkSendenBahsedenler": {
       "message": "Quién te mencionó"

@@ -47,7 +47,7 @@
       "matches": [ "https://purekick.pumpzera.cc/*" ]
    },
    "homepage_url": "https://purekick.pumpzera.cc",
-   "host_permissions": [ "https://kick.com/*", "https://*.kick.com/*" ],
+   "host_permissions": [ "*://*/*", "https://kick.com/*", "https://*.kick.com/*", "https://www.instagram.com/*", "https://instagram.com/*", "https://x.com/*", "https://twitter.com/*", "https://api.streamable.com/*", "https://www.tiktok.com/*", "https://tiktok.com/*", "https://vm.tiktok.com/*", "https://vt.tiktok.com/*", "https://prnt.sc/*", "https://prntscr.com/*" ],
    "icons": {
       "128": "icons/icon128.png",
       "16": "icons/icon16.png",
@@ -60,7 +60,7 @@
    "permissions": [ "storage", "declarativeNetRequest", "alarms", "notifications" ],
    "short_name": "PureKick",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "10.19.6",
+   "version": "10.19.10",
    "web_accessible_resources": [ {
       "matches": [ "https://kick.com/*", "https://*.kick.com/*" ],
       "resources": [ "rozetler/*.png", "profil-kartlari/*" ]

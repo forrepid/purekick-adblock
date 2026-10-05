@@ -27,6 +27,11 @@
 (function () {
   'use strict';
 
+  /* Ana sayfa reklam ayarı kapalıysa GPT/IMA'ya dokunma. Bu script
+     document_start'ta çalıştığından durumu önceki sayfa yüklemesinde yazılan
+     yerel bayraktan okur; ayar değişince içerik betiği sekmeyi yeniler. */
+  try { if (localStorage.getItem('__kab_dom') === '0') return; } catch (e) {}
+
   if (window.__kab_stubbed) return;
   window.__kab_stubbed = true;
 

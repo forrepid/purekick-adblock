@@ -4,6 +4,22 @@ Bu doküman, PureKick eklentisinin tüm sürümlerindeki yenilikleri, hata düze
 
 ---
 
+## 🚀 [10.19.10] - 2026-10-05 (Sohbet Arşivi, Medya Önizlemeleri & Oynatıcı Kararlılığı)
+
+### 🖼️ Bağlantı Önizlemeleri
+- Instagram gönderi ve Reels görselleri, Instagram'ın herkese açık embed sayfasından çıkarılır; ücretli veya Google tabanlı thumbnail servisi eklenmedi.
+- X/Twitter, Kick, TikTok, Streamable ve genel web bağlantılarında platform metadata/API görselleri kullanılır; Lightshot için gerçek ekran görüntüsü varsa pencere içinde gösterilir.
+- Görsel kaynağı yüklenemezse boş kutu yerine site ikonu veya açıklayıcı durum gösterilir.
+
+### 💬 Sohbet ve Kayıtlar
+- Sohbet arşivi kalıcı IndexedDB deposuna alınır; moderasyon, silinen mesajlar ve sohbet kayıtlarının gösterimi iyileştirilir.
+- İzleyici örnekleri ve sohbet bağlantı durumu takibi eklendi.
+
+### 🎥 Oynatıcı ve VOD
+- VOD/kanal geçişlerinde eski oynatma isteklerinin yeni yayına karışması önlenir; HLS reklam işaretleri ve çevrimdışı oynatıcı durumu iyileştirilir.
+
+---
+
 ## 🚀 [10.19.5] - 2026-09-05 (Anında Canlı Efekt Uygulama, Arkaplan Maskeleme & Arayüz Çakışma Düzeltmesi)
 
 ### 🎨 Kritik Görsel & Canlı Tetikleme Düzeltmeleri

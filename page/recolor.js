@@ -241,6 +241,7 @@
    * o öğeler Kick'in yeşilinde kalıyordu.
    * ÇÖZÜM: yeni sınıf göründüğü an ölçülüp kuralı eklenir; bir kez ölçülen
    * sınıf (isabet etsin etmesin) `seenClasses`e girer, bir daha ölçülmez. */
+  const MAX_TRACKED_COLOR_CLASSES = 4096; // dinamik DOM'da sınıf/kural belleği için üst sınır
   let seenClasses = new Set();   // ölçülmüş sınıf adları
   let classRules = [];           // üretilmiş CSS kuralları
   let rootCSS = '';              // :root{...} bloğu
@@ -250,6 +251,7 @@
     if (!cl) return;
     for (const c of String(cl).split(/\s+/)) {
       if (!c || seenClasses.has(c)) continue;
+      if (seenClasses.size + out.size >= MAX_TRACKED_COLOR_CLASSES) return;
       if (isColorUtil(c.slice(c.lastIndexOf(':') + 1))) out.add(c);
     }
   }
@@ -287,6 +289,7 @@
     };
     const rules = [];
     for (const cls of classes) {
+      if (seenClasses.size >= MAX_TRACKED_COLOR_CLASSES) break;
       seenClasses.add(cls);          // isabet etmese de bir daha ölçme
       const segs = cls.split(':');
       const base = segs.pop();

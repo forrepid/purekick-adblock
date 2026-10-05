@@ -182,6 +182,12 @@
    "pkAyarYedegiD": {
       "message": "Alle Einstellungen und Listen in einer Datei. Nichts geht an einen Server."
    },
+   "pkAramaAyarlar": {
+      "message": "In Einstellungen suchen..."
+   },
+   "pkAramaSonucYok": {
+      "message": "Keine passenden Einstellungen gefunden"
+   },
    "pkAyarlar": {
       "message": "PureKick-Einstellungen"
    },
@@ -1606,6 +1612,12 @@
    },
    "pkSekmeIciNot": {
       "message": "Nur diese Seiten öffnen inline; unbekannte Links öffnen wie gewohnt im neuen Tab. STRG+Klick öffnet immer einen neuen Tab."
+   },
+   "pkLinkOnizleme": {
+      "message": "Live-Vorschaukarten"
+   },
+   "pkLinkOnizlemeD": {
+      "message": "Zeigt automatisch Live-Thumbnail-Vorschaukarten unter Links im Chat."
    },
    "pkSendenBahsedenler": {
       "message": "Wer dich erwähnt hat"

@@ -182,6 +182,12 @@
    "pkAyarYedegiD": {
       "message": "Todas as suas configurações e listas em um arquivo. Nada é enviado a um servidor."
    },
+   "pkAramaAyarlar": {
+      "message": "Pesquisar nas configurações..."
+   },
+   "pkAramaSonucYok": {
+      "message": "Nenhuma configuração correspondente encontrada"
+   },
    "pkAyarlar": {
       "message": "Configurações do PureKick"
    },
@@ -1606,6 +1612,12 @@
    },
    "pkSekmeIciNot": {
       "message": "Só esses sites abrem embutidos; link desconhecido abre em nova aba. CTRL+clique sempre abre nova aba."
+   },
+   "pkLinkOnizleme": {
+      "message": "Cartões de pré-visualização ao vivo"
+   },
+   "pkLinkOnizlemeD": {
+      "message": "Mostra automaticamente cartões de pré-visualização em miniatura abaixo dos links no chat."
    },
    "pkSendenBahsedenler": {
       "message": "Quem mencionou você"

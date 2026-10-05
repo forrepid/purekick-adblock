@@ -45,6 +45,12 @@ function pkLog() {
   window.__kab_worker_hook = true;
 
   var pageNonce = null;   // content.js'ten (ISOLATED) gelen oturum jetonu; köprü doğrulaması için
+  var kabChatConnectionState = '';
+  function kabChatDurumBildir(durum) {
+    kabChatConnectionState = String(durum || '');
+    if (!pageNonce) return;
+    try { window.postMessage({ source: 'kab', type: 'chatConnectionStatus', state: kabChatConnectionState, n: pageNonce }, '*'); } catch (e) {}
+  }
   var pageEnabled = true; // canlı yayın reklamı ayarı (kab-cfg)
   try { pageEnabled = localStorage.getItem('__kab_video') === '1'; } catch (e) {}
   /* GEÇMİŞ YAYIN (VOD) için AYRI bayrak: mekanizması canlıdan tamamen farklı
@@ -166,12 +172,18 @@ function pkLog() {
            onlar sarmalanmamış origPageFetch ile doğrudan gidiyor. */
         try { p.catch(function () {}); } catch (e) {}
         if (!pageVod || !url || !PLAYBACK_PAGE_RE.test(url)) return p;   // VOD kendi anahtarına uyar
+        var playbackPath = window.location.pathname;
+        var playbackSlug = slugNow().toLowerCase();
         return p.then(function (resp) {
           try {
             return resp.clone().json().then(function (j) {
               var vs = j && j.video_session, pu = j && j.playback_url;
               var touched = neutralizeAds(j);
               var isVod = vs && String(vs.video_stream_status || '').toLowerCase() === 'vod';
+              /* SPA başka kanala/VOD'a geçtiyse önceki playback cevabı yeni
+                 oynatıcıya dokunmasın; kanal videosu listesini de yeni slug'dan
+                 eşleştirmeyelim. */
+              if (window.location.pathname !== playbackPath) return resp;
               /* "VOD İndir" için adresi BURADAN veriyoruz. Sebebi ölçümle bulundu:
                  `api/v2/channels/<slug>/videos` yalnızca son ~13 yayını döndürüyor,
                  daha eski bir VOD'da süre eşlemesi hiçbir şey bulamıyor ve indirme
@@ -181,7 +193,8 @@ function pkLog() {
               if (!isVod || !pu || typeof pu.vod !== 'string' || !STITCHED_RE.test(pu.vod)) {
                 return touched ? jsonResponse(j, resp) : resp;     // canlı/bilinmeyen → karışma
               }
-              return cleanVodSource(vs, slugNow(), origPageFetch).then(function (clean) {
+              return cleanVodSource(vs, playbackSlug, origPageFetch).then(function (clean) {
+                if (window.location.pathname !== playbackPath) return resp;
                 if (!clean) { pkLog('VOD temiz kaynak bulunamadi, dokunulmadi'); return touched ? jsonResponse(j, resp) : resp; }
                 pu.vod = clean;                                    // dikilmiş manifest → reklamsız kaynak
                 vodUrlBildir(clean);                               // indirme de reklamsız kaynağı kullansın
@@ -269,6 +282,9 @@ function pkLog() {
       return origFetch.call(self, 'https://kick.com/api/v2/channels/' + forSlug, { credentials: 'include' })
         .then(function (r) { return r.json(); })
         .then(function (j) {
+          /* Raid/SPA yönlendirmesi istek sürerken slug'ı değiştirebilir.
+             Eski kanalın temiz akışını yeni kanalın player'ına verme. */
+          if (KAB_SLUG !== forSlug) return null;
           if (j && j.playback_url) { adFree.url = j.playback_url; adFree.ts = now; adFree.slug = forSlug; return j.playback_url; }
           return null;
         }).catch(function () { return null; });
@@ -323,13 +339,39 @@ function pkLog() {
       return changed;
     }
 
+    /* Bazı canlı yayınlarda reklam, playback yanıtında değil doğrudan HLS
+       medya listesinde işaretlenir. CUE-OUT ile başlayıp CUE-IN'e kadar olan
+       segmentleri çıkar; yayının geri kalanını ve playlist başlığını koru. */
+    function stripAdSegments(text) {
+      if (typeof text !== 'string' || !/#EXT-X-CUE-OUT|#EXT-X-SCTE35-OUT|#EXT-X-DATERANGE:[^\r\n]*SCTE35-OUT|stitched-ad/i.test(text)) return null;
+      var lines = text.split(/\r?\n/), out = [], inAd = false, dropped = false;
+      for (var i = 0; i < lines.length; i++) {
+        var line = lines[i], up = line.toUpperCase();
+        if (/#EXT-X-CUE-OUT|#EXT-X-SCTE35-OUT|#EXT-X-DATERANGE:.*SCTE35-OUT/i.test(line) || /stitched-ad/i.test(line)) {
+          inAd = true; dropped = true; continue;
+        }
+        if (/#EXT-X-CUE-IN|#EXT-X-SCTE35-IN/i.test(line) || /#EXT-X-DATERANGE:.*SCTE35-IN/i.test(line)) {
+          inAd = false; continue;
+        }
+        if (inAd) continue;
+        /* Break/asset metadata oynatıcının Ad UI durumunu başlatabilir. */
+        if (/^#EXT-X-ASSET:|^#EXT-X-SCTE35-CMD:|^#EXT-OATCLS-SCTE35:/i.test(line)) { dropped = true; continue; }
+        out.push(line);
+      }
+      if (!dropped) return null;
+      return out.join('\n');
+    }
+
     if (origFetch) {
       self.fetch = function (input, init) {
-        var url = typeof input === 'string' ? input : (input && input.url) || '';
-        var fw = fixWasm(url);
-        if (fw) return origFetch.call(self, fw, init);
+      var url = typeof input === 'string' ? input : (input && input.url) || '';
+      var fw = fixWasm(url);
+      if (fw) return origFetch.call(self, fw, init);
 
-        var p = origFetch.apply(self, arguments);
+      /* İsteğin başladığı kanal kimliğini yakala; yanıt dönmeden raid olursa
+         yeni kanalın slug'ı bu eski isteğe yanlışlıkla uygulanmasın. */
+      var requestSlug = KAB_SLUG;
+      var p = origFetch.apply(self, arguments);
         if (!enabled) return p;
 
         if (/\.m3u8/i.test(url)) {
@@ -337,19 +379,20 @@ function pkLog() {
             return resp.clone().text().then(function (txt) {
               // MASTER manifest → reklamsız ile değiştir
               if (txt.indexOf('#EXT-X-STREAM-INF') !== -1) {
+                if (requestSlug !== KAB_SLUG) return resp;
                 // VOD master'ı → ASLA canlı akışla takas etme (sayfa katmanı hallediyor)
                 if (VOD_MASTER_RE.test(url)) return resp;
                 // Prefetch önbelleği hazırsa ANINDA dön → fetch zinciri yok, donma yok
-                if (masterCache.text && masterCache.slug === KAB_SLUG && (Date.now() - masterCache.ts) < 30000) {
+                if (masterCache.text && masterCache.slug === requestSlug && (Date.now() - masterCache.ts) < 30000) {
                   post({ kabSwapped: 1 });
                   log('master prefetch onbellekten (aninda)');
                   return new Response(masterCache.text, { status: 200, statusText: 'OK', headers: new Headers({ 'content-type': masterCache.ct || 'application/vnd.apple.mpegurl' }) });
                 }
                 return getAdFreeMaster().then(function (af) {
-                  if (!af) return resp;
+                  if (!af || KAB_SLUG !== requestSlug) return resp;
                   return origFetch.call(self, af).then(function (afr) {
                     return afr.text().then(function (aftxt) {
-                      if (aftxt.indexOf('#EXT-X-STREAM-INF') === -1) return resp; // beklenmedik → dokunma
+                      if (KAB_SLUG !== requestSlug || aftxt.indexOf('#EXT-X-STREAM-INF') === -1) return resp; // kanal değişti/beklenmedik → dokunma
                       post({ kabSwapped: 1 });
                       log('master reklamsiz akisla degistirildi');
                       var absTxt = absolutize(aftxt, af);
@@ -359,10 +402,13 @@ function pkLog() {
                   }).catch(function () { return resp; });
                 }).catch(function () { return resp; });
               }
-              // MEDIA playlist → reklamsız kaynaktan geldiği için dokunma;
-              // yine de reklam markörü sızmışsa bildir (teşhis).
-              if (txt.indexOf('#EXT-X-CUE-OUT') !== -1 || txt.indexOf('stitched-ad') !== -1) {
+              // Kaynak bazen SSAI aralıklarını doğrudan playlist içinde taşır.
+              var noAds = stripAdSegments(txt);
+              if (noAds) {
                 post({ kabAdLeak: 1 });
+                post({ kabSwapped: 1 });
+                log('HLS medya listesindeki isaretli reklam araligi cikarildi');
+                return new Response(noAds, { status: 200, statusText: 'OK', headers: rebuildHeaders(resp) });
               }
               return resp;
             }).catch(function () { return resp; });
@@ -457,6 +503,7 @@ function pkLog() {
       if (d && d.source === 'kab-cfg' && d.settings && d.n) {   // jeton ZORUNLU — jetonsuz/sahte config reddedilir
         if (!pageNonce) pageNonce = d.n;                        // ilk jetonu öğren (content.js document_start'ta yollar, sayfa scriptlerinden önce)
         else if (d.n !== pageNonce) return;                    // sonra doğrula
+        if (kabChatConnectionState) kabChatDurumBildir(kabChatConnectionState); // jeton durumdan sonra geldiyse güncel veriyi tekrar yolla
         pageEnabled = (d.settings.enabled !== false) && (d.settings.blockVideoAds !== false);
         pageVod     = (d.settings.enabled !== false) && (d.settings.blockVodAds   !== false);   // geçmiş yayın ayrı anahtar
         try { bc.postMessage({ kabSettings: d.settings, _n: pageNonce }); } catch (er) {}
@@ -465,11 +512,22 @@ function pkLog() {
     // slug'ı yayınla (SPA gezinmesinde worker güncel kalsın)
     var lastSlug = '';
     function pushSlug() {
-      try { var s = (window.location.pathname.split('/').filter(Boolean)[0] || ''); if (s && s !== lastSlug) { lastSlug = s; bc.postMessage({ kabSlug: s, _n: pageNonce }); } } catch (er) {}
+      try {
+        var s = (window.location.pathname.split('/').filter(Boolean)[0] || '').toLowerCase();
+        if (s && s !== lastSlug) {
+          lastSlug = s;
+          bc.postMessage({ kabSlug: s, _n: pageNonce });
+        }
+      } catch (er) {}
     }
     pushSlug();
-    setInterval(pushSlug, 2000);
-    // SPA gezinmesinde ANINDA güncelle (2sn beklemeden) → kanal değişince yayın F5 olmadan yüklenir.
+    /* Raid geçişlerinde video player mevcut Worker'ı yeniden kullanabiliyor.
+       İki saniyelik yoklama reklamlı master'ın ilk isteğini kaçırıyordu;
+       history/popstate olayları anında, kısa aralıklı kontrol de yedek olur. */
+    setInterval(pushSlug, 1000);
+    window.addEventListener('popstate', pushSlug, true);
+    window.addEventListener('hashchange', pushSlug, true);
+    // SPA gezinmesinde ANINDA güncelle → kanal değişince yayın F5 olmadan yüklenir.
     try {
       ['pushState', 'replaceState'].forEach(function (m) {
         var orig = history[m];
@@ -497,19 +555,18 @@ function pkLog() {
     function ilgiliMi(ad) {
       return ad === 'ChatMessageEvent' || ad === 'MessageDeletedEvent' ||
              ad === 'ChatMessageSentEvent' ||
+             ad === 'ChatMessageDeletedEvent' || ad === 'ModerationBannedEvent' ||
+             ad === 'moderation.banned' || ad === 'moderation.user_banned' ||
+             ad === 'moderation.unbanned' || ad === 'moderation.user_unbanned' ||
+             ad === 'moderation.message_deleted' || ad === 'moderation.chat_clear' ||
              ad === 'UserBannedEvent' || ad === 'UserUnbannedEvent' ||
              ad === 'ChatroomClearEvent' ||
              ad === 'GiftedSubscriptionsEvent' || ad === 'SubscriptionEvent' ||
              ad === 'LuckyUsersWhoGotGiftSubscriptionsEvent' || ad === 'LivestreamReactionEvent' ||
              ad === 'StreamHostEvent' ||
-             /* Yayın bitti: toplanan sohbet verisi bu olayda silinir.
-                Kick bunu kanal kanalında yayınlıyor; `connection.bind`
-                bağlantıdaki TÜM mesajları gördüğü için buraya da düşüyor. */
              ad === 'StopStreamBroadcast';
     }
 
-    /* Rol sırası — büyükten küçüğe. Bir kişide birden çok rozet olabilir
-       (mod + abone gibi); vurgulama için tek bir rol lazım, en üstteki kazanır. */
     var ROL_SIRA = ['broadcaster', 'staff', 'moderator', 'verified', 'vip', 'founder', 'og',
                     'sub_gifter', 'subscriber', 'bot'];
     function enYuksekRol(rozetler) {
@@ -523,15 +580,172 @@ function pkLog() {
       }
       return en;
     }
+    function tumRoller(rozetler) {
+      if (!rozetler || !rozetler.length) return [];
+      var seen = Object.create(null), out = [];
+      for (var i = 0; i < rozetler.length; i++) {
+        var t = String((rozetler[i] && rozetler[i].type) || '').toLowerCase();
+        if (ROL_SIRA.indexOf(t) >= 0 && !seen[t]) { seen[t] = true; out.push(t); }
+      }
+      return out.sort(function (a, b) { return ROL_SIRA.indexOf(a) - ROL_SIRA.indexOf(b); });
+    }
 
+    function olayIsle(ad, d) {
+      if (!d) return;
+      /* Kick'in bazı yayınlarında Pusher payload'ı olay alanlarını doğrudan,
+         bazılarında `data` altında taşıyor. Her iki biçimi tek yapıda çöz. */
+      if (d.data && typeof d.data === 'object' && !Array.isArray(d.data)) {
+        var govde = Object.assign({}, d.data);
+        for (var alan in d) if (Object.prototype.hasOwnProperty.call(d, alan) && govde[alan] == null) govde[alan] = d[alan];
+        d = govde;
+      }
+      /* Kick'in farklı istemci/API sürümlerinde aynı olay farklı adlarla ve
+         iç içe payload ile gelebiliyor. İzole dünyaya tek kanonik ad gönder. */
+      if (ad === 'ChatMessageSentEvent') ad = 'ChatMessageEvent';
+      else if (ad === 'ChatMessageDeletedEvent' || ad === 'moderation.message_deleted') ad = 'MessageDeletedEvent';
+      else if (ad === 'ModerationBannedEvent' || ad === 'moderation.banned' || ad === 'moderation.user_banned') ad = 'UserBannedEvent';
+      else if (ad === 'moderation.unbanned' || ad === 'moderation.user_unbanned') ad = 'UserUnbannedEvent';
+      else if (ad === 'moderation.chat_clear') ad = 'ChatroomClearEvent';
+      /* Sohbet olayı, yedek WebSocket kullanılırken de akışın canlı olduğunun
+         doğrudan kanıtıdır; bağlantı noktasını taşıyıcı durumuyla güncelle. */
+      kabChatDurumBildir('connected');
+      /* Pusher + yedek WS aynı olayı iki kez taşıyabilir. Sohbet mesajı gibi
+         kimliği olanlarda kimlik; Kick'in id'siz moderasyon olaylarında ise
+         hedef/işlemi yapan/imza alanları ve kısa bir pencere kullan. Önceki
+         genel `|UserBannedEvent|` anahtarı ilk id'siz timeout'tan sonra aynı
+         sayfadaki bütün diğer timeout/ban işlemlerini sonsuza dek eliyordu. */
+      var mesajOlayiMi = ad === 'ChatMessageEvent' || ad === 'ChatMessageSentEvent' ||
+                         ad === 'MessageDeletedEvent' || ad === 'ChatMessageDeletedEvent';
+      var olayMesaji = d.message && typeof d.message === 'object' ? d.message : d;
+      var olayId = mesajOlayiMi
+        ? ((olayMesaji && (olayMesaji.id || olayMesaji.message_id)) || d.message_id || d.id || d.event_id || d.uuid || '')
+        : (d.event_id || d.uuid || d.id || '');
+      var olayZamani = d.created_at || d.timestamp || '';
+      var hedefOlay = d.user || d.banned_user || d.target || d.sender || {};
+      var yapanOlay = d.banned_by || d.unbanned_by || d.deleted_by || d.moderator || d.actor || {};
+      var hedefAdi = typeof hedefOlay === 'string' ? hedefOlay : (hedefOlay.username || hedefOlay.slug || '');
+      var yapanAdi = typeof yapanOlay === 'string' ? yapanOlay : (yapanOlay.username || yapanOlay.slug || '');
+      var olayPz = ad + '|' + (olayId ? 'id:' + olayId : (olayZamani ? 'ts:' + olayZamani :
+        [hedefAdi, yapanAdi, d.duration || (d.metadata && d.metadata.duration) || '',
+         d.expires_at || (d.metadata && d.metadata.expires_at) || '', d.reason || ''].join('|')));
+      var olaySimdi = Date.now();
+      if (!olayIsle._son) olayIsle._son = [];
+      var olayTekrarPenceresi = olayId ? 30000 : 2000;
+      for (var oi = olayIsle._son.length - 1; oi >= 0; oi--) {
+        var oncekiOlay = olayIsle._son[oi];
+        if (olaySimdi - oncekiOlay.ts > 30000) { olayIsle._son.splice(oi, 1); continue; }
+        if (oncekiOlay.key === olayPz && olaySimdi - oncekiOlay.ts < olayTekrarPenceresi) return;
+      }
+      olayIsle._son.push({ key: olayPz, ts: olaySimdi });
+      if (olayIsle._son.length > 200) olayIsle._son.shift();
+      var y = { source: 'kab', type: 'chatEvent', ad: ad, n: pageNonce };
+      if (ad === 'ChatMessageEvent' || ad === 'ChatMessageSentEvent') {
+        var chatMesaj = d.message && typeof d.message === 'object' ? d.message : d;
+        var chatKisi = d.sender || d.user || chatMesaj.sender || {};
+        var chatIdentity = chatKisi.identity || {};
+        var chatRozetler = chatIdentity.badges || chatKisi.badges || [];
+        if (!chatRozetler.length && Array.isArray(chatKisi.follower_badges)) {
+          chatRozetler = chatKisi.follower_badges.map(function (b) {
+            return typeof b === 'string' ? { type: b.toLowerCase() } : b;
+          });
+        }
+        y.id = chatMesaj.id || chatMesaj.message_id || d.id || d.message_id || '';
+        y.kim = chatKisi.username || chatKisi.slug || '';
+        y.metin = String(chatMesaj.content || chatMesaj.message || d.content || '').slice(0, 300);
+        var chatTs = chatMesaj.created_at || d.created_at || d.timestamp;
+        y.ts = (typeof chatTs === 'number' ? (chatTs < 1e12 ? chatTs * 1000 : chatTs) : Date.parse(chatTs)) || Date.now();
+        y.rol = enYuksekRol(chatRozetler);
+        y.roller = tumRoller(chatRozetler);
+        y.renk = chatIdentity.color || chatIdentity.username_color || chatKisi.color || '';
+        var chatMeta = chatMesaj.metadata || d.metadata || {};
+        y.yanit = !!(chatMeta.original_message || chatMeta.original_sender || chatMesaj.replied_to || chatMesaj.replies_to);
+        y.kicks = (d.metadata && d.metadata.kicks) || d.kicks || 0;
+        y.tip = d.type || '';
+      } else if (ad === 'GiftedSubscriptionsEvent') {
+        var gifter = d.gifter || d.sender || d.user || {};
+        y.kim = d.gifter_username || d.gifterUsername || gifter.username || gifter.slug || 'Topluluk Üyesi';
+        var alicilar = Array.isArray(d.gifted_usernames) ? d.gifted_usernames :
+                       (Array.isArray(d.recipients) ? d.recipients : (Array.isArray(d.users) ? d.users : []));
+        y.adet = alicilar.length || parseInt(d.count || d.quantity || d.amount || 1, 10) || 1;
+        y.alicilar = alicilar.slice(0, 10);
+        y.ts = Date.parse(d.created_at || d.timestamp) || Date.now();
+        y.eventKey = String(d.id || d.event_id || d.uuid || ('gift|' + y.kim + '|' + y.ts + '|' + y.adet));
+      } else if (ad === 'SubscriptionEvent') {
+        var abone = d.user || d.subscriber || {};
+        y.kim = d.username || d.subscriber_username || abone.username || abone.slug || 'Abone';
+        y.ay = d.months || d.duration || d.month || 1;
+        y.ts = Date.parse(d.created_at || d.timestamp) || Date.now();
+        y.eventKey = String(d.id || d.event_id || d.uuid || ('sub|' + y.kim + '|' + y.ts));
+      } else if (ad === 'LivestreamReactionEvent') {
+        y.kim = d.username || 'İzleyici';
+        y.reaksiyon = d.reaction || '';
+        y.kicks = parseInt(d.kicks || d.amount || 0, 10);
+        y.ts = Date.now();
+      } else if (ad === 'MessageDeletedEvent' || ad === 'ChatMessageDeletedEvent') {
+        var deletedMessage = d.message || {};
+        y.id = (deletedMessage.id || deletedMessage.message_id) || d.message_id || d.id || '';
+        // Bazı Kick event payload'ları silinen mesajın tam nesnesini de taşır.
+        // Sohbet mesajı tamponunda bulunamadığında içerik/kullanıcı için yedek.
+        y.kim = (deletedMessage.sender && deletedMessage.sender.username) ||
+                deletedMessage.username || d.username || '';
+        y.rol = enYuksekRol(deletedMessage.sender && deletedMessage.sender.identity && deletedMessage.sender.identity.badges);
+        y.roller = tumRoller(deletedMessage.sender && deletedMessage.sender.identity && deletedMessage.sender.identity.badges);
+        y.metin = String(deletedMessage.content || deletedMessage.message || deletedMessage.text || '').slice(0, 300);
+        y.renk = (deletedMessage.sender && deletedMessage.sender.identity && deletedMessage.sender.identity.color) || '';
+        var silTs = deletedMessage.created_at || d.created_at || d.timestamp;
+        y.ts = (typeof silTs === 'number' ? (silTs < 1e12 ? silTs * 1000 : silTs) : Date.parse(silTs)) || Date.now();
+        /* Kick bazı silme payload'larında işlemi yapan kullanıcıyı verir;
+           alan yoksa tahmin yürütmeyip boş bırak. */
+        var silen = d.deleted_by || d.deletedBy || d.moderator || d.moderator_user ||
+                    d.action_by || d.actor || deletedMessage.deleted_by || {};
+        y.yapan = (typeof silen === 'string' ? silen :
+                   (silen.username || silen.slug || silen.name || ''));
+        var om = (d.aiModerated != null) ? d.aiModerated : d.ai_moderated;
+        y.otoMod = (om == null) ? null : !!om;
+        var kr = d.violatedRules || d.violated_rules;
+        y.kural = Array.isArray(kr)
+          ? kr.filter(function (x) { return typeof x === 'string' && x; }).slice(0, 4)
+          : [];
+      } else if (ad === 'UserBannedEvent' || ad === 'UserUnbannedEvent' || ad === 'ModerationBannedEvent') {
+        var kullanici = d.user || d.banned_user || d.target || {};
+        var meta = d.metadata || d.ban || {};
+        y.kim = (typeof kullanici === 'string' ? kullanici : (kullanici.username || kullanici.slug)) || d.username || '';
+        var modKisi = d.banned_by || d.unbanned_by || d.moderator || {};
+        y.yapan = typeof modKisi === 'string' ? modKisi : (modKisi.username || modKisi.slug || modKisi.name || '');
+        y.kalici = d.permanent === true || (d.permanent !== false && d.permanent !== 0 &&
+          meta.expires_at == null && d.expires_at == null && !d.duration && !meta.duration);
+        y.bitis = d.expires_at || meta.expires_at || '';
+        var banTs = meta.created_at || d.created_at || d.timestamp;
+        y.ts = (typeof banTs === 'number' ? (banTs < 1e12 ? banTs * 1000 : banTs) : Date.parse(banTs)) || Date.now();
+        var bitisTs = typeof y.bitis === 'number' ? (y.bitis < 1e12 ? y.bitis * 1000 : y.bitis) : Date.parse(y.bitis);
+        if (bitisTs > 0) y.bitis = new Date(bitisTs).toISOString();
+        var sureHam = Number(d.duration || meta.duration || 0);
+        y.sure = sureHam ? sureHam * 60 : (bitisTs > y.ts ? Math.round((bitisTs - y.ts) / 1000) : 0);
+        y.sebep = String(d.reason || meta.reason || '').slice(0, 200);
+        y.itiraz = !!(d.unban_request || d.has_unban_request);
+        y.kalici = d.permanent === true || (d.permanent !== false && d.permanent !== 0 &&
+          meta.expires_at == null && d.expires_at == null && !sureHam);
+      } else {
+        y.ts = Date.now();
+      }
+      window.postMessage(y, '*');
+    }
+
+    /* ── YÖNTEM 1 (BİRİNCİL): Pusher.instances — eski, kanıtlanmış yol ── */
     function bagla() {
       var P = window.Pusher;
       var p = P && P.instances && P.instances[0];
       if (!p || !p.connection || !p.connection.bind) {
-        if (++deneme < 60) setTimeout(bagla, 1000);     // sohbet geç kuruluyor olabilir
+        if (++deneme < 15) setTimeout(bagla, 1000);
+        else wsFallback();     // Pusher bulunamadı → WS fallback
         return;
       }
       window.__kab_pusher_hook = true;
+      pkLog('Pusher.instances ile bağlandı');
+      /* Sohbet olayı gelmese bile taşıyıcı bağlantının gerçek durumu bilinsin.
+         Böylece sessiz sohbet yanlışlıkla kopuk gösterilmez. */
+      kabChatDurumBildir(p.connection.state);
+      p.connection.bind('state_change', function (d) { kabChatDurumBildir(d && d.current); });
       p.connection.bind('message', function (m) {
         try {
           var ad = String((m && m.event) || '').split('\\').pop();
@@ -539,59 +753,115 @@ function pkLog() {
           var d = m.data;
           if (typeof d === 'string') { try { d = JSON.parse(d); } catch (e) { return; } }
           if (!d) return;
-          /* Yalnızca ihtiyacımız olan alanları geçiriyoruz — ham gövdeyi
-             taşımıyoruz ki gereksiz veri izole tarafa sızmasın. */
-          var y = { source: 'kab', type: 'chatEvent', ad: ad, n: pageNonce };
-          if (ad === 'ChatMessageEvent') {
-            y.id = d.id;
-            y.kim = (d.sender && d.sender.username) || '';
-            y.metin = String(d.content || '').slice(0, 300);
-            y.ts = Date.parse(d.created_at) || Date.now();
-            y.rol = enYuksekRol(d.sender && d.sender.identity && d.sender.identity.badges);
-            y.renk = (d.sender && d.sender.identity && d.sender.identity.color) || '';
-            y.yanit = !!(d.metadata && (d.metadata.original_message || d.metadata.original_sender));
-            y.kicks = (d.metadata && d.metadata.kicks) || d.kicks || 0;
-            y.tip = d.type || '';
-          } else if (ad === 'GiftedSubscriptionsEvent') {
-            y.kim = d.gifter_username || (d.gifter && d.gifter.username) || 'Topluluk Üyesi';
-            var alicilar = Array.isArray(d.gifted_usernames) ? d.gifted_usernames : [];
-            y.adet = alicilar.length || parseInt(d.count || 1, 10);
-            y.alicilar = alicilar.slice(0, 10);
-            y.ts = Date.parse(d.created_at) || Date.now();
-          } else if (ad === 'SubscriptionEvent') {
-            y.kim = d.username || (d.user && d.user.username) || 'Abone';
-            y.ay = d.months || d.duration || 1;
-            y.ts = Date.parse(d.created_at) || Date.now();
-          } else if (ad === 'LivestreamReactionEvent') {
-            y.kim = d.username || 'İzleyici';
-            y.reaksiyon = d.reaction || '';
-            y.kicks = parseInt(d.kicks || d.amount || 0, 10);
-            y.ts = Date.now();
-          } else if (ad === 'MessageDeletedEvent') {
-            y.id = (d.message && d.message.id) || d.id || '';
-            var om = (d.aiModerated != null) ? d.aiModerated : d.ai_moderated;
-            y.otoMod = (om == null) ? null : !!om;
-            var kr = d.violatedRules || d.violated_rules;
-            y.kural = Array.isArray(kr)
-              ? kr.filter(function (x) { return typeof x === 'string' && x; }).slice(0, 4)
-              : [];
-          } else if (ad === 'UserBannedEvent' || ad === 'UserUnbannedEvent') {
-            y.kim = (d.user && d.user.username) || '';
-            y.yapan = (d.banned_by && d.banned_by.username) ||
-                      (d.unbanned_by && d.unbanned_by.username) || '';
-            y.kalici = !!d.permanent;
-            y.bitis = d.expires_at || '';
-            y.sebep = String(d.reason || (d.ban && d.ban.reason) || '').slice(0, 200);
-            y.itiraz = !!(d.unban_request || d.has_unban_request);
-            y.ts = Date.now();
-          } else {
-            y.ts = Date.now();
-          }
-          window.postMessage(y, '*');
+          olayIsle(ad, d);
         } catch (e) {}
       });
     }
+
+    /* ── YÖNTEM 2 (YEDEK): WebSocket mesajlarını dinle ──
+       WebSocket constructor'ını DEĞİŞTİRMİYORUZ — bu Kick'in Pusher
+       başlatmasını bozuyordu. Bunun yerine var olan WS bağlantılarına
+       addEventListener ile eklenir. Periyodik taramayla bulunur. */
+    function wsMesajIsle(ham) {
+      try {
+        if (typeof ham !== 'string' || ham.charCodeAt(0) !== 123) return;
+        var m = JSON.parse(ham);
+        if (!m || !m.event) return;
+        var ad = String(m.event).split('\\').pop();
+        if (!ilgiliMi(ad)) return;
+        var d = m.data;
+        if (typeof d === 'string') { try { d = JSON.parse(d); } catch (e) { return; } }
+        olayIsle(ad, d);
+      } catch (e) {}
+    }
+
+    // WeakSet bağlantıları tanımak için yeterli; kapanan socket'leri bellekte tutmaz.
+    var kancaliWS = new WeakSet();
+    function wsKancala(ws) {
+      if (!ws || kancaliWS.has(ws)) return;
+      kancaliWS.add(ws);
+      if (/pusher/i.test(String(ws.url || ''))) {
+        kabChatDurumBildir(ws.readyState === 1 ? 'connected' : 'connecting');
+        ws.addEventListener('open', function () { kabChatDurumBildir('connected'); });
+        ws.addEventListener('close', function () { kabChatDurumBildir('disconnected'); });
+        ws.addEventListener('error', function () { kabChatDurumBildir('unavailable'); });
+      }
+      ws.addEventListener('message', function (e) {
+        try { wsMesajIsle(e.data); } catch (er) {}
+      });
+      pkLog('WS fallback kancalandı:', ws.url);
+    }
+
+    function wsFallback() {
+      if (window.__kab_pusher_hook) return;
+      window.__kab_pusher_hook = true;
+      pkLog('Pusher bulunamadı, WS fallback aktif');
+      /* Mevcut ve gelecekteki WS bağlantılarını yakala:
+         WebSocket prototype'ındaki addEventListener'ı sarmala. */
+      var OrigWS = window.WebSocket;
+      var origDesc = Object.getOwnPropertyDescriptor(OrigWS.prototype, 'onmessage');
+      if (origDesc && origDesc.set) {
+        Object.defineProperty(OrigWS.prototype, 'onmessage', {
+          set: function (fn) {
+            wsKancala(this);
+            origDesc.set.call(this, fn);
+          },
+          get: origDesc.get,
+          configurable: true
+        });
+      }
+      /* Periyodik tarama: zaten açık bağlantıları da bul */
+      function tara() {
+        try {
+          /* Echo connector */
+          if (window.Echo && window.Echo.connector && window.Echo.connector.pusher) {
+            var ep = window.Echo.connector.pusher;
+            if (ep.connection && ep.connection.socket && ep.connection.socket.socket) {
+              wsKancala(ep.connection.socket.socket);
+            }
+          }
+          /* Pusher geç yüklendiyse */
+          var P2 = window.Pusher;
+          if (P2 && P2.instances && P2.instances[0]) {
+            var p2 = P2.instances[0];
+            if (p2.connection && p2.connection.socket && p2.connection.socket.socket) {
+              wsKancala(p2.connection.socket.socket);
+            }
+          }
+        } catch (e) {}
+      }
+      setTimeout(tara, 2000);
+      setTimeout(tara, 5000);
+      setTimeout(tara, 10000);
+      setTimeout(tara, 20000);
+    }
+
     bagla();
+    /* WS kancasını hemen başlat - Pusher bulunamazsa 15sn beklemeden
+       olayları yakala. Pusher bulunursa ikisi paralel çalışır;
+       olayIsle zaten content.js tarafında idempotent. */
+    setTimeout(function () {
+      if (!window.__kab_pusher_hook) {
+        wsFallback();
+      } else {
+        /* Pusher bulundu ama WS'yi de yedek olarak kancala */
+        try {
+          var P3 = window.Pusher;
+          if (P3 && P3.instances && P3.instances[0]) {
+            var p3 = P3.instances[0];
+            if (p3.connection && p3.connection.socket && p3.connection.socket.socket) {
+              wsKancala(p3.connection.socket.socket);
+            }
+          }
+          if (window.Echo && window.Echo.connector && window.Echo.connector.pusher) {
+            var ep2 = window.Echo.connector.pusher;
+            if (ep2.connection && ep2.connection.socket && ep2.connection.socket.socket) {
+              wsKancala(ep2.connection.socket.socket);
+            }
+          }
+        } catch (e) {}
+      }
+    }, 3000);
   })();
 
 
@@ -651,13 +921,18 @@ function pkLog() {
 
     function kur() {
       var kap = sohbetKabi();
-      if (!kap) return;
-      if (kap === izlenen && gozlemci) { hepsiniDamgala(kap); return; }
+      if (!kap) {
+        if (gozlemci) { gozlemci.disconnect(); gozlemci = null; }
+        izlenen = null;
+        return;
+      }
+      if (kap === izlenen && gozlemci) return;
       if (gozlemci) { gozlemci.disconnect(); gozlemci = null; }
       izlenen = kap;
       hepsiniDamgala(kap);
       gozlemci = new MutationObserver(function (muts) {
         for (var i = 0; i < muts.length; i++) {
+          if (muts[i].type === 'attributes') { damgala(muts[i].target); continue; }
           var ek = muts[i].addedNodes;
           for (var j = 0; j < ek.length; j++) {
             var n = ek[j];
@@ -672,13 +947,13 @@ function pkLog() {
         }
       });
       /* subtree: sanallaştırılmış liste satırları ara kapta oluşabiliyor. */
-      try { gozlemci.observe(kap, { childList: true, subtree: true }); } catch (e) {}
+      try { gozlemci.observe(kap, { childList: true, subtree: true, attributes: true, attributeFilter: ['data-index'] }); } catch (e) {}
     }
 
     /* Kanal değişince React kabı değiştiriyor — periyodik kontrol ucuz ve
        kaçırmıyor. Sekme görünmezken de çalışsın: damgalama DOM'a bakıyor,
        maliyeti yok denecek kadar az. */
-    setInterval(kur, 2000);
+    setInterval(kur, 5000);
     kur();
   })();
 

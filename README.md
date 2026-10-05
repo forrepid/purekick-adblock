@@ -8,7 +8,7 @@
 
 [![GitHub license](https://img.shields.io/badge/license-Proprietary-blue.svg)](LICENSE)
 [![Manifest Version](https://img.shields.io/badge/Manifest-V3-brightgreen.svg)](manifest.json)
-[![PureKick Version](https://img.shields.io/badge/Version-10.18-orange.svg)](manifest.json)
+[![PureKick Version](https://img.shields.io/badge/Version-10.19.10-orange.svg)](manifest.json)
 [![Platform](https://img.shields.io/badge/Platform-Kick.com-53fc18.svg)](https://kick.com)
 
 </div>
@@ -17,7 +17,7 @@
 
 ## 📖 Genel Bakış
 
-**PureKick**, Kick.com canlı yayın platformu için özel olarak geliştirilmiş, tarayıcı tabanlı (Manifest V3) kapsamlı bir süper eklentidir. Yalnızca reklamları engellemekle kalmaz; canlı yayınları yapay zeka ile anında çevirip seslendirir, videoyu büyütüp kaydırmanızı sağlar, sohbetin nabzını (Hype) ölçer, yayıncıya gönderilen bağışları/Kicks'leri kaydeder ve profilinizi 25 farklı canlı animasyonla özelleştirir.
+**PureKick**, Kick.com canlı yayın platformu için özel olarak geliştirilmiş, tarayıcı tabanlı (Manifest V3) kapsamlı bir süper eklentidir. Yalnızca reklamları engellemekle kalmaz; canlı yayınları yapay zeka ile anında çevirip seslendirir, videoyu büyütüp kaydırmanızı sağlar, yayıncıya gönderilen bağışları/Kicks'leri kaydeder ve profilinizi 25 farklı canlı animasyonla özelleştirir.
 
 ---
 
@@ -39,14 +39,6 @@
 * **%100 - %500 Yakınlaştırma:** `Alt + Fare Tekerleği` veya video kontrol çubuğundaki `[🔍 Zoom]` butonu ile istenen bölgeye pürüzsüz büyüteç.
 * **Pan & Sürükleme:** Büyütüldüğünde fareyle video içinde serbestçe gezinerek mini harita, skor tablosu veya küçük detayları inceleme.
 * **Hızlı Sıfırlama:** `Çift Tık` veya sağ üstteki durum rozetine tıklayarak anında orijinal boyuta dönme.
-
-### 📊 4. Canlı Sohbet Duygu & Hype Analizi (Chat Sentiment & Hype Meter)
-* **Gerçek Zamanlı Duygu Taraması:** Sohbetteki mesajları ve emote'ları sürekli sınıflandırır:
-  * 🔥 **Hype / Coşku:** `W`, `LETSGO`, `POG`, `HYPER`, `EZ`, `🔥`, `🏆`
-  * 😂 **Kahkaha / Mizah:** `KEKW`, `LMAO`, `HAHA`, `LOL`, `😂`, `💀`
-  * 😲 **Şaşkınlık / Şok:** `WTF`, `OMG`, `NANI`, `😱`, `🤯`
-  * 💔 **Üzüntü / Saygı:** `L`, `F`, `RIP`, `AGAB`, `😭`, `💔`
-* **Canlı Hype İbresi & Mesaj Hızı:** Sohbetin hemen üstünde anlık `msg/dk` hızı ve yüzdelik duygu dağılımı. Hype tavan yaptığında **🔥 MEGA HYPE** animasyonu aktifleşir.
 
 ### 📝 5. AI Yayın Özeti & Kaçırılanları Yakala ("Ne Kaçırdım?" / TL;DR)
 * Yayına sonradan katılan izleyiciler için video kontrol çubuğundaki `[📝 Ne Kaçırdım?]` butonu.
@@ -114,10 +106,13 @@
 
 Detaylı sürüm geçmişi ve versiyon bazlı değişiklikler için [CHANGELOG.md](CHANGELOG.md) dosyasını inceleyebilirsiniz.
 
-* **v10.18 (Son Sürüm):**
+* **v10.19.10 (Son Sürüm):**
+  * 🖼️ Instagram gönderi/reel, X/Twitter, Kick ve genel web bağlantıları için platform kaynaklı görsel önizleme.
+  * 🔎 Lightshot bağlantılarını eklenti penceresinde açma ve görselini bulma.
+  * 💬 Sohbet arşivi, moderasyon/silinen mesaj kayıtları ve izleyici örnekleri iyileştirmeleri.
+  * 🎥 VOD ve oynatıcı geçişlerinde kararlılık düzeltmeleri.
   * 🎙️ Canlı Altyazı & Sesli AI Dublaj Motoru (Audio Ducking ve 25+ dil entegrasyonu).
   * 🔍 Video İçi Dijital Büyüteç & Yakınlaştırma (Digital Zoom & Pan).
-  * 📊 Canlı Sohbet Duygu & Hype Analizi (Hype Meter & msg/dk sayacı).
   * 📝 AI Yayın Özeti & Kaçırılanları Yakala ("Ne Kaçırdım?" TL;DR bülteni).
   * 💰 Canlı Yayın Bağış, Kicks, Hediye Abonelik & Blerp İstatistik Takipçisi (CSV dışa aktarma).
   * 🎨 25 Farklı Doğa/Element/Büyü İsim Animasyon Efekti ve `🚫 Efektsiz (Varsayılan)` seçeneği.

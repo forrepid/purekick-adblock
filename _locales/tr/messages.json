@@ -182,6 +182,12 @@
    "pkAyarYedegiD": {
       "message": "Tüm ayarların ve listelerin tek bir dosyada. Sunucuya hiçbir şey gitmez."
    },
+   "pkAramaAyarlar": {
+      "message": "Ayarlarda ara..."
+   },
+   "pkAramaSonucYok": {
+      "message": "Eşleşen ayar bulunamadı"
+   },
    "pkAyarlar": {
       "message": "PureKick ayarları"
    },
@@ -475,6 +481,9 @@
    },
    "pkEkranGoruntusuD": {
       "message": "O anki kareyi PNG olarak indirir."
+   },
+   "pkVideoKayit": {
+      "message": "Video Kaydedici"
    },
    "pkEminMisin": {
       "message": "Emin misin?"
@@ -1602,10 +1611,16 @@
       "message": "Bağlantıları sayfa içinde aç"
    },
    "pkSekmeIciD": {
-      "message": "Sohbetteki YouTube, X, Instagram, Reddit, Kick klip, Twitch klip ve Streamable bağlantıları küçük bir oynatıcıda açılır."
+      "message": "Sohbetteki bağlantılar tıklanınca önce pencere içi önizlemede açılır. Uygun video ve sosyal medya bağlantıları oynatıcıda; diğer siteler thumbnail veya medya önizlemesinde gösterilir."
    },
    "pkSekmeIciNot": {
-      "message": "Yalnız bu siteler açılır; tanınmayan bağlantı her zamanki gibi yeni sekmede açılır. CTRL ile tıklarsan yine yeni sekme."
+      "message": "Pencere içi açılışı kapatmak için ayarı kapatın. CTRL, ⌘ veya Shift ile tıklamak bağlantıyı normal biçimde açar."
+   },
+   "pkLinkOnizleme": {
+      "message": "Canlı Önizleme Kartları"
+   },
+   "pkLinkOnizlemeD": {
+      "message": "Sohbetteki bağlantıların altına otomatik olarak canlı thumbnail önizleme kartları gösterir."
    },
    "pkSendenBahsedenler": {
       "message": "Senden bahsedenler"

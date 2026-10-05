@@ -182,6 +182,12 @@
    "pkAyarYedegiD": {
       "message": "All your settings and lists in one file. Nothing is sent to a server."
    },
+   "pkAramaAyarlar": {
+      "message": "Search settings..."
+   },
+   "pkAramaSonucYok": {
+      "message": "No matching settings found"
+   },
    "pkAyarlar": {
       "message": "PureKick settings"
    },
@@ -475,6 +481,9 @@
    },
    "pkEkranGoruntusuD": {
       "message": "Downloads the current frame as PNG."
+   },
+   "pkVideoKayit": {
+      "message": "Video Recorder"
    },
    "pkEminMisin": {
       "message": "Are you sure?"
@@ -1606,6 +1615,12 @@
    },
    "pkSekmeIciNot": {
       "message": "Only these sites open inline; an unknown link opens in a new tab as usual. CTRL+click always opens a new tab."
+   },
+   "pkLinkOnizleme": {
+      "message": "Live Preview Cards"
+   },
+   "pkLinkOnizlemeD": {
+      "message": "Automatically shows live thumbnail preview cards below links in chat."
    },
    "pkSendenBahsedenler": {
       "message": "Who mentioned you"

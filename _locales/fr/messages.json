@@ -182,6 +182,12 @@
    "pkAyarYedegiD": {
       "message": "Tous tes réglages et listes dans un fichier. Rien n'est envoyé à un serveur."
    },
+   "pkAramaAyarlar": {
+      "message": "Rechercher dans les réglages..."
+   },
+   "pkAramaSonucYok": {
+      "message": "Aucun réglage correspondant trouvé"
+   },
    "pkAyarlar": {
       "message": "Réglages PureKick"
    },
@@ -1606,6 +1612,12 @@
    },
    "pkSekmeIciNot": {
       "message": "Seuls ces sites s'ouvrent en ligne ; un lien inconnu ouvre un nouvel onglet. CTRL+clic ouvre toujours un nouvel onglet."
+   },
+   "pkLinkOnizleme": {
+      "message": "Cartes d'aperçu en direct"
+   },
+   "pkLinkOnizlemeD": {
+      "message": "Affiche automatiquement des cartes d'aperçu miniature sous les liens dans le chat."
    },
    "pkSendenBahsedenler": {
       "message": "Qui t'a mentionné"

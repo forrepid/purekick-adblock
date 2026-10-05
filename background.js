@@ -38,7 +38,7 @@ var DEFAULT_SETTINGS = {
   hizliMod: false, istatistik: true, kartBilgi: true, kartSagTik: false,
   kartTakipci: true, kartMesajlar: true, kategoriGizle: true, kisiGizle: true,
   mentionAd: '', mesajEylem: true, modGunluk: true, modSerit: true, modSohbette: true, notlar: true,
-  kelimeVurgu: true, oncelik: true, onizleme: true, otoKalite: '1080', otoSes: 'oto', otoTiyatro: false, rolVurgu: true,
+  kelimeVurgu: true, oncelik: true, onizleme: true, otoKalite: '1080', otoSes: 'oto', otoTiyatro: false, rolVurgu: true, rolVurguModu: 'dairesel',
   hakkindaEk: true, kenarGrup: true, kuralKabul: false, sabitKanal: true, sagTik: false, scEtiket: true, scFiltreCubugu: true, scSayac: true, sekmeIci: true, showBadge: true, silinenGoster: true, ssBirincil: 'indir',
   ssIkincil: 'pano', tamEkranSon: true, temizlemeKoru: false, tiyatroNav: false, uyarHiz: true,
   videoIstat: true, yanSohbet: true,
@@ -48,8 +48,8 @@ var DEFAULT_SETTINGS = {
   emoteSpamFiltre: true, izlemeSureTakip: true, kanalNotlari: true, hizliModGoster: true,
   cokluYayin: true,
   /* 10.17 Gelişmiş Özellikler */
-  pipMod: true, sesYukseltici: 100, videoParlaklik: 100, videoKontrast: 100, videoDoygunluk: 100,
-  oledMod: false, sohbetSekmeler: true, sohbetDondur: true, guvenliLinkKalkan: true,
+  pipMod: true, sesYukseltici: 100, sesBoostGoster: false, videoParlaklik: 100, videoKontrast: 100, videoDoygunluk: 100,
+  oledMod: false, sohbetSekmeler: true, sohbetDondur: true, sohbetAltBoslukPx: 0, guvenliLinkKalkan: true,
   sohbetFontBoyut: 'orta', sohbetFontFamily: 'varsayilan',
   sohbetCeviri: true, ceviriDili: 'tr', otomatikCevir: false, kaynakDil: 'auto', ceviriModu: 'oto',
   /* 10.18 Mega Yenilikler */
@@ -58,9 +58,14 @@ var DEFAULT_SETTINGS = {
   canliAltyazi: false, sesliDublaj: false,
   altyaziKaynakDil: 'auto', altyaziHedefDil: 'tr',
   altyaziFontBoyut: 16, altyaziRenk: '#facc15', altyaziKalinlik: '700', altyaziBgOpaklik: 75, altyaziKonum: 'alt',
-  holoKartEfekt: 'pikachu', kartTipi: 'koleksiyon', koleksiyonKartDosya: 'card_1.jpg', ozelKartUrl: '', profilKartBase64: '',
+  holoKartEfekt: 'varsayilan', kartTipi: 'yok', koleksiyonKartDosya: 'card_1.jpg', ozelKartUrl: '', profilKartBase64: '',
   aydinlikTema: false, emoteBoyut: 36,
-  videoZoom: true, hypeOlcer: true, aiYayinOzet: true
+  videoZoom: true, aiYayinOzet: true, linkOnizleme: true,
+  /* 10.20 Profesyonel Video Kaydedici */
+  videoKayit: true, vidCodec: 'oto', vidKalite: 'yuksek', vidSes: true,
+  vidMaksSure: 120, vidDosyaSablon: '{kanal}-{tarih}-{saat}', vidBitince: 'indir', vidKisakol: 'Alt+R',
+  vidKlipKomutAcik: true, vidKlipKomut: 'clip',
+  vidKlipAtamalari: [{ tus: 'Alt+1', saniye: 15 }, { tus: 'Alt+2', saniye: 30 }, { tus: 'Alt+3', saniye: 60 }]
 };
 var DEFAULT_STATS = { domHidden: 0, videoAdsBlocked: 0 };
 
@@ -83,7 +88,11 @@ function getStats() { return getLocal('stats', DEFAULT_STATS); }
 // DNR reklam kuralları yalnızca onay + etkin durumda açık kalır.
 function syncRuleset() {
   return getSettings().then(function (s) {
-    var on = s.consented && s.enabled;
+    /* Alan adları ayrı kapatılabilir. Statik ağ reklam kuralları sayfa ve
+       canlı reklam filtrelerinin yedek katmanı olduğundan ikisi de kapalıysa
+       açık bırakılmamalı; aksi hâlde kullanıcı özellikleri kapatsa da istekler
+       engellenmeye devam eder. VOD engeli kendi playback kancasını kullanır. */
+    var on = !!(s.consented && s.enabled && (s.blockDom !== false || s.blockVideoAds !== false));
     try {
       return chrome.declarativeNetRequest.updateEnabledRulesets(
         on ? { enableRulesetIds: ['ad_rules'] } : { disableRulesetIds: ['ad_rules'] }
@@ -93,6 +102,307 @@ function syncRuleset() {
 }
 
 function updateBadge() { chrome.action.setBadgeText({ text: '' }); }
+
+/* Instagram profil kartı: yalnız kullanıcının açtığı profil adını alır,
+   aynı tarayıcı oturumuyla Instagram'ın profil API'sinden avatar/başlık ister.
+   Görseli harici ekran görüntüsü servisine göndermeyiz; sonuç bellekte tutulur. */
+var IG_PROFILE_CACHE = Object.create(null);
+var IG_PROFILE_PENDING = Object.create(null);
+function instagramProfilOnizlemesi(username) {
+  var nick = String(username || '').replace(/^@/, '').trim();
+  if (!/^[A-Za-z0-9._]{1,30}$/.test(nick)) return Promise.resolve(null);
+  var key = nick.toLowerCase(), cached = IG_PROFILE_CACHE[key];
+  if (cached && Date.now() - cached.ts < (cached.value ? 30 * 60 * 1000 : 2 * 60 * 1000)) return Promise.resolve(cached.value);
+  if (IG_PROFILE_PENDING[key]) return IG_PROFILE_PENDING[key];
+
+  var api = 'https://www.instagram.com/api/v1/users/web_profile_info/?username=' + encodeURIComponent(nick);
+  var headers = { 'Accept': 'application/json', 'X-IG-App-ID': '936619743392459',
+                  'X-Requested-With': 'XMLHttpRequest', 'Referer': 'https://www.instagram.com/' + encodeURIComponent(nick) + '/' };
+  function imageUrlOk(url) { return /^https:\/\/[^/]*(?:fbcdn\.net|cdninstagram\.com)\//i.test(url || ''); }
+  function profileFromJson(j) {
+    var u = j && j.data && j.data.user;
+    if (!u) return null;
+    var avatar = u.profile_pic_url_hd || u.profile_pic_url || '';
+    var edges = u.edge_owner_to_timeline_media && u.edge_owner_to_timeline_media.edges;
+    if ((!edges || !edges.length) && u.edge_felix_video_timeline) edges = u.edge_felix_video_timeline.edges;
+    edges = edges || [];
+    var node = edges[0] && edges[0].node;
+    var children = node && node.edge_sidecar_to_children && node.edge_sidecar_to_children.edges;
+    if (node && node.__typename === 'GraphSidecar' && children && children[0]) node = children[0].node || node;
+    var resources = node && node.display_resources;
+    var versions = node && node.image_versions2 && node.image_versions2.candidates;
+    var preview = node && (node.thumbnail_src || node.display_url ||
+      (resources && resources.length && resources[resources.length - 1].src) ||
+      (versions && versions.length && versions[0].url));
+    return imageUrlOk(avatar) ? { avatar: avatar, preview: imageUrlOk(preview) ? preview : '',
+      name: u.full_name || '', username: u.username || nick } : null;
+  }
+  function profileFromHtml(html) {
+    var meta = html.match(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)/i) ||
+               html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i);
+    var avatar = meta && meta[1] && imageUrlOk(meta[1]) ? meta[1].replace(/&amp;/g, '&') : '';
+    var re = /"(?:profile_pic_url_hd|profile_pic_url)"\s*:\s*"((?:\\.|[^"\\])+)"/g, m;
+    while (!avatar && (m = re.exec(html))) {
+      try {
+        var candidateAvatar = JSON.parse('"' + m[1] + '"').replace(/\\u0026/g, '&');
+        if (imageUrlOk(candidateAvatar)) { avatar = candidateAvatar; break; }
+      } catch (e) {}
+    }
+    var mediaRe = /"(?:display_url|thumbnail_src|video_thumbnail)"\s*:\s*"((?:https?:\\\/\\\/|https?:\/\/)[^"\\]+)"/g;
+    var preview = '';
+    while ((m = mediaRe.exec(html))) {
+      try {
+        var media = JSON.parse('"' + m[1] + '"').replace(/\\u0026/g, '&').replace(/\\\//g, '/');
+        if (imageUrlOk(media)) { preview = media; break; }
+      } catch (e) {}
+    }
+    return avatar || preview ? { avatar: avatar, preview: preview, name: '', username: nick } : null;
+  }
+  var request = fetch(api, { credentials: 'include', cache: 'no-store', headers: headers })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (j) {
+      var v = profileFromJson(j);
+      if (v) return v;
+      return fetch('https://www.instagram.com/' + encodeURIComponent(nick) + '/',
+                   { credentials: 'include', cache: 'no-store', headers: { 'Accept': 'text/html' } })
+        .then(function (r) { return r.ok ? r.text() : ''; })
+        .then(profileFromHtml);
+    })
+    .then(function (value) {
+      IG_PROFILE_CACHE[key] = { ts: Date.now(), value: value || null };
+      delete IG_PROFILE_PENDING[key];
+      return value;
+    })
+    .catch(function () { IG_PROFILE_CACHE[key] = { ts: Date.now(), value: null }; delete IG_PROFILE_PENDING[key]; return null; });
+  IG_PROFILE_PENDING[key] = request;
+  return request;
+}
+
+/* Sohbet link kartları için platformun kendi herkese açık metadata'sı.
+   Sadece izin verilen platformları okur; çerez/oturum göndermez ve sonucu
+   kısa süre bellekte tutar. Üçüncü taraf thumbnail proxy'si kullanılmaz. */
+var LP_META_CACHE = Object.create(null), LP_META_PENDING = Object.create(null);
+function linkOnizlemeMetadata(urlHam) {
+  var u;
+  try { u = new URL(String(urlHam || '')); } catch (e) { return Promise.resolve(null); }
+  if ((u.protocol !== 'https:' && u.protocol !== 'http:') || u.username || u.password) return Promise.resolve(null);
+  var host = u.hostname.toLowerCase().replace(/^www\./, '');
+  if (!host || host === 'localhost' || /(^|\.)(localhost|local|internal)$/.test(host) ||
+      /^(127\.|10\.|192\.168\.|169\.254\.)/.test(host) ||
+      /^172\.(1[6-9]|2\d|3[01])\./.test(host) || /^\d{1,3}(\.\d{1,3}){3}$/.test(host) || host.indexOf(':') >= 0) return Promise.resolve(null);
+  var id = '';
+  var tur = '';
+  if (host === 'streamable.com') { id = (u.pathname.match(/^\/(?:e\/)?([\w]+)/) || [])[1] || ''; tur = 'streamable'; }
+  else if (host === 'instagram.com') { id = (u.pathname.match(/^\/(?:p|reel|reels|tv)\/([\w-]+)/) || [])[1] || ''; tur = 'instagram'; }
+  else if (host === 'x.com' || host === 'twitter.com') {
+    id = (u.pathname.match(/^\/[^/]+\/status(?:es)?\/(\d+)/) || [])[1] || '';
+    if (id) tur = 'x'; // profil/arama/ana sayfa URL'leri genel HTML metadata okuyucusuna düşsün
+  }
+  else if (host === 'kick.com') {
+    var clipId = (u.pathname.match(/^\/[^/]+\/clips?\/([\w-]+)/) || [])[1] || '';
+    var channelSlug = (u.pathname.match(/^\/([\w-]+)\/?$/) || [])[1] || '';
+    if (clipId) { id = clipId; tur = 'kick-clip'; }
+    else if (channelSlug) { id = channelSlug; tur = 'kick-channel'; }
+  }
+  else if (host === 'tiktok.com' || host === 'vm.tiktok.com' || host === 'vt.tiktok.com') { id = u.pathname; tur = 'tiktok'; }
+  else if (host === 'prnt.sc' || host === 'prntscr.com') { id = (u.pathname.match(/^\/([\w-]+)/) || [])[1] || ''; tur = 'lightshot'; }
+  if (!tur) { tur = 'generic'; id = u.pathname + u.search; }
+  if (!id) return Promise.resolve(null);
+  var instagramEmbedUrl = '';
+  if (tur === 'instagram') {
+    var igPath = u.pathname.match(/^\/(?:share\/)?(p|reel|reels|tv)\/([\w-]+)/i);
+    if (igPath) {
+      var igKind = /^reels?$/i.test(igPath[1]) ? 'reel' : igPath[1].toLowerCase();
+      instagramEmbedUrl = 'https://www.instagram.com/' + igKind + '/' + encodeURIComponent(igPath[2]) + '/embed/captioned/';
+    }
+  }
+  var key = tur + ':' + (tur === 'generic' ? host + ':' : '') + id, old = LP_META_CACHE[key];
+  if (old && Date.now() - old.ts < (old.value ? (tur === 'streamable' ? 5 * 60 * 1000 : 60 * 60 * 1000) : 30 * 1000)) return Promise.resolve(old.value);
+  if (LP_META_PENDING[key]) return LP_META_PENDING[key];
+  function istegiBaslat() {
+  var reqUrl = u.href;
+  if (tur === 'streamable') reqUrl = 'https://api.streamable.com/videos/' + encodeURIComponent(id);
+  else if (tur === 'tiktok') reqUrl = 'https://www.tiktok.com/oembed?url=' + encodeURIComponent(u.href);
+  else if (tur === 'instagram' && instagramEmbedUrl) reqUrl = instagramEmbedUrl;
+  else if (tur === 'kick-channel') reqUrl = 'https://kick.com/api/v2/channels/' + encodeURIComponent(id);
+  else if (tur === 'kick-clip') reqUrl = 'https://stream.kick.com/thumbnails/clips/' + encodeURIComponent(id) + '.jpg';
+  var controller = new AbortController(), timer = setTimeout(function () { controller.abort(); }, 7000);
+  function htmlSinirliOku(response) {
+    if (!response.body || !response.body.getReader) {
+      return response.text().then(function (html) { return { html: html.slice(0, 1500000), finalUrl: response.url || u.href }; });
+    }
+    var reader = response.body.getReader(), decoder = new TextDecoder(), html = '', limit = 1500000;
+    function okuParca() {
+      return reader.read().then(function (parca) {
+        if (parca.done) { html += decoder.decode(); return { html: html, finalUrl: response.url || u.href }; }
+        var kalan = limit - html.length;
+        if (kalan > 0) html += decoder.decode(parca.value.subarray(0, kalan), { stream: true });
+        if (parca.value.length > kalan) {
+          return reader.cancel().catch(function () {}).then(function () {
+            html += decoder.decode();
+            return { html: html, finalUrl: response.url || u.href };
+          });
+        }
+        return okuParca();
+      });
+    }
+    return okuParca();
+  }
+  var req = fetch(reqUrl, { credentials: 'omit', cache: 'no-store', signal: controller.signal,
+    headers: { 'Accept': (tur === 'streamable' || tur === 'tiktok' || tur === 'kick-channel') ? 'application/json' : (tur === 'kick-clip' ? 'image/*' : 'text/html,application/xhtml+xml') } })
+    .then(function (r) {
+      if (!r.ok) throw new Error('metadata unavailable');
+      if (tur === 'kick-clip') return { __directImage: reqUrl };
+      if (tur === 'streamable' || tur === 'tiktok' || tur === 'kick-channel') return r.json();
+      var ct = String(r.headers.get('content-type') || '').toLowerCase();
+      if (ct && ct.indexOf('text/html') < 0 && ct.indexOf('application/xhtml+xml') < 0) return '';
+      if (Number(r.headers.get('content-length') || 0) > 1500000) throw new Error('metadata page too large');
+      return htmlSinirliOku(r);
+    })
+    .then(function (data) {
+      var title = '', image = '', imageKind = '';
+      if (tur === 'streamable') {
+        title = String(data.title || '').trim();
+        image = String(data.thumbnail_url || '');
+        if (image.indexOf('//') === 0) image = 'https:' + image;
+      } else if (tur === 'tiktok') {
+        title = String(data.title || '').trim();
+        image = String(data.thumbnail_url || data.thumbnail_url_100 || '');
+      } else if (tur === 'kick-channel') {
+        var stream = data && data.livestream || {};
+        var channelUser = data && data.user || {};
+        title = String(stream.session_title || channelUser.username || data.slug || '').trim();
+        image = String((stream.thumbnail && (stream.thumbnail.url || stream.thumbnail.src)) ||
+          (data.banner_image && (data.banner_image.url || data.banner_image.src)) || channelUser.profile_pic || '');
+      } else if (tur === 'kick-clip') {
+        image = String(data.__directImage || '');
+      } else {
+        var html = String(data && data.html || '').slice(0, 1500000), tags = html.match(/<meta\b[^>]*>/gi) || [];
+        function attr(tag, name) { var m = tag.match(new RegExp("\\b" + name + "\\s*=\\s*(?:\"([^\"]*)\"|'([^']*)')", 'i')); return m ? (m[1] || m[2] || '') : ''; }
+        function attrAny(tag, name) { var m = tag.match(new RegExp('\\b' + name + '\\s*=\\s*(?:"([^"]*)"|\'([^\']*)\'|([^\\s>]+))', 'i')); return m ? (m[1] || m[2] || m[3] || '') : ''; }
+        for (var i = 0; i < tags.length; i++) {
+          var tag = tags[i], prop = (attr(tag, 'property') || attr(tag, 'name')).toLowerCase(), val = attr(tag, 'content');
+          if (!title && (prop === 'og:title' || prop === 'twitter:title')) title = val;
+          if (!image && (prop === 'og:image' || prop === 'og:image:secure_url' || prop === 'twitter:image' || prop === 'twitter:image:src' || prop === 'image')) image = val;
+          if (title && image) break;
+        }
+        if (!image && tur === 'instagram') {
+          var embeddedImageTag = html.match(/<img\b[^>]*class=["'][^"']*\bEmbeddedMediaImage\b[^"']*["'][^>]*>/i);
+          if (embeddedImageTag) image = attrAny(embeddedImageTag[0], 'src');
+          if (image) image = image.replace(/&amp;/g, '&');
+        }
+        if (!image && tur === 'instagram') {
+          var igImage = html.match(/"(?:display_url|thumbnail_src|video_thumbnail)"\s*:\s*"((?:https?:\\\/\\\/|https?:\/\/)[^"\\]+)"/i);
+          if (igImage) image = igImage[1].replace(/\\u0026/g, '&').replace(/\\\//g, '/');
+        }
+        if (!title) {
+          var titleTag = html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i);
+          if (titleTag) title = titleTag[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+        }
+        if (!image) {
+          var imageLink = html.match(/<link\b(?=[^>]*\brel=["'][^"']*image_src[^"']*["'])[^>]*>/i);
+          if (imageLink) image = attr(imageLink[0], 'href');
+        }
+        if (!image) {
+          var itempropTags = html.match(/<meta\b[^>]*\bitemprop=["']image["'][^>]*>/i);
+          if (itempropTags) image = attr(itempropTags[0], 'content');
+        }
+        if (!image && tur === 'generic') {
+          var ldScripts = html.match(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi) || [];
+          function jsonImage(v, depth) {
+            if (!v || depth > 5) return '';
+            if (typeof v === 'string') return v;
+            if (Array.isArray(v)) { for (var ai = 0; ai < v.length; ai++) { var av = jsonImage(v[ai], depth + 1); if (av) return av; } return ''; }
+            if (typeof v !== 'object') return '';
+            var direct = v.thumbnailUrl || v.contentUrl || v.url;
+            if (typeof direct === 'string' && /^(https?:|\/\/|\/)/i.test(direct)) return direct;
+            if (v.image) { var im = jsonImage(v.image, depth + 1); if (im) return im; }
+            for (var prop in v) if (Object.prototype.hasOwnProperty.call(v, prop) && prop !== 'image') { var nested = jsonImage(v[prop], depth + 1); if (nested) return nested; }
+            return '';
+          }
+          for (var li = 0; li < ldScripts.length && !image; li++) {
+            var jsonBody = ldScripts[li].replace(/^<[\s\S]*?>/i, '').replace(/<\/script>\s*$/i, '');
+            try { image = jsonImage(JSON.parse(jsonBody), 0); } catch (e) {}
+          }
+        }
+        /* Social image yoksa sayfa içeriğinden gerçek görsel seç; küçük
+           avatar/logo/izleyici pikselini atlayıp daha büyük içerik resmine düş. */
+        if (!image && tur === 'generic') {
+          var imageTags = html.match(/<img\b[^>]*>/gi) || [], candidates = [];
+          for (var ii = 0; ii < imageTags.length && ii < 120; ii++) {
+            var it = imageTags[ii], srcset = attrAny(it, 'srcset') || attrAny(it, 'data-srcset'), bestSet = '', bestWidth = 0;
+            if (srcset) srcset.split(',').forEach(function (entry) {
+              var part = entry.trim().split(/\s+/), w = parseInt((part[1] || '').replace(/w$/i, ''), 10) || 0;
+              if (part[0] && w >= bestWidth) { bestSet = part[0]; bestWidth = w; }
+            });
+            var src = attrAny(it, 'data-src') || attrAny(it, 'data-lazy-src') || attrAny(it, 'data-original') || bestSet || attrAny(it, 'src');
+            var alt = (attrAny(it, 'alt') || '').toLowerCase(), srcLower = src.toLowerCase();
+            if (!src || /^(data:|blob:|javascript:)/i.test(src) || /\.svg(?:[?#]|$)/i.test(src) ||
+                /(avatar|logo|icon|emoji|badge|spinner|tracking|pixel|banner-ad|\/ads?\/)/i.test(srcLower + ' ' + alt)) continue;
+            var width = parseInt(attrAny(it, 'width') || '0', 10) || bestWidth;
+            var height = parseInt(attrAny(it, 'height') || '0', 10) || 0;
+            if ((width && width < 140) || (height && height < 90)) continue;
+            var score = (width >= 300 ? 3 : (width >= 140 ? 1 : 0)) + (height >= 160 ? 2 : 0) - ii / 1000;
+            candidates.push({ src: src, score: score });
+          }
+          candidates.sort(function (a, b) { return b.score - a.score; });
+          if (candidates.length) image = candidates[0].src;
+        }
+        // Lightshot sayfalarında gerçek ekran görüntüsü, varsa favicon'dan
+        // önce seçilmeli; ikon yalnızca gerçek görsel bulunamadığında kullanılır.
+        if (!image && tur === 'lightshot') {
+          var shot = html.match(/<img\b[^>]*id=["']screenshot-image["'][^>]*>/i) || html.match(/<img\b[^>]*class=["'][^"']*screenshot-image[^"']*["'][^>]*>/i);
+          var src = shot && (shot[0].match(/\bsrc=["']([^"']*)["']/i) || [])[1];
+          if (!src && shot) src = (shot[0].match(/\bdata-src=["']([^"']+)["']/i) || [])[1];
+          if (src) { image = src; imageKind = 'screenshot'; }
+        }
+        if (tur === 'lightshot' && image && !imageKind) imageKind = 'screenshot';
+        /* Son fallback: sitenin kendi touch icon / favicon'u. Google favicon
+           proxy'si veya thumbnail servisi kullanılmaz. */
+        if (!image && (tur === 'generic' || tur === 'lightshot' || tur === 'kick-channel')) {
+          var iconLinks = html.match(/<link\b[^>]*>/gi) || [];
+          for (var fi = 0; fi < iconLinks.length; fi++) {
+            var rel = attrAny(iconLinks[fi], 'rel').toLowerCase();
+            if (/(apple-touch-icon|icon)/.test(rel)) {
+              image = attrAny(iconLinks[fi], 'href');
+              if (image) break;
+            }
+          }
+        }
+        if (image && image.indexOf('//') === 0) image = 'https:' + image;
+        if (image && !/^https?:\/\//i.test(image)) {
+          try { image = new URL(image, (data && data.finalUrl) || u.href).href; } catch (e) { image = ''; }
+        }
+        if (!image && (tur === 'generic' || tur === 'lightshot' || tur === 'kick-channel')) {
+          try { image = new URL('/favicon.ico', (data && data.finalUrl) || u.href).href; } catch (e) { image = ''; }
+        }
+      }
+      title = title.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').trim().slice(0, 240);
+      try {
+        var img = new URL(image);
+        var ok = false;
+        if (tur === 'generic') ok = !(/(^|\.)(localhost|local|internal)$/.test(img.hostname) || /^(127\.|10\.|192\.168\.|169\.254\.)/.test(img.hostname) || /^172\.(1[6-9]|2\d|3[01])\./.test(img.hostname) || /^\d{1,3}(\.\d{1,3}){3}$/.test(img.hostname));
+        else if (tur === 'kick-channel') ok = /(^|\.)(kick\.com|files\.kick\.com|stream\.kick\.com)$/.test(img.hostname);
+        else if (tur === 'instagram') ok = /(^|\.)(cdninstagram\.com|fbcdn\.net)$/.test(img.hostname);
+        else if (tur === 'x') ok = /(^|\.)(twimg\.com)$/.test(img.hostname);
+        else if (tur === 'tiktok') ok = /(^|\.)(tiktokcdn\.com|muscdn\.com|tiktok\.com)$/.test(img.hostname);
+        else if (tur === 'kick-clip') ok = /(^|\.)(kick\.com|stream\.kick\.com)$/.test(img.hostname);
+        else if (tur === 'lightshot') ok = /(^|\.)(prntscr\.com|prnt\.sc)$/.test(img.hostname);
+        else ok = /(^|\.)streamable\.com$/.test(img.hostname);
+        image = img.protocol === 'https:' && !img.username && !img.password && ok ? img.href : '';
+      } catch (e) { image = ''; }
+      return title || image ? { title: title, image: image, platform: tur, imageKind: imageKind } : null;
+    })
+    .catch(function () { return null; })
+    .then(function (value) { clearTimeout(timer); LP_META_CACHE[key] = { ts: Date.now(), value: value }; delete LP_META_PENDING[key]; return value; });
+  LP_META_PENDING[key] = req;
+  return req;
+  }
+  if (tur !== 'generic') return istegiBaslat();
+  return chrome.permissions.contains({ origins: [u.protocol + '//' + u.hostname.toLowerCase() + '/*'] }).then(function (granted) {
+    return granted ? istegiBaslat() : { permissionRequired: true };
+  }).catch(function () { return null; });
+}
 
 /* ==================== Kick Drops — aktif kampanyalar ====================
  * Kick'in kendi herkese açık uç noktası. Çerez/oturum GÖNDERİLMEZ
@@ -358,6 +668,23 @@ function odulAl(jeton) {
 
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
   if (!msg || !msg.type) { sendResponse({}); return false; }
+
+  if (msg.type === 'getInstagramProfilePreview') {
+    var from = '';
+    try { from = new URL(sender.url || (sender.tab && sender.tab.url) || '').hostname; } catch (e) {}
+    if (from !== 'kick.com' && !/\.kick\.com$/.test(from)) { sendResponse(null); return false; }
+    instagramProfilOnizlemesi(msg.username).then(function (p) { sendResponse(p); });
+    return true;
+  }
+
+  if (msg.type === 'getLinkPreviewMetadata') {
+    var sourceHost = '';
+    try { sourceHost = new URL(sender.url || (sender.tab && sender.tab.url) || '').hostname; } catch (e) {}
+    if (sourceHost !== 'kick.com' && !/\.kick\.com$/.test(sourceHost)) { sendResponse(null); return false; }
+    linkOnizlemeMetadata(msg.url).then(sendResponse).catch(function () { sendResponse(null); });
+    return true;
+  }
+
 
   if (msg.type === 'stat') {
     getStats().then(function (st) {
