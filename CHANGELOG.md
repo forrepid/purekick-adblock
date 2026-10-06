@@ -4,6 +4,15 @@ Bu doküman, PureKick eklentisinin tüm sürümlerindeki yenilikleri, hata düze
 
 ---
 
+## 🚀 [10.19.13] - 2026-10-06 (Renk Modu, Profil Kartları & Destekçi Kayıtları)
+
+- Video renk körü filtresindeki SVG matrisleri kaldırılarak yerel CSS filtrelerine geçildi; aynı değer için gereksiz video stil yazımı engellendi.
+- Profil kartı koleksiyonu ilk beş kart ve korunmuş yedi kartla toplam 12 karta indirildi; seçici ve paket listesi eşitlendi.
+- Destekçi event köprüsü Kick'in `channel.subscription.gifts`, `channel.subscription.new`, `channel.subscription.renewal` ve `kicks.gifted` payload alanlarını destekleyecek şekilde genişletildi.
+- KickBot'un “just gifted 1 KICKS” bildirimi ve Kicks ayrıştırması iyileştirildi.
+
+---
+
 ## 🚀 [10.19.12] - 2026-10-06 (Kick sayfası içi PureKick Mod simgesi)
 
 - Yeşil böcek rozeti sayfa içindeki üst çubuk düğmesine, sohbet ayarları düğmesine, yönetim paneline ve profil kartı önizlemesine eklendi; küçük boyutlarda görünmesi için logo alanı büyütüldü.

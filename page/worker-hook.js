@@ -682,6 +682,8 @@ function pkLog() {
              ad === 'UserBannedEvent' || ad === 'UserUnbannedEvent' ||
              ad === 'ChatroomClearEvent' ||
              ad === 'GiftedSubscriptionsEvent' || ad === 'SubscriptionEvent' ||
+             ad === 'channel.subscription.gifts' || ad === 'channel.subscription.new' || ad === 'channel.subscription.renewal' ||
+             ad === 'kicks.gifted' || ad === 'KicksGiftedEvent' ||
              ad === 'LuckyUsersWhoGotGiftSubscriptionsEvent' || ad === 'LivestreamReactionEvent' ||
              ad === 'StreamHostEvent' ||
              ad === 'StopStreamBroadcast';
@@ -689,27 +691,27 @@ function pkLog() {
 
     var ROL_SIRA = ['broadcaster', 'staff', 'moderator', 'verified', 'vip', 'founder', 'og',
                     'sub_gifter', 'subscriber', 'bot'];
-    function enYuksekRol(rozetler) {
-      if (!rozetler || !rozetler.length) return '';
-      var en = '';
-      for (var i = 0; i < rozetler.length; i++) {
-        var t = String((rozetler[i] && rozetler[i].type) || '').toLowerCase();
-        var s = ROL_SIRA.indexOf(t);
-        if (s < 0) continue;
-        if (!en || s < ROL_SIRA.indexOf(en)) en = t;
-      }
-      return en;
+    function rolNormallestir(deger) {
+      var t = String(deger || '').toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '');
+      if (/^(?:subscriber|subscription|sub)_?(?:badge|member|user)$/.test(t) || t === 'sub') return 'subscriber';
+      if (/^(?:sub_gifter|subgifter|gifter)_?(?:badge|role)$/.test(t)) return 'sub_gifter';
+      return t;
     }
-    function tumRoller(rozetler) {
-      if (!rozetler || !rozetler.length) return [];
-      var seen = Object.create(null), out = [];
+    function rozetListesi(rozetler) {
+      if (!Array.isArray(rozetler)) return [];
+      var out = [];
       for (var i = 0; i < rozetler.length; i++) {
-        var t = String((rozetler[i] && rozetler[i].type) || '').toLowerCase();
-        if (ROL_SIRA.indexOf(t) >= 0 && !seen[t]) { seen[t] = true; out.push(t); }
+        var b = rozetler[i];
+        var typ = rolNormallestir(typeof b === 'string' ? b : b && (b.type || b.name || b.slug || b.badge_type));
+        if (ROL_SIRA.indexOf(typ) >= 0 && out.indexOf(typ) < 0) out.push(typ);
       }
       return out.sort(function (a, b) { return ROL_SIRA.indexOf(a) - ROL_SIRA.indexOf(b); });
     }
-
+    function enYuksekRol(rozetler) {
+      var roller = rozetListesi(rozetler);
+      return roller[0] || '';
+    }
+    function tumRoller(rozetler) { return rozetListesi(rozetler); }
     function olayIsle(ad, d) {
       if (!d) return;
       /* Kick'in bazı yayınlarında Pusher payload'ı olay alanlarını doğrudan,
@@ -722,6 +724,8 @@ function pkLog() {
       /* Kick'in farklı istemci/API sürümlerinde aynı olay farklı adlarla ve
          iç içe payload ile gelebiliyor. İzole dünyaya tek kanonik ad gönder. */
       if (ad === 'ChatMessageSentEvent') ad = 'ChatMessageEvent';
+      else if (ad === 'channel.subscription.gifts') ad = 'GiftedSubscriptionsEvent';
+      else if (ad === 'channel.subscription.new' || ad === 'channel.subscription.renewal') ad = 'SubscriptionEvent';
       else if (ad === 'ChatMessageDeletedEvent' || ad === 'moderation.message_deleted') ad = 'MessageDeletedEvent';
       else if (ad === 'ModerationBannedEvent' || ad === 'moderation.banned' || ad === 'moderation.user_banned') ad = 'UserBannedEvent';
       else if (ad === 'moderation.unbanned' || ad === 'moderation.user_unbanned') ad = 'UserUnbannedEvent';
@@ -761,14 +765,20 @@ function pkLog() {
       var y = { source: 'kab', type: 'chatEvent', ad: ad, n: pageNonce };
       if (ad === 'ChatMessageEvent' || ad === 'ChatMessageSentEvent') {
         var chatMesaj = d.message && typeof d.message === 'object' ? d.message : d;
-        var chatKisi = d.sender || d.user || chatMesaj.sender || {};
+        var senderAdaylari = [d.sender, d.user, chatMesaj.sender, chatMesaj.user].filter(function (x) { return x && typeof x === 'object'; });
+        var chatKisi = senderAdaylari.filter(function (x) { return x.username || x.slug; })[0] || senderAdaylari[0] || {};
         var chatIdentity = chatKisi.identity || {};
-        var chatRozetler = chatIdentity.badges || chatKisi.badges || [];
-        if (!chatRozetler.length && Array.isArray(chatKisi.follower_badges)) {
-          chatRozetler = chatKisi.follower_badges.map(function (b) {
-            return typeof b === 'string' ? { type: b.toLowerCase() } : b;
+        /* Farklı payload alanlarında bulunan rozetleri birleştir. */
+        var chatRozetler = [];
+        senderAdaylari.forEach(function (aday) {
+          var id = aday.identity || {};
+          [id.badges, aday.badges, aday.follower_badges, aday.subscriber_badges].forEach(function (liste) {
+            rozetListesi(liste).forEach(function (r) { if (chatRozetler.indexOf(r) < 0) chatRozetler.push(r); });
           });
-        }
+        });
+        [d.badges, (d.identity && d.identity.badges), (chatMesaj.metadata && chatMesaj.metadata.badges)].forEach(function (liste) {
+          rozetListesi(liste).forEach(function (r) { if (chatRozetler.indexOf(r) < 0) chatRozetler.push(r); });
+        });
         y.id = chatMesaj.id || chatMesaj.message_id || d.id || d.message_id || '';
         y.kim = chatKisi.username || chatKisi.slug || '';
         y.metin = String(chatMesaj.content || chatMesaj.message || d.content || '').slice(0, 300);
@@ -781,19 +791,22 @@ function pkLog() {
         y.yanit = !!(chatMeta.original_message || chatMeta.original_sender || chatMesaj.replied_to || chatMesaj.replies_to);
         y.kicks = (d.metadata && d.metadata.kicks) || d.kicks || 0;
         y.tip = d.type || '';
-      } else if (ad === 'GiftedSubscriptionsEvent') {
+      } else if (ad === 'GiftedSubscriptionsEvent' || ad === 'channel.subscription.gifts') {
         var gifter = d.gifter || d.sender || d.user || {};
         y.kim = d.gifter_username || d.gifterUsername || gifter.username || gifter.slug || 'Topluluk Üyesi';
-        var alicilar = Array.isArray(d.gifted_usernames) ? d.gifted_usernames :
-                       (Array.isArray(d.recipients) ? d.recipients : (Array.isArray(d.users) ? d.users : []));
+        var alicilar = Array.isArray(d.giftees) ? d.giftees : (Array.isArray(d.giftees_usernames) ? d.giftees_usernames :
+                       (Array.isArray(d.gifted_usernames) ? d.gifted_usernames :
+                       (Array.isArray(d.recipients) ? d.recipients : (Array.isArray(d.users) ? d.users : []))));
         y.adet = alicilar.length || parseInt(d.count || d.quantity || d.amount || 1, 10) || 1;
         y.alicilar = alicilar.slice(0, 10);
         y.ts = Date.parse(d.created_at || d.timestamp) || Date.now();
         y.eventKey = String(d.id || d.event_id || d.uuid || ('gift|' + y.kim + '|' + y.ts + '|' + y.adet));
-      } else if (ad === 'SubscriptionEvent') {
+        if (d.broadcaster && typeof d.broadcaster === 'object') y.kanal = d.broadcaster.channel_slug || d.broadcaster.slug || '';
+        else y.kanal = d.broadcaster_slug || d.channel_slug || '';
+      } else if (ad === 'SubscriptionEvent' || ad === 'channel.subscription.new' || ad === 'channel.subscription.renewal') {
         var abone = d.user || d.subscriber || {};
         y.kim = d.username || d.subscriber_username || abone.username || abone.slug || 'Abone';
-        y.ay = d.months || d.duration || d.month || 1;
+        y.ay = d.months || d.duration || d.month || d.duration_months || 1;
         y.ts = Date.parse(d.created_at || d.timestamp) || Date.now();
         y.eventKey = String(d.id || d.event_id || d.uuid || ('sub|' + y.kim + '|' + y.ts));
       } else if (ad === 'LivestreamReactionEvent') {
@@ -801,8 +814,20 @@ function pkLog() {
         y.reaksiyon = d.reaction || '';
         y.kicks = parseInt(d.kicks || d.amount || 0, 10);
         y.ts = Date.now();
+      } else if (ad === 'kicks.gifted' || ad === 'KicksGiftedEvent') {
+        var gift = d.gift || d;
+        var sender = d.sender || d.gifter || d.user || {};
+        y.ad = 'KicksGiftedEvent';
+        y.kim = (typeof sender === 'string' ? sender : (sender.username || sender.slug || sender.name)) || d.username || d.sender_username || 'İzleyici';
+        y.kicks = parseInt(gift.amount || gift.quantity || d.amount || d.quantity || d.kicks || 0, 10);
+        y.detay = String(gift.name || gift.type || 'Kicks gönderdi').slice(0, 160);
+        var kicksTs = d.created_at || d.timestamp;
+        y.ts = (typeof kicksTs === 'number' ? (kicksTs < 1e12 ? kicksTs * 1000 : kicksTs) : Date.parse(kicksTs)) || Date.now();
+        y.eventKey = String(d.id || d.event_id || d.uuid || ('kicks|' + y.kim + '|' + y.ts + '|' + y.kicks));
+        if (d.broadcaster && typeof d.broadcaster === 'object') y.kanal = d.broadcaster.channel_slug || d.broadcaster.slug || d.broadcaster.username || '';
+        else y.kanal = d.broadcaster_slug || d.channel_slug || '';
       } else if (ad === 'MessageDeletedEvent' || ad === 'ChatMessageDeletedEvent') {
-        var deletedMessage = d.message || {};
+        var deletedMessage = d.message || d.deleted_message || d.deletedMessage || d;
         y.id = (deletedMessage.id || deletedMessage.message_id) || d.message_id || d.id || '';
         // Bazı Kick event payload'ları silinen mesajın tam nesnesini de taşır.
         // Sohbet mesajı tamponunda bulunamadığında içerik/kullanıcı için yedek.
@@ -810,7 +835,7 @@ function pkLog() {
                 deletedMessage.username || d.username || '';
         y.rol = enYuksekRol(deletedMessage.sender && deletedMessage.sender.identity && deletedMessage.sender.identity.badges);
         y.roller = tumRoller(deletedMessage.sender && deletedMessage.sender.identity && deletedMessage.sender.identity.badges);
-        y.metin = String(deletedMessage.content || deletedMessage.message || deletedMessage.text || '').slice(0, 300);
+        y.metin = String((typeof deletedMessage === 'string' ? deletedMessage : '') || deletedMessage.content || deletedMessage.message || deletedMessage.text || d.content || d.message_content || '').slice(0, 300);
         y.renk = (deletedMessage.sender && deletedMessage.sender.identity && deletedMessage.sender.identity.color) || '';
         var silTs = deletedMessage.created_at || d.created_at || d.timestamp;
         y.ts = (typeof silTs === 'number' ? (silTs < 1e12 ? silTs * 1000 : silTs) : Date.parse(silTs)) || Date.now();

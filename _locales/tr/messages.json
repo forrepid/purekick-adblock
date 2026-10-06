@@ -2476,5 +2476,35 @@
    },
    "pkSohbetCeviri": {
       "message": "Anlık Sohbet Çevirisi"
+   },
+   "pkAcik": {
+      "message": "Açık"
+   },
+   "pkNot101910a": {
+      "message": "Sohbet arşivi kalıcı IndexedDB deposuna taşındı; moderasyon ve silinen mesaj kayıtları iyileştirildi"
+   },
+   "pkNot101910b": {
+      "message": "Instagram, X/Twitter, Kick, TikTok ve genel bağlantı önizlemeleri geliştirildi"
+   },
+   "pkNot101910c": {
+      "message": "Yayın değişimi, HLS reklam işaretleri ve çevrimdışı oynatıcı durumu düzeltildi"
+   },
+   "pkNot101911a": {
+      "message": "PureKick Mod adı ve yeşil böcek rozeti eklenti simgelerine uygulandı"
+   },
+   "pkNot101911b": {
+      "message": "IVS worker yükleme biçimi ve yayın değişimindeki kanal başlığı istekleri kararlı hale getirildi"
+   },
+   "pkNot101911c": {
+      "message": "HLS reklam işaretleri ve Kick kaynaklı DNR reklam kuralları iyileştirildi"
+   },
+   "pkNot101911d": {
+      "message": "Genel bağlantı önizlemeleri için zorunlu tüm siteler izni kaldırıldı"
+   },
+   "pkNot101912a": {
+      "message": "Kick sayfasındaki PureKick Mod simgesi ve yeşil böcek rozeti güncellendi"
+   },
+   "pkNot101912b": {
+      "message": "Araç çubuğu, sohbet ayarları, yönetim paneli ve profil önizlemesindeki ürün adı ve simge tutarlı hale getirildi"
    }
 }
