@@ -1,6 +1,6 @@
 {
    "appDesc": {
-      "message": "Bloque les publicités sur Kick.com pour un visionnage fluide, sans interruption et de qualité abonné."
+      "message": "PureKick Mod bloque les publicités sur Kick.com et ajoute des outils avancés pour le direct et le chat."
    },
    "badgeCtaSub": {
       "message": "Se connecter avec Kick"
@@ -15,7 +15,7 @@
       "message": "Badge de chat actif"
    },
    "btnTitle": {
-      "message": "PureKick — Flux sans publicité"
+      "message": "PureKick Mod — Flux sans publicité"
    },
    "dropDay": {
       "message": "{1} jour restant"
@@ -1461,7 +1461,7 @@
       "message": "Ouvrir le profil"
    },
    "pkPureKick": {
-      "message": "PureKick"
+      "message": "PureKick Mod"
    },
    "pkPureKickAciklama": {
       "message": "Bloqueur de pubs pour Kick."
@@ -2440,5 +2440,41 @@
    },
    "themeReset": {
       "message": "Réinitialiser (par défaut Kick)"
+   },
+   "pkVideoKayit": {
+      "message": "Enregistreur vidéo"
+   },
+   "pkFiltreAra": {
+      "message": "Rechercher dans le chat..."
+   },
+   "pkSohbetFiltre": {
+      "message": "Recherche et filtres du chat"
+   },
+   "pkCokluYayin": {
+      "message": "Multidiffusion"
+   },
+   "pkKlipAl": {
+      "message": "Capturer un clip en direct"
+   },
+   "pkSohbetTts": {
+      "message": "Lecture vocale du chat (TTS)"
+   },
+   "pkEmoteSpamFiltre": {
+      "message": "Réduire le spam d’emotes"
+   },
+   "pkIzlemeSureTakip": {
+      "message": "Suivi du temps de visionnage"
+   },
+   "pkKanalNotlari": {
+      "message": "Notes de la chaîne"
+   },
+   "pkYayinBildirim": {
+      "message": "Notifications de direct"
+   },
+   "pkIzlemeSureleriBaslik": {
+      "message": "Temps de visionnage"
+   },
+   "pkSohbetCeviri": {
+      "message": "Traduction du chat en direct"
    }
 }

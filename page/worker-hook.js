@@ -345,20 +345,54 @@ function pkLog() {
     function stripAdSegments(text) {
       if (typeof text !== 'string' || !/#EXT-X-CUE-OUT|#EXT-X-SCTE35-OUT|#EXT-X-DATERANGE:[^\r\n]*SCTE35-OUT|stitched-ad/i.test(text)) return null;
       var lines = text.split(/\r?\n/), out = [], inAd = false, dropped = false;
+      var remaining = null, adSegmentPending = false, closeAfterSegment = false;
       for (var i = 0; i < lines.length; i++) {
-        var line = lines[i], up = line.toUpperCase();
-        if (/#EXT-X-CUE-OUT|#EXT-X-SCTE35-OUT|#EXT-X-DATERANGE:.*SCTE35-OUT/i.test(line) || /stitched-ad/i.test(line)) {
-          inAd = true; dropped = true; continue;
+        var line = lines[i];
+        var cueOut = line.match(/^#EXT-X-CUE-OUT(?::([0-9.]+))?/i);
+        var dateOut = /#EXT-X-DATERANGE:/i.test(line) && /SCTE35-OUT=/i.test(line);
+        var scteOut = /^#EXT-X-SCTE35-OUT(?::|$)/i.test(line);
+        if (cueOut || dateOut || scteOut) {
+          inAd = true; dropped = true; adSegmentPending = false; closeAfterSegment = false;
+          var d = cueOut && cueOut[1] ? Number(cueOut[1]) : null;
+          if (d == null && dateOut) {
+            var dm = line.match(/(?:^|,)\s*DURATION=([0-9.]+)/i);
+            if (dm) d = Number(dm[1]);
+          }
+          if (d == null && scteOut) {
+            var sm = line.match(/(?:^|[,;])\s*DURATION=([0-9.]+)/i);
+            if (sm) d = Number(sm[1]);
+          }
+          remaining = Number.isFinite(d) && d > 0 ? d : null;
+          continue;
         }
-        if (/#EXT-X-CUE-IN|#EXT-X-SCTE35-IN/i.test(line) || /#EXT-X-DATERANGE:.*SCTE35-IN/i.test(line)) {
-          inAd = false; continue;
+        if (/#EXT-X-CUE-IN|#EXT-X-SCTE35-IN/i.test(line) || (/#EXT-X-DATERANGE:/i.test(line) && /SCTE35-IN=/i.test(line))) {
+          dropped = true; inAd = false; remaining = null; adSegmentPending = false; closeAfterSegment = false; continue;
         }
-        if (inAd) continue;
+        if (inAd) {
+          dropped = true;
+          if (adSegmentPending && line && line.charAt(0) !== '#') {
+            adSegmentPending = false;
+            if (closeAfterSegment) inAd = false;
+            continue;
+          }
+          var extinf = line.match(/^#EXTINF:([0-9.]+)/i);
+          if (extinf && remaining != null) {
+            remaining -= Number(extinf[1]) || 0;
+            adSegmentPending = true;
+            closeAfterSegment = remaining <= 0;
+          }
+          continue;
+        }
+        /* İmzası bilinen tekil stitched-ad URI'lerini atla; tek URI işareti
+           playlist'in kalanını reklam saymak için yeterli kanıt değildir. */
+        if (/stitched-ad/i.test(line)) { dropped = true; continue; }
         /* Break/asset metadata oynatıcının Ad UI durumunu başlatabilir. */
         if (/^#EXT-X-ASSET:|^#EXT-X-SCTE35-CMD:|^#EXT-OATCLS-SCTE35:/i.test(line)) { dropped = true; continue; }
         out.push(line);
       }
-      if (!dropped) return null;
+      /* Açık uçlu marker veya süresi tamamlanmadan biten kayan pencereyi
+         değiştirmeyiz; kesilmiş playlist player'ı sonsuza dek bekletebilir. */
+      if (!dropped || inAd) return null;
       return out.join('\n');
     }
 
@@ -388,11 +422,12 @@ function pkLog() {
                   log('master prefetch onbellekten (aninda)');
                   return new Response(masterCache.text, { status: 200, statusText: 'OK', headers: new Headers({ 'content-type': masterCache.ct || 'application/vnd.apple.mpegurl' }) });
                 }
-                return getAdFreeMaster().then(function (af) {
+                var replacementTimedOut = false, replacementTimer = 0;
+                var replacement = getAdFreeMaster().then(function (af) {
                   if (!af || KAB_SLUG !== requestSlug) return resp;
                   return origFetch.call(self, af).then(function (afr) {
                     return afr.text().then(function (aftxt) {
-                      if (KAB_SLUG !== requestSlug || aftxt.indexOf('#EXT-X-STREAM-INF') === -1) return resp; // kanal değişti/beklenmedik → dokunma
+                      if (replacementTimedOut || KAB_SLUG !== requestSlug || aftxt.indexOf('#EXT-X-STREAM-INF') === -1) return resp; // süre aştı/kanal değişti/beklenmedik → dokunma
                       post({ kabSwapped: 1 });
                       log('master reklamsiz akisla degistirildi');
                       var absTxt = absolutize(aftxt, af);
@@ -401,6 +436,16 @@ function pkLog() {
                     });
                   }).catch(function () { return resp; });
                 }).catch(function () { return resp; });
+                /* Alternatif API/manifest beklerken Kick'in player'ını askıda
+                   bırakma. Temiz kaynak hızlı gelmezse çalışan orijinal yanıtı
+                   ver; gecikmiş sonuç artık playlist'i/istatistiği değiştirmez. */
+                var timeoutFallback = new Promise(function (resolve) {
+                  replacementTimer = setTimeout(function () { replacementTimedOut = true; resolve(resp); }, 2500);
+                });
+                return Promise.race([replacement, timeoutFallback]).then(function (result) {
+                  if (replacementTimer) clearTimeout(replacementTimer);
+                  return result;
+                });
               }
               // Kaynak bazen SSAI aralıklarını doğrudan playlist içinde taşır.
               var noAds = stripAdSegments(txt);
@@ -443,10 +488,6 @@ function pkLog() {
 
   var SHIM_TEMPLATE = '(' + kabWorkerShim.toString() + ')();\n;\n';
 
-  function readSync(u) {
-    try { var x = new XMLHttpRequest(); x.open('GET', u, false); x.send(); if (x.status === 200 || x.status === 0) return x.responseText || null; } catch (e) {}
-    return null;
-  }
   function baseOf(u) {
     try { var abs = new URL(u, window.location.href).href; return abs.slice(0, abs.lastIndexOf('/') + 1); } catch (e) { return window.location.origin + '/'; }
   }
@@ -454,26 +495,105 @@ function pkLog() {
     try { return (window.location.pathname.split('/').filter(Boolean)[0] || ''); } catch (e) { return ''; }
   }
 
+  /* Ana sayfayı bekletmeden IVS worker'ını sar. Orijinal betik worker
+     bağlamında importScripts ile yüklenir; worker yüklemesi başarısız olursa
+     gerçek orijinal Worker'a geri dönülür. Worker API çağrıları hazır olana
+     kadar sıraya alınır. */
+  function wrappedWorker(url, options, shim) {
+    var blobUrl = URL.createObjectURL(new Blob([shim + '\ntry { importScripts(' + JSON.stringify(url) + '); postMessage({__pkBootstrap:"ready"}); } catch (e) { postMessage({__pkBootstrap:"failed", message:String(e)}); }'], { type: 'text/javascript' }));
+    var initial = new OrigWorker(blobUrl, options), active = initial;
+    var events = new EventTarget(), ready = false, stopped = false, queue = [];
+    var facade = Object.create(OrigWorker.prototype);
+    function flush() {
+      if (!ready || stopped) return;
+      var q = queue; queue = [];
+      for (var i = 0; i < q.length; i++) { try { active.postMessage.apply(active, q[i]); } catch (e) {} }
+    }
+    function relayMessage(e, boot) {
+      if (boot && e.data && e.data.__pkBootstrap === 'ready') {
+        ready = true; flush();
+        try { URL.revokeObjectURL(blobUrl); } catch (x) {}
+        return;
+      }
+      if (boot && e.data && e.data.__pkBootstrap === 'failed') {
+        try { active.terminate(); } catch (x) {}
+        try {
+          active = new OrigWorker(url, options);
+          ready = true; listen(active, false); flush();
+          try { URL.revokeObjectURL(blobUrl); } catch (x) {}
+          pkLog('IVS worker sarmasi yuklenemedi; orijinal worker kullaniliyor');
+        } catch (x) { sendError(x); }
+        return;
+      }
+      try { events.dispatchEvent(new MessageEvent('message', { data: e.data, origin: e.origin || '', lastEventId: e.lastEventId || '', ports: e.ports || [] })); } catch (x) {}
+    }
+    function sendError(error) {
+      try {
+        var ev = new Event('error');
+        Object.defineProperty(ev, 'message', { value: String(error && error.message || error || 'Worker failed') });
+        events.dispatchEvent(ev);
+      } catch (x) {}
+    }
+    function listen(worker, boot) {
+      worker.addEventListener('message', function (e) { relayMessage(e, boot); });
+      worker.addEventListener('messageerror', function () { try { events.dispatchEvent(new Event('messageerror')); } catch (e) {} });
+      worker.addEventListener('error', function (e) {
+        if (boot && !ready) {
+          try { e.preventDefault(); } catch (x) {}
+          relayMessage({ data: { __pkBootstrap: 'failed', message: e.message } }, true);
+        } else {
+          try { events.dispatchEvent(new Event('error')); } catch (x) {}
+        }
+      });
+    }
+    listen(initial, true);
+    facade.postMessage = function () {
+      if (stopped) return;
+      if (!ready) { queue.push(Array.prototype.slice.call(arguments)); return; }
+      return active.postMessage.apply(active, arguments);
+    };
+    facade.terminate = function () {
+      stopped = true; queue = [];
+      try { active.terminate(); } catch (e) {}
+      try { URL.revokeObjectURL(blobUrl); } catch (e) {}
+    };
+    facade.addEventListener = events.addEventListener.bind(events);
+    facade.removeEventListener = events.removeEventListener.bind(events);
+    facade.dispatchEvent = events.dispatchEvent.bind(events);
+    ['message', 'messageerror', 'error'].forEach(function (type) {
+      var currentHandler = null;
+      Object.defineProperty(facade, 'on' + type, {
+        configurable: true,
+        get: function () { return currentHandler; },
+        set: function (handler) {
+          if (currentHandler) events.removeEventListener(type, currentHandler);
+          currentHandler = typeof handler === 'function' ? handler : null;
+          if (currentHandler) events.addEventListener(type, currentHandler);
+        }
+      });
+    });
+    try { Object.defineProperty(facade, Symbol.toStringTag, { value: 'Worker' }); } catch (e) {}
+    setTimeout(function () { try { URL.revokeObjectURL(blobUrl); } catch (e) {} }, 60000);
+    return facade;
+  }
+
   function KabWorker(scriptURL, options) {
+    if (!new.target) throw new TypeError("Worker constructor must be called with 'new'");
     try {
       var url = String(scriptURL);
       var videoOn = false; // yalnızca onay sonrası (content.js '1' yazınca) sarmala
       try { videoOn = localStorage.getItem('__kab_video') === '1'; } catch (e) {}
       var isModule = options && options.type === 'module';
       if (videoOn && !isModule && /amazon-ivs|\/ivs\//i.test(url)) {
-        var src = readSync(url);
-        if (src) {
-          var base = baseOf(url);
-          var shim = SHIM_TEMPLATE
-            .replace('"__KAB_BASE__"', JSON.stringify(base))
-            .replace('"__KAB_SLUG__"', JSON.stringify(currentSlug()))
-            .replace('"__KAB_NONCE__"', JSON.stringify(pageNonce || ''));
-          var blob = new Blob([shim + src], { type: 'text/javascript' });
-          window.__kab_wrapCount = (window.__kab_wrapCount || 0) + 1;
-          window.__kab_lastBase = base;
-          pkLog('IVS worker sarmalandi, slug=' + currentSlug());
-          return new OrigWorker(URL.createObjectURL(blob), options);
-        }
+        var base = baseOf(url);
+        var shim = SHIM_TEMPLATE
+          .replace('"__KAB_BASE__"', JSON.stringify(base))
+          .replace('"__KAB_SLUG__"', JSON.stringify(currentSlug()))
+          .replace('"__KAB_NONCE__"', JSON.stringify(pageNonce || ''));
+        window.__kab_wrapCount = (window.__kab_wrapCount || 0) + 1;
+        window.__kab_lastBase = base;
+        pkLog('IVS worker asenkron sarmalandi, slug=' + currentSlug());
+        return wrappedWorker(url, options, shim);
       }
     } catch (e) {
       pkLog('wrap hatasi, passthrough:', String(e).slice(0, 100));

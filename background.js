@@ -204,7 +204,11 @@ function linkOnizlemeMetadata(urlHam) {
     if (clipId) { id = clipId; tur = 'kick-clip'; }
     else if (channelSlug) { id = channelSlug; tur = 'kick-channel'; }
   }
-  else if (host === 'tiktok.com' || host === 'vm.tiktok.com' || host === 'vt.tiktok.com') { id = u.pathname; tur = 'tiktok'; }
+  else if (host === 'tiktok.com' || host === 'vm.tiktok.com' || host === 'vt.tiktok.com') {
+    id = u.pathname;
+    // Profil ve video oEmbed biçimleri farklı; profilde thumbnail yoksa sayfa metadata'sına düş.
+    tur = /^\/@[^/]+\/?$/.test(u.pathname) && host === 'tiktok.com' ? 'tiktok-profile' : 'tiktok';
+  }
   else if (host === 'prnt.sc' || host === 'prntscr.com') { id = (u.pathname.match(/^\/([\w-]+)/) || [])[1] || ''; tur = 'lightshot'; }
   if (!tur) { tur = 'generic'; id = u.pathname + u.search; }
   if (!id) return Promise.resolve(null);
@@ -222,7 +226,7 @@ function linkOnizlemeMetadata(urlHam) {
   function istegiBaslat() {
   var reqUrl = u.href;
   if (tur === 'streamable') reqUrl = 'https://api.streamable.com/videos/' + encodeURIComponent(id);
-  else if (tur === 'tiktok') reqUrl = 'https://www.tiktok.com/oembed?url=' + encodeURIComponent(u.href);
+  else if (tur === 'tiktok' || tur === 'tiktok-profile') reqUrl = 'https://www.tiktok.com/oembed?url=' + encodeURIComponent(u.href);
   else if (tur === 'instagram' && instagramEmbedUrl) reqUrl = instagramEmbedUrl;
   else if (tur === 'kick-channel') reqUrl = 'https://kick.com/api/v2/channels/' + encodeURIComponent(id);
   else if (tur === 'kick-clip') reqUrl = 'https://stream.kick.com/thumbnails/clips/' + encodeURIComponent(id) + '.jpg';
@@ -249,15 +253,40 @@ function linkOnizlemeMetadata(urlHam) {
     return okuParca();
   }
   var req = fetch(reqUrl, { credentials: 'omit', cache: 'no-store', signal: controller.signal,
-    headers: { 'Accept': (tur === 'streamable' || tur === 'tiktok' || tur === 'kick-channel') ? 'application/json' : (tur === 'kick-clip' ? 'image/*' : 'text/html,application/xhtml+xml') } })
+    headers: { 'Accept': (tur === 'streamable' || tur === 'tiktok' || tur === 'tiktok-profile' || tur === 'kick-channel') ? 'application/json' : (tur === 'kick-clip' ? 'image/*' : 'text/html,application/xhtml+xml') } })
     .then(function (r) {
       if (!r.ok) throw new Error('metadata unavailable');
       if (tur === 'kick-clip') return { __directImage: reqUrl };
-      if (tur === 'streamable' || tur === 'tiktok' || tur === 'kick-channel') return r.json();
+      if (tur === 'streamable' || tur === 'tiktok' || tur === 'tiktok-profile' || tur === 'kick-channel') {
+        return r.json().then(function (json) {
+          if (tur !== 'tiktok-profile' || json.thumbnail_url) return json;
+          // Creator oEmbed omits its image, so try the public profile page's social metadata.
+          return fetch(u.href, { credentials: 'omit', cache: 'no-store', signal: controller.signal,
+            headers: { 'Accept': 'text/html,application/xhtml+xml' } })
+            .then(function (profileResponse) {
+              if (!profileResponse.ok || Number(profileResponse.headers.get('content-length') || 0) > 1500000) return json;
+              return htmlSinirliOku(profileResponse).then(function (page) {
+                json.__profileHtml = page.html;
+                json.__profileFinalUrl = page.finalUrl;
+                return json;
+              });
+            }).catch(function () { return json; });
+        });
+      }
       var ct = String(r.headers.get('content-type') || '').toLowerCase();
       if (ct && ct.indexOf('text/html') < 0 && ct.indexOf('application/xhtml+xml') < 0) return '';
       if (Number(r.headers.get('content-length') || 0) > 1500000) throw new Error('metadata page too large');
       return htmlSinirliOku(r);
+    })
+    .catch(function () {
+      if (tur !== 'tiktok-profile') return null;
+      // If TikTok's oEmbed is rate-limited, still try its public profile metadata.
+      return fetch(u.href, { credentials: 'omit', cache: 'no-store', signal: controller.signal,
+        headers: { 'Accept': 'text/html,application/xhtml+xml' } })
+        .then(function (response) {
+          if (!response.ok || Number(response.headers.get('content-length') || 0) > 1500000) return { __profileHtml: '' };
+          return htmlSinirliOku(response).then(function (page) { return { __profileHtml: page.html, __profileFinalUrl: page.finalUrl }; });
+        }).catch(function () { return { __profileHtml: '' }; });
     })
     .then(function (data) {
       var title = '', image = '', imageKind = '';
@@ -268,6 +297,21 @@ function linkOnizlemeMetadata(urlHam) {
       } else if (tur === 'tiktok') {
         title = String(data.title || '').trim();
         image = String(data.thumbnail_url || data.thumbnail_url_100 || '');
+      } else if (tur === 'tiktok-profile') {
+        title = String(data.title || data.author_name || '').trim();
+        image = String(data.thumbnail_url || '');
+        // TikTok creator-profile oEmbed has no thumbnail. Try its public OG image as a fallback.
+        if (!image) {
+          var profileTags = String(data.__profileHtml || '').match(/<meta\b[^>]*>/gi) || [];
+          for (var pti = 0; pti < profileTags.length; pti++) {
+            var profileTag = profileTags[pti];
+            var profileProperty = profileTag.match(/\b(?:property|name)=[\"']([^\"']+)/i);
+            var profileContent = profileTag.match(/\bcontent=[\"']([^\"']+)/i);
+            if (!title && profileProperty && profileContent && /^(og:title|twitter:title)$/i.test(profileProperty[1])) title = profileContent[1];
+            if (!image && profileProperty && profileContent && /^(og:image|twitter:image)$/i.test(profileProperty[1])) image = profileContent[1].replace(/&amp;/g, '&');
+            if (title && image) break;
+          }
+        }
       } else if (tur === 'kick-channel') {
         var stream = data && data.livestream || {};
         var channelUser = data && data.user || {};
@@ -371,7 +415,7 @@ function linkOnizlemeMetadata(urlHam) {
         }
         if (image && image.indexOf('//') === 0) image = 'https:' + image;
         if (image && !/^https?:\/\//i.test(image)) {
-          try { image = new URL(image, (data && data.finalUrl) || u.href).href; } catch (e) { image = ''; }
+          try { image = new URL(image, (data && (data.finalUrl || data.__profileFinalUrl)) || u.href).href; } catch (e) { image = ''; }
         }
         if (!image && (tur === 'generic' || tur === 'lightshot' || tur === 'kick-channel')) {
           try { image = new URL('/favicon.ico', (data && data.finalUrl) || u.href).href; } catch (e) { image = ''; }
@@ -385,7 +429,7 @@ function linkOnizlemeMetadata(urlHam) {
         else if (tur === 'kick-channel') ok = /(^|\.)(kick\.com|files\.kick\.com|stream\.kick\.com)$/.test(img.hostname);
         else if (tur === 'instagram') ok = /(^|\.)(cdninstagram\.com|fbcdn\.net)$/.test(img.hostname);
         else if (tur === 'x') ok = /(^|\.)(twimg\.com)$/.test(img.hostname);
-        else if (tur === 'tiktok') ok = /(^|\.)(tiktokcdn\.com|muscdn\.com|tiktok\.com)$/.test(img.hostname);
+        else if (tur === 'tiktok' || tur === 'tiktok-profile') ok = /(^|\.)(tiktokcdn\.com|muscdn\.com|tiktok\.com)$/.test(img.hostname);
         else if (tur === 'kick-clip') ok = /(^|\.)(kick\.com|stream\.kick\.com)$/.test(img.hostname);
         else if (tur === 'lightshot') ok = /(^|\.)(prntscr\.com|prnt\.sc)$/.test(img.hostname);
         else ok = /(^|\.)streamable\.com$/.test(img.hostname);

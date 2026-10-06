@@ -1,6 +1,6 @@
 {
    "appDesc": {
-      "message": "Bloqueia anúncios no Kick.com para uma transmissão fluida, sem interrupções e com qualidade de assinante."
+      "message": "PureKick Mod bloqueia anúncios no Kick.com e oferece ferramentas avançadas para lives e chat."
    },
    "badgeCtaSub": {
       "message": "Entre com o Kick"
@@ -15,7 +15,7 @@
       "message": "Selo do chat ativo"
    },
    "btnTitle": {
-      "message": "PureKick — Transmissão sem anúncios"
+      "message": "PureKick Mod — Transmissão sem anúncios"
    },
    "dropDay": {
       "message": "Resta {1} dia"
@@ -1461,7 +1461,7 @@
       "message": "Abrir perfil"
    },
    "pkPureKick": {
-      "message": "PureKick"
+      "message": "PureKick Mod"
    },
    "pkPureKickAciklama": {
       "message": "Bloqueador de anúncios para Kick."
@@ -2440,5 +2440,41 @@
    },
    "themeReset": {
       "message": "Redefinir (padrão do Kick)"
+   },
+   "pkVideoKayit": {
+      "message": "Gravador de vídeo"
+   },
+   "pkFiltreAra": {
+      "message": "Buscar no chat..."
+   },
+   "pkSohbetFiltre": {
+      "message": "Busca e filtros do chat"
+   },
+   "pkCokluYayin": {
+      "message": "Multistream"
+   },
+   "pkKlipAl": {
+      "message": "Capturar clipe ao vivo"
+   },
+   "pkSohbetTts": {
+      "message": "Leitura do chat em voz alta (TTS)"
+   },
+   "pkEmoteSpamFiltre": {
+      "message": "Reduzir spam de emotes"
+   },
+   "pkIzlemeSureTakip": {
+      "message": "Acompanhar tempo assistido"
+   },
+   "pkKanalNotlari": {
+      "message": "Notas do canal"
+   },
+   "pkYayinBildirim": {
+      "message": "Notificações de transmissão ao vivo"
+   },
+   "pkIzlemeSureleriBaslik": {
+      "message": "Tempo assistido"
+   },
+   "pkSohbetCeviri": {
+      "message": "Tradução do chat ao vivo"
    }
 }

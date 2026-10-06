@@ -4,6 +4,23 @@ Bu doküman, PureKick eklentisinin tüm sürümlerindeki yenilikleri, hata düze
 
 ---
 
+## 🚀 [10.19.11] - 2026-10-06 (PureKick Mod, Oynatıcı Kararlılığı & Gizlilik)
+
+### 🪲 PureKick Mod kimliği
+- Eklenti adı ve tüm araç çubuğu simgeleri yeşil böcek rozetiyle güncellendi.
+
+### 🛠️ Düzeltmeler ve güvenlik
+- IVS worker betiği ana iş parçacığında senkron XHR ile indirilmek yerine worker bağlamında yükleniyor; başlangıç başarısız olursa orijinal worker'a geri dönülüyor.
+- Kanal başlığı için eşzamanlı hover istekleri birleştirilip tüm bekleyen görünümlere yanıt veriliyor.
+- Reklam playlist filtresi süreli CUE/DATERANGE aralıklarını ve tekil stitched-ad segmentlerini işler; eksik/açık reklam aralığında playlist'i kesmez.
+- DNR reklam kuralları yalnız Kick kaynaklı sayfa isteklerinde etkin.
+- Tüm sitelere zorunlu erişim izni kaldırıldı; genel link önizlemeleri yalnız kullanıcı ilgili site için isteğe bağlı izin verdiyse çalışır.
+- Sohbet arşivi saklama kapsamı ve Kick sayfasının IndexedDB erişimi güvenlik belgesinde açıklandı.
+- Eksik 12 çeviri anahtarı beş dil kataloğuna eklendi.
+- Node yerleşik test altyapısı; manifest, ikonlar, yerelleştirme, DNR kapsamı ve HLS filtre senaryolarını doğrular.
+
+---
+
 ## 🚀 [10.19.10] - 2026-10-05 (Sohbet Arşivi, Medya Önizlemeleri & Oynatıcı Kararlılığı)
 
 ### 🖼️ Bağlantı Önizlemeleri

@@ -1,6 +1,6 @@
 {
    "appDesc": {
-      "message": "Блокирует рекламу на Kick.com для плавного просмотра без прерываний, в качестве подписчика."
+      "message": "PureKick Mod блокирует рекламу на Kick.com и добавляет расширенные инструменты для трансляций и чата."
    },
    "badgeCtaSub": {
       "message": "Войти через Kick"
@@ -15,7 +15,7 @@
       "message": "Значок чата активен"
    },
    "btnTitle": {
-      "message": "PureKick — Трансляция без рекламы"
+      "message": "PureKick Mod — Трансляция без рекламы"
    },
    "dropDay": {
       "message": "Осталось {1} дн."
@@ -1461,7 +1461,7 @@
       "message": "Открыть профиль"
    },
    "pkPureKick": {
-      "message": "PureKick"
+      "message": "PureKick Mod"
    },
    "pkPureKickAciklama": {
       "message": "Блокировщик рекламы для Kick."
@@ -2440,5 +2440,41 @@
    },
    "themeReset": {
       "message": "Сбросить (по умолчанию Kick)"
+   },
+   "pkVideoKayit": {
+      "message": "Видеорегистратор"
+   },
+   "pkFiltreAra": {
+      "message": "Поиск в чате..."
+   },
+   "pkSohbetFiltre": {
+      "message": "Поиск и фильтры чата"
+   },
+   "pkCokluYayin": {
+      "message": "Мультистрим"
+   },
+   "pkKlipAl": {
+      "message": "Записать фрагмент трансляции"
+   },
+   "pkSohbetTts": {
+      "message": "Озвучивание чата (TTS)"
+   },
+   "pkEmoteSpamFiltre": {
+      "message": "Снижение спама эмодзи"
+   },
+   "pkIzlemeSureTakip": {
+      "message": "Отслеживание времени просмотра"
+   },
+   "pkKanalNotlari": {
+      "message": "Заметки о канале"
+   },
+   "pkYayinBildirim": {
+      "message": "Уведомления о начале трансляции"
+   },
+   "pkIzlemeSureleriBaslik": {
+      "message": "Время просмотра"
+   },
+   "pkSohbetCeviri": {
+      "message": "Перевод чата в реальном времени"
    }
 }

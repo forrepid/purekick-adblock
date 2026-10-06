@@ -54,17 +54,18 @@ report:
 | Where | What | Visible to the page? |
 |---|---|---|
 | `chrome.storage.local` (extension-private) | settings, personal notes, hidden users and channels, role colours, ban reasons, VOD resume points, optional account link | No |
-| IndexedDB on `kick.com` | short-lived chat session snapshot (chat log, statistics, moderation log) so an accidentally closed tab can be restored; expires after 15 minutes | Yes — it holds only public chat from that channel |
+| IndexedDB on `kick.com` | a 15-minute session-recovery snapshot, plus a separate chat archive retained until the user clears Kick site data; the archive has no message-count cap | Yes — page scripts on `kick.com` can read origin IndexedDB, which contains public chat and moderation records from that channel |
 
-No chat content is written to the extension's settings storage, and no personal
-setting is written to the page's IndexedDB.
+No chat content is written to the extension's settings storage. The session-recovery snapshot expires after 15 minutes; the separate archive persists in Kick-origin IndexedDB and is readable by scripts running on Kick.com. The archive currently has no dedicated in-extension delete control; users can remove it by clearing Kick site data in the browser.
 
 ## Network
 
 PureKick talks to:
 
-- `kick.com` — the site it runs on
+- `kick.com` and its subdomains — the site it runs on and its public/API endpoints
 - `purekick.pumpzera.cc` — badge data, and an activity signal every 6 hours,
   only if the user has linked their account
+- Instagram, X/Twitter, TikTok, Streamable and Lightshot endpoints — public profile or link-preview metadata when the matching chat preview is requested; requests omit cookies except the Instagram profile-card lookup, which uses the current Instagram session if available
+- Other generic link hosts are not fetched by default. The all-sites patterns are optional permissions and are not requested during installation; a user can grant them through the browser extension site-access controls
 
-Nothing else. There is no analytics or tracking.
+There is no analytics or tracking.

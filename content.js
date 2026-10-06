@@ -17318,21 +17318,25 @@ var oz = kart(t('pkOnizleme'), t('pkOnizlemeD'));
 
   function onizBaslikCek(slug, bitince) {
     if (!slug) return;
+    bitince = typeof bitince === 'function' ? bitince : function () {};
     var v = onizBaslikVeri[slug];
-    if (v && v.bekliyor) return;
+    if (v && v.bekliyor) { (v.bekleyenler || (v.bekleyenler = [])).push(bitince); return; }
     if (v && Date.now() - v.ts < ONIZ_BASLIK_TAZE) { bitince(v.baslik); return; }
-    onizBaslikVeri[slug] = { ts: 0, bekliyor: true, baslik: '' };
-    fetch('https://kick.com/api/v2/channels/' + encodeURIComponent(slug), { credentials: 'omit' })
+    var kayit = onizBaslikVeri[slug] = { ts: 0, bekliyor: true, baslik: '', bekleyenler: [bitince] };
+    var controller = new AbortController();
+    var timer = setTimeout(function () { controller.abort(); }, 5000);
+    function tamamla(baslik) {
+      clearTimeout(timer);
+      kayit.ts = Date.now(); kayit.bekliyor = false; kayit.baslik = String(baslik || '');
+      var callbacks = kayit.bekleyenler.splice(0);
+      for (var i = 0; i < callbacks.length; i++) { try { callbacks[i](kayit.baslik); } catch (e) {} }
+    }
+    fetch('https://kick.com/api/v2/channels/' + encodeURIComponent(slug), { credentials: 'omit', signal: controller.signal })
       .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (j) {
-        var b = (j && j.livestream && j.livestream.session_title) || '';
-        onizBaslikVeri[slug] = { ts: Date.now(), bekliyor: false, baslik: String(b) };
-        bitince(onizBaslikVeri[slug].baslik);
-      })
+      .then(function (j) { tamamla((j && j.livestream && j.livestream.session_title) || ''); })
       .catch(function () {
-        /* Başarısızlığı da ÖNBELLEĞE YAZ: yoksa her hover'da yeniden denerdi. */
-        onizBaslikVeri[slug] = { ts: Date.now(), bekliyor: false, baslik: '' };
-        bitince('');
+        /* Başarısızlığı da kısa süre önbelleğe al, aynı anda bekleyen tüm hover'ları tamamla. */
+        tamamla('');
       });
   }
 
@@ -22045,7 +22049,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
                   webMetaLabel.style.display = 'none';
                 } else if (webMetaLabel) {
                   webMetaLabel.textContent = meta && meta.permissionRequired
-                    ? 'Genel önizleme için ayarlardan site iznini etkinleştir'
+                    ? 'Genel önizleme için Chrome eklenti ayarlarından bu siteye erişim izni verin'
                     : (b.ad === 'TikTok' ? 'TikTok önizlemesi kullanılamıyor' : (b.lightshot ? 'Lightshot görseli kullanılamıyor' : 'Bu sitede thumbnail metadata bulunamadı'));
                 }
               });

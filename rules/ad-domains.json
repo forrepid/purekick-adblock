@@ -2,181 +2,401 @@
   {
     "id": 1,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||securepubads.g.doubleclick.net",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 2,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||pagead2.googlesyndication.com",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 3,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||googleadservices.com",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 4,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||tpc.googlesyndication.com",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 5,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||imasdk.googleapis.com",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 6,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||ad.doubleclick.net",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 7,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||cm.g.doubleclick.net",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 8,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||kickproduction.api.useinsider.com",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 9,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||adservice.google.com",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 10,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||googlesyndication.com",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 11,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||amazon-adsystem.com",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 12,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||c.amazon-adsystem.com",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 13,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||aax.amazon-adsystem.com",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 14,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||criteo.com",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 15,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||criteo.net",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 16,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||taboola.com",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 17,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||outbrain.com",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 18,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||connect.facebook.net/en_US/fbevents.js",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 19,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||bat.bing.com",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   },
   {
     "id": 20,
     "priority": 1,
-    "action": { "type": "block" },
+    "action": {
+      "type": "block"
+    },
     "condition": {
       "urlFilter": "||scorecardresearch.com",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "image", "ping"]
+      "resourceTypes": [
+        "script",
+        "xmlhttprequest",
+        "sub_frame",
+        "image",
+        "ping"
+      ],
+      "initiatorDomains": [
+        "kick.com"
+      ]
     }
   }
 ]

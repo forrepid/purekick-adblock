@@ -1,6 +1,6 @@
 {
    "appDesc": {
-      "message": "Blockiert Werbung auf Kick.com für flüssiges, unterbrechungsfreies Streaming in Abo-Qualität."
+      "message": "PureKick Mod blockiert Werbung auf Kick.com und bietet erweiterte Streaming- und Chatwerkzeuge."
    },
    "badgeCtaSub": {
       "message": "Mit Kick anmelden"
@@ -15,7 +15,7 @@
       "message": "Chat-Abzeichen aktiv"
    },
    "btnTitle": {
-      "message": "PureKick — Werbefreier Stream"
+      "message": "PureKick Mod — Werbefreier Stream"
    },
    "dropDay": {
       "message": "noch {1} Tag"
@@ -1461,7 +1461,7 @@
       "message": "Profil öffnen"
    },
    "pkPureKick": {
-      "message": "PureKick"
+      "message": "PureKick Mod"
    },
    "pkPureKickAciklama": {
       "message": "Werbeblocker für Kick."
@@ -2440,5 +2440,41 @@
    },
    "themeReset": {
       "message": "Zurücksetzen (Kick-Standard)"
+   },
+   "pkVideoKayit": {
+      "message": "Videoaufnahme"
+   },
+   "pkFiltreAra": {
+      "message": "Im Chat suchen..."
+   },
+   "pkSohbetFiltre": {
+      "message": "Chatsuche und Filter"
+   },
+   "pkCokluYayin": {
+      "message": "Mehrfachstream"
+   },
+   "pkKlipAl": {
+      "message": "Live-Clip aufnehmen"
+   },
+   "pkSohbetTts": {
+      "message": "Chat-Sprachausgabe (TTS)"
+   },
+   "pkEmoteSpamFiltre": {
+      "message": "Emote-Spam reduzieren"
+   },
+   "pkIzlemeSureTakip": {
+      "message": "Wiedergabezeit erfassen"
+   },
+   "pkKanalNotlari": {
+      "message": "Kanalnotizen"
+   },
+   "pkYayinBildirim": {
+      "message": "Live-Benachrichtigungen"
+   },
+   "pkIzlemeSureleriBaslik": {
+      "message": "Wiedergabezeit"
+   },
+   "pkSohbetCeviri": {
+      "message": "Live-Chat-Übersetzung"
    }
 }

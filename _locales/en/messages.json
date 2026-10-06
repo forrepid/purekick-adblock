@@ -1,6 +1,6 @@
 {
    "appDesc": {
-      "message": "Block ads on Kick.com for a smooth, uninterrupted, subscriber-quality stream."
+      "message": "PureKick Mod blocks ads on Kick.com and adds an enhanced streaming and chat toolkit."
    },
    "badgeCtaSub": {
       "message": "Sign in with Kick"
@@ -15,7 +15,7 @@
       "message": "Chat Badge Active"
    },
    "btnTitle": {
-      "message": "PureKick — Ad-Free Stream"
+      "message": "PureKick Mod — Ad-Free Stream"
    },
    "dropDay": {
       "message": "{1} day left"
@@ -1464,7 +1464,7 @@
       "message": "Open profile"
    },
    "pkPureKick": {
-      "message": "PureKick"
+      "message": "PureKick Mod"
    },
    "pkPureKickAciklama": {
       "message": "Ad blocker for Kick."
