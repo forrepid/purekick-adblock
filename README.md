@@ -8,7 +8,7 @@
 
 [![GitHub license](https://img.shields.io/badge/license-Proprietary-blue.svg)](LICENSE)
 [![Manifest Version](https://img.shields.io/badge/Manifest-V3-brightgreen.svg)](manifest.json)
-[![PureKick Version](https://img.shields.io/badge/Version-10.19.11-orange.svg)](manifest.json)
+[![PureKick Version](https://img.shields.io/badge/Version-10.19.12-orange.svg)](manifest.json)
 [![Platform](https://img.shields.io/badge/Platform-Kick.com-53fc18.svg)](https://kick.com)
 
 </div>
@@ -17,7 +17,7 @@
 
 ## 📖 Genel Bakış
 
-****PureKick Mod**, Kick.com canlı yayın platformu için özel olarak geliştirilmiş, tarayıcı tabanlı (Manifest V3) kapsamlı bir süper eklentidir. Yalnızca reklamları engellemekle kalmaz; canlı yayınları yapay zeka ile anında çevirip seslendirir, videoyu büyütüp kaydırmanızı sağlar, yayıncıya gönderilen bağışları/Kicks'leri kaydeder ve profilinizi 25 farklı canlı animasyonla özelleştirir.
+**PureKick Mod**, Kick.com canlı yayın platformu için özel olarak geliştirilmiş, tarayıcı tabanlı (Manifest V3) kapsamlı bir süper eklentidir. Yalnızca reklamları engellemekle kalmaz; canlı yayınları yapay zeka ile anında çevirip seslendirir, videoyu büyütüp kaydırmanızı sağlar, yayıncıya gönderilen bağışları/Kicks'leri kaydeder ve profilinizi 25 farklı canlı animasyonla özelleştirir.
 
 ---
 
@@ -106,7 +106,8 @@
 
 Detaylı sürüm geçmişi ve versiyon bazlı değişiklikler için [CHANGELOG.md](CHANGELOG.md) dosyasını inceleyebilirsiniz.
 
-* **v10.19.11 (Son Sürüm):**
+* **v10.19.12 (Son Sürüm):**
+  * 🪲 Kick sayfasındaki araç düğmeleri ve ayarlar paneli PureKick Mod yeşil böcek logolu.
   * 🖼️ Instagram, X/Twitter, Kick, TikTok ve izin verilen diğer platformlar için bağlantı görseli önizlemeleri; tüm sitelere erişim varsayılan olarak kapalıdır.
   * 🔎 Lightshot bağlantılarını eklenti penceresinde açma ve görselini bulma.
   * 💬 Sohbet arşivi, moderasyon/silinen mesaj kayıtları ve izleyici örnekleri iyileştirmeleri.

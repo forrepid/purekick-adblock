@@ -248,8 +248,9 @@
   pushConfigToPage();
 
   /* ==================== HEADER BUTONU + KICK-TARZI KART ==================== */
-  // PureKick "PK" monogram logosu (blok/keskin, Kick diline uygun) — fill=currentColor: butonda beyaz, yeşil vs. otomatik
-  var SHIELD = '<svg viewBox="88 43 356 323" fill="currentColor"><path fill-rule="evenodd" d="M88 43 H255 V232 H145 V366 H88 Z M151 98 H190 A8 8 0 0 1 198 106 V169 A8 8 0 0 1 190 177 H151 A8 8 0 0 1 143 169 V106 A8 8 0 0 1 151 98 Z"/><rect x="278" y="43" width="57" height="323"/><rect x="88" y="300" width="247" height="66"/><rect x="389" y="43" width="55" height="105"/><rect x="389" y="261" width="55" height="105"/><path d="M334 156 L389 114 L444 147 L334 204 Z"/><path d="M334 253 L389 295 L444 262 L334 204 Z"/></svg>';
+  // PureKick Mod işareti: özgün PK monogramı + görünür Kick-yeşili böcek rozeti.
+  // Tüm sayfa içi düğmeler/paneller bu tek SVG'yi kullanır.
+  var SHIELD = '<svg viewBox="88 43 356 323" fill="currentColor" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M88 43 H255 V232 H145 V366 H88 Z M151 98 H190 A8 8 0 0 1 198 106 V169 A8 8 0 0 1 190 177 H151 A8 8 0 0 1 143 169 V106 A8 8 0 0 1 151 98 Z"/><rect x="278" y="43" width="57" height="323"/><rect x="88" y="300" width="247" height="66"/><rect x="389" y="43" width="55" height="105"/><rect x="389" y="261" width="55" height="105"/><path d="M334 156 L389 114 L444 147 L334 204 Z"/><path d="M334 253 L389 295 L444 262 L334 204 Z"/><g aria-label="PureKick Mod yeşil böcek"><circle cx="392" cy="95" r="50" fill="#53fc18" stroke="#07120b" stroke-width="8"/><path d="M386 63 376 51m22 12 10-12M377 82l-17-8m17 24h-20m21 18-15 12m37-46 17-8m-17 24h20m-21 18 15 12" fill="none" stroke="#07120b" stroke-width="8" stroke-linecap="round"/><ellipse cx="392" cy="99" rx="15" ry="25" fill="#07120b"/><circle cx="392" cy="69" r="13" fill="#07120b"/><path d="M392 76v43" stroke="#53fc18" stroke-width="4" stroke-linecap="round"/></g></svg>';
   var I_CHEV = '<svg class="ch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>';
   // supporter badge (kucuk statik) — popup ile ayni gorunum, CSP'ye takilmaz
   var DROPS_URL = 'https://kick.com/drops/all-campaigns';
@@ -260,7 +261,7 @@
     '*{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}' +
     // Buton Kick'in yan ikonlarıyla birebir: 36x36, radius 4px, gri kutu #42474d, beyaz ikon (kullanıcı isteği — sağdaki ödül butonuyla aynı)
     '.btn{position:relative;width:36px;height:36px;border:none;border-radius:4px;cursor:pointer;display:flex;align-items:center;justify-content:center;background:#42474d;color:#fff;transition:.15s cubic-bezier(.4,0,.2,1)}' +
-    '.btn:hover{background:#4e545b}.btn:active{transform:scale(.95)}.btn.open{background:#4e545b}.btn.off{color:#8b969d}.btn svg{width:16px;height:16px;display:block}' +
+    '.btn:hover{background:#4e545b}.btn:active{transform:scale(.95)}.btn.open{background:#4e545b}.btn.off{color:#8b969d}.btn svg{width:16px;height:16px;display:block}#btn svg{width:22px;height:22px}' +
     '.count{position:absolute;top:-1px;right:-1px;min-width:16px;height:16px;padding:0 3px;border-radius:8px;background:#fa2d2d;color:#fff;font-size:10px;font-weight:800;display:none;align-items:center;justify-content:center;line-height:1;box-shadow:0 0 0 2px #17181c;pointer-events:none}' +
     '.count.show{display:flex}' +
     // menu — KICKs satın alma dropdown'u birebir: keskin köşeler (rounded-lg 8px), gri buton + yeşil yazı + açık gri çerçeve
@@ -3714,8 +3715,8 @@
     var b = el('button', (disli.className || '').toString());
     b.setAttribute(PK_AYAR_IM, '1');
     b.type = 'button';
-    b.title = 'PureKick';
-    b.setAttribute('aria-label', 'PureKick');
+    b.title = 'PureKick Mod';
+    b.setAttribute('aria-label', 'PureKick Mod');
     b.style.setProperty('position', 'relative');   // yenilik noktası için
     pkIsaretUygula(b);
     /* ZEMİN YOK — yalnız PK simgesi. Bir ara gri kutu vardı (rgb(66,71,77),
@@ -3726,7 +3727,7 @@
     var ik = el('span', 'inline-flex shrink-0');
     ik.innerHTML = SHIELD;
     var sv = ik.querySelector('svg');
-    if (sv) { sv.style.width = '17px'; sv.style.height = '17px'; sv.style.display = 'block'; }
+    if (sv) { sv.style.width = '21px'; sv.style.height = '21px'; sv.style.display = 'block'; }
     b.appendChild(ik);
     b.addEventListener('click', function (e) {
       e.preventDefault(); e.stopPropagation();
@@ -19845,11 +19846,11 @@ pb.appendChild(satir(t('pkKartTakipci'), t('pkKartTakipciD'),
     demoCard.innerHTML = `
       <!-- Üst Başlık & Avatar -->
       <div class="flex items-center gap-3">
-        <div class="w-12 h-12 rounded-full bg-primary-base flex items-center justify-center font-black text-black text-lg shadow-lg border-2 border-black/30">PK</div>
+        <div class="w-12 h-12 rounded-full bg-primary-base flex items-center justify-center font-black text-black text-lg shadow-lg border-2 border-black/30">${SHIELD.replace('<svg ', '<svg style="width:34px;height:31px;display:block" ')}</div>
         <div class="flex flex-col">
           <div class="font-extrabold text-white text-base flex items-center gap-1.5 drop-shadow ${isHoloActive ? 'pk-chat-holo-name pk-name-' + seciliHolo : ''}">
             ${esc(settings.mentionAd || 'BesimBICER')}
-            <span class="bg-primary-base text-black text-[9.5px] font-black px-1.5 py-0.5 rounded shadow not-italic" style="text-shadow:none !important;-webkit-text-fill-color:initial !important;">PureKick</span>
+            <span class="bg-primary-base text-black text-[9.5px] font-black px-1.5 py-0.5 rounded shadow not-italic" style="text-shadow:none !important;-webkit-text-fill-color:initial !important;">PureKick Mod</span>
           </div>
           <div class="text-[11px] text-gray-300 font-medium">Kick'e katıldı: <b>10 Şub 2024</b></div>
         </div>
@@ -21237,7 +21238,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     ikon.innerHTML = SHIELD;
     // SHIELD'in kendi width/height'ı yok (menüde CSS'ten alıyordu, panelde o CSS yok) → burada ölçülendir
     var logoSvg = ikon.querySelector('svg');
-    if (logoSvg) { logoSvg.style.width = '19px'; logoSvg.style.height = '19px'; logoSvg.style.display = 'block'; }
+    if (logoSvg) { logoSvg.style.width = '21px'; logoSvg.style.height = '21px'; logoSvg.style.display = 'block'; }
     ikon.style.color = '#53fc18';
     sol.appendChild(ikon);
     sol.appendChild(el('div', 'text-lg font-bold text-white', t('pkYonetimPaneli')));

@@ -4,6 +4,13 @@ Bu doküman, PureKick eklentisinin tüm sürümlerindeki yenilikleri, hata düze
 
 ---
 
+## 🚀 [10.19.12] - 2026-10-06 (Kick sayfası içi PureKick Mod simgesi)
+
+- Yeşil böcek rozeti sayfa içindeki üst çubuk düğmesine, sohbet ayarları düğmesine, yönetim paneline ve profil kartı önizlemesine eklendi; küçük boyutlarda görünmesi için logo alanı büyütüldü.
+- Sayfa içi erişilebilir adlar ve profil kartı örnek etiketi “PureKick Mod” olarak güncellendi.
+
+---
+
 ## 🚀 [10.19.11] - 2026-10-06 (PureKick Mod, Oynatıcı Kararlılığı & Gizlilik)
 
 ### 🪲 PureKick Mod kimliği

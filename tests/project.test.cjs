@@ -38,7 +38,7 @@ test('all extension JavaScript parses', () => {
 
 test('manifest references existing icons and avoids required all-sites access', () => {
   const manifest = JSON.parse(read('manifest.json'));
-  assert.equal(manifest.version, '10.19.11');
+  assert.equal(manifest.version, '10.19.12');
   assert.equal(manifest.short_name, 'PureKick Mod');
   for (const size of [16, 32, 48, 128]) {
     const icon = `icons/icon${size}.png`;
@@ -49,6 +49,10 @@ test('manifest references existing icons and avoids required all-sites access', 
   assert.ok(!manifest.host_permissions.some((origin) => origin.includes('*://*/*')));
   assert.ok(manifest.optional_host_permissions.includes('https://*/*'));
   assert.ok(manifest.optional_host_permissions.includes('http://*/*'));
+  const content = read('content.js');
+  assert.match(content, /var SHIELD = .*#53fc18/);
+  assert.match(content, /SHIELD\.replace/);
+  assert.match(content, /#btn svg\{width:22px;height:22px\}/);
 });
 
 test('every locale has the same message keys as English', () => {
