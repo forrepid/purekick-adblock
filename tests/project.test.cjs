@@ -38,7 +38,7 @@ test('all extension JavaScript parses', () => {
 
 test('manifest references existing icons and avoids required all-sites access', () => {
   const manifest = JSON.parse(read('manifest.json'));
-  assert.equal(manifest.version, '10.19.13');
+  assert.equal(manifest.version, '10.19.14');
   assert.equal(manifest.short_name, 'PureKick Mod');
   for (const size of [16, 32, 48, 128]) {
     const icon = `icons/icon${size}.png`;
@@ -53,6 +53,65 @@ test('manifest references existing icons and avoids required all-sites access', 
   assert.match(content, /var SHIELD = .*#53fc18/);
   assert.match(content, /SHIELD\.replace/);
   assert.match(content, /#btn svg\{width:22px;height:22px\}/);
+});
+
+test('15-language voice clip commands parse representative spoken durations', () => {
+  const content = read('content.js');
+  const languageBlock = content.match(/var PK_KLIP_DILLERI = \[([\s\S]*?)\n  \];/);
+  assert.ok(languageBlock, 'voice command language list exists');
+  assert.equal([...languageBlock[1].matchAll(/\['[^']+',\s*'[^']+'\]/g)].length, 15);
+  const parseFunction = extractFunction(content, 'pkVidSesliSure', '\n  }\n\n  function pkKlipSesOlcerOlustur');
+  const parseDuration = vm.runInNewContext(`(${parseFunction})`);
+  const examples = [
+    ['klip on beş saniye', 15], ['clip fifteen seconds', 15], ['clip fünfzehn Sekunden', 15],
+    ['clip quinze secondes', 15], ['clip quince segundos', 15], ['clip quindici secondi', 15],
+    ['clip quinze segundos', 15], ['clip пятнадцать секунд', 15], ['clip 十五秒', 15],
+    ['clip 십오초', 15], ['clip 十五秒', 15], ['clip خمسة عشر ثانية', 15],
+    ['clip vijftien seconden', 15], ['clip piętnaście sekund', 15], ['clip पंद्रह सेकंड', 15]
+  ];
+  for (const [command, duration] of examples) assert.equal(parseDuration(command), duration, command);
+  assert.equal(parseDuration('clip 180 seconds'), 180);
+  assert.equal(parseDuration('clip 181 seconds'), 181, 'range validation remains in the command handler');
+  assert.equal(parseDuration('please clip this'), 0);
+});
+
+test('selected recorder codec/bitrate are applied with codec fallback and silent filename label', () => {
+  const content = read('content.js');
+  const recorderStart = content.indexOf('var PK_VID_CODECS = [');
+  const recorderEnd = content.indexOf('\n  function pkVidSessizEtiketi()', recorderStart);
+  assert.ok(recorderStart >= 0 && recorderEnd > recorderStart);
+  const recorderCode = content.slice(recorderStart, recorderEnd);
+  class MockMediaRecorder {
+    static isTypeSupported(mime) { return /vp8/.test(mime); }
+    constructor(stream, options) {
+      this.stream = stream;
+      this.options = options || {};
+      this.mimeType = this.options.mimeType || 'video/webm;codecs=vp8,opus';
+      this.videoBitsPerSecond = this.options.videoBitsPerSecond || 0;
+    }
+  }
+  const context = { settings: { vidCodec: 'h264', vidKalite: 'ultra', vidSes: true }, MediaRecorder: MockMediaRecorder };
+  vm.runInNewContext(recorderCode, context);
+  const ops = context.pkVidRecOpsiyonlar();
+  assert.equal(ops.mimeType, 'video/webm;codecs=vp8,opus');
+  assert.equal(ops.videoBitsPerSecond, 8000000);
+  assert.equal(ops.audioBitsPerSecond, 128000);
+  const created = context.pkVidRecOlustur({ id: 'stream' });
+  assert.equal(created.codecYedek, true);
+  assert.equal(created.kaydedici.options.mimeType, 'video/webm;codecs=vp8,opus');
+
+  const namingStart = content.indexOf('function pkVidSessizEtiketi()');
+  const namingEnd = content.indexOf('\n  function pkVidBoyutYazi(', namingStart);
+  const namingContext = {
+    settings: { vidDosyaSablon: '{kanal}-{tarih}-{saat}', vidKalite: 'ultra' },
+    scMevcutKanal: () => 'testkanal', Date,
+    chrome: { i18n: { getUILanguage: () => 'fr-FR' } }, navigator: { language: 'fr-FR' }
+  };
+  vm.runInNewContext(content.slice(namingStart, namingEnd), namingContext);
+  assert.match(namingContext.pkVidDosyaAdi('video/webm', 'video', new Date(2026, 0, 2, 3, 4, 5).getTime(), true), /-muet\.webm$/);
+  assert.match(namingContext.pkVidDosyaAdi('video/webm', 'video', Date.now(), false), /\.webm$/);
+  assert.match(content, /data-pk-voice-active-badge/);
+  assert.match(content, /SESLİ KLİP (?:AÇIK|DİNLİYOR)/);
 });
 
 test('every locale has the same message keys as English', () => {
@@ -137,7 +196,19 @@ test('HLS ad marker parser removes closed CUE and duration-bounded DATERANGE ads
 
 test('overlapping online-channel title requests share one fetch and notify every hover', async () => {
   const source = read('content.js');
+  const normalize = extractFunction(source, 'sablonNormalle', '\n  }\n\n  /* Önbellekteki kalıbı diriltir');
+  assert.match(normalize, /vurguKaldir\(btn\)/);
+  assert.match(normalize, /vurguKaldir\(a\)/);
+  assert.match(normalize, /querySelectorAll\('\.' \+ PK_VURGU_SINIF\)/);
+  assert.match(normalize, /removeProperty\('background-color'\)/);
+  assert.match(normalize, /\[data-state="active"\], \[aria-current="page"\]/);
+  const hover = extractFunction(source, 'onizBizimBagla', '\n  }\n\n  /* KICK\'İN KENDİ KENAR ÇUBUĞU SATIRLARI');
+  assert.match(hover, /onizBaslikCek\(slug/);
+  assert.match(hover, /satir\.title = baslik/);
+  const preview = extractFunction(source, 'onizBizimAc', '\n  }\n\n  function onizBizimGecikmeliKapat');
+  assert.ok(preview.indexOf('onizKutu = kutu; onizSatir = satir;') < preview.indexOf('onizBaslikCek(k.slug'), 'cached title callback sees active preview before returning synchronously');
   const fn = extractFunction(source, 'onizBaslikCek', '\n  }\n\n  function onizBizimKapat');
+  assert.match(fn, /var tazeSure = v && v\.baslik \? ONIZ_BASLIK_TAZE : 15000/);
   let fetchCount = 0;
   let resolveFetch;
   const context = {
@@ -207,6 +278,61 @@ test('official subscription webhook event names and giftee payload are normalize
   assert.match(worker, /channel\.subscription\.renewal/);
   assert.match(worker, /Array\.isArray\(d\.giftees\)/);
   assert.match(worker, /broadcaster\.channel_slug/);
+});
+test('click-to-open and automatic link cards are independently controlled', () => {
+  const content = read('content.js');
+  const gates = content.slice(content.indexOf('var PK_TUR_AYAR = {'), content.indexOf('};', content.indexOf('var PK_TUR_AYAR = {')));
+  assert.match(gates, /lpTum:\s*\['linkOnizleme'\]/);
+  assert.doesNotMatch(gates, /lpTum:\s*\[[^\]]*sekmeIci/);
+  const click = content.slice(content.indexOf('function sekmeIciTikla('), content.indexOf('/* ══════════════════════════════════════════════════════════════════════\n   * 10.5 — YAYIN KARTLARINDA', content.indexOf('function sekmeIciTikla(')));
+  assert.match(click, /if \(!bilgi\)\s*\{\s*var web = lpEmbed\(a\.href\)/);
+  assert.doesNotMatch(click, /linkOnizleme !== false/);
+  const settings = content.slice(content.indexOf('function bolumSekmeIciBaglanti('), content.indexOf('/* ════════ SOHBET › AD TAKİBİ', content.indexOf('function bolumSekmeIciBaglanti(')));
+  const clickSetting = settings.slice(0, settings.indexOf("satir(t('pkLinkOnizleme')"));
+  assert.doesNotMatch(clickSetting, /lpKartlariTemizle/);
+  assert.match(settings, /if \(!v\) \{ lpKartlariTemizle\(\); \}/);
+  assert.match(content, /attributeFilter: \['href'\]/);
+  assert.match(content, /function lpKartTikla\(b, e\)/);
+});
+test('X status links have an automatic preview card route independent of click setting', () => {
+  const content = read('content.js');
+  const start = content.indexOf('function lpEmbed(');
+  const end = content.indexOf('/* ---- Önizleme penceresi ---- */', start);
+  const fn = content.slice(start, end);
+  const map = vm.runInNewContext('(' + fn + ')', { URL, NON_CHANNEL: {}, location: { hostname: 'kick.com' } });
+  const result = map('https://x.com/SaadetPartisi/status/210773945589738307');
+  assert.equal(result.ad, 'Tweet');
+  assert.equal(result.metaPreview, true);
+  assert.equal(result.domain, 'x.com');
+});
+test('Kick channel and clip links open the Kick player at responsive player size', () => {
+  const content = read('content.js');
+  const start = content.indexOf('function lpEmbed(');
+  const end = content.indexOf('/* ---- Önizleme penceresi ---- */', start);
+  const fn = content.slice(start, end);
+  const map = vm.runInNewContext('(' + fn + ')', { URL, NON_CHANNEL: {}, location: { hostname: 'kick.com' } });
+  const clip = map('https://kick.com/swagybarK/clips/abc123');
+  assert.equal(clip.url, 'https://player.kick.com/swagybarK?clip=abc123');
+  assert.equal(clip.klip, true);
+  assert.equal(clip.kaynak, 'https://kick.com/swagybarK/clips/abc123');
+  assert.equal(map('https://kick.com/swagybarK/clip/abc123').klipId, 'abc123');
+  assert.equal(map('https://kick.com/swagybarK').url, 'https://player.kick.com/swagybarK');
+  assert.match(content, /var maxW = Math\.max\(280, Math\.min\(window\.innerWidth - 24, 1280\)\)/);
+  assert.match(content, /var embedOrani = Number\(bilgi\.oran\) > 0/);
+  assert.match(content, /aspect-ratio:' \+ embedEnBoy/);
+});
+test('profile card processing excludes home category and navigation menus', () => {
+  const content = read('content.js');
+  const profile = content.slice(content.indexOf('function gercekProfilKartiMi('), content.indexOf('/* 13. GELİŞMİŞ PROFİL KARTI', content.indexOf('function gercekProfilKartiMi(')));
+  assert.match(profile, /\[role="menu"\], \[role="listbox"\], nav, \[data-testid\*="category" i\], \[data-category-menu\]/);
+  assert.match(profile, /document\.querySelector\('#chatroom-messages'\)/);
+  assert.match(profile, /categories\?\|browse\|following\|followed-channels\|search/);
+  assert.match(profile, /location\.pathname \|\| '\/'\)\) return false/);
+  const dropCleanup = content.slice(content.indexOf('function pkClaimDiyalogTemizle('), content.indexOf('/* Yalnızca gerçek Kick sohbet kullanıcı profil kartını doğrular */'));
+  assert.match(dropCleanup, /location\.pathname \|\| '\/'\)\) return/);
+  assert.match(dropCleanup, /querySelectorAll\('\[role="dialog"\], \[data-testid\*="claim" i\]/);
+  assert.doesNotMatch(dropCleanup, /div\.bg-surface-(?:highest|base)/);
+  assert.doesNotMatch(content, /div\[class\*="cursor-\(--cursor-user-identity\)"\]\{/);
 });
 test('subscriber roles are normalized and collected from all sender payloads', () => {
   const worker = read('page/worker-hook.js');

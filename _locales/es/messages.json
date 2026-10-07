@@ -843,8 +843,22 @@
       "message": "Separar en directo / desconectados"
    },
    "pkKenarGrupD": {
-      "message": "Divide la lista de seguidos en dos: los canales en directo quedan arriba y abiertos, los desconectados quedan plegados — pulsa el título para abrirlos. También se elimina el límite de 10 canales de Kick."
+      "message": "Separa los canales seguidos en grupos en línea y sin conexión. El botón Mostrar más de Kick conserva su funcionamiento predeterminado."
    },
+   "pkKenarGrupSayi": {
+      "message": "Canales en las listas en línea / sin conexión"
+   },
+   "pkKenarGrupSayiD": {
+      "message": "Elige cuántos canales mostrar en cada grupo (1–20). El botón Mostrar más de Kick conserva su funcionamiento predeterminado."
+   },
+   "pkKenarGrupLimit": {
+      "message": "Aplicar límite de canales"
+   },
+   "pkKenarGrupLimitD": {
+      "message": "Limita los canales mostrados en las listas en línea y sin conexión según el valor 1–20. Es independiente de la separación de grupos."
+   },
+   "pkKickDahaFazlaGizle": { "message": "Ocultar los botones Mostrar más / Mostrar menos de Kick" },
+   "pkKickDahaFazlaGizleD": { "message": "Oculta los botones de expandir y contraer de Kick en la lista de canales." },
    "pkKendiMenum": {
       "message": "Abrir mi propio menú"
    },

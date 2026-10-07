@@ -843,8 +843,22 @@
       "message": "Separar ao vivo / offline"
    },
    "pkKenarGrupD": {
-      "message": "Divide a lista de seguidos em duas: os canais ao vivo ficam abertos no topo e os offline ficam recolhidos — clique no título para abrir. O limite de 10 canais do Kick também some."
+      "message": "Separa os canais seguidos em grupos online e offline. O botão Mostrar mais do Kick mantém o comportamento padrão."
    },
+   "pkKenarGrupSayi": {
+      "message": "Canais exibidos nas listas online / offline"
+   },
+   "pkKenarGrupSayiD": {
+      "message": "Escolha quantos canais exibir em cada grupo (1–20). O botão Mostrar mais do Kick mantém o comportamento padrão."
+   },
+   "pkKenarGrupLimit": {
+      "message": "Aplicar limite de canais"
+   },
+   "pkKenarGrupLimitD": {
+      "message": "Limita os canais exibidos nas listas online e offline usando o valor de 1–20. É independente da separação dos grupos."
+   },
+   "pkKickDahaFazlaGizle": { "message": "Ocultar os botões Mostrar mais / Mostrar menos do Kick" },
+   "pkKickDahaFazlaGizleD": { "message": "Oculta os botões de expandir e recolher do Kick na lista de canais." },
    "pkKendiMenum": {
       "message": "Abrir meu próprio menu"
    },

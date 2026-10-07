@@ -846,8 +846,22 @@
       "message": "Çevrimiçi / çevrimdışı ayır"
    },
    "pkKenarGrupD": {
-      "message": "Takip listesini ikiye ayırır: yayında olanlar üstte açık, çevrimdışı olanlar kapalı durur — başlığa tıklayınca açılır. Kick'in 10 kanallık sınırı da kalkar."
+      "message": "Takip edilen kanalları çevrimiçi ve çevrimdışı olarak ayırır. Kick'in Daha Fazla Göster sistemi varsayılan şekilde çalışır."
    },
+   "pkKenarGrupSayi": {
+      "message": "Çevrimiçi / çevrimdışı listede kişi sayısı"
+   },
+   "pkKenarGrupSayiD": {
+      "message": "Her grupta gösterilecek kanal sayısını 1–20 arasında seçin. Kick'in Daha Fazla Göster düğmesi varsayılan şekilde çalışır."
+   },
+   "pkKenarGrupLimit": {
+      "message": "Kişi sayısı sınırını uygula"
+   },
+   "pkKenarGrupLimitD": {
+      "message": "Çevrimiçi ve çevrimdışı listelerde gösterilen kanal sayısını aşağıdaki 1–20 sınırına göre kısıtlar. Grup ayırma ayarından bağımsızdır."
+   },
+   "pkKickDahaFazlaGizle": { "message": "Kick'in Daha Fazla Göster / Daha Az Göster düğmelerini gizle" },
+   "pkKickDahaFazlaGizleD": { "message": "Kick'in takip listesinde kendi göster / gizle düğmelerini kaldırır." },
    "pkKendiMenum": {
       "message": "Kendi menümü aç"
    },

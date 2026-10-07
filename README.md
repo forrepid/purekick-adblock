@@ -8,7 +8,7 @@
 
 [![GitHub license](https://img.shields.io/badge/license-Proprietary-blue.svg)](LICENSE)
 [![Manifest Version](https://img.shields.io/badge/Manifest-V3-brightgreen.svg)](manifest.json)
-[![PureKick Version](https://img.shields.io/badge/Version-10.19.12-orange.svg)](manifest.json)
+[![PureKick Version](https://img.shields.io/badge/Version-10.19.14-orange.svg)](manifest.json)
 [![Platform](https://img.shields.io/badge/Platform-Kick.com-53fc18.svg)](https://kick.com)
 
 </div>
@@ -106,12 +106,13 @@
 
 Detaylı sürüm geçmişi ve versiyon bazlı değişiklikler için [CHANGELOG.md](CHANGELOG.md) dosyasını inceleyebilirsiniz.
 
-* **v10.19.12 (Son Sürüm):**
-  * 🪲 Kick sayfasındaki araç düğmeleri ve ayarlar paneli PureKick Mod yeşil böcek logolu.
-  * 🖼️ Instagram, X/Twitter, Kick, TikTok ve izin verilen diğer platformlar için bağlantı görseli önizlemeleri; tüm sitelere erişim varsayılan olarak kapalıdır.
-  * 🔎 Lightshot bağlantılarını eklenti penceresinde açma ve görselini bulma.
-  * 💬 Sohbet arşivi, moderasyon/silinen mesaj kayıtları ve izleyici örnekleri iyileştirmeleri.
-  * 🎥 VOD ve oynatıcı geçişlerinde kararlılık düzeltmeleri.
+* **v10.19.14 (Son Sürüm):**
+  * 💬 Kanal bazlı sohbet arşivi, günlük log ve silinen mesaj metnini koruma.
+  * 👥 Çevrimiçi/çevrimdışı takip listesi gizleme ve kişi sınırı düzeltmeleri.
+  * 🔗 Sohbet bağlantı önizlemeleri, hover yayın başlığı ve profil kartı sayfa kapsamı iyileştirmeleri.
+  * 🎁 Abone rolü ve hediye KICKS destekçi kayıtlarının iyileştirilmesi.
+  * 🎙️ 15 dilli sesli klip komutu, mikrofon seviye göstergesi ve oynatıcı rozeti.
+  * 🎥 Kısayol aç/kapat, codec/bitrate geri dönüşü ve sessiz kayıt dosyası etiketi.
   * 🎙️ Canlı Altyazı & Sesli AI Dublaj Motoru (Audio Ducking ve 25+ dil entegrasyonu).
   * 🔍 Video İçi Dijital Büyüteç & Yakınlaştırma (Digital Zoom & Pan).
   * 📝 AI Yayın Özeti & Kaçırılanları Yakala ("Ne Kaçırdım?" TL;DR bülteni).

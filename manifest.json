@@ -105,7 +105,7 @@
    ],
    "short_name": "PureKick Mod",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "10.19.13",
+   "version": "10.19.14",
    "web_accessible_resources": [
       {
          "matches": [

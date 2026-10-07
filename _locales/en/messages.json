@@ -846,8 +846,22 @@
       "message": "Split online / offline"
    },
    "pkKenarGrupD": {
-      "message": "Splits the following list in two: channels that are live stay open at the top, offline ones stay collapsed — click the heading to open them. Kick's 10-channel limit is lifted too."
+      "message": "Separates followed channels into online and offline groups. Kick's Show More system keeps its default behavior."
    },
+   "pkKenarGrupSayi": {
+      "message": "Channels shown in online / offline lists"
+   },
+   "pkKenarGrupSayiD": {
+      "message": "Choose how many channels to show in each group (1–20). Kick's Show More button keeps its default behavior."
+   },
+   "pkKenarGrupLimit": {
+      "message": "Apply channel count limit"
+   },
+   "pkKenarGrupLimitD": {
+      "message": "Limits the number of channels shown in the online and offline lists using the 1–20 value below. Independent of online/offline grouping."
+   },
+   "pkKickDahaFazlaGizle": { "message": "Hide Kick's Show More / Show Less buttons" },
+   "pkKickDahaFazlaGizleD": { "message": "Hides Kick's own expand and collapse buttons in the followed channels list." },
    "pkKendiMenum": {
       "message": "Open my own menu"
    },

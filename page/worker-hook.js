@@ -714,12 +714,25 @@ function pkLog() {
     function tumRoller(rozetler) { return rozetListesi(rozetler); }
     function olayIsle(ad, d) {
       if (!d) return;
+      var kullanicininGonderdigiMesaj = ad === 'ChatMessageSentEvent';
       /* Kick'in bazı yayınlarında Pusher payload'ı olay alanlarını doğrudan,
          bazılarında `data` altında taşıyor. Her iki biçimi tek yapıda çöz. */
       if (d.data && typeof d.data === 'object' && !Array.isArray(d.data)) {
         var govde = Object.assign({}, d.data);
         for (var alan in d) if (Object.prototype.hasOwnProperty.call(d, alan) && govde[alan] == null) govde[alan] = d[alan];
         d = govde;
+      }
+      /* Bazı Kick istemci sürümleri kendi mesajını ayrı event adı yerine
+         ChatMessageEvent içinde işaretler. Bu açık self flag'lerini de aktar. */
+      if (!kullanicininGonderdigiMesaj) {
+        var ozMesajAdaylari = [d, d.message, d.sender, d.user,
+          d.message && d.message.sender, d.message && d.message.user];
+        for (var oiSelf = 0; oiSelf < ozMesajAdaylari.length; oiSelf++) {
+          var oa = ozMesajAdaylari[oiSelf];
+          if (oa && (oa.is_self === true || oa.is_current_user === true || oa.is_mine === true || oa.is_own_message === true)) {
+            kullanicininGonderdigiMesaj = true; break;
+          }
+        }
       }
       /* Kick'in farklı istemci/API sürümlerinde aynı olay farklı adlarla ve
          iç içe payload ile gelebiliyor. İzole dünyaya tek kanonik ad gönder. */
@@ -758,12 +771,13 @@ function pkLog() {
       for (var oi = olayIsle._son.length - 1; oi >= 0; oi--) {
         var oncekiOlay = olayIsle._son[oi];
         if (olaySimdi - oncekiOlay.ts > 30000) { olayIsle._son.splice(oi, 1); continue; }
-        if (oncekiOlay.key === olayPz && olaySimdi - oncekiOlay.ts < olayTekrarPenceresi) return;
+        if (oncekiOlay.key === olayPz && olaySimdi - oncekiOlay.ts < olayTekrarPenceresi && !kullanicininGonderdigiMesaj) return;
       }
       olayIsle._son.push({ key: olayPz, ts: olaySimdi });
       if (olayIsle._son.length > 200) olayIsle._son.shift();
       var y = { source: 'kab', type: 'chatEvent', ad: ad, n: pageNonce };
       if (ad === 'ChatMessageEvent' || ad === 'ChatMessageSentEvent') {
+        if (kullanicininGonderdigiMesaj) y.kendininMesaji = true;
         var chatMesaj = d.message && typeof d.message === 'object' ? d.message : d;
         var senderAdaylari = [d.sender, d.user, chatMesaj.sender, chatMesaj.user].filter(function (x) { return x && typeof x === 'object'; });
         var chatKisi = senderAdaylari.filter(function (x) { return x.username || x.slug; })[0] || senderAdaylari[0] || {};
@@ -780,7 +794,7 @@ function pkLog() {
           rozetListesi(liste).forEach(function (r) { if (chatRozetler.indexOf(r) < 0) chatRozetler.push(r); });
         });
         y.id = chatMesaj.id || chatMesaj.message_id || d.id || d.message_id || '';
-        y.kim = chatKisi.username || chatKisi.slug || '';
+        y.kim = chatKisi.username || chatKisi.slug || d.username || d.sender_username || '';
         y.metin = String(chatMesaj.content || chatMesaj.message || d.content || '').slice(0, 300);
         var chatTs = chatMesaj.created_at || d.created_at || d.timestamp;
         y.ts = (typeof chatTs === 'number' ? (chatTs < 1e12 ? chatTs * 1000 : chatTs) : Date.parse(chatTs)) || Date.now();

@@ -39,7 +39,7 @@ var DEFAULT_SETTINGS = {
   kartTakipci: true, kartMesajlar: true, kategoriGizle: true, kisiGizle: true,
   mentionAd: '', mesajEylem: true, modGunluk: true, modSerit: true, modSohbette: true, notlar: true,
   kelimeVurgu: true, oncelik: true, onizleme: true, otoKalite: '1080', otoSes: 'oto', otoTiyatro: false, rolVurgu: true, rolVurguModu: 'dairesel',
-  hakkindaEk: true, kenarGrup: true, kuralKabul: false, sabitKanal: true, sagTik: false, scEtiket: true, scFiltreCubugu: true, scSayac: true, sekmeIci: true, showBadge: true, silinenGoster: true, ssBirincil: 'indir',
+  hakkindaEk: true, kenarGrup: true, kenarGrupLimitAktif: true, kenarGrupSayi: 20, kenarKickDahaFazlaGizle: false, kuralKabul: false, sabitKanal: true, sagTik: false, scEtiket: true, scFiltreCubugu: true, scSayac: true, sekmeIci: true, showBadge: true, silinenGoster: true, ssBirincil: 'indir',
   ssIkincil: 'pano', tamEkranSon: true, temizlemeKoru: false, tiyatroNav: false, uyarHiz: true,
   videoIstat: true, yanSohbet: true,
   /* 10.16 Yenilikleri */
@@ -64,8 +64,8 @@ var DEFAULT_SETTINGS = {
   /* 10.20 Profesyonel Video Kaydedici */
   videoKayit: true, vidCodec: 'oto', vidKalite: 'yuksek', vidSes: true,
   vidMaksSure: 120, vidDosyaSablon: '{kanal}-{tarih}-{saat}', vidBitince: 'indir', vidKisakol: 'Alt+R',
-  vidKlipKomutAcik: true, vidKlipKomut: 'clip',
-  vidKlipAtamalari: [{ tus: 'Alt+1', saniye: 15 }, { tus: 'Alt+2', saniye: 30 }, { tus: 'Alt+3', saniye: 60 }]
+  vidKlipKomutAcik: true, vidKlipKomut: 'clip', vidKlipSesliDil: 'tr-TR', vidKlipSesliAcik: true, vidKlipKisayolAcik: true,
+  vidKlipAtamalari: [{ tus: 'Alt+1', saniye: 15 }, { tus: 'Alt+2', saniye: 30 }, { tus: 'Alt+3', saniye: 60 }], vidKlipAtamaYontem: 'dinle'
 };
 var DEFAULT_STATS = { domHidden: 0, videoAdsBlocked: 0 };
 

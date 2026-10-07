@@ -843,8 +843,22 @@
       "message": "Séparer en direct / hors ligne"
    },
    "pkKenarGrupD": {
-      "message": "Divise la liste des abonnements en deux : les chaînes en direct restent ouvertes en haut, les hors ligne restent repliées — cliquez sur le titre pour les ouvrir. La limite de 10 chaînes de Kick disparaît aussi."
+      "message": "Sépare les chaînes suivies en groupes en ligne et hors ligne. Le bouton Afficher plus de Kick conserve son comportement par défaut."
    },
+   "pkKenarGrupSayi": {
+      "message": "Chaînes affichées dans les listes en ligne / hors ligne"
+   },
+   "pkKenarGrupSayiD": {
+      "message": "Choisissez le nombre de chaînes affichées dans chaque groupe (1–20). Le bouton Afficher plus de Kick conserve son comportement par défaut."
+   },
+   "pkKenarGrupLimit": {
+      "message": "Appliquer la limite de chaînes"
+   },
+   "pkKenarGrupLimitD": {
+      "message": "Limite le nombre de chaînes affichées dans les listes en ligne et hors ligne selon la valeur 1–20. Indépendant du regroupement."
+   },
+   "pkKickDahaFazlaGizle": { "message": "Masquer les boutons « Afficher plus / Afficher moins » de Kick" },
+   "pkKickDahaFazlaGizleD": { "message": "Masque les boutons d’extension et de réduction de Kick dans la liste des chaînes." },
    "pkKendiMenum": {
       "message": "Ouvrir mon menu"
    },

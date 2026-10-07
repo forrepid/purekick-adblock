@@ -4,6 +4,26 @@ Bu doküman, PureKick eklentisinin tüm sürümlerindeki yenilikleri, hata düze
 
 ---
 
+## 🚀 [10.19.14] - 2026-10-07 (Sohbet, Kenar Çubuğu & Klip Araçları)
+
+### 💬 Sohbet ve kenar çubuğu
+- Sohbet arşivi kanal bazında ayrıldı; günlük tarih damgalı log indirme, silinen mesaj metnini koruma ve arşive yalnız yeni mesaj ekleme davranışı iyileştirildi.
+- Takip listesindeki çevrimiçi/çevrimdışı gizleme ve kişi sınırı düzenlendi; çevrimdışı satırlar gizleme açıkken ilk çizimden itibaren saklanır.
+- Çevrimiçi kanal hover başlıkları, bağlantı önizleme kartları ve sayfa içi bağlantı açma akışları düzeltildi; profil kartı davranışı kategori ve Drops sayfalarından ayrıldı.
+- Abone rol vurgusu ve hediye KICKS destekçi kayıtları için olay ayrıştırması genişletildi.
+
+### 🎥 Klip ve kayıt
+- Sohbet klip komutu algılaması ve kullanıcıya durum bildirimi güçlendirildi.
+- Sesli klip komutuna 15 dil seçeneği, mikrofon ses ölçeri ve oynatıcıda görünür açık/dinliyor rozeti eklendi.
+- Klip kısayollarına bağımsız aç/kapat ayarı eklendi; codec ve bitrate seçimleri kayıt başlatılırken uygulanır, desteklenmeyen codec için tarayıcı uyumlu geri dönüş yapılır.
+- Sessiz video ve klip kayıtları dosya adına tarayıcı diline göre sessiz etiketi ekler.
+
+### 🧰 Diğer düzeltmeler
+- Video renk modu, sohbet bağlantı durumu ve yayın oynatıcı geçiş kararlılığı düzenlendi.
+- Test kapsamı çevrimdışı oynatıcı ve arayüz regresyon senaryolarıyla genişletildi.
+
+---
+
 ## 🚀 [10.19.13] - 2026-10-06 (Renk Modu, Profil Kartları & Destekçi Kayıtları)
 
 - Video renk körü filtresindeki SVG matrisleri kaldırılarak yerel CSS filtrelerine geçildi; aynı değer için gereksiz video stil yazımı engellendi.

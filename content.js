@@ -43,7 +43,6 @@
      (kullanıcı bildirdi: "geç yükleniyor, bazen hiç yüklenmiyor"). Perdenin
      işi zaten ilk turdaki titremeyi gizlemek; 2.5 sn'de inmediyse gizleyecek
      bir şey kalmamıştır ve boş kenar çubuğu maliyeti faydasını geçer. */
-  var PK_ERKEN_TAVAN = 2500;
   /* `sabitKanal` ayarının localStorage aynası. document_start'ta
      chrome.storage okunamıyor (asenkron), localStorage senkron okunuyor —
      perdenin çizilip çizilmeyeceğine ilk boyamadan önce karar verebilmek
@@ -59,54 +58,6 @@
   var NON_CHANNEL = { '': 1, browse: 1, following: 1, 'followed-channels': 1, search: 1, drops: 1,
     category: 1, categories: 1, clips: 1, subscriptions: 1, messages: 1, dashboard: 1, settings: 1,
     'privacy-policy': 1, 'terms-of-service': 1, about: 1, help: 1, recommended: 1, trending: 1 };
-  (function pkErkenPerde() {
-    try {
-      /* 10.12 — KANAL-DIŞINDA PERDE ÇEKME. Perde, sabit-kanal yeniden
-         sıralaması titremesini gizlemek için; o iş artık yalnız kanal
-         sayfasında koşuyor. Ana sayfada perde çekilirse tur onu kaldırmaz ve
-         Kick'in takip/öneri listesi gizli kalır (bulunan hata). */
-      if (!scMevcutKanal()) return;
-      /* ÖZELLİK KAPALIYSA PERDE HİÇ ÇEKİLMEZ. Ayarlar chrome.storage'dan
-         ASENKRON geliyor, document_start'ta henüz elimizde yok; bu yüzden
-         `sabitKanal` değeri localStorage'a aynalanıyor (senkron okunur,
-         sayfayla aynı köken). Ayna yoksa AÇIK varsayılır — ilk kurulumda
-         perde görevini yapsın. Bkz. pkKenarAynala(). */
-      try { if (localStorage.getItem('pk-kenar') === '0') return; } catch (e) {}
-      /* Kap iki yoldan bulunuyor:
-           a) gerçek satırlardan — liste geldiyse
-           b) "daha fazla göster" düğmesinden — Kick'in İSKELET aşamasında
-              satır yok ama düğme var; (a) tek başına o aşamada tutmuyordu ve
-              Kick'in başlığı ile "Daha Fazla Göster" görünüyordu.
-         Ölçüldü: (b) tam olarak takip bölümünü buluyor, Önerilen'e dokunmuyor. */
-      var kapA = ':has(> button > a[data-testid^="sidebar-following-channel-"])';
-      var kapB = 'section:has(+ div > [data-testid="sidebar-show-more-following"])';
-      var kutuB = 'div:has(> [data-testid="sidebar-show-more-following"])';
-      /* İÇERİKTEN BAĞIMSIZ: bölüm daha boşken bile tutar. Kick'in kendi
-         sınıf birleşimi; ölçüldü, yalnız iki kenar çubuğu bölümünü buluyor. */
-      var kapC = 'section.flex.w-full.flex-col.p-3';
-      /* Kutu, düğme kimliği olmadan da basılabiliyor; sınıfından da yakala.
-         Ölçüldü: yalnız iki "daha fazla" kutusunu buluyor. */
-      var kutuC = 'div.mx-3.flex.items-center.justify-between';
-      var ort = 'html:not([' + PK_HAZIR + ']) ';
-      var st = document.createElement('style');
-      st.setAttribute('data-pk-erken-perde', '1');
-      st.textContent =
-        ort + kapA + '>*:not(.pk-iskelet){display:none}' +
-        ort + kapB + '>*:not(.pk-iskelet){display:none}' +
-        /* "Daha Fazla Göster" kutusu da yüklenirken görünmesin. */
-        ort + kutuB + '{display:none}' +
-        ort + kapC + '>*:not(.pk-iskelet){display:none}' +
-        ort + kutuC + '{display:none}' +
-        /* Yer tutuluyor: kap sıfıra çöküp sonra açılsaydı düzeltmeye
-           çalıştığımız sıçramanın aynısı olurdu. 8 satır x 44px. */
-        ort + kapA + '{min-height:352px}' +
-        ort + kapB + '{min-height:352px}';
-      (document.head || document.documentElement).appendChild(st);
-      /* EMNİYET: ne olursa olsun kalkar. */
-      setTimeout(pkKenarHazir, PK_ERKEN_TAVAN);
-    } catch (e) { pkKenarHazir(); }
-  })();
-
   // blockVodAds: GEÇMİŞ YAYIN (VOD) reklamı — canlıdan farklı mekanizma (SSAI), ayrı anahtar
   var DEFAULTS = {
     aiMod: true, baglantiDurum: true, bahsedilme: true, bahsetRozet: true,
@@ -133,7 +84,7 @@
     kartTakipci: true, kartMesajlar: true, kategoriGizle: true, kisiGizle: true,
     mentionAd: '', mesajEylem: true, modGunluk: true, modSerit: true, modSohbette: true, notlar: true,
     kelimeVurgu: true, oncelik: true, onizleme: true, otoKalite: '1080', otoSes: 'oto', otoTiyatro: false, rolVurgu: true, rolVurguModu: 'dairesel',
-    hakkindaEk: true, kenarGrup: true, kuralKabul: false, sabitKanal: true, sagTik: false, scEtiket: true, scFiltreCubugu: true, scSayac: true, sekmeIci: true, showBadge: true, silinenGoster: true, ssBirincil: 'indir',
+    hakkindaEk: true, kenarGrup: true, kenarGrupLimitAktif: true, kenarGrupSayi: 20, kenarKickDahaFazlaGizle: false, kuralKabul: false, sabitKanal: true, sagTik: false, scEtiket: true, scFiltreCubugu: true, scSayac: true, sekmeIci: true, showBadge: true, silinenGoster: true, ssBirincil: 'indir',
     ssIkincil: 'pano', tamEkranSon: true, temizlemeKoru: false, tiyatroNav: false, uyarHiz: true,
     videoIstat: true, yanSohbet: true,
     /* 10.16 Yenilikleri */
@@ -158,8 +109,8 @@
     /* 10.20 Profesyonel Video Kaydedici */
     videoKayit: true, vidCodec: 'oto', vidKalite: 'yuksek', vidSes: true,
     vidMaksSure: 120, vidDosyaSablon: '{kanal}-{tarih}-{saat}', vidBitince: 'indir', vidKisakol: 'Alt+R',
-    vidKlipKomutAcik: true, vidKlipKomut: 'clip',
-    vidKlipAtamalari: [{ tus: 'Alt+1', saniye: 15 }, { tus: 'Alt+2', saniye: 30 }, { tus: 'Alt+3', saniye: 60 }]
+    vidKlipKomutAcik: true, vidKlipKomut: 'clip', vidKlipSesliDil: 'tr-TR', vidKlipSesliAcik: true, vidKlipKisayolAcik: true,
+    vidKlipAtamalari: [{ tus: 'Alt+1', saniye: 15 }, { tus: 'Alt+2', saniye: 30 }, { tus: 'Alt+3', saniye: 60 }], vidKlipAtamaYontem: 'dinle'
   };   // 10.18 // background.js ile tutarli — onay ekrani kaldirildi, kurulunca otomatik aktif
   var settings = Object.assign({}, DEFAULTS);
 
@@ -214,6 +165,40 @@
       if (cObj && typeof cObj === 'object') Object.assign(settings, cObj);
     }
   } catch (e) {}
+
+  /* Çevrimdışı gizlemeyi ilk boyamadan önce uygula. Roster API'si asenkron
+     geldiğinden, son bilinen çevrimdışı slug'ları senkron bir ayna olarak
+     saklıyoruz. Kick satırları oluştururken :has() seçicisi satırı CSS ile
+     anında gizler; JS ve storage yanıtını beklemez. */
+  function pkOfflineSlugsYaz(liste) {
+    try {
+      var slugs = (Array.isArray(liste) ? liste : []).filter(function (x) {
+        return x && x.canli === false && /^[a-z0-9_-]+$/i.test(String(x.slug || ''));
+      }).map(function (x) { return String(x.slug).toLowerCase(); });
+      localStorage.setItem('pk-offline-slugs', JSON.stringify(slugs));
+    } catch (e) {}
+  }
+  function pkOfflineErkenStil() {
+    try {
+      var c = JSON.parse(localStorage.getItem('pk_settings_cache') || '{}');
+      var acik = c.kenarCevrimdisiGizle === true;
+      var slugs = JSON.parse(localStorage.getItem('pk-offline-slugs') || '[]');
+      if (!Array.isArray(slugs)) slugs = [];
+      slugs = slugs.filter(function (s) { return typeof s === 'string' && /^[a-z0-9_-]+$/i.test(s); });
+      if (acik) document.documentElement.setAttribute('data-pk-offline-pending', '1');
+      else document.documentElement.removeAttribute('data-pk-offline-pending');
+      var css = acik ? 'html[data-pk-offline-pending="1"] button:has(> a[data-testid^="sidebar-following-channel-"]){visibility:hidden!important}' : '';
+      if (acik && slugs.length) css += slugs.map(function (s) {
+        return 'button:has(> a[data-testid^="sidebar-following-channel-"][href="/' + s + '"])';
+      }).join(',') + '{display:none!important}';
+      var st = document.getElementById('pk-cevrimdisi-gizle-style');
+      if (css) {
+        if (!st) { st = document.createElement('style'); st.id = 'pk-cevrimdisi-gizle-style'; (document.head || document.documentElement).appendChild(st); }
+        st.textContent = css;
+      } else if (st && st.parentNode) st.parentNode.removeChild(st);
+    } catch (e) {}
+  }
+  pkOfflineErkenStil();
 
   function sendBg(msg) {
     if (msg && msg.type === 'setSettings' && msg.payload) {
@@ -2812,9 +2797,11 @@
      bir süre sonra durmasının sebebi buranın bağlı olmamasıydı. */
   function scOlaydanMesaj(d) {
     if (!scKanalKontrol()) return;
-    if (!d || !d.kim) return;
+    if (!d || (!d.kim && d.kendininMesaji !== true)) return;
     var parcalar = scParcalaMetin(d.metin);
-    pkVidKlipKomutBak(d.kim, d.ts || Date.now(), parcalar, d.id || '');
+    pkVidKlipKomutBak(d.kim, d.ts || Date.now(), parcalar, d.id || '', d.kendininMesaji === true);
+    try { pkVidKlipKomutDomObserverKur(); } catch (e) {}
+    if (!d.kim) return;
     scMesajIsle(d.kim, d.ts || Date.now(), parcalar, !!d.yanit, d.id || '', d.rol || '', d.renk || '', d.roller || []);
   }
 
@@ -3187,26 +3174,69 @@
     });
   }
 
-  /* Bağlantı önizleme KENDİ adımı. Eskiden rozet çiziminin içindeydi ve
-     rozet verisi gelmeyince (sunucu yavaş/429/çevrimdışı) düğme hiç
-     çıkmıyordu — iki özelliğin birbiriyle ilgisi yok. */
+  /* Otomatik link kartlarının işi, tıklama ile pencere içinde açma ayarından
+     bağımsızdır. Yalnız linkOnizleme anahtarı bu taramayı çalıştırır. */
+  var lpChatObserver = null, lpChatTarget = null, lpObserverRaf = 0;
   function lpTum() {
     if (!settings.consented) return;
-    if (settings.linkOnizleme === false) return;
+    if (settings.linkOnizleme === false) { lpObserverDurdur(); return; }
     var msgs = sohbetSatirlari();
     for (var i = 0; i < msgs.length; i++) { try { lpMesaj(msgs[i]); } catch (e) {} }
+    lpObserverKur();
   }
 
-  /* Ayar kapatılınca ekranda duran önizleme düğmelerini toplar ve işaretlerini
-     siler — yeniden açılınca aynı mesajlara tekrar basılabilsin diye. */
-  function lpTemizle() {
+  function lpObserverDurdur() {
+    if (lpChatObserver) lpChatObserver.disconnect();
+    lpChatObserver = null; lpChatTarget = null;
+    if (lpObserverRaf) { cancelAnimationFrame(lpObserverRaf); lpObserverRaf = 0; }
+  }
+  function lpObserverKur() {
+    var target = document.querySelector('#chatroom-messages');
+    if (!target || target === lpChatTarget || typeof MutationObserver !== 'function') return;
+    if (lpChatObserver) lpChatObserver.disconnect();
+    lpChatTarget = target;
+    lpChatObserver = new MutationObserver(function (mutations) {
+      if (lpObserverRaf || settings.linkOnizleme === false) return;
+      lpObserverRaf = requestAnimationFrame(function () {
+        lpObserverRaf = 0;
+        if (!lpChatTarget || !lpChatTarget.isConnected || settings.linkOnizleme === false) return;
+        var rows = [], seen = new Set();
+        mutations.forEach(function (m) {
+          var node = m.target && m.target.nodeType === 1 ? m.target : m.target && m.target.parentElement;
+          var row = node && node.closest ? node.closest('[data-index]') : null;
+          if (row && pkSatirNo(row) && !seen.has(row)) { seen.add(row); rows.push(row); }
+          (m.addedNodes || []).forEach(function (added) {
+            if (!added || added.nodeType !== 1) return;
+            var direct = added.matches && added.matches('[data-index]') && pkSatirNo(added) ? added : null;
+            if (direct && !seen.has(direct)) { seen.add(direct); rows.push(direct); }
+            if (added.querySelectorAll) added.querySelectorAll('[data-index]').forEach(function (candidate) {
+              if (pkSatirNo(candidate) && !seen.has(candidate)) { seen.add(candidate); rows.push(candidate); }
+            });
+          });
+        });
+        rows.forEach(function (row) { try { lpMesaj(row); } catch (e) {} });
+      });
+    });
+    lpChatObserver.observe(target, { childList: true, subtree: true, attributes: true, attributeFilter: ['href'] });
+  }
+
+  /* Yalnız otomatik kartları kaldır; sayfa içi açıcı kendi ayarından yönetilir. */
+  function lpKartlariTemizle() {
+    lpObserverDurdur();
     try {
       var d = document.querySelectorAll('.pk-lp');
       for (var i = 0; i < d.length; i++) d[i].remove();
       var m = document.querySelectorAll('[data-pk-lp]');
       for (var j = 0; j < m.length; j++) m[j].removeAttribute('data-pk-lp');
-      lpKapat();
     } catch (e) {}
+  }
+
+  function lpKartTikla(b, e) {
+    if (e) { e.preventDefault(); e.stopPropagation(); }
+    var hedef = b.kaynak || b.url;
+    if (e && (e.ctrlKey || e.metaKey || e.shiftKey)) { window.open(hedef, '_blank', 'noopener'); return; }
+    if (settings.sekmeIci === true || b.lightshot) lpAc(b);
+    else window.open(hedef, '_blank', 'noopener');
   }
 
   function processAllMessages() {
@@ -3432,7 +3462,10 @@
   /* 13. GELİŞMİŞ PROFİL KARTI & KOLEKSİYON TEMASI MOTORU */
   /* Drop / Claim / Günlük Ödül popup'ını tamamen varsayılan haline getir ve PureKick artıklarını temizle */
   function pkClaimDiyalogTemizle() {
-    var dialogs = document.querySelectorAll('div[role="dialog"], div.bg-surface-highest, div.bg-surface-base');
+    /* Drops'ın kendisi bir sayfa içeriğidir; popup temizliği buradaki geniş
+       yüzeyleri yanlışlıkla diyalog sanıp stillerini ve alt modüllerini siliyordu. */
+    if (location && /^\/drops?(?:\/|$)/i.test(location.pathname || '/')) return;
+    var dialogs = document.querySelectorAll('[role="dialog"], [data-testid*="claim" i], [data-testid*="reward" i], [data-claim]');
     for (var i = 0; i < dialogs.length; i++) {
       var d = dialogs[i];
       var txt = (d.textContent || '').slice(0, 400).toLowerCase();
@@ -3477,8 +3510,19 @@
   /* Yalnızca gerçek Kick sohbet kullanıcı profil kartını doğrular */
   function gercekProfilKartiMi(card) {
     if (!card || card.nodeType !== 1) return false;
+    /* Bu motor yalnız aktif kanal sohbetindeki kullanıcı kartlarını işler;
+       sayfa kartlarını, önerileri ve genel menüleri profil popup'ı saymaz. */
+    if (!document.querySelector('#chatroom-messages')) return false;
+    /* Kategori gezinmesi ayrı bir Kick sayfasıdır. Oradaki oyun/yayın kartları
+       profil popup'ı gibi genişletilmemeli veya tema almamalı. */
+    if (location && /^\/(?:categories?|browse|following|followed-channels|search)(?:\/|$)/i.test(location.pathname || '/')) return false;
+    /* Drops rotasındaki yayıncı/ödül kartları profil popup'ı değildir. */
+    if (location && /^\/drops?(?:\/|$)/i.test(location.pathname || '/')) return false;
     if (card.id && /^pk-/.test(card.id)) return false;
     if (card.closest && card.closest('#pk-ayar-panel, #pk-ara-panel, #pk-filtre-panel, #pk-channel-hud-stats, #pk-vod-indir-perde')) return false;
+    /* Kategori seçicileri ve genel gezinme menüleri bazen aynı Kick yüzey
+       sınıflarını kullanıyor; içlerindeki kanal linkleri profil kartı sayılmaz. */
+    if (card.closest && card.closest('#pk-sekme-ici, [role="menu"], [role="listbox"], nav, [data-testid*="category" i], [data-category-menu]')) return false;
 
     // Drop, Claim, Ödül, Kampanya diyaloglarını kesinlikle dışla
     if (card.closest && card.closest('[data-claim], .claim-rewards, [id*="drop" i], [id*="reward" i], [id*="claim" i], [class*="reward" i]')) return false;
@@ -4421,8 +4465,6 @@
         'border-left:2px solid rgba(240,241,242,.24)}' +
       '.pk-mod-actor-badge{background:rgba(168,85,247,0.18);color:#d8b4fe;border:1px solid rgba(168,85,247,0.4);border-radius:4px;padding:1px 6px;font-weight:800;display:inline-flex;align-items:center;gap:3px;font-size:11.5px;}' +
       '.pk-mod-hedef-user{background:rgba(239,68,68,0.15);color:#fca5a5;border:1px solid rgba(239,68,68,0.35);border-radius:4px;padding:1px 6px;font-weight:800;font-size:11.5px;}' +
-      'div[class*="cursor-(--cursor-user-identity)"], div.bg-surface-bg-default[class*="z-dialog"]{background-color:#131619 !important;border:1px solid rgba(255,255,255,0.12) !important;border-radius:14px !important;box-shadow:0 14px 36px rgba(0,0,0,0.65) !important;}' +
-      'div[class*="cursor-(--cursor-user-identity)"][data-pk-tema-imza], div.bg-surface-bg-default[class*="z-dialog"][data-pk-tema-imza]{background-color:transparent !important;}' +
       '#chatroom-messages{flex:1 1 0% !important;min-height:0 !important;overflow-y:auto !important;padding-top:48px !important;scroll-padding-top:48px !important;padding-bottom:8px !important;scroll-padding-bottom:8px !important;box-sizing:border-box !important;overscroll-behavior-y:contain !important;}' +
       '#chatroom-messages > div:first-child{padding-top:12px !important;}' +
       '#chatroom-messages > div:last-child{padding-bottom:8px !important;margin-bottom:0 !important;}' +
@@ -6701,6 +6743,11 @@
     vip: '#e6a800', founder: '#ff7ac6', og: '#9b6bff', sub_gifter: '#ff8a3d',
     subscriber: '#53fc18', bot: '#8b969d'
   };
+  var PK_KLIP_DILLERI = [
+    ['tr-TR', 'Türkçe'], ['en-US', 'English'], ['de-DE', 'Deutsch'], ['fr-FR', 'Français'], ['es-ES', 'Español'],
+    ['it-IT', 'Italiano'], ['pt-BR', 'Português (Brasil)'], ['ru-RU', 'Русский'], ['ja-JP', '日本語'], ['ko-KR', '한국어'],
+    ['zh-CN', '中文 (简体)'], ['ar-SA', 'العربية'], ['nl-NL', 'Nederlands'], ['pl-PL', 'Polski'], ['hi-IN', 'हिन्दी']
+  ];
   /* Rol sırası = öncelik sırası. Bir kişide birden çok rozet olabilir; en üstteki kazanır. */
   /* ── KICK ROL ROZETLERİ ──────────────────────────────────────────────
    * Kick'in kendi rozet çizimleri. Figma'dan kalan işlevsiz tam boy
@@ -11409,7 +11456,7 @@
     }
     // Kick klip ve kanal
     if (h === 'kick.com') {
-      var mk = y.match(/^\/([^\/]+)\/clips\/([\w-]+)/);
+      var mk = y.match(/^\/([^\/]+)\/clips?\/([\w-]+)/);
       if (mk && kickKanalSlugu(mk[1])) {
         return { tur: 'kick', src: 'https://player.kick.com/' + encodeURIComponent(mk[1]) + '?clip=' + encodeURIComponent(mk[2]) };
       }
@@ -11461,7 +11508,12 @@
       'display:flex;align-items:center;justify-content:center;padding:24px';
     var k = el('div', 'bg-surface-base rounded shadow-lg flex flex-col gap-2 ' +
       'will-change-[opacity,transform] animate-slideUpAndFade');
-    k.style.cssText = 'width:min(900px,94vw);padding:12px;border:1px solid rgba(240,241,242,.16)';
+    var embedOrani = Number(bilgi.oran) > 0 ? Number(bilgi.oran) : 56.25;
+    var embedEnBoy = (100 / embedOrani).toFixed(4);
+    var maxGenislik = Math.max(280, Math.min(window.innerWidth - 24, 1280));
+    var maxYukseklik = Math.max(180, window.innerHeight * 0.72);
+    var oynaticiGenislik = Math.min(maxGenislik, maxYukseklik * (100 / embedOrani));
+    k.style.cssText = 'width:' + Math.round(oynaticiGenislik) + 'px;max-width:calc(100vw - 24px);max-height:88vh;padding:12px;border:1px solid rgba(240,241,242,.16)';
     var bas = el('div', 'flex items-center justify-between gap-2');
     bas.appendChild(el('div', 'text-sm font-bold text-white truncate', baslik || ''));
     var sag = el('div', 'flex items-center gap-2 shrink-0');
@@ -11488,7 +11540,7 @@
     cerc.setAttribute('referrerpolicy', 'origin');
     /* Sandbox: gömülü sayfa üst pencereye gezinemesin, açılır pencere açmasın. */
     cerc.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-presentation');
-    cerc.style.cssText = 'width:100%;aspect-ratio:16/9;border:0;border-radius:4px;background:#000;display:block';
+    cerc.style.cssText = 'width:100%;aspect-ratio:' + embedEnBoy + ';max-height:72vh;border:0;border-radius:4px;background:#000;display:block';
     k.appendChild(cerc);
     ort.appendChild(k);
     ort.addEventListener('click', function (e) { if (e.target === ort) sekmeIciKapat(); });
@@ -11504,7 +11556,7 @@
     if (!a) return;
     if (!pkSatirBul(a)) return;                                // yalnız sohbet mesajları
     var bilgi = gommeAdresi(a.href);
-    if (!bilgi && settings.linkOnizleme !== false) {
+    if (!bilgi) {
       var web = lpEmbed(a.href);
       if (web) {
         bilgi = { tur: web.ad, src: web.url, ad: web.ad, url: web.url, kaynak: a.href,
@@ -11873,6 +11925,7 @@
                         'data-pk-rol', 'data-pk-roller', 'data-pk-cerceve',
                         'data-pk-kisigizli', 'data-pk-grad', 'data-pk-title', 'data-pk-processed',
                         'data-pk-kanalsabit', 'data-pk-takipliste', 'data-pk-grup',
+                        'data-pk-grup-sinir',
                         'data-pk-grupli', 'data-pk-kapali-gizli', 'data-pk-gizli-grup',
                         'data-pk-perde', 'data-pk-altlik'];
 
@@ -13709,16 +13762,18 @@
   }
 
   function oynaticiButonlariKur() {
-    if (!settings.consented) return;
-    var v = oynaticiVideosu(); if (!v) return;
+    if (!settings.consented) { pkKlipSesliRozetTazele(null, true); return; }
+    var v = oynaticiVideosu(); if (!v) { pkKlipSesliRozetTazele(null, true); return; }
     var vr = v.getBoundingClientRect();
     if (vr.width < 200 || vr.height < 100) return;
     var kap = oynaticiKabi(v, vr);
     if (!kap) {
       var art = document.querySelectorAll('[data-pk-oyn]');
       for (var a = 0; a < art.length; a++) art[a].remove();
+      pkKlipSesliRozetTazele(null, true);
       return;
     }
+    pkKlipSesliRozetTazele(kap);
     // yanlış kaba girmiş butonları topla
     var kacak = document.querySelectorAll('[data-pk-oyn]');
     for (var k = 0; k < kacak.length; k++) if (!kap.contains(kacak[k])) kacak[k].remove();
@@ -15019,13 +15074,16 @@
       '[' + PK_GRUPLI + ']>[' + PK_GRUP + '="canli"]{order:3}' +
       '[' + PK_GRUPLI + ']>[' + PK_GRUP + '="canli"][' + SABIT_IM + ']{order:2}' +
       '[' + PK_GRUPLI + ']>[' + PK_GRUP + '="kapali"]{order:5}' +
+      '[' + PK_GRUPLI + ']>:has([data-testid="sidebar-show-more-following"]),' +
+      '[' + PK_GRUPLI + ']>:has([data-testid="sidebar-show-less-following"]){order:6}' +
+      '[' + PK_GRUP_SINIR + ']{display:none}' +
       '[' + PK_KAPALI_G + ']>[' + PK_GRUP + '="kapali"]{display:none}' +
       /* Çevrimdışı sekmesi seçiliyken CANLI satırlar gizlenir — yukarıdaki
          kuralın tersi. İki kural birlikte "tek sekme görünür" demek. */
       '[' + PK_CANLI_G + ']>[' + PK_GRUP + '="canli"]{display:none}' +
       '[' + PK_GRUPLI + ']>[' + PK_GRUP + '="bos"]{display:none}' +
       /* Çizim bizdeyken Kick'in kendi satırları ve başlığı gizli kalır. */
-      '[' + PK_BIZIM + ']>*:not([' + PK_SATIR + ']):not([data-pk-grupbas]):not(.pk-iskelet){display:none}' +
+      '[' + PK_BIZIM + ']>*:not([' + PK_SATIR + ']):not([data-pk-grupbas]):not(.pk-iskelet):not([data-testid="sidebar-show-more-following"]):not([data-testid="sidebar-show-less-following"]){display:none}' +
       /* Perde: yalnız iskeletler görünür, gerçek içerik beklerken örtülü. */
       '[' + PK_PERDE + ']>*:not(.pk-iskelet){display:none}' +
       '.pk-iskelet{order:0}' +
@@ -15107,12 +15165,11 @@
    *
    * Kick'in kendi düğmesi kademeli açıyor (+5) ve liste bitince düğmeyi
    * KALDIRIYOR — bitişi böyle anlıyoruz (ölçüldü: 35 satırda düğme yok).
-   * Hepsini açıyoruz ki çevrimdışı bölümü de dolu olsun; çevrimdışı satırlar
-   * varsayılan olarak kapalı durduğu için ekranda yer kaplamıyorlar.
+   * Kick'in "daha fazla göster" düğmesine otomatik basmıyoruz. Yenilemede
+   * bunu 6-7 kez tetiklemek sayfayı gereksiz yere oynatıyor. Yalnız DOM'da
+   * yüklü satırları grupluyoruz; kullanıcı Kick'in düğmesiyle devamını açar.
    * ══════════════════════════════════════════════════════════════════════ */
   var SABIT_AC_DUGME = '[data-testid="sidebar-show-more-following"]';
-  var SABIT_AC_TAVAN = 20;
-  var sabitAcSayac = 0, sabitAcSonSayi = 0, sabitAcZaman = 0;
 
   /* Satır canlı mı? Birden fazla ipucu kontrol ediyoruz — Kick DOM yapısını
      değiştirince tek ipucuya bağlı olmak kırılgandı.
@@ -15121,6 +15178,18 @@
      3) İzleyici sayısı metni: rakam içeren satır = canlı
      4) "offline" / "çevrimdışı" metni = çevrimdışı */
   function sabitSatirCanli(a) {
+    /* Takip API'si çevrimiçi durumunu DOM'dan daha güvenilir verir. Önce onu
+       kullan; eski/çeviri uyumsuz Kick satırlarında çevrimdışı kanalların
+       yanlışlıkla canlı sayılmasını önler. */
+    if (roster && roster.length) {
+      var href = a && a.getAttribute('href') || '';
+      var slug = href.replace(/^\/+/, '').split(/[/?#]/)[0].toLowerCase();
+      if (slug) {
+        for (var r = 0; r < roster.length; r++) {
+          if (String(roster[r].slug || '').toLowerCase() === slug) return !!roster[r].canli;
+        }
+      }
+    }
     /* Yöntem 1: Orijinal yapı kontrolü */
     var sut = a.querySelector('div[class*="flex-col"]');
     var sag = sut && sut.parentElement && sut.parentElement.children[1];
@@ -15142,29 +15211,31 @@
     return false;
   }
 
-  function sabitListeAc(kap, satirlar) {
-    if (settings.kenarGrup === false || !kap || !satirlar.length) return;
-    /* Liste küçüldüyse (kullanıcı daralttı ya da başka kanala geçildi)
-       sayaçlar sıfırlanır, yoksa bir daha hiç açılmaz. */
-    if (satirlar.length < sabitAcSonSayi) {
-      sabitAcSayac = 0; sabitAcSonSayi = 0;
-      perdeBasla = 0; perdeBitti = false;        // yeniden açılacak, perde de yeniden
+  /* Kişi sınırı grup ayırma ayarından bağımsızdır ve Kick'in özgün satırlarını
+     kullanır. Kapalıyken yalnız kendi sınır işaretlerini temizler. */
+  function sabitKisiSinirUygula(satirlar) {
+    var acik = settings.kenarGrupLimitAktif === true;
+    var sinir = Math.max(1, Math.min(20, parseInt(settings.kenarGrupSayi, 10) || 20));
+    var adetler = { canli: 0, kapali: 0 };
+    for (var i = 0; i < satirlar.length; i++) {
+      var a = satirlar[i];
+      var btn = a.parentElement;
+      if (!btn || btn.tagName !== 'BUTTON') continue;
+      if (!acik) { btn.removeAttribute(PK_GRUP_SINIR); continue; }
+      var tur = sabitSatirCanli(a) ? 'canli' : 'kapali';
+      adetler[tur]++;
+      if (adetler[tur] > sinir) btn.setAttribute(PK_GRUP_SINIR, '1');
+      else btn.removeAttribute(PK_GRUP_SINIR);
     }
-    if (sabitAcSayac >= SABIT_AC_TAVAN) return;              // sonsuz tıklama freni
-    /* Tıkladık ama sayı artmadıysa Kick daha fazlasını vermiyor. */
-    if (sabitAcSayac && satirlar.length <= sabitAcSonSayi) return;
-    var simdi = Date.now();
-    if (simdi - sabitAcZaman < 300) return;                  // React çizsin diye ara ver
-    var d = document.querySelector(SABIT_AC_DUGME);
-    if (!d) return;                    // düğme yok = liste bitti
-    sabitAcSayac++; sabitAcSonSayi = satirlar.length; sabitAcZaman = simdi;
-    try { d.click(); } catch (e) {}
   }
 
-
-
-
-
+  function sabitKickDahaFazlaUygula() {
+    var id = 'pk-kick-daha-fazla-style';
+    var st = document.getElementById(id);
+    if (settings.kenarKickDahaFazlaGizle !== true) { if (st) st.remove(); return; }
+    if (!st) { st = document.createElement('style'); st.id = id; (document.head || document.documentElement).appendChild(st); }
+    st.textContent = '[data-testid="sidebar-show-more-following"],[data-testid="sidebar-show-less-following"]{display:none!important}';
+  }
 
   /* ══════════════════════════════════════════════════════════════════════
    * OTOMATİK SES
@@ -15682,6 +15753,8 @@
       return (b.izleyici || 0) - (a.izleyici || 0);
     });
     roster = liste; rosterZaman = Date.now();
+    pkOfflineSlugsYaz(liste);
+    try { pkCevrimdisiGizleUygula(); } catch (e) {}
     try { chrome.storage.local.set({ pkRoster: { ts: rosterZaman, k: liste } }); } catch (e) {}
     if (bitince) bitince(liste);
   }
@@ -15802,10 +15875,32 @@
   /* Vurguyu kalıptan söker: kalıp hangi satırdan gelirse gelsin nötr olsun. */
   function sablonNormalle(btn) {
     try {
-      btn.className = String(btn.className || '')
-        .split(/\s+/).filter(function (c) { return c && c !== PK_VURGU_SINIF; }).join(' ');
+      function vurguKaldir(oge) {
+        if (!oge) return;
+        oge.className = String(oge.className || '')
+          .split(/\s+/).filter(function (c) { return c && c !== PK_VURGU_SINIF; }).join(' ');
+        if (oge.style) {
+          oge.style.removeProperty('background');
+          oge.style.removeProperty('background-color');
+        }
+      }
+      vurguKaldir(btn);
+      /* Seçili satırın tonu bazen içteki avatar/metin sarmalayıcısına konur;
+         yalnız button ve anchor sınıflarını temizlemek gri kartı bırakıyordu. */
+      var icVurgular = btn.querySelectorAll('.' + PK_VURGU_SINIF);
+      for (var i = 0; i < icVurgular.length; i++) icVurgular[i].classList.remove(PK_VURGU_SINIF);
+      var etkinler = btn.querySelectorAll('[data-state="active"], [aria-current="page"]');
+      for (var j = 0; j < etkinler.length; j++) {
+        etkinler[j].removeAttribute('data-state');
+        etkinler[j].removeAttribute('aria-current');
+      }
       var a = btn.querySelector('a');
-      if (a) a.setAttribute('data-state', 'false');
+      if (a) {
+        /* Kick seçili satırın zemin sınıfını bağlantının kendisine de koyabiliyor. */
+        vurguKaldir(a);
+        a.setAttribute('data-state', 'false');
+        a.removeAttribute('aria-current');
+      }
     } catch (e) {}
     return btn;
   }
@@ -15920,19 +16015,32 @@
     var q = kap.querySelectorAll(':scope > [' + PK_SATIR + ']');
     for (var i = 0; i < q.length; i++) mevcut[q[i].getAttribute(PK_SLUG)] = q[i];
     var canliSayi = 0, kapaliSayi = 0;
+    var canliCizilen = 0, kapaliCizilen = 0;
+    var limitAcik = settings.kenarGrupLimitAktif === true;
+    var limit = Math.max(1, Math.min(20, parseInt(settings.kenarGrupSayi, 10) || 20));
     for (var j = 0; j < roster.length; j++) {
       var k = roster[j];
       if (k.canli) canliSayi++; else kapaliSayi++;
+      if (!k.canli && settings.kenarCevrimdisiGizle === true) continue;
+      if (limitAcik) {
+        if (k.canli && canliCizilen >= limit) continue;
+        if (!k.canli && kapaliCizilen >= limit) continue;
+      }
       var imza = (k.canli ? 1 : 0) + '|' + k.ad + '|' + k.kategori + '|' +
                  (k.sayiGoster ? k.izleyici : -1) + '|' + (sabitSlugMu(k.slug) ? 1 : 0) +
                  '|' + (k.slug === rosterSuankiSlug() ? 1 : 0);
       var eski = mevcut[k.slug];
-      if (eski && eski.getAttribute('data-pk-imza') === imza) { delete mevcut[k.slug]; continue; }
+      if (eski && eski.getAttribute('data-pk-imza') === imza) {
+        delete mevcut[k.slug];
+        if (k.canli) canliCizilen++; else kapaliCizilen++;
+        continue;
+      }
       var yeni = rosterSatir(k);
       if (!yeni) continue;
       yeni.setAttribute('data-pk-imza', imza);
       if (eski) { kap.replaceChild(yeni, eski); delete mevcut[k.slug]; }
       else kap.appendChild(yeni);
+      if (k.canli) canliCizilen++; else kapaliCizilen++;
     }
     /* Listeden düşen kanalların satırlarını kaldır. */
     Object.keys(mevcut).forEach(function (sl) { mevcut[sl].remove(); });
@@ -15974,6 +16082,7 @@
    * ══════════════════════════════════════════════════════════════════════ */
   var PK_GRUP     = 'data-pk-grup';
   var PK_GRUPLI   = 'data-pk-grupli';
+  var PK_GRUP_SINIR = 'data-pk-grup-sinir';
   var PK_KAPALI_G = 'data-pk-kapali-gizli';
   /* Çevrimdışı sekmesi seçiliyken canlı satırları gizler. */
   var PK_CANLI_G  = 'data-pk-canli-gizli';
@@ -16094,17 +16203,7 @@
     var tamam = !!sayim || !document.querySelector(SABIT_AC_DUGME);
     kenarSekmeYaz(kap, canliSayi, kapaliSayi, tamam);
 
-    /* Kick'in "daha fazla/az" kutusu artık anlamsız: listeyi biz açıyoruz.
-       Kutuyu DÜĞMELERİNDEN buluyoruz. Eskiden kabın bir sonraki kardeşi
-       alınıyordu; liste tamamen açılınca Kick o kutuyu kaldırıyor ve sıradaki
-       kardeş "Önerilen Kanallar" bölümü oluyordu — canlıda onu gizledik. */
-    var dug = document.querySelector('[data-testid="sidebar-show-more-following"],' +
-                                     '[data-testid="sidebar-show-less-following"]');
-    var kutu = dug && dug.parentElement;
-    if (kutu && !kutu.getAttribute(PK_GIZLI_G)) {
-      kutu.setAttribute(PK_GIZLI_G, '1');
-      kutu.style.setProperty('display', 'none', 'important');
-    }
+    /* Kick'in kendi daha fazla/az düğmesine hiç dokunmuyoruz. */
   }
 
   /* Daralmış kenar çubuğu (yalnız ikon modu) için sekme ikonları.
@@ -16216,7 +16315,12 @@
        kaldırılmıyor, kenar çubuğu PK_ERKEN_TAVAN dolana kadar boş kalıyordu.
        Kullanıcının bildirdiği "kapatınca geç yükleniyor" hatası buydu. */
     if (!settings.consented) { pkKenarHazir(); return; }
+    sabitKickDahaFazlaUygula();
     var satirlar = document.querySelectorAll('a[data-testid^="sidebar-following-channel-"]');
+    if (satirlar.length) {
+      sabitStilKur();
+      sabitKisiSinirUygula(satirlar);
+    }
     if (settings.sabitKanal === false) {
       if (satirlar.length) sabitTemizle();
       /* kenarGrup açıksa gruplama hâlâ çalışmalı — burada çıkmıyoruz. */
@@ -16224,7 +16328,6 @@
     }
     /* Liste henüz boyanmadı: perde görevini yapıyor, tavan zaten sınırlıyor. */
     if (!satirlar.length) return;
-    sabitStilKur();
     var degisti = false, basilan = [], kap = null;
     /* Kabı her zaman bul — kenarGrup için lazım. */
     for (var ki = 0; ki < satirlar.length; ki++) {
@@ -16264,18 +16367,15 @@
       }
       if (degisti) sabitKaydet();
     }
-    /* ÇİZİM BİZDEYSE Kick'in kademeli listesine hiç dokunmuyoruz: sayım da
-       sıralama da roster'dan geliyor, tek geçişte. */
-    var ciz = kenarCiz(kap);
-    if (ciz) {
-      perdeBitti = true; perdeKaldir(kap); pkKenarHazir();
-      sabitGrupUygula(kap, satirlar, ciz);
-      return;
+    /* Kick'in kendi liste ve daha fazla/az düğmesi varsayılan kalır.
+       Eski roster klonları varsa temizleyip özgün satırlara dön. */
+    var rosterRenderAktif = settings.kenarGrup !== false && kap && roster && roster.length;
+    if (kap && kap.querySelector(':scope > [' + PK_SATIR + ']') && !rosterRenderAktif) grupTemizle(kap);
+    var rosterSayim = null;
+    if (rosterRenderAktif) {
+      rosterSayim = kenarCiz(kap) || null;
     }
-    /* Roster yok (çıkış yapılmış / ağ hatası): eski yola düş. */
-    sabitListeAc(kap, satirlar);
-    sabitPerdeUygula(kap, satirlar);
-    sabitGrupUygula(kap, satirlar);
+    sabitGrupUygula(kap, satirlar, rosterSayim);
   }
 
   function sabitDugmesi(anahtar, slug, sabitMi, sinif) {
@@ -17061,10 +17161,30 @@ var c = kart(t('pkEngellemeAyarlari'), t('pkAninda'));
         /* Kapatınca başlıklarımızı ve işaretleri topluyoruz; listeyi geri
            DARALTMIYORUZ — Kick'in kendi durumu, altından çekmek olur.
            Sonraki sayfa yüklemesinde Kick zaten 10'da başlıyor. */
-        if (v) { sabitAcSayac = 0; sabitAcSonSayi = 0; sabitKanalUygula(); }
+        if (v) sabitKanalUygula();
         else grupTemizle(document.querySelector('[' + SABIT_LISTE + ']'));
         panelCiz();
         toast(ozellikToast(v, 'pkKenarGrup'));
+      })));
+    sb.appendChild(satir(t('pkKenarGrupLimit'), t('pkKenarGrupLimitD'),
+      anahtar(settings.kenarGrupLimitAktif === true, function (v) {
+        settings.kenarGrupLimitAktif = v;
+        sendBg({ type: 'setSettings', payload: { kenarGrupLimitAktif: v } });
+        sabitKanalUygula();
+        toast(ozellikToast(v, 'pkKenarGrupLimit'));
+      })));
+    sb.appendChild(satir(t('pkKenarGrupSayi'), t('pkKenarGrupSayiD'),
+      sayiAlani(settings.kenarGrupSayi || 20, 1, 20, function (v) {
+        settings.kenarGrupSayi = v;
+        sendBg({ type: 'setSettings', payload: { kenarGrupSayi: v } });
+        sabitKanalUygula();
+      })));
+    sb.appendChild(satir(t('pkKickDahaFazlaGizle'), t('pkKickDahaFazlaGizleD'),
+      anahtar(settings.kenarKickDahaFazlaGizle === true, function (v) {
+        settings.kenarKickDahaFazlaGizle = v;
+        sendBg({ type: 'setSettings', payload: { kenarKickDahaFazlaGizle: v } });
+        sabitKickDahaFazlaUygula();
+        toast(ozellikToast(v, 'pkKickDahaFazlaGizle'));
       })));
     
     /* 9. Madde: Çevrimdışı Kanalları Tamamen Gizle/Göster */
@@ -17561,7 +17681,10 @@ var oz = kart(t('pkOnizleme'), t('pkOnizlemeD'));
     bitince = typeof bitince === 'function' ? bitince : function () {};
     var v = onizBaslikVeri[slug];
     if (v && v.bekliyor) { (v.bekleyenler || (v.bekleyenler = [])).push(bitince); return; }
-    if (v && Date.now() - v.ts < ONIZ_BASLIK_TAZE) { bitince(v.baslik); return; }
+    /* Boş sonuç çoğunlukla geçici API/429/timeout hatasıdır; dolu başlık gibi
+       iki dakika saklamak hover başlığını takılı bırakıyordu. */
+    var tazeSure = v && v.baslik ? ONIZ_BASLIK_TAZE : 15000;
+    if (v && Date.now() - v.ts < tazeSure) { bitince(v.baslik); return; }
     var kayit = onizBaslikVeri[slug] = { ts: 0, bekliyor: true, baslik: '', bekleyenler: [bitince] };
     var controller = new AbortController();
     var timer = setTimeout(function () { controller.abort(); }, 5000);
@@ -17628,6 +17751,13 @@ var oz = kart(t('pkOnizleme'), t('pkOnizlemeD'));
     if (k.kategori) alt.appendChild(el('div', 'text-xs text-subtle truncate', k.kategori));
     kutu.appendChild(alt);
 
+    /* Başlık önbellekten anında dönebilir; callback'ten önce aktif kutuyu
+       kaydet ki önbellekli başlık da ilk çizimde gösterilsin. */
+    pkKatmanaEkle(kutu);
+    onizIpucuBastir(true);
+    onizKutu = kutu; onizSatir = satir;
+    onizKonumla(kutu, satir);
+
     onizBaslikCek(k.slug, function (b) {
       /* Kutu bu arada kapanmış ya da başka kanala geçilmiş olabilir. */
       if (!bsl.isConnected || onizKutu !== kutu) return;
@@ -17648,10 +17778,6 @@ var oz = kart(t('pkOnizleme'), t('pkOnizlemeD'));
     });
     kutu.addEventListener('mouseleave', onizBizimGecikmeliKapat);
 
-    pkKatmanaEkle(kutu);
-    onizIpucuBastir(true);
-    onizKutu = kutu; onizSatir = satir;
-    onizKonumla(kutu, satir);
   }
 
   function onizBizimGecikmeliKapat() {
@@ -17670,6 +17796,18 @@ var oz = kart(t('pkOnizleme'), t('pkOnizlemeD'));
        görünürdü. Veriyi önceden biliyorsak hiç bağlamıyoruz. */
     if (dogrudan && !dogrudan.canli) return;
     satir.addEventListener('mouseenter', function () {
+      /* Başlığı hover'ın başında alıp Kick'in yerel tooltip'ine de veriyoruz.
+         Böylece başlık, video önizleme ayarından bağımsız görünür. */
+      var link = satir.tagName === 'A' ? satir : satir.querySelector('a[href]');
+      var yol = link && (link.getAttribute('href') || '').split(/[?#]/)[0];
+      var slug = yol && yol.replace(/^\//, '').toLowerCase();
+      if (slug && /^[a-z0-9_-]{2,30}$/.test(slug) && slug.indexOf('/') < 0) {
+        onizBaslikCek(slug, function (baslik) {
+          if (!baslik || !satir.isConnected) return;
+          satir.title = baslik;
+          if (link && link.isConnected) link.title = baslik;
+        });
+      }
       if (settings.onizleme === false) return;   // ayar turda değişmiş olabilir
       if (onizKapatZaman) { clearTimeout(onizKapatZaman); onizKapatZaman = 0; }
       if (onizSatir === satir && onizKutu) return;        // zaten açık
@@ -17693,7 +17831,8 @@ var oz = kart(t('pkOnizleme'), t('pkOnizlemeD'));
      Kick'inkileri yakalıyor — çift bağlama olmuyor. */
   var ONIZ_BAGLI = 'data-pk-oniz-bagli';
   function onizKickBagla() {
-    if (!settings.consented || settings.onizleme === false) return;
+    /* Yayın başlığı hover bilgisi önizleme kartından bağımsız çalışmalı. */
+    if (!settings.consented) return;
     var l = document.querySelectorAll('a[data-testid*="-channel-"]:not([' + ONIZ_BAGLI + '])');
     for (var i = 0; i < l.length; i++) {
       var a = l[i];
@@ -18091,8 +18230,7 @@ var oz = kart(t('pkOnizleme'), t('pkOnizlemeD'));
           bagisHepsi.push(Object.assign({ ad: bKey }, pkBagisVeri.bagiscilar[bKey]));
         }
       }
-
-      // 🎁 Hediye Sub Top 10
+        // 🎁 Hediye Sub Top 10
       var giftKutu = el('div', 'flex flex-col gap-2 mt-3');
       giftKutu.appendChild(el('div', 'text-sm font-bold text-white', '🎁 En Çok Hediye Sub Verenler (Top 10):'));
       var giftList = bagisHepsi.filter(function(b) { return (b.giftSub || 0) > 0; })
@@ -18470,26 +18608,202 @@ e.appendChild(satir(t('pkEkranGoruntusu'), t('pkEkranGoruntusuD'),
     body.appendChild(e);
 
     // Komutla klip alma
-    var komutKart = kart('💬 Sohbet Komutuyla Klip', 'Yayıncı canlı sohbete “clip 30” veya “!clip 30” yazınca, o andan sonraki süreyi kaydeder.');
-    komutKart.appendChild(satir('Sohbet komutu', 'Komut yalnızca yayıncı hesabından gelen yeni canlı mesajlarda çalışır.', anahtar(settings.vidKlipKomutAcik !== false, function (v) {
+    var komutKart = kart('💬 Sohbet Komutuyla Klip', 'Canlı yayında kendi mesajınızla “!clip 30” veya yayıncı mesajıyla “clip 30” yazın. Komut algılama, kayıt ve hata durumu burada bildirilir.');
+    komutKart.appendChild(satir('Sohbet komutuyla klip açık', 'Kapalıyken sohbet komutları klip başlatmaz. PureKick Mod ve oynatıcı kaydedici paneli aynı ayarı kullanır.', anahtar(settings.vidKlipKomutAcik !== false, function (v) {
       settings.vidKlipKomutAcik = v; sendBg({ type: 'setSettings', payload: { vidKlipKomutAcik: v } }); panelCiz();
     })));
-    komutKart.appendChild(satir('Komut adı', 'Örnek: clip 30 veya !clip 30 (süre 1–180 saniye).', el('input', 'bg-surface-highest text-white text-xs px-2.5 py-1.5 rounded border border-outline-decorative w-32', '', {
-      value: settings.vidKlipKomut || 'clip', onchange: function () { var v = this.value.trim().replace(/^!/, '').replace(/[^a-z0-9_-]/gi, '').slice(0, 24) || 'clip'; settings.vidKlipKomut = v; sendBg({ type: 'setSettings', payload: { vidKlipKomut: v } }); this.value = v; toast('Klip komutu kaydedildi: ' + v); }
-    })));
+    var komutInput = el('input', 'bg-surface-highest text-white text-xs px-2.5 py-1.5 rounded border border-outline-decorative w-32');
+    komutInput.type = 'text'; komutInput.value = settings.vidKlipKomut || 'clip'; komutInput.maxLength = 24; komutInput.autocomplete = 'off';
+    var komutOrnekMetin = null;
+    function komutOnizlemeGuncelle() {
+      if (!komutOrnekMetin) return;
+      var onizAd = komutInput.value.trim().replace(/^!/, '').replace(/[^a-z0-9_-]/gi, '').slice(0, 24) || 'clip';
+      komutOrnekMetin.textContent = '!' + onizAd + ' 15';
+    }
+    var komutKaydet = function () {
+      var v = komutInput.value.trim().replace(/^!/, '').replace(/[^a-z0-9_-]/gi, '').slice(0, 24) || 'clip';
+      komutInput.value = v;
+      if (v === (settings.vidKlipKomut || 'clip')) return;
+      settings.vidKlipKomut = v;
+      sendBg({ type: 'setSettings', payload: { vidKlipKomut: v } });
+      if (komutOrnekMetin) komutOrnekMetin.textContent = '!' + v + ' 15';
+      toast('Klip komutu kaydedildi: ' + v);
+    };
+    komutInput.addEventListener('input', komutOnizlemeGuncelle);
+    komutInput.addEventListener('change', komutKaydet);
+    komutInput.addEventListener('blur', komutKaydet);
+    komutInput.addEventListener('keydown', function (ev) { if (ev.key === 'Enter') { ev.preventDefault(); komutInput.blur(); } });
+    komutKart.appendChild(satir('Komut adı', 'Süre 1–180 saniye olmalı. Ünlem işareti isteğe bağlıdır.', komutInput));
+    var komutOrnek = el('div', 'mt-3 rounded-lg border border-white/10 bg-black/30 p-3 flex flex-col gap-2');
+    komutOrnek.appendChild(el('div', 'text-[11px] uppercase tracking-wide text-subtle', 'Sohbette böyle görünür'));
+    var komutOrnekMesaj = el('div', 'rounded-md bg-surface-highest px-3 py-2 text-sm');
+    komutOrnekMesaj.appendChild(el('span', 'text-xs text-subtle mr-2', '19:48'));
+    komutOrnekMesaj.appendChild(el('span', 'font-bold text-purple-400 mr-2', 'Sen:'));
+    komutOrnekMetin = el('span', 'text-white', '!' + (settings.vidKlipKomut || 'clip') + ' 15');
+    komutOrnekMesaj.appendChild(komutOrnekMetin);
+    komutOrnek.appendChild(komutOrnekMesaj);
+    komutOrnek.appendChild(el('div', 'rounded-md border border-primary-base/40 bg-primary-base/10 px-3 py-2 text-xs text-primary-base', 'PureKick: Komut algılandı · 15 sn klip kaydı başladı'));
+    komutKart.appendChild(komutOrnek);
+    var komutGecmisEl = el('div', 'text-xs text-subtle', 'Son klip komutu okunuyor…');
+    pkKlipKomutGecmisEl = komutGecmisEl;
+    komutKart.appendChild(komutGecmisEl);
+    try {
+      chrome.storage.local.get(['pkVidKlipKomutGecmisi', 'pkVidKlipKomutDurum'], function (r) {
+        var gecmis = r && Array.isArray(r.pkVidKlipKomutGecmisi) ? r.pkVidKlipKomutGecmisi : [];
+        var durum = r && r.pkVidKlipKomutDurum;
+        komutGecmisEl.textContent = durum
+          ? ('Son deneme: ' + durum.komut + (durum.saniye ? ' · ' + durum.saniye + ' sn' : '') + ' · ' + (durum.aciklama || (durum.basarili ? 'Klip başladı.' : 'Komut çalışmadı.')) + ' · ' + new Date(durum.ts || Date.now()).toLocaleString())
+          : (gecmis.length ? ('Son klip komutu: ' + gecmis[0].komut + ' · ' + gecmis[0].saniye + ' sn · ' + new Date(gecmis[0].ts).toLocaleString()) : 'Henüz klip komutu algılanmadı. Sohbette örnekteki biçimi deneyin.');
+      });
+    } catch (e) { komutGecmisEl.textContent = 'Klip komut geçmişi okunamadı.'; }
     body.appendChild(komutKart);
+
+    var sesliKart = kart('🎙️ Sesli Klip Komutu', '15 dilde komut verebilirsiniz: “klip 15 saniye”, “clip 30 seconds”, “Clip fünfzehn Sekunden” ve seçtiğiniz dilde karşılıkları. Algılanan süre 1–180 saniye arasında klip başlatır. Yerel dil paketi tarayıcıya bağlıdır; çevrimiçi tanıma geçişinde onay istenir.');
+    sesliKart.appendChild(satir('Sesli klip komutu', 'Sesli komut özelliğini kapatır; mikrofon dinlemesi de durur.', anahtar(settings.vidKlipSesliAcik !== false, function (v) {
+      settings.vidKlipSesliAcik = v; sendBg({ type: 'setSettings', payload: { vidKlipSesliAcik: v } });
+      if (!v) pkKlipSesDurdur();
+      try { oynaticiButonlariKur(); } catch (e) {}
+      panelCiz();
+    })));
+    sesliKart.appendChild(el('div', 'text-xs text-subtle', 'Dinleme yalnız Başlat düğmesine bastığınızda açılır. İlk kullanımda Kick.com için tarayıcı mikrofon izni isteyebilir; izin önceden verildiyse tekrar sormayabilir. Yerel tanıma desteklenmezse çevrimiçi tanımaya geçmeden önce onayınız istenir.'));
+    var sesliKontrol = el('div', 'flex items-center gap-3 flex-wrap');
+    var sesliDil = el('select', 'bg-surface-highest text-white text-xs px-2.5 py-2 rounded border border-outline-decorative');
+    PK_KLIP_DILLERI.forEach(function (x) {
+      var o = document.createElement('option'); o.value = x[0]; o.textContent = x[1];
+      if ((settings.vidKlipSesliDil || 'tr-TR') === x[0]) o.selected = true;
+      sesliDil.appendChild(o);
+    });
+    sesliDil.addEventListener('change', function () {
+      settings.vidKlipSesliDil = sesliDil.value;
+      sendBg({ type: 'setSettings', payload: { vidKlipSesliDil: sesliDil.value } });
+      if (pkKlipSesTanima) { pkKlipSesDurdur(); toast('Dil değişti; sesli komutu yeniden başlatın.'); }
+    });
+    var sesliBtn = el('button', 'px-3 py-2 rounded bg-primary-base text-black font-bold text-xs', pkKlipSesAcik ? 'Dinlemeyi Durdur' : 'Mikrofonu Başlat');
+    pkKlipSesButonEl = sesliBtn;
+    sesliBtn.addEventListener('click', function () {
+      if (pkKlipSesAcik || pkKlipSesTanima) pkKlipSesDurdur(); else pkKlipSesBaslat();
+      sesliBtn.textContent = pkKlipSesAcik ? 'Dinlemeyi Durdur' : 'Mikrofonu Başlat';
+    });
+    var sesliDurum = el('span', 'text-xs text-subtle', pkKlipSesAcik ? 'Mikrofon dinliyor…' : 'Mikrofon kapalı');
+    pkKlipSesDurumEl = sesliDurum;
+    sesliKontrol.appendChild(sesliDil); sesliKontrol.appendChild(sesliBtn); sesliKontrol.appendChild(sesliDurum);
+    var sesOlcer = pkKlipSesOlcerOlustur();
+    sesliKart.appendChild(sesOlcer.kapsayici);
+    sesliKart.appendChild(sesliKontrol);
+    body.appendChild(sesliKart);
 
     // Üç klip kısayolu ve süreleri
     var kisayolKart = kart('⌨️ Klip Kısayolları', 'Her kısayol, seçilen süre boyunca klip kaydeder. Varsayılanlar: Alt+1 / 15 sn, Alt+2 / 30 sn, Alt+3 / 60 sn.');
+    kisayolKart.appendChild(satir('Klip kısayolları', 'Kapalıyken klavye kısayolları klip başlatmaz.', anahtar(settings.vidKlipKisayolAcik !== false, function (v) {
+      settings.vidKlipKisayolAcik = v; sendBg({ type: 'setSettings', payload: { vidKlipKisayolAcik: v } }); panelCiz();
+    })));
+    var yontemSelect = el('select', 'bg-surface-highest text-white text-xs px-2.5 py-2 rounded border border-outline-decorative');
+    [['dinle', 'Klavye tuşlarını dinle'], ['sec', 'Tuş ve değiştirici seç']].forEach(function (x) {
+      var o = document.createElement('option'); o.value = x[0]; o.textContent = x[1]; yontemSelect.appendChild(o);
+    });
+    yontemSelect.value = settings.vidKlipAtamaYontem === 'sec' ? 'sec' : 'dinle';
+    yontemSelect.addEventListener('change', function () {
+      settings.vidKlipAtamaYontem = yontemSelect.value;
+      sendBg({ type: 'setSettings', payload: { vidKlipAtamaYontem: yontemSelect.value } });
+      panelCiz();
+    });
+    kisayolKart.appendChild(satir('Kısayol atama yöntemi', 'Önce yöntemi seçin; ardından her klip için tuşu atayın.', yontemSelect));
+    kisayolKart.appendChild(el('div', 'text-xs text-subtle mb-2', yontemSelect.value === 'dinle'
+      ? 'Atama alanına tıklayın ve istediğiniz tuş kombinasyonuna basın.'
+      : 'Ana tuşu seçin, isteğe bağlı Ctrl / Alt / Shift / Meta değiştiricilerini işaretleyin ve ata düğmesine basın.'));
     var atamalar = Array.isArray(settings.vidKlipAtamalari) ? settings.vidKlipAtamalari.slice(0, 3) : [];
-    while (atamalar.length < 3) atamalar.push({ tus: 'Alt+' + (atamalar.length + 1), saniye: [15, 30, 60][atamalar.length] });
+    var klipVarsayilanSure = [15, 30, 60], atamaDuzeldi = false;
+    while (atamalar.length < 3) { atamalar.push({ tus: 'Alt+' + (atamalar.length + 1), saniye: klipVarsayilanSure[atamalar.length] }); atamaDuzeldi = true; }
+    var kullanilanKlipTuslari = Object.create(null);
+    atamalar.forEach(function (a, i) {
+      if (!a || typeof a !== 'object') { atamalar[i] = a = {}; atamaDuzeldi = true; }
+      if (!String(a.tus || '').trim()) { a.tus = 'Alt+' + (i + 1); atamaDuzeldi = true; }
+      if (!/^(?:(?:ctrl|alt|shift|meta)\+)*(?:[a-z0-9]|f(?:[1-9]|1[0-2])|space|escape|enter|tab|backspace|delete|insert|home|end|pageup|pagedown|arrow(?:up|down|left|right))$/i.test(String(a.tus))) { a.tus = 'Alt+' + (i + 1); atamaDuzeldi = true; }
+      if (kullanilanKlipTuslari[String(a.tus).toLowerCase()]) {
+        var yedekTus = 'Alt+' + (i + 1);
+        for (var kt = 1; kullanilanKlipTuslari[yedekTus.toLowerCase()] && kt <= 3; kt++) yedekTus = 'Alt+' + kt;
+        a.tus = yedekTus; atamaDuzeldi = true;
+      }
+      kullanilanKlipTuslari[String(a.tus).toLowerCase()] = true;
+      var sn = Number(a.saniye);
+      if (!Number.isFinite(sn) || sn < 1 || sn > 180) { a.saniye = klipVarsayilanSure[i]; atamaDuzeldi = true; }
+      else a.saniye = Math.floor(sn);
+    });
+    if (atamaDuzeldi) { settings.vidKlipAtamalari = atamalar; sendBg({ type: 'setSettings', payload: { vidKlipAtamalari: atamalar } }); }
+    function klipAtamaKaydet(i, yeniTus, alan) {
+      yeniTus = String(yeniTus || '').trim();
+      var gecerli = /^(?:(?:ctrl|alt|shift|meta)\+)*(?:[a-z0-9]|f(?:[1-9]|1[0-2])|space|escape|enter|tab|backspace|delete|insert|home|end|pageup|pagedown|arrow(?:up|down|left|right))$/i.test(yeniTus);
+      var cakisma = atamalar.some(function (x, ix) { return ix !== i && String(x.tus || '').toLowerCase() === yeniTus.toLowerCase(); });
+      if (!gecerli || cakisma) {
+        toast(cakisma ? 'Bu kısayol başka bir klipte kullanılıyor.' : 'Bu tuş kombinasyonu desteklenmiyor.');
+        if (alan) alan.textContent = atamalar[i].tus;
+        return false;
+      }
+      atamalar[i].tus = yeniTus; settings.vidKlipAtamalari = atamalar;
+      sendBg({ type: 'setSettings', payload: { vidKlipAtamalari: atamalar } });
+      toast('Klip ' + (i + 1) + ' kısayolu kaydedildi: ' + yeniTus);
+      return true;
+    }
+    function klipTusParcala(yeniTus) {
+      var p = String(yeniTus || '').split('+').map(function (x) { return x.trim(); }).filter(Boolean);
+      return { modifiers: p.slice(0, -1).map(function (x) { return x.toLowerCase(); }), key: p.length ? p[p.length - 1] : '' };
+    }
+    var tusSecenekleri = [];
+    for (var harf = 65; harf <= 90; harf++) tusSecenekleri.push(String.fromCharCode(harf));
+    for (var rakam = 0; rakam <= 9; rakam++) tusSecenekleri.push(String(rakam));
+    for (var fkey = 1; fkey <= 12; fkey++) tusSecenekleri.push('F' + fkey);
+    tusSecenekleri = tusSecenekleri.concat(['Space', 'Enter', 'Tab', 'Escape', 'Backspace', 'Delete', 'Insert', 'Home', 'End', 'PageUp', 'PageDown', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight']);
+    var varsayilanBtn = el('button', 'self-start px-3 py-1.5 rounded bg-surface-highest text-white text-xs border border-white/10', 'Varsayılanları yükle (Alt+1/15 · Alt+2/30 · Alt+3/60)');
+    varsayilanBtn.addEventListener('click', function () {
+      settings.vidKlipAtamalari = [1, 2, 3].map(function (n, ix) { return { tus: 'Alt+' + n, saniye: klipVarsayilanSure[ix] }; });
+      sendBg({ type: 'setSettings', payload: { vidKlipAtamalari: settings.vidKlipAtamalari } });
+      toast('Klip kısayolları varsayılanlara döndürüldü.'); panelCiz();
+    });
+    kisayolKart.appendChild(varsayilanBtn);
     atamalar.forEach(function (a, i) {
       var sat = el('div', 'flex items-center gap-3 py-2 border-b border-white/5 flex-wrap');
       sat.appendChild(el('span', 'text-xs font-bold text-white w-20', 'Klip ' + (i + 1)));
-      var tus = el('input', 'bg-surface-highest text-white text-xs px-2.5 py-1.5 rounded border border-outline-decorative w-28', '', { value: a.tus || ('Alt+' + (i + 1)), placeholder: 'Alt+1' });
-      tus.addEventListener('keydown', function (ev) { ev.preventDefault(); if (['Control','Alt','Shift','Meta'].indexOf(ev.key) >= 0) return; var p = []; if (ev.ctrlKey) p.push('Ctrl'); if (ev.altKey) p.push('Alt'); if (ev.shiftKey) p.push('Shift'); if (ev.metaKey) p.push('Meta'); p.push(ev.key.length === 1 ? ev.key.toUpperCase() : ev.key); tus.value = p.join('+'); });
-      tus.addEventListener('change', function () { atamalar[i].tus = tus.value.trim(); settings.vidKlipAtamalari = atamalar; sendBg({ type: 'setSettings', payload: { vidKlipAtamalari: atamalar } }); toast('Klip kısayolu kaydedildi.'); });
-      sat.appendChild(tus);
+      var yakala = el('button', 'px-3 py-1.5 rounded border border-primary-base/50 bg-primary-base/15 text-xs text-primary-base font-bold', 'Tuşu yakala: ' + (a.tus || ('Alt+' + (i + 1))));
+      if (yontemSelect.value === 'dinle') {
+        var yakalamaAktif = false;
+        yakala.addEventListener('click', function () { yakalamaAktif = true; yakala.focus(); yakala.textContent = 'Tuşlara basın…'; });
+        yakala.addEventListener('keydown', function (ev) {
+          if (!yakalamaAktif) return;
+          ev.stopPropagation();
+          if (['Control','Alt','Shift','Meta'].indexOf(ev.key) >= 0) { yakala.textContent = ev.key + ' seçildi; ana tuşa basın…'; return; }
+          ev.preventDefault();
+          var mainKey = ev.key.length === 1 ? ev.key.toUpperCase() : ev.key;
+          if (ev.code === 'Space') mainKey = 'Space';
+          else if (/^Key[A-Z]$/.test(ev.code || '')) mainKey = ev.code.slice(3);
+          else if (/^Digit[0-9]$/.test(ev.code || '')) mainKey = ev.code.slice(5);
+          var parts = []; if (ev.ctrlKey) parts.push('Ctrl'); if (ev.altKey) parts.push('Alt'); if (ev.shiftKey) parts.push('Shift'); if (ev.metaKey) parts.push('Meta'); parts.push(mainKey);
+          var comb = parts.join('+');
+          if (klipAtamaKaydet(i, comb, yakala)) { yakalamaAktif = false; yakala.textContent = 'Tuş: ' + comb; }
+        });
+        sat.appendChild(yakala);
+      } else {
+        var parts0 = klipTusParcala(a.tus), modifierWrap = el('div', 'flex items-center gap-2 flex-wrap');
+        [['Ctrl','ctrl'],['Alt','alt'],['Shift','shift'],['Meta','meta']].forEach(function (mod) {
+          var label = el('label', 'flex items-center gap-1 text-xs text-subtle');
+          var cb = document.createElement('input'); cb.type = 'checkbox'; cb.checked = parts0.modifiers.indexOf(mod[1]) >= 0; cb.setAttribute('data-pk-mod', mod[1]);
+          label.appendChild(cb); label.appendChild(document.createTextNode(mod[0])); modifierWrap.appendChild(label);
+        });
+        var keySelect = el('select', 'bg-surface-highest text-white text-xs px-2 py-1.5 rounded border border-outline-decorative');
+        tusSecenekleri.forEach(function (keyName) { var opt = document.createElement('option'); opt.value = keyName; opt.textContent = keyName; keySelect.appendChild(opt); });
+        var existingKey = parts0.key === ' ' ? 'Space' : parts0.key;
+        keySelect.value = tusSecenekleri.indexOf(existingKey) >= 0 ? existingKey : '1';
+        modifierWrap.appendChild(keySelect);
+        var tusRozeti = el('kbd', 'px-2.5 py-1 rounded bg-primary-base text-black text-xs font-extrabold shadow-[0_0_8px_rgba(83,252,24,.25)]', a.tus || ('Alt+' + (i + 1)));
+        modifierWrap.appendChild(tusRozeti);
+        var assignBtn = el('button', 'px-2.5 py-1.5 rounded bg-primary-base text-black text-xs font-semibold', 'Ata');
+        assignBtn.addEventListener('click', function () {
+          var mods = Array.prototype.slice.call(modifierWrap.querySelectorAll('[data-pk-mod]:checked')).map(function (x) { return x.getAttribute('data-pk-mod'); });
+          mods = ['ctrl','alt','shift','meta'].filter(function (x) { return mods.indexOf(x) >= 0; }).map(function (x) { return x.charAt(0).toUpperCase() + x.slice(1); });
+          mods.push(keySelect.value);
+          if (klipAtamaKaydet(i, mods.join('+'))) { yakala.textContent = 'Tuş: ' + mods.join('+'); tusRozeti.textContent = mods.join('+'); }
+        });
+        modifierWrap.appendChild(assignBtn); sat.appendChild(modifierWrap);
+      }
       sat.appendChild(el('span', 'text-xs text-gray-400', 'süre'));
       var sure = sayiAlani(a.saniye || [15,30,60][i], 1, 180, function (v) { atamalar[i].saniye = v; settings.vidKlipAtamalari = atamalar; sendBg({ type: 'setSettings', payload: { vidKlipAtamalari: atamalar } }); });
       sat.appendChild(sure); sat.appendChild(el('span', 'text-xs text-gray-400', 'saniye'));
@@ -19390,9 +19704,9 @@ s.appendChild(satir(t('pkBahsetTikla'), t('pkBahsetTiklaD'),
 s.appendChild(satir(t('pkSekmeIci'), t('pkSekmeIciD'),
       anahtar(settings.sekmeIci === true, function (v) {
         sendBg({ type: 'setSettings', payload: { sekmeIci: v } }); settings.sekmeIci = v;
-        /* Kapatınca açık kutuyu VE sohbetteki "Bağlantıyı Önizle" düğmelerini
-           topla; açınca düğmeler hemen gelsin (tur beklenmesin). */
-        if (!v) { sekmeIciKapat(); lpTemizle(); } else { try { lpTum(); } catch (e) {} }
+        /* Bu anahtar yalnız bağlantıya tıklama davranışını yönetir; otomatik
+           kartlara ve kartların yüklenmesine dokunmaz. */
+        if (!v) { sekmeIciKapat(); lpKapat(); }
         panelCiz();
         toast(ozellikToast(v, 'pkSekmeIci'));
       })));
@@ -19403,7 +19717,7 @@ s.appendChild(satir(t('pkSekmeIci'), t('pkSekmeIciD'),
     s.appendChild(satir(t('pkLinkOnizleme'), t('pkLinkOnizlemeD'),
       anahtar(settings.linkOnizleme !== false, function (v) {
         sendBg({ type: 'setSettings', payload: { linkOnizleme: v } }); settings.linkOnizleme = v;
-        if (!v) { lpTemizle(); } else { try { lpTum(); } catch (e) {} }
+        if (!v) { lpKartlariTemizle(); } else { try { lpTum(); } catch (e) {} }
         panelCiz();
         toast(ozellikToast(v, 'pkLinkOnizleme'));
       })));
@@ -21241,6 +21555,9 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     { key: 'hakkindaEk', baslik: 'pkHakkindaEk', aciklama: 'pkHakkindaEkD', yol: ['arayuz', 'kanalbilgi'], def: true },
     { key: 'sabitKanal', baslik: 'pkSabitKanalAyar', aciklama: 'pkSabitKanalAyarD', yol: ['kenarcubugu', 'liste'], def: true },
     { key: 'kenarGrup', baslik: 'pkKenarGrup', aciklama: 'pkKenarGrupD', yol: ['kenarcubugu', 'liste'], def: true },
+    { key: 'kenarGrupLimitAktif', baslik: 'pkKenarGrupLimit', aciklama: 'pkKenarGrupLimitD', yol: ['kenarcubugu', 'liste'], def: true },
+    { key: 'kenarGrupSayi', baslik: 'pkKenarGrupSayi', aciklama: 'pkKenarGrupSayiD', yol: ['kenarcubugu', 'liste'], tip: 'number', min: 1, max: 20, varsayilan: 20 },
+    { key: 'kenarKickDahaFazlaGizle', baslik: 'pkKickDahaFazlaGizle', aciklama: 'pkKickDahaFazlaGizleD', yol: ['kenarcubugu', 'liste'], def: false },
     { key: 'kenarCevrimdisiGizle', baslik: 'Çevrimdışı Kanalları Gizle', aciklama: 'Kenar çubuğundaki yayında olmayan kanalları tamamen gizleyerek yer tasarrufu sağlar.', yol: ['kenarcubugu', 'liste'], def: false },
     { key: 'onizleme', baslik: 'pkOnizlemeKarti', aciklama: 'pkOnizlemeKartiD', yol: ['kenarcubugu', 'oniz'], def: true },
     { key: 'kategoriGizle', baslik: 'pkKategoriGizlemeyiKullan', aciklama: 'pkKategoriGizlemeyiKullanD', yol: ['kenarcubugu', 'kategori'], def: true },
@@ -21322,7 +21639,10 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     { key: 'vidBitince', baslik: 'Kayıt Bitince', aciklama: 'Video kaydı tamamlandığında uygulanacak işlemi seçer.', yol: ['oynatici', 'ozellik', 'vrec'], type: 'navigate', alias: 'indir kaydet' },
     { key: 'vidKisakol', baslik: 'Kayıt Kısayolu', aciklama: 'Yayın kaydını başlatmak veya durdurmak için kullanılan klavye kısayoludur.', yol: ['oynatici', 'ozellik', 'vrec'], type: 'navigate', alias: 'record shortcut' },
     { key: 'vidKlipKomutAcik', baslik: 'Sohbetten Klip Komutu', aciklama: 'Yayıncının canlı sohbetine clip 30 veya !clip 30 yazmasıyla belirtilen saniye boyunca klip kaydeder.', yol: ['oynatici', 'ozellik', 'vrec'], type: 'navigate', alias: 'chat command clip' },
+    { key: 'vidKlipSesliAcik', baslik: 'Sesli Klip Komutu', aciklama: 'Mikrofon ses düzeyini gösterir; Türkçe, İngilizce veya Almanca konuşarak klip başlatır. Oynatıcı kaydedici panelinden de yönetilir.', yol: ['oynatici', 'ozellik', 'vrec'], type: 'navigate', alias: 'voice clip microphone audio level' },
+    { key: 'vidKlipKisayolAcik', baslik: 'Klip Kısayolları Açık/Kapalı', aciklama: 'Klip klavye kısayollarını etkinleştirir veya devre dışı bırakır.', yol: ['oynatici', 'ozellik', 'vrec'], type: 'navigate', alias: 'hotkey shortcut clip enable disable' },
     { key: 'vidKlipAtamalari', baslik: 'Klip Kısayolları ve Süreleri', aciklama: 'Üç ayrı klip klavye kısayolunu ve her klibin 1–180 saniyelik süresini ayarlar.', yol: ['oynatici', 'ozellik', 'vrec'], type: 'navigate', alias: 'hotkey clip duration' },
+    { key: 'vidKlipSesliKomut', baslik: 'Sesli Klip Komutu', aciklama: 'Mikrofondan klip süresi tanır ve sesli komutla klip kaydeder.', yol: ['oynatici', 'ozellik', 'vrec'], type: 'navigate', alias: 'voice microphone speech clip' },
     { key: 'altyaziKaynakDil', baslik: 'Altyazı Kaynak Dili', aciklama: 'Canlı altyazı için konuşmanın kaynak dilini seçer.', yol: ['oynatici', 'ozellik', 'video'], type: 'navigate', alias: 'caption speech recognition' },
     { key: 'altyaziHedefDil', baslik: 'Altyazı Hedef Dili', aciklama: 'Canlı altyazıların çevrileceği dili seçer.', yol: ['oynatici', 'ozellik', 'video'], type: 'navigate', alias: 'subtitle translation' },
     { key: 'altyaziFontBoyut', baslik: 'Altyazı Yazı Boyutu', aciklama: 'Canlı altyazı metninin ekrandaki boyutunu ayarlar.', yol: ['oynatici', 'ozellik', 'video'], type: 'navigate', alias: 'subtitle font' },
@@ -21474,7 +21794,14 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
       });
 
       var sag = el('div', 'flex items-center gap-3 shrink-0');
-      if (sayisal) {
+      if (item.tip === 'number') {
+        sag.appendChild(sayiAlani(curVal, item.min, item.max, function (v) {
+          settings[item.key] = v;
+          var payload = {}; payload[item.key] = v;
+          sendBg({ type: 'setSettings', payload: payload });
+          if (item.key === 'kenarGrupSayi') sabitKanalUygula();
+        }));
+      } else if (sayisal) {
         var aralik = el('input', '');
         aralik.type = 'range'; aralik.min = String(item.min); aralik.max = String(item.max); aralik.step = String(item.adim || 1);
         aralik.value = String(Math.max(item.min, Math.min(item.max, curVal)));
@@ -21511,6 +21838,8 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
         if (item.key === 'sohbetFiltre') { try { pkSohbetFiltreKutusuKur(); } catch (e) {} }
         if (item.key === 'oledMod') { try { pkOledModUygula(); } catch (e) {} }
         if (item.key === 'kenarCevrimdisiGizle') { try { pkCevrimdisiGizleUygula(); } catch (e) {} }
+        if (item.key === 'kenarGrupLimitAktif') { try { sabitKanalUygula(); } catch (e) {} }
+        if (item.key === 'kenarKickDahaFazlaGizle') { try { sabitKickDahaFazlaUygula(); } catch (e) {} }
         if (item.key === 'sabitKanal') { try { if (!yeniDeger) sabitTemizle(); else sabitKanalUygula(); } catch (e) {} }
         if (item.key === 'hakkindaEk') { try { if (yeniDeger) hakkindaUygula(); else hakkindaTemizle(); } catch (e) {} }
         if (item.key === 'onizleme' && !yeniDeger) { try { onizBizimKapat(); } catch (e) {} }
@@ -21662,7 +21991,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     panelEl.style.display = 'flex';
     panelCiz();
   }
-  function panelKapat() { if (panelEl) panelEl.style.display = 'none'; }
+  function panelKapat() { if (pkKlipSesTanima) pkKlipSesDurdur(); if (panelEl) panelEl.style.display = 'none'; }
   function panelAcikMi() { return !!(panelEl && panelEl.style.display !== 'none'); }
   function panelToggle() { panelAcikMi() ? panelKapat() : panelAc(); }
 
@@ -21778,16 +22107,17 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
         if (km) {
           return {
             ad: 'Kick',
-            url: 'https://kick.com/' + km[1] + '/clips/' + km[2],
+            url: 'https://player.kick.com/' + encodeURIComponent(km[1]) + '?clip=' + encodeURIComponent(km[2]),
             klip: true,
             kanal: km[1],
             klipId: km[2],
             thumb: 'https://stream.kick.com/thumbnails/clips/' + km[2] + '.jpg',
-            oran: 56.25
+            oran: 56.25,
+            kaynak: ham
           };
         }
         var cm = p.match(/^\/([^/]+)$/);
-        if (cm && !NON_CHANNEL[cm[1].toLowerCase()]) return { ad: 'Kick', url: 'https://player.kick.com/' + cm[1], metaPreview: true, domain: 'kick.com', oran: 56.25 };
+        if (cm && !NON_CHANNEL[cm[1].toLowerCase()]) return { ad: 'Kick', url: 'https://player.kick.com/' + encodeURIComponent(cm[1]), metaPreview: true, domain: 'kick.com', oran: 56.25, kaynak: ham };
       }
 
       // Popüler Resim ve Medya Siteleri (Imgur, Gyazo, Giphy, Tenor, Prntsc vb.)
@@ -21870,7 +22200,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
 
     // Bilinen medya oranını pencereye sığdır; oranı bilinmeyen sosyal içerik geniş önizleme alır.
     var kutu = el('div', 'bg-surface-base border-outline-decorative rounded border flex flex-col overflow-hidden');
-    var maxW = Math.max(280, Math.min(window.innerWidth - 24, 960));
+    var maxW = Math.max(280, Math.min(window.innerWidth - 24, 1280));
     var maxBodyH = Math.max(180, window.innerHeight * 0.78);
     var embedRatio = Number(bilgi.oran) > 0 ? 100 / Number(bilgi.oran) : 0;
     var autoW = embedRatio ? Math.min(maxW, maxBodyH * embedRatio) : Math.min(maxW, 720);
@@ -22126,11 +22456,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
           infoBar.appendChild(ytLabel);
           kart.appendChild(infoBar);
 
-          kart.addEventListener('click', function (e) {
-            if (e.ctrlKey || e.metaKey) { window.open(b.kaynak, '_blank'); return; }
-            e.preventDefault(); e.stopPropagation();
-            lpAc(b);
-          });
+          kart.addEventListener('click', function (e) { lpKartTikla(b, e); });
 
         // ── Doğrudan Görsel ──
         } else if (b.medya === 'img') {
@@ -22141,11 +22467,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
           pImg.onerror = function () { this.parentNode.style.display = 'none'; };
           kart.appendChild(pImg);
           kart.style.cursor = 'zoom-in';
-          kart.addEventListener('click', function (e) {
-            e.preventDefault(); e.stopPropagation();
-            if (b.lightshot || settings.sekmeIci === true) lpAc(b);
-            else window.open(b.kaynak || b.url, '_blank', 'noopener');
-          });
+          kart.addEventListener('click', function (e) { lpKartTikla(b, e); });
 
         // ── Doğrudan Video ──
         } else if (b.medya === 'video') {
@@ -22272,11 +22594,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
               });
             } catch (e) {}
           }
-          kart.addEventListener('click', function (e) {
-            if (e.ctrlKey || e.metaKey) { window.open(b.kaynak, '_blank'); return; }
-            e.preventDefault(); e.stopPropagation();
-            lpAc(b);
-          });
+          kart.addEventListener('click', function (e) { lpKartTikla(b, e); });
 
         // ── Genel Web Siteleri ve Kısaltma Linkleri (Zengin Thumbnail Kartı) ──
         } else {
@@ -22411,11 +22729,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
               });
             } catch (e) {}
           }
-          kart.addEventListener('click', function (e) {
-            e.preventDefault(); e.stopPropagation();
-            if (b.lightshot || settings.sekmeIci === true) lpAc(b);
-            else window.open(b.kaynak || b.url, '_blank', 'noopener');
-          });
+          kart.addEventListener('click', function (e) { lpKartTikla(b, e); });
         }
 
         // Hover efekti
@@ -22619,7 +22933,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     sohbetciEtiketle:     ['scEtiket'],
     sohbetciFiltreCiz:    ['scFiltreCubugu'],
     sohbetciSayac:        ['scSayac'],
-    lpTum:                ['linkOnizleme', 'sekmeIci'],
+    lpTum:                ['linkOnizleme'],
     hakkindaUygula:       ['hakkindaEk'],
     bindirKur:            ['bindir'],
     kuralKabulUygula:     ['kuralKabul'],
@@ -23004,6 +23318,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
       try { chrome.storage.local.remove('playbackRate'); } catch (e) {}
     }
     if (res && res.settings) settings = Object.assign({}, DEFAULTS, res.settings);
+    try { localStorage.setItem('pk_settings_cache', JSON.stringify(settings)); } catch (e) {}
     pkKenarAynala(settings);       // sonraki sayfa yüklemesi perdeyi doğru karar versin
     /* Yenilik noktaları: kayıt yoksa temiz kurulum sayılır ve hiçbir nokta
        gösterilmez; sürüm grubu değiştiyse bu sürümün yenilikleri açılır. */
@@ -23027,7 +23342,9 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     if (res && res.pkRosterSablon) sablonYukle(res.pkRosterSablon);
     if (res && res.pkRoster && Array.isArray(res.pkRoster.k)) {
       roster = res.pkRoster.k; rosterZaman = res.pkRoster.ts || 0;
+      pkOfflineSlugsYaz(roster);
     }
+    try { pkCevrimdisiGizleUygula(); } catch (e) {}
     /* Taze listeyi hemen iste: önbellek eskiyse bile arkadan güncellenir. */
     try { rosterCek(function () { try { sabitKanalUygula(); } catch (e) {} }); } catch (e) {}
     if (res && Array.isArray(res.seenDrops)) seenIds = res.seenDrops;
@@ -23048,8 +23365,10 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     }
     if (changes.settings) {
       settings = Object.assign({}, DEFAULTS, changes.settings.newValue || {});
+      try { localStorage.setItem('pk_settings_cache', JSON.stringify(settings)); } catch (e) {}
       pkKenarAynala(settings);     // panelden kapatıldı → sonraki yüklemede perde yok
       apply();
+      try { pkCevrimdisiGizleUygula(); } catch (e) {}
     }
     /* Bot penceresi açıldı/kapandı → ayar penceresi anahtarları anında doğru
        göstersin, damganın eskimesini beklemesin. */
@@ -23551,6 +23870,10 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
   var pkKlipKayitSuruyor = false;
   var pkKlipZamanlayici = 0;
   var pkKlipIptal = false;
+  var pkKlipSesTanima = null, pkKlipSesMicStream = null, pkKlipSesAcik = false, pkKlipSesOnlineOnay = false;
+  var pkKlipSesDurumEl = null, pkKlipSesButonEl = null, pkKlipSesYenidenBasla = 0, pkKlipSesDurumSon = 'Mikrofon kapalı';
+  var pkKlipSesOlcerler = [], pkKlipSesAudioContext = null, pkKlipSesAnalyser = null, pkKlipSesAudioSource = null, pkKlipSesOlcerRaf = 0, pkKlipSesOlcerFallback = false;
+  var pkKlipKomutGecmisEl = null;
 
   var PK_MEDIA_LOG_KEY = 'pkMediaCaptureLog';
   var pkMediaLogKuyrugu = Promise.resolve();
@@ -23598,11 +23921,11 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     var video = oynaticiVideosu();
     if (!video) {
       toast(t('pkTOynaticiYok') || 'Oynatıcı bulunamadı');
-      return;
+      return false;
     }
     if (pkKlipKayitSuruyor) {
       toast('Klip zaten kaydediliyor...');
-      return;
+      return false;
     }
 
     var stream = null;
@@ -23610,14 +23933,13 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
       stream = video.captureStream ? video.captureStream() : (video.mozCaptureStream ? video.mozCaptureStream() : null);
       if (!stream) {
         toast('Tarayıcı video akışını yakalamayı desteklemiyor');
-        return;
+        return false;
       }
 
-      if (settings.vidSes === false) {
-        stream.getAudioTracks().forEach(function (track) { stream.removeTrack(track); });
-      }
-      var ops = pkVidRecOpsiyonlar();
-      var rec = new MediaRecorder(stream, ops);
+      var audioTracks = stream.getAudioTracks();
+      var sessizKayit = settings.vidSes === false || !audioTracks.some(function (track) { return track.readyState !== 'ended' && track.enabled && !track.muted; }) || !!video.muted || Number(video.volume) === 0;
+      if (settings.vidSes === false) audioTracks.forEach(function (track) { stream.removeTrack(track); });
+      var recOlusum = pkVidRecOlustur(stream), ops = recOlusum.ops, rec = recOlusum.kaydedici;
       var klipBaslangic = Date.now();
       pkKlipParcalar = [];
       pkKlipIptal = false;
@@ -23635,11 +23957,14 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
         if (pkKlipIptal) { pkKlipIptal = false; pkKlipParcalar = []; return; }
         if (!pkKlipParcalar.length) {
           toast('Klip verisi alınamadı');
+          if (kaynak === 'sohbet-komutu') pkVidKlipKomutDurumBildir('Klip komutu', sureSn, false, 'Kayıt tamamlandı ancak video verisi alınamadı.', true);
           return;
         }
         var blob = new Blob(pkKlipParcalar, { type: rec.mimeType || ops.mimeType || 'video/webm' });
-        var dosya = pkVidDosyaAdi(blob.type, 'klip', klipBaslangic);
-        if (pkMediaDosyaIndir(blob, dosya, { tur: 'klip', sure: sureSn, kaynak: kaynak || 'oynatici' })) toast('✅ Klip indirilmeye başladı!');
+        var dosya = pkVidDosyaAdi(blob.type, 'klip', klipBaslangic, sessizKayit);
+        var indirildi = pkMediaDosyaIndir(blob, dosya, { tur: 'klip', sure: sureSn, kaynak: kaynak || 'oynatici', sessiz: sessizKayit, codec: blob.type || '' });
+        if (indirildi) toast('✅ Klip indirilmeye başladı!' + (sessizKayit ? ' · ' + pkVidSessizEtiketi() : ''));
+        if (kaynak === 'sohbet-komutu') pkVidKlipKomutDurumBildir('Klip komutu', sureSn, indirildi, indirildi ? 'Klip tamamlandı ve indirme başladı.' : 'Klip hazırlandı ancak indirme başlatılamadı.', true);
         pkKlipParcalar = [];
       };
 
@@ -23651,33 +23976,474 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
           if (rec.state !== 'inactive') rec.stop();
         } catch (e) {}
       }, sureSn * 1000);
+      return true;
     } catch (e) {
       pkKlipKayitSuruyor = false;
       if (stream) stream.getTracks().forEach(function (track) { try { track.stop(); } catch (err) {} });
       toast('Klip alma hatası: ' + (e.message || 'Bilinmeyen hata'));
+      return false;
     }
   }
 
   var pkVidKomutGorulen = Object.create(null);
-  function pkVidKlipKomutBak(ad, ts, parcalar, id) {
-    if (settings.vidKlipKomutAcik === false || !canliOynaticiMi()) return;
+  var pkVidKomutSon = Object.create(null);
+  var pkVidKomutBekleyenKendi = null;
+  var pkVidKomutDomObs = null, pkVidKomutDomHedef = null, pkVidKomutDomRaf = 0;
+  var pkVidKomutDomBekleyenSatir = new Set();
+  var pkVidKomutDomImza = typeof WeakMap === 'function' ? new WeakMap() : null;
+
+  function pkVidKomutAdayMi(metin) {
+    var komut = String(settings.vidKlipKomut || 'clip').trim().replace(/^!/, '');
+    if (!/^[a-z0-9_-]{1,24}$/i.test(komut)) return false;
+    return new RegExp('^!?\\s*' + komut + '(?:\\s|$)', 'i').test(String(metin || '').trim());
+  }
+  function pkVidKomutBekleyenMi(metin, kanal) {
+    var bekleyen = pkVidKomutBekleyenKendi;
+    if (!bekleyen || Date.now() - bekleyen.ts > 20000 || bekleyen.kanal !== kanal) return false;
+    return bekleyen.metin === String(metin || '').trim().replace(/\s+/g, ' ').toLowerCase();
+  }
+  function pkVidKomutGonderiYakalama(e) {
+    if (!scMevcutKanal() || settings.vidKlipKomutAcik === false) return;
+    if (e.type === 'keydown' && (e.key !== 'Enter' || e.shiftKey || e.isComposing)) return;
+    if (e.type === 'click' && !(e.target && e.target.closest && e.target.closest('#send-message-button'))) return;
+    var box = document.querySelector('#message-input');
+    if (!box) {
+      var send = document.querySelector('#send-message-button');
+      var adaylar = document.querySelectorAll('[contenteditable="true"], textarea');
+      for (var i = 0; i < adaylar.length; i++) {
+        var p = adaylar[i].parentElement, derinlik = 0;
+        while (p && derinlik++ < 8) { if (send && p.contains(send)) { box = adaylar[i]; break; } p = p.parentElement; }
+        if (box) break;
+      }
+    }
+    if (!box) return;
+    if (e.type === 'keydown' && e.target !== box && !(box.contains && box.contains(e.target))) return;
+    var metin = String(('value' in box ? box.value : box.innerText || box.textContent) || '').trim().replace(/\s+/g, ' ');
+    if (!pkVidKomutAdayMi(metin)) return;
+    pkVidKomutBekleyenKendi = { metin: metin.toLowerCase(), kanal: scMevcutKanal(), ts: Date.now() };
+  }
+  document.addEventListener('keydown', pkVidKomutGonderiYakalama, true);
+  document.addEventListener('click', pkVidKomutGonderiYakalama, true);
+
+  function pkVidKlipKomutDomSatiri(row) {
+    if (!row || !pkSatirNo(row) || !row.isConnected) return;
+    var ub = usernameButton(row);
+    var ad = ub && (ub.textContent || '').trim();
+    if (!ad) return;
+    var parcalar = scParcala(row);
+    var yazi = parcalar.map(function (p) { return p.t === 'y' ? p.v : ''; }).join('').trim();
+    if (!yazi) return;
+    var imza = ad.toLowerCase() + '|' + yazi.toLowerCase();
+    if (pkVidKomutDomImza && pkVidKomutDomImza.get(row) === imza) return;
+    if (pkVidKomutDomImza) pkVidKomutDomImza.set(row, imza);
+    if (!pkVidKomutAdayMi(yazi)) return;
+    var sahip = scMevcutKanal(), ben = String(settings.mentionAd || '');
+    try { if (!ben) ben = localStorage.getItem('pk_user_name') || ''; } catch (e) {}
+    ben = ben.toLowerCase().trim().replace(/^@/, '');
+    var kendim = (!!ben && ad.toLowerCase() === ben) || pkVidKomutBekleyenMi(yazi, sahip);
+    pkVidKlipKomutBak(ad, Date.now(), parcalar, row.getAttribute('data-pk-mid') || '', kendim);
+  }
+  function pkVidKlipKomutDomObserverKur() {
+    if (settings.vidKlipKomutAcik === false || !scMevcutKanal() || typeof MutationObserver !== 'function') {
+      if (pkVidKomutDomObs) pkVidKomutDomObs.disconnect();
+      pkVidKomutDomObs = null; pkVidKomutDomHedef = null;
+      return;
+    }
+    var target = document.querySelector('#chatroom-messages');
+    if (!target) { if (pkVidKomutDomObs) pkVidKomutDomObs.disconnect(); pkVidKomutDomObs = null; pkVidKomutDomHedef = null; return; }
+    if (target === pkVidKomutDomHedef) return;
+    if (pkVidKomutDomObs) pkVidKomutDomObs.disconnect();
+    pkVidKomutDomHedef = target;
+    pkVidKomutDomObs = new MutationObserver(function (muts) {
+      function ekle(node) {
+        if (!node) return;
+        var row = pkSatirBul(node);
+        if (row) pkVidKomutDomBekleyenSatir.add(row);
+        if (node.querySelectorAll) node.querySelectorAll('[data-index]').forEach(function (x) { if (pkSatirNo(x)) pkVidKomutDomBekleyenSatir.add(x); });
+      }
+      for (var i = 0; i < muts.length; i++) {
+        var m = muts[i];
+        ekle(m.target && (m.target.nodeType === 1 ? m.target : m.target.parentElement));
+        for (var j = 0; j < (m.addedNodes || []).length; j++) if (m.addedNodes[j].nodeType === 1) ekle(m.addedNodes[j]);
+      }
+      if (!pkVidKomutDomRaf && pkVidKomutDomBekleyenSatir.size) pkVidKomutDomRaf = requestAnimationFrame(function () {
+        pkVidKomutDomRaf = 0;
+        var rows = Array.from(pkVidKomutDomBekleyenSatir); pkVidKomutDomBekleyenSatir.clear();
+        rows.forEach(function (row) { try { pkVidKlipKomutDomSatiri(row); } catch (e) {} });
+      });
+    });
+    pkVidKomutDomObs.observe(target, { childList: true, subtree: true, characterData: true });
+  }
+
+  function pkVidKlipKomutBak(ad, ts, parcalar, id, kendininMesaji) {
+    if (settings.vidKlipKomutAcik === false) return;
     var sahip = scMevcutKanal();
-    if (!sahip || String(ad || '').toLowerCase() !== sahip.toLowerCase()) return;
-    var zaman = Number(ts) || Date.now();
-    if (Math.abs(Date.now() - zaman) > 120000) return; // sohbete girerken gelen eski mesajı çalıştırma
     var yazi = (parcalar || []).map(function (p) { return p.t === 'y' ? p.v : ''; }).join('').trim();
     var komut = String(settings.vidKlipKomut || 'clip').trim().replace(/^!/, '');
     if (!/^[a-z0-9_-]{1,24}$/i.test(komut)) return;
+    var komutBaslangici = new RegExp('^!?\\s*' + komut + '(?:\\s|$)', 'i');
+    if (!komutBaslangici.test(yazi)) return;
+    var zaman = Number(ts) || Date.now();
+    if (Math.abs(Date.now() - zaman) > 120000) {
+      pkVidKlipKomutDurumBildir(yazi, 0, false, 'Mesaj eski; yalnız yeni canlı sohbet komutları çalışır.');
+      return;
+    }
     var es = yazi.match(new RegExp('^!?\\s*' + komut + '\\s+(\\d{1,3})\\s*$', 'i'));
-    if (!es) return;
+    if (!es) {
+      pkVidKlipKomutDurumBildir(yazi, 0, false, 'Biçim hatalı. Örnek: !' + komut + ' 15');
+      return;
+    }
     var sure = Number(es[1]);
-    if (sure < 1 || sure > 180) { toast('Klip komutu 1–180 saniye aralığında olmalı.'); return; }
+    if (sure < 1 || sure > 180) {
+      pkVidKlipKomutDurumBildir(yazi, sure, false, 'Süre 1–180 saniye aralığında olmalı.');
+      return;
+    }
+    if (!canliOynaticiMi()) {
+      pkVidKlipKomutDurumBildir(yazi, sure, false, 'Canlı yayın oynatıcısı bulunamadı; VOD üzerinde sohbet komutu çalışmaz.');
+      return;
+    }
+    var gonderen = String(ad || '').toLowerCase();
+    var ben = String(settings.mentionAd || '');
+    try { if (!ben) ben = localStorage.getItem('pk_user_name') || ''; } catch (e) {}
+    ben = ben.toLowerCase().trim().replace(/^@/, '');
+    var bekleyenKendi = pkVidKomutBekleyenMi(yazi, sahip);
+    if (!sahip || (!kendininMesaji && !bekleyenKendi && gonderen !== sahip.toLowerCase() && (!ben || gonderen !== ben))) {
+      pkVidKlipKomutDurumBildir(yazi, sure, false, 'Komut bulundu fakat gönderen, bağlı hesap veya yayıncı olarak doğrulanamadı.');
+      return;
+    }
+    if (bekleyenKendi) pkVidKomutBekleyenKendi = null;
     var anahtar = String(id || '') || (sahip + '|' + zaman + '|' + yazi.toLowerCase());
     if (pkVidKomutGorulen[anahtar]) return;
+    var tekrarAnahtari = sahip + '|' + yazi.toLowerCase();
+    if (pkVidKomutSon[tekrarAnahtari] && Date.now() - pkVidKomutSon[tekrarAnahtari] < 5000) return;
+    pkVidKomutSon[tekrarAnahtari] = Date.now();
+    var sonAnahtarlar = Object.keys(pkVidKomutSon);
+    if (sonAnahtarlar.length > 100) delete pkVidKomutSon[sonAnahtarlar[0]];
     pkVidKomutGorulen[anahtar] = 1;
     var anahtarlar = Object.keys(pkVidKomutGorulen);
     if (anahtarlar.length > 100) delete pkVidKomutGorulen[anahtarlar[0]];
-    pkKlipAl(sure, 'sohbet-komutu');
+    var basladi = pkKlipAl(sure, 'sohbet-komutu');
+    var kayit = { komut: yazi, saniye: sure, kanal: sahip, kaynak: kendininMesaji ? 'sohbetten kendi mesajı' : 'yayıncı mesajı', ts: Date.now(), durum: basladi ? 'başladı' : 'başlatılamadı' };
+    pkVidKlipKomutKaydet(kayit);
+    pkVidKlipKomutDurumBildir(yazi, sure, !!basladi, basladi ? 'Klip kaydı başladı.' : 'Komut algılandı fakat klip kaydı başlatılamadı. Oynatıcıyı kontrol edin.');
+  }
+
+  function pkVidKlipKomutDurumBildir(komut, saniye, basarili, aciklama, sessiz) {
+    var durum = { komut: String(komut || ''), saniye: Number(saniye) || 0, kanal: scMevcutKanal() || '', basarili: !!basarili, aciklama: String(aciklama || ''), ts: Date.now() };
+    try { chrome.storage.local.set({ pkVidKlipKomutDurum: durum }); } catch (e) {}
+    if (pkKlipKomutGecmisEl) pkKlipKomutGecmisEl.textContent =
+      'Son deneme: ' + durum.komut + (durum.saniye ? ' · ' + durum.saniye + ' sn' : '') + ' · ' + durum.aciklama + ' · ' + new Date(durum.ts).toLocaleTimeString();
+    if (!basarili && !sessiz) toast('⚠️ ' + durum.aciklama);
+  }
+
+  function pkVidKlipKomutKaydet(kayit) {
+    try {
+      chrome.storage.local.get('pkVidKlipKomutGecmisi', function (r) {
+        var gecmis = r && Array.isArray(r.pkVidKlipKomutGecmisi) ? r.pkVidKlipKomutGecmisi : [];
+        gecmis.unshift(kayit); gecmis = gecmis.slice(0, 50);
+        chrome.storage.local.set({ pkVidKlipKomutGecmisi: gecmis });
+        if (pkKlipKomutGecmisEl) pkKlipKomutGecmisEl.textContent = 'Son komut: ' + kayit.komut + ' · ' + kayit.saniye + ' sn · ' + new Date(kayit.ts).toLocaleString();
+      });
+    } catch (e) {}
+  }
+
+  function pkVidSesliSure(metin) {
+    var s = String(metin || '').toLocaleLowerCase().replace(/[.,!?]/g, ' ').replace(/\s+/g, ' ').trim();
+    var command = /(?:klip|clip)/i.exec(s);
+    if (!command) return 0;
+    var tail = s.slice(command.index + command[0].length).trim();
+    var digit = tail.match(/^(\d{1,3})/);
+    if (digit) return Number(digit[1]) || 0;
+    tail = tail.replace(/(?:seconds?|secs?|saniye|sekunden?|segundos?|segundo|secondi|secondo|secondes?|seconde|секунд[а-яё]*|秒鐘?|秒|초동안|초|ثوان[ىي]?|ثانية|ثانيتين|सेकंड|सेकण्ड)/gi, ' ').replace(/\s+/g, ' ').trim();
+    var sayilar = Object.create(null);
+    function sozcukler(deger, liste) { liste.split('|').forEach(function (w) { sayilar[w] = deger; }); }
+    // Latin alfabeli diller: sayılar ve yaygın birleşik yazımları.
+    sozcukler(1, 'bir|one|eins|uno|una|um|uma|un|une|один|одна|одно|een|jeden|jedna|jedno|एक|واحد|واحدة');
+    sozcukler(2, 'iki|two|zwei|dos|due|dois|duas|deux|два|две|twee|dwa|dwie|दो|اثنان|اثنين|اثنتان|اثنتين|二|两|兩|이');
+    sozcukler(3, 'üç|uc|three|drei|tres|tres|tre|três|trois|три|drie|trzy|तीन|ثلاثة|ثلاث|三|삼');
+    sozcukler(4, 'dört|dort|four|vier|cuatro|quattro|quatro|quatre|четыре|vier|cztery|चार|أربعة|اربعة|四|사');
+    sozcukler(5, 'beş|bes|five|fünf|funf|cinco|cinque|cinq|пять|vijf|pięć|piec|पांच|पाँच|خمسة|خمس|五|오');
+    sozcukler(6, 'altı|alti|six|sechs|seis|sei|seis|шесть|zes|sześć|szesc|छह|ستة|ست|六|육');
+    sozcukler(7, 'yedi|seven|sieben|siete|sette|sept|семь|zeven|siedem|सात|سبعة|سبع|七|칠');
+    sozcukler(8, 'sekiz|eight|acht|ocho|otto|huit|восемь|acht|osiem|आठ|ثمانية|ثمان|八|팔');
+    sozcukler(9, 'dokuz|nine|neun|nueve|nove|neuf|девять|negen|dziewięć|dziewiec|नौ|تسعة|تسع|九|구');
+    sozcukler(10, 'on|ten|zehn|diez|dieci|dez|dix|десять|tien|dziesięć|dziesiec|दस|عشرة|عشر|十|십');
+    sozcukler(11, 'eleven|elf|once|undici|onze|onze|onze|одиннадцать|elf|jedenaście|jed enascie|ग्यारह|أحد عشر|احد عشر');
+    sozcukler(12, 'twelve|zwölf|zwolf|doce|dodici|doze|douze|двенадцать|twaalf|dwanaście|dwanascie|बारह|اثنا عشر|اثني عشر');
+    sozcukler(13, 'thirteen|dreizehn|trece|tredici|treze|treize|тринадцать|dertien|trzynaście|trzynascie|तेरह|ثلاثة عشر');
+    sozcukler(14, 'fourteen|vierzehn|catorce|quattordici|catorze|quatorze|quatorze|quatorze|quatorze|quatorze|quatorze|quatorze|четырнадцать|veertien|czternaście|czternascie|चौदह|أربعة عشر|اربعة عشر');
+    sozcukler(15, 'fifteen|fünfzehn|funfzehn|quince|quindici|quinze|quinze|пятнадцать|vijftien|piętnaście|pietnascie|पंद्रह|पन्द्रह|خمسة عشر|خمس عشرة|十五|십오');
+    sozcukler(16, 'sixteen|sechzehn|dieciséis|dieciseis|sedici|dezesseis|seize|шестнадцать|zestien|szesnaście|szesnascie|सोलह|ستة عشر');
+    sozcukler(17, 'seventeen|siebzehn|diecisiete|diciassette|dezessete|dix-sept|семнадцать|zeventien|siedemnaście|siedemnascie|सत्रह|سبعة عشر');
+    sozcukler(18, 'eighteen|achtzehn|dieciocho|diciotto|dezoito|dix-huit|восемнадцать|achttien|osiemnaście|osiemnascie|अठारह|ثمانية عشر');
+    sozcukler(19, 'nineteen|neunzehn|diecinueve|diciannove|dezenove|dix-neuf|девятнадцать|negentien|dziewiętnaście|dziewietnascie|उन्नीस|تسعة عشر');
+    sozcukler(20, 'yirmi|twenty|zwanzig|veinte|venti|vinte|vingt|двадцать|twintig|dwadzieścia|dwadziescia|बीस|عشرون|二十|이십');
+    sozcukler(30, 'otuz|thirty|dreißig|dreissig|treinta|trenta|trinta|trente|тридцать|dertig|trzydzieści|trzydziesci|तीस|ثلاثون|三十|삼십');
+    sozcukler(40, 'kırk|kirk|forty|vierzig|cuarenta|quaranta|quarenta|quarante|сорок|veertig|czterdzieści|czterdziesci|चालीस|أربعون|اربعون|四十|사십');
+    sozcukler(50, 'elli|fifty|fünfzig|funfzig|cincuenta|cinquanta|cinquenta|cinquante|пятьдесят|vijftig|pięćdziesiąt|piecdziesiat|पचास|خمسون|五十|오십');
+    sozcukler(60, 'altmış|altmis|sixty|sechzig|sesenta|sessanta|sessenta|soixante|шестьдесят|zestig|sześćdziesiąt|szescdziesiat|साठ|ستون|六十|육십');
+    sozcukler(70, 'yetmiş|yetmis|seventy|siebzig|setenta|settanta|setenta|septante|soixante-dix|семьдесят|zeventig|siedemdziesiąt|siedemdziesiat|सत्तर|سبعون|七十|칠십');
+    sozcukler(80, 'seksen|eighty|achtzig|ochenta|ottanta|oitenta|huitante|quatre-vingts|quatre-vingt|восемьдесят|tachtig|osiemdziesiąt|osiemdziesiat|अस्सी|ثمانون|八十|팔십');
+    sozcukler(90, 'doksan|ninety|neunzig|noventa|novanta|nonante|quatre-vingt-dix|quatre-vingt-dix|девяносто|negentig|dziewięćdziesiąt|dziewiecdziesiat|नब्बे|تسعون|九十|구십');
+    sozcukler(100, 'yüz|yuz|hundred|hundert|cien|ciento|cento|cent|сто|honderd|sto|सौ|مئة|مائة|百|백');
+    sozcukler(15, '十五|십오'); sozcukler(30, '三十|삼십'); sozcukler(60, '六十|육십');
+    // CJK sayıları boşluksuz yazılır; 十五, 二十五, 百八十 gibi biçimleri çöz.
+    if (/[一二三四五六七八九十百两兩零〇]/.test(tail)) {
+      var cjkMap = { 一:1, 二:2, 两:2, 兩:2, 三:3, 四:4, 五:5, 六:6, 七:7, 八:8, 九:9, 零:0, 〇:0 };
+      var cjkTotal = 0, cjkCurrent = 0;
+      Array.from(tail).forEach(function (ch) {
+        if (ch === '十' || ch === '百') { cjkTotal += (cjkCurrent || 1) * (ch === '十' ? 10 : 100); cjkCurrent = 0; }
+        else if (Object.prototype.hasOwnProperty.call(cjkMap, ch)) cjkCurrent = cjkMap[ch];
+      });
+      var cjkValue = cjkTotal + cjkCurrent;
+      if (cjkValue) return cjkValue;
+    }
+    if (/[일이삼사오육칠팔구십백]/.test(tail)) {
+      var korMap = { 일:1, 이:2, 삼:3, 사:4, 오:5, 육:6, 칠:7, 팔:8, 구:9 };
+      var korTotal = 0, korCurrent = 0;
+      Array.from(tail).forEach(function (ch) {
+        if (ch === '십' || ch === '백') { korTotal += (korCurrent || 1) * (ch === '십' ? 10 : 100); korCurrent = 0; }
+        else if (Object.prototype.hasOwnProperty.call(korMap, ch)) korCurrent = korMap[ch];
+      });
+      var korValue = korTotal + korCurrent;
+      if (korValue) return korValue;
+    }
+    var words = tail.split(/[\s]+/).filter(Boolean).slice(0, 5), total = 0, pending = 0;
+    for (var i = 0; i < words.length; i++) {
+      if (!Object.prototype.hasOwnProperty.call(sayilar, words[i])) continue;
+      var v = sayilar[words[i]];
+      if (v === 100) { total += pending ? pending * 100 : 100; pending = 0; }
+      else if (v >= 20) { total += v + pending; pending = 0; }
+      else if (pending >= 20 || pending === 100) { total += pending + v; pending = 0; }
+      else pending += v;
+    }
+    total += pending;
+    return total;
+  }
+
+  function pkKlipSesOlcerOlustur() {
+    var wrap = el('div', 'mt-2 w-full max-w-xl flex items-center gap-2');
+    wrap.appendChild(el('span', 'text-[11px] text-subtle whitespace-nowrap', 'Mikrofon ses düzeyi'));
+    var track = el('div', 'h-3 flex-1 rounded-full overflow-hidden border border-white/15 bg-black/40');
+    var fill = el('div', 'h-full rounded-full transition-[width] duration-75');
+    fill.style.width = '0%';
+    fill.style.background = 'linear-gradient(90deg,#22c55e 0%,#53fc18 45%,#facc15 72%,#ef4444 100%)';
+    fill.setAttribute('role', 'meter'); fill.setAttribute('aria-valuemin', '0'); fill.setAttribute('aria-valuemax', '100'); fill.setAttribute('aria-valuenow', '0');
+    track.appendChild(fill); wrap.appendChild(track);
+    var value = el('span', 'text-[11px] font-mono text-subtle w-9 text-right', '0%'); wrap.appendChild(value);
+    pkKlipSesOlcerler.push({ fill: fill, value: value });
+    return { kapsayici: wrap, fill: fill, value: value };
+  }
+  function pkKlipSesOlcerDegeri(pct) {
+    pct = Math.max(0, Math.min(100, Math.round(pct || 0)));
+    pkKlipSesOlcerler = pkKlipSesOlcerler.filter(function (x) {
+      if (!x.fill || !x.fill.isConnected) return false;
+      x.fill.style.width = pct + '%'; x.fill.setAttribute('aria-valuenow', String(pct));
+      if (x.value) x.value.textContent = pct + '%';
+      return true;
+    });
+  }
+  function pkKlipSesOlcerBaslat(stream) {
+    pkKlipSesOlcerDurdur();
+    try {
+      var AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (!AudioCtx) return false;
+      pkKlipSesAudioContext = new AudioCtx();
+      pkKlipSesAnalyser = pkKlipSesAudioContext.createAnalyser();
+      pkKlipSesAnalyser.fftSize = 1024; pkKlipSesAnalyser.smoothingTimeConstant = 0.72;
+      pkKlipSesAudioSource = pkKlipSesAudioContext.createMediaStreamSource(stream);
+      pkKlipSesAudioSource.connect(pkKlipSesAnalyser);
+      var buf = new Uint8Array(pkKlipSesAnalyser.fftSize);
+      function frame() {
+        if (!pkKlipSesAnalyser || !pkKlipSesAcik) return;
+        pkKlipSesAnalyser.getByteTimeDomainData(buf);
+        var sum = 0;
+        for (var i = 0; i < buf.length; i++) { var n = (buf[i] - 128) / 128; sum += n * n; }
+        var rms = Math.sqrt(sum / buf.length);
+        pkKlipSesOlcerDegeri(Math.min(100, Math.round(rms * 320)));
+        pkKlipSesOlcerRaf = requestAnimationFrame(frame);
+      }
+      if (pkKlipSesAudioContext.state === 'suspended') pkKlipSesAudioContext.resume().catch(function () {});
+      frame(); return true;
+    } catch (e) { pkKlipSesOlcerDurdur(); return false; }
+  }
+  function pkKlipSesOlcerDurdur() {
+    if (pkKlipSesOlcerRaf) { cancelAnimationFrame(pkKlipSesOlcerRaf); pkKlipSesOlcerRaf = 0; }
+    try { if (pkKlipSesAudioSource) pkKlipSesAudioSource.disconnect(); } catch (e) {}
+    try { if (pkKlipSesAnalyser) pkKlipSesAnalyser.disconnect(); } catch (e) {}
+    pkKlipSesAudioSource = null; pkKlipSesAnalyser = null;
+    if (pkKlipSesAudioContext) { try { pkKlipSesAudioContext.close(); } catch (e) {} pkKlipSesAudioContext = null; }
+    pkKlipSesOlcerDegeri(0);
+  }
+  function pkKlipSesDurum(yazi) {
+    pkKlipSesDurumSon = yazi;
+    if (pkKlipSesDurumEl) pkKlipSesDurumEl.textContent = yazi;
+    pkKlipSesOlcerButonlariTazele();
+    pkKlipSesliRozetTazele();
+  }
+  function pkKlipSesliRozetTazele(kap, kaldir) {
+    var badge = document.querySelector('[data-pk-voice-active-badge]');
+    if (!settings.consented || settings.vidKlipSesliAcik === false || kaldir) { if (badge) badge.remove(); return; }
+    if (kap && (!badge || !kap.contains(badge))) {
+      if (badge) badge.remove();
+      badge = document.createElement('div'); badge.setAttribute('data-pk-voice-active-badge', '1');
+      badge.style.cssText = 'position:absolute;top:12px;right:12px;z-index:2147480000;display:flex;align-items:center;gap:7px;padding:7px 11px;border-radius:7px;background:rgba(9,18,11,.94);border:1px solid #53fc18;color:#baff9d;font:800 12px/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;box-shadow:0 0 12px rgba(83,252,24,.35);pointer-events:none;';
+      var kapPos = window.getComputedStyle(kap).position;
+      if (kapPos === 'static') kap.style.position = 'relative';
+      kap.appendChild(badge);
+    }
+    if (badge) badge.textContent = pkKlipSesAcik ? '🎙️ SESLİ KLİP DİNLİYOR' : '🎙️ SESLİ KLİP AÇIK';
+  }
+  function pkKlipSesOlcerButonlariTazele() {
+    if (pkKlipSesButonEl) pkKlipSesButonEl.textContent = pkKlipSesAcik ? 'Dinlemeyi Durdur' : 'Mikrofonu Başlat';
+    var buttons = document.querySelectorAll('[data-pk-voice-command-toggle]');
+    for (var i = 0; i < buttons.length; i++) buttons[i].textContent = pkKlipSesAcik ? '⏹ Dinlemeyi Durdur' : '🎙️ Mikrofonu Başlat';
+    var states = document.querySelectorAll('[data-pk-voice-command-status]');
+    for (var j = 0; j < states.length; j++) states[j].textContent = pkKlipSesDurumSon;
+  }
+  function pkKlipSesMicDurdur() {
+    pkKlipSesOlcerDurdur();
+    if (pkKlipSesMicStream) {
+      pkKlipSesMicStream.getTracks().forEach(function (track) { try { track.stop(); } catch (e) {} });
+      pkKlipSesMicStream = null;
+    }
+  }
+  function pkKlipSesDurdur() {
+    pkKlipSesAcik = false;
+    if (pkKlipSesYenidenBasla) { clearTimeout(pkKlipSesYenidenBasla); pkKlipSesYenidenBasla = 0; }
+    var rec = pkKlipSesTanima; pkKlipSesTanima = null;
+    try { if (rec) rec.stop(); } catch (e) { try { rec.abort(); } catch (x) {} }
+    pkKlipSesMicDurdur();
+    pkKlipSesDurum('Mikrofon kapalı');
+  }
+  function pkKlipSesTanimaBaslat(yerel) {
+    var SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRec) { pkKlipSesAcik = false; pkKlipSesDurum('Tarayıcı konuşma tanımayı desteklemiyor'); toast('Bu tarayıcı ses tanımayı desteklemiyor.'); return; }
+    if (!pkKlipSesAcik) return;
+    var rec;
+    try {
+      rec = new SpeechRec();
+      rec.lang = settings.vidKlipSesliDil || 'tr-TR';
+      rec.continuous = true; rec.interimResults = false; rec.maxAlternatives = 1;
+      if ('processLocally' in rec) rec.processLocally = yerel;
+      pkKlipSesTanima = rec; pkKlipSesAcik = true;
+      rec.onstart = function () { pkKlipSesDurum('Tanıma başladı; mikrofon dinleniyor…'); };
+      rec.onaudiostart = function () { pkKlipSesDurum('Mikrofon aktif, komut bekleniyor…'); };
+      rec.onaudioend = function () { if (pkKlipSesAcik) pkKlipSesDurum('Ses algılama durakladı; dinleme yeniden bağlanıyor…'); };
+      rec.onspeechstart = function () { if (pkKlipSesAcik) pkKlipSesDurum('Konuşma algılandı…'); };
+      rec.onspeechend = function () { if (pkKlipSesAcik) pkKlipSesDurum('Komut işleniyor…'); };
+      rec.onnomatch = function () { if (pkKlipSesAcik) pkKlipSesDurum('Ses alındı ancak komut anlaşılmadı. Örnek: “klip 15 saniye”'); };
+      rec.onresult = function (ev) {
+        for (var i = ev.resultIndex; i < ev.results.length; i++) {
+          var sonuc = ev.results[i]; if (!sonuc.isFinal) continue;
+          var soz = String(sonuc[0] && sonuc[0].transcript || '').trim();
+          if (!soz || (Number(sonuc[0].confidence) > 0 && Number(sonuc[0].confidence) < 0.68)) continue;
+          var saniye = pkVidSesliSure(soz);
+          if (!saniye) { if (/(klip|clip)/i.test(soz)) pkKlipSesDurum('Komut anlaşılmadı: “klip 15 saniye” deyin'); continue; }
+          if (saniye < 1 || saniye > 180) { toast('Sesli klip süresi 1–180 saniye olmalı.'); continue; }
+          pkVidKlipKomutKaydet({ komut: soz, saniye: saniye, kanal: scMevcutKanal(), kaynak: 'sesli komut', ts: Date.now() });
+          var basladi = pkKlipAl(saniye, 'sesli-komut');
+          pkKlipSesDurum(basladi ? 'Komut algılandı · ' + saniye + ' sn klip kaydediliyor' : 'Komut algılandı; klip başlatılamadı');
+        }
+      };
+      rec.onerror = function (ev) {
+        var kod = ev && ev.error || 'unknown';
+        if (kod === 'audio-capture' && pkKlipSesMicStream && !pkKlipSesOlcerFallback) {
+          /* Bazı tarayıcılarda SpeechRecognition ayrı bir mic oturumu ister.
+             Çakışma görürsek ölçer akışını bırakıp tanımayı tarayıcıya devret. */
+          pkKlipSesOlcerFallback = true; pkKlipSesMicDurdur(); pkKlipSesTanima = null;
+          try { rec.abort(); } catch (x) {}
+          pkKlipSesDurum('Tarayıcı mikrofonu dinliyor; bu modda ses ölçeri kullanılamıyor.');
+          setTimeout(function () { if (pkKlipSesAcik) pkKlipSesTanimaBaslat(yerel); }, 250);
+          return;
+        }
+        if ((kod === 'language-not-supported' || kod === 'language-unavailable') && yerel && !pkKlipSesOnlineOnay &&
+            window.confirm('Bu dil için yerel tanıma paketi kullanılamıyor. Tarayıcının çevrimiçi konuşma hizmetine geçilsin mi? Ses bu hizmette işlenebilir.')) {
+          pkKlipSesOnlineOnay = true;
+          pkKlipSesTanima = null;
+          try { rec.abort(); } catch (x) {}
+          pkKlipSesDurum('Çevrimiçi tanıma yeniden başlatılıyor…');
+          setTimeout(function () { if (pkKlipSesAcik) pkKlipSesTanimaBaslat(false); }, 250);
+          return;
+        }
+        if (kod === 'not-allowed' || kod === 'service-not-allowed' || kod === 'language-not-supported' || kod === 'language-unavailable' || kod === 'audio-capture' || kod === 'network') {
+          pkKlipSesAcik = false;
+          pkKlipSesMicDurdur();
+          var hataYazi = (kod === 'language-not-supported' || kod === 'language-unavailable') ? 'Bu dil için yerel paket yok' :
+            (kod === 'audio-capture' ? 'Mikrofon bulunamadı' : (kod === 'network' ? 'Konuşma hizmeti bağlantısı kesildi' : 'Mikrofon izni reddedildi'));
+          pkKlipSesDurum(hataYazi);
+          if (pkKlipSesTanima === rec) pkKlipSesTanima = null;
+          toast(hataYazi + (kod === 'not-allowed' || kod === 'service-not-allowed' ? ' — Kick.com için mikrofon izni verin.' : '.'));
+        } else if (kod === 'no-speech') {
+          pkKlipSesDurum('Ses algılanmadı; mikrofon iznini ve giriş aygıtını kontrol edin. Dinleme sürecek.');
+        } else if (kod !== 'aborted') pkKlipSesDurum('Ses tanıma hatası (' + kod + ')');
+      };
+      rec.onend = function () {
+        if (pkKlipSesTanima !== rec) return;
+        if (pkKlipSesAcik) {
+          pkKlipSesYenidenBasla = setTimeout(function () {
+            pkKlipSesYenidenBasla = 0;
+            try { if (pkKlipSesTanima === rec && pkKlipSesAcik) rec.start(); }
+            catch (e) {
+              pkKlipSesAcik = false; pkKlipSesTanima = null;
+              pkKlipSesDurum('Dinleme yeniden başlatılamadı; tekrar başlatın');
+            }
+          }, 500);
+        } else { pkKlipSesTanima = null; pkKlipSesDurum('Mikrofon kapalı'); }
+      };
+      rec.start();
+      pkKlipSesDurum(yerel ? 'Yerel ses tanıma başlatılıyor…' : 'Çevrimiçi ses tanıma başlatılıyor…');
+    } catch (e) {
+      pkKlipSesTanima = null;
+      pkKlipSesAcik = false; pkKlipSesMicDurdur();
+      pkKlipSesDurum('Tanıma başlatılamadı: ' + (e.message || 'tarayıcı hatası'));
+      toast('Ses tanıma başlatılamadı: ' + (e.message || 'tarayıcı hatası'));
+    }
+  }
+  function pkKlipSesBaslat() {
+    if (settings.vidKlipSesliAcik === false) { toast('Sesli klip komutu ayarlardan kapalı.'); return; }
+    if (pkKlipSesAcik || pkKlipSesTanima) return;
+    if (pkIsRecognizing) { toast('Canlı altyazı mikrofonu kullanıyor. Önce canlı altyazıyı durdurun.'); return; }
+    if (!navigator.mediaDevices || typeof navigator.mediaDevices.getUserMedia !== 'function') {
+      pkKlipSesDurum('Bu sayfada mikrofon API’si kullanılamıyor');
+      toast('Mikrofon açılamadı. Tarayıcı izinlerini ve güvenli bağlantıyı kontrol edin.'); return;
+    }
+    if (!(window.SpeechRecognition || window.webkitSpeechRecognition)) {
+      pkKlipSesDurum('Tarayıcı konuşma tanımayı desteklemiyor');
+      toast('Bu tarayıcı ses tanımayı desteklemiyor.'); return;
+    }
+    pkKlipSesAcik = true;
+    pkKlipSesOnlineOnay = false;
+    pkKlipSesOlcerFallback = false;
+    pkKlipSesDurum('Mikrofon izni bekleniyor…');
+    /* getUserMedia izni kullanıcı tıklamasının doğrudan sonucu olarak istenir.
+       Stream tanıma açık kaldığı sürece tutulur; kapatırken bütün track’ler durur. */
+    navigator.mediaDevices.getUserMedia({ audio: true })
+      .then(function (stream) {
+        if (!pkKlipSesAcik) { stream.getTracks().forEach(function (t) { try { t.stop(); } catch (e) {} }); return; }
+        pkKlipSesMicStream = stream;
+        if (!pkKlipSesOlcerBaslat(stream)) pkKlipSesDurum('Mikrofon açık; ses ölçer bu tarayıcıda kullanılamıyor');
+        var yerelDestek = !!(window.SpeechRecognition || window.webkitSpeechRecognition);
+        var deneme;
+        try { deneme = new (window.SpeechRecognition || window.webkitSpeechRecognition)(); } catch (e) {}
+        yerelDestek = !!(deneme && 'processLocally' in deneme);
+        if (!yerelDestek && !window.confirm('Bu tarayıcı yerel konuşma tanımayı desteklemiyor. Ses, tarayıcının çevrimiçi konuşma hizmetinde işlenebilir. Devam edilsin mi?')) {
+          pkKlipSesDurdur(); return;
+        }
+        /* Akış tanıma boyunca açık tutulur: ses ölçeri gerçek giriş sinyalinden
+           besler. SpeechRecognition aynı mikrofonu kullanırken stream yalnızca
+           ölçülür; kullanıcı durdurduğunda tüm track'ler kapatılır. */
+        pkKlipSesTanimaBaslat(yerelDestek);
+      })
+      .catch(function (err) {
+        pkKlipSesAcik = false;
+        var kod = err && err.name || 'NotAllowedError';
+        var mesaj = kod === 'NotFoundError' ? 'Mikrofon bulunamadı' :
+          (kod === 'NotReadableError' ? 'Mikrofon başka bir uygulama tarafından kullanılıyor' :
+          (kod === 'SecurityError' ? 'Sayfanın mikrofon erişimi tarayıcı tarafından engellendi' : 'Mikrofon izni verilmedi'));
+        pkKlipSesDurum(mesaj);
+        toast(mesaj + '. Kick.com site izinlerinden mikrofon erişimini açın.');
+      });
   }
 
   /* ----------------------------------------------------------------------
@@ -23693,6 +24459,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
   var pkVidBaslangic   = 0;      // kayıt başlangıç zamanı (ms)
   var pkVidSayacTimer  = 0;      // overlay interval ID
   var pkVidDosyaBoyut  = 0;      // anlık toplam byte
+  var pkVidKayitSessiz = false;
   var pkVidKayitAktif  = false;  // hızlı durum kontrolü
   var pkVidDuraklatildi = false;
   var pkVidDuraklamaBaslangic = 0;
@@ -23757,7 +24524,39 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     return ops;
   }
 
-  function pkVidDosyaAdi(mime, tur, zamanDamgasi) {
+  function pkVidRecOlustur(stream) {
+    var ops = pkVidRecOpsiyonlar(), seciliId = settings.vidCodec || 'oto', sonHata = null;
+    var secili = PK_VID_CODECS.filter(function (c) { return c.id === seciliId; })[0];
+    var adaylar = [];
+    if (secili && pkVidCodecDestekli(secili.mime)) adaylar.push(secili);
+    pkVidDestekliCodecler().forEach(function (c) { if (!adaylar.some(function (x) { return x.id === c.id; })) adaylar.push(c); });
+    for (var i = 0; i < adaylar.length; i++) {
+      try {
+        var secenek = Object.assign({}, ops, { mimeType: adaylar[i].mime });
+        return { kaydedici: new MediaRecorder(stream, secenek), ops: secenek, codecYedek: adaylar[i].id !== seciliId || !secili || !pkVidCodecDestekli(secili.mime) };
+      } catch (e) { sonHata = e; }
+    }
+    /* Bazı uygulamalar mimeType seçeneklerini reddederken varsayılan codec ile
+       kayıt alabilir. Kalite hedefini koruyup, gerekirse sade tarayıcı varsayılanına düş. */
+    try { return { kaydedici: new MediaRecorder(stream, ops), ops: ops, codecYedek: true }; }
+    catch (e2) { sonHata = e2; }
+    var yalın = {};
+    if (ops.videoBitsPerSecond) yalın.videoBitsPerSecond = ops.videoBitsPerSecond;
+    if (ops.audioBitsPerSecond) yalın.audioBitsPerSecond = ops.audioBitsPerSecond;
+    try { return { kaydedici: new MediaRecorder(stream, yalın), ops: yalın, codecYedek: true }; }
+    catch (e3) { sonHata = sonHata || e3; }
+    try { return { kaydedici: new MediaRecorder(stream), ops: {}, codecYedek: true }; }
+    catch (e4) { throw sonHata || e4; }
+  }
+
+  function pkVidSessizEtiketi() {
+    var locale = 'en';
+    try { locale = String(chrome.i18n.getUILanguage() || navigator.language || 'en').toLowerCase().replace('_', '-').split('-')[0]; } catch (e) {}
+    var labels = { tr: 'sessiz', en: 'muted', de: 'stumm', fr: 'muet', es: 'silenciado', it: 'muto', pt: 'sem-áudio', ru: 'без-звука', ja: '無音', ko: '무음', zh: '静音', ar: 'صامت', nl: 'stil', pl: 'bez-dźwięku', hi: 'मौन' };
+    return labels[locale] || 'muted';
+  }
+
+  function pkVidDosyaAdi(mime, tur, zamanDamgasi, sessiz) {
     var kanal = (typeof scMevcutKanal === 'function' ? scMevcutKanal() : '') || 'kick';
     var d = new Date(zamanDamgasi || Date.now());
     function ik(n) { return (n < 10 ? '0' : '') + n; }
@@ -23772,6 +24571,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
       .replace(/\{kalite\}/gi, kaliteAd);
     govde = govde.replace(/[<>:"/\\|?*\x00-\x1F]/g, '-').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^[.-]+|[.-]+$/g, '') || 'purekick-kayit';
     var uzanti = /video\/mp4/i.test(mime || '') ? 'mp4' : (/video\/ogg/i.test(mime || '') ? 'ogv' : 'webm');
+    if (sessiz) govde += '-' + pkVidSessizEtiketi();
     return govde + '.' + uzanti;
   }
 
@@ -23910,14 +24710,13 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
         return;
       }
 
-      if (settings.vidSes === false) {
-        var sesTracks = stream.getAudioTracks();
-        for (var si = 0; si < sesTracks.length; si++) stream.removeTrack(sesTracks[si]);
-      }
+      var sesTracks = stream.getAudioTracks();
+      pkVidKayitSessiz = settings.vidSes === false || !sesTracks.some(function (track) { return track.readyState !== 'ended' && track.enabled && !track.muted; }) || !!video.muted || Number(video.volume) === 0;
+      if (settings.vidSes === false) for (var si = 0; si < sesTracks.length; si++) stream.removeTrack(sesTracks[si]);
 
-      var ops = pkVidRecOpsiyonlar();
+      var recOlusum = pkVidRecOlustur(stream), ops = recOlusum.ops;
+      var rec = recOlusum.kaydedici;
       pkVidAkis = stream;
-      var rec = new MediaRecorder(stream, ops);
       pkVidParcalar = [];
       pkVidDosyaBoyut = 0;
       pkVidBaslangic = Date.now();
@@ -23971,14 +24770,14 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
         var gecenMs = pkVidGecenSureMs();
         var gecenSure = pkVidSureYazi(gecenMs);
         var boyutStr = pkVidBoyutYazi(blob.size);
-        var dosyaAdi = pkVidDosyaAdi(blob.type, 'video', pkVidBaslangic);
+        var dosyaAdi = pkVidDosyaAdi(blob.type, 'video', pkVidBaslangic, pkVidKayitSessiz);
         pkVidSonucSure = gecenMs; pkVidSonucBoyut = blob.size;
 
         if (settings.vidBitince === 'onizleme') {
           pkVidOnizlemeGoster(blob, gecenSure, boyutStr, dosyaAdi, gecenMs / 1000);
         } else {
-          pkMediaDosyaIndir(blob, dosyaAdi, { tur: 'video', sure: gecenMs / 1000 });
-          toast('✅ Video kaydedildi! (' + gecenSure + ' · ' + boyutStr + ')');
+          pkMediaDosyaIndir(blob, dosyaAdi, { tur: 'video', sure: gecenMs / 1000, sessiz: pkVidKayitSessiz, codec: blob.type || '', videoBitrate: rec.videoBitsPerSecond || 0 });
+          toast('✅ Video kaydedildi! (' + gecenSure + ' · ' + boyutStr + ')' + (pkVidKayitSessiz ? ' · ' + pkVidSessizEtiketi() : ''));
         }
         pkVidDurum = 'done';
         pkVidOverlayCiz();
@@ -24026,13 +24825,14 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
       var maksDk = Math.min(120, Math.max(1, settings.vidMaksSure || 120));
       pkVidMaksSureKur();
 
-      var codecAd = (ops.mimeType || 'WebM').replace('video/webm;codecs=', '').replace('video/webm', 'Varsayılan');
+      var codecAd = (rec.mimeType || ops.mimeType || 'WebM').replace('video/webm;codecs=', '').replace('video/webm', 'Varsayılan').replace(/^video\/mp4;codecs=/i, 'H.264/MP4 ');
       var kaliteAd = '';
       var kaliteId = settings.vidKalite || 'yuksek';
       for (var ki = 0; ki < PK_VID_KALITE.length; ki++) {
         if (PK_VID_KALITE[ki].id === kaliteId) { kaliteAd = PK_VID_KALITE[ki].ad; break; }
       }
-      toast('🔴 Video kaydı başladı! [' + codecAd + (kaliteAd ? ' · ' + kaliteAd : '') + '] · Maks: ' + maksDk + ' dk');
+      var bpsInfo = rec.videoBitsPerSecond ? ' · ' + Math.round(rec.videoBitsPerSecond / 1000) + ' kbps' : '';
+      toast('🔴 Video kaydı başladı! [' + codecAd + (kaliteAd ? ' · ' + kaliteAd : '') + bpsInfo + ']' + (recOlusum.codecYedek ? ' · desteklenmeyen codec yerine tarayıcı uyumlu codec seçildi' : '') + (pkVidKayitSessiz ? ' · ' + pkVidSessizEtiketi() : '') + ' · Maks: ' + maksDk + ' dk');
       pkVidButonGuncelle();
 
     } catch (e) {
@@ -24345,6 +25145,41 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     sablon.style.cssText = 'width:154px;min-width:0;background:#252a30;color:#fff;border:1px solid #454b53;border-radius:5px;padding:4px;font-size:10px;';
     sablon.addEventListener('change', function () { var v = sablon.value.trim() || '{kanal}-{tarih}-{saat}'; sablon.value = v; kaydet('vidDosyaSablon', v); });
     ayarSatiri('Dosya adı şablonu', sablon);
+
+    var sesliAcik = document.createElement('input'); sesliAcik.type = 'checkbox'; sesliAcik.checked = settings.vidKlipSesliAcik !== false;
+    sesliAcik.style.cssText = 'accent-color:#53fc18;width:16px;height:16px;';
+    sesliAcik.addEventListener('change', function () {
+      kaydet('vidKlipSesliAcik', sesliAcik.checked);
+      if (!sesliAcik.checked) pkKlipSesDurdur();
+    });
+    ayarSatiri('Sesli klip komutu açık', sesliAcik);
+    secim('Sesli komut dili', settings.vidKlipSesliDil || 'tr-TR', PK_KLIP_DILLERI.map(function (x) { return { id: x[0], ad: x[1] }; }), function (v) {
+      settings.vidKlipSesliDil = v; sendBg({ type: 'setSettings', payload: { vidKlipSesliDil: v } });
+      if (pkKlipSesTanima) { pkKlipSesDurdur(); toast('Sesli komut dili güncellendi; mikrofonu yeniden başlatın.'); }
+    });
+    var voiceControls = document.createElement('div'); voiceControls.style.cssText = 'display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:8px 0;padding:8px;border-radius:7px;background:#0d1012;';
+    var voiceBtn = document.createElement('button'); voiceBtn.type = 'button'; voiceBtn.setAttribute('data-pk-voice-command-toggle', '1');
+    voiceBtn.textContent = pkKlipSesAcik ? '⏹ Dinlemeyi Durdur' : '🎙️ Mikrofonu Başlat';
+    voiceBtn.style.cssText = 'padding:6px 9px;border:0;border-radius:5px;background:#53fc18;color:#07120b;font-weight:800;font-size:11px;cursor:pointer;';
+    voiceBtn.addEventListener('click', function () { if (pkKlipSesAcik || pkKlipSesTanima) pkKlipSesDurdur(); else pkKlipSesBaslat(); pkKlipSesOlcerButonlariTazele(); });
+    voiceControls.appendChild(voiceBtn);
+    var voiceStatus = document.createElement('span'); voiceStatus.setAttribute('data-pk-voice-command-status', '1'); voiceStatus.textContent = pkKlipSesDurumSon;
+    voiceStatus.style.cssText = 'color:#9ca3af;font-size:10px;'; voiceControls.appendChild(voiceStatus);
+    var popupMeter = pkKlipSesOlcerOlustur();
+    popupMeter.kapsayici.style.cssText = 'display:flex;align-items:center;gap:7px;width:100%;font-size:10px;';
+    popupMeter.kapsayici.firstChild.textContent = 'Ses';
+    voiceControls.appendChild(popupMeter.kapsayici);
+    pop.appendChild(voiceControls);
+    var kisayolAcik = document.createElement('input'); kisayolAcik.type = 'checkbox'; kisayolAcik.checked = settings.vidKlipKisayolAcik !== false;
+    kisayolAcik.style.cssText = 'accent-color:#53fc18;width:16px;height:16px;';
+    kisayolAcik.addEventListener('change', function () { kaydet('vidKlipKisayolAcik', kisayolAcik.checked); });
+    ayarSatiri('Klip kısayolları açık', kisayolAcik);
+    var sohbetKomutu = document.createElement('input'); sohbetKomutu.type = 'checkbox'; sohbetKomutu.checked = settings.vidKlipKomutAcik !== false;
+    sohbetKomutu.style.cssText = 'accent-color:#53fc18;width:16px;height:16px;';
+    sohbetKomutu.addEventListener('change', function () {
+      settings.vidKlipKomutAcik = sohbetKomutu.checked; sendBg({ type: 'setSettings', payload: { vidKlipKomutAcik: sohbetKomutu.checked } });
+    });
+    ayarSatiri('Sohbet komutuyla klip açık', sohbetKomutu);
 
     var ipucu = document.createElement('div');
     ipucu.style.cssText = 'color:#8e969f;font-size:10px;margin-top:8px;';
@@ -26055,7 +26890,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
     if (e.repeat) return;
 
     // Yapılandırılabilir üç klip kısayolu.
-    if (settings.videoKayit !== false && Array.isArray(settings.vidKlipAtamalari)) {
+    if (settings.videoKayit !== false && settings.vidKlipKisayolAcik !== false && Array.isArray(settings.vidKlipAtamalari)) {
       for (var vi = 0; vi < Math.min(3, settings.vidKlipAtamalari.length); vi++) {
         var atama = settings.vidKlipAtamalari[vi];
         if (atama && pkKisayolEslesir(e, atama.tus)) {
@@ -26440,11 +27275,27 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
   function pkCevrimdisiGizleUygula() {
     var cevrimdisiCss = `
       button[data-pk-grup="kapali"],
-      [data-pk-satir="kapali"],
+      [data-pk-satirimiz][data-pk-grup="kapali"],
       [data-pk-grupbas="sekme"] button:last-child {
         display: none !important;
       }
     `;
+    if (settings.kenarCevrimdisiGizle === true) {
+      var gizliSet = Object.create(null), gizliSluglar = [];
+      try {
+        var onbellekSlugs = JSON.parse(localStorage.getItem('pk-offline-slugs') || '[]');
+        if (Array.isArray(onbellekSlugs)) onbellekSlugs.forEach(function (s) { if (typeof s === 'string' && /^[a-z0-9_-]+$/i.test(s)) gizliSet[s.toLowerCase()] = 1; });
+      } catch (e) {}
+      if (roster && roster.length) {
+        pkOfflineSlugsYaz(roster);
+        Object.keys(gizliSet).forEach(function (s) { delete gizliSet[s]; });
+        roster.forEach(function (x) { if (x && x.canli === false && /^[a-z0-9_-]+$/i.test(String(x.slug || ''))) gizliSet[String(x.slug).toLowerCase()] = 1; });
+      }
+      gizliSluglar = Object.keys(gizliSet);
+      if (gizliSluglar.length) cevrimdisiCss += gizliSluglar.map(function (s) {
+        return 'button:has(> a[data-testid^="sidebar-following-channel-"][href="/' + s + '"])';
+      }).join(',') + '{display:none!important}';
+    }
     pkStilGuncelle('pk-cevrimdisi-gizle-style', cevrimdisiCss, settings.kenarCevrimdisiGizle === true);
 
     if (settings.kenarCevrimdisiGizle === true) {
@@ -26460,16 +27311,46 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
           btn.style.removeProperty('display');
         }
       }
+      if (satirlar.length) document.documentElement.removeAttribute('data-pk-offline-pending');
     } else {
+      document.documentElement.removeAttribute('data-pk-offline-pending');
       var gizlenenler = document.querySelectorAll('a[data-testid^="sidebar-following-channel-"]');
       for (var j = 0; j < gizlenenler.length; j++) {
         var b = gizlenenler[j].parentElement;
-        if (b && b.getAttribute('data-pk-grup') !== 'kapali') {
-          b.style.removeProperty('display');
-        }
+        /* Bu fonksiyonun kapalı modda verdiği tek inline stil display:none;
+           ayar kapatılınca eski çevrimdışı işaretine bakmadan geri al. */
+        if (b) b.style.removeProperty('display');
       }
     }
   }
+
+  /* Yeni takip satırlarında genel 10 saniyelik bakım turunu bekleme; yalnızca
+     eklenen satırları inceleyerek çevrimdışı olanı anında gizle. */
+  function pkOfflineSatirUygula(a) {
+    if (settings.kenarCevrimdisiGizle !== true || !a || !a.matches || !a.matches('a[data-testid^="sidebar-following-channel-"]')) return;
+    var btn = a.parentElement;
+    if (!btn) return;
+    var slug = (a.getAttribute('href') || '').replace(/^\/+/, '').split(/[/?#]/)[0].toLowerCase();
+    var kayit = roster && roster.find(function (x) { return String(x.slug || '').toLowerCase() === slug; });
+    var canli = kayit ? !!kayit.canli : sabitSatirCanli(a);
+    if (!canli) btn.style.setProperty('display', 'none', 'important');
+    else btn.style.removeProperty('display');
+  }
+  var pkOfflineListeObserver = new MutationObserver(function (muts) {
+    if (settings.kenarCevrimdisiGizle !== true) return;
+    for (var i = 0; i < muts.length; i++) {
+      var nodes = muts[i].addedNodes;
+      for (var j = 0; j < nodes.length; j++) {
+        var n = nodes[j];
+        if (!n || n.nodeType !== 1) continue;
+        if (n.matches && n.matches('a[data-testid^="sidebar-following-channel-"]')) pkOfflineSatirUygula(n);
+        var links = n.querySelectorAll ? n.querySelectorAll('a[data-testid^="sidebar-following-channel-"]') : [];
+        for (var k = 0; k < links.length; k++) pkOfflineSatirUygula(links[k]);
+      }
+    }
+    if (document.querySelector('a[data-testid^="sidebar-following-channel-"]')) document.documentElement.removeAttribute('data-pk-offline-pending');
+  });
+  try { pkOfflineListeObserver.observe(document.documentElement, { childList: true, subtree: true }); } catch (e) {}
 
   /* ══════════════════════════════════════════════════════════════════════
    * 17. VİDEO DİJİTAL BÜYÜTEÇ & YAKINLAŞTIRMA (Digital Zoom & Pan)
@@ -26974,6 +27855,7 @@ var kc = kart(t('pkGizlenenKategoriler'), t('pkGizlenenKategorilerD'));
       pkSadeceSesModuUygula();
       pkSohbetFontUygula();
       pkChatboxMesajYerlesimi();
+      pkVidKlipKomutDomObserverKur();
     }
   }, 2000);
 

@@ -843,8 +843,22 @@
       "message": "Online / Offline trennen"
    },
    "pkKenarGrupD": {
-      "message": "Teilt die Folgen-Liste in zwei Bereiche: Live-Kanäle bleiben oben geöffnet, Offline-Kanäle bleiben eingeklappt — zum Öffnen auf die Überschrift klicken. Das 10-Kanal-Limit von Kick entfällt ebenfalls."
+      "message": "Teilt gefolgte Kanäle in Online- und Offline-Gruppen. Die Schaltfläche „Mehr anzeigen“ von Kick bleibt unverändert."
    },
+   "pkKenarGrupSayi": {
+      "message": "Kanäle in Online-/Offline-Listen"
+   },
+   "pkKenarGrupSayiD": {
+      "message": "Lege fest, wie viele Kanäle pro Gruppe angezeigt werden (1–20). Die Schaltfläche „Mehr anzeigen“ von Kick bleibt unverändert."
+   },
+   "pkKenarGrupLimit": {
+      "message": "Kanallimit anwenden"
+   },
+   "pkKenarGrupLimitD": {
+      "message": "Begrenzt die Anzahl der Online- und Offline-Kanäle anhand des Werts 1–20 unten. Unabhängig von der Gruppierung."
+   },
+   "pkKickDahaFazlaGizle": { "message": "Kicks Schaltflächen „Mehr anzeigen / Weniger anzeigen“ ausblenden" },
+   "pkKickDahaFazlaGizleD": { "message": "Blendet Kicks Erweitern- und Einklappen-Schaltflächen in der Kanalliste aus." },
    "pkKendiMenum": {
       "message": "Eigenes Menü öffnen"
    },
