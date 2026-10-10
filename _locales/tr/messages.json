@@ -860,8 +860,12 @@
    "pkKenarGrupLimitD": {
       "message": "Çevrimiçi ve çevrimdışı listelerde gösterilen kanal sayısını aşağıdaki 1–20 sınırına göre kısıtlar. Grup ayırma ayarından bağımsızdır."
    },
-   "pkKickDahaFazlaGizle": { "message": "Kick'in Daha Fazla Göster / Daha Az Göster düğmelerini gizle" },
-   "pkKickDahaFazlaGizleD": { "message": "Kick'in takip listesinde kendi göster / gizle düğmelerini kaldırır." },
+   "pkKickDahaFazlaGizle": {
+      "message": "Kick'in Daha Fazla Göster / Daha Az Göster düğmelerini gizle"
+   },
+   "pkKickDahaFazlaGizleD": {
+      "message": "Kick'in takip listesinde kendi göster / gizle düğmelerini kaldırır."
+   },
    "pkKendiMenum": {
       "message": "Kendi menümü aç"
    },
@@ -2515,10 +2519,184 @@
    "pkNot101911d": {
       "message": "Genel bağlantı önizlemeleri için zorunlu tüm siteler izni kaldırıldı"
    },
+   "pkNot101914a": {
+      "message": "Sohbet arşivi kanal bazında ayrıldı; günlük log ve silinen mesaj metnini koruma iyileştirildi."
+   },
+   "pkNot101914b": {
+      "message": "Çevrimiçi/çevrimdışı takip listesi gizleme ve kişi sınırı davranışı düzeltildi."
+   },
+   "pkNot101914c": {
+      "message": "Bağlantı önizlemeleri, kanal hover başlığı ve profil kartı sayfa kapsamı düzeltildi."
+   },
+   "pkNot101914d": {
+      "message": "Abone rolü vurgusu ve hediye KICKS destekçi kayıtları geliştirildi."
+   },
+   "pkNot101914e": {
+      "message": "Sesli klip komutuna 15 dil, mikrofon seviye göstergesi ve oynatıcı rozeti eklendi."
+   },
+   "pkNot101914f": {
+      "message": "Klip kısayolu anahtarı, codec/kalite geri dönüşü ve sessiz kayıt dosya adı iyileştirildi."
+   },
    "pkNot101912a": {
       "message": "Kick sayfasındaki PureKick Mod simgesi ve yeşil böcek rozeti güncellendi"
    },
    "pkNot101912b": {
       "message": "Araç çubuğu, sohbet ayarları, yönetim paneli ve profil önizlemesindeki ürün adı ve simge tutarlı hale getirildi"
+   },
+   "pkInterfaceLanguage": {
+      "message": "Arayüz dili"
+   },
+   "pkInterfaceLanguageD": {
+      "message": "PureKick Mod için bir dil seçin. Otomatik tarayıcı dilini takip eder."
+   },
+   "pkSupportTitle": {
+      "message": "Destek ve hata raporları"
+   },
+   "pkSupportDesc": {
+      "message": "GitHub aracılığıyla bir hata raporu veya özellik isteği gönderin. Açık ve tamamlanmış istekleri buradan takip edin."
+   },
+   "pkSupportLogin": {
+      "message": "Gönderim GitHub’da tamamlanır ve GitHub oturumu gerektirir. Eklenti kullanıcı adınızı veya e-postanızı rapora eklemez. Oturumsuz anonim aktarım için aracı sunucu henüz yapılandırılmadı."
+   },
+   "pkSupportBug": {
+      "message": "Hata bildir"
+   },
+   "pkSupportFeature": {
+      "message": "Bir özellik isteyin"
+   },
+   "pkSupportQuestion": {
+      "message": "Yardım isteyin"
+   },
+   "pkSupportTitlePlaceholder": {
+      "message": "Kısa başlık"
+   },
+   "pkSupportBodyPlaceholder": {
+      "message": "Adımları, beklenen sonucu ve gerçek sonucu açıklayın. Özel bilgileri eklemeyin."
+   },
+   "pkSupportSend": {
+      "message": "GitHub'ta devam edin"
+   },
+   "pkSupportRequired": {
+      "message": "Bir başlık ve açıklama girin."
+   },
+   "pkSupportIssues": {
+      "message": "Topluluk istekleri"
+   },
+   "pkSupportStatusHelp": {
+      "message": "Durum, GitHub açık/kapalı durumundan ve planlama etiketlerinden gelir."
+   },
+   "pkSupportLoading": {
+      "message": "GitHub istekleri yükleniyor…"
+   },
+   "pkSupportEmpty": {
+      "message": "Henüz genel bir talep yok."
+   },
+   "pkSupportClosed": {
+      "message": "Çözüldü"
+   },
+   "pkSupportPlanned": {
+      "message": "Planlanan"
+   },
+   "pkSupportWaiting": {
+      "message": "Bekliyor"
+   },
+   "pkSupportOpen": {
+      "message": "Açık"
+   },
+   "pkSupportError": {
+      "message": "GitHub istekleri yüklenemedi. Bağlantınızı veya GitHub durumunuzu kontrol edin."
+   },
+   "pkHistoryTitle": {
+      "message": "Sohbet Kayıtları"
+   },
+   "pkHistorySearch": {
+      "message": "Sohbet kayıtlarında ara (kullanıcı veya mesaj)"
+   },
+   "pkHistoryLoadOlder": {
+      "message": "Daha eski kayıtları yükle"
+   },
+   "pkHistoryMemoryLimit": {
+      "message": "Ekran belleği sınırı doldu · aramayla eski kayıtları bulun"
+   },
+   "pkHistoryLoading": {
+      "message": "Arşiv yükleniyor…"
+   },
+   "pkHistoryNoMatch": {
+      "message": "Aramayla eşleşen kayıt bulunamadı."
+   },
+   "pkHistoryEmpty": {
+      "message": "Sohbet günlüğünde henüz kayıtlı mesaj yok."
+   },
+   "pkHistorySearchResults": {
+      "message": "Arama sonuçları: "
+   },
+   "pkHistoryMessages": {
+      "message": "Arşivdeki mesajlar: "
+   },
+   "pkHistoryOlderAvailable": {
+      "message": " · daha eski kayıtlar var"
+   },
+   "pkHistoryAllShown": {
+      "message": " · tüm eşleşmeler gösterildi"
+   },
+   "pkHistoryDeletedTextMissing": {
+      "message": "Kick bu silme kaydında mesaj metnini paylaşmadı"
+   },
+   "pkHistoryDailyTitle": {
+      "message": "Sohbet Kayıtları · Günlük Log"
+   },
+   "pkHistoryDailyDesc": {
+      "message": "Bugünün mesajları kanal ve tarih bazında ayrı gösterilir. Her kanalı kendi zaman damgalı .log dosyası olarak indirebilirsiniz."
+   },
+   "pkHistoryDailyLoading": {
+      "message": "Bugünün logları okunuyor…"
+   },
+   "pkHistoryDailyRefresh": {
+      "message": "Bugünün loglarını yenile"
+   },
+   "pkTimeoutExpires": {
+      "message": "Zaman Aşımı Bitiş: {1}"
+   },
+   "pkTimeoutDays": {
+      "message": "({1} gün kaldı)"
+   },
+   "pkActiveTimeout": {
+      "message": "Aktif Zaman Aşımı"
+   },
+   "pkPermanentBan": {
+      "message": "Kalıcı Ban"
+   },
+   "pkModEventsTitle": {
+      "message": "Moderasyon Olayları"
+   },
+   "pkTitleCount": {
+      "message": "{1} ({2})"
+   },
+   "pkTemizle": {
+      "message": "Temizle"
+   },
+   "pkAllSitesAccessDescription": {
+      "message": "HTTP ve HTTPS sitelerinde genel link önizlemesi için tek seferlik geniş erişim izni."
+   },
+   "pkAllSitesAccessButton": {
+      "message": "Tüm siteler için erişim izni ver"
+   },
+   "pkAllSitesGranted": {
+      "message": "Tüm HTTP/HTTPS siteleri için link erişimi etkin."
+   },
+   "pkAllSitesDenied": {
+      "message": "Site erişimi verilmedi; isterseniz Chrome eklenti ayarlarından sitelere tek tek izin verebilirsiniz."
+   },
+   "pkNot101915a": {
+      "message": "Sohbet klipleri artık klip kimliğinin gerçek video akışını oynatır; yanlışlıkla kanal yayını açılmaz."
+   },
+   "pkNot101915b": {
+      "message": "Kick klip akışı ayrı oynatıcıda gösterilir; KickBot klip sayfaları gömülemediğinde doğrudan açılır."
+   },
+   "pkNot101915c": {
+      "message": "Bağlantı önizlemeleri için ayarlara tek tıkla isteğe bağlı tüm HTTP/HTTPS siteleri erişimi eklendi."
+   },
+   "pkNot101915d": {
+      "message": "Arayüz dil dosyaları ve GitHub destek bildirimi akışı güncellendi; klip ve izin senaryoları test kapsamına alındı."
    }
 }

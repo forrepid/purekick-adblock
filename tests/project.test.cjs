@@ -38,7 +38,7 @@ test('all extension JavaScript parses', () => {
 
 test('manifest references existing icons and avoids required all-sites access', () => {
   const manifest = JSON.parse(read('manifest.json'));
-  assert.equal(manifest.version, '10.19.14');
+  assert.equal(manifest.version, '10.19.15');
   assert.equal(manifest.short_name, 'PureKick Mod');
   for (const size of [16, 32, 48, 128]) {
     const icon = `icons/icon${size}.png`;
@@ -53,6 +53,66 @@ test('manifest references existing icons and avoids required all-sites access', 
   assert.match(content, /var SHIELD = .*#53fc18/);
   assert.match(content, /SHIELD\.replace/);
   assert.match(content, /#btn svg\{width:22px;height:22px\}/);
+});
+
+test('in-extension release notes include current manifest version and matching translations', () => {
+  const manifest = JSON.parse(read('manifest.json'));
+  const content = read('content.js');
+  const notes = content.match(/var SURUM_NOTLARI = \[([\s\S]*?)\n  \];/);
+  assert.ok(notes, 'in-extension release note list exists');
+  assert.ok(notes[1].includes(`['${manifest.version}',`), `release notes include ${manifest.version}`);
+  const locale = JSON.parse(read('_locales/tr/messages.json'));
+  for (const key of ['pkNot101915a', 'pkNot101915b', 'pkNot101915c', 'pkNot101915d']) {
+    assert.ok(locale[key], `Turkish release note translation ${key} exists`);
+  }
+});
+
+test('all 15 UI languages have complete catalogs and runtime language selection', () => {
+  const base = Object.keys(JSON.parse(read('_locales/en/messages.json'))).sort();
+  const locales = ['tr', 'en', 'de', 'es', 'fr', 'pt_BR', 'ru', 'it', 'nl', 'pl', 'ja', 'ko', 'zh_CN', 'ar', 'hi'];
+  for (const locale of locales) {
+    const messages = JSON.parse(read(`_locales/${locale}/messages.json`));
+    assert.deepEqual(Object.keys(messages).sort(), base, `${locale} has every message key`);
+    const english = JSON.parse(read('_locales/en/messages.json'));
+    for (const key of base) {
+      const expected = (english[key].message.match(/\{\d+\}|\$\d+|%[sd]/g) || []).sort();
+      const actual = (messages[key].message.match(/\{\d+\}|\$\d+|%[sd]/g) || []).sort();
+      assert.deepEqual(actual, expected, `${locale}.${key} keeps substitution placeholders`);
+    }
+  }
+  const content = read('content.js');
+  const staticKeys = [...content.matchAll(/\bt\('([^']+)'\s*(?=[,)])/g)].map(m => m[1]).filter(key => key !== '...');
+  const missing = [...new Set(staticKeys)].filter(key => !base.includes(key));
+  assert.deepEqual(missing, [], 'all literal t() keys exist in every language catalog');
+  assert.match(content, /PK_ARAYUZ_DILLERI = \[/);
+  assert.match(content, /pkArayuzDilYukle\(\)/);
+  assert.match(content, /function pkArayuzDiliCoz\(\)/);
+  assert.match(content, /function pkArayuzDugumCevir\(n\)/);
+  assert.match(content, /data-pk-ui-node/);
+  assert.match(content, /oncekiPaket/);
+  assert.match(content, /pkArayuzDilIstekNo/);
+  assert.match(content, /pkArayuzDilObserver\.observe\(kok, ayarlar\)/);
+  assert.doesNotMatch(content, /pkArayuzDilObserver\.observe\(document\.documentElement/);
+});
+
+test('all-site link preview access stays optional and requires an explicit settings action', () => {
+  const manifest = JSON.parse(read('manifest.json'));
+  const content = read('content.js');
+  const background = read('background.js');
+  assert.ok(manifest.optional_host_permissions.includes('https://*/*'));
+  assert.ok(manifest.optional_host_permissions.includes('http://*/*'));
+  assert.match(content, /type: 'pkRequestAllSiteLinkAccess'/);
+  assert.ok(background.includes("chrome.permissions.request({ origins: ['https://*/*', 'http://*/*'] })"));
+});
+
+test('settings open closes floating chat menus and support uses public GitHub issue links safely', () => {
+  const content = read('content.js');
+  const openSettings = content.slice(content.indexOf('function panelAc()'), content.indexOf('function panelKapat()'));
+  assert.match(openSettings, /pkUstPanelleriKapat\(\)/);
+  assert.match(content, /api\.github\.com\/repos\/forrepid\/purekick-adblock\/issues\?state=all/);
+  assert.match(content, /github\.com\/forrepid\/purekick-adblock\/issues\/new\?title=/);
+  assert.match(content, /pk_support_issues_cache/);
+  assert.doesNotMatch(content, /ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}/);
 });
 
 test('15-language voice clip commands parse representative spoken durations', () => {
@@ -305,21 +365,40 @@ test('X status links have an automatic preview card route independent of click s
   assert.equal(result.metaPreview, true);
   assert.equal(result.domain, 'x.com');
 });
-test('Kick channel and clip links open the Kick player at responsive player size', () => {
+test('Kick clip links preserve the selected clip page instead of falling back to the live channel', () => {
   const content = read('content.js');
   const start = content.indexOf('function lpEmbed(');
   const end = content.indexOf('/* ---- Önizleme penceresi ---- */', start);
   const fn = content.slice(start, end);
   const map = vm.runInNewContext('(' + fn + ')', { URL, NON_CHANNEL: {}, location: { hostname: 'kick.com' } });
   const clip = map('https://kick.com/swagybarK/clips/abc123');
-  assert.equal(clip.url, 'https://player.kick.com/swagybarK?clip=abc123');
+  assert.equal(clip.url, 'https://kick.com/swagybarK/clips/abc123');
   assert.equal(clip.klip, true);
   assert.equal(clip.kaynak, 'https://kick.com/swagybarK/clips/abc123');
   assert.equal(map('https://kick.com/swagybarK/clip/abc123').klipId, 'abc123');
+  assert.equal(map('https://kick.com/swagybarK?clip=abc123').url, 'https://kick.com/swagybarK/clips/abc123');
+  const kickbot = map('https://kickbot.com/clip/cgydaf69o6f0');
+  assert.equal(kickbot.ad, 'KickBot');
+  assert.equal(kickbot.klip, true);
   assert.equal(map('https://kick.com/swagybarK').url, 'https://player.kick.com/swagybarK');
   assert.match(content, /var maxW = Math\.max\(280, Math\.min\(window\.innerWidth - 24, 1280\)\)/);
   assert.match(content, /var embedOrani = Number\(bilgi\.oran\) > 0/);
   assert.match(content, /aspect-ratio:' \+ embedEnBoy/);
+  assert.match(content, /kickLink && kickLink\.ad === 'Kick' && kickLink\.klip/);
+  assert.match(content, /if \(mc\) return \{ tur: 'kick', src: 'https:\/\/kick\.com\/'/);
+  assert.ok(content.includes("if (b.ad === 'KickBot') { window.open(hedef, '_blank', 'noopener'); return;"));
+  assert.match(content, /kickLink && kickLink\.ad === 'KickBot' && kickLink\.klip/);
+  assert.match(content, /bilgi\.ad === 'Kick' && bilgi\.klip/);
+  assert.match(content, /pkGetKickClipStream/);
+  assert.match(content, /new Hls\(\{ enableWorker: false, lowLatencyMode: false \}\)/);
+  assert.match(content, /Klip akışı oynatılamadı/);
+  assert.match(content, /window\.innerWidth \* 0\.88/);
+  const manifest = JSON.parse(read('manifest.json'));
+  const isolated = manifest.content_scripts.find((entry) => entry.world === 'ISOLATED' && entry.js.includes('content.js'));
+  assert.ok(isolated.js.indexOf('vendor/hls.min.js') < isolated.js.indexOf('content.js'));
+  const bg = read('background.js');
+  assert.match(bg, /https:\/\/kick\.com\/api\/v2\/clips\//);
+  assert.match(bg, /parsedStream\.hostname === 'clips\.kick\.com'/);
 });
 test('profile card processing excludes home category and navigation menus', () => {
   const content = read('content.js');

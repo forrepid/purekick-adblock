@@ -4,6 +4,24 @@ Bu doküman, PureKick eklentisinin tüm sürümlerindeki yenilikleri, hata düze
 
 ---
 
+## 🚀 [10.19.15] - 2026-10-10 (Klip Oynatma, İzinler & Dil Desteği)
+
+### 🎬 Klip bağlantıları
+- Sohbette tıklanan Kick klip kimliği Kick API'sinden çözülerek klibin gerçek HLS video akışı ayrı oynatıcıda oynatılır; canlı kanal sayfasına düşme önlendi.
+- HLS.js yerel olarak eklendi; pencere kapanınca akış durdurulur. API veya oynatma hatasında canlı yayına geçmek yerine açıklayıcı hata görünür.
+- Gömülemeyen KickBot klip bağlantıları boş iframe yerine kaynak sayfada yeni sekmede açılır.
+
+### 🔐 Bağlantı izinleri ve dil
+- Link önizlemeleri için ayarlara tüm HTTP/HTTPS sitelerine isteğe bağlı erişim düğmesi eklendi; erişim verildiğinde bekleyen önizlemeler yenilenir.
+- 15 arayüz dili ve GitHub destek bildirimi akışı güncellendi.
+- Klip kimliği, akış kaynağı ve izin davranışları için regresyon testleri eklendi.
+
+### Doğrulama
+- Otomatik testler: 26/26 başarılı.
+- Ekran görüntüsündeki klip kimliğinde API yanıtı ve HLS listesi doğrulandı; video parçası Range isteği `206 Partial Content` ve CORS izni döndürdü.
+
+---
+
 ## 🚀 [10.19.14] - 2026-10-07 (Sohbet, Kenar Çubuğu & Klip Araçları)
 
 ### 💬 Sohbet ve kenar çubuğu

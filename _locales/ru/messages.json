@@ -857,8 +857,12 @@
    "pkKenarGrupLimitD": {
       "message": "Ограничивает число каналов в списках онлайн и офлайн значением от 1 до 20. Не зависит от разделения на группы."
    },
-   "pkKickDahaFazlaGizle": { "message": "Скрыть кнопки Kick «Показать больше / меньше»" },
-   "pkKickDahaFazlaGizleD": { "message": "Скрывает кнопки раскрытия и сворачивания списка каналов Kick." },
+   "pkKickDahaFazlaGizle": {
+      "message": "Скрыть кнопки Kick «Показать больше / меньше»"
+   },
+   "pkKickDahaFazlaGizleD": {
+      "message": "Скрывает кнопки раскрытия и сворачивания списка каналов Kick."
+   },
    "pkKendiMenum": {
       "message": "Открывать своё меню"
    },
@@ -2515,10 +2519,184 @@
    "pkNot101911d": {
       "message": "Genel bağlantı önizlemeleri için zorunlu tüm siteler izni kaldırıldı"
    },
+   "pkNot101914a": {
+      "message": "Архив чата теперь разделён по каналам; улучшены ежедневные журналы и сохранение текста удалённых сообщений."
+   },
+   "pkNot101914b": {
+      "message": "Исправлены отображение и ограничение числа отслеживаемых каналов онлайн/офлайн."
+   },
+   "pkNot101914c": {
+      "message": "Исправлены предпросмотр ссылок, заголовки каналов при наведении и область показа карточек профиля."
+   },
+   "pkNot101914d": {
+      "message": "Улучшены подсветка роли подписчика и записи о подаренных KICKS."
+   },
+   "pkNot101914e": {
+      "message": "Голосовые команды для клипов теперь поддерживают 15 языков, индикатор микрофона и значок в плеере."
+   },
+   "pkNot101914f": {
+      "message": "Улучшены переключатель горячих клавиш, резервный выбор кодека/качества и метки записей без звука."
+   },
    "pkNot101912a": {
       "message": "Kick sayfasındaki PureKick Mod simgesi ve yeşil böcek rozeti güncellendi"
    },
    "pkNot101912b": {
       "message": "Araç çubuğu, sohbet ayarları, yönetim paneli ve profil önizlemesindeki ürün adı ve simge tutarlı hale getirildi"
+   },
+   "pkInterfaceLanguage": {
+      "message": "Язык интерфейса"
+   },
+   "pkInterfaceLanguageD": {
+      "message": "Выберите язык для мода PureKick. Автоматически следует языку браузера."
+   },
+   "pkSupportTitle": {
+      "message": "Поддержка и отчеты об ошибках"
+   },
+   "pkSupportDesc": {
+      "message": "Отправьте отчет об ошибке или запрос на добавление функции через GitHub. Отслеживайте открытые и выполненные запросы здесь."
+   },
+   "pkSupportLogin": {
+      "message": "Отправка завершается на GitHub и требует входа в аккаунт GitHub. Расширение не добавляет в отчёт ваше имя пользователя или адрес электронной почты. Сервер-посредник для анонимной отправки без входа пока не настроен."
+   },
+   "pkSupportBug": {
+      "message": "Сообщить об ошибке"
+   },
+   "pkSupportFeature": {
+      "message": "Запросить функцию"
+   },
+   "pkSupportQuestion": {
+      "message": "Попросите помощи"
+   },
+   "pkSupportTitlePlaceholder": {
+      "message": "Краткое название"
+   },
+   "pkSupportBodyPlaceholder": {
+      "message": "Опишите шаги, ожидаемый результат и фактический результат. Не включайте личную информацию."
+   },
+   "pkSupportSend": {
+      "message": "Продолжить на GitHub"
+   },
+   "pkSupportRequired": {
+      "message": "Введите заголовок и описание."
+   },
+   "pkSupportIssues": {
+      "message": "Запросы сообщества"
+   },
+   "pkSupportStatusHelp": {
+      "message": "Статус определяется статусом открытия/закрытия GitHub и метками планирования."
+   },
+   "pkSupportLoading": {
+      "message": "Загрузка запросов GitHub…"
+   },
+   "pkSupportEmpty": {
+      "message": "Общественных запросов пока нет."
+   },
+   "pkSupportClosed": {
+      "message": "Решено"
+   },
+   "pkSupportPlanned": {
+      "message": "Планируется"
+   },
+   "pkSupportWaiting": {
+      "message": "Ожидание"
+   },
+   "pkSupportOpen": {
+      "message": "Открыть"
+   },
+   "pkSupportError": {
+      "message": "Не удалось загрузить запросы GitHub. Проверьте свое соединение или статус GitHub."
+   },
+   "pkHistoryTitle": {
+      "message": "Записи чата"
+   },
+   "pkHistorySearch": {
+      "message": "Поиск в записях чата (пользователь или сообщение)"
+   },
+   "pkHistoryLoadOlder": {
+      "message": "Загрузить более старые записи"
+   },
+   "pkHistoryMemoryLimit": {
+      "message": "Достигнут лимит памяти · найдите старые записи через поиск"
+   },
+   "pkHistoryLoading": {
+      "message": "Загрузка архива…"
+   },
+   "pkHistoryNoMatch": {
+      "message": "Совпадений не найдено."
+   },
+   "pkHistoryEmpty": {
+      "message": "В журнале чата пока нет сохранённых сообщений."
+   },
+   "pkHistorySearchResults": {
+      "message": "Результаты поиска: "
+   },
+   "pkHistoryMessages": {
+      "message": "Сообщения в архиве: "
+   },
+   "pkHistoryOlderAvailable": {
+      "message": " · доступны более старые записи"
+   },
+   "pkHistoryAllShown": {
+      "message": " · показаны все совпадения"
+   },
+   "pkHistoryDeletedTextMissing": {
+      "message": "Kick не предоставил текст сообщения в этой записи об удалении"
+   },
+   "pkHistoryDailyTitle": {
+      "message": "Записи чата · Дневной журнал"
+   },
+   "pkHistoryDailyDesc": {
+      "message": "Сообщения за сегодня разделены по каналам и датам. Скачайте отдельный файл .log с метками времени для каждого канала."
+   },
+   "pkHistoryDailyLoading": {
+      "message": "Загрузка сегодняшних журналов…"
+   },
+   "pkHistoryDailyRefresh": {
+      "message": "Обновить журналы за сегодня"
+   },
+   "pkTimeoutExpires": {
+      "message": "Тайм-аут закончится: {1}"
+   },
+   "pkTimeoutDays": {
+      "message": "(осталось дней: {1})"
+   },
+   "pkActiveTimeout": {
+      "message": "Активный тайм-аут"
+   },
+   "pkPermanentBan": {
+      "message": "Постоянная блокировка"
+   },
+   "pkModEventsTitle": {
+      "message": "События модерации"
+   },
+   "pkTitleCount": {
+      "message": "{1} ({2})"
+   },
+   "pkTemizle": {
+      "message": "Очистить"
+   },
+   "pkAllSitesAccessDescription": {
+      "message": "Однократное широкое разрешение для предпросмотра ссылок на сайтах HTTP и HTTPS."
+   },
+   "pkAllSitesAccessButton": {
+      "message": "Разрешить доступ ко всем сайтам"
+   },
+   "pkAllSitesGranted": {
+      "message": "Доступ к ссылкам для всех сайтов HTTP/HTTPS включён."
+   },
+   "pkAllSitesDenied": {
+      "message": "Доступ к сайтам не предоставлен. Отдельные сайты можно разрешить в настройках расширений Chrome."
+   },
+   "pkNot101915a": {
+      "message": "Клипы из чата теперь воспроизводят видео по точному ID клипа, а не трансляцию канала."
+   },
+   "pkNot101915b": {
+      "message": "Для клипов Kick используется отдельный проигрыватель; страницы KickBot открываются напрямую, если их нельзя встроить."
+   },
+   "pkNot101915c": {
+      "message": "Добавлено однократное необязательное разрешение для всех сайтов HTTP/HTTPS ради предпросмотра ссылок."
+   },
+   "pkNot101915d": {
+      "message": "Обновлены языковые каталоги и отправка обращений через GitHub; добавлены проверки клипов и разрешений."
    }
 }

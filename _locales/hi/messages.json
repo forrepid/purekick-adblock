@@ -1,0 +1,2702 @@
+{
+   "pkEmoteOnizlemeD": {
+      "message": "किसी भाव को उसके नाम के साथ बड़ा देखने के लिए उस पर होवर करें।"
+   },
+   "pkEmoteSayisi": {
+      "message": "{1} भाव"
+   },
+   "pkEmoteYok": {
+      "message": "अभी तक कोई भाव प्रयोग नहीं किया गया."
+   },
+   "pkEnAktifSohbet": {
+      "message": "सर्वाधिक सक्रिय चैटर्स"
+   },
+   "pkEnAktifSohbetD": {
+      "message": "इस सत्र में सबसे अधिक किसने लिखा?"
+   },
+   "pkEnCokEmote": {
+      "message": "सर्वाधिक प्रयुक्त भाव"
+   },
+   "pkEnCokEmoteD": {
+      "message": "इस सत्र में चैट में सबसे अधिक बार आने वाले लोग।"
+   },
+   "pkEnCokEmoteKisi": {
+      "message": "शीर्ष भावनात्मक उपयोगकर्ता"
+   },
+   "pkEnCokEmoteKisiD": {
+      "message": "प्रति व्यक्ति भाव और उनके भाव-मात्र संदेश की गिनती।"
+   },
+   "pkEnYogunDakika": {
+      "message": "सबसे व्यस्त मिनट"
+   },
+   "pkEngellemeAyarlari": {
+      "message": "विज्ञापन सेटिंग"
+   },
+   "pkEngellenenVideo": {
+      "message": "वीडियो विज्ञापन अवरुद्ध"
+   },
+   "pkEvet": {
+      "message": "हाँ"
+   },
+   "pkEvetSifirla": {
+      "message": "हाँ, रीसेट करें"
+   },
+   "pkGelenYanitYok": {
+      "message": "इस सत्र में किसी ने उनका उल्लेख नहीं किया।"
+   },
+   "pkGelenYanitlar": {
+      "message": "उन्हें लिखा"
+   },
+   "pkGelismis": {
+      "message": "उन्नत"
+   },
+   "pkGeri": {
+      "message": "वापस"
+   },
+   "pkGizleIkonu": {
+      "message": "चैनल होवर पर बटन छुपाएं"
+   },
+   "pkGizleIkonuD": {
+      "message": "जब आप किसी चैनल को होम पेज, साइडबार या श्रेणियों पर घुमाते हैं तो ऊपरी-दाएँ कोने में एक छिपाएँ बटन दिखाता है। चैनल पेज पर साझा करें के आगे का बटन अलग है।"
+   },
+   "pkGizlemeyiKaldir": {
+      "message": "उजागर करें"
+   },
+   "pkGizlenenKanallar": {
+      "message": "छिपे हुए चैनल"
+   },
+   "pkGizlenenKanallarD": {
+      "message": "ये चैनल सूचियों, श्रेणियों और खोज से बाहर रहते हैं।"
+   },
+   "pkGizlenenKategoriler": {
+      "message": "छुपी हुई श्रेणियां"
+   },
+   "pkGizlenenKategorilerD": {
+      "message": "ये श्रेणियां और उनके अंदर मौजूद स्ट्रीम कार्ड सूचियों से बाहर रहते हैं।"
+   },
+   "pkGizlenenleriTemizle": {
+      "message": "{1} छिपे हुए व्यक्तियों को पुनर्स्थापित करें"
+   },
+   "pkGizliMesajTemizle": {
+      "message": "{1} छिपे हुए संदेश पुनर्स्थापित करें"
+   },
+   "pkGorselBuyut": {
+      "message": "छवि बड़ा करें (CTRL + क्लिक करें)"
+   },
+   "pkGorselBuyutD": {
+      "message": "किसी इमोट, बैज या अवतार को पूर्ण आकार में देखने के लिए उस पर CTRL-क्लिक करें।"
+   },
+   "pkGorunurluk": {
+      "message": "अपारदर्शिता"
+   },
+   "pkGrupCanli": {
+      "message": "ऑनलाइन ({1})"
+   },
+   "pkGrupKapali": {
+      "message": "ऑफ़लाइन ({1})"
+   },
+   "pkGunOnce": {
+      "message": "{1} दिन पहले"
+   },
+   "pkGundur": {
+      "message": "{1} दिन के लिए"
+   },
+   "pkHakkindaEk": {
+      "message": "अतिरिक्त चैनल जानकारी"
+   },
+   "pkHakkindaEkD": {
+      "message": "स्ट्रीम के अंतर्गत अबाउट पंक्ति में सब्सक्राइबर बैज, चैनल इमोट्स, हाल की श्रेणियां और चैट नियम (जब सेट हो) जोड़ता है।"
+   },
+   "pkHata": {
+      "message": "त्रुटि"
+   },
+   "pkHayir": {
+      "message": "नहीं"
+   },
+   "pkHazirlanamadi": {
+      "message": "तैयार नहीं हो सका."
+   },
+   "pkHersiSifirla": {
+      "message": "सब कुछ रीसेट करें"
+   },
+   "pkHersiSifirlaD": {
+      "message": "सभी सेटिंग्स और सूचियाँ हटा दी गई हैं; एक्सटेंशन अपनी पहले दिन की स्थिति में वापस आ जाता है।"
+   },
+   "pkHersiSifirlaUyari": {
+      "message": "आपके नोट्स, छिपे हुए चैनल और लोग, फ़िल्टर और सेव पॉइंट हटा दिए जाएंगे। इसे पूर्ववत नहीं किया जा सकता - हो सकता है कि आप पहले निर्यात करना चाहें।"
+   },
+   "pkHesabinEki": {
+      "message": "आपका खाता: {1}"
+   },
+   "pkHizliMod": {
+      "message": "त्वरित समयबाह्य"
+   },
+   "pkHizliModD": {
+      "message": "चैट संदेश के आगे घंटे के चश्मे पर क्लिक करने से एक अवधि पट्टी खुलती है; किक के स्वयं के संवाद के स्थान पर आपकी पसंद लागू की जाती है।"
+   },
+   "pkHizliModNot": {
+      "message": "आदेश केवल बॉक्स में टाइप किया जाता है - भेजना आप पर निर्भर है, इसलिए किसी को भी गलती से दंडित नहीं किया जाता है।"
+   },
+   "pkHkAboneye": {
+      "message": "केवल ग्राहक"
+   },
+   "pkHkAy": {
+      "message": "{1} महीने"
+   },
+   "pkHkEmoteler": {
+      "message": "चैनल भाव व्यक्त करता है"
+   },
+   "pkHkKategoriler": {
+      "message": "हाल की श्रेणियां"
+   },
+   "pkHkKurallar": {
+      "message": "चैट नियम"
+   },
+   "pkHkRozetler": {
+      "message": "सब्सक्राइबर बैज"
+   },
+   "pkIceAktar": {
+      "message": "आयात करें"
+   },
+   "pkIcerikBos": {
+      "message": "सामग्री (खाली = सभी संदेश)"
+   },
+   "pkIleri": {
+      "message": "अगला"
+   },
+   "pkIlkSonMesaj": {
+      "message": "पहले संदेश से आखिरी तक"
+   },
+   "pkIndiriliyorEki": {
+      "message": "डाउनलोड हो रहा है · {1}"
+   },
+   "pkIndirmeBitti": {
+      "message": "हो गया · {1}"
+   },
+   "pkIndirmeDurdu": {
+      "message": "डाउनलोड रुका: {1}"
+   },
+   "pkIndirmeIlerleme": {
+      "message": "{1} % · {2} खंड"
+   },
+   "pkIndirmeIptal": {
+      "message": "रद्द किया गया · {1} डाउनलोड किया गया था"
+   },
+   "pkIptal": {
+      "message": "रद्द करें"
+   },
+   "pkIstatBos": {
+      "message": "अभी तक कोई डेटा नहीं. एक स्ट्रीम खोलें और, जैसे-जैसे चैट प्रवाहित होगी, संदेशों की संख्या, शीर्ष चैटर्स और भावनात्मक उपयोग यहां दिखाई देंगे।"
+   },
+   "pkIzleyici": {
+      "message": "दर्शक"
+   },
+   "pkIzleyiciAnlik": {
+      "message": "दर्शक (अब)"
+   },
+   "pkIzleyiciOrt": {
+      "message": "दर्शक (औसत)"
+   },
+   "pkIzleyiciZirve": {
+      "message": "दर्शक (शिखर)"
+   },
+   "pkKaldir": {
+      "message": "हटाओ"
+   },
+   "pkKaliteNot": {
+      "message": "यदि आपकी गुणवत्ता अनुपलब्ध है, तो अगले डाउन का उपयोग किया जाता है। \"स्वचालित\" चयनित होने पर यह सुविधा कुछ नहीं करती।"
+   },
+   "pkKaliteOkunamadi": {
+      "message": "गुणवत्ता सूची पढ़ी नहीं जा सकी."
+   },
+   "pkKaliteSecin": {
+      "message": "एक गुणवत्ता चुनें:"
+   },
+   "pkKanalBilgisi": {
+      "message": "चैनल की जानकारी"
+   },
+   "pkKanalCanli": {
+      "message": "लाइव: {1} · {2} दर्शक"
+   },
+   "pkKanalCevrimdisi": {
+      "message": "ऑफ़लाइन · {1} अनुयायी"
+   },
+   "pkKanalEngeliKaldir": {
+      "message": "इस चैनल को उजागर करें"
+   },
+   "pkKanalGizleYok": {
+      "message": "आपने अभी तक किसी को नहीं छुपाया है. किसी चैनल कार्ड पर होवर करें और उसे छिपाने के लिए ✕ दबाएँ।"
+   },
+   "pkKanalHakkinda": {
+      "message": "{1} का अवलोकन"
+   },
+   "appDesc": {
+      "message": "प्योरकिक मॉड किक.कॉम पर विज्ञापनों को ब्लॉक करता है और एक उन्नत स्ट्रीमिंग और चैट टूलकिट जोड़ता है।"
+   },
+   "badgeCtaSub": {
+      "message": "किक से साइन इन करें"
+   },
+   "badgeCtaTitle": {
+      "message": "चैट बैज अर्जित करें"
+   },
+   "badgeLinkedSub": {
+      "message": "खाता लिंक किया गया ✓"
+   },
+   "badgeLinkedTitle": {
+      "message": "चैट बैज सक्रिय"
+   },
+   "btnTitle": {
+      "message": "प्योरकिक मॉड - विज्ञापन-मुक्त स्ट्रीम"
+   },
+   "dropDay": {
+      "message": "{1} दिन शेष है"
+   },
+   "dropDays": {
+      "message": "{1} दिन शेष हैं"
+   },
+   "dropHour": {
+      "message": "{1} घंटा शेष है"
+   },
+   "dropHours": {
+      "message": "{1} घंटे बचे हैं"
+   },
+   "dropTitle": {
+      "message": "किक पर ड्रॉप्स अभियान देखें"
+   },
+   "dropsEmpty": {
+      "message": "कोई सक्रिय बूँदें नहीं"
+   },
+   "dropsTitle": {
+      "message": "सक्रिय बूँदें"
+   },
+   "footHelp": {
+      "message": "सहायता एवं सहायता"
+   },
+   "footPrivacy": {
+      "message": "गोपनीयता"
+   },
+   "pauseBtn": {
+      "message": "इस साइट पर रुकें"
+   },
+   "pkAboneAktifNot": {
+      "message": "यह आपके रहने पर हर महीने बढ़ता है। धन्यवाद! 💚"
+   },
+   "pkAboneAy": {
+      "message": "{1} -माह समर्थक"
+   },
+   "pkAboneAy1": {
+      "message": "1-माह समर्थक"
+   },
+   "pkAboneBaslangic": {
+      "message": "शुरू हुआ"
+   },
+   "pkAboneBitti": {
+      "message": "आपकी सदस्यता समाप्त हो गई है. नवीनीकरण करें और आपका बैज वहीं से शुरू हो जाएगा जहां उसने छोड़ा था।"
+   },
+   "pkAboneDemoBaslik": {
+      "message": "एक समर्थक के रूप में आप चैट में इस तरह दिखते हैं:"
+   },
+   "pkAboneDemoMesaj": {
+      "message": "अरे! 👋"
+   },
+   "pkAboneKidem": {
+      "message": "आपका कार्यकाल"
+   },
+   "pkAboneOl": {
+      "message": "सदस्य बनें"
+   },
+   "pkAboneOnceGiris": {
+      "message": "पहले किक से साइन इन करें - हमें आपकी सदस्यता को आपके खाते से मिलाने के लिए इसकी आवश्यकता है।"
+   },
+   "pkAboneSonaErdi": {
+      "message": "समाप्त"
+   },
+   "pkAboneYenile": {
+      "message": "सदस्यता नवीनीकृत करें"
+   },
+   "pkAboneYenileme": {
+      "message": "नवीनीकरण"
+   },
+   "pkAboneYukleniyor": {
+      "message": "आपकी सदस्यता स्थिति की जाँच की जा रही है…"
+   },
+   "pkAbonelik": {
+      "message": "सदस्यता"
+   },
+   "pkAbonelikTanit": {
+      "message": "समर्थक बनें: चैट में अपने नाम के आगे एक कार्यकाल बैज प्राप्त करें और अपना नाम अपनी इच्छानुसार रंग दें।"
+   },
+   "pkAiMod": {
+      "message": "स्वचालित विलोपन चिह्नित करें"
+   },
+   "pkAiModD": {
+      "message": "यदि किक के एआई मॉडरेशन ने इसे हटा दिया है, तो लॉग इसे मॉडरेटर विलोपन के अलावा बताता है।"
+   },
+   "pkAltAdTakibi": {
+      "message": "नाम देखना"
+   },
+   "pkAltCezaSebepleri": {
+      "message": "दंड के कारण"
+   },
+   "pkAltGezinme": {
+      "message": "नेविगेशन बार"
+   },
+   "pkAltGizliKanallar": {
+      "message": "छिपे हुए चैनल"
+   },
+   "pkAltGizliKategoriler": {
+      "message": "छुपी हुई श्रेणियां"
+   },
+   "pkAltKaliteSes": {
+      "message": "स्वचालित गुणवत्ता और मात्रा"
+   },
+   "pkAltKartBilgisi": {
+      "message": "कार्ड विवरण"
+   },
+   "pkAltKartSohbeti": {
+      "message": "कार्ड चैट"
+   },
+   "pkAltKenarCubugu": {
+      "message": "साइडबार"
+   },
+   "pkAltModGunlugu": {
+      "message": "लॉग सेटिंग्स"
+   },
+   "pkAltOtomasyon": {
+      "message": "स्वचालन"
+   },
+   "pkAltOynaticiOzel": {
+      "message": "प्लेयर सुविधाएँ"
+   },
+   "pkAltSagTikMenuleri": {
+      "message": "राइट-क्लिक करें और छवियाँ"
+   },
+   "pkAltSohbetGorunum": {
+      "message": "चैट उपस्थिति"
+   },
+   "pkAltSohbetGorunumD": {
+      "message": "भावपूर्ण पूर्वावलोकन."
+   },
+   "pkAltSohbetMesaji": {
+      "message": "चैट संदेश"
+   },
+   "pkAltVideoIstat": {
+      "message": "वीडियो और नियंत्रण बार"
+   },
+   "pkAltVideoVod": {
+      "message": "वीडियो प्लेयर और वीओडी"
+   },
+   "pkAltVurgulama": {
+      "message": "संदेश हाइलाइटिंग"
+   },
+   "pkAninda": {
+      "message": "परिवर्तन तुरंत प्रभावी होते हैं."
+   },
+   "pkAnlikOrtZirve": {
+      "message": "अभी / औसत / शिखर"
+   },
+   "pkAralikSec": {
+      "message": "एक श्रेणी चुनें"
+   },
+   "pkArayuzDuzeniD": {
+      "message": "किक इंटरफ़ेस में छोटे परिवर्धन; उनमें से कोई भी किक के स्वयं के लेआउट को नहीं तोड़ता है।"
+   },
+   "pkAySayisi": {
+      "message": "{1} माह"
+   },
+   "pkAyarSatiri": {
+      "message": "प्योरकिक चैट सेटिंग्स"
+   },
+   "pkAyarYedegi": {
+      "message": "सेटिंग्स बैकअप"
+   },
+   "pkAyarYedegiD": {
+      "message": "आपकी सभी सेटिंग्स और सूचियाँ एक फ़ाइल में। सर्वर पर कुछ भी नहीं भेजा जाता है."
+   },
+   "pkAramaAyarlar": {
+      "message": "सेटिंग खोजें..."
+   },
+   "pkAramaSonucYok": {
+      "message": "कोई मेल खाती सेटिंग नहीं मिली"
+   },
+   "pkAyarlar": {
+      "message": "प्योरकिक सेटिंग्स"
+   },
+   "pkAyarlardanAc": {
+      "message": "आप इसे सेटिंग्स में चालू कर सकते हैं।"
+   },
+   "pkAydir": {
+      "message": "{1} माह के लिए"
+   },
+   "pkAzOnce": {
+      "message": "अभी अभी"
+   },
+   "pkBaglantiDurum": {
+      "message": "चैट कनेक्शन स्थिति"
+   },
+   "pkBaglantiDurumD": {
+      "message": "चैट के आगे एक छोटा सा बिंदु: क्या घटनाएँ चल रही हैं या रुक गई हैं।"
+   },
+   "pkBaglanti_acik": {
+      "message": "चैट कनेक्शन काम कर रहा है"
+   },
+   "pkBaglanti_bekliyor": {
+      "message": "चैट कनेक्शन की प्रतीक्षा की जा रही है"
+   },
+   "pkBaglanti_kopuk": {
+      "message": "ऐसा प्रतीत होता है कि चैट कनेक्शन खो गया है"
+   },
+   "pkBaglanti_sessiz": {
+      "message": "कुछ समय तक कोई कार्यक्रम नहीं - बातचीत शांत हो सकती है"
+   },
+   "pkBaglantiyiKopyala": {
+      "message": "लिंक कॉपी करें"
+   },
+   "pkBaglantiyiOnizle": {
+      "message": "लिंक का पूर्वावलोकन करें"
+   },
+   "pkChatOnizle": {
+      "message": "चैट में पूर्वावलोकन देखें"
+   },
+   "pkChatOnizleKapat": {
+      "message": "पूर्वावलोकन बंद करें"
+   },
+   "pkBahsedenYok": {
+      "message": "अभी तक किसी ने आपका जिक्र नहीं किया है."
+   },
+   "pkBahsedilmeler": {
+      "message": "उल्लेख"
+   },
+   "pkBahsedilmelerBos": {
+      "message": "वे यहां एकत्र होते हैं जैसे किसी चैनल की चैट देखी जाती है।"
+   },
+   "pkBahsedilmelerD": {
+      "message": "उन संदेशों को एकत्रित करता है जिनमें आपके नाम का उल्लेख होता है।"
+   },
+   "pkBahsetRozet": {
+      "message": "अधिसूचना काउंटर"
+   },
+   "pkBahsetRozetD": {
+      "message": "जब आपका नाम आता है तो प्योरकिक बटन पर एक लाल गिनती दिखाता है। इसे बंद करें और उल्लेख अभी भी एकत्र किए जाएंगे, केवल स्क्रीन पर नहीं गिने जाएंगे।"
+   },
+   "pkBahsetSes": {
+      "message": "अधिसूचना ध्वनि"
+   },
+   "pkBahsetSesD": {
+      "message": "जब आपका नाम आता है तो एक छोटी ध्वनि बजाता है।"
+   },
+   "pkBahsetSesSeviye": {
+      "message": "आयतन"
+   },
+   "pkBahsetSesTon": {
+      "message": "ध्वनि"
+   },
+   "pkBahsetSesTonD": {
+      "message": "जैसे ही आप इसे चुनते हैं, यह बजने लगता है - सुनें, फिर निर्णय लें।"
+   },
+   "pkBahsetTikla": {
+      "message": "क्लिक करने योग्य @उल्लेख"
+   },
+   "pkBahsetTiklaD": {
+      "message": "किसी संदेश में @नाम पर क्लिक करने से वह व्यक्ति चैट बॉक्स में चला जाता है।"
+   },
+   "pkBanDetay": {
+      "message": "विस्तृत प्रतिबंध जानकारी"
+   },
+   "pkBanDetayD": {
+      "message": "कारण, अवधि, बचा हुआ समय और अपील की स्थिति प्रकट करने के लिए लॉग पंक्ति पर क्लिक करें।"
+   },
+   "pkBanDoldu": {
+      "message": "समाप्त हो गया"
+   },
+   "pkBanItiraz": {
+      "message": "अपील"
+   },
+   "pkBanItirazVar": {
+      "message": "इस जुर्माने के लिए अपील खोली गई"
+   },
+   "pkBanKalan": {
+      "message": "समय बाकी है"
+   },
+   "pkBanKalici": {
+      "message": "स्थाई"
+   },
+   "pkBanMesaj": {
+      "message": "संदेश"
+   },
+   "pkBanOtomatik": {
+      "message": "स्वचालित"
+   },
+   "pkBanSablon": {
+      "message": "पूर्व निर्धारित दंड कारण"
+   },
+   "pkBanSablonD": {
+      "message": "उन कारणों को सहेजें जिनका आप अक्सर उपयोग करते हैं; एक क्लिक उन्हें प्रोफ़ाइल कार्ड से एक कमांड के रूप में लिखता है।"
+   },
+   "pkBanSebep": {
+      "message": "कारण"
+   },
+   "pkBanSure": {
+      "message": "अवधि"
+   },
+   "pkBanYapan": {
+      "message": "द्वारा लागू किया गया"
+   },
+   "pkBindir": {
+      "message": "स्ट्रीम पर चैट को ओवरले करें"
+   },
+   "pkBindirAc": {
+      "message": "ओवरले चालू करें"
+   },
+   "pkBindirAcD": {
+      "message": "परत क्लिक से गुजरती है; यह कभी भी प्लेयर बटन को ब्लॉक नहीं करता है।"
+   },
+   "pkBindirD": {
+      "message": "चैट को फ़ुलस्क्रीन में भी पढ़ते रहें."
+   },
+   "pkBindirKonum": {
+      "message": "पद"
+   },
+   "pkBindirNot": {
+      "message": "संदेश किक के मौजूदा चैट कनेक्शन से आते हैं; कोई नया नहीं खोला गया है. जिन लोगों को तुम छिपाते हो वे यहां भी छिपे रहते हैं।"
+   },
+   "pkBirModerator": {
+      "message": "एक मॉडरेटर"
+   },
+   "pkBirModeratorIci": {
+      "message": "एक मॉडरेटर"
+   },
+   "pkBirlestir": {
+      "message": "विलय"
+   },
+   "pkBirlestirD": {
+      "message": "फ़ाइल में केवल सेटिंग्स लिखी गई हैं; बाकी सब कुछ रहता है."
+   },
+   "pkBotYoksay": {
+      "message": "बॉट्स को हाइलाइट न करें"
+   },
+   "pkBotYoksayD": {
+      "message": "बॉट बैज वाले खातों के संदेशों को कोई रंगीन पट्टी नहीं मिलती है।"
+   },
+   "pkBugun": {
+      "message": "आज"
+   },
+   "pkCevrimdisi": {
+      "message": "ऑफ़लाइन"
+   },
+   "pkCevrimdisiEki": {
+      "message": "ऑफ़लाइन · {1}"
+   },
+   "pkCezaYok": {
+      "message": "वर्तमान में किसी का भी समय समाप्त नहीं हुआ है।"
+   },
+   "pkCrossAciklama": {
+      "message": "कार्रवाई प्रत्येक चयनित चैनल पर अलग से लागू होती है। चैनल सूची उन चैनलों से आती है जिन्हें आप मॉडरेट करते हैं।"
+   },
+   "pkCrossAra": {
+      "message": "चैनल खोजें..."
+   },
+   "pkCrossAyar": {
+      "message": "क्रॉस-बैन · थोक क्रॉस-बैन"
+   },
+   "pkCrossAyarD": {
+      "message": "प्रोफ़ाइल कार्ड में एक बटन और प्योरकिक मेनू में एक \"बल्क क्रॉस-बैन\" पंक्ति जोड़ता है: आपके द्वारा मॉडरेट किए जाने वाले प्रत्येक चैनल पर एक व्यक्ति - या पूरी सूची - पर प्रतिबंध लगाना, टाइम आउट करना या क्षमा करना।"
+   },
+   "pkCrossBaslat": {
+      "message": "प्रारंभ करें"
+   },
+   "pkCrossBaslik": {
+      "message": "{1} - क्रॉस-चैनल कार्रवाई"
+   },
+   "pkCrossBekleme": {
+      "message": "चैनलों के बीच विलंब (सेकंड)"
+   },
+   "pkCrossBitti": {
+      "message": "हो गया - {1} सफल हुआ, {2} विफल रहा"
+   },
+   "pkCrossDugme": {
+      "message": "क्रॉस-बैन"
+   },
+   "pkCrossDurdur": {
+      "message": "रुकें"
+   },
+   "pkCrossHepsi": {
+      "message": "सभी को चुनें/स्पष्ट करें"
+   },
+   "pkCrossIlerleme": {
+      "message": "{1} / {2} · {3}"
+   },
+   "pkCrossKaldir": {
+      "message": "प्रतिबंध हटाना"
+   },
+   "pkCrossKanallar": {
+      "message": "चैनल"
+   },
+   "pkCrossListeYok": {
+      "message": "चैनल सूची लोड नहीं हो सकी - आपको किक में साइन इन करना होगा"
+   },
+   "pkCrossModYok": {
+      "message": "कोई चैनल नहीं मिला जहां आप मॉडरेटर हैं"
+   },
+   "pkCrossNerede": {
+      "message": "प्रोफ़ाइल कार्ड पर क्रॉस-बैन बटन से, या प्योरकिक मेनू में \"बल्क क्रॉस-बैन\" पंक्ति से इसका उपयोग करें।"
+   },
+   "pkCrossSebep": {
+      "message": "कारण"
+   },
+   "pkCrossSebepIpucu": {
+      "message": "वैकल्पिक"
+   },
+   "pkCrossSecili": {
+      "message": "{1} / {2} चयनित"
+   },
+   "pkCrossSure": {
+      "message": "अवधि (मिनट)"
+   },
+   "pkCrossSustur": {
+      "message": "समय समाप्त"
+   },
+   "pkCrossTekNot": {
+      "message": "त्वरित मॉडरेशन बंद है; केवल क्रॉस-चैनल बटन दिखाया गया है।"
+   },
+   "pkCrossToplu": {
+      "message": "थोक क्रॉस-प्रतिबंध"
+   },
+   "pkCrossTopluAciklama": {
+      "message": "आपके द्वारा सूचीबद्ध प्रत्येक उपयोगकर्ता पर, आपके द्वारा चुने गए प्रत्येक चैनल में अलग से लागू किया जाता है। चैनल सूची उन चैनलों से आती है जिन्हें आप मॉडरेट करते हैं।"
+   },
+   "pkCrossTopluAdlar": {
+      "message": "उपयोक्तानाम"
+   },
+   "pkCrossTopluBaslik": {
+      "message": "बल्क क्रॉस-चैनल कार्रवाई"
+   },
+   "pkCrossTopluBekleme": {
+      "message": "उपयोगकर्ताओं के बीच प्रतीक्षा करें (सेकंड)"
+   },
+   "pkCrossTopluBeklemeNot": {
+      "message": "एक उपयोगकर्ता को सभी चयनित चैनलों पर एक के बाद एक संसाधित किया जाता है। प्रतीक्षा केवल अगले उपयोगकर्ता के पास जाने पर लागू होती है - कम से कम {1} सेकंड।"
+   },
+   "pkCrossTopluIpucu": {
+      "message": "ऐलिस, बॉब, कैरोल \n या प्रति पंक्ति एक"
+   },
+   "pkCrossTopluSayi": {
+      "message": "{1} उपयोगकर्ता"
+   },
+   "pkCrossYasakla": {
+      "message": "प्रतिबंध"
+   },
+   "pkCrossYukleniyor": {
+      "message": "चैनल लोड हो रहे हैं..."
+   },
+   "pkDisaAktar": {
+      "message": "निर्यात करें"
+   },
+   "pkDkOnce": {
+      "message": "{1} मिनट पहले"
+   },
+   "pkDropsAciklama": {
+      "message": "सक्रिय अभियान आपको चूकना नहीं चाहिए।"
+   },
+   "pkDropsMenu": {
+      "message": "सक्रिय बूँदें - दैनिक पुरस्कार"
+   },
+   "pkEkle": {
+      "message": "जोड़ें"
+   },
+   "pkEkranGoruntusu": {
+      "message": "स्क्रीनशॉट"
+   },
+   "pkEkranGoruntusuAl": {
+      "message": "एक स्क्रीनशॉट लें"
+   },
+   "pkEkranGoruntusuD": {
+      "message": "वर्तमान फ्रेम को पीएनजी के रूप में डाउनलोड करता है।"
+   },
+   "pkVideoKayit": {
+      "message": "वीडियो रिकॉर्डर"
+   },
+   "pkEminMisin": {
+      "message": "क्या आप निश्चित हैं?"
+   },
+   "pkEmoteOnizleme": {
+      "message": "भावपूर्ण पूर्वावलोकन"
+   },
+   "pkKisiOncelikliSayi": {
+      "message": "{1} लोग प्राथमिकता हैं।"
+   },
+   "pkKonumSagAlt": {
+      "message": "नीचे दाईं ओर"
+   },
+   "pkKonumSagUst": {
+      "message": "शीर्ष दाईं ओर"
+   },
+   "pkKonumSolAlt": {
+      "message": "नीचे बाएँ"
+   },
+   "pkKonumSolUst": {
+      "message": "ऊपर बाएँ"
+   },
+   "pkKopyaKorumasi": {
+      "message": "कुछ धाराएँ प्रतिलिपि-संरक्षित हैं; फिर ब्राउज़र कैप्चर को ब्लॉक कर देता है।"
+   },
+   "pkKorumaAcikMetin": {
+      "message": "किक विज्ञापनों को ब्लॉक किया जा रहा है."
+   },
+   "pkKorumaKapaliMetin": {
+      "message": "सुरक्षा रोक दी गई है."
+   },
+   "pkKullaniciAdi": {
+      "message": "उपयोगकर्ता नाम"
+   },
+   "pkKullaniciAdiBos": {
+      "message": "उपयोक्तानाम (खाली = सभी)"
+   },
+   "pkKullaniciBul": {
+      "message": "एक उपयोगकर्ता खोजें"
+   },
+   "pkKullaniciNotlari": {
+      "message": "उपयोगकर्ता नोट"
+   },
+   "pkKullaniciNotlariD": {
+      "message": "प्रोफ़ाइल कार्ड पर एक निजी नोट रखता है."
+   },
+   "pkKuralAdvertising": {
+      "message": "विज्ञापन"
+   },
+   "pkKuralBullying": {
+      "message": "बदमाशी"
+   },
+   "pkKuralDoxxing": {
+      "message": "डॉक्सिंग"
+   },
+   "pkKuralDrugs": {
+      "message": "औषधियाँ"
+   },
+   "pkKuralExtremism": {
+      "message": "उग्रवाद"
+   },
+   "pkKuralGambling": {
+      "message": "जुआ"
+   },
+   "pkKuralHarassment": {
+      "message": "उत्पीड़न"
+   },
+   "pkKuralHate": {
+      "message": "नफरत फैलाने वाला भाषण"
+   },
+   "pkKuralHateSpeech": {
+      "message": "नफरत फैलाने वाला भाषण"
+   },
+   "pkKuralHatefulConduct": {
+      "message": "घृणित आचरण"
+   },
+   "pkKuralIllegal": {
+      "message": "अवैध सामग्री"
+   },
+   "pkKuralIllegalActivity": {
+      "message": "अवैध गतिविधि"
+   },
+   "pkKuralImpersonation": {
+      "message": "प्रतिरूपण"
+   },
+   "pkKuralKabul": {
+      "message": "चैट नियमों को स्वतः स्वीकार करें"
+   },
+   "pkKuralKabulD": {
+      "message": "जब आप नियमों वाले किसी चैनल में प्रवेश करते हैं तो आपके लिए चैट नियम संवाद स्वीकार करता है। डिफ़ॉल्ट रूप से बंद - यह आपकी ओर से कार्य करता है, इसलिए इसे चालू करना आपका निर्णय है।"
+   },
+   "pkKuralMisinfo": {
+      "message": "ग़लत सूचना"
+   },
+   "pkKuralMisinformation": {
+      "message": "ग़लत सूचना"
+   },
+   "pkKuralNudity": {
+      "message": "नग्नता"
+   },
+   "pkKuralProfanity": {
+      "message": "अपवित्रता"
+   },
+   "pkKuralScam": {
+      "message": "घोटाला"
+   },
+   "pkKuralSelfHarm": {
+      "message": "खुद को नुकसान पहुंचाना"
+   },
+   "pkKuralSexual": {
+      "message": "यौन सामग्री"
+   },
+   "pkKuralSexualContent": {
+      "message": "यौन सामग्री"
+   },
+   "pkKuralSpam": {
+      "message": "स्पैम"
+   },
+   "pkKuralTerrorism": {
+      "message": "आतंकवाद"
+   },
+   "pkKuralThreats": {
+      "message": "धमकियाँ"
+   },
+   "pkKuralUnderage": {
+      "message": "कम उम्र"
+   },
+   "pkKuralViolence": {
+      "message": "हिंसा"
+   },
+   "pkKuralWeapons": {
+      "message": "हथियार"
+   },
+   "pkKurtarilanBaslik": {
+      "message": "चैट साफ़ हो गई - अंतिम {1} संदेश"
+   },
+   "pkMBahset": {
+      "message": "इस व्यक्ति का उल्लेख करें"
+   },
+   "pkMDaralt": {
+      "message": "पतन"
+   },
+   "pkMGenislet": {
+      "message": "विस्तार करें"
+   },
+   "pkMGizle": {
+      "message": "इस संदेश को छिपाएँ"
+   },
+   "pkMKopyala": {
+      "message": "पाठ कॉपी करें"
+   },
+   "pkMenuArayuz": {
+      "message": "इंटरफ़ेस"
+   },
+   "pkMenuKenar": {
+      "message": "साइडबार"
+   },
+   "pkMenuKullaniciKarti": {
+      "message": "उपयोगकर्ता कार्ड"
+   },
+   "pkMenuSohbet": {
+      "message": "बातचीत"
+   },
+   "pkMesajEylemleri": {
+      "message": "संदेश होवर क्रियाएँ"
+   },
+   "pkMesajEylemleriD": {
+      "message": "कॉपी, उल्लेख, टाइमस्टैम्प, संक्षिप्त करें और छुपाएं बटन प्राप्त करने के लिए संदेश पर होवर करें।"
+   },
+   "pkMesajGizli": {
+      "message": "आपने यह संदेश छिपा दिया"
+   },
+   "pkMesajSayisi": {
+      "message": "{1} संदेश"
+   },
+   "pkMesajYok": {
+      "message": "अभी तक कोई संदेश नहीं."
+   },
+   "pkMesajiGizle": {
+      "message": "छिपाओ"
+   },
+   "pkMesajiGoster": {
+      "message": "दिखाओ"
+   },
+   "pkMesajlar": {
+      "message": "संदेश"
+   },
+   "pkMesajlariGoster": {
+      "message": "संदेश दिखाएँ"
+   },
+   "pkMesajlariniGizle": {
+      "message": "उनके संदेश छुपाएं"
+   },
+   "pkModBirMesajSilindi": {
+      "message": "एक संदेश हटा दिया गया"
+   },
+   "pkModBos": {
+      "message": "जब से आप इस चैनल से जुड़े हैं, कोई मॉडरेशन कार्रवाई नहीं हुई है। प्रतिबंध, समयबाह्य और विलोपन यहां दिखाई देते हैं।"
+   },
+   "pkModCezaKaldirdi": {
+      "message": "{1} ने {2} पर जुर्माना हटा दिया"
+   },
+   "pkModGunlugu": {
+      "message": "मॉडरेशन लॉग"
+   },
+   "pkModGunluguD": {
+      "message": "हटाए गए संदेश, प्रतिबंध/समयबाह्य और सक्रिय दंड।"
+   },
+   "pkModIzle": {
+      "message": "चैट इवेंट देखें"
+   },
+   "pkModIzleD": {
+      "message": "किक के मौजूदा कनेक्शन को सुनता है; कोई नया कनेक्शन नहीं खोला गया है."
+   },
+   "pkModOtoSilindi": {
+      "message": "{1} का संदेश {2} द्वारा हटा दिया गया था"
+   },
+   "pkModSekmeOlaylar": {
+      "message": "संयम"
+   },
+   "pkModSekmeSilinen": {
+      "message": "हटाए गए संदेश"
+   },
+   "pkModSekmeSustur": {
+      "message": "समयबाह्य"
+   },
+   "pkModSerit": {
+      "message": "चैट में मॉडरेशन बार"
+   },
+   "pkModSeritD": {
+      "message": "चैट के शीर्ष पर एक बार जोड़ता है; मॉडरेशन पैनल खोलने के लिए इसे क्लिक करें।"
+   },
+   "pkModSilindi": {
+      "message": "{1} से एक संदेश हटा दिया गया था"
+   },
+   "pkModSohbetTemizlendi": {
+      "message": "चैट साफ़ कर दी गई"
+   },
+   "pkModSohbette": {
+      "message": "चैट में मॉडरेशन इवेंट दिखाएं"
+   },
+   "pkModSohbetteD": {
+      "message": "चैट स्ट्रीम में प्रतिबंध, टाइमआउट और चैट क्लीयर दिखाई देते हैं। किक इन्हें केवल मॉडरेटर को दिखाता है।"
+   },
+   "pkModSusturdu": {
+      "message": "{1} ने {3} को {2} के लिए टाइम आउट दिया"
+   },
+   "pkModYasakladi": {
+      "message": "{1} ने {2} पर प्रतिबंध लगा दिया"
+   },
+   "pkModerasyon": {
+      "message": "संयम"
+   },
+   "pkMsjKisa": {
+      "message": "{1} संदेश"
+   },
+   "pkNot1015a": {
+      "message": "बल्क संदेश हटाएँ - आपके द्वारा चुने गए शब्दों वाले प्रत्येक संदेश को हटा देता है"
+   },
+   "pkNot1015b": {
+      "message": "ऑटो संदेश पुनर्निर्मित: प्रति-चैनल सेटिंग्स, इसकी अपनी बॉट विंडो, पृष्ठभूमि में चलती रहती है"
+   },
+   "pkNot1015c": {
+      "message": "बार-बार दोहराए गए समान चैट संदेश अब रिकॉर्ड किए गए हैं - आँकड़े और बल्क डिलीट की गिनती कम थी"
+   },
+   "pkNot1015d": {
+      "message": "सुविधाओं का पहला दौरा; इसे उन्नत अनुभाग से पुनः खोलें"
+   },
+   "pkNot1015e": {
+      "message": "क्रॉस-बैन अब मूल चैनल लिखता है और इसे प्रतिबंध के कारण में किसने चलाया"
+   },
+   "pkNot1015f": {
+      "message": "प्रोफ़ाइल कार्ड उपयोगकर्ता द्वारा चैनल का अनुसरण करने की सटीक तारीख दिखाता है"
+   },
+   "pkNot1015g": {
+      "message": "वीओडी डाउनलोड ठीक कर दिया गया - पहले खंड के बाद यह बंद हो गया"
+   },
+   "pkNot101a": {
+      "message": "मेनू घोषणाएँ और एक अधिसूचना बैज"
+   },
+   "pkNot102a": {
+      "message": "पिछले प्रसारणों पर विज्ञापन अवरुद्ध हैं"
+   },
+   "pkNot102b": {
+      "message": "चैनल छिपाना"
+   },
+   "pkNot102c": {
+      "message": "उपयोगकर्ता नाम हर जगह दिखाई देने पर बैज"
+   },
+   "pkNot105a": {
+      "message": "चैट आँकड़े, उल्लेख, उपयोगकर्ता नोट्स और एक मॉडरेशन लॉग"
+   },
+   "pkNot105b": {
+      "message": "भूमिका उजागर करना, लोगों को छिपाना और प्राथमिकता वाले लोग"
+   },
+   "pkNot105c": {
+      "message": "वीडियो आँकड़े, अपटाइम, स्वचालित गुणवत्ता और रिवाइंड/फॉरवर्ड"
+   },
+   "pkNot105d": {
+      "message": "स्ट्रीम पर चैट ओवरले और प्लेयर पर राइट-क्लिक मेनू"
+   },
+   "pkNot105e": {
+      "message": "इंटरफ़ेस का 7 भाषाओं में अनुवाद किया गया"
+   },
+   "pkNot107a": {
+      "message": "केवल विज्ञापन अवरोधक मोड - एक क्लिक से बाकी सब बंद करें"
+   },
+   "pkNot107b": {
+      "message": "साइडबार: पिन किए गए चैनल, लाइव/ऑफ़लाइन विभाजन और स्ट्रीम पूर्वावलोकन"
+   },
+   "pkNot107c": {
+      "message": "स्वचालित गुणवत्ता और मात्रा; चैनल के बारे में अनुभाग में बैज, भाव और नियम"
+   },
+   "pkNot107d": {
+      "message": "काफ़ी तेज़ होम पेज और कम हकलाना"
+   },
+   "pkNot107e": {
+      "message": "टूलबार आइकन अब सीधे सेटिंग पैनल खोलता है"
+   },
+   "pkNot107f": {
+      "message": "चैट में चिह्नित हटाए गए संदेश; मॉडरेशन और चैट लॉग में सबसे नया"
+   },
+   "pkNot107g": {
+      "message": "चैट के ऊपर मॉडरेशन बार - ईवेंट, हटाए गए संदेश और टाइमआउट खोलने के लिए क्लिक करें"
+   },
+   "pkNotPlaceholder": {
+      "message": "इस व्यक्ति के बारे में अपने लिए एक नोट छोड़ें..."
+   },
+   "pkNotun": {
+      "message": "आपका नोट"
+   },
+   "pkOdulAlindi": {
+      "message": "आज के इनाम का दावा किया गया 🎉"
+   },
+   "pkOdulBaslik": {
+      "message": "दैनिक इनाम"
+   },
+   "pkOdulGirisGerek": {
+      "message": "आपको किक में साइन इन करना होगा"
+   },
+   "pkOdulHata": {
+      "message": "इनाम की स्थिति नहीं पढ़ सका"
+   },
+   "pkOdulIlerleme": {
+      "message": "{1} / {2} देखा गया"
+   },
+   "pkOdulKontrol": {
+      "message": "स्थिति जाँची जा रही है..."
+   },
+   "pkOdulYok": {
+      "message": "आज कोई घड़ी चुनौती नहीं"
+   },
+   "pkOmAciklama": {
+      "message": "संदेश आपके खाते से भेजे जाते हैं. चैट बॉक्स अछूता है, इसलिए आप जो ड्राफ्ट टाइप कर रहे हैं वह सुरक्षित है।"
+   },
+   "pkOmAdet": {
+      "message": "अंतराल"
+   },
+   "pkOmAdetD": {
+      "message": "संदेश संख्या · कम से कम {1}"
+   },
+   "pkOmAdetEtiket": {
+      "message": "प्रत्येक {1} संदेश"
+   },
+   "pkOmAdim1": {
+      "message": "1. चैनल चुनें"
+   },
+   "pkOmAdim2": {
+      "message": "2. इसे कैसे भेजा जाना चाहिए?"
+   },
+   "pkOmAdim3": {
+      "message": "3. अंतराल टाइप करें"
+   },
+   "pkOmAdim4": {
+      "message": "4. घोषणा लिखें"
+   },
+   "pkOmAralik": {
+      "message": "अंतराल की घोषणा"
+   },
+   "pkOmAralikD": {
+      "message": "सूचीबद्ध टेक्स्ट को रोटेशन में भेजता है।"
+   },
+   "pkOmAyar": {
+      "message": "ऑटो संदेश"
+   },
+   "pkOmAyarD": {
+      "message": "निर्धारित अंतराल पर घोषणाएँ पोस्ट करता है और स्वचालित रूप से आदेशों का उत्तर देता है। आपके खाते से भेजा गया."
+   },
+   "pkOmBaskaKanal": {
+      "message": "आप {1} संपादित कर रहे हैं। सहेजने से {1} के लिए बॉट विंडो खुल जाती है।"
+   },
+   "pkOmBaslat": {
+      "message": "प्रारंभ करें"
+   },
+   "pkOmBaslik": {
+      "message": "ऑटो संदेश"
+   },
+   "pkOmDk": {
+      "message": "अंतराल"
+   },
+   "pkOmDkD": {
+      "message": "मिनट · कम से कम {1}"
+   },
+   "pkOmEkle": {
+      "message": "आदेश सहेजें"
+   },
+   "pkOmEksikKip": {
+      "message": "सहेजने से पहले चुनें कि इसे कैसे भेजा जाना चाहिए।"
+   },
+   "pkOmEksikKomut": {
+      "message": "सहेजने से पहले कम से कम एक कमांड जोड़ें."
+   },
+   "pkOmEksikMetin": {
+      "message": "सहेजने से पहले कम से कम एक घोषणा लिखें."
+   },
+   "pkOmKanalSecD": {
+      "message": "बॉट किस चैनल पर चलेगा? केवल वे चैनल जिन्हें आप मॉडरेट करते हैं और आपका अपना चैनल सूचीबद्ध हैं।"
+   },
+   "pkOmKanalSecin": {
+      "message": "एक चैनल चुनें"
+   },
+   "pkOmKanalYok": {
+      "message": "कोई चैनल नहीं मिला जहां आप मॉडरेटर हैं."
+   },
+   "pkOmKayitli": {
+      "message": "सहेजे गए आदेश"
+   },
+   "pkOmKipDk": {
+      "message": "मिनटों से"
+   },
+   "pkOmKipMesaj": {
+      "message": "संदेश संख्या के अनुसार"
+   },
+   "pkOmKomut": {
+      "message": "आदेश उत्तर देता है"
+   },
+   "pkOmKomutAd": {
+      "message": "आदेश"
+   },
+   "pkOmKomutAdIpucu": {
+      "message": "!परीक्षण"
+   },
+   "pkOmKomutCevap": {
+      "message": "इस आदेश का उत्तर दें"
+   },
+   "pkOmKomutCevapIpucu": {
+      "message": "नमस्ते!"
+   },
+   "pkOmKomutD": {
+      "message": "जब कोई कमांड लिखता है, तो सहेजा गया उत्तर भेजा जाता है।"
+   },
+   "pkOmKomutIpucu": {
+      "message": "!परीक्षण = नमस्ते! \n !कलह = कलह.gg/..."
+   },
+   "pkOmKomutSil": {
+      "message": "हटाएँ"
+   },
+   "pkOmKomutYok": {
+      "message": "अभी तक कोई आदेश सहेजा नहीं गया."
+   },
+   "pkOmMenu": {
+      "message": "ऑटो संदेश"
+   },
+   "pkOmMetinD": {
+      "message": "प्रति पंक्ति एक घोषणा. कई लाइनों के साथ उन्हें रोटेशन में भेजा जाता है।"
+   },
+   "pkOmMetinIpucu": {
+      "message": "कलह: ... \n सदस्यता लेना न भूलें!"
+   },
+   "pkOmNerede": {
+      "message": "प्योरकिक मेनू में \"ऑटो संदेश\" पंक्ति से इसका उपयोग करें।"
+   },
+   "pkKanalSahibi": {
+      "message": "चैनल मालिक"
+   },
+   "pkKanaliGizle": {
+      "message": "इस चैनल को छुपाएं"
+   },
+   "pkKanaliTakip": {
+      "message": "चैनल को फॉलो कर रहे हैं"
+   },
+   "pkKapali": {
+      "message": "मौन"
+   },
+   "pkKapat": {
+      "message": "बंद करें"
+   },
+   "pkKareyiKaydet": {
+      "message": "वर्तमान फ़्रेम सहेजें"
+   },
+   "pkKartBilgiNot": {
+      "message": "कुकीज़ के बिना किक के अपने समापन बिंदु से प्रति व्यक्ति एक बार प्राप्त किया गया, फिर स्मृति में रखा गया।"
+   },
+   "pkKartGenis": {
+      "message": "विस्तृत प्रोफ़ाइल कार्ड"
+   },
+   "pkKartGenisD": {
+      "message": "किक के संकीर्ण कार्ड को चौड़ा करता है ताकि अतिरिक्त जानकारी, नोट्स और मॉडरेशन ब्लॉक तंग न हों।"
+   },
+   "pkKartMesajlar": {
+      "message": "हाल के संदेश और उत्तर"
+   },
+   "pkKartMesajlarD": {
+      "message": "व्यक्ति के हाल के संदेशों और उन्हें भेजे गए उत्तरों को प्रोफ़ाइल कार्ड पर टैब के रूप में दिखाता है।"
+   },
+   "pkKartSabit": {
+      "message": "प्रोफ़ाइल कार्ड पिन करें"
+   },
+   "pkKartSabitD": {
+      "message": "कार्ड में एक बटन जोड़ता है; इसे दबाने से एक पठनीय प्रति स्क्रीन पर रहती है।"
+   },
+   "pkKartSagTik": {
+      "message": "स्ट्रीम कार्ड पर मेनू पर राइट-क्लिक करें"
+   },
+   "pkKartSagTikD": {
+      "message": "शॉर्टकट के लिए होम पेज पर या श्रेणियों में किसी चैनल पर राइट-क्लिक करें। Shift + राइट-क्लिक करने से ब्राउज़र मेनू खुल जाता है।"
+   },
+   "pkKartTakipci": {
+      "message": "कार्ड पर अनुयायियों की गिनती"
+   },
+   "pkKartTakipciD": {
+      "message": "प्रति व्यक्ति एक बार, कुकीज़ के बिना किक के अपने समापन बिंदु से प्राप्त किया गया।"
+   },
+   "pkKartYanit": {
+      "message": "इस व्यक्ति को उत्तर"
+   },
+   "pkKartYanitD": {
+      "message": "\"हाल के संदेश\" दिखाते हैं कि उन्होंने क्या लिखा है; यह ब्लॉक दिखाता है कि उन्हें क्या लिखा गया था।"
+   },
+   "pkKartiSabitle": {
+      "message": "इस कार्ड को पिन करें"
+   },
+   "pkKategoriGizleYok": {
+      "message": "आपने अभी तक कोई श्रेणी नहीं छिपाई है. एक श्रेणी पृष्ठ खोलें और शीर्षक के आगे \"श्रेणी छुपाएं\" बटन का उपयोग करें।"
+   },
+   "pkKategoriGizlemeyiKullan": {
+      "message": "श्रेणी छिपाने का प्रयोग करें"
+   },
+   "pkKategoriGizlemeyiKullanD": {
+      "message": "बंद करें और वे सभी फिर से दिखाई देंगे।"
+   },
+   "pkKategoriGoster": {
+      "message": "इस श्रेणी को पुनः दिखाएँ"
+   },
+   "pkKatilim": {
+      "message": "भागीदारी"
+   },
+   "pkKatilimD": {
+      "message": "चैट में लिखने वाले दर्शकों का हिस्सा"
+   },
+   "pkKatilmaTakip": {
+      "message": "जुड़ें और जानकारी का पालन करें"
+   },
+   "pkKatilmaTakipD": {
+      "message": "किक पर शामिल होने की तिथि, उन्होंने चैनल को कितने समय से फ़ॉलो किया है, सदस्यता की अवधि।"
+   },
+   "pkKaydedildi": {
+      "message": "बचाया"
+   },
+   "pkKaydet": {
+      "message": "सहेजें"
+   },
+   "pkKayitNoktasi": {
+      "message": "जहां आपने वीओडी में छोड़ा था"
+   },
+   "pkKayitNoktasiD": {
+      "message": "पिछले प्रसारण को बीच में छोड़ दें और यह उस दूसरे पर वापस जाने की पेशकश करता है।"
+   },
+   "pkKayitNoktasiHatirla": {
+      "message": "मेरी स्थिति याद रखें"
+   },
+   "pkKayitNoktasiHatirlaD": {
+      "message": "स्थिति केवल आपके डिवाइस पर रखी जाती है।"
+   },
+   "pkKayitliNTemizle": {
+      "message": "{1} सहेजी गई स्थिति साफ़ करें"
+   },
+   "pkKaynagiYeniSekmede": {
+      "message": "स्रोत को एक नए टैब में खोलें ↗"
+   },
+   "pkKaynakBulunuyor": {
+      "message": "स्रोत ढूंढा जा रहा है..."
+   },
+   "pkKaynakYok": {
+      "message": "इस स्ट्रीम का स्रोत नहीं मिला."
+   },
+   "pkKelimeVurgu": {
+      "message": "चैट में हाइलाइट करें"
+   },
+   "pkKelimeVurguD": {
+      "message": "इन शब्दों वाले संदेशों को प्राथमिकता वाले लोगों के समान हरी पट्टी मिलती है।"
+   },
+   "pkKenarGrup": {
+      "message": "ऑनलाइन/ऑफ़लाइन विभाजित करें"
+   },
+   "pkKenarGrupD": {
+      "message": "फ़ॉलो किए गए चैनलों को ऑनलाइन और ऑफ़लाइन समूहों में अलग करता है। किक का शो मोर सिस्टम अपना डिफ़ॉल्ट व्यवहार रखता है।"
+   },
+   "pkKenarGrupSayi": {
+      "message": "ऑनलाइन/ऑफ़लाइन सूचियों में दिखाए गए चैनल"
+   },
+   "pkKenarGrupSayiD": {
+      "message": "चुनें कि प्रत्येक समूह में कितने चैनल दिखाए जाएं (1-20)। किक का शो मोर बटन अपना डिफ़ॉल्ट व्यवहार बनाए रखता है।"
+   },
+   "pkKenarGrupLimit": {
+      "message": "चैनल गणना सीमा लागू करें"
+   },
+   "pkKenarGrupLimitD": {
+      "message": "नीचे दिए गए 1-20 मान का उपयोग करके ऑनलाइन और ऑफलाइन सूचियों में दिखाए गए चैनलों की संख्या को सीमित करता है। ऑनलाइन/ऑफ़लाइन ग्रुपिंग से स्वतंत्र।"
+   },
+   "pkKickDahaFazlaGizle": {
+      "message": "किक के छुपाएँ अधिक दिखाएँ / कम दिखाएँ बटन"
+   },
+   "pkKickDahaFazlaGizleD": {
+      "message": "फ़ॉलो किए गए चैनल सूची में किक के स्वयं के विस्तार और संक्षिप्त बटन को छुपाता है।"
+   },
+   "pkKendiMenum": {
+      "message": "मेरा अपना मेनू खोलें"
+   },
+   "pkKendiMenumD": {
+      "message": "Shift + राइट-क्लिक करने से हमेशा ब्राउज़र मेनू खुलता है।"
+   },
+   "pkKezSayisi": {
+      "message": "{1} ×"
+   },
+   "pkKickIleGiris": {
+      "message": "किक से साइन इन करें"
+   },
+   "pkKickeKatildi": {
+      "message": "किक से जुड़े"
+   },
+   "pkKisaDakika": {
+      "message": "एम"
+   },
+   "pkKisaGun": {
+      "message": "घ"
+   },
+   "pkKisaSaat": {
+      "message": "ज"
+   },
+   "pkKisiGizleme": {
+      "message": "एक व्यक्ति को छिपाओ"
+   },
+   "pkKisiGizlemeD": {
+      "message": "उनके मैसेज आपकी स्क्रीन पर ही गायब हो जाते हैं."
+   },
+   "pkKisiGizli": {
+      "message": "{1} लोग छिपे हुए हैं।"
+   },
+   "pkKisiMesajYok": {
+      "message": "इस सत्र में इस उपयोगकर्ता का कोई संदेश नहीं देखा गया।"
+   },
+   "pkOmNot": {
+      "message": "आदेश को संदेश प्रारंभ करना होगा. प्रत्येक आदेश प्रत्येक 10 सेकंड में अधिकतम एक बार उत्तर देता है; आपके अपने संदेश कुछ भी ट्रिगर नहीं करते।"
+   },
+   "pkOmOnayBaslik": {
+      "message": "बॉट प्रारंभ करें?"
+   },
+   "pkOmOnayGizle": {
+      "message": "इसे दोबारा मत दिखाओ"
+   },
+   "pkOmOnayKomut": {
+      "message": "{1} के लिए बॉट विंडो खुलती है और आदेशों का उत्तर देना शुरू कर देती है। विंडो बंद करने से बॉट रुक जाता है।"
+   },
+   "pkOmOnayMetin": {
+      "message": "आपके द्वारा चुने गए अंतराल पर घोषणाएँ {1} पर जाना शुरू हो जाएंगी। बॉट इस विंडो में चलता है; टैब बंद करने से यह रुक जाता है."
+   },
+   "pkOmOzet": {
+      "message": "{1} घोषणाएँ · {2} आदेश"
+   },
+   "pkOmPopoutD": {
+      "message": "बॉट इस विंडो में चलता है. सहेजने से सेटिंग्स बंद हो जाती हैं और बॉट चालू रहता है; टैब बंद करने से बॉट रुक जाता है, और दोबारा खोलने पर यह फिर से शुरू हो जाता है।"
+   },
+   "pkOmSecAciklama": {
+      "message": "एक चैनल चुनें - इसकी बॉट विंडो खुलती है और आप वहां सेटिंग्स पूरी कर लेते हैं। बॉट उस विंडो में चलता है."
+   },
+   "pkOmYetkiYok": {
+      "message": "आप इस चैनल पर ऑटो संदेशों का उपयोग नहीं कर सकते - आप मॉडरेटर नहीं हैं। नीचे वह चैनल चुनें जिस तक आपकी पहुंच है।"
+   },
+   "pkOncelikCikar": {
+      "message": "प्राथमिकता हटाएँ"
+   },
+   "pkOncelikTemizleN": {
+      "message": "स्पष्ट प्राथमिकताएँ ({1})"
+   },
+   "pkOncelikliKisiler": {
+      "message": "प्राथमिकता वाले लोग"
+   },
+   "pkOncelikliKisilerD": {
+      "message": "उनके संदेशों को हरा मार्कर मिलता है।"
+   },
+   "pkOncelikliYap": {
+      "message": "प्राथमिकता बनायें"
+   },
+   "pkOnizleme": {
+      "message": "साइडबार पूर्वावलोकन"
+   },
+   "pkOnizlemeD": {
+      "message": "एक छोटा कार्ड खोलने के लिए बाएं मेनू में एक चैनल पर होवर करें।"
+   },
+   "pkOnizlemeKarti": {
+      "message": "पूर्वावलोकन कार्ड"
+   },
+   "pkOnizlemeKartiD": {
+      "message": "स्ट्रीम थंबनेल, शीर्षक, श्रेणी और दर्शकों की संख्या।"
+   },
+   "pkOtoClaim": {
+      "message": "स्वचालित रूप से दैनिक पुरस्कार का दावा करें"
+   },
+   "pkOtoClaimD": {
+      "message": "आवश्यकता पूरी करने के बाद आपके लिए किक के दैनिक वॉच-टाइम इनाम का दावा करता है। केवल देखने के समय की चुनौती - और कुछ भी नहीं छुआ गया है।"
+   },
+   "pkOtoSes": {
+      "message": "ऑटो वॉल्यूम"
+   },
+   "pkOtoSesD": {
+      "message": "प्रत्येक स्ट्रीम को आपके इच्छित वॉल्यूम पर खोलता है।"
+   },
+   "pkOtoSesNot": {
+      "message": "\"ऑटो\" आपके द्वारा सेट किए गए अंतिम वॉल्यूम को याद रखता है और इसे प्रत्येक स्ट्रीम पर लागू करता है। यदि आप वॉल्यूम को मध्य धारा में बदलते हैं तो यह अकेला रह जाता है।"
+   },
+   "pkOtoTiyatro": {
+      "message": "स्वचालित थिएटर मोड"
+   },
+   "pkOtoTiyatroD": {
+      "message": "जब आप कोई चैनल खोलते हैं तो प्लेयर को एक बार चौड़ा कर देता है।"
+   },
+   "pkOtomatikKalite": {
+      "message": "स्वचालित गुणवत्ता"
+   },
+   "pkOtomatikKaliteD": {
+      "message": "जब आप कोई चैनल खोलते हैं तो एक बार अपनी पसंदीदा गुणवत्ता का चयन करता है।"
+   },
+   "pkOturum": {
+      "message": "सत्र"
+   },
+   "pkOturumSuresiEki": {
+      "message": "सत्र की लंबाई: {1}"
+   },
+   "pkOynatmaHizi": {
+      "message": "प्लेबैक गति"
+   },
+   "pkOzellikKapali": {
+      "message": "यह सुविधा फिलहाल बंद है."
+   },
+   "pkPaneliAc": {
+      "message": "पैनल खोलें"
+   },
+   "pkParcaListesi": {
+      "message": "खंड सूची लायी जा रही है..."
+   },
+   "pkParcaYok": {
+      "message": "कोई खंड नहीं"
+   },
+   "pkProfilBuyuk": {
+      "message": "प्रोफ़ाइल चित्र बड़ा देखें"
+   },
+   "pkProfilKartiBilgisi": {
+      "message": "प्रोफ़ाइल कार्ड की जानकारी"
+   },
+   "pkProfilKartiBilgisiD": {
+      "message": "कार्ड पर किसी का इतिहास देखने के लिए चैट में किसी पर क्लिक करें।"
+   },
+   "pkProfiliAc": {
+      "message": "प्रोफ़ाइल खोलें"
+   },
+   "pkPureKick": {
+      "message": "प्योरकिक मॉड"
+   },
+   "pkPureKickAciklama": {
+      "message": "किक के लिए विज्ञापन अवरोधक।"
+   },
+   "pkRenkleriSifirla": {
+      "message": "डिफ़ॉल्ट रंग पुनर्स्थापित करें"
+   },
+   "pkRolEtiket": {
+      "message": "भूमिका"
+   },
+   "pkRolNot": {
+      "message": "भूमिकाएँ किक के अपने चैट कनेक्शन से आती हैं, इसलिए केवल वे लोग ही पहचाने जाते हैं जो पेज खोलने के बाद लिखते हैं।"
+   },
+   "pkRolVurgulama": {
+      "message": "भूमिका पर प्रकाश डालना"
+   },
+   "pkRolVurgulamaD": {
+      "message": "ब्रॉडकास्टर, मॉडरेटर, वीआईपी और सब्सक्राइबर संदेशों को एक रंगीन पट्टी मिलती है।"
+   },
+   "pkRol_bot": {
+      "message": "बॉट"
+   },
+   "pkRol_broadcaster": {
+      "message": "प्रसारक"
+   },
+   "pkRol_founder": {
+      "message": "संस्थापक"
+   },
+   "pkRol_moderator": {
+      "message": "मॉडरेटर"
+   },
+   "pkRol_og": {
+      "message": "ओजी"
+   },
+   "pkRol_staff": {
+      "message": "कर्मचारियों को लात मारो"
+   },
+   "pkRol_sub_gifter": {
+      "message": "उप उपहार देनेवाला"
+   },
+   "pkRol_subscriber": {
+      "message": "सब्सक्राइबर"
+   },
+   "pkRol_verified": {
+      "message": "सत्यापित"
+   },
+   "pkRol_vip": {
+      "message": "वीआईपी"
+   },
+   "pkSaOnce": {
+      "message": "{1} घंटे पहले"
+   },
+   "pkSabitKaldir": {
+      "message": "अनपिन करें"
+   },
+   "pkSabitKanalAyar": {
+      "message": "शीर्ष पर पिन किए गए चैनल"
+   },
+   "pkSabitKanalAyarD": {
+      "message": "पिन दिखाने के लिए साइडबार में एक चैनल पर होवर करें। पिन किए गए चैनल आपकी फ़ॉलोइंग सूची में सबसे ऊपर रहते हैं।"
+   },
+   "pkSabitKanallar": {
+      "message": "चैनल पिनिंग"
+   },
+   "pkSabitKanallarD": {
+      "message": "जिन चैनलों को आप फ़ॉलो करते हैं उन्हें सूची में सबसे ऊपर रखें."
+   },
+   "pkSabitle": {
+      "message": "पिन"
+   },
+   "pkSadeceEmote": {
+      "message": "केवल-भावनात्मक संदेश"
+   },
+   "pkSadeceEmoteD": {
+      "message": "बिना किसी पाठ वाले संदेश"
+   },
+   "pkSadeceEmoteEki": {
+      "message": "{1} केवल-भावनात्मक संदेश"
+   },
+   "pkSadeceEmoteMesajlari": {
+      "message": "केवल-भावनात्मक संदेश"
+   },
+   "pkSadeceReklam": {
+      "message": "केवल विज्ञापन अवरोधक"
+   },
+   "pkSadeceReklamAcik": {
+      "message": "केवल विज्ञापन अवरोधन चालू है. किसी अन्य सुविधा को चालू करने से यह मोड समाप्त हो जाता है।"
+   },
+   "pkSadeceReklamBtn": {
+      "message": "सक्षम करें"
+   },
+   "pkSadeceReklamD": {
+      "message": "अन्य सभी सुविधाओं को बंद कर देता है और केवल विज्ञापन अवरुद्ध करता रहता है।"
+   },
+   "pkSadeceReklamRozet": {
+      "message": "सक्रिय"
+   },
+   "pkSagTikMenusu": {
+      "message": "प्लेयर पर मेनू पर राइट-क्लिक करें"
+   },
+   "pkSagTikMenusuD": {
+      "message": "केवल वीडियो पर ही सक्रिय है।"
+   },
+   "pkSayfaReklamlari": {
+      "message": "पेज विज्ञापन"
+   },
+   "pkSayfaReklamlariD": {
+      "message": "किक इंटरफ़ेस में विज्ञापन स्लॉट छुपाता है।"
+   },
+   "pkScEtiket": {
+      "message": "बकबक स्थिति टैग"
+   },
+   "pkScEtiketD": {
+      "message": "सूची में नामों के आगे \"चैट में\" या \"ऑफ़लाइन 5 मी\" दिखाता है।"
+   },
+   "pkScFiltre": {
+      "message": "बकबक फिल्टर"
+   },
+   "pkScFiltreD": {
+      "message": "सूची के ऊपर सभी/इन चैट/ऑफ़लाइन बटन जोड़ता है।"
+   },
+   "pkScSayac": {
+      "message": "बढ़ी हुई बकबक गिनती"
+   },
+   "pkScSayacD": {
+      "message": "दिखाता है कि आपने इस सत्र को कितने लोगों को देखा है, तब भी जब किक अपनी गिनती कम कर देता है।"
+   },
+   "pkSebepYazin": {
+      "message": "कोई कारण लिखें..."
+   },
+   "pkSebepYok": {
+      "message": "आपने अभी तक कोई पूर्व निर्धारित कारण नहीं जोड़ा है."
+   },
+   "pkSecili": {
+      "message": "{1} चयनित"
+   },
+   "pkSekmeGenel": {
+      "message": "सिंहावलोकन"
+   },
+   "pkSekmeHakkinda": {
+      "message": "के बारे में"
+   },
+   "pkSekmeIci": {
+      "message": "पेज के अंदर लिंक खोलें"
+   },
+   "pkSekmeIciD": {
+      "message": "यूट्यूब, एक्स, इंस्टाग्राम, रेडिट, किक क्लिप, ट्विच क्लिप और चैट में स्ट्रीम करने योग्य लिंक एक छोटे प्लेयर में खुलते हैं।"
+   },
+   "pkSekmeIciNot": {
+      "message": "केवल ये साइटें इनलाइन खुलती हैं; एक अज्ञात लिंक हमेशा की तरह एक नए टैब में खुलता है। CTRL+क्लिक करने से हमेशा एक नया टैब खुलता है।"
+   },
+   "pkLinkOnizleme": {
+      "message": "लाइव पूर्वावलोकन कार्ड"
+   },
+   "pkLinkOnizlemeD": {
+      "message": "चैट में लिंक के नीचे स्वचालित रूप से लाइव थंबनेल पूर्वावलोकन कार्ड दिखाता है।"
+   },
+   "pkSendenBahsedenler": {
+      "message": "आपका जिक्र किसने किया"
+   },
+   "pkSes": {
+      "message": "आयतन"
+   },
+   "pkSesBip": {
+      "message": "बीप"
+   },
+   "pkSesCinlama": {
+      "message": "झंकार"
+   },
+   "pkSesDamla": {
+      "message": "गिराओ"
+   },
+   "pkSesKapali": {
+      "message": "बंद"
+   },
+   "pkSesOto": {
+      "message": "ऑटो"
+   },
+   "pkSesPuf": {
+      "message": "कश"
+   },
+   "pkSifirdan": {
+      "message": "बिल्कुल शुरुआत से"
+   },
+   "pkSifirdanD": {
+      "message": "वर्तमान की सभी चीज़ें हटा दी जाती हैं और फ़ाइल द्वारा प्रतिस्थापित कर दी जाती हैं।"
+   },
+   "pkSilAciklama": {
+      "message": "ट्रिगर वाले संदेश हटा दिए जाते हैं; किसी का भी समय समाप्त नहीं हुआ है. ब्रॉडकास्टर, मॉडरेटर और आपके स्वयं के संदेशों को छोड़ दिया जाता है।"
+   },
+   "pkSilAyar": {
+      "message": "थोक संदेश हटाएँ"
+   },
+   "pkSilAyarD": {
+      "message": "आपके द्वारा चुने गए शब्दों या वाक्यांशों वाले संदेशों को हटा देता है। चालू होने पर, प्योरकिक मेनू में एक \"बल्क मैसेज डिलीट\" पंक्ति दिखाई देती है।"
+   },
+   "pkSilBaslik": {
+      "message": "थोक संदेश हटाएँ"
+   },
+   "pkSilGecmis": {
+      "message": "अब तक के संदेशों पर लागू करें"
+   },
+   "pkSilMenu": {
+      "message": "थोक संदेश हटाएँ"
+   },
+   "pkSilNerede": {
+      "message": "प्योरकिक मेनू में \"बल्क मैसेज डिलीट\" पंक्ति से उपयोग किया जाता है।"
+   },
+   "pkSilNot": {
+      "message": "जब लाइव देखना चालू हो तो आप इस विंडो को बंद कर सकते हैं; जब आप चैनल छोड़ते हैं या सेटिंग बंद करते हैं तो यह बंद हो जाता है। इतिहास स्कैन केवल इस सत्र में देखे गए संदेशों को कवर करता है।"
+   },
+   "pkSilSayac": {
+      "message": "हटाया गया: {1}"
+   },
+   "pkSilTetikD": {
+      "message": "प्रति पंक्ति एक शब्द या वाक्यांश. पंक्ति द्वारा विभाजित करें क्योंकि किसी वाक्यांश में अल्पविराम हो सकते हैं।"
+   },
+   "pkSilYetkiYok": {
+      "message": "आप इस चैनल पर बल्क डिलीट का उपयोग नहीं कर सकते - आप मॉडरेटर नहीं हैं।"
+   },
+   "pkSilindiEtiket": {
+      "message": "(हटाया गया)"
+   },
+   "pkSilinenGoster": {
+      "message": "हटाए गए संदेश दिखाएं"
+   },
+   "pkSilinenGosterD": {
+      "message": "हटाए गए संदेश दृश्यमान रहते हैं, धुंधले होते हैं और \"(हटाए गए)\" के रूप में चिह्नित होते हैं।"
+   },
+   "pkSilinenYok": {
+      "message": "अभी तक कोई संदेश हटाया नहीं गया."
+   },
+   "pkSohbetCikarildi": {
+      "message": "उस चैट से हटा दिया गया जिसे आपने यह सत्र देखा था; कोई भी डेटा आपके डिवाइस को नहीं छोड़ता."
+   },
+   "pkSohbetEdenler": {
+      "message": "बकबक करने वाले"
+   },
+   "pkSohbetIstatistikleri": {
+      "message": "चैट आँकड़े"
+   },
+   "pkSohbetIstatistikleriBaslik": {
+      "message": "चैट आँकड़े"
+   },
+   "pkSohbetIstatistikleriD": {
+      "message": "संदेश/मिनट, सर्वाधिक सक्रिय चैटर्स, भावनात्मक उपयोग।"
+   },
+   "pkSohbetKaydi": {
+      "message": "चैट लॉग"
+   },
+   "pkSohbetciIpucu": {
+      "message": "किक: {1} · प्योरकिक ने इस सत्र में {2} लोगों को देखा"
+   },
+   "pkSohbetciListesi": {
+      "message": "बकबक सूची"
+   },
+   "pkSohbetciListesiD": {
+      "message": "प्योरकिक ने किक की दर्शक सूची में सुविधाएँ जोड़ी हैं।"
+   },
+   "pkSohbette": {
+      "message": "चैट में"
+   },
+   "pkSonGuncellemeEki": {
+      "message": "अंतिम अद्यतन: {1}"
+   },
+   "pkSonMesajiIpucu": {
+      "message": "अंतिम संदेश: {1} · कुल संदेश {2}"
+   },
+   "pkSonMesajlar": {
+      "message": "हाल के संदेश"
+   },
+   "pkSonucSayisiN": {
+      "message": "{1} परिणाम"
+   },
+   "pkSonucYok": {
+      "message": "कोई परिणाम नहीं."
+   },
+   "pkSsAyarlari": {
+      "message": "स्क्रीनशॉट व्यवहार"
+   },
+   "pkSsBirincil": {
+      "message": "सामान्य क्लिक"
+   },
+   "pkSsIkincil": {
+      "message": "CTRL + क्लिक करें"
+   },
+   "pkSsIndir": {
+      "message": "किसी फ़ाइल में डाउनलोड करें"
+   },
+   "pkSsPano": {
+      "message": "क्लिपबोर्ड पर कॉपी करें"
+   },
+   "pkSure": {
+      "message": "अवधि"
+   },
+   "pkSureDakika": {
+      "message": "{1} मिनट"
+   },
+   "pkSureDakika1": {
+      "message": "1 मिनट"
+   },
+   "pkSureGun": {
+      "message": "{1} दिन"
+   },
+   "pkSureGun1": {
+      "message": "1 दिन"
+   },
+   "pkSureSaat": {
+      "message": "{1} घंटे"
+   },
+   "pkSureSaat1": {
+      "message": "1 घंटा"
+   },
+   "pkSureSaniye": {
+      "message": "{1} सेकंड"
+   },
+   "pkSureSaniye1": {
+      "message": "1 सेकंड"
+   },
+   "pkSureSecenek": {
+      "message": "अवधि विकल्प"
+   },
+   "pkSureSecenekD": {
+      "message": "जब आप किसी चैट संदेश के आगे घंटे के चश्मे पर क्लिक करते हैं तो अवधि दिखाई देती है। मिनटों में, अल्पविराम से अलग (1440 = 1 दिन)।"
+   },
+   "pkSurumEki": {
+      "message": "संस्करण {1}"
+   },
+   "pkSurumNotlari": {
+      "message": "नोट जारी करें"
+   },
+   "pkSurumNotlariD": {
+      "message": "प्रत्येक संस्करण में क्या परिवर्तन हुआ."
+   },
+   "pkSusturmaBitis": {
+      "message": "समाप्त होता है: {1}"
+   },
+   "pkTAcikMenuKapat": {
+      "message": "सबसे पहले खुले मेनू को बंद करें"
+   },
+   "pkTAyarlarIndirildi": {
+      "message": "सेटिंग्स निर्यात की गईं"
+   },
+   "pkTBaglantiKopyalandi": {
+      "message": "लिंक को क्लिपबोर्ड पर कॉपी किया गया"
+   },
+   "pkTCrossAdGir": {
+      "message": "कम से कम एक उपयोगकर्ता नाम दर्ज करें"
+   },
+   "pkTCrossKanalSec": {
+      "message": "कम से कम एक चैनल चुनें"
+   },
+   "pkTGizlenenlerTemiz": {
+      "message": "छुपे हुए लोगों को साफ़ किया गया"
+   },
+   "pkTGoruntuHazirDegil": {
+      "message": "चित्र तैयार नहीं है"
+   },
+   "pkTIndirmeDesteklenmiyor": {
+      "message": "यह ब्राउज़र किसी फ़ाइल पर नहीं लिख सकता"
+   },
+   "pkTIndirmeSuruyor": {
+      "message": "एक डाउनलोड पहले से ही चल रहा है"
+   },
+   "pkTKaldiginYer": {
+      "message": "आपने कहाँ छोड़ा था: {1}"
+   },
+   "pkTKaliteMenusuAcilmadi": {
+      "message": "गुणवत्ता मेनू नहीं खुला"
+   },
+   "pkTKaliteMenusuYok": {
+      "message": "प्लेयर गुणवत्ता मेनू नहीं मिला"
+   },
+   "pkTKaliteOynaticiya": {
+      "message": "गुणवत्ता खिलाड़ी पर छोड़ दी गई है"
+   },
+   "pkTKaliteYok": {
+      "message": "{1} इस स्ट्रीम पर उपलब्ध नहीं है"
+   },
+   "pkTKanalEngelKalkti": {
+      "message": "{1} अब छिपा नहीं है"
+   },
+   "pkTKanalGizlemeKalkti": {
+      "message": "चैनल फिर से दिखाई दे रहा है"
+   },
+   "pkTKanalGizlendi": {
+      "message": "चैनल छिपा हुआ"
+   },
+   "pkTKartAcilamadi": {
+      "message": "कार्ड नहीं खुल सका - चैट के लिए कम से कम एक संदेश की आवश्यकता है"
+   },
+   "pkTKartSabitlendi": {
+      "message": "कार्ड पिन किया गया - आप इसे खींच सकते हैं"
+   },
+   "pkTKategoriGizlendi": {
+      "message": "श्रेणी छिपाई गई"
+   },
+   "pkTKategoriGorunur": {
+      "message": "श्रेणी फिर से दिखाई दे रही है"
+   },
+   "pkTKayitNoktalariTemiz": {
+      "message": "सहेजे गए पद साफ़ कर दिए गए"
+   },
+   "pkTKelimeKaydedildi": {
+      "message": "ट्रैक किए गए शब्द सहेजे गए"
+   },
+   "pkTKisiGizlendi": {
+      "message": "{1} के संदेश छिपे हुए हैं"
+   },
+   "pkTKisiGorunur": {
+      "message": "{1} फिर से दिखाई दे रहा है"
+   },
+   "pkTKisiOncelikli": {
+      "message": "{1} अब प्राथमिकता है"
+   },
+   "pkTKisiSohbetteYok": {
+      "message": "इस व्यक्ति का कोई भी दृश्यमान संदेश चैट में नहीं रहता है"
+   },
+   "pkTKomutYazildi": {
+      "message": "कमांड चैट बॉक्स में टाइप किया गया था"
+   },
+   "pkTKopyalanamadi": {
+      "message": "पाठ की प्रतिलिपि नहीं बनाई जा सकी"
+   },
+   "pkTKopyalandi": {
+      "message": "टेक्स्ट को क्लिपबोर्ड पर कॉपी किया गया"
+   },
+   "pkTKorumaAcildi": {
+      "message": "सुरक्षा चालू"
+   },
+   "pkTKorumaDuraklatildi": {
+      "message": "सुरक्षा रोक दी गई"
+   },
+   "pkTKullaniciBulunamadi": {
+      "message": "ऐसा कोई उपयोगकर्ता नहीं मिला"
+   },
+   "pkTMesajlarGeriGeldi": {
+      "message": "छिपे हुए संदेश वापस आ गए हैं"
+   },
+   "pkTModGunluguKapali": {
+      "message": "मॉडरेशन लॉग बंद है"
+   },
+   "pkTOdulAlindi": {
+      "message": "🎉 दैनिक इनाम का दावा किया गया"
+   },
+   "pkTOmKaydedildi": {
+      "message": "स्वचालित संदेश सेटिंग सहेजी गईं"
+   },
+   "pkTOmKomutBosluk": {
+      "message": "किसी कमांड में रिक्त स्थान नहीं हो सकते"
+   },
+   "pkTOmKomutEklendi": {
+      "message": "आदेश सहेजा गया"
+   },
+   "pkTOmKomutEksik": {
+      "message": "आदेश और उसका उत्तर दोनों दर्ज करें"
+   },
+   "pkTOmKomutGuncellendi": {
+      "message": "आदेश उत्तर अद्यतन किया गया"
+   },
+   "pkTOmPencereAcildi": {
+      "message": "{1} के लिए बॉट विंडो खोली गई"
+   },
+   "pkTOncelikKalkti": {
+      "message": "{1} से प्राथमिकता हटा दी गई"
+   },
+   "pkTOnceliklerTemiz": {
+      "message": "प्राथमिकताएं साफ़ हो गईं"
+   },
+   "pkTOturumGeriYuklendi": {
+      "message": "पिछला सत्र बहाल किया गया"
+   },
+   "pkTOynaticiYok": {
+      "message": "खिलाड़ी नहीं मिला"
+   },
+   "pkTOynaticiYokNokta": {
+      "message": "खिलाड़ी नहीं मिला."
+   },
+   "pkTOzellikAcildi": {
+      "message": "{1} चालू हुआ"
+   },
+   "pkTOzellikKapatildi": {
+      "message": "{1} बंद हो गया"
+   },
+   "pkTPanoDesteklenmiyor": {
+      "message": "यह ब्राउज़र छवियों की प्रतिलिपि नहीं बना सकता, इसके बजाय डाउनलोड कर सकता है"
+   },
+   "pkTRenklerSifirlandi": {
+      "message": "भूमिका रंग रीसेट"
+   },
+   "pkTSadeceReklam": {
+      "message": "केवल विज्ञापन अवरोधक सक्षम"
+   },
+   "pkTSeritYok": {
+      "message": "किक के प्लेयर नियंत्रण अभी बंद हैं। प्लेयर को होवर करें और पुनः प्रयास करें।"
+   },
+   "pkTSifirlanamadi": {
+      "message": "रीसेट विफल रहा"
+   },
+   "pkTSifirlandi": {
+      "message": "सब कुछ रीसेट हो गया, पेज पुनः लोड हो रहा है"
+   },
+   "pkTSilBasladi": {
+      "message": "लाइव देखना - {1} ट्रिगर"
+   },
+   "pkTSilDurdu": {
+      "message": "लाइव देखना बंद हो गया"
+   },
+   "pkTSilEslesmeYok": {
+      "message": "कोई मेल खाता संदेश नहीं"
+   },
+   "pkTSohbetAlaniYok": {
+      "message": "चैट क्षेत्र नहीं मिला"
+   },
+   "pkTSohbetKutusuYok": {
+      "message": "चैट बॉक्स नहीं मिला"
+   },
+   "pkTSsAlinamadi": {
+      "message": "स्क्रीनशॉट विफल रहा"
+   },
+   "pkTSsKaydedildi": {
+      "message": "स्क्रीनशॉट सहेजा गया"
+   },
+   "pkTSsPanoya": {
+      "message": "स्क्रीनशॉट को क्लिपबोर्ड पर कॉपी किया गया"
+   },
+   "pkTSsYasak": {
+      "message": "इस स्ट्रीम पर स्क्रीनशॉट संभव नहीं हैं"
+   },
+   "pkTSureKaydedildi": {
+      "message": "अवधि विकल्प सहेजे गए"
+   },
+   "pkTSusturmaHata": {
+      "message": "टाइमआउट विफल ({1})"
+   },
+   "pkTSusturuldu": {
+      "message": "{1} {2} का समय समाप्त हो गया"
+   },
+   "pkTTemaKaydedildi": {
+      "message": "थीम रंग सहेजा गया"
+   },
+   "pkTTemaVarsayilan": {
+      "message": "थीम को डिफ़ॉल्ट पर पुनर्स्थापित किया गया"
+   },
+   "pkTToBasladi": {
+      "message": "लाइव देखें - {1} ट्रिगर्स"
+   },
+   "pkTToDurdu": {
+      "message": "लाइव देखना बंद कर दिया गया"
+   },
+   "pkTToEslesmeYok": {
+      "message": "किसी ने मेल नहीं खाया"
+   },
+   "pkTToTetikGir": {
+      "message": "कम से कम एक ट्रिगर वाक्यांश दर्ज करें"
+   },
+   "pkTVodIndirildi": {
+      "message": "पिछला प्रसारण डाउनलोड किया गया"
+   },
+   "pkTYedekAlinamadi": {
+      "message": "बैकअप विफल रहा"
+   },
+   "pkTYedekCokBuyuk": {
+      "message": "फ़ाइल बहुत बड़ी है"
+   },
+   "pkTYedekOkunamadi": {
+      "message": "फ़ाइल पढ़ी नहीं जा सकी"
+   },
+   "pkTYedekUygulanamadi": {
+      "message": "सेटिंग्स लोड नहीं की जा सकीं"
+   },
+   "pkTYedekUygulandi": {
+      "message": "सेटिंग्स लोड हो गईं, पेज पुनः लोड हो रहा है"
+   },
+   "pkTYetkiKaydedildi": {
+      "message": "भूमिकाएँ अद्यतन की गईं"
+   },
+   "pkTYetkiKismi": {
+      "message": "{1} भूमिका परिवर्तन विफल रहा"
+   },
+   "pkTakipKelime": {
+      "message": "ट्रैक किए गए शब्द"
+   },
+   "pkTakipKelimeD": {
+      "message": "आपके नाम के साथ इन शब्दों को ट्रैक करता है। अल्पविराम अलग हो गया."
+   },
+   "pkTakipKelimeOrnek": {
+      "message": "मुफ़्त, कोड, सर्वर"
+   },
+   "pkTakipciEki": {
+      "message": "{1} अनुयायी"
+   },
+   "pkTakipciSayisi": {
+      "message": "अनुयायी"
+   },
+   "pkTamEkranSon": {
+      "message": "फ़ुलस्क्रीन बटन अंतिम"
+   },
+   "pkTamEkranSonD": {
+      "message": "किक के फुलस्क्रीन बटन को बार के सबसे दाईं ओर ले जाता है।"
+   },
+   "pkTanArac": {
+      "message": "मॉडरेटर उपकरण"
+   },
+   "pkTanAracD": {
+      "message": "ये बंद हो जाते हैं - ये आपकी ओर से चैट में कार्य करते हैं, इसलिए इन्हें चालू करना आपकी जिम्मेदारी है। उन्हें प्योरकिक मेनू › मॉडरेशन के अंतर्गत खोजें।"
+   },
+   "pkTanBaslik": {
+      "message": "यात्रा"
+   },
+   "pkTanBaslikD": {
+      "message": "प्योरकिक क्या कर सकता है, इसके बारे में पृष्ठ दर पृष्ठ बताता है।"
+   },
+   "pkTanBitir": {
+      "message": "प्रारंभ करें"
+   },
+   "pkTanGoster": {
+      "message": "दौरा दिखाओ"
+   },
+   "pkTanHos": {
+      "message": "प्योरकिक में आपका स्वागत है"
+   },
+   "pkTanHosD": {
+      "message": "किक को विज्ञापन-मुक्त देखने और अपनी चैट चलाने के लिए एक टूलकिट। नीचे दी गई अधिकांश सुविधाएं पहले से ही चालू हैं - आपको कुछ भी करने की आवश्यकता नहीं है। उन्हें देखने के लिए नीचे दाईं ओर अगला का उपयोग करें।"
+   },
+   "pkTanKart": {
+      "message": "प्रोफ़ाइल कार्ड"
+   },
+   "pkTanKartD": {
+      "message": "जब आप चैट में किसी नाम पर क्लिक करते हैं तो आपको कार्ड मिलता है।"
+   },
+   "pkTanKenar": {
+      "message": "साइडबार"
+   },
+   "pkTanKenarD": {
+      "message": "निम्नलिखित सूची और चैनल पृष्ठ।"
+   },
+   "pkTanListe": {
+      "message": "बकबक सूची"
+   },
+   "pkTanListeD": {
+      "message": "किक की दर्शक सूची में जोड़ा गया।"
+   },
+   "pkTanMod": {
+      "message": "संयम"
+   },
+   "pkTanModD": {
+      "message": "हटाए गए संदेश, प्रतिबंध और टाइमआउट दृश्यमान हो जाते हैं।"
+   },
+   "pkTanReklam": {
+      "message": "विज्ञापन"
+   },
+   "pkTanReklamD": {
+      "message": "आप जो कुछ भी बंद करते हैं वह तुरंत प्रभावी होता है।"
+   },
+   "pkTanSohbet": {
+      "message": "बातचीत"
+   },
+   "pkTanSohbetD": {
+      "message": "आप तय करते हैं कि कौन अलग दिखता है और कौन नहीं।"
+   },
+   "pkTanSon": {
+      "message": "आप तैयार हैं"
+   },
+   "pkTanSonD": {
+      "message": "प्रत्येक सेटिंग चैट के नीचे PK बटन में रहती है। आप इस दौरे को उन्नत अनुभाग से पुनः खोल सकते हैं."
+   },
+   "pkTanVideo": {
+      "message": "वीडियो और प्लेयर"
+   },
+   "pkTanVideoD": {
+      "message": "प्लेयर बार में जोड़ा गया."
+   },
+   "pkTemaAciklama": {
+      "message": "किक इंटरफ़ेस का रंग बदलता है।"
+   },
+   "pkTemaKickYesili": {
+      "message": "हरी लात मारो"
+   },
+   "pkTemaKirmizi": {
+      "message": "लाल"
+   },
+   "pkTemaMavi": {
+      "message": "नीला"
+   },
+   "pkTemaMor": {
+      "message": "बैंगनी"
+   },
+   "pkTemaPembe": {
+      "message": "गुलाबी"
+   },
+   "pkTemaSari": {
+      "message": "पीला"
+   },
+   "pkTemaTurkuaz": {
+      "message": "सियान"
+   },
+   "pkTemaTuruncu": {
+      "message": "नारंगी"
+   },
+   "pkTemizlemeKoru": {
+      "message": "चैट साफ़ होने पर संदेश रखें"
+   },
+   "pkTemizlemeKoruD": {
+      "message": "यदि कोई मॉडरेटर चैट साफ़ कर देता है, तो अंतिम संदेश एक अलग बॉक्स में रहते हैं।"
+   },
+   "pkTemizlenenAlan": {
+      "message": "विज्ञापन स्लॉट साफ़ किए गए"
+   },
+   "pkTiyatroNav": {
+      "message": "थिएटर मोड में शीर्ष बार"
+   },
+   "pkTiyatroNavD": {
+      "message": "कर्सर को सबसे ऊपर ले जाएँ और नेविगेशन बार वापस आ जाता है; मोड छोड़ने की कोई आवश्यकता नहीं है."
+   },
+   "pkTiyatroyaAl": {
+      "message": "शामिल होने पर थिएटर मोड दर्ज करें"
+   },
+   "pkTiyatroyaAlD": {
+      "message": "यदि पहले से ही चौड़ा है तो इसे अकेला छोड़ दें; प्रति चैनल एक प्रयास."
+   },
+   "pkToAciklama": {
+      "message": "ट्रिगर वाक्यांश लिखने वाले प्रत्येक व्यक्ति को आपके द्वारा चुनी गई अवधि के लिए समय समाप्त कर दिया जाता है। प्रसारक, मॉडरेटर और आपको छोड़ दिया गया है; प्रत्येक व्यक्ति को एक बार संभाला जाता है।"
+   },
+   "pkToAyar": {
+      "message": "थोक समयबाह्य"
+   },
+   "pkToAyarD": {
+      "message": "आपके द्वारा चुने गए शब्द या वाक्यांश को लिखने वाले को स्वचालित रूप से टाइम आउट कर दिया जाता है। चालू होने पर, प्योरकिक मेनू में एक \"बल्क टाइमआउट\" पंक्ति दिखाई देती है।"
+   },
+   "pkToBaslat": {
+      "message": "लाइव देखना प्रारंभ करें"
+   },
+   "pkToBaslik": {
+      "message": "थोक समयबाह्य"
+   },
+   "pkToDurdur": {
+      "message": "लाइव देखना बंद करो"
+   },
+   "pkToGecmis": {
+      "message": "अब तक के संदेशों पर लागू करें"
+   },
+   "pkToMenu": {
+      "message": "थोक समयबाह्य"
+   },
+   "pkToNerede": {
+      "message": "प्योरकिक मेनू में \"बल्क टाइमआउट\" पंक्ति से इसका उपयोग करें।"
+   },
+   "pkToNot": {
+      "message": "लाइव वॉच चलने के दौरान आप इस विंडो को बंद कर सकते हैं; जब आप चैनल छोड़ते हैं या सेटिंग बंद करते हैं तो यह बंद हो जाता है।"
+   },
+   "pkToSayac": {
+      "message": "समय समाप्त: {1}"
+   },
+   "pkToSure": {
+      "message": "समय समाप्ति अवधि"
+   },
+   "pkToSureD": {
+      "message": "त्वरित टाइमआउट जैसी ही सूची। इसे मॉडरेशन › उपयोगकर्ता कार्ड के अंतर्गत बदलें।"
+   },
+   "pkToTamKelime": {
+      "message": "संपूर्ण शब्द मिलान"
+   },
+   "pkToTamKelimeD": {
+      "message": "चालू, \"कोड\" मेल खाता है लेकिन \"कोडिंग\" मेल नहीं खाता। बंद, टेक्स्ट वाला कोई भी संदेश मेल खाता है।"
+   },
+   "pkToTetik": {
+      "message": "ट्रिगर वाक्यांश"
+   },
+   "pkToTetikD": {
+      "message": "प्रति पंक्ति एक शब्द या वाक्यांश. पंक्ति द्वारा विभाजित करें क्योंकि किसी वाक्यांश में अल्पविराम हो सकता है।"
+   },
+   "pkNot101911b": {
+      "message": "आईवीएस कार्यकर्ता एक वर्ष से अधिक समय से काम कर रहा है और अपने कैरियर को बेहतर बनाने के लिए काम कर रहा है"
+   },
+   "pkNot101911c": {
+      "message": "एचएलएस ने जारी किया और किक का उपयोग किया, डीएनआर ने अंतिम चरण को पूरा किया"
+   },
+   "pkNot101911d": {
+      "message": "आपके द्वारा उपयोग की जाने वाली साइट पर जेनेल बैकलैंटि ऑनलाइन"
+   },
+   "pkNot101914a": {
+      "message": "चैट अभिलेख अब चैनल द्वारा अलग कर दिए गए हैं; दैनिक लॉग और हटाए गए संदेश पाठ प्रतिधारण में सुधार किया गया है।"
+   },
+   "pkNot101914b": {
+      "message": "ऑनलाइन/ऑफ़लाइन फ़ॉलो-चैनल दृश्यता और चैनल-गणना सीमा तय की गई है।"
+   },
+   "pkNot101914c": {
+      "message": "लिंक पूर्वावलोकन, चैनल होवर शीर्षक और प्रोफ़ाइल-कार्ड पेज स्कोपिंग तय हैं।"
+   },
+   "pkNot101914d": {
+      "message": "सब्सक्राइबर भूमिका हाइलाइटिंग और प्रतिभाशाली KICKS समर्थक रिकॉर्ड में सुधार किया गया है।"
+   },
+   "pkNot101914e": {
+      "message": "वॉयस क्लिप कमांड अब 15 भाषाओं, एक माइक्रोफोन लेवल मीटर और एक प्लेयर बैज का समर्थन करते हैं।"
+   },
+   "pkNot101914f": {
+      "message": "क्लिप शॉर्टकट टॉगल, कोडेक/क्वालिटी फ़ॉलबैक और साइलेंट-रिकॉर्डिंग फ़ाइल नाम लेबल में सुधार किया गया है।"
+   },
+   "pkNot101912a": {
+      "message": "किक का कहना है कि प्योरकिक मॉड केवल एक दिन पहले ही शुरू हो चुका है"
+   },
+   "pkNot101912b": {
+      "message": "अराक कुबुगू, सोहबेट अयारलारी, योनेटिम पैनली और प्रोफाइल ओनिजलेमेसिंडेकी यूरुन एडि और सिमगे टुटारली हेल गेटिरिलडी"
+   },
+   "pkToTetikIpucu": {
+      "message": "फ्री किक्स \n फॉलो4फॉलो \n मेरा बायो चेक करें"
+   },
+   "pkTumu": {
+      "message": "सब"
+   },
+   "pkUyarHiz": {
+      "message": "अनुकूली गति"
+   },
+   "pkUyarHizD": {
+      "message": "जब आप लाइव से पीछे हो जाते हैं, तो यह अंतर को पाटने की गति बढ़ा देता है।"
+   },
+   "pkUyarHizNot": {
+      "message": "चित्र कभी उछलता नहीं है: स्थिति अछूती रहती है, केवल गति 1.25x तक जाती है और किनारे पर 1x पर वापस आती है।"
+   },
+   "pkVeriYok": {
+      "message": "अभी तक कोई डेटा नहीं."
+   },
+   "pkVideoBilgisiD": {
+      "message": "प्लेयर बार पर बटन से खुलता है."
+   },
+   "pkVideoIstatistikleri": {
+      "message": "वीडियो आँकड़े"
+   },
+   "pkVideoIstatistikleriD": {
+      "message": "रिज़ॉल्यूशन, एफपीएस, बिटरेट, गिराए गए फ्रेम, बफर।"
+   },
+   "pkVideoReklamlari": {
+      "message": "वीडियो विज्ञापन"
+   },
+   "pkVideoReklamlariD": {
+      "message": "प्री-रोल और मिड-रोल विज्ञापनों को ब्लॉक करता है।"
+   },
+   "pkVideonunYuzdesi": {
+      "message": "वीडियो का प्रतिशत"
+   },
+   "pkVodIndir": {
+      "message": "इस पिछले प्रसारण को डाउनलोड करें"
+   },
+   "pkVodIndirBaslik": {
+      "message": "पिछला प्रसारण डाउनलोड करें"
+   },
+   "pkVodIndirKisa": {
+      "message": "वीओडी डाउनलोड करें"
+   },
+   "pkVodIndirNot": {
+      "message": "स्ट्रीम को खंड दर खंड डिस्क पर लिखा जाता है; टैब मेमोरी फ्री रहती है."
+   },
+   "pkVodReklamlari": {
+      "message": "वीओडी विज्ञापन"
+   },
+   "pkVodReklamlariD": {
+      "message": "पिछले प्रसारणों की शुरुआत में विज्ञापन को छोड़ देता है।"
+   },
+   "pkVodTsNotN": {
+      "message": "फ़ाइल को .ts (वीएलसी/एमपीवी प्ले इट) के रूप में सहेजा गया है। स्ट्रीम की लंबाई {1} मिनट।"
+   },
+   "pkVsAg": {
+      "message": "नेटवर्क स्थिति"
+   },
+   "pkVsBitHizi": {
+      "message": "बिटरेट"
+   },
+   "pkVsCanliUzaklik": {
+      "message": "लाइव के पीछे"
+   },
+   "pkVsCozunurluk": {
+      "message": "संकल्प"
+   },
+   "pkVsDuraklatildi": {
+      "message": "रुका हुआ"
+   },
+   "pkVsDusenKare": {
+      "message": "गिराए गए तख्ते"
+   },
+   "pkVsHazir": {
+      "message": "तैयार अवस्था"
+   },
+   "pkVsKonum": {
+      "message": "पद"
+   },
+   "pkVsTampon": {
+      "message": "बफ़र"
+   },
+   "pkVurguMuaf": {
+      "message": "हाइलाइटिंग से बाहर रखा गया"
+   },
+   "pkVurguMuafD": {
+      "message": "यहां सूचीबद्ध लोगों को उनकी भूमिका चाहे जो भी हो, कोई रंग धारी नहीं मिलती।"
+   },
+   "pkWebSitesi": {
+      "message": "वेबसाइट"
+   },
+   "pkYanSohbet": {
+      "message": "साइड चैट खींचें"
+   },
+   "pkYanSohbetD": {
+      "message": "आपको अपने माउस से पॉप-आउट चैट बॉक्स को स्थानांतरित करने देता है।"
+   },
+   "pkYanit": {
+      "message": "उत्तर"
+   },
+   "pkYanitD": {
+      "message": "दूसरे संदेश का उत्तर देने वाले संदेश"
+   },
+   "pkYanitlarBaslik": {
+      "message": "उत्तर"
+   },
+   "pkYaziliyor": {
+      "message": "लिख रहा हूँ..."
+   },
+   "pkYedekBos": {
+      "message": "फ़ाइल में लागू करने के लिए कोई सेटिंग नहीं है"
+   },
+   "pkYedekBozuk": {
+      "message": "यह फ़ाइल मान्य JSON नहीं है"
+   },
+   "pkYedekNot": {
+      "message": "बैकअप में सेटिंग्स, नोट्स, छिपे हुए चैनल और लोग, फ़िल्टर और सेव पॉइंट शामिल हैं।"
+   },
+   "pkYedekOzet": {
+      "message": "फ़ाइल में {1} अनुभाग है · {2}"
+   },
+   "pkYedekYabanci": {
+      "message": "यह फ़ाइल प्योरकिक बैकअप नहीं है"
+   },
+   "pkYeniSekmedeAc": {
+      "message": "एक नए टैब में खोलें ↗"
+   },
+   "pkYenilik": {
+      "message": "इस संस्करण में नया"
+   },
+   "pkYetkiAciklama": {
+      "message": "इस चैनल में VIP, OG और मॉडरेटर को अनुदान दें या हटा दें। केवल आपके अपने चैनल पर दिखाया गया है।"
+   },
+   "pkYetkiBaslik": {
+      "message": "{1} · भूमिकाएँ"
+   },
+   "pkYetkiDugme": {
+      "message": "भूमिकाएँ संपादित करें"
+   },
+   "pkYetkiMod": {
+      "message": "मॉडरेटर"
+   },
+   "pkYetkiOg": {
+      "message": "ओजी"
+   },
+   "pkYetkiOkunamadi": {
+      "message": "भूमिकाएँ नहीं पढ़ सका."
+   },
+   "pkYetkiVip": {
+      "message": "वीआईपी"
+   },
+   "pkYildir": {
+      "message": "{1} वर्ष के लिए"
+   },
+   "pkYonetimPaneli": {
+      "message": "प्योरकिक कंट्रोल पैनल"
+   },
+   "pkYorumDengeli": {
+      "message": "भाव और पाठ संतुलित हैं"
+   },
+   "pkYorumEmoteCok": {
+      "message": "अधिकांश संदेश केवल भावनात्मक होते हैं"
+   },
+   "pkYorumEmoteFazla": {
+      "message": "पाठ से अधिक भाव"
+   },
+   "pkYorumHizli": {
+      "message": "चैट तेजी से चल रही है"
+   },
+   "pkYorumVeriYok": {
+      "message": "किसी भी टिप्पणी से पहले थोड़ा और डेटा की आवश्यकता है। चैट प्रवाहित होने पर यह भर जाता है."
+   },
+   "pkYorumZirve": {
+      "message": "व्यस्ततम मिनट {1}"
+   },
+   "pkYukseklik": {
+      "message": "ऊंचाई"
+   },
+   "pkYuzde": {
+      "message": "प्रतिशत"
+   },
+   "pkZamanAsimi": {
+      "message": "समय समाप्त हो गया"
+   },
+   "pkZirveDakika": {
+      "message": "{1} — {2} संदेश उस मिनट में"
+   },
+   "popupBadges": {
+      "message": "बैज"
+   },
+   "startBtn": {
+      "message": "सुरक्षा प्रारंभ करें"
+   },
+   "statusActive": {
+      "message": "विज्ञापन-मुक्त स्ट्रीम सक्रिय"
+   },
+   "statusPaused": {
+      "message": "सुरक्षा रोक दी गई"
+   },
+   "themeColor": {
+      "message": "थीम रंग"
+   },
+   "themeReset": {
+      "message": "रीसेट करें (किक डिफ़ॉल्ट)"
+   },
+   "pkFiltreAra": {
+      "message": "चैट में खोजें..."
+   },
+   "pkSohbetFiltre": {
+      "message": "चैट खोजें और फ़िल्टर करें"
+   },
+   "pkCokluYayin": {
+      "message": "मल्टी-स्ट्रीम"
+   },
+   "pkKlipAl": {
+      "message": "लाइव क्लिप कैप्चर करें"
+   },
+   "pkSohbetTts": {
+      "message": "चैट टेक्स्ट-टू-स्पीच (टीटीएस)"
+   },
+   "pkEmoteSpamFiltre": {
+      "message": "इमोट स्पैम कंडेनसर"
+   },
+   "pkIzlemeSureTakip": {
+      "message": "घड़ी के समय की ट्रैकिंग"
+   },
+   "pkKanalNotlari": {
+      "message": "चैनल नोट्स"
+   },
+   "pkYayinBildirim": {
+      "message": "लाइव सूचनाएं स्ट्रीम करें"
+   },
+   "pkIzlemeSureleriBaslik": {
+      "message": "देखने का समय"
+   },
+   "pkSohbetCeviri": {
+      "message": "लाइव चैट अनुवाद"
+   },
+   "pkAcik": {
+      "message": "पर"
+   },
+   "pkNot101910a": {
+      "message": "सोहबेट अरसिवी कलिक इंडेक्सेडडीबी डिपोसुना टैसिंडी; मॉडेरसायन और सिलिनेन मेसज काइतिलरिल्डि"
+   },
+   "pkNot101910b": {
+      "message": "इंस्टाग्राम, एक्स/ट्विटर, किक, टिकटॉक और जेनेल ऑनलाइन गेम का आनंद लें"
+   },
+   "pkNot101910c": {
+      "message": "यायन डेज़ीसिमी, एचएलएस रिक्लेम इसारेटलेरी और सेव्रिमडिसी ओयनाटिसि डुरुमु डुज़ेल्टिलडी"
+   },
+   "pkNot101911a": {
+      "message": "प्योरकिक मॉड अभी और अभी भी एक एकल सिम्गेलेरिन उइगुलैंडी है"
+   },
+   "pkInterfaceLanguage": {
+      "message": "इंटरफ़ेस भाषा"
+   },
+   "pkInterfaceLanguageD": {
+      "message": "प्योरकिक मॉड के लिए एक भाषा चुनें। ऑटो ब्राउज़र भाषा का अनुसरण करता है."
+   },
+   "pkSupportTitle": {
+      "message": "समर्थन और बग रिपोर्ट"
+   },
+   "pkSupportDesc": {
+      "message": "GitHub के माध्यम से बग रिपोर्ट या सुविधा अनुरोध भेजें। खुले और पूर्ण किए गए अनुरोधों को यहां ट्रैक करें।"
+   },
+   "pkSupportLogin": {
+      "message": "रिपोर्ट GitHub पर भेजी जाती है और इसके लिए GitHub में साइन इन करना ज़रूरी है। एक्सटेंशन रिपोर्ट में आपका उपयोगकर्ता नाम या ईमेल नहीं जोड़ता। बिना साइन-इन अनाम भेजने के लिए रिले सर्वर अभी सेट नहीं किया गया है।"
+   },
+   "pkSupportBug": {
+      "message": "बग की रिपोर्ट करें"
+   },
+   "pkSupportFeature": {
+      "message": "एक सुविधा का अनुरोध करें"
+   },
+   "pkSupportQuestion": {
+      "message": "मदद मांगें"
+   },
+   "pkSupportTitlePlaceholder": {
+      "message": "संक्षिप्त शीर्षक"
+   },
+   "pkSupportBodyPlaceholder": {
+      "message": "चरणों, अपेक्षित परिणाम और वास्तविक परिणाम का वर्णन करें। निजी जानकारी शामिल न करें."
+   },
+   "pkSupportSend": {
+      "message": "GitHub पर जारी रखें"
+   },
+   "pkSupportRequired": {
+      "message": "एक शीर्षक और विवरण दर्ज करें."
+   },
+   "pkSupportIssues": {
+      "message": "सामुदायिक अनुरोध"
+   },
+   "pkSupportStatusHelp": {
+      "message": "स्थिति GitHub खुली/बंद स्थिति और योजना लेबल से आती है।"
+   },
+   "pkSupportLoading": {
+      "message": "GitHub अनुरोध लोड हो रहा है..."
+   },
+   "pkSupportEmpty": {
+      "message": "अभी तक कोई सार्वजनिक अनुरोध नहीं."
+   },
+   "pkSupportClosed": {
+      "message": "सुलझ गया"
+   },
+   "pkSupportPlanned": {
+      "message": "योजना बनाई"
+   },
+   "pkSupportWaiting": {
+      "message": "इंतज़ार कर रहा हूँ"
+   },
+   "pkSupportOpen": {
+      "message": "खुला"
+   },
+   "pkSupportError": {
+      "message": "GitHub अनुरोध लोड नहीं कर सका. अपना कनेक्शन या GitHub स्थिति जांचें."
+   },
+   "pkHistoryTitle": {
+      "message": "चैट रिकॉर्ड"
+   },
+   "pkHistorySearch": {
+      "message": "चैट रिकॉर्ड खोजें (उपयोगकर्ता या संदेश)"
+   },
+   "pkHistoryLoadOlder": {
+      "message": "पुराने रिकॉर्ड लोड करें"
+   },
+   "pkHistoryMemoryLimit": {
+      "message": "मेमोरी सीमा पूरी हुई · पुराने रिकॉर्ड खोजने के लिए खोजें"
+   },
+   "pkHistoryLoading": {
+      "message": "आर्काइव लोड हो रहा है…"
+   },
+   "pkHistoryNoMatch": {
+      "message": "कोई मेल खाता रिकॉर्ड नहीं मिला।"
+   },
+   "pkHistoryEmpty": {
+      "message": "चैट लॉग में अभी तक कोई संदेश सहेजा नहीं गया है।"
+   },
+   "pkHistorySearchResults": {
+      "message": "खोज परिणाम: "
+   },
+   "pkHistoryMessages": {
+      "message": "आर्काइव किए गए संदेश: "
+   },
+   "pkHistoryOlderAvailable": {
+      "message": " · पुराने रिकॉर्ड उपलब्ध हैं"
+   },
+   "pkHistoryAllShown": {
+      "message": " · सभी मिलान दिखाए गए"
+   },
+   "pkHistoryDeletedTextMissing": {
+      "message": "Kick ने इस हटाने के रिकॉर्ड में संदेश का पाठ उपलब्ध नहीं कराया"
+   },
+   "pkHistoryDailyTitle": {
+      "message": "चैट रिकॉर्ड · दैनिक लॉग"
+   },
+   "pkHistoryDailyDesc": {
+      "message": "आज के संदेश चैनल और तारीख के अनुसार अलग दिखाए जाते हैं। हर चैनल के लिए टाइमस्टैम्प वाली अलग .log फ़ाइल डाउनलोड करें।"
+   },
+   "pkHistoryDailyLoading": {
+      "message": "आज के लॉग पढ़े जा रहे हैं…"
+   },
+   "pkHistoryDailyRefresh": {
+      "message": "आज के लॉग ताज़ा करें"
+   },
+   "pkTimeoutExpires": {
+      "message": "टाइमआउट समाप्त: {1}"
+   },
+   "pkTimeoutDays": {
+      "message": "({1} दिन शेष)"
+   },
+   "pkActiveTimeout": {
+      "message": "सक्रिय टाइमआउट"
+   },
+   "pkPermanentBan": {
+      "message": "स्थायी प्रतिबंध"
+   },
+   "pkModEventsTitle": {
+      "message": "मॉडरेशन घटनाएँ"
+   },
+   "pkTitleCount": {
+      "message": "{1} ({2})"
+   },
+   "pkTemizle": {
+      "message": "साफ़ करें"
+   },
+   "pkAllSitesAccessDescription": {
+      "message": "HTTP और HTTPS साइटों पर लिंक पूर्वावलोकन के लिए एक बार की व्यापक अनुमति।"
+   },
+   "pkAllSitesAccessButton": {
+      "message": "सभी साइटों तक पहुंच की अनुमति दें"
+   },
+   "pkAllSitesGranted": {
+      "message": "सभी HTTP/HTTPS साइटों के लिए लिंक पहुंच सक्षम है।"
+   },
+   "pkAllSitesDenied": {
+      "message": "साइट एक्सेस की अनुमति नहीं मिली। Chrome एक्सटेंशन सेटिंग में अलग-अलग साइटों को अनुमति दे सकते हैं。"
+   },
+   "pkNot101915a": {
+      "message": "चैट क्लिप अब चैनल प्रसारण के बजाय उसी क्लिप ID का वीडियो चलाते हैं。"
+   },
+   "pkNot101915b": {
+      "message": "Kick क्लिप के लिए अलग प्लेयर है; एम्बेड न होने वाले KickBot पेज सीधे खुलते हैं。"
+   },
+   "pkNot101915c": {
+      "message": "लिंक पूर्वावलोकन के लिए सभी HTTP/HTTPS साइटों पर एक-क्लिक वैकल्पिक पहुंच जोड़ी गई。"
+   },
+   "pkNot101915d": {
+      "message": "भाषा कैटलॉग और GitHub सहायता रिपोर्टिंग अपडेट की गई; क्लिप और अनुमति परीक्षण जोड़े गए。"
+   }
+}

@@ -857,8 +857,12 @@
    "pkKenarGrupLimitD": {
       "message": "Begrenzt die Anzahl der Online- und Offline-Kanäle anhand des Werts 1–20 unten. Unabhängig von der Gruppierung."
    },
-   "pkKickDahaFazlaGizle": { "message": "Kicks Schaltflächen „Mehr anzeigen / Weniger anzeigen“ ausblenden" },
-   "pkKickDahaFazlaGizleD": { "message": "Blendet Kicks Erweitern- und Einklappen-Schaltflächen in der Kanalliste aus." },
+   "pkKickDahaFazlaGizle": {
+      "message": "Kicks Schaltflächen „Mehr anzeigen / Weniger anzeigen“ ausblenden"
+   },
+   "pkKickDahaFazlaGizleD": {
+      "message": "Blendet Kicks Erweitern- und Einklappen-Schaltflächen in der Kanalliste aus."
+   },
    "pkKendiMenum": {
       "message": "Eigenes Menü öffnen"
    },
@@ -2515,10 +2519,184 @@
    "pkNot101911d": {
       "message": "Genel bağlantı önizlemeleri için zorunlu tüm siteler izni kaldırıldı"
    },
+   "pkNot101914a": {
+      "message": "Chat-Archive sind jetzt nach Kanal getrennt; Tageslogs und die Aufbewahrung gelöschter Nachrichtentexte wurden verbessert."
+   },
+   "pkNot101914b": {
+      "message": "Sichtbarkeit und Anzahlgrenze der gefolgten Online-/Offline-Kanäle wurden korrigiert."
+   },
+   "pkNot101914c": {
+      "message": "Linkvorschauen, Kanal-Hover-Titel und die Begrenzung von Profilkarten auf passende Seiten wurden korrigiert."
+   },
+   "pkNot101914d": {
+      "message": "Abonnenten-Rollenhervorhebung und Einträge für verschenkte KICKS wurden verbessert."
+   },
+   "pkNot101914e": {
+      "message": "Sprachbefehle für Clips unterstützen jetzt 15 Sprachen, eine Mikrofonanzeige und ein Player-Badge."
+   },
+   "pkNot101914f": {
+      "message": "Clip-Shortcut-Schalter, Codec-/Qualitätsfallback und Dateinamen für stumme Aufnahmen wurden verbessert."
+   },
    "pkNot101912a": {
       "message": "Kick sayfasındaki PureKick Mod simgesi ve yeşil böcek rozeti güncellendi"
    },
    "pkNot101912b": {
       "message": "Araç çubuğu, sohbet ayarları, yönetim paneli ve profil önizlemesindeki ürün adı ve simge tutarlı hale getirildi"
+   },
+   "pkInterfaceLanguage": {
+      "message": "Schnittstellensprache"
+   },
+   "pkInterfaceLanguageD": {
+      "message": "Wählen Sie eine Sprache für PureKick Mod. Folgt automatisch der Browsersprache."
+   },
+   "pkSupportTitle": {
+      "message": "Support und Fehlerberichte"
+   },
+   "pkSupportDesc": {
+      "message": "Senden Sie einen Fehlerbericht oder eine Funktionsanfrage über GitHub. Verfolgen Sie hier offene und abgeschlossene Anfragen."
+   },
+   "pkSupportLogin": {
+      "message": "Die Übermittlung wird auf GitHub abgeschlossen und erfordert eine GitHub-Anmeldung. Die Erweiterung fügt dem Bericht weder Ihren Benutzernamen noch Ihre E-Mail-Adresse hinzu. Ein Relay-Server für anonyme Einsendungen ohne Anmeldung ist noch nicht eingerichtet."
+   },
+   "pkSupportBug": {
+      "message": "Melden Sie einen Fehler"
+   },
+   "pkSupportFeature": {
+      "message": "Fordern Sie eine Funktion an"
+   },
+   "pkSupportQuestion": {
+      "message": "Bitten Sie um Hilfe"
+   },
+   "pkSupportTitlePlaceholder": {
+      "message": "Kurztitel"
+   },
+   "pkSupportBodyPlaceholder": {
+      "message": "Beschreiben Sie die Schritte, das erwartete Ergebnis und das tatsächliche Ergebnis. Geben Sie keine privaten Informationen an."
+   },
+   "pkSupportSend": {
+      "message": "Weiter auf GitHub"
+   },
+   "pkSupportRequired": {
+      "message": "Geben Sie einen Titel und eine Beschreibung ein."
+   },
+   "pkSupportIssues": {
+      "message": "Community-Anfragen"
+   },
+   "pkSupportStatusHelp": {
+      "message": "Der Status ergibt sich aus den Status- und Planungsbezeichnungen „Offen/Geschlossen“ von GitHub."
+   },
+   "pkSupportLoading": {
+      "message": "GitHub-Anfragen werden geladen…"
+   },
+   "pkSupportEmpty": {
+      "message": "Noch keine öffentlichen Anfragen."
+   },
+   "pkSupportClosed": {
+      "message": "Gelöst"
+   },
+   "pkSupportPlanned": {
+      "message": "Geplant"
+   },
+   "pkSupportWaiting": {
+      "message": "Warten"
+   },
+   "pkSupportOpen": {
+      "message": "Offen"
+   },
+   "pkSupportError": {
+      "message": "GitHub-Anfragen konnten nicht geladen werden. Überprüfen Sie Ihre Verbindung oder Ihren GitHub-Status."
+   },
+   "pkHistoryTitle": {
+      "message": "Chat-Aufzeichnungen"
+   },
+   "pkHistorySearch": {
+      "message": "Chat-Aufzeichnungen durchsuchen (Benutzer oder Nachricht)"
+   },
+   "pkHistoryLoadOlder": {
+      "message": "Ältere Einträge laden"
+   },
+   "pkHistoryMemoryLimit": {
+      "message": "Speichergrenze erreicht · suchen Sie nach älteren Einträgen"
+   },
+   "pkHistoryLoading": {
+      "message": "Archiv wird geladen…"
+   },
+   "pkHistoryNoMatch": {
+      "message": "Keine passenden Einträge gefunden."
+   },
+   "pkHistoryEmpty": {
+      "message": "Im Chatprotokoll sind noch keine Nachrichten gespeichert."
+   },
+   "pkHistorySearchResults": {
+      "message": "Suchergebnisse: "
+   },
+   "pkHistoryMessages": {
+      "message": "Archivierte Nachrichten: "
+   },
+   "pkHistoryOlderAvailable": {
+      "message": " · ältere Einträge verfügbar"
+   },
+   "pkHistoryAllShown": {
+      "message": " · alle Treffer angezeigt"
+   },
+   "pkHistoryDeletedTextMissing": {
+      "message": "Kick hat den Nachrichtentext in diesem Löschprotokoll nicht bereitgestellt"
+   },
+   "pkHistoryDailyTitle": {
+      "message": "Chat-Aufzeichnungen · Tagesprotokoll"
+   },
+   "pkHistoryDailyDesc": {
+      "message": "Die heutigen Nachrichten werden nach Kanal und Datum getrennt angezeigt. Laden Sie für jeden Kanal eine eigene Protokolldatei mit Zeitstempeln herunter."
+   },
+   "pkHistoryDailyLoading": {
+      "message": "Heutige Protokolle werden geladen…"
+   },
+   "pkHistoryDailyRefresh": {
+      "message": "Heutige Protokolle aktualisieren"
+   },
+   "pkTimeoutExpires": {
+      "message": "Timeout endet: {1}"
+   },
+   "pkTimeoutDays": {
+      "message": "({1} Tage verbleibend)"
+   },
+   "pkActiveTimeout": {
+      "message": "Aktiver Timeout"
+   },
+   "pkPermanentBan": {
+      "message": "Dauerhafte Sperre"
+   },
+   "pkModEventsTitle": {
+      "message": "Moderationsereignisse"
+   },
+   "pkTitleCount": {
+      "message": "{1} ({2})"
+   },
+   "pkTemizle": {
+      "message": "Leeren"
+   },
+   "pkAllSitesAccessDescription": {
+      "message": "Einmalige umfassende Berechtigung für Linkvorschauen auf HTTP- und HTTPS-Websites."
+   },
+   "pkAllSitesAccessButton": {
+      "message": "Zugriff auf alle Websites erlauben"
+   },
+   "pkAllSitesGranted": {
+      "message": "Der Linkzugriff ist für alle HTTP/HTTPS-Websites aktiviert."
+   },
+   "pkAllSitesDenied": {
+      "message": "Der Websitezugriff wurde nicht erlaubt. Einzelne Websites können in den Chrome-Erweiterungseinstellungen freigegeben werden."
+   },
+   "pkNot101915a": {
+      "message": "Chat-Clips spielen jetzt den Videostream der exakten Clip-ID ab, statt die Kanalübertragung zu öffnen."
+   },
+   "pkNot101915b": {
+      "message": "Kick-Clips verwenden einen eigenen Player; KickBot-Clipseiten werden direkt geöffnet, wenn Einbetten nicht möglich ist."
+   },
+   "pkNot101915c": {
+      "message": "Einmalige optionale Berechtigung für alle HTTP/HTTPS-Websites für Linkvorschauen hinzugefügt."
+   },
+   "pkNot101915d": {
+      "message": "Sprachkataloge und GitHub-Supportmeldungen aktualisiert; Clip- und Berechtigungsabläufe in Tests aufgenommen."
    }
 }

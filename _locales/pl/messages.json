@@ -1,0 +1,2702 @@
+{
+   "appDesc": {
+      "message": "PureKick Mod blokuje reklamy na Kick.com i dodaje ulepszony zestaw narzędzi do przesyłania strumieniowego i czatu."
+   },
+   "badgeCtaSub": {
+      "message": "Zaloguj się za pomocą Kicka"
+   },
+   "badgeCtaTitle": {
+      "message": "Zdobądź odznakę czatu"
+   },
+   "badgeLinkedSub": {
+      "message": "Konto połączone ✓"
+   },
+   "badgeLinkedTitle": {
+      "message": "Odznaka czatu aktywna"
+   },
+   "btnTitle": {
+      "message": "PureKick Mod — transmisja bez reklam"
+   },
+   "dropDay": {
+      "message": "{1} Pozostał dzień"
+   },
+   "dropDays": {
+      "message": "{1} Pozostało dni"
+   },
+   "dropHour": {
+      "message": "{1} pozostała godzina"
+   },
+   "dropHours": {
+      "message": "Pozostało {1} godzin"
+   },
+   "dropTitle": {
+      "message": "Zobacz kampanie Drops na Kick"
+   },
+   "dropsEmpty": {
+      "message": "Brak aktywnych kropli"
+   },
+   "dropsTitle": {
+      "message": "Aktywne krople"
+   },
+   "footHelp": {
+      "message": "Pomoc i wsparcie"
+   },
+   "footPrivacy": {
+      "message": "Prywatność"
+   },
+   "pauseBtn": {
+      "message": "Zatrzymaj się na tej stronie"
+   },
+   "pkAboneAktifNot": {
+      "message": "Rośnie z każdym miesiącem pobytu. Dziękuję! 💚"
+   },
+   "pkAboneAy": {
+      "message": "{1} – Wsparcie miesięczne"
+   },
+   "pkAboneAy1": {
+      "message": "Wsparcie na 1 miesiąc"
+   },
+   "pkAboneBaslangic": {
+      "message": "Rozpoczęło się"
+   },
+   "pkAboneBitti": {
+      "message": "Twoje członkostwo dobiegło końca. Odnów subskrypcję, a Twoja odznaka wznowi pracę tam, gdzie została przerwana."
+   },
+   "pkAboneDemoBaslik": {
+      "message": "Tak wyglądasz na czacie jako osoba wspierająca:"
+   },
+   "pkAboneDemoMesaj": {
+      "message": "hej tam! 👋"
+   },
+   "pkAboneKidem": {
+      "message": "Twoja kadencja"
+   },
+   "pkAboneOl": {
+      "message": "Zostań członkiem"
+   },
+   "pkAboneOnceGiris": {
+      "message": "Najpierw zaloguj się za pomocą Kick — potrzebujemy go, aby dopasować Twoje członkostwo do Twojego konta."
+   },
+   "pkAboneSonaErdi": {
+      "message": "Zakończone"
+   },
+   "pkAboneYenile": {
+      "message": "Odnów członkostwo"
+   },
+   "pkAboneYenileme": {
+      "message": "Odnawia"
+   },
+   "pkAboneYukleniyor": {
+      "message": "Sprawdzam status członkostwa…"
+   },
+   "pkAbonelik": {
+      "message": "Subskrypcja"
+   },
+   "pkAbonelikTanit": {
+      "message": "Zostań kibicem: zdobądź plakietkę stałego pobytu obok swojego imienia i nazwiska na czacie i pokoloruj swoje imię, jak chcesz."
+   },
+   "pkAiMod": {
+      "message": "Zaznacz automatyczne usunięcia"
+   },
+   "pkAiModD": {
+      "message": "Jeśli moderacja AI Kicka go usunęła, dziennik informuje o tym niezależnie od usunięcia moderatora."
+   },
+   "pkAltAdTakibi": {
+      "message": "Oglądanie nazw"
+   },
+   "pkAltCezaSebepleri": {
+      "message": "Powody kary"
+   },
+   "pkAltGezinme": {
+      "message": "Pasek nawigacji"
+   },
+   "pkAltGizliKanallar": {
+      "message": "Ukryte kanały"
+   },
+   "pkAltGizliKategoriler": {
+      "message": "Ukryte kategorie"
+   },
+   "pkAltKaliteSes": {
+      "message": "Automatyczna jakość i objętość"
+   },
+   "pkAltKartBilgisi": {
+      "message": "Dane karty"
+   },
+   "pkAltKartSohbeti": {
+      "message": "Czat karciany"
+   },
+   "pkAltKenarCubugu": {
+      "message": "Pasek boczny"
+   },
+   "pkAltModGunlugu": {
+      "message": "Ustawienia dziennika"
+   },
+   "pkAltOtomasyon": {
+      "message": "Automatyzacja"
+   },
+   "pkAltOynaticiOzel": {
+      "message": "Funkcje odtwarzacza"
+   },
+   "pkAltSagTikMenuleri": {
+      "message": "Kliknij prawym przyciskiem myszy i obrazy"
+   },
+   "pkAltSohbetGorunum": {
+      "message": "Wygląd czatu"
+   },
+   "pkAltSohbetGorunumD": {
+      "message": "Podgląd emotki."
+   },
+   "pkAltSohbetMesaji": {
+      "message": "Wiadomość na czacie"
+   },
+   "pkAltVideoIstat": {
+      "message": "Pasek wideo i sterowania"
+   },
+   "pkAltVideoVod": {
+      "message": "Odtwarzacz wideo i VOD"
+   },
+   "pkAltVurgulama": {
+      "message": "Podświetlanie wiadomości"
+   },
+   "pkAninda": {
+      "message": "Zmiany wchodzą w życie natychmiast."
+   },
+   "pkAnlikOrtZirve": {
+      "message": "Teraz / średnia / szczyt"
+   },
+   "pkAralikSec": {
+      "message": "Wybierz zakres"
+   },
+   "pkArayuzDuzeniD": {
+      "message": "Małe dodatki do interfejsu Kick; żaden z nich nie łamie własnego układu Kicka."
+   },
+   "pkAySayisi": {
+      "message": "{1} miesiąc(e)"
+   },
+   "pkAyarSatiri": {
+      "message": "Ustawienia czatu PureKick"
+   },
+   "pkAyarYedegi": {
+      "message": "Kopia zapasowa ustawień"
+   },
+   "pkAyarYedegiD": {
+      "message": "Wszystkie ustawienia i listy w jednym pliku. Nic nie jest wysyłane na serwer."
+   },
+   "pkAramaAyarlar": {
+      "message": "Ustawienia wyszukiwania..."
+   },
+   "pkAramaSonucYok": {
+      "message": "Nie znaleziono pasujących ustawień"
+   },
+   "pkAyarlar": {
+      "message": "Ustawienia PureKick"
+   },
+   "pkAyarlardanAc": {
+      "message": "Możesz to włączyć w Ustawieniach."
+   },
+   "pkAydir": {
+      "message": "za miesiąc (y) {1}"
+   },
+   "pkAzOnce": {
+      "message": "właśnie teraz"
+   },
+   "pkBaglantiDurum": {
+      "message": "Stan połączenia czatu"
+   },
+   "pkBaglantiDurumD": {
+      "message": "Mała kropka obok czatu: czy wydarzenia trwają, czy zostały zatrzymane."
+   },
+   "pkBaglanti_acik": {
+      "message": "Połączenie czatu działa"
+   },
+   "pkBaglanti_bekliyor": {
+      "message": "Oczekiwanie na połączenie z czatem"
+   },
+   "pkBaglanti_kopuk": {
+      "message": "Wygląda na to, że połączenie czatu zostało utracone"
+   },
+   "pkBaglanti_sessiz": {
+      "message": "Brak wydarzeń przez jakiś czas — czat może być po prostu cichy"
+   },
+   "pkBaglantiyiKopyala": {
+      "message": "Skopiuj link"
+   },
+   "pkBaglantiyiOnizle": {
+      "message": "Podgląd linku"
+   },
+   "pkChatOnizle": {
+      "message": "Wyświetl podgląd na czacie"
+   },
+   "pkChatOnizleKapat": {
+      "message": "Zamknij podgląd"
+   },
+   "pkBahsedenYok": {
+      "message": "Nikt jeszcze o Tobie nie wspomniał."
+   },
+   "pkBahsedilmeler": {
+      "message": "Wspomnienia"
+   },
+   "pkBahsedilmelerBos": {
+      "message": "Zbierają się tutaj podczas oglądania czatu na kanale."
+   },
+   "pkBahsedilmelerD": {
+      "message": "Zbiera wiadomości, które wspominają Twoje imię i nazwisko."
+   },
+   "pkBahsetRozet": {
+      "message": "Licznik powiadomień"
+   },
+   "pkBahsetRozetD": {
+      "message": "Wyświetla czerwoną liczbę na przycisku PureKick, gdy pojawia się Twoje imię i nazwisko. Wyłącz tę opcję, a wzmianki będą nadal zbierane, ale nie zliczane na ekranie."
+   },
+   "pkBahsetSes": {
+      "message": "Dźwięk powiadomienia"
+   },
+   "pkBahsetSesD": {
+      "message": "Odtwarza krótki dźwięk, gdy pojawia się Twoje imię."
+   },
+   "pkBahsetSesSeviye": {
+      "message": "Objętość"
+   },
+   "pkBahsetSesTon": {
+      "message": "Dźwięk"
+   },
+   "pkBahsetSesTonD": {
+      "message": "Odtwarza natychmiast po wybraniu — posłuchaj, a potem zdecyduj."
+   },
+   "pkEmoteOnizlemeD": {
+      "message": "Najedź kursorem na emotkę, aby zobaczyć ją dużą wraz z nazwą."
+   },
+   "pkEmoteSayisi": {
+      "message": "Emotikony {1}"
+   },
+   "pkEmoteYok": {
+      "message": "Nie użyto jeszcze żadnych emotek."
+   },
+   "pkEnAktifSohbet": {
+      "message": "Najbardziej aktywne osoby na czacie"
+   },
+   "pkEnAktifSohbetD": {
+      "message": "Kto napisał najwięcej w tej sesji."
+   },
+   "pkEnCokEmote": {
+      "message": "Najczęściej używane emotki"
+   },
+   "pkEnCokEmoteD": {
+      "message": "Najczęściej spotykane na czacie w tej sesji."
+   },
+   "pkEnCokEmoteKisi": {
+      "message": "Najlepsi użytkownicy emotek"
+   },
+   "pkEnCokEmoteKisiD": {
+      "message": "Liczba emotikonów na osobę i wiadomości zawierających wyłącznie emotikony."
+   },
+   "pkEnYogunDakika": {
+      "message": "Najbardziej pracowita minuta"
+   },
+   "pkEngellemeAyarlari": {
+      "message": "Ustawienia reklam"
+   },
+   "pkEngellenenVideo": {
+      "message": "Reklamy wideo zablokowane"
+   },
+   "pkEvet": {
+      "message": "tak"
+   },
+   "pkEvetSifirla": {
+      "message": "Tak, zresetuj"
+   },
+   "pkGelenYanitYok": {
+      "message": "Nikt o nich nie wspomniał podczas tej sesji."
+   },
+   "pkGelenYanitlar": {
+      "message": "Napisano do nich"
+   },
+   "pkGelismis": {
+      "message": "Zaawansowane"
+   },
+   "pkGeri": {
+      "message": "Powrót"
+   },
+   "pkGizleIkonu": {
+      "message": "Ukryj przycisk po najechaniu myszką na kanał"
+   },
+   "pkGizleIkonuD": {
+      "message": "Pokazuje przycisk ukrywania w prawym górnym rogu po najechaniu kursorem na kanał na stronie głównej, pasku bocznym lub w kategoriach. Przycisk obok opcji Udostępnij na stronie kanału jest osobny."
+   },
+   "pkGizlemeyiKaldir": {
+      "message": "Odkryj"
+   },
+   "pkGizlenenKanallar": {
+      "message": "Ukryte kanały"
+   },
+   "pkGizlenenKanallarD": {
+      "message": "Kanały te pozostają poza listami, kategoriami i wyszukiwaniem."
+   },
+   "pkGizlenenKategoriler": {
+      "message": "Ukryte kategorie"
+   },
+   "pkGizlenenKategorilerD": {
+      "message": "Te kategorie i znajdujące się w nich karty strumieni pozostają poza listami."
+   },
+   "pkGizlenenleriTemizle": {
+      "message": "Przywróć ukryte osoby {1}"
+   },
+   "pkGizliMesajTemizle": {
+      "message": "Przywróć ukryte wiadomości {1}"
+   },
+   "pkGorselBuyut": {
+      "message": "Powiększ obraz (CTRL + kliknięcie)"
+   },
+   "pkGorselBuyutD": {
+      "message": "Kliknij emotkę, odznakę lub awatar, przytrzymując klawisz CTRL, aby zobaczyć go w pełnym rozmiarze."
+   },
+   "pkGorunurluk": {
+      "message": "Nieprzezroczystość"
+   },
+   "pkGrupCanli": {
+      "message": "Online ({1})"
+   },
+   "pkGrupKapali": {
+      "message": "Nieaktywny ( {1} )"
+   },
+   "pkGunOnce": {
+      "message": "{1} d temu"
+   },
+   "pkGundur": {
+      "message": "dla {1} dni"
+   },
+   "pkHakkindaEk": {
+      "message": "Dodatkowe informacje o kanale"
+   },
+   "pkHakkindaEkD": {
+      "message": "Dodaje odznaki subskrybenta, emotki kanału, najnowsze kategorie i zasady czatu (jeśli są ustawione) do wiersza Informacje pod strumieniem."
+   },
+   "pkHata": {
+      "message": "błąd"
+   },
+   "pkHayir": {
+      "message": "nie"
+   },
+   "pkHazirlanamadi": {
+      "message": "Nie można było się przygotować."
+   },
+   "pkHersiSifirla": {
+      "message": "Zresetuj wszystko"
+   },
+   "pkHersiSifirlaD": {
+      "message": "Wszystkie ustawienia i listy zostaną usunięte; rozszerzenie powraca do stanu z pierwszego dnia."
+   },
+   "pkHersiSifirlaUyari": {
+      "message": "Twoje notatki, ukryte kanały i osoby, filtry i punkty zapisu zostaną usunięte. Tej czynności nie można cofnąć — możesz najpierw wyeksportować."
+   },
+   "pkHesabinEki": {
+      "message": "Twoje konto: {1}"
+   },
+   "pkHizliMod": {
+      "message": "Szybki limit czasu"
+   },
+   "pkHizliModD": {
+      "message": "Kliknięcie klepsydry obok wiadomości na czacie otwiera pasek czasu trwania; Twój wybór zostanie zastosowany zamiast okna dialogowego Kick."
+   },
+   "pkHizliModNot": {
+      "message": "Komendę wpisuje się tylko w pole — wysłanie zależy od Ciebie, więc nikt nie zostanie ukarany przez przypadek."
+   },
+   "pkHkAboneye": {
+      "message": "tylko abonenci"
+   },
+   "pkHkAy": {
+      "message": "{1} miesięcy"
+   },
+   "pkHkEmoteler": {
+      "message": "Emotki na kanale"
+   },
+   "pkHkKategoriler": {
+      "message": "Najnowsze kategorie"
+   },
+   "pkHkKurallar": {
+      "message": "Zasady czatu"
+   },
+   "pkHkRozetler": {
+      "message": "Odznaki subskrybenta"
+   },
+   "pkIceAktar": {
+      "message": "Importuj"
+   },
+   "pkIcerikBos": {
+      "message": "Treść (pusta = wszystkie wiadomości)"
+   },
+   "pkIleri": {
+      "message": "Następny"
+   },
+   "pkIlkSonMesaj": {
+      "message": "Od pierwszej wiadomości do ostatniej"
+   },
+   "pkIndiriliyorEki": {
+      "message": "Pobieranie · {1}"
+   },
+   "pkIndirmeBitti": {
+      "message": "Gotowe · {1}"
+   },
+   "pkIndirmeDurdu": {
+      "message": "Pobieranie zatrzymane: {1}"
+   },
+   "pkIndirmeIlerleme": {
+      "message": "{1} % · Segmenty {2}"
+   },
+   "pkIndirmeIptal": {
+      "message": "Anulowano · {1} został pobrany"
+   },
+   "pkIptal": {
+      "message": "Anuluj"
+   },
+   "pkIstatBos": {
+      "message": "Brak danych. Otwórz strumień, a w miarę trwania czatu będą pojawiać się tutaj liczniki wiadomości, najpopularniejsze osoby na czacie i użycie emotikonów."
+   },
+   "pkIzleyici": {
+      "message": "Widzowie"
+   },
+   "pkIzleyiciAnlik": {
+      "message": "Widzowie (teraz)"
+   },
+   "pkIzleyiciOrt": {
+      "message": "Widzowie (średnio)"
+   },
+   "pkIzleyiciZirve": {
+      "message": "Widzowie (szczyt)"
+   },
+   "pkKaldir": {
+      "message": "Usuń"
+   },
+   "pkKaliteNot": {
+      "message": "Jeśli Twoja jakość jest niedostępna, zostanie użyta następna od dołu. Po wybraniu opcji „Automatyczny” ta funkcja nie ma żadnego działania."
+   },
+   "pkKaliteOkunamadi": {
+      "message": "Nie można odczytać listy jakości."
+   },
+   "pkKaliteSecin": {
+      "message": "Wybierz jakość:"
+   },
+   "pkKanalBilgisi": {
+      "message": "Informacje o kanale"
+   },
+   "pkKanalCanli": {
+      "message": "Na żywo: {1} · Widzowie {2}"
+   },
+   "pkKanalCevrimdisi": {
+      "message": "Offline · Obserwujący {1}"
+   },
+   "pkKanalEngeliKaldir": {
+      "message": "Odkryj ten kanał"
+   },
+   "pkKanalGizleYok": {
+      "message": "Jeszcze nikogo nie ukryłeś. Najedź kursorem na kartę kanału i naciśnij ✕, aby ją ukryć."
+   },
+   "pkKanalHakkinda": {
+      "message": "Przegląd {1}"
+   },
+   "pkNot102a": {
+      "message": "Reklamy w poprzednich transmisjach są blokowane"
+   },
+   "pkNot102b": {
+      "message": "Ukrywanie kanałów"
+   },
+   "pkNot102c": {
+      "message": "Odznaki wszędzie tam, gdzie pojawia się nazwa użytkownika"
+   },
+   "pkNot105a": {
+      "message": "Statystyki czatu, wzmianki, notatki użytkowników i dziennik moderacji"
+   },
+   "pkNot105b": {
+      "message": "Wyróżnianie ról, ukrywanie osób i osób priorytetowych"
+   },
+   "pkNot105c": {
+      "message": "Statystyki wideo, czas pracy, automatyczna jakość i przewijanie do przodu/do tyłu"
+   },
+   "pkNot105d": {
+      "message": "Nakładka czatu na strumieniu i menu wyświetlane prawym przyciskiem myszy w odtwarzaczu"
+   },
+   "pkNot105e": {
+      "message": "Interfejs został przetłumaczony na 7 języków"
+   },
+   "pkNot107a": {
+      "message": "Tryb tylko blokowania reklam — wyłącz wszystko inne jednym kliknięciem"
+   },
+   "pkNot107b": {
+      "message": "Pasek boczny: przypięte kanały, podział na żywo/offline i podgląd transmisji"
+   },
+   "pkNot107c": {
+      "message": "Automatyczna jakość i objętość; odznaki, emotki i zasady w sekcji Informacje o kanale"
+   },
+   "pkNot107d": {
+      "message": "Zauważalnie szybsza strona główna i mniej zacięć"
+   },
+   "pkNot107e": {
+      "message": "Ikona na pasku narzędzi otwiera teraz bezpośrednio panel ustawień"
+   },
+   "pkNot107f": {
+      "message": "Usunięte wiadomości zaznaczone na czacie; najnowsze jako pierwsze w dziennikach moderacji i czatów"
+   },
+   "pkNot107g": {
+      "message": "Pasek moderacji nad czatem — kliknij, aby otworzyć wydarzenia, usunięte wiadomości i limity czasu"
+   },
+   "pkNotPlaceholder": {
+      "message": "Zostaw notatkę na temat tej osoby…"
+   },
+   "pkNotun": {
+      "message": "Twoja notatka"
+   },
+   "pkOdulAlindi": {
+      "message": "Dzisiejsza nagroda odebrana 🎉"
+   },
+   "pkOdulBaslik": {
+      "message": "Codzienna nagroda"
+   },
+   "pkOdulGirisGerek": {
+      "message": "Musisz zalogować się do Kick"
+   },
+   "pkOdulHata": {
+      "message": "Nie udało się odczytać statusu nagrody"
+   },
+   "pkOdulIlerleme": {
+      "message": "{1} / {2} oglądane"
+   },
+   "pkOdulKontrol": {
+      "message": "Sprawdzam stan…"
+   },
+   "pkOdulYok": {
+      "message": "Dzisiaj nie ma żadnego wyzwania związanego z zegarkiem"
+   },
+   "pkOmAciklama": {
+      "message": "Wiadomości są wysyłane z Twojego konta. Okno czatu pozostaje nienaruszone, więc wersja robocza, którą piszesz, jest bezpieczna."
+   },
+   "pkOmAdet": {
+      "message": "Interwał"
+   },
+   "pkOmAdetD": {
+      "message": "Liczba wiadomości · co najmniej {1}"
+   },
+   "pkOmAdetEtiket": {
+      "message": "każdą wiadomość {1}"
+   },
+   "pkOmAdim1": {
+      "message": "1. Wybierz kanał"
+   },
+   "pkOmAdim2": {
+      "message": "2. Jak go wysłać?"
+   },
+   "pkOmAdim3": {
+      "message": "3. Wpisz interwał"
+   },
+   "pkOmAdim4": {
+      "message": "4. Napisz ogłoszenie"
+   },
+   "pkOmAralik": {
+      "message": "Ogłoszenie interwałowe"
+   },
+   "pkOmAralikD": {
+      "message": "Wysyła wymienione SMS-y po kolei."
+   },
+   "pkOmAyar": {
+      "message": "Wiadomość automatyczna"
+   },
+   "pkOmAyarD": {
+      "message": "Publikuje ogłoszenia w określonych odstępach czasu i automatycznie odpowiada na polecenia. Wysłano z Twojego konta."
+   },
+   "pkOmBaskaKanal": {
+      "message": "Edytujesz {1} . Zapisanie otwiera okno bota dla {1} ."
+   },
+   "pkOmBaslat": {
+      "message": "Zacznij"
+   },
+   "pkOmBaslik": {
+      "message": "Wiadomość automatyczna"
+   },
+   "pkOmDk": {
+      "message": "Interwał"
+   },
+   "pkOmDkD": {
+      "message": "Minuty · co najmniej {1}"
+   },
+   "pkOmEkle": {
+      "message": "Zapisz polecenie"
+   },
+   "pkOmEksikKip": {
+      "message": "Wybierz sposób wysłania przed zapisaniem."
+   },
+   "pkOmEksikKomut": {
+      "message": "Przed zapisaniem dodaj co najmniej jedno polecenie."
+   },
+   "pkOmEksikMetin": {
+      "message": "Zanim zapiszesz, napisz przynajmniej jedno ogłoszenie."
+   },
+   "pkOmKanalSecD": {
+      "message": "Na jakim kanale będzie działał bot? Na liście znajdują się tylko kanały, które moderujesz i Twój własny."
+   },
+   "pkOmKanalSecin": {
+      "message": "Wybierz kanał"
+   },
+   "pkOmKanalYok": {
+      "message": "Nie znaleziono kanałów, w których jesteś moderatorem."
+   },
+   "pkOmKayitli": {
+      "message": "Zapisane polecenia"
+   },
+   "pkOmKipDk": {
+      "message": "O minuty"
+   },
+   "pkOmKipMesaj": {
+      "message": "Według liczby wiadomości"
+   },
+   "pkOmKomut": {
+      "message": "Odpowiedzi na polecenia"
+   },
+   "pkOmKomutAd": {
+      "message": "Polecenie"
+   },
+   "pkOmKomutAdIpucu": {
+      "message": "!testuj"
+   },
+   "pkOmKomutCevap": {
+      "message": "Odpowiedz na to polecenie"
+   },
+   "pkOmKomutCevapIpucu": {
+      "message": "Witam!"
+   },
+   "pkOmKomutD": {
+      "message": "Gdy ktoś napisze polecenie, zapisana odpowiedź zostanie wysłana."
+   },
+   "pkOmKomutIpucu": {
+      "message": "!test = Witam! \n !discord = discord.gg/..."
+   },
+   "pkOmKomutSil": {
+      "message": "Usuń"
+   },
+   "pkOmKomutYok": {
+      "message": "Nie zapisano jeszcze żadnych poleceń."
+   },
+   "pkOmMenu": {
+      "message": "Wiadomość automatyczna"
+   },
+   "pkOmMetinD": {
+      "message": "Jedno ogłoszenie w każdym wierszu. W przypadku kilku linii są wysyłane rotacyjnie."
+   },
+   "pkOmMetinIpucu": {
+      "message": "Discord: ... \n Nie zapomnij zasubskrybować!"
+   },
+   "pkOmNerede": {
+      "message": "Użyj go w wierszu „Automatyczna wiadomość” w menu PureKick."
+   },
+   "pkBahsetTikla": {
+      "message": "Klikalne @wzmianki"
+   },
+   "pkBahsetTiklaD": {
+      "message": "Kliknięcie @imienia w wiadomości powoduje umieszczenie tej osoby w oknie czatu."
+   },
+   "pkBanDetay": {
+      "message": "Szczegółowe informacje o zakazie"
+   },
+   "pkBanDetayD": {
+      "message": "Kliknij wiersz dziennika, aby wyświetlić przyczynę, czas trwania, pozostały czas i status odwołania."
+   },
+   "pkBanDoldu": {
+      "message": "Wygasło"
+   },
+   "pkBanItiraz": {
+      "message": "Apel"
+   },
+   "pkBanItirazVar": {
+      "message": "Od tej kary otwarto apelację"
+   },
+   "pkBanKalan": {
+      "message": "Pozostał czas"
+   },
+   "pkBanKalici": {
+      "message": "Stałe"
+   },
+   "pkBanMesaj": {
+      "message": "Wiadomość"
+   },
+   "pkBanOtomatik": {
+      "message": "Automatyczny"
+   },
+   "pkBanSablon": {
+      "message": "Wstępnie ustawione przyczyny kar"
+   },
+   "pkBanSablonD": {
+      "message": "Zapisz powody, z których często korzystasz; jedno kliknięcie zapisuje je jako polecenie z karty profilu."
+   },
+   "pkBanSebep": {
+      "message": "Powód"
+   },
+   "pkBanSure": {
+      "message": "Czas trwania"
+   },
+   "pkBanYapan": {
+      "message": "Zastosowane przez"
+   },
+   "pkBindir": {
+      "message": "Czat nałożony na strumień"
+   },
+   "pkBindirAc": {
+      "message": "Włącz nakładkę"
+   },
+   "pkBindirAcD": {
+      "message": "Warstwa przepuszcza kliknięcia; nigdy nie blokuje przycisków gracza."
+   },
+   "pkBindirD": {
+      "message": "Czytaj dalej czat także na pełnym ekranie."
+   },
+   "pkBindirKonum": {
+      "message": "Pozycja"
+   },
+   "pkBindirNot": {
+      "message": "Wiadomości pochodzą z istniejącego połączenia czatu Kick; nie otwiera się żadnego nowego. Osoby, które ukrywasz, również tutaj pozostają ukryte."
+   },
+   "pkBirModerator": {
+      "message": "Moderator"
+   },
+   "pkBirModeratorIci": {
+      "message": "moderator"
+   },
+   "pkBirlestir": {
+      "message": "Połącz"
+   },
+   "pkBirlestirD": {
+      "message": "Zapisywane są tylko ustawienia w pliku; wszystko inne zostaje."
+   },
+   "pkBotYoksay": {
+      "message": "Nie wyróżniaj botów"
+   },
+   "pkBotYoksayD": {
+      "message": "Wiadomości z kont z plakietką bota nie są oznaczone kolorowym paskiem."
+   },
+   "pkBugun": {
+      "message": "dzisiaj"
+   },
+   "pkCevrimdisi": {
+      "message": "Nieaktywny"
+   },
+   "pkCevrimdisiEki": {
+      "message": "Offline · {1}"
+   },
+   "pkCezaYok": {
+      "message": "Obecnie nikt nie przekroczył limitu czasu."
+   },
+   "pkCrossAciklama": {
+      "message": "Akcja zostanie zastosowana do każdego wybranego kanału z osobna. Lista kanałów pochodzi z kanałów, które moderujesz."
+   },
+   "pkCrossAra": {
+      "message": "Wyszukaj kanały…"
+   },
+   "pkCrossAyar": {
+      "message": "Zakaz krzyżowy · Zbiorczy zakaz krzyżowy"
+   },
+   "pkCrossAyarD": {
+      "message": "Dodaje przycisk do karty profilu i wiersz „Zbiorcze blokowanie krzyżowe” do menu PureKick: ban, przekroczenie limitu czasu lub ułaskawienie jednej osoby — lub całej listy — na każdym kanale, który moderujesz jednocześnie."
+   },
+   "pkCrossBaslat": {
+      "message": "Zacznij"
+   },
+   "pkCrossBaslik": {
+      "message": "{1} — działanie wielokanałowe"
+   },
+   "pkCrossBekleme": {
+      "message": "Opóźnienie między kanałami (sekundy)"
+   },
+   "pkCrossBitti": {
+      "message": "Gotowe — {1} powiodło się, {2} nie powiodło się"
+   },
+   "pkCrossDugme": {
+      "message": "Zakaz krzyżowy"
+   },
+   "pkCrossDurdur": {
+      "message": "Zatrzymaj się"
+   },
+   "pkCrossHepsi": {
+      "message": "Zaznacz/wyczyść wszystko"
+   },
+   "pkCrossIlerleme": {
+      "message": "{1} / {2} · {3}"
+   },
+   "pkCrossKaldir": {
+      "message": "Odblokuj"
+   },
+   "pkCrossKanallar": {
+      "message": "Kanały"
+   },
+   "pkCrossListeYok": {
+      "message": "Nie można załadować listy kanałów — musisz zalogować się do Kick"
+   },
+   "pkCrossModYok": {
+      "message": "Nie znaleziono kanałów, w których jesteś moderatorem"
+   },
+   "pkCrossNerede": {
+      "message": "Użyj go z przycisku Blokada krzyżowa na karcie profilu lub z wiersza „Banowanie zbiorcze” w menu PureKick."
+   },
+   "pkCrossSebep": {
+      "message": "Powód"
+   },
+   "pkCrossSebepIpucu": {
+      "message": "opcjonalne"
+   },
+   "pkCrossSecili": {
+      "message": "Wybrano {1} / {2}"
+   },
+   "pkCrossSure": {
+      "message": "Czas trwania (minuty)"
+   },
+   "pkCrossSustur": {
+      "message": "Limit czasu"
+   },
+   "pkCrossTekNot": {
+      "message": "Szybka moderacja jest wyłączona; widoczny jest tylko przycisk przełączania międzykanałowego."
+   },
+   "pkCrossToplu": {
+      "message": "Zbiorczy zakaz krzyżowy"
+   },
+   "pkCrossTopluAciklama": {
+      "message": "Stosowane do każdego użytkownika, którego wymienisz, oddzielnie w każdym wybranym kanale. Lista kanałów pochodzi z kanałów, które moderujesz."
+   },
+   "pkCrossTopluAdlar": {
+      "message": "Nazwy użytkowników"
+   },
+   "pkCrossTopluBaslik": {
+      "message": "Zbiorcze działanie w wielu kanałach"
+   },
+   "pkCrossTopluBekleme": {
+      "message": "Oczekiwanie między użytkownikami (sekundy)"
+   },
+   "pkCrossTopluBeklemeNot": {
+      "message": "Jeden użytkownik jest przetwarzany kolejno we wszystkich wybranych kanałach. Oczekiwanie ma zastosowanie tylko w przypadku przejścia do następnego użytkownika — co najmniej {1} sekund."
+   },
+   "pkCrossTopluIpucu": {
+      "message": "alice, bob, carol \n lub po jednym w wierszu"
+   },
+   "pkCrossTopluSayi": {
+      "message": "Użytkownicy {1}"
+   },
+   "pkCrossYasakla": {
+      "message": "Zakaz"
+   },
+   "pkCrossYukleniyor": {
+      "message": "Ładowanie kanałów…"
+   },
+   "pkDisaAktar": {
+      "message": "Eksportuj"
+   },
+   "pkDkOnce": {
+      "message": "{1} min temu"
+   },
+   "pkDropsAciklama": {
+      "message": "Aktywne kampanie, których nie możesz przegapić."
+   },
+   "pkDropsMenu": {
+      "message": "Aktywne zrzuty – dzienna nagroda"
+   },
+   "pkEkle": {
+      "message": "Dodaj"
+   },
+   "pkEkranGoruntusu": {
+      "message": "Zrzut ekranu"
+   },
+   "pkEkranGoruntusuAl": {
+      "message": "Zrób zrzut ekranu"
+   },
+   "pkEkranGoruntusuD": {
+      "message": "Pobiera bieżącą klatkę w formacie PNG."
+   },
+   "pkVideoKayit": {
+      "message": "Rejestrator wideo"
+   },
+   "pkEminMisin": {
+      "message": "Czy jesteś pewien?"
+   },
+   "pkEmoteOnizleme": {
+      "message": "Podgląd emotki"
+   },
+   "pkKisiOncelikliSayi": {
+      "message": "{1} ludzie są priorytetem."
+   },
+   "pkKonumSagAlt": {
+      "message": "Prawy dolny róg"
+   },
+   "pkKonumSagUst": {
+      "message": "U góry po prawej"
+   },
+   "pkKonumSolAlt": {
+      "message": "Na dole po lewej"
+   },
+   "pkKonumSolUst": {
+      "message": "U góry po lewej"
+   },
+   "pkKopyaKorumasi": {
+      "message": "Niektóre strumienie są chronione przed kopiowaniem; przeglądarka następnie blokuje przechwytywanie."
+   },
+   "pkKorumaAcikMetin": {
+      "message": "Reklamy typu „kick” są blokowane."
+   },
+   "pkKorumaKapaliMetin": {
+      "message": "Ochrona jest wstrzymana."
+   },
+   "pkKullaniciAdi": {
+      "message": "Nazwa użytkownika"
+   },
+   "pkKullaniciAdiBos": {
+      "message": "Nazwa użytkownika (puste = wszyscy)"
+   },
+   "pkKullaniciBul": {
+      "message": "Znajdź użytkownika"
+   },
+   "pkKullaniciNotlari": {
+      "message": "Notatki użytkownika"
+   },
+   "pkKullaniciNotlariD": {
+      "message": "Zachowuje prywatną notatkę na karcie profilu."
+   },
+   "pkKuralAdvertising": {
+      "message": "Reklama"
+   },
+   "pkKuralBullying": {
+      "message": "Znęcanie się"
+   },
+   "pkKuralDoxxing": {
+      "message": "Doxxing"
+   },
+   "pkKuralDrugs": {
+      "message": "Narkotyki"
+   },
+   "pkKuralExtremism": {
+      "message": "Ekstremizm"
+   },
+   "pkKuralGambling": {
+      "message": "Hazard"
+   },
+   "pkKuralHarassment": {
+      "message": "Nękanie"
+   },
+   "pkKuralHate": {
+      "message": "Mowa nienawiści"
+   },
+   "pkKuralHateSpeech": {
+      "message": "Mowa nienawiści"
+   },
+   "pkKuralHatefulConduct": {
+      "message": "Nienawistne zachowanie"
+   },
+   "pkKuralIllegal": {
+      "message": "Nielegalne treści"
+   },
+   "pkKuralIllegalActivity": {
+      "message": "Nielegalna działalność"
+   },
+   "pkKuralImpersonation": {
+      "message": "Podszywanie się"
+   },
+   "pkKuralKabul": {
+      "message": "Automatycznie akceptuj zasady czatu"
+   },
+   "pkKuralKabulD": {
+      "message": "Akceptuje okno dialogowe z zasadami czatu, gdy wchodzisz na kanał, który ma zasady. Domyślnie wyłączone — działa w Twoim imieniu, więc włączenie go zależy od Ciebie."
+   },
+   "pkKuralMisinfo": {
+      "message": "Dezinformacja"
+   },
+   "pkKuralMisinformation": {
+      "message": "Dezinformacja"
+   },
+   "pkKuralNudity": {
+      "message": "Nagość"
+   },
+   "pkKuralProfanity": {
+      "message": "Wulgaryzmy"
+   },
+   "pkKuralScam": {
+      "message": "Oszustwo"
+   },
+   "pkKuralSelfHarm": {
+      "message": "Samookaleczenie"
+   },
+   "pkKuralSexual": {
+      "message": "Treść seksualna"
+   },
+   "pkKuralSexualContent": {
+      "message": "Treść seksualna"
+   },
+   "pkKuralSpam": {
+      "message": "Spam"
+   },
+   "pkKuralTerrorism": {
+      "message": "Terroryzm"
+   },
+   "pkKuralThreats": {
+      "message": "Zagrożenia"
+   },
+   "pkKuralUnderage": {
+      "message": "Nieletni"
+   },
+   "pkKuralViolence": {
+      "message": "Przemoc"
+   },
+   "pkKuralWeapons": {
+      "message": "Broń"
+   },
+   "pkKurtarilanBaslik": {
+      "message": "Czat wyczyszczony — ostatnie wiadomości {1}"
+   },
+   "pkMBahset": {
+      "message": "Wspomnij tę osobę"
+   },
+   "pkMDaralt": {
+      "message": "Zwiń"
+   },
+   "pkMGenislet": {
+      "message": "Rozwiń"
+   },
+   "pkMGizle": {
+      "message": "Ukryj tę wiadomość"
+   },
+   "pkMKopyala": {
+      "message": "Skopiuj tekst"
+   },
+   "pkMenuArayuz": {
+      "message": "Interfejs"
+   },
+   "pkMenuKenar": {
+      "message": "Pasek boczny"
+   },
+   "pkMenuKullaniciKarti": {
+      "message": "Karta użytkownika"
+   },
+   "pkMenuSohbet": {
+      "message": "Czat"
+   },
+   "pkMesajEylemleri": {
+      "message": "Działania po najechaniu wiadomością"
+   },
+   "pkMesajEylemleriD": {
+      "message": "Najedź kursorem na wiadomość, aby wyświetlić przyciski kopiowania, wzmianki, sygnatury czasowej, zwijania i ukrywania."
+   },
+   "pkMesajGizli": {
+      "message": "Ukryłeś tę wiadomość"
+   },
+   "pkMesajSayisi": {
+      "message": "Komunikaty {1}"
+   },
+   "pkMesajYok": {
+      "message": "Nie ma jeszcze żadnych wiadomości."
+   },
+   "pkMesajiGizle": {
+      "message": "Ukryj"
+   },
+   "pkMesajiGoster": {
+      "message": "Pokaż"
+   },
+   "pkMesajlar": {
+      "message": "Wiadomości"
+   },
+   "pkMesajlariGoster": {
+      "message": "Pokaż wiadomości"
+   },
+   "pkMesajlariniGizle": {
+      "message": "Ukryj ich wiadomości"
+   },
+   "pkModBirMesajSilindi": {
+      "message": "Wiadomość została usunięta"
+   },
+   "pkModBos": {
+      "message": "Brak działań moderacyjnych od chwili dołączenia do tego kanału. Tutaj pojawiają się bany, limity czasu i usunięcia."
+   },
+   "pkModCezaKaldirdi": {
+      "message": "{1} usunęło karę z {2}"
+   },
+   "pkModGunlugu": {
+      "message": "Dziennik moderacji"
+   },
+   "pkModGunluguD": {
+      "message": "Usunięte wiadomości, bany/przekroczenia limitu czasu i aktywne kary."
+   },
+   "pkModIzle": {
+      "message": "Oglądaj wydarzenia na czacie"
+   },
+   "pkModIzleD": {
+      "message": "Słucha istniejącego połączenia Kick; żadne nowe połączenie nie jest otwierane."
+   },
+   "pkModOtoSilindi": {
+      "message": "Wiadomość {1} została usunięta przez {2}"
+   },
+   "pkModSekmeOlaylar": {
+      "message": "Umiarkowanie"
+   },
+   "pkModSekmeSilinen": {
+      "message": "Usunięte wiadomości"
+   },
+   "pkModSekmeSustur": {
+      "message": "Limity czasu"
+   },
+   "pkModSerit": {
+      "message": "Pasek moderacji na czacie"
+   },
+   "pkModSeritD": {
+      "message": "Dodaje pasek na górze czatu; kliknij, aby otworzyć panel moderacji."
+   },
+   "pkModSilindi": {
+      "message": "Wiadomość od {1} została usunięta"
+   },
+   "pkModSohbetTemizlendi": {
+      "message": "Czat został wyczyszczony"
+   },
+   "pkModSohbette": {
+      "message": "Pokaż wydarzenia moderacyjne na czacie"
+   },
+   "pkModSohbetteD": {
+      "message": "Zakazy, przekroczenia limitu czasu i kasacje czatu pojawiają się w strumieniu czatu. Kick pokazuje je tylko moderatorom."
+   },
+   "pkModSusturdu": {
+      "message": "{1} przekroczył limit czasu {2} dla {3}"
+   },
+   "pkModYasakladi": {
+      "message": "{1} zbanowany {2}"
+   },
+   "pkModerasyon": {
+      "message": "Umiarkowanie"
+   },
+   "pkMsjKisa": {
+      "message": "Wiadomość {1}"
+   },
+   "pkNot1015a": {
+      "message": "Masowe usuwanie wiadomości — usuwa każdą wiadomość zawierającą wybrane słowa"
+   },
+   "pkNot1015b": {
+      "message": "Przebudowano automatyczną wiadomość: ustawienia dla poszczególnych kanałów, własne okno bota, działają w tle"
+   },
+   "pkNot1015c": {
+      "message": "Wszystkie powtarzające się identyczne wiadomości na czacie są teraz rejestrowane — statystyki i usuwanie zbiorcze były zaniżone"
+   },
+   "pkNot1015d": {
+      "message": "Pierwsze uruchomienie funkcji; otwórz go ponownie w sekcji Zaawansowane"
+   },
+   "pkNot1015e": {
+      "message": "Cross-Ban zapisuje teraz kanał źródłowy i osobę, która go uruchomiła, jako przyczynę bana"
+   },
+   "pkNot1015f": {
+      "message": "Karta profilu pokazuje dokładną datę, kiedy użytkownik odwiedził kanał"
+   },
+   "pkNot1015g": {
+      "message": "Naprawiono pobieranie VOD — zatrzymywało się po pierwszym segmencie"
+   },
+   "pkNot101a": {
+      "message": "Ogłoszenia w menu i plakietka z powiadomieniem"
+   },
+   "pkKanalSahibi": {
+      "message": "Właściciel kanału"
+   },
+   "pkKanaliGizle": {
+      "message": "Ukryj ten kanał"
+   },
+   "pkKanaliTakip": {
+      "message": "Podążanie za kanałem"
+   },
+   "pkKapali": {
+      "message": "wyciszony"
+   },
+   "pkKapat": {
+      "message": "Zamknij"
+   },
+   "pkKareyiKaydet": {
+      "message": "Zapisz bieżącą klatkę"
+   },
+   "pkKartBilgiNot": {
+      "message": "Pobierane z własnego punktu końcowego Kicka bez plików cookie, raz na osobę, a następnie przechowywane w pamięci."
+   },
+   "pkKartGenis": {
+      "message": "Karta o szerokim profilu"
+   },
+   "pkKartGenisD": {
+      "message": "Poszerza wąską kartę Kick, dzięki czemu dodane informacje, notatki i bloki moderacyjne nie są ciasne."
+   },
+   "pkKartMesajlar": {
+      "message": "Najnowsze wiadomości i odpowiedzi"
+   },
+   "pkKartMesajlarD": {
+      "message": "Pokazuje ostatnie wiadomości danej osoby i wysłane do niej odpowiedzi w postaci zakładek na karcie profilu."
+   },
+   "pkKartSabit": {
+      "message": "Przypnij kartę profilu"
+   },
+   "pkKartSabitD": {
+      "message": "Dodaje przycisk do karty; naciśnięcie go utrzymuje czytelną kopię na ekranie."
+   },
+   "pkKartSagTik": {
+      "message": "Menu wyświetlane prawym przyciskiem myszy na kartach strumieniowych"
+   },
+   "pkKartSagTikD": {
+      "message": "Kliknij prawym przyciskiem myszy kanał na stronie głównej lub w kategoriach, aby uzyskać skróty. Shift + kliknięcie prawym przyciskiem myszy otwiera menu przeglądarki."
+   },
+   "pkKartTakipci": {
+      "message": "Liczba obserwujących na karcie"
+   },
+   "pkKartTakipciD": {
+      "message": "Pobierane z własnego punktu końcowego Kicka bez plików cookie, raz na osobę."
+   },
+   "pkKartYanit": {
+      "message": "Odpowiedzi do tej osoby"
+   },
+   "pkKartYanitD": {
+      "message": "„Ostatnie wiadomości” pokazują, co napisali; ten blok pokazuje, co do nich napisano."
+   },
+   "pkKartiSabitle": {
+      "message": "Przypnij tę kartę"
+   },
+   "pkKategoriGizleYok": {
+      "message": "Nie ukryłeś jeszcze kategorii. Otwórz stronę kategorii i użyj przycisku „Ukryj kategorię” obok tytułu."
+   },
+   "pkKategoriGizlemeyiKullan": {
+      "message": "Użyj ukrywania kategorii"
+   },
+   "pkKategoriGizlemeyiKullanD": {
+      "message": "Wyłącz i wszystkie pokażą się ponownie."
+   },
+   "pkKategoriGoster": {
+      "message": "Pokaż tę kategorię ponownie"
+   },
+   "pkKatilim": {
+      "message": "Udział"
+   },
+   "pkKatilimD": {
+      "message": "Udział widzów piszących na czacie"
+   },
+   "pkKatilmaTakip": {
+      "message": "Dołącz i śledź informacje"
+   },
+   "pkKatilmaTakipD": {
+      "message": "Data dołączenia na Kick, czas obserwowania kanału, długość subskrypcji."
+   },
+   "pkKaydedildi": {
+      "message": "zapisane"
+   },
+   "pkKaydet": {
+      "message": "Zapisz"
+   },
+   "pkKayitNoktasi": {
+      "message": "Gdzie skończyłeś w VOD"
+   },
+   "pkKayitNoktasiD": {
+      "message": "Zostaw w połowie poprzednią transmisję, a wyświetli się opcja powrotu do tej sekundy."
+   },
+   "pkKayitNoktasiHatirla": {
+      "message": "Zapamiętaj moje stanowisko"
+   },
+   "pkKayitNoktasiHatirlaD": {
+      "message": "Pozycja jest przechowywana wyłącznie na Twoim urządzeniu."
+   },
+   "pkKayitliNTemizle": {
+      "message": "Wyczyść zapisane pozycje {1}"
+   },
+   "pkKaynagiYeniSekmede": {
+      "message": "Otwórz źródło w nowej karcie ↗"
+   },
+   "pkKaynakBulunuyor": {
+      "message": "Znalezienie źródła…"
+   },
+   "pkKaynakYok": {
+      "message": "Nie znaleziono źródła tego strumienia."
+   },
+   "pkKelimeVurgu": {
+      "message": "Zaznacz na czacie"
+   },
+   "pkKelimeVurguD": {
+      "message": "Wiadomości zawierające te słowa otrzymują ten sam zielony pasek, co osoby priorytetowe."
+   },
+   "pkKenarGrup": {
+      "message": "Podziel online/offline"
+   },
+   "pkKenarGrupD": {
+      "message": "Dzieli obserwowane kanały na grupy online i offline. System Show More firmy Kick zachowuje swoje domyślne zachowanie."
+   },
+   "pkKenarGrupSayi": {
+      "message": "Kanały wyświetlane na listach online/offline"
+   },
+   "pkKenarGrupSayiD": {
+      "message": "Wybierz liczbę kanałów wyświetlanych w każdej grupie (1–20). Przycisk Pokaż więcej programu Kick zachowuje swoje domyślne zachowanie."
+   },
+   "pkKenarGrupLimit": {
+      "message": "Zastosuj limit liczby kanałów"
+   },
+   "pkKenarGrupLimitD": {
+      "message": "Ogranicza liczbę kanałów wyświetlanych na listach online i offline, korzystając z poniższej wartości 1–20. Niezależne od grupowania online/offline."
+   },
+   "pkKickDahaFazlaGizle": {
+      "message": "Ukryj przyciski „Pokaż więcej/pokaż mniej” kopnięcia"
+   },
+   "pkKickDahaFazlaGizleD": {
+      "message": "Ukrywa przyciski rozwijania i zwijania programu Kick na liście obserwowanych kanałów."
+   },
+   "pkKendiMenum": {
+      "message": "Otwórz moje własne menu"
+   },
+   "pkKendiMenumD": {
+      "message": "Shift + kliknięcie prawym przyciskiem myszy zawsze otwiera menu przeglądarki."
+   },
+   "pkKezSayisi": {
+      "message": "{1} ×"
+   },
+   "pkKickIleGiris": {
+      "message": "Zaloguj się za pomocą Kicka"
+   },
+   "pkKickeKatildi": {
+      "message": "Dołączył do Kicka"
+   },
+   "pkKisaDakika": {
+      "message": "m"
+   },
+   "pkKisaGun": {
+      "message": "d"
+   },
+   "pkKisaSaat": {
+      "message": "godz"
+   },
+   "pkKisiGizleme": {
+      "message": "Ukryj osobę"
+   },
+   "pkKisiGizlemeD": {
+      "message": "Ich wiadomości znikają tylko na ekranie."
+   },
+   "pkKisiGizli": {
+      "message": "{1} ludzie ukryci."
+   },
+   "pkKisiMesajYok": {
+      "message": "W tej sesji nie było żadnych wiadomości od tego użytkownika."
+   },
+   "pkOmNot": {
+      "message": "Polecenie musi rozpocząć wiadomość. Każde polecenie odpowiada najwyżej raz na 10 sekund; Twoje własne wiadomości nie powodują niczego."
+   },
+   "pkOmOnayBaslik": {
+      "message": "Uruchomić bota?"
+   },
+   "pkOmOnayGizle": {
+      "message": "Nie pokazuj tego więcej"
+   },
+   "pkOmOnayKomut": {
+      "message": "Otworzy się okno bota dla {1} i zacznie odpowiadać na polecenia. Zamknięcie okna zatrzymuje bota."
+   },
+   "pkOmOnayMetin": {
+      "message": "Ogłoszenia zaczną być wysyłane do {1} w wybranym przez Ciebie odstępie czasu. Bot działa w tym oknie; zamknięcie zakładki zatrzymuje to."
+   },
+   "pkOmOzet": {
+      "message": "Ogłoszenia {1} · Komendy {2}"
+   },
+   "pkOmPopoutD": {
+      "message": "Bot działa w tym oknie. Zapisanie zamyka ustawienia, a bot działa dalej; zamknięcie karty zatrzymuje bota, a ponowne otwarcie go wznawia."
+   },
+   "pkOmSecAciklama": {
+      "message": "Wybierz kanał — otworzy się jego okno bot i tam dokończ ustawienia. Bot działa w tym oknie."
+   },
+   "pkOmYetkiYok": {
+      "message": "Nie możesz używać automatycznych wiadomości na tym kanale — nie jesteś moderatorem. Wybierz poniżej kanał, do którego masz dostęp."
+   },
+   "pkOncelikCikar": {
+      "message": "Usuń priorytet"
+   },
+   "pkOncelikTemizleN": {
+      "message": "Jasne priorytety ({1})"
+   },
+   "pkOncelikliKisiler": {
+      "message": "Osoby priorytetowe"
+   },
+   "pkOncelikliKisilerD": {
+      "message": "Ich wiadomości są oznaczone zielonym znacznikiem."
+   },
+   "pkOncelikliYap": {
+      "message": "Zrób priorytet"
+   },
+   "pkOnizleme": {
+      "message": "Podgląd paska bocznego"
+   },
+   "pkOnizlemeD": {
+      "message": "Najedź kursorem na kanał w lewym menu, aby otworzyć małą kartę."
+   },
+   "pkOnizlemeKarti": {
+      "message": "Podgląd karty"
+   },
+   "pkOnizlemeKartiD": {
+      "message": "Miniatura strumienia, tytuł, kategoria i liczba widzów."
+   },
+   "pkOtoClaim": {
+      "message": "Odbierz dzienną nagrodę automatycznie"
+   },
+   "pkOtoClaimD": {
+      "message": "Odbierz dzienną nagrodę za czas oglądania Kick, gdy spełnisz wymagania. Tylko wyzwanie związane z czasem oglądania – nic innego nie zostało poruszone."
+   },
+   "pkOtoSes": {
+      "message": "Automatyczna głośność"
+   },
+   "pkOtoSesD": {
+      "message": "Otwiera każdy strumień z żądaną głośnością."
+   },
+   "pkOtoSesNot": {
+      "message": "„Auto” zapamiętuje ostatnią ustawioną głośność i stosuje ją do każdego strumienia. Jeśli zmienisz głośność w połowie strumienia, pozostanie to w spokoju."
+   },
+   "pkOtoTiyatro": {
+      "message": "Automatyczny tryb kinowy"
+   },
+   "pkOtoTiyatroD": {
+      "message": "Poszerza odtwarzacz raz po otwarciu kanału."
+   },
+   "pkOtomatikKalite": {
+      "message": "Automatyczna jakość"
+   },
+   "pkOtomatikKaliteD": {
+      "message": "Wybiera preferowaną jakość jednorazowo po otwarciu kanału."
+   },
+   "pkOturum": {
+      "message": "Sesja"
+   },
+   "pkOturumSuresiEki": {
+      "message": "Długość sesji: {1}"
+   },
+   "pkOynatmaHizi": {
+      "message": "Szybkość odtwarzania"
+   },
+   "pkOzellikKapali": {
+      "message": "Ta funkcja jest obecnie wyłączona."
+   },
+   "pkPaneliAc": {
+      "message": "Otwórz panel"
+   },
+   "pkParcaListesi": {
+      "message": "Pobieram listę segmentów…"
+   },
+   "pkParcaYok": {
+      "message": "żadnych segmentów"
+   },
+   "pkProfilBuyuk": {
+      "message": "Wyświetl zdjęcie profilowe w dużym formacie"
+   },
+   "pkProfilKartiBilgisi": {
+      "message": "Informacje o karcie profilu"
+   },
+   "pkProfilKartiBilgisiD": {
+      "message": "Kliknij osobę na czacie, aby zobaczyć jej historię na karcie."
+   },
+   "pkProfiliAc": {
+      "message": "Otwórz profil"
+   },
+   "pkPureKick": {
+      "message": "Mod PureKick"
+   },
+   "pkPureKickAciklama": {
+      "message": "Blokowanie reklam dla Kick."
+   },
+   "pkRenkleriSifirla": {
+      "message": "Przywróć domyślne kolory"
+   },
+   "pkRolEtiket": {
+      "message": "Rola"
+   },
+   "pkRolNot": {
+      "message": "Role pochodzą z własnego połączenia czatu Kicka, więc rozpoznawane są tylko osoby, które napiszą po otwarciu strony."
+   },
+   "pkRolVurgulama": {
+      "message": "Podkreślenie roli"
+   },
+   "pkRolVurgulamaD": {
+      "message": "Wiadomości nadawcy, moderatora, VIP-a i subskrybenta są oznaczone kolorowym paskiem."
+   },
+   "pkRol_bot": {
+      "message": "Bot"
+   },
+   "pkRol_broadcaster": {
+      "message": "Nadawca"
+   },
+   "pkRol_founder": {
+      "message": "Założyciel"
+   },
+   "pkRol_moderator": {
+      "message": "Moderator"
+   },
+   "pkRol_og": {
+      "message": "OG"
+   },
+   "pkRol_staff": {
+      "message": "Kopnij personel"
+   },
+   "pkRol_sub_gifter": {
+      "message": "Sub-prezenter"
+   },
+   "pkRol_subscriber": {
+      "message": "Abonent"
+   },
+   "pkRol_verified": {
+      "message": "Zweryfikowano"
+   },
+   "pkRol_vip": {
+      "message": "VIP-a"
+   },
+   "pkSaOnce": {
+      "message": "{1} godz. temu"
+   },
+   "pkSabitKaldir": {
+      "message": "Odepnij"
+   },
+   "pkSabitKanalAyar": {
+      "message": "Przypięte kanały na górze"
+   },
+   "pkSabitKanalAyarD": {
+      "message": "Najedź kursorem na kanał na pasku bocznym, aby odsłonić pinezkę. Przypięte kanały pozostają na górze listy obserwowanych."
+   },
+   "pkSabitKanallar": {
+      "message": "Przypinanie kanału"
+   },
+   "pkSabitKanallarD": {
+      "message": "Trzymaj kanały, które obserwujesz, na górze listy."
+   },
+   "pkSabitle": {
+      "message": "Przypnij"
+   },
+   "pkSadeceEmote": {
+      "message": "Wiadomości zawierające wyłącznie emotki"
+   },
+   "pkSadeceEmoteD": {
+      "message": "Wiadomości bez tekstu"
+   },
+   "pkSadeceEmoteEki": {
+      "message": "{1} Wiadomości zawierające wyłącznie emotki"
+   },
+   "pkSadeceEmoteMesajlari": {
+      "message": "Wiadomości zawierające wyłącznie emotki"
+   },
+   "pkSadeceReklam": {
+      "message": "Tylko blokowanie reklam"
+   },
+   "pkSadeceReklamAcik": {
+      "message": "Włączone jest tylko blokowanie reklam. Włączenie dowolnej innej funkcji powoduje opuszczenie tego trybu."
+   },
+   "pkSadeceReklamBtn": {
+      "message": "Włącz"
+   },
+   "pkSadeceReklamD": {
+      "message": "Wyłącza wszystkie inne funkcje i nadal blokuje tylko reklamy."
+   },
+   "pkSadeceReklamRozet": {
+      "message": "Aktywny"
+   },
+   "pkSagTikMenusu": {
+      "message": "Kliknij menu prawym przyciskiem myszy na odtwarzaczu"
+   },
+   "pkSagTikMenusuD": {
+      "message": "Aktywne tylko na samym filmie."
+   },
+   "pkSayfaReklamlari": {
+      "message": "Reklamy na stronie"
+   },
+   "pkSayfaReklamlariD": {
+      "message": "Ukrywa boksy reklamowe w interfejsie Kick."
+   },
+   "pkScEtiket": {
+      "message": "Znacznik stanu czatu"
+   },
+   "pkScEtiketD": {
+      "message": "Pokazuje „Na czacie” lub „Offline 5m” obok nazw na liście."
+   },
+   "pkScFiltre": {
+      "message": "Filtr rozmów"
+   },
+   "pkScFiltreD": {
+      "message": "Dodaje przyciski Wszystkie / Na czacie / Offline nad listą."
+   },
+   "pkScSayac": {
+      "message": "Zwiększona liczba rozmów"
+   },
+   "pkScSayacD": {
+      "message": "Pokazuje, ile osób widziałeś w tej sesji, nawet jeśli Kick zmniejszy swoją liczbę."
+   },
+   "pkSebepYazin": {
+      "message": "Wpisz powód…"
+   },
+   "pkSebepYok": {
+      "message": "Nie dodałeś jeszcze żadnych ustawionych powodów."
+   },
+   "pkSecili": {
+      "message": "Wybrano {1}"
+   },
+   "pkSekmeGenel": {
+      "message": "Przegląd"
+   },
+   "pkSekmeHakkinda": {
+      "message": "O"
+   },
+   "pkSekmeIci": {
+      "message": "Otwórz linki wewnątrz strony"
+   },
+   "pkSekmeIciD": {
+      "message": "YouTube, X, Instagram, Reddit, klip Kick, klip Twitch i linki do transmisji strumieniowej na czacie otwierają się w małym odtwarzaczu."
+   },
+   "pkSekmeIciNot": {
+      "message": "Tylko te witryny otwierają się w trybie inline; nieznany link otwiera się jak zwykle w nowej karcie. CTRL+kliknięcie zawsze otwiera nową kartę."
+   },
+   "pkLinkOnizleme": {
+      "message": "Karty podglądu na żywo"
+   },
+   "pkLinkOnizlemeD": {
+      "message": "Automatycznie wyświetla karty podglądu miniatur na żywo pod linkami na czacie."
+   },
+   "pkSendenBahsedenler": {
+      "message": "Kto o Tobie wspomniał"
+   },
+   "pkSes": {
+      "message": "Objętość"
+   },
+   "pkSesBip": {
+      "message": "Sygnał dźwiękowy"
+   },
+   "pkSesCinlama": {
+      "message": "Dzwonek"
+   },
+   "pkSesDamla": {
+      "message": "Upuść"
+   },
+   "pkSesKapali": {
+      "message": "Wyłączone"
+   },
+   "pkSesOto": {
+      "message": "Automat"
+   },
+   "pkSesPuf": {
+      "message": "Puff"
+   },
+   "pkSifirdan": {
+      "message": "Od zera"
+   },
+   "pkSifirdanD": {
+      "message": "Wszystko, co jest bieżące, zostanie usunięte i zastąpione plikiem."
+   },
+   "pkSilAciklama": {
+      "message": "Wiadomości zawierające wyzwalacz są usuwane; nikt nie przekroczył limitu czasu. Wiadomości nadawcy, moderatorów i Twoje własne są pomijane."
+   },
+   "pkSilAyar": {
+      "message": "Wiadomość zbiorcza Usuń"
+   },
+   "pkSilAyarD": {
+      "message": "Usuwa wiadomości zawierające wybrane słowa lub frazy. Po włączeniu w menu PureKick pojawi się wiersz „Masowe usuwanie wiadomości”."
+   },
+   "pkSilBaslik": {
+      "message": "Wiadomość zbiorcza Usuń"
+   },
+   "pkSilGecmis": {
+      "message": "Zastosuj do dotychczasowych wiadomości"
+   },
+   "pkSilMenu": {
+      "message": "Wiadomość zbiorcza Usuń"
+   },
+   "pkSilNerede": {
+      "message": "Używane w wierszu „Masowe usuwanie wiadomości” w menu PureKick."
+   },
+   "pkSilNot": {
+      "message": "Możesz zamknąć to okno, gdy włączone jest oglądanie na żywo; zatrzymuje się po opuszczeniu kanału lub wyłączeniu tego ustawienia. Skanowanie historii obejmuje tylko wiadomości widoczne w tej sesji."
+   },
+   "pkSilSayac": {
+      "message": "Usunięto: {1}"
+   },
+   "pkSilTetikD": {
+      "message": "Jedno słowo lub fraza w wierszu. Podziel według linii, ponieważ fraza może zawierać przecinki."
+   },
+   "pkSilYetkiYok": {
+      "message": "Nie możesz użyć usuwania zbiorczego na tym kanale – nie jesteś moderatorem."
+   },
+   "pkSilindiEtiket": {
+      "message": "(usunięte)"
+   },
+   "pkSilinenGoster": {
+      "message": "Pokaż usunięte wiadomości"
+   },
+   "pkSilinenGosterD": {
+      "message": "Usunięte wiadomości pozostają widoczne, przyciemnione i oznaczone jako „(usunięte)”."
+   },
+   "pkSilinenYok": {
+      "message": "Nie ma jeszcze usuniętych wiadomości."
+   },
+   "pkSohbetCikarildi": {
+      "message": "Usunięto z czatu, na którym oglądałeś tę sesję; żadne dane nie opuszczają Twojego urządzenia."
+   },
+   "pkSohbetEdenler": {
+      "message": "Rozmowy"
+   },
+   "pkSohbetIstatistikleri": {
+      "message": "Statystyki czatu"
+   },
+   "pkSohbetIstatistikleriBaslik": {
+      "message": "Statystyki czatu"
+   },
+   "pkSohbetIstatistikleriD": {
+      "message": "Wiadomości/min, najaktywniejsi rozmówcy, użycie emotek."
+   },
+   "pkSohbetKaydi": {
+      "message": "Dziennik czatu"
+   },
+   "pkSohbetciIpucu": {
+      "message": "Kopnięcie: {1} · PureKick widział osoby {2} w tej sesji"
+   },
+   "pkSohbetciListesi": {
+      "message": "Lista rozmów"
+   },
+   "pkSohbetciListesiD": {
+      "message": "Funkcje PureKick dodaje do listy widzów Kick."
+   },
+   "pkSohbette": {
+      "message": "Na czacie"
+   },
+   "pkSonGuncellemeEki": {
+      "message": "Ostatnia aktualizacja: {1}"
+   },
+   "pkSonMesajiIpucu": {
+      "message": "Ostatnia wiadomość: {1} · {2} ogółem wiadomości"
+   },
+   "pkSonMesajlar": {
+      "message": "Najnowsze wiadomości"
+   },
+   "pkSonucSayisiN": {
+      "message": "Wyniki {1}"
+   },
+   "pkSonucYok": {
+      "message": "Brak wyników."
+   },
+   "pkSsAyarlari": {
+      "message": "Zachowanie na zrzucie ekranu"
+   },
+   "pkSsBirincil": {
+      "message": "Normalne kliknięcie"
+   },
+   "pkSsIkincil": {
+      "message": "CTRL + kliknięcie"
+   },
+   "pkSsIndir": {
+      "message": "Pobierz do pliku"
+   },
+   "pkSsPano": {
+      "message": "Skopiuj do schowka"
+   },
+   "pkSure": {
+      "message": "Czas trwania"
+   },
+   "pkSureDakika": {
+      "message": "{1} minut"
+   },
+   "pkSureDakika1": {
+      "message": "1 minuta"
+   },
+   "pkSureGun": {
+      "message": "{1} dni"
+   },
+   "pkSureGun1": {
+      "message": "1 dzień"
+   },
+   "pkSureSaat": {
+      "message": "{1} godzin"
+   },
+   "pkSureSaat1": {
+      "message": "1 godzina"
+   },
+   "pkSureSaniye": {
+      "message": "{1} sekund"
+   },
+   "pkSureSaniye1": {
+      "message": "1 sekunda"
+   },
+   "pkSureSecenek": {
+      "message": "Opcje czasu trwania"
+   },
+   "pkSureSecenekD": {
+      "message": "Czas trwania wyświetlany po kliknięciu klepsydry obok wiadomości na czacie. W minutach, oddzielone przecinkami (1440 = 1 dzień)."
+   },
+   "pkSurumEki": {
+      "message": "Wersja {1}"
+   },
+   "pkSurumNotlari": {
+      "message": "Informacje o wydaniu"
+   },
+   "pkSurumNotlariD": {
+      "message": "Co się zmieniło w każdej wersji."
+   },
+   "pkSusturmaBitis": {
+      "message": "Kończy się: {1}"
+   },
+   "pkTAcikMenuKapat": {
+      "message": "Najpierw zamknij otwarte menu"
+   },
+   "pkTAyarlarIndirildi": {
+      "message": "Ustawienia wyeksportowane"
+   },
+   "pkTBaglantiKopyalandi": {
+      "message": "Link skopiowany do schowka"
+   },
+   "pkTCrossAdGir": {
+      "message": "Wprowadź co najmniej jedną nazwę użytkownika"
+   },
+   "pkTCrossKanalSec": {
+      "message": "Wybierz co najmniej jeden kanał"
+   },
+   "pkTGizlenenlerTemiz": {
+      "message": "Ukryte osoby usunięte"
+   },
+   "pkTGoruntuHazirDegil": {
+      "message": "Obraz nie jest gotowy"
+   },
+   "pkTIndirmeDesteklenmiyor": {
+      "message": "Ta przeglądarka nie może zapisywać plików"
+   },
+   "pkTIndirmeSuruyor": {
+      "message": "Pobieranie już trwa"
+   },
+   "pkTKaldiginYer": {
+      "message": "Miejsce, w którym przerwałeś: {1}"
+   },
+   "pkTKaliteMenusuAcilmadi": {
+      "message": "Menu jakości nie otworzyło się"
+   },
+   "pkTKaliteMenusuYok": {
+      "message": "Nie znaleziono menu jakości odtwarzacza"
+   },
+   "pkTKaliteOynaticiya": {
+      "message": "Jakość pozostawiona graczowi"
+   },
+   "pkTKaliteYok": {
+      "message": "{1} nie jest dostępny w tym strumieniu"
+   },
+   "pkTKanalEngelKalkti": {
+      "message": "{1} nie jest już ukryty"
+   },
+   "pkTKanalGizlemeKalkti": {
+      "message": "Kanał jest ponownie widoczny"
+   },
+   "pkTKanalGizlendi": {
+      "message": "Kanał ukryty"
+   },
+   "pkTKartAcilamadi": {
+      "message": "Nie można otworzyć karty — czat potrzebuje co najmniej jednej wiadomości"
+   },
+   "pkTKartSabitlendi": {
+      "message": "Karta przypięta — możesz ją przeciągnąć"
+   },
+   "pkTKategoriGizlendi": {
+      "message": "Kategoria ukryta"
+   },
+   "pkTKategoriGorunur": {
+      "message": "Kategoria jest ponownie widoczna"
+   },
+   "pkTKayitNoktalariTemiz": {
+      "message": "Zapisane pozycje zostały usunięte"
+   },
+   "pkTKelimeKaydedildi": {
+      "message": "Zapisano śledzone słowa"
+   },
+   "pkTKisiGizlendi": {
+      "message": "Wiadomości od {1} są ukryte"
+   },
+   "pkTKisiGorunur": {
+      "message": "{1} jest ponownie widoczny"
+   },
+   "pkTKisiOncelikli": {
+      "message": "{1} jest teraz priorytetem"
+   },
+   "pkTKisiSohbetteYok": {
+      "message": "Żadna widoczna wiadomość od tej osoby nie pozostaje na czacie"
+   },
+   "pkTKomutYazildi": {
+      "message": "Polecenie zostało wpisane w oknie czatu"
+   },
+   "pkTKopyalanamadi": {
+      "message": "Nie udało się skopiować tekstu"
+   },
+   "pkTKopyalandi": {
+      "message": "Tekst skopiowany do schowka"
+   },
+   "pkTKorumaAcildi": {
+      "message": "Ochrona włączona"
+   },
+   "pkTKorumaDuraklatildi": {
+      "message": "Ochrona wstrzymana"
+   },
+   "pkTKullaniciBulunamadi": {
+      "message": "Nie znaleziono takiego użytkownika"
+   },
+   "pkTMesajlarGeriGeldi": {
+      "message": "Ukryte wiadomości powróciły"
+   },
+   "pkTModGunluguKapali": {
+      "message": "Dziennik moderacji jest wyłączony"
+   },
+   "pkTOdulAlindi": {
+      "message": "🎉 Odebrana dzienna nagroda"
+   },
+   "pkTOmKaydedildi": {
+      "message": "Ustawienia automatycznych wiadomości zostały zapisane"
+   },
+   "pkTOmKomutBosluk": {
+      "message": "Polecenie nie może zawierać spacji"
+   },
+   "pkTOmKomutEklendi": {
+      "message": "Polecenie zapisane"
+   },
+   "pkTOmKomutEksik": {
+      "message": "Wprowadź polecenie i jego odpowiedź"
+   },
+   "pkTOmKomutGuncellendi": {
+      "message": "Zaktualizowano odpowiedź na polecenie"
+   },
+   "pkTOmPencereAcildi": {
+      "message": "Otwarto okno bota dla {1}"
+   },
+   "pkTOncelikKalkti": {
+      "message": "Priorytet usunięty z {1}"
+   },
+   "pkTOnceliklerTemiz": {
+      "message": "Priorytety wyczyszczone"
+   },
+   "pkTOturumGeriYuklendi": {
+      "message": "Przywrócono poprzednią sesję"
+   },
+   "pkTOynaticiYok": {
+      "message": "Nie znaleziono gracza"
+   },
+   "pkTOynaticiYokNokta": {
+      "message": "Nie znaleziono gracza."
+   },
+   "pkTOzellikAcildi": {
+      "message": "Włączono {1}"
+   },
+   "pkTOzellikKapatildi": {
+      "message": "{1} wyłączony"
+   },
+   "pkTPanoDesteklenmiyor": {
+      "message": "Ta przeglądarka nie może kopiować obrazów. Zamiast tego pobiera je"
+   },
+   "pkTRenklerSifirlandi": {
+      "message": "Resetowanie kolorów ról"
+   },
+   "pkTSadeceReklam": {
+      "message": "Włączono tylko blokadę reklam"
+   },
+   "pkTSeritYok": {
+      "message": "Sterowanie odtwarzaczem Kick jest teraz zamknięte. Najedź kursorem na odtwarzacz i spróbuj ponownie."
+   },
+   "pkTSifirlanamadi": {
+      "message": "Resetowanie nie powiodło się"
+   },
+   "pkTSifirlandi": {
+      "message": "Wszystko zresetowane, ładuję stronę ponownie"
+   },
+   "pkTSilBasladi": {
+      "message": "Oglądanie na żywo włączone — wyzwalacze {1}"
+   },
+   "pkTSilDurdu": {
+      "message": "Oglądanie na żywo zostało zatrzymane"
+   },
+   "pkTSilEslesmeYok": {
+      "message": "Brak pasujących wiadomości"
+   },
+   "pkTSohbetAlaniYok": {
+      "message": "Nie znaleziono obszaru czatu"
+   },
+   "pkTSohbetKutusuYok": {
+      "message": "Nie znaleziono okna czatu"
+   },
+   "pkTSsAlinamadi": {
+      "message": "Zrzut ekranu nie powiódł się"
+   },
+   "pkTSsKaydedildi": {
+      "message": "Zrzut ekranu został zapisany"
+   },
+   "pkTSsPanoya": {
+      "message": "Zrzut ekranu skopiowany do schowka"
+   },
+   "pkTSsYasak": {
+      "message": "W tym strumieniu nie można wykonywać zrzutów ekranu"
+   },
+   "pkTSureKaydedildi": {
+      "message": "Opcje czasu trwania zostały zapisane"
+   },
+   "pkTSusturmaHata": {
+      "message": "Nie udało się przekroczyć limitu czasu ( {1} )"
+   },
+   "pkTSusturuldu": {
+      "message": "Upłynął limit czasu {1} dla {2}"
+   },
+   "pkTTemaKaydedildi": {
+      "message": "Kolor motywu został zapisany"
+   },
+   "pkTTemaVarsayilan": {
+      "message": "Motyw przywrócony do ustawień domyślnych"
+   },
+   "pkTToBasladi": {
+      "message": "Oglądanie na żywo włączone — wyzwalacze {1}"
+   },
+   "pkTToDurdu": {
+      "message": "Oglądanie na żywo zatrzymane"
+   },
+   "pkTToEslesmeYok": {
+      "message": "Nikt nie pasował"
+   },
+   "pkTToTetikGir": {
+      "message": "Wprowadź co najmniej jedną frazę wyzwalającą"
+   },
+   "pkTVodIndirildi": {
+      "message": "Pobrano poprzednią transmisję"
+   },
+   "pkTYedekAlinamadi": {
+      "message": "Tworzenie kopii zapasowej nie powiodło się"
+   },
+   "pkTYedekCokBuyuk": {
+      "message": "Plik jest za duży"
+   },
+   "pkTYedekOkunamadi": {
+      "message": "Nie można odczytać pliku"
+   },
+   "pkTYedekUygulanamadi": {
+      "message": "Nie udało się wczytać ustawień"
+   },
+   "pkTYedekUygulandi": {
+      "message": "Ustawienia zostały załadowane, ładuję ponownie stronę"
+   },
+   "pkTYetkiKaydedildi": {
+      "message": "Role zaktualizowane"
+   },
+   "pkTYetkiKismi": {
+      "message": "Zmiana roli {1} nie powiodła się"
+   },
+   "pkTakipKelime": {
+      "message": "Śledzone słowa"
+   },
+   "pkTakipKelimeD": {
+      "message": "Śledzi te słowa obok Twojego imienia i nazwiska. Oddzielone przecinkiem."
+   },
+   "pkTakipKelimeOrnek": {
+      "message": "rozdanie, kod, serwer"
+   },
+   "pkTakipciEki": {
+      "message": "Obserwujący {1}"
+   },
+   "pkTakipciSayisi": {
+      "message": "Obserwujący"
+   },
+   "pkTamEkranSon": {
+      "message": "Ostatni przycisk pełnego ekranu"
+   },
+   "pkTamEkranSonD": {
+      "message": "Przesuwa przycisk pełnego ekranu Kopnięcia na skrajną prawą stronę paska."
+   },
+   "pkTanArac": {
+      "message": "Narzędzia moderatora"
+   },
+   "pkTanAracD": {
+      "message": "Wyłączają się one — działają na czacie w Twoim imieniu, więc włączenie ich zależy od Ciebie. Znajdź je w menu PureKick › Moderacja."
+   },
+   "pkTanBaslik": {
+      "message": "Wycieczka"
+   },
+   "pkTanBaslikD": {
+      "message": "Strona po stronie przedstawia możliwości PureKick."
+   },
+   "pkTanBitir": {
+      "message": "Zacznij"
+   },
+   "pkTanGoster": {
+      "message": "Pokaż wycieczkę"
+   },
+   "pkTanHos": {
+      "message": "Witamy w PureKick"
+   },
+   "pkTanHosD": {
+      "message": "Zestaw narzędzi do oglądania Kick bez reklam i prowadzenia czatu. Większość poniższych funkcji jest już WŁĄCZONA — nie musisz nic robić. Użyj przycisku Dalej w prawym dolnym rogu, aby je przeglądać."
+   },
+   "pkTanKart": {
+      "message": "Karta profilu"
+   },
+   "pkTanKartD": {
+      "message": "Karta, którą otrzymasz po kliknięciu nazwy na czacie."
+   },
+   "pkTanKenar": {
+      "message": "Pasek boczny"
+   },
+   "pkTanKenarD": {
+      "message": "Poniższa lista i strona kanału."
+   },
+   "pkTanListe": {
+      "message": "Lista rozmów"
+   },
+   "pkTanListeD": {
+      "message": "Dodano do listy widzów Kicka."
+   },
+   "pkTanMod": {
+      "message": "Umiarkowanie"
+   },
+   "pkTanModD": {
+      "message": "Usunięte wiadomości, bany i limity czasu stają się widoczne."
+   },
+   "pkTanReklam": {
+      "message": "Reklamy"
+   },
+   "pkTanReklamD": {
+      "message": "Wszystko, co wyłączysz, zacznie obowiązywać natychmiast."
+   },
+   "pkTanSohbet": {
+      "message": "Czat"
+   },
+   "pkTanSohbetD": {
+      "message": "Ty decydujesz, kto się wyróżnia, a kogo nie widzisz."
+   },
+   "pkTanSon": {
+      "message": "Gotowe"
+   },
+   "pkTanSonD": {
+      "message": "Każde ustawienie znajduje się w przycisku PK pod czatem. Możesz ponownie otworzyć tę wycieczkę w sekcji Zaawansowane."
+   },
+   "pkTanVideo": {
+      "message": "Wideo i odtwarzacz"
+   },
+   "pkTanVideoD": {
+      "message": "Dodano do paska gracza."
+   },
+   "pkTemaAciklama": {
+      "message": "Zmienia kolor interfejsu Kick."
+   },
+   "pkTemaKickYesili": {
+      "message": "Kopnij na zielono"
+   },
+   "pkTemaKirmizi": {
+      "message": "Czerwony"
+   },
+   "pkTemaMavi": {
+      "message": "Niebieski"
+   },
+   "pkTemaMor": {
+      "message": "Fioletowy"
+   },
+   "pkTemaPembe": {
+      "message": "Różowy"
+   },
+   "pkTemaSari": {
+      "message": "Żółty"
+   },
+   "pkTemaTurkuaz": {
+      "message": "Cyjan"
+   },
+   "pkTemaTuruncu": {
+      "message": "Pomarańczowy"
+   },
+   "pkTemizlemeKoru": {
+      "message": "Zachowaj wiadomości, gdy czat zostanie wyczyszczony"
+   },
+   "pkTemizlemeKoruD": {
+      "message": "Jeśli moderator wyczyści czat, ostatnie wiadomości pozostaną w osobnym oknie."
+   },
+   "pkTemizlenenAlan": {
+      "message": "Boksy reklamowe oczyszczone"
+   },
+   "pkTiyatroNav": {
+      "message": "Górny pasek w trybie kinowym"
+   },
+   "pkTiyatroNavD": {
+      "message": "Przesuń kursor na samą górę, a pasek nawigacyjny powróci; nie ma potrzeby wychodzenia z trybu."
+   },
+   "pkTiyatroyaAl": {
+      "message": "Po dołączeniu wejdź w tryb kinowy"
+   },
+   "pkTiyatroyaAlD": {
+      "message": "Pozostawia go w spokoju, jeśli jest już szeroki; jedna próba na kanał."
+   },
+   "pkToAciklama": {
+      "message": "Każdy, kto napisze frazę wyzwalającą, traci limit czasu na wybrany przez Ciebie czas. Nadawca, moderatorzy i Ty zostajesz pominięty; każda osoba jest obsługiwana raz."
+   },
+   "pkToAyar": {
+      "message": "Limit czasu zbiorczego"
+   },
+   "pkToAyarD": {
+      "message": "Automatycznie pomija każdego, kto napisze wybrane przez Ciebie słowo lub frazę. Po włączeniu w menu PureKick pojawia się wiersz „Limit czasu zbiorczego”."
+   },
+   "pkToBaslat": {
+      "message": "Rozpocznij oglądanie na żywo"
+   },
+   "pkToBaslik": {
+      "message": "Limit czasu zbiorczego"
+   },
+   "pkToDurdur": {
+      "message": "Zatrzymaj oglądanie na żywo"
+   },
+   "pkToGecmis": {
+      "message": "Zastosuj do dotychczasowych wiadomości"
+   },
+   "pkToMenu": {
+      "message": "Limit czasu zbiorczego"
+   },
+   "pkToNerede": {
+      "message": "Użyj go w wierszu „Limit czasu zbiorczego” w menu PureKick."
+   },
+   "pkToNot": {
+      "message": "Możesz zamknąć to okno podczas oglądania na żywo; zatrzymuje się po opuszczeniu kanału lub wyłączeniu tego ustawienia."
+   },
+   "pkToSayac": {
+      "message": "Przekroczono limit czasu: {1}"
+   },
+   "pkToSure": {
+      "message": "Limit czasu"
+   },
+   "pkToSureD": {
+      "message": "Ta sama lista, co szybki limit czasu. Zmień to w Moderacja › Karta użytkownika."
+   },
+   "pkToTamKelime": {
+      "message": "Dopasowanie całego słowa"
+   },
+   "pkToTamKelimeD": {
+      "message": "Włączone, „kod” pasuje, ale „kodowanie” nie. Wyłączone, każda wiadomość zawierająca tekst jest dopasowana."
+   },
+   "pkToTetik": {
+      "message": "Wyzwalające frazy"
+   },
+   "pkToTetikD": {
+      "message": "Jedno słowo lub fraza w wierszu. Podziel według linii, ponieważ fraza może zawierać przecinki."
+   },
+   "pkToTetikIpucu": {
+      "message": "rzuty wolne \n follow4follow \n sprawdź moją biografię"
+   },
+   "pkTumu": {
+      "message": "Wszystko"
+   },
+   "pkUyarHiz": {
+      "message": "Prędkość adaptacyjna"
+   },
+   "pkUyarHizD": {
+      "message": "Kiedy zostajesz w tyle na żywo, przyspiesza, aby zamknąć lukę."
+   },
+   "pkUyarHizNot": {
+      "message": "Obraz nigdy nie przeskakuje: pozycja pozostaje niezmieniona, tylko prędkość wzrasta do 1,25x i powraca do 1x na krawędzi."
+   },
+   "pkVeriYok": {
+      "message": "Brak danych."
+   },
+   "pkVideoBilgisiD": {
+      "message": "Otwiera się za pomocą przycisku na pasku gracza."
+   },
+   "pkVideoIstatistikleri": {
+      "message": "Statystyki wideo"
+   },
+   "pkVideoIstatistikleriD": {
+      "message": "Rozdzielczość, FPS, bitrate, utracone klatki, bufor."
+   },
+   "pkVideoReklamlari": {
+      "message": "Reklamy wideo"
+   },
+   "pkVideoReklamlariD": {
+      "message": "Blokuje reklamy przed i w trakcie filmu."
+   },
+   "pkVideonunYuzdesi": {
+      "message": "Procent filmu"
+   },
+   "pkVodIndir": {
+      "message": "Pobierz tę poprzednią transmisję"
+   },
+   "pkVodIndirBaslik": {
+      "message": "Pobierz poprzednią transmisję"
+   },
+   "pkVodIndirKisa": {
+      "message": "Pobierz VOD-a"
+   },
+   "pkVodIndirNot": {
+      "message": "Strumień jest zapisywany na dysku segment po segmencie; Pamięć zakładek pozostaje wolna."
+   },
+   "pkVodReklamlari": {
+      "message": "reklamy VOD"
+   },
+   "pkVodReklamlariD": {
+      "message": "Pomija reklamę na początku poprzednich transmisji."
+   },
+   "pkVodTsNotN": {
+      "message": "Plik jest zapisywany w formacie .ts (odtwarza go VLC/MPV). Długość strumienia {1} min."
+   },
+   "pkVsAg": {
+      "message": "Stan sieci"
+   },
+   "pkVsBitHizi": {
+      "message": "Szybkość transmisji"
+   },
+   "pkVsCanliUzaklik": {
+      "message": "Za żywo"
+   },
+   "pkVsCozunurluk": {
+      "message": "Rozdzielczość"
+   },
+   "pkVsDuraklatildi": {
+      "message": "Wstrzymano"
+   },
+   "pkVsDusenKare": {
+      "message": "Opuszczone ramki"
+   },
+   "pkVsHazir": {
+      "message": "Stan gotowy"
+   },
+   "pkVsKonum": {
+      "message": "Pozycja"
+   },
+   "pkVsTampon": {
+      "message": "Bufor"
+   },
+   "pkVurguMuaf": {
+      "message": "Wykluczone z wyróżniania"
+   },
+   "pkVurguMuafD": {
+      "message": "Osoby wymienione tutaj nie otrzymują kolorowego paska, niezależnie od ich roli."
+   },
+   "pkWebSitesi": {
+      "message": "Strona internetowa"
+   },
+   "pkYanSohbet": {
+      "message": "Przeciągnij czat boczny"
+   },
+   "pkYanSohbetD": {
+      "message": "Umożliwia przesuwanie wyskakującego okna czatu za pomocą myszy."
+   },
+   "pkYanit": {
+      "message": "Odpowiedzi"
+   },
+   "pkYanitD": {
+      "message": "Wiadomości będące odpowiedzią na inną wiadomość"
+   },
+   "pkYanitlarBaslik": {
+      "message": "Odpowiedzi"
+   },
+   "pkYaziliyor": {
+      "message": "pisanie…"
+   },
+   "pkYedekBos": {
+      "message": "Plik nie zawiera żadnych ustawień do zastosowania"
+   },
+   "pkYedekBozuk": {
+      "message": "Ten plik nie jest prawidłowym formatem JSON"
+   },
+   "pkYedekNot": {
+      "message": "Kopia zapasowa zawiera ustawienia, notatki, ukryte kanały i osoby, filtry i punkty zapisu."
+   },
+   "pkYedekOzet": {
+      "message": "Plik zawiera sekcje {1} · {2}"
+   },
+   "pkYedekYabanci": {
+      "message": "Ten plik nie jest kopią zapasową PureKick"
+   },
+   "pkYeniSekmedeAc": {
+      "message": "Otwórz w nowej karcie ↗"
+   },
+   "pkYenilik": {
+      "message": "Nowość w tej wersji"
+   },
+   "pkYetkiAciklama": {
+      "message": "Przyznaj lub usuń VIP-a, OG i moderatora na tym kanale. Wyświetlane tylko na Twoim kanale."
+   },
+   "pkYetkiBaslik": {
+      "message": "{1} · Role"
+   },
+   "pkYetkiDugme": {
+      "message": "Edytuj role"
+   },
+   "pkYetkiMod": {
+      "message": "Moderator"
+   },
+   "pkYetkiOg": {
+      "message": "OG"
+   },
+   "pkYetkiOkunamadi": {
+      "message": "Nie udało się odczytać ról."
+   },
+   "pkYetkiVip": {
+      "message": "VIP-a"
+   },
+   "pkYildir": {
+      "message": "dla {1} rok (lata)"
+   },
+   "pkYonetimPaneli": {
+      "message": "Panel sterowania PureKick"
+   },
+   "pkYorumDengeli": {
+      "message": "emotki i tekst są zrównoważone"
+   },
+   "pkYorumEmoteCok": {
+      "message": "większość wiadomości zawiera wyłącznie emotki"
+   },
+   "pkYorumEmoteFazla": {
+      "message": "więcej emotikonów niż tekstu"
+   },
+   "pkYorumHizli": {
+      "message": "Czat przebiega szybko"
+   },
+   "pkYorumVeriYok": {
+      "message": "Aby móc komentować, potrzeba trochę więcej danych. Zapełnia się w miarę trwania czatu."
+   },
+   "pkYorumZirve": {
+      "message": "najbardziej pracowita minuta {1}"
+   },
+   "pkYukseklik": {
+      "message": "Wysokość"
+   },
+   "pkYuzde": {
+      "message": "Procent"
+   },
+   "pkZamanAsimi": {
+      "message": "Upłynął limit czasu"
+   },
+   "pkZirveDakika": {
+      "message": "{1} — Wiadomości {2} w tej minucie"
+   },
+   "popupBadges": {
+      "message": "Odznaki"
+   },
+   "startBtn": {
+      "message": "Uruchom ochronę"
+   },
+   "statusActive": {
+      "message": "Aktywny strumień bez reklam"
+   },
+   "statusPaused": {
+      "message": "Ochrona wstrzymana"
+   },
+   "themeColor": {
+      "message": "Kolor motywu"
+   },
+   "themeReset": {
+      "message": "Resetuj (domyślne kopnięcie)"
+   },
+   "pkFiltreAra": {
+      "message": "Szukaj na czacie..."
+   },
+   "pkSohbetFiltre": {
+      "message": "Wyszukiwanie i filtrowanie czatów"
+   },
+   "pkCokluYayin": {
+      "message": "Wiele strumieni"
+   },
+   "pkKlipAl": {
+      "message": "Przechwytuj klip na żywo"
+   },
+   "pkSohbetTts": {
+      "message": "Czat z zamianą tekstu na mowę (TTS)"
+   },
+   "pkEmoteSpamFiltre": {
+      "message": "Kondensator spamu emotikonów"
+   },
+   "pkIzlemeSureTakip": {
+      "message": "Oglądaj śledzenie czasu"
+   },
+   "pkKanalNotlari": {
+      "message": "Uwagi dotyczące kanału"
+   },
+   "pkYayinBildirim": {
+      "message": "Przesyłaj strumieniowo powiadomienia na żywo"
+   },
+   "pkIzlemeSureleriBaslik": {
+      "message": "Oglądaj Czas"
+   },
+   "pkSohbetCeviri": {
+      "message": "Tłumaczenie czatu na żywo"
+   },
+   "pkAcik": {
+      "message": "Włączone"
+   },
+   "pkNot101910a": {
+      "message": "Sohbet arşivi kalıcı IndexedDB deposuna taşındı; moderasyon ve silinen mesaj kayıtları iyileştirildi"
+   },
+   "pkNot101910b": {
+      "message": "Instagram, X/Twitter, Kick, TikTok i ogólne informacje o użytkownikach"
+   },
+   "pkNot101910c": {
+      "message": "Yayın değişimi, HLS reklam işaretleri ve çevrimdışı oynatıcı durumu düzeltildi"
+   },
+   "pkNot101911a": {
+      "message": "PureKick Mod adı ve yeşil böcek rozeti eklenti simgelerine uygulandı"
+   },
+   "pkNot101911b": {
+      "message": "Pracownik IVS yükleme biçimi ve yayın değişimindeki kanal başlığı istekleri kararlı hale getirildi"
+   },
+   "pkNot101911c": {
+      "message": "Reklama HLS işaretleri ve Kick kaynaklı DNR reklama kuralları iyileştirildi"
+   },
+   "pkNot101911d": {
+      "message": "Genel bağlantı önizlemeleri için zorunlu tum siteler izni kaldırıldı"
+   },
+   "pkNot101914a": {
+      "message": "Archiwa czatów są teraz rozdzielone według kanałów; poprawiono codzienne dzienniki i przechowywanie usuniętych wiadomości."
+   },
+   "pkNot101914b": {
+      "message": "Widoczność obserwowanych kanałów online/offline oraz limit liczby kanałów są stałe."
+   },
+   "pkNot101914c": {
+      "message": "Naprawiono podgląd linków, tytuły kanałów i zakres stron kart profilowych."
+   },
+   "pkNot101914d": {
+      "message": "Ulepszono wyróżnianie ról subskrybentów i rekordy utalentowanych kibiców KICKS."
+   },
+   "pkNot101914e": {
+      "message": "Polecenia klipów głosowych obsługują teraz 15 języków, miernik poziomu mikrofonu i plakietkę gracza."
+   },
+   "pkNot101914f": {
+      "message": "Ulepszono przełącznik skrótów do klipów, kodek/jakość zastępczą i etykiety nazw plików z cichym nagraniem."
+   },
+   "pkNot101912a": {
+      "message": "Kick sayfasındaki PureKick Mod simgesi ve yeşil böcek rozeti güncellendi"
+   },
+   "pkNot101912b": {
+      "message": "Araç çubuğu, sohbet ayarları, yönetim paneli ve profil önizlemesindeki ürün adı ve simge tutarlı hale getirildi"
+   },
+   "pkInterfaceLanguage": {
+      "message": "Język interfejsu"
+   },
+   "pkInterfaceLanguageD": {
+      "message": "Wybierz język dla PureKick Mod. Auto podąża za językiem przeglądarki."
+   },
+   "pkSupportTitle": {
+      "message": "Wsparcie i raporty o błędach"
+   },
+   "pkSupportDesc": {
+      "message": "Wyślij raport o błędzie lub prośbę o dodanie funkcji za pośrednictwem GitHuba. Tutaj możesz śledzić otwarte i zakończone żądania."
+   },
+   "pkSupportLogin": {
+      "message": "Wysłanie jest finalizowane w GitHub i wymaga zalogowania do GitHub. Rozszerzenie nie dodaje do zgłoszenia nazwy użytkownika ani adresu e-mail. Serwer pośredniczący dla anonimowych zgłoszeń bez logowania nie jest jeszcze skonfigurowany."
+   },
+   "pkSupportBug": {
+      "message": "Zgłoś błąd"
+   },
+   "pkSupportFeature": {
+      "message": "Poproś o funkcję"
+   },
+   "pkSupportQuestion": {
+      "message": "Poproś o pomoc"
+   },
+   "pkSupportTitlePlaceholder": {
+      "message": "Krótki tytuł"
+   },
+   "pkSupportBodyPlaceholder": {
+      "message": "Opisz kroki, oczekiwany wynik i rzeczywisty wynik. Nie podawaj informacji prywatnych."
+   },
+   "pkSupportSend": {
+      "message": "Kontynuuj na GitHubie"
+   },
+   "pkSupportRequired": {
+      "message": "Wpisz tytuł i opis."
+   },
+   "pkSupportIssues": {
+      "message": "Żądania społeczności"
+   },
+   "pkSupportStatusHelp": {
+      "message": "Stan pochodzi z etykiet stanu otwartego/zamkniętego GitHub i planowania."
+   },
+   "pkSupportLoading": {
+      "message": "Ładowanie żądań GitHub…"
+   },
+   "pkSupportEmpty": {
+      "message": "Nie ma jeszcze żadnych żądań publicznych."
+   },
+   "pkSupportClosed": {
+      "message": "Rozwiązane"
+   },
+   "pkSupportPlanned": {
+      "message": "Planowane"
+   },
+   "pkSupportWaiting": {
+      "message": "Czekam"
+   },
+   "pkSupportOpen": {
+      "message": "Otwórz"
+   },
+   "pkSupportError": {
+      "message": "Nie można załadować żądań GitHub. Sprawdź swoje połączenie lub status GitHub."
+   },
+   "pkHistoryTitle": {
+      "message": "Zapis czatu"
+   },
+   "pkHistorySearch": {
+      "message": "Szukaj w zapisach czatu (użytkownik lub wiadomość)"
+   },
+   "pkHistoryLoadOlder": {
+      "message": "Wczytaj starsze wpisy"
+   },
+   "pkHistoryMemoryLimit": {
+      "message": "Osiągnięto limit pamięci · wyszukaj starsze wpisy"
+   },
+   "pkHistoryLoading": {
+      "message": "Wczytywanie archiwum…"
+   },
+   "pkHistoryNoMatch": {
+      "message": "Brak pasujących wpisów."
+   },
+   "pkHistoryEmpty": {
+      "message": "W dzienniku czatu nie ma jeszcze zapisanych wiadomości."
+   },
+   "pkHistorySearchResults": {
+      "message": "Wyniki wyszukiwania: "
+   },
+   "pkHistoryMessages": {
+      "message": "Wiadomości w archiwum: "
+   },
+   "pkHistoryOlderAvailable": {
+      "message": " · dostępne są starsze wpisy"
+   },
+   "pkHistoryAllShown": {
+      "message": " · pokazano wszystkie wyniki"
+   },
+   "pkHistoryDeletedTextMissing": {
+      "message": "Kick nie udostępnił treści wiadomości w tym wpisie usunięcia"
+   },
+   "pkHistoryDailyTitle": {
+      "message": "Zapis czatu · Dziennik dzienny"
+   },
+   "pkHistoryDailyDesc": {
+      "message": "Dzisiejsze wiadomości są rozdzielone według kanału i daty. Pobierz osobny plik .log ze znacznikami czasu dla każdego kanału."
+   },
+   "pkHistoryDailyLoading": {
+      "message": "Wczytywanie dzisiejszych dzienników…"
+   },
+   "pkHistoryDailyRefresh": {
+      "message": "Odśwież dzisiejsze dzienniki"
+   },
+   "pkTimeoutExpires": {
+      "message": "Timeout kończy się: {1}"
+   },
+   "pkTimeoutDays": {
+      "message": "(pozostało dni: {1})"
+   },
+   "pkActiveTimeout": {
+      "message": "Aktywny timeout"
+   },
+   "pkPermanentBan": {
+      "message": "Stała blokada"
+   },
+   "pkModEventsTitle": {
+      "message": "Zdarzenia moderacji"
+   },
+   "pkTitleCount": {
+      "message": "{1} ({2})"
+   },
+   "pkTemizle": {
+      "message": "Wyczyść"
+   },
+   "pkAllSitesAccessDescription": {
+      "message": "Jednorazowe szerokie uprawnienie do podglądu linków w witrynach HTTP i HTTPS."
+   },
+   "pkAllSitesAccessButton": {
+      "message": "Zezwól na dostęp do wszystkich witryn"
+   },
+   "pkAllSitesGranted": {
+      "message": "Dostęp do linków włączono dla wszystkich witryn HTTP/HTTPS."
+   },
+   "pkAllSitesDenied": {
+      "message": "Nie przyznano dostępu do witryn. Możesz zezwolić na pojedyncze witryny w ustawieniach rozszerzeń Chrome."
+   },
+   "pkNot101915a": {
+      "message": "Klipy z czatu odtwarzają teraz wideo dla dokładnego identyfikatora klipu zamiast transmisji kanału."
+   },
+   "pkNot101915b": {
+      "message": "Klipy Kick korzystają z osobnego odtwarzacza; strony klipów KickBot otwierają się bezpośrednio, gdy nie można ich osadzić."
+   },
+   "pkNot101915c": {
+      "message": "Dodano opcjonalny dostęp jednym kliknięciem do wszystkich witryn HTTP/HTTPS na potrzeby podglądu linków."
+   },
+   "pkNot101915d": {
+      "message": "Zaktualizowano katalogi językowe i zgłoszenia pomocy GitHub; dodano testy klipów i uprawnień."
+   }
+}

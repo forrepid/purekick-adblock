@@ -860,8 +860,12 @@
    "pkKenarGrupLimitD": {
       "message": "Limits the number of channels shown in the online and offline lists using the 1–20 value below. Independent of online/offline grouping."
    },
-   "pkKickDahaFazlaGizle": { "message": "Hide Kick's Show More / Show Less buttons" },
-   "pkKickDahaFazlaGizleD": { "message": "Hides Kick's own expand and collapse buttons in the followed channels list." },
+   "pkKickDahaFazlaGizle": {
+      "message": "Hide Kick's Show More / Show Less buttons"
+   },
+   "pkKickDahaFazlaGizleD": {
+      "message": "Hides Kick's own expand and collapse buttons in the followed channels list."
+   },
    "pkKendiMenum": {
       "message": "Open my own menu"
    },
@@ -2515,10 +2519,184 @@
    "pkNot101911d": {
       "message": "Genel bağlantı önizlemeleri için zorunlu tüm siteler izni kaldırıldı"
    },
+   "pkNot101914a": {
+      "message": "Chat archives are now separated by channel; daily logs and deleted-message text retention are improved."
+   },
+   "pkNot101914b": {
+      "message": "Online/offline followed-channel visibility and the channel-count limit are fixed."
+   },
+   "pkNot101914c": {
+      "message": "Link previews, channel hover titles, and profile-card page scoping are fixed."
+   },
+   "pkNot101914d": {
+      "message": "Subscriber role highlighting and gifted KICKS supporter records are improved."
+   },
+   "pkNot101914e": {
+      "message": "Voice clip commands now support 15 languages, a microphone level meter, and a player badge."
+   },
+   "pkNot101914f": {
+      "message": "Clip shortcut toggle, codec/quality fallback, and silent-recording filename labels are improved."
+   },
    "pkNot101912a": {
       "message": "Kick sayfasındaki PureKick Mod simgesi ve yeşil böcek rozeti güncellendi"
    },
    "pkNot101912b": {
       "message": "Araç çubuğu, sohbet ayarları, yönetim paneli ve profil önizlemesindeki ürün adı ve simge tutarlı hale getirildi"
+   },
+   "pkInterfaceLanguage": {
+      "message": "Interface language"
+   },
+   "pkInterfaceLanguageD": {
+      "message": "Choose a language for PureKick Mod. Auto follows the browser language."
+   },
+   "pkSupportTitle": {
+      "message": "Support and bug reports"
+   },
+   "pkSupportDesc": {
+      "message": "Send a bug report or feature request through GitHub. Track open and completed requests here."
+   },
+   "pkSupportLogin": {
+      "message": "Submission is completed on GitHub and requires a GitHub sign-in. The extension does not add your username or email to the report. A relay server for anonymous, sign-in-free submissions is not configured yet."
+   },
+   "pkSupportBug": {
+      "message": "Report a bug"
+   },
+   "pkSupportFeature": {
+      "message": "Request a feature"
+   },
+   "pkSupportQuestion": {
+      "message": "Ask for help"
+   },
+   "pkSupportTitlePlaceholder": {
+      "message": "Short title"
+   },
+   "pkSupportBodyPlaceholder": {
+      "message": "Describe steps, expected result, and actual result. Do not include private information."
+   },
+   "pkSupportSend": {
+      "message": "Continue on GitHub"
+   },
+   "pkSupportRequired": {
+      "message": "Enter a title and description."
+   },
+   "pkSupportIssues": {
+      "message": "Community requests"
+   },
+   "pkSupportStatusHelp": {
+      "message": "Status comes from the GitHub open/closed state and planning labels."
+   },
+   "pkSupportLoading": {
+      "message": "Loading GitHub requests…"
+   },
+   "pkSupportEmpty": {
+      "message": "No public requests yet."
+   },
+   "pkSupportClosed": {
+      "message": "Solved"
+   },
+   "pkSupportPlanned": {
+      "message": "Planned"
+   },
+   "pkSupportWaiting": {
+      "message": "Waiting"
+   },
+   "pkSupportOpen": {
+      "message": "Open"
+   },
+   "pkSupportError": {
+      "message": "Could not load GitHub requests. Check your connection or GitHub status."
+   },
+   "pkHistoryTitle": {
+      "message": "Chat Records"
+   },
+   "pkHistorySearch": {
+      "message": "Search chat records (user or message)"
+   },
+   "pkHistoryLoadOlder": {
+      "message": "Load older records"
+   },
+   "pkHistoryMemoryLimit": {
+      "message": "Screen memory limit reached · search to find older records"
+   },
+   "pkHistoryLoading": {
+      "message": "Loading archive…"
+   },
+   "pkHistoryNoMatch": {
+      "message": "No records match your search."
+   },
+   "pkHistoryEmpty": {
+      "message": "No messages have been saved in the chat log yet."
+   },
+   "pkHistorySearchResults": {
+      "message": "Search results: "
+   },
+   "pkHistoryMessages": {
+      "message": "Archived messages: "
+   },
+   "pkHistoryOlderAvailable": {
+      "message": " · older records available"
+   },
+   "pkHistoryAllShown": {
+      "message": " · all matches shown"
+   },
+   "pkHistoryDeletedTextMissing": {
+      "message": "Kick did not provide the message text in this deletion record"
+   },
+   "pkHistoryDailyTitle": {
+      "message": "Chat Records · Daily Log"
+   },
+   "pkHistoryDailyDesc": {
+      "message": "Today’s messages are shown separately by channel and date. Download each channel as its own timestamped .log file."
+   },
+   "pkHistoryDailyLoading": {
+      "message": "Loading today’s logs…"
+   },
+   "pkHistoryDailyRefresh": {
+      "message": "Refresh today’s logs"
+   },
+   "pkTimeoutExpires": {
+      "message": "Timeout ends: {1}"
+   },
+   "pkTimeoutDays": {
+      "message": "({1} days remaining)"
+   },
+   "pkActiveTimeout": {
+      "message": "Active Timeout"
+   },
+   "pkPermanentBan": {
+      "message": "Permanent Ban"
+   },
+   "pkModEventsTitle": {
+      "message": "Moderation Events"
+   },
+   "pkTitleCount": {
+      "message": "{1} ({2})"
+   },
+   "pkTemizle": {
+      "message": "Clear"
+   },
+   "pkAllSitesAccessDescription": {
+      "message": "One-time broad access for link previews across HTTP and HTTPS sites."
+   },
+   "pkAllSitesAccessButton": {
+      "message": "Allow access to all sites"
+   },
+   "pkAllSitesGranted": {
+      "message": "Link access is enabled for all HTTP/HTTPS sites."
+   },
+   "pkAllSitesDenied": {
+      "message": "Site access was not granted. You can allow individual sites in Chrome extension settings."
+   },
+   "pkNot101915a": {
+      "message": "Chat clips now play the video stream for the exact clip ID instead of opening the channel broadcast."
+   },
+   "pkNot101915b": {
+      "message": "Kick clips use a dedicated player; KickBot clip pages open directly when they cannot be embedded."
+   },
+   "pkNot101915c": {
+      "message": "Added one-click optional access to all HTTP/HTTPS sites for link previews."
+   },
+   "pkNot101915d": {
+      "message": "Updated interface language catalogs and GitHub support reporting; added clip and permission flow coverage."
    }
 }

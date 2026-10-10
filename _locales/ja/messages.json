@@ -1,0 +1,2702 @@
+{
+   "pkKanalSahibi": {
+      "message": "チャンネル所有者"
+   },
+   "pkKanaliGizle": {
+      "message": "このチャンネルを非表示にする"
+   },
+   "pkKanaliTakip": {
+      "message": "チャンネルをフォローする"
+   },
+   "pkKapali": {
+      "message": "ミュートされた"
+   },
+   "pkKapat": {
+      "message": "閉じる"
+   },
+   "pkKareyiKaydet": {
+      "message": "現在のフレームを保存する"
+   },
+   "pkKartBilgiNot": {
+      "message": "Kick 自身のエンドポイントから Cookie なしで 1 人につき 1 回取得され、メモリに保存されます。"
+   },
+   "pkKartGenis": {
+      "message": "ワイドプロファイルカード"
+   },
+   "pkKartGenisD": {
+      "message": "Kick の狭いカードを広げて、追加された情報、メモ、モデレーション ブロックが窮屈にならないようにします。"
+   },
+   "pkKartMesajlar": {
+      "message": "最近のメッセージと返信"
+   },
+   "pkKartMesajlarD": {
+      "message": "その人の最近のメッセージとその人に送信された返信がプロフィール カードのタブとして表示されます。"
+   },
+   "pkKartSabit": {
+      "message": "プロフィールカードを固定する"
+   },
+   "pkKartSabitD": {
+      "message": "カードにボタンを追加します。これを押すと、読み取り可能なコピーが画面上に表示されます。"
+   },
+   "pkKartSagTik": {
+      "message": "ストリームカードの右クリックメニュー"
+   },
+   "pkKartSagTikD": {
+      "message": "ホーム ページまたはショートカットのカテゴリ内のチャネルを右クリックします。 Shift キーを押しながら右クリックすると、ブラウザ メニューが開きます。"
+   },
+   "pkKartTakipci": {
+      "message": "カード上のフォロワー数"
+   },
+   "pkKartTakipciD": {
+      "message": "Kick 自身のエンドポイントから Cookie なしで 1 人につき 1 回取得されます。"
+   },
+   "pkKartYanit": {
+      "message": "この人への返信"
+   },
+   "pkKartYanitD": {
+      "message": "「最近のメッセージ」には、彼らが書いた内容が表示されます。このブロックは、それらに書き込まれた内容を示します。"
+   },
+   "pkKartiSabitle": {
+      "message": "このカードをピン留めする"
+   },
+   "pkKategoriGizleYok": {
+      "message": "カテゴリをまだ非表示にしていません。カテゴリ ページを開き、タイトルの横にある [カテゴリを非表示] ボタンを使用します。"
+   },
+   "pkKategoriGizlemeyiKullan": {
+      "message": "カテゴリの非表示を使用する"
+   },
+   "pkKategoriGizlemeyiKullanD": {
+      "message": "オフにすると、すべてが再び表示されます。"
+   },
+   "pkKategoriGoster": {
+      "message": "このカテゴリを再度表示する"
+   },
+   "pkKatilim": {
+      "message": "参加"
+   },
+   "pkKatilimD": {
+      "message": "チャットに書き込みをする視聴者の割合"
+   },
+   "pkKatilmaTakip": {
+      "message": "参加して情報をフォローする"
+   },
+   "pkKatilmaTakipD": {
+      "message": "Kick への参加日、チャンネルをフォローした期間、サブスクリプションの長さ。"
+   },
+   "pkKaydedildi": {
+      "message": "保存されました"
+   },
+   "pkKaydet": {
+      "message": "保存"
+   },
+   "pkKayitNoktasi": {
+      "message": "VOD で中断した場所から"
+   },
+   "pkKayitNoktasiD": {
+      "message": "過去のブロードキャストを途中で残すと、その秒にジャンプするよう提案されます。"
+   },
+   "pkKayitNoktasiHatirla": {
+      "message": "私の立場を覚えておいてください"
+   },
+   "pkKayitNoktasiHatirlaD": {
+      "message": "位置はデバイス上でのみ保持されます。"
+   },
+   "pkKayitliNTemizle": {
+      "message": "{1} の保存された位置をクリアします"
+   },
+   "pkKaynagiYeniSekmede": {
+      "message": "新しいタブでソースを開きます ↗"
+   },
+   "pkKaynakBulunuyor": {
+      "message": "ソースを探しています…"
+   },
+   "pkKaynakYok": {
+      "message": "このストリームのソースが見つかりませんでした。"
+   },
+   "pkKelimeVurgu": {
+      "message": "チャットでハイライトする"
+   },
+   "pkKelimeVurguD": {
+      "message": "これらの単語を含むメッセージには、優先ユーザーと同じ緑色のバーが表示されます。"
+   },
+   "pkKenarGrup": {
+      "message": "オンライン/オフラインの分割"
+   },
+   "pkKenarGrupD": {
+      "message": "フォローされているチャネルをオンライン グループとオフライン グループに分けます。 Kick の Show More システムはデフォルトの動作を維持します。"
+   },
+   "pkKenarGrupSayi": {
+      "message": "オンライン/オフラインリストに表示されるチャンネル"
+   },
+   "pkKenarGrupSayiD": {
+      "message": "各グループに表示するチャンネルの数を選択します (1 ～ 20)。 Kick の「もっと見る」ボタンはデフォルトの動作を維持します。"
+   },
+   "pkKenarGrupLimit": {
+      "message": "チャネル数制限を適用する"
+   },
+   "pkKenarGrupLimitD": {
+      "message": "以下の 1 ～ 20 の値を使用して、オンラインおよびオフラインのリストに表示されるチャネルの数を制限します。オンライン/オフラインのグループ化に依存しません。"
+   },
+   "pkKickDahaFazlaGizle": {
+      "message": "Kick の「もっと表示」/「一部を表示」ボタンを非表示にする"
+   },
+   "pkKickDahaFazlaGizleD": {
+      "message": "フォローしているチャンネルのリストで Kick 独自の展開ボタンと折りたたみボタンを非表示にします。"
+   },
+   "pkKendiMenum": {
+      "message": "自分のメニューを開く"
+   },
+   "pkKendiMenumD": {
+      "message": "Shift キーを押しながら右クリックすると、常にブラウザ メニューが開きます。"
+   },
+   "pkKezSayisi": {
+      "message": "{1} ×"
+   },
+   "pkKickIleGiris": {
+      "message": "キックでサインイン"
+   },
+   "pkKickeKatildi": {
+      "message": "ジョイントキック"
+   },
+   "pkKisaDakika": {
+      "message": "メートル"
+   },
+   "pkKisaGun": {
+      "message": "d"
+   },
+   "pkKisaSaat": {
+      "message": "h"
+   },
+   "pkKisiGizleme": {
+      "message": "人を隠す"
+   },
+   "pkKisiGizlemeD": {
+      "message": "彼らのメッセージは画面上でのみ消えます。"
+   },
+   "pkKisiGizli": {
+      "message": "{1} の人が隠れています。"
+   },
+   "pkKisiMesajYok": {
+      "message": "このセッションではこのユーザーからのメッセージは見られませんでした。"
+   },
+   "pkNot102a": {
+      "message": "過去の放送の広告はブロックされます"
+   },
+   "pkNot102b": {
+      "message": "チャンネルを非表示にする"
+   },
+   "pkNot102c": {
+      "message": "ユーザー名が表示されるすべての場所にバッジが表示される"
+   },
+   "pkNot105a": {
+      "message": "チャット統計、メンション、ユーザーメモ、モデレーションログ"
+   },
+   "pkNot105b": {
+      "message": "役割の強調表示、人物および優先人物の非表示"
+   },
+   "pkNot105c": {
+      "message": "ビデオ統計、稼働時間、自動品質、巻き戻し/早送り"
+   },
+   "pkNot105d": {
+      "message": "ストリーム上のチャット オーバーレイとプレーヤー上の右クリック メニュー"
+   },
+   "pkNot105e": {
+      "message": "インターフェイスは 7 か国語に翻訳されました"
+   },
+   "pkNot107a": {
+      "message": "広告ブロッカーのみモード - ワンクリックで他のすべてをオフにします"
+   },
+   "pkNot107b": {
+      "message": "サイドバー: 固定チャンネル、ライブ/オフライン分割、ストリーム プレビュー"
+   },
+   "pkNot107c": {
+      "message": "自動品質と量。チャンネルの「概要」セクションのバッジ、エモート、ルール"
+   },
+   "pkNot107d": {
+      "message": "ホームページが著しく高速になり、途切れが少なくなります"
+   },
+   "pkNot107e": {
+      "message": "ツールバーアイコンで設定パネルを直接開くことができるようになりました。"
+   },
+   "pkNot107f": {
+      "message": "チャットでマークされた削除済みメッセージ。モデレーションとチャット ログの新しい順"
+   },
+   "pkNot107g": {
+      "message": "チャットの上のモデレーション バー — クリックするとイベント、削除されたメッセージ、タイムアウトが開きます"
+   },
+   "pkNotPlaceholder": {
+      "message": "この人についてメモを残してください…"
+   },
+   "pkNotun": {
+      "message": "あなたのメモ"
+   },
+   "pkOdulAlindi": {
+      "message": "今日の報酬を受け取りました 🎉"
+   },
+   "pkOdulBaslik": {
+      "message": "毎日の報酬"
+   },
+   "pkOdulGirisGerek": {
+      "message": "Kick にはサインインする必要があります"
+   },
+   "pkOdulHata": {
+      "message": "報酬ステータスを読み取れませんでした"
+   },
+   "pkOdulIlerleme": {
+      "message": "{1} / {2} を視聴しました"
+   },
+   "pkOdulKontrol": {
+      "message": "ステータスを確認中…"
+   },
+   "pkOdulYok": {
+      "message": "今日はウォッチチャレンジはありません"
+   },
+   "pkOmAciklama": {
+      "message": "メッセージはあなたのアカウントから送信されます。チャット ボックスには何も触れないため、入力中の下書きは安全です。"
+   },
+   "pkOmAdet": {
+      "message": "間隔"
+   },
+   "pkOmAdetD": {
+      "message": "メッセージ数 · 少なくとも {1}"
+   },
+   "pkOmAdetEtiket": {
+      "message": "すべての {1} メッセージ"
+   },
+   "pkOmAdim1": {
+      "message": "1. チャンネルを選択します"
+   },
+   "pkOmAdim2": {
+      "message": "2. どのように送ればよいですか?"
+   },
+   "pkOmAdim3": {
+      "message": "3. 間隔を入力します"
+   },
+   "pkOmAdim4": {
+      "message": "4. お知らせを書く"
+   },
+   "pkOmAralik": {
+      "message": "インターバルアナウンス"
+   },
+   "pkOmAralikD": {
+      "message": "リストされたテキストを順番に送信します。"
+   },
+   "pkOmAyar": {
+      "message": "自動メッセージ"
+   },
+   "pkOmAyarD": {
+      "message": "設定された間隔でアナウンスを投稿し、コマンドに自動的に応答します。あなたのアカウントから送信されます。"
+   },
+   "pkOmBaskaKanal": {
+      "message": "{1} を編集しています。保存すると、 {1} のボット ウィンドウが開きます。"
+   },
+   "pkOmBaslat": {
+      "message": "スタート"
+   },
+   "pkOmBaslik": {
+      "message": "自動メッセージ"
+   },
+   "pkOmDk": {
+      "message": "間隔"
+   },
+   "pkOmDkD": {
+      "message": "分 · 少なくとも {1}"
+   },
+   "pkOmEkle": {
+      "message": "保存コマンド"
+   },
+   "pkOmEksikKip": {
+      "message": "保存する前に送信方法を選択してください。"
+   },
+   "pkOmEksikKomut": {
+      "message": "保存する前に少なくとも 1 つのコマンドを追加します。"
+   },
+   "pkOmEksikMetin": {
+      "message": "保存する前に少なくとも 1 つのお知らせを作成してください。"
+   },
+   "pkOmKanalSecD": {
+      "message": "ボットはどのチャネルで実行されますか?あなたが管理するチャンネルとあなた自身のチャンネルのみがリストされます。"
+   },
+   "pkOmKanalSecin": {
+      "message": "チャンネルを選択してください"
+   },
+   "pkOmKanalYok": {
+      "message": "あなたがモデレーターであるチャンネルは見つかりませんでした。"
+   },
+   "pkOmKayitli": {
+      "message": "保存されたコマンド"
+   },
+   "pkOmKipDk": {
+      "message": "分ごと"
+   },
+   "pkOmKipMesaj": {
+      "message": "メッセージ数別"
+   },
+   "pkOmKomut": {
+      "message": "コマンド応答"
+   },
+   "pkOmKomutAd": {
+      "message": "コマンド"
+   },
+   "pkOmKomutAdIpucu": {
+      "message": "!テスト"
+   },
+   "pkOmKomutCevap": {
+      "message": "このコマンドに対する応答"
+   },
+   "pkOmKomutCevapIpucu": {
+      "message": "こんにちは！"
+   },
+   "pkOmKomutD": {
+      "message": "誰かがコマンドを作成すると、保存された応答が送信されます。"
+   },
+   "pkOmKomutIpucu": {
+      "message": "!test = こんにちは! \n !discord = discord.gg/..."
+   },
+   "pkOmKomutSil": {
+      "message": "削除"
+   },
+   "pkOmKomutYok": {
+      "message": "コマンドはまだ保存されていません。"
+   },
+   "pkOmMenu": {
+      "message": "自動メッセージ"
+   },
+   "pkOmMetinD": {
+      "message": "1 行に 1 つのアナウンス。複数の行で順番に送信されます。"
+   },
+   "pkOmMetinIpucu": {
+      "message": "Discord: ... \n 購読することを忘れないでください!"
+   },
+   "pkOmNerede": {
+      "message": "PureKickメニューの「自動メッセージ」行からご利用ください。"
+   },
+   "pkKisiOncelikliSayi": {
+      "message": "{1}の人優先です。"
+   },
+   "pkKonumSagAlt": {
+      "message": "右下"
+   },
+   "pkKonumSagUst": {
+      "message": "右上"
+   },
+   "pkKonumSolAlt": {
+      "message": "左下"
+   },
+   "pkKonumSolUst": {
+      "message": "左上"
+   },
+   "pkKopyaKorumasi": {
+      "message": "一部のストリームはコピー保護されています。その後、ブラウザはキャプチャをブロックします。"
+   },
+   "pkKorumaAcikMetin": {
+      "message": "キック広告はブロックされています。"
+   },
+   "pkKorumaKapaliMetin": {
+      "message": "保護は一時停止されています。"
+   },
+   "pkKullaniciAdi": {
+      "message": "ユーザー名"
+   },
+   "pkKullaniciAdiBos": {
+      "message": "ユーザー名 (空 = 全員)"
+   },
+   "pkKullaniciBul": {
+      "message": "ユーザーを探す"
+   },
+   "pkKullaniciNotlari": {
+      "message": "ユーザーメモ"
+   },
+   "pkKullaniciNotlariD": {
+      "message": "プロフィール カードにプライベートなメモを残します。"
+   },
+   "pkKuralAdvertising": {
+      "message": "広告"
+   },
+   "pkKuralBullying": {
+      "message": "いじめ"
+   },
+   "pkKuralDoxxing": {
+      "message": "文書送信"
+   },
+   "pkKuralDrugs": {
+      "message": "麻薬"
+   },
+   "pkKuralExtremism": {
+      "message": "過激主義"
+   },
+   "pkKuralGambling": {
+      "message": "ギャンブル"
+   },
+   "pkKuralHarassment": {
+      "message": "ハラスメント"
+   },
+   "pkKuralHate": {
+      "message": "ヘイトスピーチ"
+   },
+   "pkKuralHateSpeech": {
+      "message": "ヘイトスピーチ"
+   },
+   "pkKuralHatefulConduct": {
+      "message": "憎悪に満ちた行為"
+   },
+   "pkKuralIllegal": {
+      "message": "違法なコンテンツ"
+   },
+   "pkKuralIllegalActivity": {
+      "message": "違法行為"
+   },
+   "pkKuralImpersonation": {
+      "message": "なりすまし"
+   },
+   "pkKuralKabul": {
+      "message": "チャットルールの自動承認"
+   },
+   "pkKuralKabulD": {
+      "message": "ルールのあるチャネルに入ると、チャット ルール ダイアログが受け入れられます。デフォルトではオフになっています。ユーザーに代わって機能するため、オンにするのはユーザーの意思です。"
+   },
+   "pkKuralMisinfo": {
+      "message": "誤った情報"
+   },
+   "pkKuralMisinformation": {
+      "message": "誤った情報"
+   },
+   "pkKuralNudity": {
+      "message": "ヌード"
+   },
+   "pkKuralProfanity": {
+      "message": "冒涜的な言葉"
+   },
+   "pkKuralScam": {
+      "message": "詐欺"
+   },
+   "pkKuralSelfHarm": {
+      "message": "自傷行為"
+   },
+   "pkKuralSexual": {
+      "message": "性的なコンテンツ"
+   },
+   "pkKuralSexualContent": {
+      "message": "性的なコンテンツ"
+   },
+   "pkKuralSpam": {
+      "message": "スパムメール"
+   },
+   "pkKuralTerrorism": {
+      "message": "テロ"
+   },
+   "pkKuralThreats": {
+      "message": "脅威"
+   },
+   "pkKuralUnderage": {
+      "message": "未成年者"
+   },
+   "pkKuralViolence": {
+      "message": "暴力"
+   },
+   "pkKuralWeapons": {
+      "message": "武器"
+   },
+   "pkKurtarilanBaslik": {
+      "message": "チャットがクリアされました — 最後の {1} メッセージ"
+   },
+   "pkMBahset": {
+      "message": "この人について言及する"
+   },
+   "pkMDaralt": {
+      "message": "崩壊する"
+   },
+   "pkMGenislet": {
+      "message": "拡大する"
+   },
+   "pkMGizle": {
+      "message": "このメッセージを非表示にする"
+   },
+   "pkMKopyala": {
+      "message": "テキストをコピーする"
+   },
+   "pkMenuArayuz": {
+      "message": "インターフェース"
+   },
+   "pkMenuKenar": {
+      "message": "サイドバー"
+   },
+   "pkMenuKullaniciKarti": {
+      "message": "ユーザーカード"
+   },
+   "pkMenuSohbet": {
+      "message": "チャット"
+   },
+   "pkMesajEylemleri": {
+      "message": "メッセージホバーアクション"
+   },
+   "pkMesajEylemleriD": {
+      "message": "メッセージにマウスを移動すると、コピー、メンション、タイムスタンプ、折りたたみ、非表示のボタンが表示されます。"
+   },
+   "pkMesajGizli": {
+      "message": "あなたはこのメッセージを隠しました"
+   },
+   "pkMesajSayisi": {
+      "message": "{1} メッセージ"
+   },
+   "pkMesajYok": {
+      "message": "まだメッセージはありません。"
+   },
+   "pkMesajiGizle": {
+      "message": "隠す"
+   },
+   "pkMesajiGoster": {
+      "message": "表示する"
+   },
+   "pkMesajlar": {
+      "message": "メッセージ"
+   },
+   "pkMesajlariGoster": {
+      "message": "メッセージを表示する"
+   },
+   "pkMesajlariniGizle": {
+      "message": "メッセージを非表示にする"
+   },
+   "pkModBirMesajSilindi": {
+      "message": "メッセージが削除されました"
+   },
+   "pkModBos": {
+      "message": "このチャンネルに参加して以来、モデレート操作は行われていません。禁止、タイムアウト、削除がここに表示されます。"
+   },
+   "pkModCezaKaldirdi": {
+      "message": "{1} は {2} のペナルティを削除しました"
+   },
+   "pkModGunlugu": {
+      "message": "モデレーションログ"
+   },
+   "pkModGunluguD": {
+      "message": "削除されたメッセージ、禁止/タイムアウト、アクティブなペナルティ。"
+   },
+   "pkModIzle": {
+      "message": "チャットイベントを見る"
+   },
+   "pkModIzleD": {
+      "message": "Kick の既存の接続をリッスンします。新しい接続は開かれません。"
+   },
+   "pkModOtoSilindi": {
+      "message": "{1} のメッセージは {2} によって削除されました"
+   },
+   "pkModSekmeOlaylar": {
+      "message": "節度"
+   },
+   "pkModSekmeSilinen": {
+      "message": "削除されたメッセージ"
+   },
+   "pkModSekmeSustur": {
+      "message": "タイムアウト"
+   },
+   "pkModSerit": {
+      "message": "チャットのモデレーションバー"
+   },
+   "pkModSeritD": {
+      "message": "チャットの上部にバーを追加します。クリックするとモデレーションパネルが開きます。"
+   },
+   "pkModSilindi": {
+      "message": "{1} からのメッセージが削除されました"
+   },
+   "pkModSohbetTemizlendi": {
+      "message": "チャットがクリアされました"
+   },
+   "pkModSohbette": {
+      "message": "チャットにモデレーション イベントを表示する"
+   },
+   "pkModSohbetteD": {
+      "message": "禁止、タイムアウト、チャットのクリアはチャット ストリームに表示されます。 Kick はこれらをモデレータにのみ表示します。"
+   },
+   "pkModSusturdu": {
+      "message": "{1} が {2} を {3} に対してタイムアウトしました"
+   },
+   "pkModYasakladi": {
+      "message": "{1} 禁止 {2}"
+   },
+   "pkModerasyon": {
+      "message": "節度"
+   },
+   "pkMsjKisa": {
+      "message": "{1} メッセージ"
+   },
+   "pkNot1015a": {
+      "message": "メッセージの一括削除 — 選択した単語を含むすべてのメッセージを削除します"
+   },
+   "pkNot1015b": {
+      "message": "自動メッセージの再構築: チャネルごとの設定、独自のボット ウィンドウがバックグラウンドで実行され続ける"
+   },
+   "pkNot1015c": {
+      "message": "繰り返される同一のチャット メッセージはすべて記録されるようになりました - 統計と一括削除は過小評価されていました"
+   },
+   "pkNot1015d": {
+      "message": "機能の初回実行ツアー。詳細セクションから再度開きます"
+   },
+   "pkNot1015e": {
+      "message": "Cross-Ban は、オリジン チャネルと、誰がそれを禁止理由に実行したかを書き込むようになりました。"
+   },
+   "pkNot1015f": {
+      "message": "プロフィール カードには、ユーザーがチャンネルをフォローした正確な日付が表示されます"
+   },
+   "pkNot1015g": {
+      "message": "VOD ダウンロードが修正されました - 最初のセグメントの後で停止しました"
+   },
+   "pkNot101a": {
+      "message": "メニューのお知らせと通知バッジ"
+   },
+   "pkEmoteOnizlemeD": {
+      "message": "エモートにカーソルを合わせると、その名前が大きく表示されます。"
+   },
+   "pkEmoteSayisi": {
+      "message": "{1} エモート"
+   },
+   "pkEmoteYok": {
+      "message": "まだエモートは使用されていません。"
+   },
+   "pkEnAktifSohbet": {
+      "message": "最もアクティブなおしゃべり者"
+   },
+   "pkEnAktifSohbetD": {
+      "message": "このセッションで最も多くの文章を書いたのは誰ですか。"
+   },
+   "pkEnCokEmote": {
+      "message": "最も使用されたエモート"
+   },
+   "pkEnCokEmoteD": {
+      "message": "このセッションのチャットで最も頻繁に発生したもの。"
+   },
+   "pkEnCokEmoteKisi": {
+      "message": "トップエモートユーザー"
+   },
+   "pkEnCokEmoteKisiD": {
+      "message": "1 人あたりのエモート数とそのエモートのみのメッセージ数。"
+   },
+   "pkEnYogunDakika": {
+      "message": "最も忙しい時間帯"
+   },
+   "pkEngellemeAyarlari": {
+      "message": "広告設定"
+   },
+   "pkEngellenenVideo": {
+      "message": "動画広告がブロックされました"
+   },
+   "pkEvet": {
+      "message": "はい"
+   },
+   "pkEvetSifirla": {
+      "message": "はい、リセットします"
+   },
+   "pkGelenYanitYok": {
+      "message": "このセッションでは誰もそれらについて言及しませんでした。"
+   },
+   "pkGelenYanitlar": {
+      "message": "彼らに宛てた手紙"
+   },
+   "pkGelismis": {
+      "message": "上級者向け"
+   },
+   "pkGeri": {
+      "message": "戻る"
+   },
+   "pkGizleIkonu": {
+      "message": "チャンネルホバー時のボタンを非表示にする"
+   },
+   "pkGizleIkonuD": {
+      "message": "ホーム ページ、サイドバー、またはカテゴリのチャンネルにカーソルを合わせると、右上隅に非表示ボタンが表示されます。チャンネル ページの [共有] の横にあるボタンは別のものです。"
+   },
+   "pkGizlemeyiKaldir": {
+      "message": "再表示"
+   },
+   "pkGizlenenKanallar": {
+      "message": "隠しチャンネル"
+   },
+   "pkGizlenenKanallarD": {
+      "message": "これらのチャンネルはリスト、カテゴリ、検索から除外されます。"
+   },
+   "pkGizlenenKategoriler": {
+      "message": "隠しカテゴリ"
+   },
+   "pkGizlenenKategorilerD": {
+      "message": "これらのカテゴリとその中のストリーム カードはリストには含まれません。"
+   },
+   "pkGizlenenleriTemizle": {
+      "message": "{1} の隠れた人物を復元する"
+   },
+   "pkGizliMesajTemizle": {
+      "message": "{1} の隠しメッセージを復元する"
+   },
+   "pkGorselBuyut": {
+      "message": "画像を拡大します (CTRL + クリック)"
+   },
+   "pkGorselBuyutD": {
+      "message": "CTRL キーを押しながらエモート、バッジ、またはアバターをクリックすると、フルサイズで表示されます。"
+   },
+   "pkGorunurluk": {
+      "message": "不透明度"
+   },
+   "pkGrupCanli": {
+      "message": "オンライン ( {1} )"
+   },
+   "pkGrupKapali": {
+      "message": "オフライン ( {1} )"
+   },
+   "pkGunOnce": {
+      "message": "{1} 日前"
+   },
+   "pkGundur": {
+      "message": "{1} 日間"
+   },
+   "pkHakkindaEk": {
+      "message": "追加のチャンネル情報"
+   },
+   "pkHakkindaEkD": {
+      "message": "購読者バッジ、チャンネルのエモート、最近のカテゴリ、チャット ルール (設定されている場合) をストリームの下の [概要] 行に追加します。"
+   },
+   "pkHata": {
+      "message": "エラー"
+   },
+   "pkHayir": {
+      "message": "いいえ"
+   },
+   "pkHazirlanamadi": {
+      "message": "準備できませんでした。"
+   },
+   "pkHersiSifirla": {
+      "message": "すべてをリセットする"
+   },
+   "pkHersiSifirlaD": {
+      "message": "すべての設定とリストが削除されます。拡張機能は初日の状態に戻ります。"
+   },
+   "pkHersiSifirlaUyari": {
+      "message": "メモ、非表示のチャンネルと人物、フィルター、セーブポイントは削除されます。これは元に戻すことはできません。最初にエクスポートすることをお勧めします。"
+   },
+   "pkHesabinEki": {
+      "message": "あなたのアカウント: {1}"
+   },
+   "pkHizliMod": {
+      "message": "クイックタイムアウト"
+   },
+   "pkHizliModD": {
+      "message": "チャット メッセージの横にある砂時計をクリックすると、継続時間ストリップが開きます。 Kick 自身のダイアログの代わりに選択が適用されます。"
+   },
+   "pkHizliModNot": {
+      "message": "コマンドはボックスに入力するだけです。送信するかどうかはユーザー次第なので、誤って罰せられることはありません。"
+   },
+   "pkHkAboneye": {
+      "message": "購読者のみ"
+   },
+   "pkHkAy": {
+      "message": "{1} ヶ月"
+   },
+   "pkHkEmoteler": {
+      "message": "チャンネルエモート"
+   },
+   "pkHkKategoriler": {
+      "message": "最近のカテゴリ"
+   },
+   "pkHkKurallar": {
+      "message": "チャットのルール"
+   },
+   "pkHkRozetler": {
+      "message": "購読者バッジ"
+   },
+   "pkIceAktar": {
+      "message": "インポート"
+   },
+   "pkIcerikBos": {
+      "message": "コンテンツ (空 = すべてのメッセージ)"
+   },
+   "pkIleri": {
+      "message": "次へ"
+   },
+   "pkIlkSonMesaj": {
+      "message": "最初のメッセージから最後のメッセージまで"
+   },
+   "pkIndiriliyorEki": {
+      "message": "ダウンロード · {1}"
+   },
+   "pkIndirmeBitti": {
+      "message": "完了 · {1}"
+   },
+   "pkIndirmeDurdu": {
+      "message": "ダウンロードが停止されました: {1}"
+   },
+   "pkIndirmeIlerleme": {
+      "message": "{1} % · {2} セグメント"
+   },
+   "pkIndirmeIptal": {
+      "message": "キャンセルされました · {1} がダウンロードされました"
+   },
+   "pkIptal": {
+      "message": "キャンセル"
+   },
+   "pkIstatBos": {
+      "message": "まだデータがありません。ストリームを開くと、チャット フローとして、メッセージ数、上位チャット数、エモートの使用状況がここに表示されます。"
+   },
+   "pkIzleyici": {
+      "message": "視聴者"
+   },
+   "pkIzleyiciAnlik": {
+      "message": "視聴者（現在）"
+   },
+   "pkIzleyiciOrt": {
+      "message": "視聴者数 (平均)"
+   },
+   "pkIzleyiciZirve": {
+      "message": "視聴者数（ピーク）"
+   },
+   "pkKaldir": {
+      "message": "削除"
+   },
+   "pkKaliteNot": {
+      "message": "品質が利用できない場合は、次の品質が使用されます。 「自動」が選択されている場合、この機能は何も行いません。"
+   },
+   "pkKaliteOkunamadi": {
+      "message": "品質リストを読み取れませんでした。"
+   },
+   "pkKaliteSecin": {
+      "message": "品質を選択してください:"
+   },
+   "pkKanalBilgisi": {
+      "message": "チャンネル情報"
+   },
+   "pkKanalCanli": {
+      "message": "ライブ: {1} · {2} の視聴者"
+   },
+   "pkKanalCevrimdisi": {
+      "message": "オフライン · {1} フォロワー"
+   },
+   "pkKanalEngeliKaldir": {
+      "message": "このチャンネルを再表示する"
+   },
+   "pkKanalGizleYok": {
+      "message": "まだ誰も隠していませんね。チャンネルカードにカーソルを合わせ、✕を押すと非表示になります。"
+   },
+   "pkKanalHakkinda": {
+      "message": "{1}の概要"
+   },
+   "pkOmNot": {
+      "message": "コマンドはメッセージを開始する必要があります。各コマンドは最大 10 秒ごとに 1 回応答します。あなた自身のメッセージは何も引き起こしません。"
+   },
+   "pkOmOnayBaslik": {
+      "message": "ボットを起動しますか?"
+   },
+   "pkOmOnayGizle": {
+      "message": "これを二度と表示しないでください"
+   },
+   "pkOmOnayKomut": {
+      "message": "{1} のボット ウィンドウが開き、コマンドへの応答を開始します。ウィンドウを閉じるとボットが停止します。"
+   },
+   "pkOmOnayMetin": {
+      "message": "選択した間隔で {1} にアナウンスが送信され始めます。ボットはこのウィンドウで実行されます。タブを閉じると停止します。"
+   },
+   "pkOmOzet": {
+      "message": "{1} アナウンス · {2} コマンド"
+   },
+   "pkOmPopoutD": {
+      "message": "ボットはこのウィンドウで実行されます。保存すると設定が閉じられ、ボットは続行します。タブを閉じるとボットが停止し、再度開くと再開します。"
+   },
+   "pkOmSecAciklama": {
+      "message": "チャンネルを選択します。ボット ウィンドウが開き、そこで設定を完了します。ボットはそのウィンドウで実行されます。"
+   },
+   "pkOmYetkiYok": {
+      "message": "このチャンネルでは自動メッセージを使用できません。あなたはモデレーターではありません。以下からアクセスできるチャンネルを選択してください。"
+   },
+   "pkOncelikCikar": {
+      "message": "優先順位の削除"
+   },
+   "pkOncelikTemizleN": {
+      "message": "優先順位を明確にする ( {1} )"
+   },
+   "pkOncelikliKisiler": {
+      "message": "優先人物"
+   },
+   "pkOncelikliKisilerD": {
+      "message": "彼らのメッセージには緑色のマーカーが付きます。"
+   },
+   "pkOncelikliYap": {
+      "message": "優先する"
+   },
+   "pkOnizleme": {
+      "message": "サイドバーのプレビュー"
+   },
+   "pkOnizlemeD": {
+      "message": "左側のメニューでチャンネルにカーソルを合わせると、小さなカードが開きます。"
+   },
+   "pkOnizlemeKarti": {
+      "message": "プレビューカード"
+   },
+   "pkOnizlemeKartiD": {
+      "message": "ストリームのサムネイル、タイトル、カテゴリ、視聴者数。"
+   },
+   "pkOtoClaim": {
+      "message": "毎日の報酬を自動的に受け取る"
+   },
+   "pkOtoClaimD": {
+      "message": "条件を満たしたら、Kick の毎日の総再生時間報酬を受け取ります。総再生時間チャレンジのみで、他には何も触れられていません。"
+   },
+   "pkOtoSes": {
+      "message": "自動音量"
+   },
+   "pkOtoSesD": {
+      "message": "すべてのストリームを希望の音量で開きます。"
+   },
+   "pkOtoSesNot": {
+      "message": "「自動」では、最後に設定した音量を記憶し、それをすべてのストリームに適用します。途中でボリュームを変更しても、そのままになります。"
+   },
+   "pkOtoTiyatro": {
+      "message": "自動シアターモード"
+   },
+   "pkOtoTiyatroD": {
+      "message": "チャンネルを開くとプレーヤーが 1 回広がります。"
+   },
+   "pkOtomatikKalite": {
+      "message": "自動品質"
+   },
+   "pkOtomatikKaliteD": {
+      "message": "チャンネルを開くときに好みの品質を 1 回選択します。"
+   },
+   "pkOturum": {
+      "message": "セッション"
+   },
+   "pkOturumSuresiEki": {
+      "message": "セッションの長さ: {1}"
+   },
+   "pkOynatmaHizi": {
+      "message": "再生速度"
+   },
+   "pkOzellikKapali": {
+      "message": "この機能は現在オフになっています。"
+   },
+   "pkPaneliAc": {
+      "message": "パネルを開く"
+   },
+   "pkParcaListesi": {
+      "message": "セグメントリストを取得しています…"
+   },
+   "pkParcaYok": {
+      "message": "セグメントなし"
+   },
+   "pkProfilBuyuk": {
+      "message": "プロフィール写真を大きく表示"
+   },
+   "pkProfilKartiBilgisi": {
+      "message": "プロフィールカード情報"
+   },
+   "pkProfilKartiBilgisiD": {
+      "message": "チャット内の誰かをクリックすると、カード上の履歴が表示されます。"
+   },
+   "pkProfiliAc": {
+      "message": "プロフィールを開く"
+   },
+   "pkPureKick": {
+      "message": "ピュアキックモッド"
+   },
+   "pkPureKickAciklama": {
+      "message": "Kick 用の広告ブロッカー。"
+   },
+   "pkRenkleriSifirla": {
+      "message": "デフォルトの色を復元する"
+   },
+   "pkRolEtiket": {
+      "message": "役割"
+   },
+   "pkRolNot": {
+      "message": "役割は Kick 独自のチャット接続から得られるため、ページを開いた後に書き込みをした人だけが認識されます。"
+   },
+   "pkRolVurgulama": {
+      "message": "役割の強調表示"
+   },
+   "pkRolVurgulamaD": {
+      "message": "ブロードキャスター、モデレーター、VIP、および加入者のメッセージには色付きのストライプが表示されます。"
+   },
+   "pkRol_bot": {
+      "message": "ボット"
+   },
+   "pkRol_broadcaster": {
+      "message": "放送局"
+   },
+   "pkRol_founder": {
+      "message": "創設者"
+   },
+   "pkRol_moderator": {
+      "message": "モデレータ"
+   },
+   "pkRol_og": {
+      "message": "OG"
+   },
+   "pkRol_staff": {
+      "message": "キックスタッフ"
+   },
+   "pkRol_sub_gifter": {
+      "message": "サブギフター"
+   },
+   "pkRol_subscriber": {
+      "message": "購読者"
+   },
+   "pkRol_verified": {
+      "message": "確認済み"
+   },
+   "pkRol_vip": {
+      "message": "VIP"
+   },
+   "pkSaOnce": {
+      "message": "{1} 1 時間前"
+   },
+   "pkSabitKaldir": {
+      "message": "固定を解除する"
+   },
+   "pkSabitKanalAyar": {
+      "message": "上部に固定されたチャンネル"
+   },
+   "pkSabitKanalAyarD": {
+      "message": "サイドバーのチャンネルにマウスを移動すると、ピンが表示されます。ピン留めされたチャンネルは、フォローリストの先頭に表示されます。"
+   },
+   "pkSabitKanallar": {
+      "message": "チャンネルの固定"
+   },
+   "pkSabitKanallarD": {
+      "message": "フォローしているチャンネルをリストの一番上に置いてください。"
+   },
+   "pkSabitle": {
+      "message": "ピン"
+   },
+   "pkSadeceEmote": {
+      "message": "エモート専用メッセージ"
+   },
+   "pkSadeceEmoteD": {
+      "message": "まったくテキストのないメッセージ"
+   },
+   "pkSadeceEmoteEki": {
+      "message": "{1} エモート専用メッセージ"
+   },
+   "pkSadeceEmoteMesajlari": {
+      "message": "エモート専用メッセージ"
+   },
+   "appDesc": {
+      "message": "PureKick Mod は Kick.com 上の広告をブロックし、強化されたストリーミングおよびチャット ツールキットを追加します。"
+   },
+   "badgeCtaSub": {
+      "message": "キックでサインイン"
+   },
+   "badgeCtaTitle": {
+      "message": "チャットバッジを獲得する"
+   },
+   "badgeLinkedSub": {
+      "message": "アカウントがリンクされました ✓"
+   },
+   "badgeLinkedTitle": {
+      "message": "チャットバッジがアクティブです"
+   },
+   "btnTitle": {
+      "message": "PureKick Mod — 広告なしのストリーム"
+   },
+   "dropDay": {
+      "message": "{1} 残り 1 日"
+   },
+   "dropDays": {
+      "message": "{1} 日残り"
+   },
+   "dropHour": {
+      "message": "{1} 残り 1 時間"
+   },
+   "dropHours": {
+      "message": "{1} 時間残り"
+   },
+   "dropTitle": {
+      "message": "Kick で Drops キャンペーンを表示する"
+   },
+   "dropsEmpty": {
+      "message": "アクティブなドロップはありません"
+   },
+   "dropsTitle": {
+      "message": "アクティブドロップ"
+   },
+   "footHelp": {
+      "message": "ヘルプとサポート"
+   },
+   "footPrivacy": {
+      "message": "プライバシー"
+   },
+   "pauseBtn": {
+      "message": "このサイトで一時停止する"
+   },
+   "pkAboneAktifNot": {
+      "message": "滞在する月ごとに成長していきます。ありがとう！ 💚"
+   },
+   "pkAboneAy": {
+      "message": "{1} -月サポーター"
+   },
+   "pkAboneAy1": {
+      "message": "1ヶ月サポーター"
+   },
+   "pkAboneBaslangic": {
+      "message": "開始しました"
+   },
+   "pkAboneBitti": {
+      "message": "メンバーシップは終了しました。更新すると、バッジは中断したところから再開されます。"
+   },
+   "pkAboneDemoBaslik": {
+      "message": "サポーターとしてチャットでどのように見えるかは次のとおりです。"
+   },
+   "pkAboneDemoMesaj": {
+      "message": "こんにちは！ 👋"
+   },
+   "pkAboneKidem": {
+      "message": "あなたの在職期間"
+   },
+   "pkAboneOl": {
+      "message": "会員になる"
+   },
+   "pkAboneOnceGiris": {
+      "message": "まず Kick でサインインします。メンバーシップとアカウントを照合するために Kick が必要です。"
+   },
+   "pkAboneSonaErdi": {
+      "message": "終了しました"
+   },
+   "pkAboneYenile": {
+      "message": "メンバーシップを更新する"
+   },
+   "pkAboneYenileme": {
+      "message": "更新します"
+   },
+   "pkAboneYukleniyor": {
+      "message": "会員ステータスを確認しています…"
+   },
+   "pkAbonelik": {
+      "message": "定期購入"
+   },
+   "pkAbonelikTanit": {
+      "message": "サポーターになる: チャットで自分の名前の横に在職期間バッジを取得し、自分の名前を好きなように色付けします。"
+   },
+   "pkAiMod": {
+      "message": "自動削除をマークする"
+   },
+   "pkAiModD": {
+      "message": "Kick の AI モデレーションによって削除された場合、ログにはモデレーターの削除とは区別されます。"
+   },
+   "pkAltAdTakibi": {
+      "message": "ネームウォッチ"
+   },
+   "pkAltCezaSebepleri": {
+      "message": "罰則の理由"
+   },
+   "pkAltGezinme": {
+      "message": "ナビゲーションバー"
+   },
+   "pkAltGizliKanallar": {
+      "message": "隠しチャンネル"
+   },
+   "pkAltGizliKategoriler": {
+      "message": "隠しカテゴリ"
+   },
+   "pkAltKaliteSes": {
+      "message": "自動品質と量"
+   },
+   "pkAltKartBilgisi": {
+      "message": "カード詳細"
+   },
+   "pkAltKartSohbeti": {
+      "message": "カードチャット"
+   },
+   "pkAltKenarCubugu": {
+      "message": "サイドバー"
+   },
+   "pkAltModGunlugu": {
+      "message": "ログ設定"
+   },
+   "pkAltOtomasyon": {
+      "message": "自動化"
+   },
+   "pkAltOynaticiOzel": {
+      "message": "プレーヤーの機能"
+   },
+   "pkAltSagTikMenuleri": {
+      "message": "右クリックして画像を選択"
+   },
+   "pkAltSohbetGorunum": {
+      "message": "チャット出演"
+   },
+   "pkAltSohbetGorunumD": {
+      "message": "エモートのプレビュー。"
+   },
+   "pkAltSohbetMesaji": {
+      "message": "チャットメッセージ"
+   },
+   "pkAltVideoIstat": {
+      "message": "ビデオとコントロールバー"
+   },
+   "pkAltVideoVod": {
+      "message": "ビデオプレーヤーとVOD"
+   },
+   "pkAltVurgulama": {
+      "message": "メッセージの強調表示"
+   },
+   "pkAninda": {
+      "message": "変更はすぐに有効になります。"
+   },
+   "pkAnlikOrtZirve": {
+      "message": "現在/平均/ピーク"
+   },
+   "pkAralikSec": {
+      "message": "範囲を選択してください"
+   },
+   "pkArayuzDuzeniD": {
+      "message": "Kick インターフェースに小さな追加。どれも Kick 独自のレイアウトを壊すものではありません。"
+   },
+   "pkAySayisi": {
+      "message": "{1} 月"
+   },
+   "pkAyarSatiri": {
+      "message": "PureKick チャット設定"
+   },
+   "pkAyarYedegi": {
+      "message": "設定のバックアップ"
+   },
+   "pkAyarYedegiD": {
+      "message": "すべての設定とリストが 1 つのファイルにあります。サーバーには何も送信されません。"
+   },
+   "pkAramaAyarlar": {
+      "message": "検索設定..."
+   },
+   "pkAramaSonucYok": {
+      "message": "一致する設定が見つかりません"
+   },
+   "pkAyarlar": {
+      "message": "PureKick 設定"
+   },
+   "pkAyarlardanAc": {
+      "message": "設定でオンにできます。"
+   },
+   "pkAydir": {
+      "message": "{1} か月"
+   },
+   "pkAzOnce": {
+      "message": "たった今"
+   },
+   "pkBaglantiDurum": {
+      "message": "チャット接続ステータス"
+   },
+   "pkBaglantiDurumD": {
+      "message": "チャットの横にある小さな点: イベントが流れているか、停止していますか。"
+   },
+   "pkBaglanti_acik": {
+      "message": "チャット接続は機能しています"
+   },
+   "pkBaglanti_bekliyor": {
+      "message": "チャット接続を待っています"
+   },
+   "pkBaglanti_kopuk": {
+      "message": "チャット接続が失われたようです"
+   },
+   "pkBaglanti_sessiz": {
+      "message": "しばらくイベントはありません - チャットは静かになるかもしれません"
+   },
+   "pkBaglantiyiKopyala": {
+      "message": "リンクをコピーする"
+   },
+   "pkBaglantiyiOnizle": {
+      "message": "リンクをプレビューする"
+   },
+   "pkChatOnizle": {
+      "message": "チャットでプレビューを表示する"
+   },
+   "pkChatOnizleKapat": {
+      "message": "プレビューを閉じる"
+   },
+   "pkBahsedenYok": {
+      "message": "まだ誰もあなたのことを言及していません。"
+   },
+   "pkBahsedilmeler": {
+      "message": "言及"
+   },
+   "pkBahsedilmelerBos": {
+      "message": "チャンネルのチャットが監視されると、ここに集まります。"
+   },
+   "pkBahsedilmelerD": {
+      "message": "自分の名前が記載されたメッセージを収集します。"
+   },
+   "pkBahsetRozet": {
+      "message": "通知カウンター"
+   },
+   "pkBahsetRozetD": {
+      "message": "自分の名前が表示されると、PureKick ボタンに赤いカウントが表示されます。オフにしてもメンションは収集されますが、画面上でカウントされなくなるだけです。"
+   },
+   "pkBahsetSes": {
+      "message": "通知音"
+   },
+   "pkBahsetSesD": {
+      "message": "自分の名前が出てくると短い音を鳴らします。"
+   },
+   "pkBahsetSesSeviye": {
+      "message": "ボリューム"
+   },
+   "pkBahsetSesTon": {
+      "message": "サウンド"
+   },
+   "pkBahsetSesTonD": {
+      "message": "選択するとすぐに再生されます。聞いてから決めてください。"
+   },
+   "pkBahsetTikla": {
+      "message": "クリック可能な@メンション"
+   },
+   "pkBahsetTiklaD": {
+      "message": "メッセージ内の @name をクリックすると、その人がチャット ボックスに表示されます。"
+   },
+   "pkBanDetay": {
+      "message": "詳しい禁止情報"
+   },
+   "pkBanDetayD": {
+      "message": "ログの行をクリックすると、理由、期間、残り時間、異議申し立てのステータスが表示されます。"
+   },
+   "pkBanDoldu": {
+      "message": "期限切れ"
+   },
+   "pkBanItiraz": {
+      "message": "アピール"
+   },
+   "pkBanItirazVar": {
+      "message": "このペナルティに対して控訴が開始された"
+   },
+   "pkBanKalan": {
+      "message": "残り時間"
+   },
+   "pkBanKalici": {
+      "message": "永久的"
+   },
+   "pkBanMesaj": {
+      "message": "メッセージ"
+   },
+   "pkBanOtomatik": {
+      "message": "自動"
+   },
+   "pkBanSablon": {
+      "message": "事前に設定されたペナルティの理由"
+   },
+   "pkBanSablonD": {
+      "message": "よく使う理由を保存しておきます。ワンクリックでプロファイル カードからコマンドとして書き込みます。"
+   },
+   "pkBanSebep": {
+      "message": "理由"
+   },
+   "pkBanSure": {
+      "message": "期間"
+   },
+   "pkBanYapan": {
+      "message": "申請者"
+   },
+   "pkBindir": {
+      "message": "ストリーム上のオーバーレイ チャット"
+   },
+   "pkBindirAc": {
+      "message": "オーバーレイをオンにする"
+   },
+   "pkBindirAcD": {
+      "message": "レイヤーはクリックスルーを通過します。プレーヤーのボタンをブロックすることはありません。"
+   },
+   "pkBindirD": {
+      "message": "全画面表示でもチャットを読み続けてください。"
+   },
+   "pkBindirKonum": {
+      "message": "ポジション"
+   },
+   "pkBindirNot": {
+      "message": "メッセージは Kick の既存のチャット接続から送信されます。新しいものは開かれていません。あなたが隠した人はここでも隠れたままになります。"
+   },
+   "pkBirModerator": {
+      "message": "モデレータ"
+   },
+   "pkBirModeratorIci": {
+      "message": "司会者"
+   },
+   "pkBirlestir": {
+      "message": "マージ"
+   },
+   "pkBirlestirD": {
+      "message": "ファイル内の設定のみが書き込まれます。他のすべてはそのままです。"
+   },
+   "pkBotYoksay": {
+      "message": "ボットを強調表示しない"
+   },
+   "pkBotYoksayD": {
+      "message": "ボット バッジが付いたアカウントからのメッセージにはカラー ストライプが表示されません。"
+   },
+   "pkBugun": {
+      "message": "今日"
+   },
+   "pkCevrimdisi": {
+      "message": "オフライン"
+   },
+   "pkCevrimdisiEki": {
+      "message": "オフライン · {1}"
+   },
+   "pkCezaYok": {
+      "message": "現在タイムアウトになっている人はいません。"
+   },
+   "pkCrossAciklama": {
+      "message": "アクションは、選択した各チャネルに個別に適用されます。チャンネル リストは、あなたが管理するチャンネルから取得されます。"
+   },
+   "pkCrossAra": {
+      "message": "チャンネルを検索…"
+   },
+   "pkCrossAyar": {
+      "message": "クロスバン・バルククロスバン"
+   },
+   "pkCrossAyarD": {
+      "message": "プロフィール カードにボタンを追加し、PureKick メニューに「一括クロス禁止」行を追加します。モデレートするすべてのチャンネルで、1 人 (またはリスト全体) を同時に禁止、タイムアウト、または赦免します。"
+   },
+   "pkCrossBaslat": {
+      "message": "スタート"
+   },
+   "pkCrossBaslik": {
+      "message": "{1} — クロスチャネルアクション"
+   },
+   "pkCrossBekleme": {
+      "message": "チャンネル間の遅延 (秒)"
+   },
+   "pkCrossBitti": {
+      "message": "完了 — {1} は成功、{2} は失敗"
+   },
+   "pkCrossDugme": {
+      "message": "クロスバン"
+   },
+   "pkCrossDurdur": {
+      "message": "停止"
+   },
+   "pkCrossHepsi": {
+      "message": "全て選択/全てクリア"
+   },
+   "pkCrossIlerleme": {
+      "message": "{1} / {2} · {3}"
+   },
+   "pkCrossKaldir": {
+      "message": "禁止を解除する"
+   },
+   "pkCrossKanallar": {
+      "message": "チャンネル"
+   },
+   "pkCrossListeYok": {
+      "message": "チャンネルリストをロードできませんでした - Kick にサインインする必要があります"
+   },
+   "pkCrossModYok": {
+      "message": "あなたがモデレーターであるチャンネルは見つかりませんでした"
+   },
+   "pkCrossNerede": {
+      "message": "プロフィールカードのクロスバンボタン、またはPureKickメニューの「一括クロスバン」行から使用してください。"
+   },
+   "pkCrossSebep": {
+      "message": "理由"
+   },
+   "pkCrossSebepIpucu": {
+      "message": "オプション"
+   },
+   "pkCrossSecili": {
+      "message": "{1} / {2} 選択済み"
+   },
+   "pkCrossSure": {
+      "message": "継続時間 (分)"
+   },
+   "pkCrossSustur": {
+      "message": "タイムアウト"
+   },
+   "pkCrossTekNot": {
+      "message": "クイックモデレーションはオフになっています。クロスチャネルボタンのみが表示されます。"
+   },
+   "pkCrossToplu": {
+      "message": "一括クロスバン"
+   },
+   "pkCrossTopluAciklama": {
+      "message": "選択したチャネルごとに、リストしたすべてのユーザーに個別に適用されます。チャンネル リストは、あなたが管理するチャンネルから取得されます。"
+   },
+   "pkCrossTopluAdlar": {
+      "message": "ユーザー名"
+   },
+   "pkCrossTopluBaslik": {
+      "message": "一括クロスチャネルアクション"
+   },
+   "pkCrossTopluBekleme": {
+      "message": "ユーザー間の待ち時間 (秒)"
+   },
+   "pkCrossTopluBeklemeNot": {
+      "message": "1 人のユーザーが、選択されたすべてのチャネルにわたって連続して処理されます。待機は次のユーザーに移動する場合にのみ適用されます (少なくとも {1} 秒)。"
+   },
+   "pkCrossTopluIpucu": {
+      "message": "アリス、ボブ、キャロル \n または 1 行に 1 つ"
+   },
+   "pkCrossTopluSayi": {
+      "message": "{1} ユーザー"
+   },
+   "pkCrossYasakla": {
+      "message": "禁止"
+   },
+   "pkCrossYukleniyor": {
+      "message": "チャンネルを読み込み中…"
+   },
+   "pkDisaAktar": {
+      "message": "エクスポート"
+   },
+   "pkDkOnce": {
+      "message": "{1} 分前"
+   },
+   "pkDropsAciklama": {
+      "message": "見逃せないアクティブなキャンペーン。"
+   },
+   "pkDropsMenu": {
+      "message": "アクティブドロップ - 毎日の報酬"
+   },
+   "pkEkle": {
+      "message": "追加"
+   },
+   "pkEkranGoruntusu": {
+      "message": "スクリーンショット"
+   },
+   "pkEkranGoruntusuAl": {
+      "message": "スクリーンショットを撮る"
+   },
+   "pkEkranGoruntusuD": {
+      "message": "現在のフレームを PNG としてダウンロードします。"
+   },
+   "pkVideoKayit": {
+      "message": "ビデオレコーダー"
+   },
+   "pkEminMisin": {
+      "message": "よろしいですか？"
+   },
+   "pkEmoteOnizleme": {
+      "message": "エモートのプレビュー"
+   },
+   "pkSadeceReklam": {
+      "message": "広告ブロッカーのみ"
+   },
+   "pkSadeceReklamAcik": {
+      "message": "広告ブロックのみがオンになっています。他の機能をオンにすると、このモードが終了します。"
+   },
+   "pkSadeceReklamBtn": {
+      "message": "有効にする"
+   },
+   "pkSadeceReklamD": {
+      "message": "他のすべての機能をオフにし、広告ブロックのみを維持します。"
+   },
+   "pkSadeceReklamRozet": {
+      "message": "アクティブ"
+   },
+   "pkSagTikMenusu": {
+      "message": "プレーヤー上の右クリックメニュー"
+   },
+   "pkSagTikMenusuD": {
+      "message": "ビデオ自体に対してのみアクティブになります。"
+   },
+   "pkSayfaReklamlari": {
+      "message": "ページ広告"
+   },
+   "pkSayfaReklamlariD": {
+      "message": "Kick インターフェースで広告スロットを非表示にします。"
+   },
+   "pkScEtiket": {
+      "message": "Chatterステータスタグ"
+   },
+   "pkScEtiketD": {
+      "message": "リスト内の名前の横に「チャット中」または「オフライン 5 分」と表示されます。"
+   },
+   "pkScFiltre": {
+      "message": "チャタリングフィルター"
+   },
+   "pkScFiltreD": {
+      "message": "リストの上に [すべて] / [チャット中] / [オフライン] ボタンを追加します。"
+   },
+   "pkScSayac": {
+      "message": "チャタリングカウントの強化"
+   },
+   "pkScSayacD": {
+      "message": "Kick 自体のカウントが下がった場合でも、このセッションを見た人の数を示します。"
+   },
+   "pkSebepYazin": {
+      "message": "理由を入力してください…"
+   },
+   "pkSebepYok": {
+      "message": "事前設定された理由はまだ追加されていません。"
+   },
+   "pkSecili": {
+      "message": "{1} が選択されました"
+   },
+   "pkSekmeGenel": {
+      "message": "概要"
+   },
+   "pkSekmeHakkinda": {
+      "message": "について"
+   },
+   "pkSekmeIci": {
+      "message": "ページ内のリンクを開く"
+   },
+   "pkSekmeIciD": {
+      "message": "YouTube、X、Instagram、Reddit、Kick クリップ、Twitch クリップ、チャット内のストリーミング可能なリンクは、小さなプレーヤーで開きます。"
+   },
+   "pkSekmeIciNot": {
+      "message": "これらのサイトのみがインラインで開きます。不明なリンクは通常どおり新しいタブで開きます。 CTRL キーを押しながらクリックすると、常に新しいタブが開きます。"
+   },
+   "pkLinkOnizleme": {
+      "message": "ライブプレビューカード"
+   },
+   "pkLinkOnizlemeD": {
+      "message": "チャット内のリンクの下にライブ サムネイル プレビュー カードが自動的に表示されます。"
+   },
+   "pkSendenBahsedenler": {
+      "message": "誰があなたのことを言いましたか"
+   },
+   "pkSes": {
+      "message": "ボリューム"
+   },
+   "pkSesBip": {
+      "message": "ビープ音"
+   },
+   "pkSesCinlama": {
+      "message": "チャイム"
+   },
+   "pkSesDamla": {
+      "message": "ドロップ"
+   },
+   "pkSesKapali": {
+      "message": "オフ"
+   },
+   "pkSesOto": {
+      "message": "自動"
+   },
+   "pkSesPuf": {
+      "message": "パフ"
+   },
+   "pkSifirdan": {
+      "message": "ゼロから"
+   },
+   "pkSifirdanD": {
+      "message": "現在のものはすべて削除され、ファイルに置き換えられます。"
+   },
+   "pkSilAciklama": {
+      "message": "トリガーを含むメッセージは削除されます。誰もタイムアウトしていない。ブロードキャスター、モデレータ、およびあなた自身のメッセージはスキップされます。"
+   },
+   "pkSilAyar": {
+      "message": "メッセージの一括削除"
+   },
+   "pkSilAyarD": {
+      "message": "選択した単語または語句を含むメッセージを削除します。オンの間、PureKick メニューに「一括メッセージ削除」行が表示されます。"
+   },
+   "pkSilBaslik": {
+      "message": "メッセージの一括削除"
+   },
+   "pkSilGecmis": {
+      "message": "これまでのメッセージに適用"
+   },
+   "pkSilMenu": {
+      "message": "メッセージの一括削除"
+   },
+   "pkSilNerede": {
+      "message": "PureKick メニューの「一括メッセージ削除」行から使用します。"
+   },
+   "pkSilNot": {
+      "message": "ライブ視聴がオンになっている間は、このウィンドウを閉じることができます。チャンネルを離れるか設定をオフにすると停止します。履歴スキャンの対象となるのは、このセッションで確認されたメッセージのみです。"
+   },
+   "pkSilSayac": {
+      "message": "削除済み: {1}"
+   },
+   "pkSilTetikD": {
+      "message": "1 行に 1 つの単語またはフレーズ。フレーズにはカンマが含まれる可能性があるため、行ごとに分割します。"
+   },
+   "pkSilYetkiYok": {
+      "message": "このチャンネルでは一括削除を使用できません。あなたはモデレーターではありません。"
+   },
+   "pkSilindiEtiket": {
+      "message": "(削除されました)"
+   },
+   "pkSilinenGoster": {
+      "message": "削除されたメッセージを表示する"
+   },
+   "pkSilinenGosterD": {
+      "message": "削除されたメッセージは表示されたままになり、淡色表示され、「(削除済み)」とマークされます。"
+   },
+   "pkSilinenYok": {
+      "message": "削除されたメッセージはまだありません。"
+   },
+   "pkSohbetCikarildi": {
+      "message": "このセッションを視聴したチャットから削除されました。デバイスからデータが流出することはありません。"
+   },
+   "pkSohbetEdenler": {
+      "message": "おしゃべり"
+   },
+   "pkSohbetIstatistikleri": {
+      "message": "チャット統計"
+   },
+   "pkSohbetIstatistikleriBaslik": {
+      "message": "チャット統計"
+   },
+   "pkSohbetIstatistikleriD": {
+      "message": "メッセージ数/分、最もアクティブなチャット数、エモートの使用状況。"
+   },
+   "pkSohbetKaydi": {
+      "message": "チャットログ"
+   },
+   "pkSohbetciIpucu": {
+      "message": "Kick: {1} · PureKick はこのセッションで {2} 人を見ました"
+   },
+   "pkSohbetciListesi": {
+      "message": "おしゃべりリスト"
+   },
+   "pkSohbetciListesiD": {
+      "message": "PureKick の機能が Kick のビューア リストに追加されます。"
+   },
+   "pkSohbette": {
+      "message": "チャット中"
+   },
+   "pkSonGuncellemeEki": {
+      "message": "最終更新: {1}"
+   },
+   "pkSonMesajiIpucu": {
+      "message": "最後のメッセージ: {1} · {2} メッセージの合計"
+   },
+   "pkSonMesajlar": {
+      "message": "最近のメッセージ"
+   },
+   "pkSonucSayisiN": {
+      "message": "{1} の結果"
+   },
+   "pkSonucYok": {
+      "message": "結果はありません。"
+   },
+   "pkSsAyarlari": {
+      "message": "スクリーンショットの動作"
+   },
+   "pkSsBirincil": {
+      "message": "通常のクリック"
+   },
+   "pkSsIkincil": {
+      "message": "CTRL + クリック"
+   },
+   "pkSsIndir": {
+      "message": "ファイルにダウンロードする"
+   },
+   "pkSsPano": {
+      "message": "クリップボードにコピー"
+   },
+   "pkSure": {
+      "message": "期間"
+   },
+   "pkSureDakika": {
+      "message": "{1}分"
+   },
+   "pkSureDakika1": {
+      "message": "1分"
+   },
+   "pkSureGun": {
+      "message": "{1} 日"
+   },
+   "pkSureGun1": {
+      "message": "1日"
+   },
+   "pkSureSaat": {
+      "message": "{1}時間"
+   },
+   "pkSureSaat1": {
+      "message": "1時間"
+   },
+   "pkSureSaniye": {
+      "message": "{1} 秒"
+   },
+   "pkSureSaniye1": {
+      "message": "1秒"
+   },
+   "pkSureSecenek": {
+      "message": "期間オプション"
+   },
+   "pkSureSecenekD": {
+      "message": "チャット メッセージの横にある砂時計をクリックすると、期間が表示されます。分単位でカンマ区切り (1440 = 1 日)。"
+   },
+   "pkSurumEki": {
+      "message": "バージョン {1}"
+   },
+   "pkSurumNotlari": {
+      "message": "リリースノート"
+   },
+   "pkSurumNotlariD": {
+      "message": "各バージョンでの変更点。"
+   },
+   "pkSusturmaBitis": {
+      "message": "端: {1}"
+   },
+   "pkTAcikMenuKapat": {
+      "message": "まず開いているメニューを閉じてください"
+   },
+   "pkTAyarlarIndirildi": {
+      "message": "設定がエクスポートされました"
+   },
+   "pkTBaglantiKopyalandi": {
+      "message": "リンクがクリップボードにコピーされました"
+   },
+   "pkTCrossAdGir": {
+      "message": "少なくとも 1 つのユーザー名を入力してください"
+   },
+   "pkTCrossKanalSec": {
+      "message": "少なくとも 1 つのチャンネルを選択してください"
+   },
+   "pkTGizlenenlerTemiz": {
+      "message": "隠れた人はクリアされました"
+   },
+   "pkTGoruntuHazirDegil": {
+      "message": "写真の準備ができていません"
+   },
+   "pkTIndirmeDesteklenmiyor": {
+      "message": "このブラウザはファイルに書き込むことができません"
+   },
+   "pkTIndirmeSuruyor": {
+      "message": "ダウンロードはすでに実行中です"
+   },
+   "pkTKaldiginYer": {
+      "message": "中断した場所: {1}"
+   },
+   "pkTKaliteMenusuAcilmadi": {
+      "message": "品質メニューが開かない"
+   },
+   "pkTKaliteMenusuYok": {
+      "message": "プレーヤー品質メニューが見つかりません"
+   },
+   "pkTKaliteOynaticiya": {
+      "message": "品質はプレイヤーに委ねられる"
+   },
+   "pkTKaliteYok": {
+      "message": "{1} はこのストリームでは利用できません"
+   },
+   "pkTKanalEngelKalkti": {
+      "message": "{1} は非表示ではなくなりました"
+   },
+   "pkTKanalGizlemeKalkti": {
+      "message": "チャンネルが再び表示されるようになりました"
+   },
+   "pkTKanalGizlendi": {
+      "message": "チャンネル非表示"
+   },
+   "pkTKartAcilamadi": {
+      "message": "カードを開けませんでした - チャットには少なくとも 1 つのメッセージが必要です"
+   },
+   "pkTKartSabitlendi": {
+      "message": "カードが固定されています - ドラッグできます"
+   },
+   "pkTKategoriGizlendi": {
+      "message": "カテゴリ非表示"
+   },
+   "pkTKategoriGorunur": {
+      "message": "カテゴリが再び表示されます"
+   },
+   "pkTKayitNoktalariTemiz": {
+      "message": "保存されたポジションがクリアされました"
+   },
+   "pkTKelimeKaydedildi": {
+      "message": "追跡された単語が保存されました"
+   },
+   "pkTKisiGizlendi": {
+      "message": "{1} からのメッセージは非表示になります"
+   },
+   "pkTKisiGorunur": {
+      "message": "{1} が再び表示されます"
+   },
+   "pkTKisiOncelikli": {
+      "message": "{1} が優先されるようになりました"
+   },
+   "pkTKisiSohbetteYok": {
+      "message": "この人からのメッセージはチャットに表示されません"
+   },
+   "pkTKomutYazildi": {
+      "message": "コマンドがチャット ボックスに入力されました"
+   },
+   "pkTKopyalanamadi": {
+      "message": "テキストをコピーできませんでした"
+   },
+   "pkTKopyalandi": {
+      "message": "クリップボードにコピーされたテキスト"
+   },
+   "pkTKorumaAcildi": {
+      "message": "保護オン"
+   },
+   "pkTKorumaDuraklatildi": {
+      "message": "保護が一時停止されました"
+   },
+   "pkTKullaniciBulunamadi": {
+      "message": "そのようなユーザーは見つかりませんでした"
+   },
+   "pkTMesajlarGeriGeldi": {
+      "message": "隠されたメッセージが戻ってきました"
+   },
+   "pkTModGunluguKapali": {
+      "message": "モデレーションログがオフになっています"
+   },
+   "pkTOdulAlindi": {
+      "message": "🎉 毎日の報酬の受け取り"
+   },
+   "pkTOmKaydedildi": {
+      "message": "自動メッセージ設定が保存されました"
+   },
+   "pkTOmKomutBosluk": {
+      "message": "コマンドにはスペースを含めることはできません"
+   },
+   "pkTOmKomutEklendi": {
+      "message": "コマンドが保存されました"
+   },
+   "pkTOmKomutEksik": {
+      "message": "コマンドとその応答の両方を入力します"
+   },
+   "pkTOmKomutGuncellendi": {
+      "message": "コマンド応答が更新されました"
+   },
+   "pkTOmPencereAcildi": {
+      "message": "{1} のボット ウィンドウが開きました"
+   },
+   "pkTOncelikKalkti": {
+      "message": "{1} から優先度が削除されました"
+   },
+   "pkTOnceliklerTemiz": {
+      "message": "優先事項がクリアされました"
+   },
+   "pkTOturumGeriYuklendi": {
+      "message": "以前のセッションが復元されました"
+   },
+   "pkTOynaticiYok": {
+      "message": "プレーヤーが見つかりません"
+   },
+   "pkTOynaticiYokNokta": {
+      "message": "プレーヤーが見つかりません。"
+   },
+   "pkTOzellikAcildi": {
+      "message": "{1} がオンになりました"
+   },
+   "pkTOzellikKapatildi": {
+      "message": "{1} がオフになりました"
+   },
+   "pkTPanoDesteklenmiyor": {
+      "message": "このブラウザでは画像をコピーできません。代わりにダウンロードします"
+   },
+   "pkTRenklerSifirlandi": {
+      "message": "役割の色をリセット"
+   },
+   "pkTSadeceReklam": {
+      "message": "広告ブロッカーのみが有効になっています"
+   },
+   "pkTSeritYok": {
+      "message": "現在、Kick のプレーヤー コントロールは閉じられています。プレーヤーにマウスを移動して、もう一度試してください。"
+   },
+   "pkTSifirlanamadi": {
+      "message": "リセットに失敗しました"
+   },
+   "pkTSifirlandi": {
+      "message": "すべてがリセットされ、ページがリロードされます"
+   },
+   "pkTSilBasladi": {
+      "message": "ライブ視聴 - {1} トリガー"
+   },
+   "pkTSilDurdu": {
+      "message": "ライブ視聴を停止しました"
+   },
+   "pkTSilEslesmeYok": {
+      "message": "一致するメッセージはありません"
+   },
+   "pkTSohbetAlaniYok": {
+      "message": "チャットエリアが見つかりません"
+   },
+   "pkTSohbetKutusuYok": {
+      "message": "チャットボックスが見つかりませんでした"
+   },
+   "pkTSsAlinamadi": {
+      "message": "スクリーンショットが失敗しました"
+   },
+   "pkTSsKaydedildi": {
+      "message": "スクリーンショットが保存されました"
+   },
+   "pkTSsPanoya": {
+      "message": "クリップボードにコピーされたスクリーンショット"
+   },
+   "pkTSsYasak": {
+      "message": "このストリームではスクリーンショットは使用できません"
+   },
+   "pkTSureKaydedildi": {
+      "message": "期間オプションが保存されました"
+   },
+   "pkTSusturmaHata": {
+      "message": "タイムアウトに失敗しました ( {1} )"
+   },
+   "pkTSusturuldu": {
+      "message": "{1} が {2} でタイムアウトになりました"
+   },
+   "pkTTemaKaydedildi": {
+      "message": "テーマカラーを保存しました"
+   },
+   "pkTTemaVarsayilan": {
+      "message": "テーマをデフォルトに戻しました"
+   },
+   "pkTToBasladi": {
+      "message": "ライブ視聴 — {1} トリガー"
+   },
+   "pkTToDurdu": {
+      "message": "ライブウォッチが停止しました"
+   },
+   "pkTToEslesmeYok": {
+      "message": "誰も一致しませんでした"
+   },
+   "pkTToTetikGir": {
+      "message": "少なくとも 1 つのトリガー フレーズを入力してください"
+   },
+   "pkTVodIndirildi": {
+      "message": "過去の放送をダウンロードしました"
+   },
+   "pkTYedekAlinamadi": {
+      "message": "バックアップに失敗しました"
+   },
+   "pkTYedekCokBuyuk": {
+      "message": "ファイルが大きすぎます"
+   },
+   "pkTYedekOkunamadi": {
+      "message": "ファイルを読み取れませんでした"
+   },
+   "pkTYedekUygulanamadi": {
+      "message": "設定を読み込めませんでした"
+   },
+   "pkTYedekUygulandi": {
+      "message": "設定が読み込まれ、ページを再読み込みしています"
+   },
+   "pkTYetkiKaydedildi": {
+      "message": "役割が更新されました"
+   },
+   "pkTYetkiKismi": {
+      "message": "{1} 役割の変更に失敗しました"
+   },
+   "pkTakipKelime": {
+      "message": "追跡された単語"
+   },
+   "pkTakipKelimeD": {
+      "message": "これらの単語をあなたの名前と一緒に追跡します。カンマ区切り。"
+   },
+   "pkTakipKelimeOrnek": {
+      "message": "プレゼント、コード、サーバー"
+   },
+   "pkTakipciEki": {
+      "message": "{1} フォロワー"
+   },
+   "pkTakipciSayisi": {
+      "message": "フォロワー"
+   },
+   "pkTamEkranSon": {
+      "message": "最後に全画面ボタン"
+   },
+   "pkTamEkranSonD": {
+      "message": "Kick の全画面ボタンをバーの右端に移動します。"
+   },
+   "pkTanArac": {
+      "message": "モデレーターツール"
+   },
+   "pkTanAracD": {
+      "message": "これらはオフになります。これらはユーザーに代わってチャットで機能するため、オンにするのはユーザーの判断です。 PureKick メニュー › モデレーションでそれらを見つけます。"
+   },
+   "pkTanBaslik": {
+      "message": "ツアー"
+   },
+   "pkTanBaslikD": {
+      "message": "PureKick でできることをページごとに説明します。"
+   },
+   "pkTanBitir": {
+      "message": "スタート"
+   },
+   "pkTanGoster": {
+      "message": "ツアーを表示する"
+   },
+   "pkTanHos": {
+      "message": "PureKickへようこそ"
+   },
+   "pkTanHosD": {
+      "message": "Kick を広告なしで視聴し、チャットを実行するためのツールキット。以下の機能のほとんどはすでにオンになっているため、何もする必要はありません。右下の「次へ」を使用して内容を確認します。"
+   },
+   "pkTanKart": {
+      "message": "プロフィールカード"
+   },
+   "pkTanKartD": {
+      "message": "チャット内の名前をクリックすると取得できるカード。"
+   },
+   "pkTanKenar": {
+      "message": "サイドバー"
+   },
+   "pkTanKenarD": {
+      "message": "以下のリストとチャンネルページ。"
+   },
+   "pkTanListe": {
+      "message": "おしゃべりリスト"
+   },
+   "pkTanListeD": {
+      "message": "Kickの視聴者リストに追加されました。"
+   },
+   "pkTanMod": {
+      "message": "節度"
+   },
+   "pkTanModD": {
+      "message": "削除されたメッセージ、禁止、タイムアウトが表示されます。"
+   },
+   "pkTanReklam": {
+      "message": "広告"
+   },
+   "pkTanReklamD": {
+      "message": "オフにしたものはすぐに有効になります。"
+   },
+   "pkTanSohbet": {
+      "message": "チャット"
+   },
+   "pkTanSohbetD": {
+      "message": "誰が目立つか、誰が目立たないかを決めるのはあなたです。"
+   },
+   "pkTanSon": {
+      "message": "準備完了です"
+   },
+   "pkTanSonD": {
+      "message": "すべての設定はチャットの下の PK ボタンにあります。このツアーは [詳細] セクションから再度開くことができます。"
+   },
+   "pkTanVideo": {
+      "message": "ビデオとプレーヤー"
+   },
+   "pkTanVideoD": {
+      "message": "プレーヤーバーに追加されました。"
+   },
+   "pkTemaAciklama": {
+      "message": "Kick インターフェースの色を変更します。"
+   },
+   "pkTemaKickYesili": {
+      "message": "キックグリーン"
+   },
+   "pkTemaKirmizi": {
+      "message": "赤"
+   },
+   "pkTemaMavi": {
+      "message": "ブルー"
+   },
+   "pkTemaMor": {
+      "message": "紫"
+   },
+   "pkTemaPembe": {
+      "message": "ピンク"
+   },
+   "pkTemaSari": {
+      "message": "黄色"
+   },
+   "pkTemaTurkuaz": {
+      "message": "シアン"
+   },
+   "pkTemaTuruncu": {
+      "message": "オレンジ"
+   },
+   "pkTemizlemeKoru": {
+      "message": "チャットがクリアされてもメッセージを保持する"
+   },
+   "pkTemizlemeKoruD": {
+      "message": "モデレータがチャットをクリアすると、最後のメッセージは別のボックスに残ります。"
+   },
+   "pkTemizlenenAlan": {
+      "message": "広告スロットが削除されました"
+   },
+   "pkTiyatroNav": {
+      "message": "シアターモードのトップバー"
+   },
+   "pkTiyatroNavD": {
+      "message": "カーソルを一番上に移動すると、ナビゲーション バーが戻ります。モードを終了する必要はありません。"
+   },
+   "pkTiyatroyaAl": {
+      "message": "参加時にシアターモードに入る"
+   },
+   "pkTiyatroyaAlD": {
+      "message": "すでに幅が広い場合はそのままにしておきます。チャネルごとに 1 回の試行。"
+   },
+   "pkToAciklama": {
+      "message": "トリガー フレーズを作成した人は全員、選択した期間だけタイムアウトになります。ブロードキャスター、モデレーター、そしてあなたはスキップされます。各人は一度だけ処理されます。"
+   },
+   "pkToAyar": {
+      "message": "一括タイムアウト"
+   },
+   "pkToAyarD": {
+      "message": "選択した単語やフレーズを書いた人を自動的にタイムアウトします。オンにすると、PureKick メニューに「一括タイムアウト」行が表示されます。"
+   },
+   "pkToBaslat": {
+      "message": "ライブウォッチを開始する"
+   },
+   "pkToBaslik": {
+      "message": "一括タイムアウト"
+   },
+   "pkToDurdur": {
+      "message": "ライブウォッチを停止する"
+   },
+   "pkToGecmis": {
+      "message": "これまでのメッセージに適用"
+   },
+   "pkToMenu": {
+      "message": "一括タイムアウト"
+   },
+   "pkToNerede": {
+      "message": "PureKick メニューの「Bulk timeout」行から使用します。"
+   },
+   "pkToNot": {
+      "message": "ライブウォッチの実行中にこのウィンドウを閉じることができます。チャンネルを離れるか設定をオフにすると停止します。"
+   },
+   "pkToSayac": {
+      "message": "タイムアウト: {1}"
+   },
+   "pkToSure": {
+      "message": "タイムアウト期間"
+   },
+   "pkToSureD": {
+      "message": "クイックタイムアウトと同じリスト。 [モデレーション] › [ユーザー カード] で変更します。"
+   },
+   "pkToTamKelime": {
+      "message": "単語全体の一致"
+   },
+   "pkToTamKelimeD": {
+      "message": "オンでは、「code」は一致しますが、「coding」は一致しません。オフ、テキストを含むすべてのメッセージが一致します。"
+   },
+   "pkToTetik": {
+      "message": "トリガーフレーズ"
+   },
+   "pkToTetikD": {
+      "message": "1 行に 1 つの単語またはフレーズ。フレーズにはカンマが含まれる場合があるため、行ごとに分割します。"
+   },
+   "pkNot101911b": {
+      "message": "IVS ワーカーは、非常に重要な役割を果たしています。"
+   },
+   "pkNot101911c": {
+      "message": "HLS レクラム・イシャレトレリ・ヴェ・キック・カイナクル DNR レクラム・クララリ・イイルシュティリルディ"
+   },
+   "pkNot101911d": {
+      "message": "Genel bağlantı önizlemeleri için zorunlu tüm siteler izni kaldırıldı"
+   },
+   "pkNot101914a": {
+      "message": "チャット アーカイブがチャネルごとに分離されるようになりました。毎日のログと削除されたメッセージ テキストの保持が改善されました。"
+   },
+   "pkNot101914b": {
+      "message": "オンライン/オフラインのフォローされているチャネルの可視性とチャネル数の制限は固定されています。"
+   },
+   "pkNot101914c": {
+      "message": "リンク プレビュー、チャンネル ホバー タイトル、プロフィール カード ページのスコープが修正されました。"
+   },
+   "pkNot101914d": {
+      "message": "加入者の役割の強調表示とギフトされた KICKS サポーターの記録が改善されました。"
+   },
+   "pkNot101914e": {
+      "message": "音声クリップ コマンドは 15 の言語、マイク レベル メーター、プレーヤー バッジをサポートするようになりました。"
+   },
+   "pkNot101914f": {
+      "message": "クリップのショートカットの切り替え、コーデック/品質のフォールバック、サイレント録音のファイル名ラベルが改善されました。"
+   },
+   "pkNot101912a": {
+      "message": "PureKick Mod を使用したキックのシミュレーション"
+   },
+   "pkNot101912b": {
+      "message": "あなたのプロフィール、詳細な情報、詳細な情報を確認してください。"
+   },
+   "pkToTetikIpucu": {
+      "message": "フリーキック \n フォロー4フォロー \n 私の経歴をチェックしてください"
+   },
+   "pkTumu": {
+      "message": "すべて"
+   },
+   "pkUyarHiz": {
+      "message": "適応速度"
+   },
+   "pkUyarHizD": {
+      "message": "ライブで遅れをとったら、その差を縮めるためにスピードを上げます。"
+   },
+   "pkUyarHizNot": {
+      "message": "画像がジャンプすることはありません。位置は変更されず、速度が 1.25 倍になり、端で 1 倍に戻るだけです。"
+   },
+   "pkVeriYok": {
+      "message": "まだデータがありません。"
+   },
+   "pkVideoBilgisiD": {
+      "message": "プレーヤーバーのボタンから開きます。"
+   },
+   "pkVideoIstatistikleri": {
+      "message": "ビデオ統計"
+   },
+   "pkVideoIstatistikleriD": {
+      "message": "解像度、FPS、ビットレート、ドロップフレーム、バッファ。"
+   },
+   "pkVideoReklamlari": {
+      "message": "動画広告"
+   },
+   "pkVideoReklamlariD": {
+      "message": "プレロール広告とミッドロール広告をブロックします。"
+   },
+   "pkVideonunYuzdesi": {
+      "message": "動画の割合"
+   },
+   "pkVodIndir": {
+      "message": "この過去の放送をダウンロードする"
+   },
+   "pkVodIndirBaslik": {
+      "message": "過去の放送をダウンロードする"
+   },
+   "pkVodIndirKisa": {
+      "message": "VODをダウンロードする"
+   },
+   "pkVodIndirNot": {
+      "message": "ストリームはセグメントごとにディスクに書き込まれます。タブのメモリは空き状態のままです。"
+   },
+   "pkVodReklamlari": {
+      "message": "VOD 広告"
+   },
+   "pkVodReklamlariD": {
+      "message": "過去の放送開始時の広告をスキップします。"
+   },
+   "pkVodTsNotN": {
+      "message": "ファイルは .ts として保存されます (VLC/MPV で再生されます)。ストリームの長さ {1} 分"
+   },
+   "pkVsAg": {
+      "message": "ネットワーク状態"
+   },
+   "pkVsBitHizi": {
+      "message": "ビットレート"
+   },
+   "pkVsCanliUzaklik": {
+      "message": "ライブの裏側"
+   },
+   "pkVsCozunurluk": {
+      "message": "解像度"
+   },
+   "pkVsDuraklatildi": {
+      "message": "一時停止中"
+   },
+   "pkVsDusenKare": {
+      "message": "ドロップされたフレーム"
+   },
+   "pkVsHazir": {
+      "message": "準備完了状態"
+   },
+   "pkVsKonum": {
+      "message": "ポジション"
+   },
+   "pkVsTampon": {
+      "message": "バッファー"
+   },
+   "pkVurguMuaf": {
+      "message": "ハイライトから除外されます"
+   },
+   "pkVurguMuafD": {
+      "message": "ここにリストされている人々には、その役割が何であれ、色の縞模様はありません。"
+   },
+   "pkWebSitesi": {
+      "message": "ウェブサイト"
+   },
+   "pkYanSohbet": {
+      "message": "サイドチャットをドラッグ"
+   },
+   "pkYanSohbetD": {
+      "message": "ポップアップしたチャット ボックスをマウスで移動できます。"
+   },
+   "pkYanit": {
+      "message": "返信"
+   },
+   "pkYanitD": {
+      "message": "別のメッセージに返信するメッセージ"
+   },
+   "pkYanitlarBaslik": {
+      "message": "返信"
+   },
+   "pkYaziliyor": {
+      "message": "書いています…"
+   },
+   "pkYedekBos": {
+      "message": "ファイルには適用する設定がありません"
+   },
+   "pkYedekBozuk": {
+      "message": "このファイルは有効な JSON ではありません"
+   },
+   "pkYedekNot": {
+      "message": "バックアップには、設定、メモ、非表示のチャンネルと人物、フィルター、セーブポイントが含まれます。"
+   },
+   "pkYedekOzet": {
+      "message": "ファイルには {1} セクションがあります · {2}"
+   },
+   "pkYedekYabanci": {
+      "message": "このファイルは PureKick バックアップではありません"
+   },
+   "pkYeniSekmedeAc": {
+      "message": "新しいタブで開く ↗"
+   },
+   "pkYenilik": {
+      "message": "このバージョンの新機能"
+   },
+   "pkYetkiAciklama": {
+      "message": "このチャンネルの VIP、OG、モデレータを付与または削除します。自分のチャンネルでのみ表示されます。"
+   },
+   "pkYetkiBaslik": {
+      "message": "{1} · 役割"
+   },
+   "pkYetkiDugme": {
+      "message": "役割の編集"
+   },
+   "pkYetkiMod": {
+      "message": "モデレータ"
+   },
+   "pkYetkiOg": {
+      "message": "OG"
+   },
+   "pkYetkiOkunamadi": {
+      "message": "役割を読み取れませんでした。"
+   },
+   "pkYetkiVip": {
+      "message": "VIP"
+   },
+   "pkYildir": {
+      "message": "{1} 年間"
+   },
+   "pkYonetimPaneli": {
+      "message": "PureKick コントロール パネル"
+   },
+   "pkYorumDengeli": {
+      "message": "エモートとテキストのバランスが取れている"
+   },
+   "pkYorumEmoteCok": {
+      "message": "ほとんどのメッセージはエモートのみです"
+   },
+   "pkYorumEmoteFazla": {
+      "message": "テキストよりもエモートの方が多い"
+   },
+   "pkYorumHizli": {
+      "message": "チャットの進みが速い"
+   },
+   "pkYorumVeriYok": {
+      "message": "コメントの前にもう少しデータが必要です。チャットが流れるにつれて、これはいっぱいになります。"
+   },
+   "pkYorumZirve": {
+      "message": "最も忙しい分 {1}"
+   },
+   "pkYukseklik": {
+      "message": "高さ"
+   },
+   "pkYuzde": {
+      "message": "パーセント"
+   },
+   "pkZamanAsimi": {
+      "message": "タイムアウトしました"
+   },
+   "pkZirveDakika": {
+      "message": "{1} — その分間の {2} メッセージ"
+   },
+   "popupBadges": {
+      "message": "バッジ"
+   },
+   "startBtn": {
+      "message": "保護を開始する"
+   },
+   "statusActive": {
+      "message": "広告なしのストリームがアクティブです"
+   },
+   "statusPaused": {
+      "message": "保護が一時停止されました"
+   },
+   "themeColor": {
+      "message": "テーマカラー"
+   },
+   "themeReset": {
+      "message": "リセット (デフォルトをキック)"
+   },
+   "pkFiltreAra": {
+      "message": "チャット内で検索..."
+   },
+   "pkSohbetFiltre": {
+      "message": "チャットの検索とフィルター"
+   },
+   "pkCokluYayin": {
+      "message": "マルチストリーム"
+   },
+   "pkKlipAl": {
+      "message": "ライブクリップをキャプチャする"
+   },
+   "pkSohbetTts": {
+      "message": "チャットのテキスト読み上げ (TTS)"
+   },
+   "pkEmoteSpamFiltre": {
+      "message": "エモートスパムコンデンサー"
+   },
+   "pkIzlemeSureTakip": {
+      "message": "総再生時間の追跡"
+   },
+   "pkKanalNotlari": {
+      "message": "チャンネルノート"
+   },
+   "pkYayinBildirim": {
+      "message": "ライブ通知をストリーム配信する"
+   },
+   "pkIzlemeSureleriBaslik": {
+      "message": "視聴時間"
+   },
+   "pkSohbetCeviri": {
+      "message": "ライブチャット翻訳"
+   },
+   "pkAcik": {
+      "message": "オン"
+   },
+   "pkNot101910a": {
+      "message": "Sohbet arşivi kalıcı IndexedDB のデポスナ タシュンドゥ;モデラション ヴェ シリネン メサージ カイトラル イルレシュティリルディ"
+   },
+   "pkNot101910b": {
+      "message": "Instagram、X/Twitter、Kick、TikTok はすべての機能をサポートします"
+   },
+   "pkNot101910c": {
+      "message": "Yayın değisimimi、HLS reklam işaretleri ve çevrimdışı oynatıcı durumu düzeltildi"
+   },
+   "pkNot101911a": {
+      "message": "PureKick Mod は、さまざまな機能を備えています"
+   },
+   "pkInterfaceLanguage": {
+      "message": "インターフェース言語"
+   },
+   "pkInterfaceLanguageD": {
+      "message": "PureKick Mod の言語を選択します。自動はブラウザ言語に従います。"
+   },
+   "pkSupportTitle": {
+      "message": "サポートとバグレポート"
+   },
+   "pkSupportDesc": {
+      "message": "GitHub を通じてバグ レポートや機能リクエストを送信します。ここでオープンおよび完了したリクエストを追跡します。"
+   },
+   "pkSupportLogin": {
+      "message": "送信はGitHub上で完了し、GitHubへのサインインが必要です。拡張機能はレポートにユーザー名やメールアドレスを追加しません。サインイン不要の匿名送信用中継サーバーはまだ設定されていません。"
+   },
+   "pkSupportBug": {
+      "message": "バグを報告する"
+   },
+   "pkSupportFeature": {
+      "message": "機能をリクエストする"
+   },
+   "pkSupportQuestion": {
+      "message": "助けを求めてください"
+   },
+   "pkSupportTitlePlaceholder": {
+      "message": "短いタイトル"
+   },
+   "pkSupportBodyPlaceholder": {
+      "message": "手順、期待される結果、実際の結果を説明します。個人情報は含めないでください。"
+   },
+   "pkSupportSend": {
+      "message": "GitHub で続行する"
+   },
+   "pkSupportRequired": {
+      "message": "タイトルと説明を入力します。"
+   },
+   "pkSupportIssues": {
+      "message": "コミュニティからのリクエスト"
+   },
+   "pkSupportStatusHelp": {
+      "message": "ステータスは、GitHub のオープン/クローズ状態と計画ラベルから取得されます。"
+   },
+   "pkSupportLoading": {
+      "message": "GitHub リクエストを読み込んでいます…"
+   },
+   "pkSupportEmpty": {
+      "message": "まだ公開リクエストはありません。"
+   },
+   "pkSupportClosed": {
+      "message": "解決済み"
+   },
+   "pkSupportPlanned": {
+      "message": "計画済み"
+   },
+   "pkSupportWaiting": {
+      "message": "待っています"
+   },
+   "pkSupportOpen": {
+      "message": "開く"
+   },
+   "pkSupportError": {
+      "message": "GitHub リクエストを読み込めませんでした。接続または GitHub のステータスを確認してください。"
+   },
+   "pkHistoryTitle": {
+      "message": "チャット記録"
+   },
+   "pkHistorySearch": {
+      "message": "チャット記録を検索（ユーザーまたはメッセージ）"
+   },
+   "pkHistoryLoadOlder": {
+      "message": "古い記録を読み込む"
+   },
+   "pkHistoryMemoryLimit": {
+      "message": "メモリ上限に達しました · 検索して古い記録を探してください"
+   },
+   "pkHistoryLoading": {
+      "message": "アーカイブを読み込み中…"
+   },
+   "pkHistoryNoMatch": {
+      "message": "一致する記録はありません。"
+   },
+   "pkHistoryEmpty": {
+      "message": "チャットログに保存されたメッセージはまだありません。"
+   },
+   "pkHistorySearchResults": {
+      "message": "検索結果: "
+   },
+   "pkHistoryMessages": {
+      "message": "アーカイブ済みメッセージ: "
+   },
+   "pkHistoryOlderAvailable": {
+      "message": " · 古い記録があります"
+   },
+   "pkHistoryAllShown": {
+      "message": " · すべての一致を表示しました"
+   },
+   "pkHistoryDeletedTextMissing": {
+      "message": "Kickはこの削除記録にメッセージ本文を含めていません"
+   },
+   "pkHistoryDailyTitle": {
+      "message": "チャット記録 · 日次ログ"
+   },
+   "pkHistoryDailyDesc": {
+      "message": "今日のメッセージはチャンネルと日付ごとに分けて表示されます。チャンネルごとのタイムスタンプ付き.logファイルをダウンロードできます。"
+   },
+   "pkHistoryDailyLoading": {
+      "message": "今日のログを読み込み中…"
+   },
+   "pkHistoryDailyRefresh": {
+      "message": "今日のログを更新"
+   },
+   "pkTimeoutExpires": {
+      "message": "タイムアウト終了: {1}"
+   },
+   "pkTimeoutDays": {
+      "message": "（残り{1}日）"
+   },
+   "pkActiveTimeout": {
+      "message": "有効なタイムアウト"
+   },
+   "pkPermanentBan": {
+      "message": "永久BAN"
+   },
+   "pkModEventsTitle": {
+      "message": "モデレーションイベント"
+   },
+   "pkTitleCount": {
+      "message": "{1} ({2})"
+   },
+   "pkTemizle": {
+      "message": "クリア"
+   },
+   "pkAllSitesAccessDescription": {
+      "message": "HTTP/HTTPS サイトのリンクプレビューに必要な一括アクセスを一度だけ許可します。"
+   },
+   "pkAllSitesAccessButton": {
+      "message": "すべてのサイトへのアクセスを許可"
+   },
+   "pkAllSitesGranted": {
+      "message": "すべての HTTP/HTTPS サイトでリンクアクセスが有効になりました。"
+   },
+   "pkAllSitesDenied": {
+      "message": "サイトへのアクセスは許可されませんでした。Chrome 拡張機能の設定でサイトごとに許可できます。"
+   },
+   "pkNot101915a": {
+      "message": "チャット内のクリップはチャンネル配信ではなく、指定されたクリップ ID の動画を再生するようになりました。"
+   },
+   "pkNot101915b": {
+      "message": "Kick クリップ専用プレーヤーを追加し、埋め込み不可の KickBot ページは直接開くようにしました。"
+   },
+   "pkNot101915c": {
+      "message": "リンクプレビュー用に、すべての HTTP/HTTPS サイトへの任意アクセスをワンクリックで許可できるようになりました。"
+   },
+   "pkNot101915d": {
+      "message": "言語カタログと GitHub サポート報告を更新し、クリップと権限のテストを追加しました。"
+   }
+}

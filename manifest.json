@@ -30,6 +30,7 @@
       {
          "all_frames": false,
          "js": [
+            "vendor/hls.min.js",
             "content.js"
          ],
          "matches": [
@@ -86,7 +87,8 @@
       "https://vt.tiktok.com/*",
       "https://prnt.sc/*",
       "https://prntscr.com/*",
-      "https://purekick.pumpzera.cc/*"
+      "https://purekick.pumpzera.cc/*",
+      "https://api.github.com/*"
    ],
    "icons": {
       "128": "icons/icon128.png",
@@ -105,7 +107,7 @@
    ],
    "short_name": "PureKick Mod",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "10.19.14",
+   "version": "10.19.15",
    "web_accessible_resources": [
       {
          "matches": [

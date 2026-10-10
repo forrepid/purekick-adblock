@@ -1,0 +1,2702 @@
+{
+   "pkKanalSahibi": {
+      "message": "频道拥有者"
+   },
+   "pkKanaliGizle": {
+      "message": "隐藏该频道"
+   },
+   "pkKanaliTakip": {
+      "message": "关注频道"
+   },
+   "pkKapali": {
+      "message": "静音"
+   },
+   "pkKapat": {
+      "message": "关闭"
+   },
+   "pkKareyiKaydet": {
+      "message": "保存当前帧"
+   },
+   "pkKartBilgiNot": {
+      "message": "从 Kick 自己的端点获取，不带 cookie，每人一次，然后保存在内存中。"
+   },
+   "pkKartGenis": {
+      "message": "宽幅卡"
+   },
+   "pkKartGenisD": {
+      "message": "加宽 Kick 的窄卡片，因此添加的信息、注释和审核块不会显得局促。"
+   },
+   "pkKartMesajlar": {
+      "message": "最近的消息和回复"
+   },
+   "pkKartMesajlarD": {
+      "message": "在个人资料卡上以选项卡的形式显示此人最近的消息以及发送给他们的回复。"
+   },
+   "pkKartSabit": {
+      "message": "固定个人资料卡"
+   },
+   "pkKartSabitD": {
+      "message": "在卡片上添加一个按钮；按下它可以在屏幕上保留可读的副本。"
+   },
+   "pkKartSagTik": {
+      "message": "流卡上的右键菜单"
+   },
+   "pkKartSagTikD": {
+      "message": "右键单击主页或类别中的频道以获取快捷方式。 Shift + 右键单击​​可打开浏览器菜单。"
+   },
+   "pkKartTakipci": {
+      "message": "卡上的关注者计数"
+   },
+   "pkKartTakipciD": {
+      "message": "从 Kick 自己的端点获取，不带 cookie，每人一次。"
+   },
+   "pkKartYanit": {
+      "message": "回复此人"
+   },
+   "pkKartYanitD": {
+      "message": "“最近的消息”显示他们写的内容；该块显示了写入它们的内容。"
+   },
+   "pkKartiSabitle": {
+      "message": "固定此卡"
+   },
+   "pkKategoriGizleYok": {
+      "message": "您还没有隐藏类别。打开类别页面并使用标题旁边的“隐藏类别”按钮。"
+   },
+   "pkKategoriGizlemeyiKullan": {
+      "message": "使用类别隐藏"
+   },
+   "pkKategoriGizlemeyiKullanD": {
+      "message": "关掉，它们就会再次显示。"
+   },
+   "pkKategoriGoster": {
+      "message": "再次显示该类别"
+   },
+   "pkKatilim": {
+      "message": "参与"
+   },
+   "pkKatilimD": {
+      "message": "在聊天中写作的观看者比例"
+   },
+   "pkKatilmaTakip": {
+      "message": "加入并关注信息"
+   },
+   "pkKatilmaTakipD": {
+      "message": "Kick 的加入日期、他们关注频道的时间、订阅时长。"
+   },
+   "pkKaydedildi": {
+      "message": "已保存"
+   },
+   "pkKaydet": {
+      "message": "保存"
+   },
+   "pkKayitNoktasi": {
+      "message": "您在 VOD 中停止的地方"
+   },
+   "pkKayitNoktasiD": {
+      "message": "中途离开过去的广播，它会提供跳回到那一秒的功能。"
+   },
+   "pkKayitNoktasiHatirla": {
+      "message": "记住我的立场"
+   },
+   "pkKayitNoktasiHatirlaD": {
+      "message": "该位置仅保留在您的设备上。"
+   },
+   "pkKayitliNTemizle": {
+      "message": "清除 {1} 保存的位置"
+   },
+   "pkKaynagiYeniSekmede": {
+      "message": "在新选项卡中打开源代码 ↗"
+   },
+   "pkKaynakBulunuyor": {
+      "message": "寻找源头……"
+   },
+   "pkKaynakYok": {
+      "message": "未找到该流的源。"
+   },
+   "pkKelimeVurgu": {
+      "message": "在聊天中突出显示"
+   },
+   "pkKelimeVurguD": {
+      "message": "包含这些单词的消息将获得与优先人员相同的绿色条。"
+   },
+   "pkKenarGrup": {
+      "message": "线上/线下分割"
+   },
+   "pkKenarGrupD": {
+      "message": "将关注的渠道分为线上和线下组。 Kick 的“显示更多”系统保持其默认行为。"
+   },
+   "pkKenarGrupSayi": {
+      "message": "在线/离线列表中显示的频道"
+   },
+   "pkKenarGrupSayiD": {
+      "message": "选择每组中显示的频道数 (1–20)。 Kick 的“显示更多”按钮保持其默认行为。"
+   },
+   "pkKenarGrupLimit": {
+      "message": "应用通道数限制"
+   },
+   "pkKenarGrupLimitD": {
+      "message": "使用下面的 1–20 值限制在线和离线列表中显示的频道数量。独立于线上/线下分组。"
+   },
+   "pkKickDahaFazlaGizle": {
+      "message": "隐藏 Kick 的“显示更多/显示更少”按钮"
+   },
+   "pkKickDahaFazlaGizleD": {
+      "message": "在关注的频道列表中隐藏 Kick 自己的展开和折叠按钮。"
+   },
+   "pkKendiMenum": {
+      "message": "打开我自己的菜单"
+   },
+   "pkKendiMenumD": {
+      "message": "Shift + 右键单击始终打开浏览器菜单。"
+   },
+   "pkKezSayisi": {
+      "message": "{1} ×"
+   },
+   "pkKickIleGiris": {
+      "message": "使用 Kick 登录"
+   },
+   "pkKickeKatildi": {
+      "message": "加入踢"
+   },
+   "pkKisaDakika": {
+      "message": "米"
+   },
+   "pkKisaGun": {
+      "message": "d"
+   },
+   "pkKisaSaat": {
+      "message": "小时"
+   },
+   "pkKisiGizleme": {
+      "message": "隐藏一个人"
+   },
+   "pkKisiGizlemeD": {
+      "message": "他们的消息只会在您的屏幕上消失。"
+   },
+   "pkKisiGizli": {
+      "message": "{1} 人隐藏。"
+   },
+   "pkKisiMesajYok": {
+      "message": "本次会话中没有看到该用户的消息。"
+   },
+   "pkKisiOncelikliSayi": {
+      "message": "{1}人优先。"
+   },
+   "pkKonumSagAlt": {
+      "message": "右下角"
+   },
+   "pkKonumSagUst": {
+      "message": "右上"
+   },
+   "pkKonumSolAlt": {
+      "message": "左下角"
+   },
+   "pkKonumSolUst": {
+      "message": "左上"
+   },
+   "pkKopyaKorumasi": {
+      "message": "有些流是受复制保护的；然后浏览器会阻止捕获。"
+   },
+   "pkKorumaAcikMetin": {
+      "message": "踢广告被屏蔽。"
+   },
+   "pkKorumaKapaliMetin": {
+      "message": "保护已暂停。"
+   },
+   "pkKullaniciAdi": {
+      "message": "用户名"
+   },
+   "pkKullaniciAdiBos": {
+      "message": "用户名（空=所有人）"
+   },
+   "pkKullaniciBul": {
+      "message": "寻找用户"
+   },
+   "pkKullaniciNotlari": {
+      "message": "用户备注"
+   },
+   "pkKullaniciNotlariD": {
+      "message": "在个人资料卡上保留私人注释。"
+   },
+   "pkKuralAdvertising": {
+      "message": "广告"
+   },
+   "pkKuralBullying": {
+      "message": "欺凌"
+   },
+   "pkKuralDoxxing": {
+      "message": "人肉搜索"
+   },
+   "pkKuralDrugs": {
+      "message": "药品"
+   },
+   "pkKuralExtremism": {
+      "message": "极端主义"
+   },
+   "pkKuralGambling": {
+      "message": "赌博"
+   },
+   "pkKuralHarassment": {
+      "message": "骚扰"
+   },
+   "pkKuralHate": {
+      "message": "仇恨言论"
+   },
+   "pkKuralHateSpeech": {
+      "message": "仇恨言论"
+   },
+   "pkKuralHatefulConduct": {
+      "message": "仇恨行为"
+   },
+   "pkKuralIllegal": {
+      "message": "非法内容"
+   },
+   "pkKuralIllegalActivity": {
+      "message": "非法活动"
+   },
+   "pkKuralImpersonation": {
+      "message": "冒充"
+   },
+   "pkKuralKabul": {
+      "message": "自动接受聊天规则"
+   },
+   "pkKuralKabulD": {
+      "message": "当您进入有规则的频道时，接受聊天规则对话框。默认情况下关闭 - 它代表您行事，因此打开它是您的决定。"
+   },
+   "pkKuralMisinfo": {
+      "message": "错误信息"
+   },
+   "pkKuralMisinformation": {
+      "message": "错误信息"
+   },
+   "pkKuralNudity": {
+      "message": "裸体"
+   },
+   "pkKuralProfanity": {
+      "message": "脏话"
+   },
+   "pkKuralScam": {
+      "message": "骗局"
+   },
+   "pkKuralSelfHarm": {
+      "message": "自残"
+   },
+   "pkKuralSexual": {
+      "message": "色情内容"
+   },
+   "pkKuralSexualContent": {
+      "message": "色情内容"
+   },
+   "pkKuralSpam": {
+      "message": "垃圾邮件"
+   },
+   "pkKuralTerrorism": {
+      "message": "恐怖主义"
+   },
+   "pkKuralThreats": {
+      "message": "威胁"
+   },
+   "pkKuralUnderage": {
+      "message": "未成年人"
+   },
+   "pkKuralViolence": {
+      "message": "暴力"
+   },
+   "pkKuralWeapons": {
+      "message": "武器"
+   },
+   "pkKurtarilanBaslik": {
+      "message": "聊天已清除 — 最后一条 {1} 消息"
+   },
+   "pkMBahset": {
+      "message": "提及这个人"
+   },
+   "pkMDaralt": {
+      "message": "崩溃"
+   },
+   "pkMGenislet": {
+      "message": "展开"
+   },
+   "pkMGizle": {
+      "message": "隐藏此消息"
+   },
+   "pkMKopyala": {
+      "message": "复制文本"
+   },
+   "pkMenuArayuz": {
+      "message": "接口"
+   },
+   "pkMenuKenar": {
+      "message": "侧边栏"
+   },
+   "pkMenuKullaniciKarti": {
+      "message": "用户卡"
+   },
+   "pkMenuSohbet": {
+      "message": "聊天"
+   },
+   "pkMesajEylemleri": {
+      "message": "消息悬停操作"
+   },
+   "pkMesajEylemleriD": {
+      "message": "将鼠标悬停在消息上即可获取复制、提及、时间戳、折叠和隐藏按钮。"
+   },
+   "pkMesajGizli": {
+      "message": "你隐藏了这条消息"
+   },
+   "pkMesajSayisi": {
+      "message": "{1} 消息"
+   },
+   "pkMesajYok": {
+      "message": "还没有消息。"
+   },
+   "pkMesajiGizle": {
+      "message": "隐藏"
+   },
+   "pkMesajiGoster": {
+      "message": "显示"
+   },
+   "pkMesajlar": {
+      "message": "留言"
+   },
+   "pkMesajlariGoster": {
+      "message": "显示消息"
+   },
+   "pkMesajlariniGizle": {
+      "message": "隐藏他们的消息"
+   },
+   "pkModBirMesajSilindi": {
+      "message": "一条消息被删除"
+   },
+   "pkModBos": {
+      "message": "自从您加入此频道以来，没有进行任何审核操作。此处显示禁止、超时和删除。"
+   },
+   "pkModCezaKaldirdi": {
+      "message": "{1} 取消了对 {2} 的惩罚"
+   },
+   "pkModGunlugu": {
+      "message": "审核日志"
+   },
+   "pkModGunluguD": {
+      "message": "删除消息、禁止/超时和主动处罚。"
+   },
+   "pkModIzle": {
+      "message": "观看聊天事件"
+   },
+   "pkModIzleD": {
+      "message": "监听 Kick 的现有连接；没有打开新的连接。"
+   },
+   "pkModOtoSilindi": {
+      "message": "{1} 的消息已被 {2} 删除"
+   },
+   "pkModSekmeOlaylar": {
+      "message": "适度"
+   },
+   "pkModSekmeSilinen": {
+      "message": "已删除的消息"
+   },
+   "pkModSekmeSustur": {
+      "message": "超时"
+   },
+   "pkModSerit": {
+      "message": "聊天中的审核栏"
+   },
+   "pkModSeritD": {
+      "message": "在聊天顶部添加一个栏；单击它打开审核面板。"
+   },
+   "pkModSilindi": {
+      "message": "来自 {1} 的消息已被删除"
+   },
+   "pkModSohbetTemizlendi": {
+      "message": "聊天记录已被清除"
+   },
+   "pkModSohbette": {
+      "message": "在聊天中显示审核事件"
+   },
+   "pkModSohbetteD": {
+      "message": "聊天流中会显示禁止、超时和聊天清除。 Kick 只向版主显示这些内容。"
+   },
+   "pkModSusturdu": {
+      "message": "{1} {2} 超时 {3}"
+   },
+   "pkModYasakladi": {
+      "message": "{1} 禁止 {2}"
+   },
+   "pkModerasyon": {
+      "message": "适度"
+   },
+   "pkMsjKisa": {
+      "message": "{1} 消息"
+   },
+   "pkNot1015a": {
+      "message": "批量消息删除 — 删除包含您选择的单词的每条消息"
+   },
+   "pkNot1015b": {
+      "message": "自动消息重建：每个通道设置，其自己的机器人窗口，在后台保持运行"
+   },
+   "pkNot1015c": {
+      "message": "重复的相同聊天消息现在全部被记录 - 统计数据和批量删除被低估"
+   },
+   "pkNot1015d": {
+      "message": "首次运行功能浏览；从“高级”部分重新打开它"
+   },
+   "pkNot1015e": {
+      "message": "Cross-Ban 现在写了起源通道和谁跑进了禁止原因"
+   },
+   "pkNot1015f": {
+      "message": "个人资料卡显示用户关注频道的确切日期"
+   },
+   "pkNot1015g": {
+      "message": "VOD 下载已修复 - 第一个片段后停止"
+   },
+   "pkNot101a": {
+      "message": "菜单公告和通知徽章"
+   },
+   "pkEmoteOnizlemeD": {
+      "message": "将鼠标悬停在某个表情上可以看到它的大图及其名称。"
+   },
+   "pkEmoteSayisi": {
+      "message": "{1} 表情"
+   },
+   "pkEmoteYok": {
+      "message": "尚未使用任何表情。"
+   },
+   "pkEnAktifSohbet": {
+      "message": "最活跃的聊天者"
+   },
+   "pkEnAktifSohbetD": {
+      "message": "本期谁写得最多。"
+   },
+   "pkEnCokEmote": {
+      "message": "最常用的表情"
+   },
+   "pkEnCokEmoteD": {
+      "message": "本次会话中聊天最频繁的人。"
+   },
+   "pkEnCokEmoteKisi": {
+      "message": "顶级表情用户"
+   },
+   "pkEnCokEmoteKisiD": {
+      "message": "每人的表情及其仅包含表情的消息计数。"
+   },
+   "pkEnYogunDakika": {
+      "message": "最忙的一分钟"
+   },
+   "pkEngellemeAyarlari": {
+      "message": "广告设置"
+   },
+   "pkEngellenenVideo": {
+      "message": "视频广告被屏蔽"
+   },
+   "pkEvet": {
+      "message": "是的"
+   },
+   "pkEvetSifirla": {
+      "message": "是的，重置"
+   },
+   "pkGelenYanitYok": {
+      "message": "这次会议没有人提到他们。"
+   },
+   "pkGelenYanitlar": {
+      "message": "写给他们"
+   },
+   "pkGelismis": {
+      "message": "高级"
+   },
+   "pkGeri": {
+      "message": "返回"
+   },
+   "pkGizleIkonu": {
+      "message": "隐藏频道悬停按钮"
+   },
+   "pkGizleIkonuD": {
+      "message": "当您将频道悬停在主页、侧边栏或类别上时，会在右上角显示隐藏按钮。频道页面上共享旁边的按钮是单独的。"
+   },
+   "pkGizlemeyiKaldir": {
+      "message": "取消隐藏"
+   },
+   "pkGizlenenKanallar": {
+      "message": "隐藏频道"
+   },
+   "pkGizlenenKanallarD": {
+      "message": "这些频道不在列表、类别和搜索范围内。"
+   },
+   "pkGizlenenKategoriler": {
+      "message": "隐藏类别"
+   },
+   "pkGizlenenKategorilerD": {
+      "message": "这些类别和其中的流卡不在列表中。"
+   },
+   "pkGizlenenleriTemizle": {
+      "message": "恢复 {1} 隐藏人员"
+   },
+   "pkGizliMesajTemizle": {
+      "message": "恢复 {1} 隐藏消息"
+   },
+   "pkGorselBuyut": {
+      "message": "放大图像（CTRL + 单击）"
+   },
+   "pkGorselBuyutD": {
+      "message": "按住 CTRL 键并单击表情、徽章或头像即可查看其完整尺寸。"
+   },
+   "pkGorunurluk": {
+      "message": "不透明度"
+   },
+   "pkGrupCanli": {
+      "message": "在线（{1}）"
+   },
+   "pkGrupKapali": {
+      "message": "离线 ({1})"
+   },
+   "pkGunOnce": {
+      "message": "{1} 前"
+   },
+   "pkGundur": {
+      "message": "{1} 天"
+   },
+   "pkHakkindaEk": {
+      "message": "额外频道信息"
+   },
+   "pkHakkindaEkD": {
+      "message": "将订阅者徽章、频道表情、最近类别和聊天规则（设置后）添加到流下的“关于”行。"
+   },
+   "pkHata": {
+      "message": "错误"
+   },
+   "pkHayir": {
+      "message": "不"
+   },
+   "pkHazirlanamadi": {
+      "message": "无法做好准备。"
+   },
+   "pkHersiSifirla": {
+      "message": "重置一切"
+   },
+   "pkHersiSifirlaD": {
+      "message": "所有设置和列表均被删除；延期恢复到第一天的状态。"
+   },
+   "pkHersiSifirlaUyari": {
+      "message": "您的笔记、隐藏的频道和人员、过滤器和保存点都将被删除。此操作无法撤消 - 您可能需要先导出。"
+   },
+   "pkHesabinEki": {
+      "message": "您的帐户：{1}"
+   },
+   "pkHizliMod": {
+      "message": "快速超时"
+   },
+   "pkHizliModD": {
+      "message": "单击聊天消息旁边的沙漏会打开一个持续时间条；应用您的选择而不是 Kick 自己的对话框。"
+   },
+   "pkHizliModNot": {
+      "message": "该命令仅输入到框中 - 发送由您决定，因此没有人会因意外而受到惩罚。"
+   },
+   "pkHkAboneye": {
+      "message": "仅限订阅者"
+   },
+   "pkHkAy": {
+      "message": "{1}个"
+   },
+   "pkHkEmoteler": {
+      "message": "频道表情"
+   },
+   "pkHkKategoriler": {
+      "message": "最近的类别"
+   },
+   "pkHkKurallar": {
+      "message": "聊天规则"
+   },
+   "pkHkRozetler": {
+      "message": "订阅者徽章"
+   },
+   "pkIceAktar": {
+      "message": "进口"
+   },
+   "pkIcerikBos": {
+      "message": "内容（空=所有消息）"
+   },
+   "pkIleri": {
+      "message": "下一步"
+   },
+   "pkIlkSonMesaj": {
+      "message": "从第一条消息到最后一条消息"
+   },
+   "pkIndiriliyorEki": {
+      "message": "正在下载·{1}"
+   },
+   "pkIndirmeBitti": {
+      "message": "完成·{1}"
+   },
+   "pkIndirmeDurdu": {
+      "message": "下载已停止：{1}"
+   },
+   "pkIndirmeIlerleme": {
+      "message": "{1} % · {2} 段"
+   },
+   "pkIndirmeIptal": {
+      "message": "已取消 · {1} 已下载"
+   },
+   "pkIptal": {
+      "message": "取消"
+   },
+   "pkIstatBos": {
+      "message": "还没有数据。打开一个流，随着聊天的进行，消息计数、热门聊天者和表情使用情况将显示在此处。"
+   },
+   "pkIzleyici": {
+      "message": "观众"
+   },
+   "pkIzleyiciAnlik": {
+      "message": "观众（现在）"
+   },
+   "pkIzleyiciOrt": {
+      "message": "观看人数（平均）"
+   },
+   "pkIzleyiciZirve": {
+      "message": "观看人数（峰值）"
+   },
+   "pkKaldir": {
+      "message": "删除"
+   },
+   "pkKaliteNot": {
+      "message": "如果您的质量不可用，则使用下一个。选择“自动”后，此功能不会执行任何操作。"
+   },
+   "pkKaliteOkunamadi": {
+      "message": "无法读取质量列表。"
+   },
+   "pkKaliteSecin": {
+      "message": "选择品质："
+   },
+   "pkKanalBilgisi": {
+      "message": "频道信息"
+   },
+   "pkKanalCanli": {
+      "message": "直播：{1} · {2} 观众"
+   },
+   "pkKanalCevrimdisi": {
+      "message": "离线 · {1}关注者"
+   },
+   "pkKanalEngeliKaldir": {
+      "message": "取消隐藏该频道"
+   },
+   "pkKanalGizleYok": {
+      "message": "你还没有隐藏任何人。将鼠标悬停在频道卡上并按 ✕ 将其隐藏。"
+   },
+   "pkKanalHakkinda": {
+      "message": "{1}概述"
+   },
+   "appDesc": {
+      "message": "PureKick Mod 可以拦截 Kick.com 上的广告，并添加增强的流媒体和聊天工具包。"
+   },
+   "badgeCtaSub": {
+      "message": "使用 Kick 登录"
+   },
+   "badgeCtaTitle": {
+      "message": "赢得聊天徽章"
+   },
+   "badgeLinkedSub": {
+      "message": "帐户已关联 ✓"
+   },
+   "badgeLinkedTitle": {
+      "message": "聊天徽章活跃"
+   },
+   "btnTitle": {
+      "message": "PureKick Mod — 无广告流"
+   },
+   "dropDay": {
+      "message": "{1} 还剩一天"
+   },
+   "dropDays": {
+      "message": "{1} 剩余天数"
+   },
+   "dropHour": {
+      "message": "{1} 还剩一小时"
+   },
+   "dropHours": {
+      "message": "{1} 剩余小时数"
+   },
+   "dropTitle": {
+      "message": "在 Kick 上查看 Drops 活动"
+   },
+   "dropsEmpty": {
+      "message": "无活跃滴"
+   },
+   "dropsTitle": {
+      "message": "活跃滴"
+   },
+   "footHelp": {
+      "message": "帮助与支持"
+   },
+   "footPrivacy": {
+      "message": "隐私"
+   },
+   "pauseBtn": {
+      "message": "在此站点上暂停"
+   },
+   "pkAboneAktifNot": {
+      "message": "您入住的每个月它都会增长。谢谢你！ 💚"
+   },
+   "pkAboneAy": {
+      "message": "{1} - 月支持器"
+   },
+   "pkAboneAy1": {
+      "message": "1 个月支持者"
+   },
+   "pkAboneBaslangic": {
+      "message": "开始"
+   },
+   "pkAboneBitti": {
+      "message": "您的会员资格已结束。续订后，您的徽章将从中断处继续。"
+   },
+   "pkAboneDemoBaslik": {
+      "message": "这是您作为支持者在聊天中的样子："
+   },
+   "pkAboneDemoMesaj": {
+      "message": "嘿那里！ 👋"
+   },
+   "pkAboneKidem": {
+      "message": "您的任期"
+   },
+   "pkAboneOl": {
+      "message": "成为会员"
+   },
+   "pkAboneOnceGiris": {
+      "message": "首先使用 Kick 登录 - 我们需要它来将您的会员资格与您的帐户相匹配。"
+   },
+   "pkAboneSonaErdi": {
+      "message": "结束"
+   },
+   "pkAboneYenile": {
+      "message": "更新会员资格"
+   },
+   "pkAboneYenileme": {
+      "message": "续订"
+   },
+   "pkAboneYukleniyor": {
+      "message": "正在检查您的会员状态..."
+   },
+   "pkAbonelik": {
+      "message": "订阅"
+   },
+   "pkAbonelikTanit": {
+      "message": "成为支持者：在聊天中您的名字旁边获得一个终身职位徽章，并为您的名字涂上您喜欢的颜色。"
+   },
+   "pkAiMod": {
+      "message": "标记自动删除"
+   },
+   "pkAiModD": {
+      "message": "如果 Kick 的 AI 审核删除了它，日志会告诉它与审核删除不同。"
+   },
+   "pkAltAdTakibi": {
+      "message": "关注名字"
+   },
+   "pkAltCezaSebepleri": {
+      "message": "处罚原因"
+   },
+   "pkAltGezinme": {
+      "message": "导航栏"
+   },
+   "pkAltGizliKanallar": {
+      "message": "隐藏频道"
+   },
+   "pkAltGizliKategoriler": {
+      "message": "隐藏类别"
+   },
+   "pkAltKaliteSes": {
+      "message": "自动质量和体积"
+   },
+   "pkAltKartBilgisi": {
+      "message": "卡详情"
+   },
+   "pkAltKartSohbeti": {
+      "message": "卡聊"
+   },
+   "pkAltKenarCubugu": {
+      "message": "侧边栏"
+   },
+   "pkAltModGunlugu": {
+      "message": "日志设置"
+   },
+   "pkAltOtomasyon": {
+      "message": "自动化"
+   },
+   "pkAltOynaticiOzel": {
+      "message": "播放器功能"
+   },
+   "pkAltSagTikMenuleri": {
+      "message": "右键单击和图像"
+   },
+   "pkAltSohbetGorunum": {
+      "message": "聊天外观"
+   },
+   "pkAltSohbetGorunumD": {
+      "message": "表情预览。"
+   },
+   "pkAltSohbetMesaji": {
+      "message": "聊天消息"
+   },
+   "pkAltVideoIstat": {
+      "message": "视频和控制栏"
+   },
+   "pkAltVideoVod": {
+      "message": "视频播放器和VOD"
+   },
+   "pkAltVurgulama": {
+      "message": "消息突出显示"
+   },
+   "pkAninda": {
+      "message": "更改立即生效。"
+   },
+   "pkAnlikOrtZirve": {
+      "message": "现在/平均/峰值"
+   },
+   "pkAralikSec": {
+      "message": "选择范围"
+   },
+   "pkArayuzDuzeniD": {
+      "message": "Kick 界面的小补充；它们都没有打破 Kick 自己的布局。"
+   },
+   "pkAySayisi": {
+      "message": "{1} 个月"
+   },
+   "pkAyarSatiri": {
+      "message": "PureKick 聊天设置"
+   },
+   "pkAyarYedegi": {
+      "message": "设置备份"
+   },
+   "pkAyarYedegiD": {
+      "message": "您的所有设置和列表都在一个文件中。没有任何内容发送到服务器。"
+   },
+   "pkAramaAyarlar": {
+      "message": "搜索设置..."
+   },
+   "pkAramaSonucYok": {
+      "message": "未找到匹配的设置"
+   },
+   "pkAyarlar": {
+      "message": "PureKick 设置"
+   },
+   "pkAyarlardanAc": {
+      "message": "您可以在“设置”中将其打开。"
+   },
+   "pkAydir": {
+      "message": "适用于 {1} 个月"
+   },
+   "pkAzOnce": {
+      "message": "刚才"
+   },
+   "pkBaglantiDurum": {
+      "message": "聊天连接状态"
+   },
+   "pkBaglantiDurumD": {
+      "message": "聊天旁边的一个小点：事件正在流动还是已停止。"
+   },
+   "pkBaglanti_acik": {
+      "message": "聊天连接正常"
+   },
+   "pkBaglanti_bekliyor": {
+      "message": "等待聊天连接"
+   },
+   "pkBaglanti_kopuk": {
+      "message": "聊天连接似乎已丢失"
+   },
+   "pkBaglanti_sessiz": {
+      "message": "暂时没有活动 - 聊天可能很安静"
+   },
+   "pkBaglantiyiKopyala": {
+      "message": "复制链接"
+   },
+   "pkBaglantiyiOnizle": {
+      "message": "预览链接"
+   },
+   "pkChatOnizle": {
+      "message": "在聊天中查看预览"
+   },
+   "pkChatOnizleKapat": {
+      "message": "关闭预览"
+   },
+   "pkBahsedenYok": {
+      "message": "还没有人提到过你。"
+   },
+   "pkBahsedilmeler": {
+      "message": "提及"
+   },
+   "pkBahsedilmelerBos": {
+      "message": "当观看某个频道的聊天时，它们会聚集在这里。"
+   },
+   "pkBahsedilmelerD": {
+      "message": "收集提及您名字的消息。"
+   },
+   "pkBahsetRozet": {
+      "message": "通知柜台"
+   },
+   "pkBahsetRozetD": {
+      "message": "当您的名字出现时，PureKick 按钮上会显示红色计数。关闭它，提及内容仍然会被收集，只是不计入屏幕上。"
+   },
+   "pkBahsetSes": {
+      "message": "通知声音"
+   },
+   "pkBahsetSesD": {
+      "message": "当您的名字出现时，会发出短促的声音。"
+   },
+   "pkBahsetSesSeviye": {
+      "message": "体积"
+   },
+   "pkBahsetSesTon": {
+      "message": "声音"
+   },
+   "pkBahsetSesTonD": {
+      "message": "一旦您选择它就会播放 - 聆听，然后决定。"
+   },
+   "pkNot102a": {
+      "message": "过去广播中的广告已被屏蔽"
+   },
+   "pkNot102b": {
+      "message": "隐藏频道"
+   },
+   "pkNot102c": {
+      "message": "用户名出现的所有地方都会有徽章"
+   },
+   "pkNot105a": {
+      "message": "聊天统计、提及、用户注释和审核日志"
+   },
+   "pkNot105b": {
+      "message": "突出角色、隐藏人员和优先人员"
+   },
+   "pkNot105c": {
+      "message": "视频统计、正常运行时间、自动质量和快退/快进"
+   },
+   "pkNot105d": {
+      "message": "流上的聊天覆盖和播放器上的右键单击菜单"
+   },
+   "pkNot105e": {
+      "message": "界面已翻译成7种语言"
+   },
+   "pkNot107a": {
+      "message": "仅广告拦截器模式 - 一键关闭其他所有内容"
+   },
+   "pkNot107b": {
+      "message": "侧边栏：固定频道、实时/离线分割和流预览"
+   },
+   "pkNot107c": {
+      "message": "自动质量和体积；频道“关于”部分中的徽章、表情和规则"
+   },
+   "pkNot107d": {
+      "message": "主页明显更快，卡顿现象更少"
+   },
+   "pkNot107e": {
+      "message": "工具栏图标现在可以直接打开设置面板"
+   },
+   "pkNot107f": {
+      "message": "删除了聊天中标记的消息；最新第一的审核和聊天记录"
+   },
+   "pkNot107g": {
+      "message": "聊天上方的审核栏 — 单击可打开事件、已删除的消息和超时"
+   },
+   "pkNotPlaceholder": {
+      "message": "给自己留下关于这个人的信息……"
+   },
+   "pkNotun": {
+      "message": "你的笔记"
+   },
+   "pkOdulAlindi": {
+      "message": "今天的奖励已领取🎉"
+   },
+   "pkOdulBaslik": {
+      "message": "每日奖励"
+   },
+   "pkOdulGirisGerek": {
+      "message": "您需要登录 Kick"
+   },
+   "pkOdulHata": {
+      "message": "无法读取奖励状态"
+   },
+   "pkOdulIlerleme": {
+      "message": "{1} / {2} 已观看"
+   },
+   "pkOdulKontrol": {
+      "message": "正在检查状态..."
+   },
+   "pkOdulYok": {
+      "message": "今天没有手表挑战"
+   },
+   "pkOmAciklama": {
+      "message": "消息是从您的帐户发送的。聊天框未受影响，因此您正在输入的草稿是安全的。"
+   },
+   "pkOmAdet": {
+      "message": "间隔"
+   },
+   "pkOmAdetD": {
+      "message": "消息数·至少 {1}"
+   },
+   "pkOmAdetEtiket": {
+      "message": "每一条 {1} 消息"
+   },
+   "pkOmAdim1": {
+      "message": "1. 选择频道"
+   },
+   "pkOmAdim2": {
+      "message": "2.应该如何发送？"
+   },
+   "pkOmAdim3": {
+      "message": "3. 输入间隔"
+   },
+   "pkOmAdim4": {
+      "message": "4. 撰写公告"
+   },
+   "pkOmAralik": {
+      "message": "间隔公告"
+   },
+   "pkOmAralikD": {
+      "message": "轮流发送列出的文本。"
+   },
+   "pkOmAyar": {
+      "message": "自动留言"
+   },
+   "pkOmAyarD": {
+      "message": "按设定的时间间隔发布公告并自动回复命令。从您的帐户发送。"
+   },
+   "pkOmBaskaKanal": {
+      "message": "您正在编辑 {1} 。保存将打开 {1} 的机器人窗口。"
+   },
+   "pkOmBaslat": {
+      "message": "开始"
+   },
+   "pkOmBaslik": {
+      "message": "自动留言"
+   },
+   "pkOmDk": {
+      "message": "间隔"
+   },
+   "pkOmDkD": {
+      "message": "分钟·至少 {1}"
+   },
+   "pkOmEkle": {
+      "message": "保存命令"
+   },
+   "pkOmEksikKip": {
+      "message": "选择保存前的发送方式。"
+   },
+   "pkOmEksikKomut": {
+      "message": "保存前至少添加一个命令。"
+   },
+   "pkOmEksikMetin": {
+      "message": "保存前至少写一则公告。"
+   },
+   "pkOmKanalSecD": {
+      "message": "机器人将在哪个频道上运行？仅列出您管理的频道和您自己的频道。"
+   },
+   "pkOmKanalSecin": {
+      "message": "选择一个频道"
+   },
+   "pkOmKanalYok": {
+      "message": "找不到您担任主持人的频道。"
+   },
+   "pkOmKayitli": {
+      "message": "保存的命令"
+   },
+   "pkOmKipDk": {
+      "message": "按分钟计算"
+   },
+   "pkOmKipMesaj": {
+      "message": "按消息数"
+   },
+   "pkOmKomut": {
+      "message": "命令回复"
+   },
+   "pkOmKomutAd": {
+      "message": "命令"
+   },
+   "pkOmKomutAdIpucu": {
+      "message": "！测试"
+   },
+   "pkOmKomutCevap": {
+      "message": "回复此命令"
+   },
+   "pkOmKomutCevapIpucu": {
+      "message": "你好！"
+   },
+   "pkOmKomutD": {
+      "message": "当有人写入命令时，将发送保存的回复。"
+   },
+   "pkOmKomutIpucu": {
+      "message": "!测试=你好！ \n !discord =discord.gg/..."
+   },
+   "pkOmKomutSil": {
+      "message": "删除"
+   },
+   "pkOmKomutYok": {
+      "message": "尚未保存命令。"
+   },
+   "pkOmMenu": {
+      "message": "自动留言"
+   },
+   "pkOmMetinD": {
+      "message": "每行一个公告。通过多条线路，它们轮流发送。"
+   },
+   "pkOmMetinIpucu": {
+      "message": "Discord：……\n 别忘了订阅！"
+   },
+   "pkOmNerede": {
+      "message": "从 PureKick 菜单中的“自动消息”行使用它。"
+   },
+   "pkBahsetTikla": {
+      "message": "可点击@提及"
+   },
+   "pkBahsetTiklaD": {
+      "message": "单击消息中的@name 即可将该人放入聊天框。"
+   },
+   "pkBanDetay": {
+      "message": "详细的禁令信息"
+   },
+   "pkBanDetayD": {
+      "message": "单击日志行可显示原因、持续时间、剩余时间和申诉状态。"
+   },
+   "pkBanDoldu": {
+      "message": "已过期"
+   },
+   "pkBanItiraz": {
+      "message": "上诉"
+   },
+   "pkBanItirazVar": {
+      "message": "已针对此项处罚提出上诉"
+   },
+   "pkBanKalan": {
+      "message": "剩余时间"
+   },
+   "pkBanKalici": {
+      "message": "永久"
+   },
+   "pkBanMesaj": {
+      "message": "留言"
+   },
+   "pkBanOtomatik": {
+      "message": "自动"
+   },
+   "pkBanSablon": {
+      "message": "预设处罚原因"
+   },
+   "pkBanSablonD": {
+      "message": "保存您经常使用的原因；单击一下即可将它们写入配置文件卡中的命令。"
+   },
+   "pkBanSebep": {
+      "message": "原因"
+   },
+   "pkBanSure": {
+      "message": "持续时间"
+   },
+   "pkBanYapan": {
+      "message": "申请者"
+   },
+   "pkBindir": {
+      "message": "在流上叠加聊天"
+   },
+   "pkBindirAc": {
+      "message": "打开叠加"
+   },
+   "pkBindirAcD": {
+      "message": "该图层传递点击；它永远不会阻塞播放器按钮。"
+   },
+   "pkBindirD": {
+      "message": "也继续全屏阅读聊天内容。"
+   },
+   "pkBindirKonum": {
+      "message": "职位"
+   },
+   "pkBindirNot": {
+      "message": "消息来自 Kick 现有的聊天连接；没有新的被打开。你隐藏的人也隐藏在这里。"
+   },
+   "pkBirModerator": {
+      "message": "主持人"
+   },
+   "pkBirModeratorIci": {
+      "message": "主持人"
+   },
+   "pkBirlestir": {
+      "message": "合并"
+   },
+   "pkBirlestirD": {
+      "message": "只写入文件中的设置；其他一切都保留。"
+   },
+   "pkBotYoksay": {
+      "message": "不要突出显示机器人"
+   },
+   "pkBotYoksayD": {
+      "message": "来自带有机器人徽章的帐户的消息不会出现彩色条纹。"
+   },
+   "pkBugun": {
+      "message": "今天"
+   },
+   "pkCevrimdisi": {
+      "message": "离线"
+   },
+   "pkCevrimdisiEki": {
+      "message": "离线 · {1}"
+   },
+   "pkCezaYok": {
+      "message": "目前没有人超时。"
+   },
+   "pkCrossAciklama": {
+      "message": "该操作分别应用于每个选定的通道。频道列表来自您管理的频道。"
+   },
+   "pkCrossAra": {
+      "message": "搜索频道..."
+   },
+   "pkCrossAyar": {
+      "message": "跨禁·批量跨禁"
+   },
+   "pkCrossAyarD": {
+      "message": "在个人资料卡中添加一个按钮，并在 PureKick 菜单中添加一个“批量交叉禁止”行：在您同时管理的每个频道中禁止、暂停或赦免一个人（或整个列表）。"
+   },
+   "pkCrossBaslat": {
+      "message": "开始"
+   },
+   "pkCrossBaslik": {
+      "message": "{1} — 跨渠道行动"
+   },
+   "pkCrossBekleme": {
+      "message": "通道之间的延迟（秒）"
+   },
+   "pkCrossBitti": {
+      "message": "完成 — {1} 成功，{2} 失败"
+   },
+   "pkCrossDugme": {
+      "message": "跨禁令"
+   },
+   "pkCrossDurdur": {
+      "message": "停止"
+   },
+   "pkCrossHepsi": {
+      "message": "选择/清除全部"
+   },
+   "pkCrossIlerleme": {
+      "message": "{1} / {2} · {3}"
+   },
+   "pkCrossKaldir": {
+      "message": "解禁"
+   },
+   "pkCrossKanallar": {
+      "message": "渠道"
+   },
+   "pkCrossListeYok": {
+      "message": "无法加载频道列表 - 您需要登录 Kick"
+   },
+   "pkCrossModYok": {
+      "message": "找不到您担任管理员的频道"
+   },
+   "pkCrossNerede": {
+      "message": "从个人资料卡上的“交叉禁止”按钮或 PureKick 菜单中的“批量交叉禁止”行使用它。"
+   },
+   "pkCrossSebep": {
+      "message": "原因"
+   },
+   "pkCrossSebepIpucu": {
+      "message": "可选的"
+   },
+   "pkCrossSecili": {
+      "message": "已选择 {1} / {2}"
+   },
+   "pkCrossSure": {
+      "message": "持续时间（分钟）"
+   },
+   "pkCrossSustur": {
+      "message": "超时"
+   },
+   "pkCrossTekNot": {
+      "message": "快速审核已关闭；仅显示跨通道按钮。"
+   },
+   "pkCrossToplu": {
+      "message": "批量交叉禁止"
+   },
+   "pkCrossTopluAciklama": {
+      "message": "应用于您列出的每个用户，分别在您选择的每个频道中。频道列表来自您管理的频道。"
+   },
+   "pkCrossTopluAdlar": {
+      "message": "用户名"
+   },
+   "pkCrossTopluBaslik": {
+      "message": "批量跨渠道操作"
+   },
+   "pkCrossTopluBekleme": {
+      "message": "用户之间的等待时间（秒）"
+   },
+   "pkCrossTopluBeklemeNot": {
+      "message": "一个用户将在所有选定的通道中进行连续处理。等待仅在转移到下一个用户时适用 - 至少 {1} 秒。"
+   },
+   "pkCrossTopluIpucu": {
+      "message": "alice、bob、carol \n 或每行一个"
+   },
+   "pkCrossTopluSayi": {
+      "message": "{1} 用户"
+   },
+   "pkCrossYasakla": {
+      "message": "班"
+   },
+   "pkCrossYukleniyor": {
+      "message": "正在加载频道..."
+   },
+   "pkDisaAktar": {
+      "message": "出口"
+   },
+   "pkDkOnce": {
+      "message": "{1} 分钟前"
+   },
+   "pkDropsAciklama": {
+      "message": "您不容错过的活跃活动。"
+   },
+   "pkDropsMenu": {
+      "message": "活跃掉落 - 每日奖励"
+   },
+   "pkEkle": {
+      "message": "添加"
+   },
+   "pkEkranGoruntusu": {
+      "message": "截图"
+   },
+   "pkEkranGoruntusuAl": {
+      "message": "截图"
+   },
+   "pkEkranGoruntusuD": {
+      "message": "将当前帧下载为 PNG 格式。"
+   },
+   "pkVideoKayit": {
+      "message": "录像机"
+   },
+   "pkEminMisin": {
+      "message": "你确定吗？"
+   },
+   "pkEmoteOnizleme": {
+      "message": "表情预览"
+   },
+   "pkOmNot": {
+      "message": "该命令必须启动消息。每个命令最多每10秒回复一次；你自己的消息不会触发任何事情。"
+   },
+   "pkOmOnayBaslik": {
+      "message": "启动机器人？"
+   },
+   "pkOmOnayGizle": {
+      "message": "不要再显示此内容"
+   },
+   "pkOmOnayKomut": {
+      "message": "{1} 的机器人窗口打开并开始应答命令。关闭窗口会停止机器人。"
+   },
+   "pkOmOnayMetin": {
+      "message": "公告将按照您选择的时间间隔开始发送到 {1}。机器人在此窗口中运行；关闭选项卡会停止它。"
+   },
+   "pkOmOzet": {
+      "message": "{1} 公告 · {2} 命令"
+   },
+   "pkOmPopoutD": {
+      "message": "机器人在此窗口中运行。保存后关闭设置，机器人继续运行；关闭选项卡会停止机器人，重新打开会恢复机器人。"
+   },
+   "pkOmSecAciklama": {
+      "message": "选择一个频道 - 它的机器人窗口将打开，您可以在那里完成设置。机器人在该窗口中运行。"
+   },
+   "pkOmYetkiYok": {
+      "message": "您不能在此频道上使用自动消息 - 您不是主持人。在下面选择您有权访问的频道。"
+   },
+   "pkOncelikCikar": {
+      "message": "删除优先级"
+   },
+   "pkOncelikTemizleN": {
+      "message": "明确的优先级 ({1})"
+   },
+   "pkOncelikliKisiler": {
+      "message": "优先人员"
+   },
+   "pkOncelikliKisilerD": {
+      "message": "他们的消息会被标记为绿色。"
+   },
+   "pkOncelikliYap": {
+      "message": "优先"
+   },
+   "pkOnizleme": {
+      "message": "侧边栏预览"
+   },
+   "pkOnizlemeD": {
+      "message": "将鼠标悬停在左侧菜单中的频道上以打开小卡片。"
+   },
+   "pkOnizlemeKarti": {
+      "message": "预览卡"
+   },
+   "pkOnizlemeKartiD": {
+      "message": "流媒体缩略图、标题、类别和观看者计数。"
+   },
+   "pkOtoClaim": {
+      "message": "自动领取每日奖励"
+   },
+   "pkOtoClaimD": {
+      "message": "一旦满足要求，即可领取 Kick 的每日观看时间奖励。只有观看时间的挑战——其他什么都没有触及。"
+   },
+   "pkOtoSes": {
+      "message": "自动音量"
+   },
+   "pkOtoSesD": {
+      "message": "以您想要的音量打开每个流。"
+   },
+   "pkOtoSesNot": {
+      "message": "“自动”会记住您设置的最后音量并将其应用于每个流。如果您在中途更改音量，则不会发生任何变化。"
+   },
+   "pkOtoTiyatro": {
+      "message": "自动影院模式"
+   },
+   "pkOtoTiyatroD": {
+      "message": "打开通道时将播放器拉宽一次。"
+   },
+   "pkOtomatikKalite": {
+      "message": "自动品质"
+   },
+   "pkOtomatikKaliteD": {
+      "message": "当您打开频道时选择一次您喜欢的质量。"
+   },
+   "pkOturum": {
+      "message": "会议"
+   },
+   "pkOturumSuresiEki": {
+      "message": "会话长度：{1}"
+   },
+   "pkOynatmaHizi": {
+      "message": "播放速度"
+   },
+   "pkOzellikKapali": {
+      "message": "该功能目前已关闭。"
+   },
+   "pkPaneliAc": {
+      "message": "打开面板"
+   },
+   "pkParcaListesi": {
+      "message": "正在获取分段列表..."
+   },
+   "pkParcaYok": {
+      "message": "没有段"
+   },
+   "pkProfilBuyuk": {
+      "message": "查看大图个人资料图片"
+   },
+   "pkProfilKartiBilgisi": {
+      "message": "个人资料卡信息"
+   },
+   "pkProfilKartiBilgisiD": {
+      "message": "单击聊天中的某个人即可在卡片上查看他们的历史记录。"
+   },
+   "pkProfiliAc": {
+      "message": "打开个人资料"
+   },
+   "pkPureKick": {
+      "message": "PureKick 模组"
+   },
+   "pkPureKickAciklama": {
+      "message": "Kick 的广告拦截器。"
+   },
+   "pkRenkleriSifirla": {
+      "message": "恢复默认颜色"
+   },
+   "pkRolEtiket": {
+      "message": "角色"
+   },
+   "pkRolNot": {
+      "message": "角色来自 Kick 自己的聊天连接，因此只有在您打开页面后写入的人才会被识别。"
+   },
+   "pkRolVurgulama": {
+      "message": "角色凸显"
+   },
+   "pkRolVurgulamaD": {
+      "message": "广播者、主持人、VIP 和订阅者消息都会带有彩色条纹。"
+   },
+   "pkRol_bot": {
+      "message": "机器人"
+   },
+   "pkRol_broadcaster": {
+      "message": "广播员"
+   },
+   "pkRol_founder": {
+      "message": "创始人"
+   },
+   "pkRol_moderator": {
+      "message": "主持人"
+   },
+   "pkRol_og": {
+      "message": "奥格"
+   },
+   "pkRol_staff": {
+      "message": "踢杖"
+   },
+   "pkRol_sub_gifter": {
+      "message": "副赠品者"
+   },
+   "pkRol_subscriber": {
+      "message": "订户"
+   },
+   "pkRol_verified": {
+      "message": "已验证"
+   },
+   "pkRol_vip": {
+      "message": "贵宾"
+   },
+   "pkSaOnce": {
+      "message": "{1} 小时前"
+   },
+   "pkSabitKaldir": {
+      "message": "取消固定"
+   },
+   "pkSabitKanalAyar": {
+      "message": "固定频道在顶部"
+   },
+   "pkSabitKanalAyarD": {
+      "message": "将鼠标悬停在侧边栏中的频道即可显示图钉。固定频道位于您的关注列表的顶部。"
+   },
+   "pkSabitKanallar": {
+      "message": "通道固定"
+   },
+   "pkSabitKanallarD": {
+      "message": "将您关注的频道保留在列表顶部。"
+   },
+   "pkSabitle": {
+      "message": "销"
+   },
+   "pkSadeceEmote": {
+      "message": "仅限表情消息"
+   },
+   "pkSadeceEmoteD": {
+      "message": "完全没有文字的消息"
+   },
+   "pkSadeceEmoteEki": {
+      "message": "{1} 仅表情消息"
+   },
+   "pkSadeceEmoteMesajlari": {
+      "message": "纯表情消息"
+   },
+   "pkSadeceReklam": {
+      "message": "仅广告拦截器"
+   },
+   "pkSadeceReklamAcik": {
+      "message": "仅广告拦截已开启。打开任何其他功能都会离开此模式。"
+   },
+   "pkSadeceReklamBtn": {
+      "message": "启用"
+   },
+   "pkSadeceReklamD": {
+      "message": "关闭所有其他功能并仅保留广告拦截。"
+   },
+   "pkSadeceReklamRozet": {
+      "message": "活跃"
+   },
+   "pkSagTikMenusu": {
+      "message": "播放器右键菜单"
+   },
+   "pkSagTikMenusuD": {
+      "message": "仅在视频本身上有效。"
+   },
+   "pkSayfaReklamlari": {
+      "message": "页面广告"
+   },
+   "pkSayfaReklamlariD": {
+      "message": "隐藏 Kick 界面中的广告位。"
+   },
+   "pkScEtiket": {
+      "message": "聊天状态标签"
+   },
+   "pkScEtiketD": {
+      "message": "在列表中的姓名旁边显示“聊天中”或“离线 5m”。"
+   },
+   "pkScFiltre": {
+      "message": "颤振过滤器"
+   },
+   "pkScFiltreD": {
+      "message": "在列表上方添加“全部”/“聊天中”/“离线”按钮。"
+   },
+   "pkScSayac": {
+      "message": "增强的聊天计数"
+   },
+   "pkScSayacD": {
+      "message": "即使 Kick 降低了自己的计数，也会显示您在本次会话中见过多少人。"
+   },
+   "pkSebepYazin": {
+      "message": "输入原因..."
+   },
+   "pkSebepYok": {
+      "message": "您尚未添加任何预设原因。"
+   },
+   "pkSecili": {
+      "message": "已选择{1}"
+   },
+   "pkSekmeGenel": {
+      "message": "概述"
+   },
+   "pkSekmeHakkinda": {
+      "message": "关于"
+   },
+   "pkSekmeIci": {
+      "message": "打开页面内的链接"
+   },
+   "pkSekmeIciD": {
+      "message": "YouTube、X、Instagram、Reddit、Kick 剪辑、Twitch 剪辑和聊天中的 Streamable 链接在小型播放器中打开。"
+   },
+   "pkSekmeIciNot": {
+      "message": "只有这些网站内嵌打开；像往常一样，未知链接会在新选项卡中打开。 CTRL+单击始终会打开一个新选项卡。"
+   },
+   "pkLinkOnizleme": {
+      "message": "实时预览卡"
+   },
+   "pkLinkOnizlemeD": {
+      "message": "自动在聊天链接下方显示实时缩略图预览卡。"
+   },
+   "pkSendenBahsedenler": {
+      "message": "谁提到你了"
+   },
+   "pkSes": {
+      "message": "体积"
+   },
+   "pkSesBip": {
+      "message": "嘟嘟声"
+   },
+   "pkSesCinlama": {
+      "message": "编钟"
+   },
+   "pkSesDamla": {
+      "message": "掉落"
+   },
+   "pkSesKapali": {
+      "message": "关闭"
+   },
+   "pkSesOto": {
+      "message": "汽车"
+   },
+   "pkSesPuf": {
+      "message": "泡芙"
+   },
+   "pkSifirdan": {
+      "message": "从头开始"
+   },
+   "pkSifirdanD": {
+      "message": "当前的所有内容都将被删除并由文件替换。"
+   },
+   "pkSilAciklama": {
+      "message": "包含触发器的消息被删除；没有人超时。广播公司、主持人和您自己的消息将被跳过。"
+   },
+   "pkSilAyar": {
+      "message": "批量消息删除"
+   },
+   "pkSilAyarD": {
+      "message": "删除包含您选择的单词或短语的邮件。打开时，PureKick 菜单中会出现“批量消息删除”行。"
+   },
+   "pkSilBaslik": {
+      "message": "批量消息删除"
+   },
+   "pkSilGecmis": {
+      "message": "适用于目前为止的消息"
+   },
+   "pkSilMenu": {
+      "message": "批量消息删除"
+   },
+   "pkSilNerede": {
+      "message": "从 PureKick 菜单中的“批量消息删除”行使用。"
+   },
+   "pkSilNot": {
+      "message": "直播观看时您可以关闭此窗口；当您离开频道或关闭设置时，它会停止。历史扫描仅涵盖本次会话中看到的消息。"
+   },
+   "pkSilSayac": {
+      "message": "已删除：{1}"
+   },
+   "pkSilTetikD": {
+      "message": "每行一个单词或短语。按行分割，因为短语可以包含逗号。"
+   },
+   "pkSilYetkiYok": {
+      "message": "您无法在此频道上使用批量删除功能 - 您不是管理员。"
+   },
+   "pkSilindiEtiket": {
+      "message": "（已删除）"
+   },
+   "pkSilinenGoster": {
+      "message": "显示已删除的消息"
+   },
+   "pkSilinenGosterD": {
+      "message": "已删除的邮件仍然可见、变暗并标记为“（已删除）”。"
+   },
+   "pkSilinenYok": {
+      "message": "还没有删除的消息。"
+   },
+   "pkSohbetCikarildi": {
+      "message": "已从您观看此会话的聊天中删除；没有数据离开您的设备。"
+   },
+   "pkSohbetEdenler": {
+      "message": "喋喋不休"
+   },
+   "pkSohbetIstatistikleri": {
+      "message": "聊天统计"
+   },
+   "pkSohbetIstatistikleriBaslik": {
+      "message": "聊天统计"
+   },
+   "pkSohbetIstatistikleriD": {
+      "message": "每分钟消息数、最活跃的聊天者、表情使用情况。"
+   },
+   "pkSohbetKaydi": {
+      "message": "聊天记录"
+   },
+   "pkSohbetciIpucu": {
+      "message": "踢：{1} · PureKick 在本次会议上看到了 {2} 人"
+   },
+   "pkSohbetciListesi": {
+      "message": "聊天列表"
+   },
+   "pkSohbetciListesiD": {
+      "message": "PureKick 添加到 Kick 的查看器列表中的功能。"
+   },
+   "pkSohbette": {
+      "message": "聊天中"
+   },
+   "pkSonGuncellemeEki": {
+      "message": "最后更新：{1}"
+   },
+   "pkSonMesajiIpucu": {
+      "message": "最后一条消息： {1} · {2} 消息总数"
+   },
+   "pkSonMesajlar": {
+      "message": "最近的消息"
+   },
+   "pkSonucSayisiN": {
+      "message": "{1} 结果"
+   },
+   "pkSonucYok": {
+      "message": "没有结果。"
+   },
+   "pkSsAyarlari": {
+      "message": "截图行为"
+   },
+   "pkSsBirincil": {
+      "message": "正常点击"
+   },
+   "pkSsIkincil": {
+      "message": "CTRL + 单击"
+   },
+   "pkSsIndir": {
+      "message": "下载到文件"
+   },
+   "pkTYetkiKismi": {
+      "message": "{1} 角色更改失败"
+   },
+   "pkTakipKelime": {
+      "message": "跟踪的单词"
+   },
+   "pkTakipKelimeD": {
+      "message": "跟踪这些单词和您的名字。逗号分隔。"
+   },
+   "pkTakipKelimeOrnek": {
+      "message": "赠品、代码、服务器"
+   },
+   "pkTakipciEki": {
+      "message": "{1} 位关注者"
+   },
+   "pkTakipciSayisi": {
+      "message": "追随者"
+   },
+   "pkTamEkranSon": {
+      "message": "最后是全屏按钮"
+   },
+   "pkTamEkranSonD": {
+      "message": "将 Kick 的全屏按钮移至栏的最右侧。"
+   },
+   "pkTanArac": {
+      "message": "版主工具"
+   },
+   "pkTanAracD": {
+      "message": "这些功能会关闭 - 它们在聊天中代表您行事，因此打开它们是您的决定。在 PureKick 菜单 › 审核下找到它们。"
+   },
+   "pkTanBaslik": {
+      "message": "游览"
+   },
+   "pkTanBaslikD": {
+      "message": "逐页介绍 PureKick 的功能。"
+   },
+   "pkTanBitir": {
+      "message": "开始"
+   },
+   "pkTanGoster": {
+      "message": "显示游览"
+   },
+   "pkTanHos": {
+      "message": "欢迎来到 PureKick"
+   },
+   "pkTanHosD": {
+      "message": "用于观看无广告的 Kick 并运行聊天的工具包。下面的大多数功能已经开启 - 您无需执行任何操作。使用右下角的“下一步”查看它们。"
+   },
+   "pkTanKart": {
+      "message": "资料卡"
+   },
+   "pkTanKartD": {
+      "message": "当您在聊天中单击姓名时获得的卡片。"
+   },
+   "pkTanKenar": {
+      "message": "侧边栏"
+   },
+   "pkTanKenarD": {
+      "message": "以下列表和频道页面。"
+   },
+   "pkTanListe": {
+      "message": "聊天列表"
+   },
+   "pkTanListeD": {
+      "message": "添加到 Kick 的观众列表中。"
+   },
+   "pkTanMod": {
+      "message": "适度"
+   },
+   "pkTanModD": {
+      "message": "已删除的消息、禁令和超时变得可见。"
+   },
+   "pkTanReklam": {
+      "message": "广告"
+   },
+   "pkTanReklamD": {
+      "message": "您关闭的任何内容都会立即生效。"
+   },
+   "pkTanSohbet": {
+      "message": "聊天"
+   },
+   "pkTanSohbetD": {
+      "message": "您可以决定谁脱颖而出，谁不被您看到。"
+   },
+   "pkTanSon": {
+      "message": "你已经设置好了"
+   },
+   "pkTanSonD": {
+      "message": "每个设置都位于聊天下方的 PK 按钮中。您可以从“高级”部分重新打开此导览。"
+   },
+   "pkTanVideo": {
+      "message": "视频和播放器"
+   },
+   "pkTanVideoD": {
+      "message": "添加到播放器栏。"
+   },
+   "pkTemaAciklama": {
+      "message": "更改 Kick 界面的颜色。"
+   },
+   "pkTemaKickYesili": {
+      "message": "踢绿"
+   },
+   "pkTemaKirmizi": {
+      "message": "红色"
+   },
+   "pkTemaMavi": {
+      "message": "蓝色"
+   },
+   "pkTemaMor": {
+      "message": "紫色"
+   },
+   "pkTemaPembe": {
+      "message": "粉色"
+   },
+   "pkTemaSari": {
+      "message": "黄色"
+   },
+   "pkTemaTurkuaz": {
+      "message": "青色"
+   },
+   "pkTemaTuruncu": {
+      "message": "橙色"
+   },
+   "pkTemizlemeKoru": {
+      "message": "聊天清除后保留消息"
+   },
+   "pkTemizlemeKoruD": {
+      "message": "如果主持人清除聊天，最后的消息将保留在单独的框中。"
+   },
+   "pkTemizlenenAlan": {
+      "message": "广告位已清理"
+   },
+   "pkTiyatroNav": {
+      "message": "剧院模式下的顶部栏"
+   },
+   "pkTiyatroNavD": {
+      "message": "将光标移动到最顶部，导航栏又回来了；无需离开该模式。"
+   },
+   "pkTiyatroyaAl": {
+      "message": "加入时进入剧院模式"
+   },
+   "pkTiyatroyaAlD": {
+      "message": "如果已经很宽，就不要管它；每个通道一次尝试。"
+   },
+   "pkToAciklama": {
+      "message": "每个编写触发短语的人都会在您选择的时间内超时。广播公司、主持人和您都被跳过；每人处理一次。"
+   },
+   "pkToAyar": {
+      "message": "批量超时"
+   },
+   "pkToAyarD": {
+      "message": "自动让任何写下您选择的单词或短语的人超时。启用后，PureKick 菜单中会出现“批量超时”行。"
+   },
+   "pkToBaslat": {
+      "message": "开始直播观看"
+   },
+   "pkToBaslik": {
+      "message": "批量超时"
+   },
+   "pkToDurdur": {
+      "message": "停止直播观看"
+   },
+   "pkToGecmis": {
+      "message": "适用于目前为止的消息"
+   },
+   "pkToMenu": {
+      "message": "批量超时"
+   },
+   "pkToNerede": {
+      "message": "从 PureKick 菜单中的“批量超时”行使用它。"
+   },
+   "pkToNot": {
+      "message": "您可以在实时监视运行时关闭此窗口；当您离开频道或关闭设置时，它会停止。"
+   },
+   "pkToSayac": {
+      "message": "超时：{1}"
+   },
+   "pkToSure": {
+      "message": "超时时间"
+   },
+   "pkToSureD": {
+      "message": "与快速超时相同的列表。在“审核”>“用户卡”下进行更改。"
+   },
+   "pkToTamKelime": {
+      "message": "全字匹配"
+   },
+   "pkToTamKelimeD": {
+      "message": "打开，“code”匹配，但“coding”不匹配。关闭，任何包含该文本的消息都匹配。"
+   },
+   "pkToTetik": {
+      "message": "触发短语"
+   },
+   "pkToTetikD": {
+      "message": "每行一个单词或短语。按行分割，因为短语可能包含逗号。"
+   },
+   "pkSsPano": {
+      "message": "复制到剪贴板"
+   },
+   "pkSure": {
+      "message": "持续时间"
+   },
+   "pkSureDakika": {
+      "message": "{1} 分钟"
+   },
+   "pkSureDakika1": {
+      "message": "1分钟"
+   },
+   "pkSureGun": {
+      "message": "{1}天"
+   },
+   "pkSureGun1": {
+      "message": "1天"
+   },
+   "pkSureSaat": {
+      "message": "{1}小时"
+   },
+   "pkSureSaat1": {
+      "message": "1小时"
+   },
+   "pkSureSaniye": {
+      "message": "{1}秒"
+   },
+   "pkSureSaniye1": {
+      "message": "1秒"
+   },
+   "pkSureSecenek": {
+      "message": "持续时间选项"
+   },
+   "pkSureSecenekD": {
+      "message": "单击聊天消息旁边的沙漏时显示的持续时间。以分钟为单位，以逗号分隔（1440 = 1 天）。"
+   },
+   "pkSurumEki": {
+      "message": "版本 {1}"
+   },
+   "pkSurumNotlari": {
+      "message": "发行说明"
+   },
+   "pkSurumNotlariD": {
+      "message": "每个版本中发生了什么变化。"
+   },
+   "pkSusturmaBitis": {
+      "message": "结束于： {1}"
+   },
+   "pkTAcikMenuKapat": {
+      "message": "先关闭打开的菜单"
+   },
+   "pkTAyarlarIndirildi": {
+      "message": "导出设置"
+   },
+   "pkTBaglantiKopyalandi": {
+      "message": "链接已复制到剪贴板"
+   },
+   "pkTCrossAdGir": {
+      "message": "输入至少一个用户名"
+   },
+   "pkTCrossKanalSec": {
+      "message": "至少选择一个通道"
+   },
+   "pkTGizlenenlerTemiz": {
+      "message": "隐藏人员已清除"
+   },
+   "pkTGoruntuHazirDegil": {
+      "message": "图片还没准备好"
+   },
+   "pkTIndirmeDesteklenmiyor": {
+      "message": "该浏览器无法写入文件"
+   },
+   "pkTIndirmeSuruyor": {
+      "message": "下载已在运行"
+   },
+   "pkTKaldiginYer": {
+      "message": "你离开的地方：{1}"
+   },
+   "pkTKaliteMenusuAcilmadi": {
+      "message": "质量菜单未打开"
+   },
+   "pkTKaliteMenusuYok": {
+      "message": "未找到播放器质量菜单"
+   },
+   "pkTKaliteOynaticiya": {
+      "message": "质量留给玩家"
+   },
+   "pkTKaliteYok": {
+      "message": "{1} 在此流上不可用"
+   },
+   "pkTKanalEngelKalkti": {
+      "message": "{1} 不再隐藏"
+   },
+   "pkTKanalGizlemeKalkti": {
+      "message": "该频道再次可见"
+   },
+   "pkTKanalGizlendi": {
+      "message": "频道隐藏"
+   },
+   "pkTKartAcilamadi": {
+      "message": "无法打开卡 — 聊天至少需要一条消息"
+   },
+   "pkTKartSabitlendi": {
+      "message": "卡已固定 - 您可以拖动它"
+   },
+   "pkTKategoriGizlendi": {
+      "message": "类别隐藏"
+   },
+   "pkTKategoriGorunur": {
+      "message": "类别再次可见"
+   },
+   "pkTKayitNoktalariTemiz": {
+      "message": "已保存的位置已清除"
+   },
+   "pkTKelimeKaydedildi": {
+      "message": "已保存跟踪的单词"
+   },
+   "pkTKisiGizlendi": {
+      "message": "来自 {1} 的消息被隐藏"
+   },
+   "pkTKisiGorunur": {
+      "message": "{1} 再次可见"
+   },
+   "pkTKisiOncelikli": {
+      "message": "{1} 现在优先"
+   },
+   "pkTKisiSohbetteYok": {
+      "message": "聊天中没有来自此人的可见消息"
+   },
+   "pkTKomutYazildi": {
+      "message": "命令被输入到聊天框中"
+   },
+   "pkTKopyalanamadi": {
+      "message": "文本无法复制"
+   },
+   "pkTKopyalandi": {
+      "message": "文本已复制到剪贴板"
+   },
+   "pkTKorumaAcildi": {
+      "message": "保护开启"
+   },
+   "pkTKorumaDuraklatildi": {
+      "message": "保护已暂停"
+   },
+   "pkTKullaniciBulunamadi": {
+      "message": "没有找到该用户"
+   },
+   "pkTMesajlarGeriGeldi": {
+      "message": "隐藏消息又回来了"
+   },
+   "pkTModGunluguKapali": {
+      "message": "审核日志已关闭"
+   },
+   "pkTOdulAlindi": {
+      "message": "🎉 每日奖励领取"
+   },
+   "pkTOmKaydedildi": {
+      "message": "已保存自动消息设置"
+   },
+   "pkTOmKomutBosluk": {
+      "message": "命令不能包含空格"
+   },
+   "pkTOmKomutEklendi": {
+      "message": "命令已保存"
+   },
+   "pkTOmKomutEksik": {
+      "message": "输入命令及其回复"
+   },
+   "pkTOmKomutGuncellendi": {
+      "message": "命令回复已更新"
+   },
+   "pkTOmPencereAcildi": {
+      "message": "为 {1} 打开机器人窗口"
+   },
+   "pkTOncelikKalkti": {
+      "message": "从 {1} 中删除优先级"
+   },
+   "pkTOnceliklerTemiz": {
+      "message": "优先事项已清除"
+   },
+   "pkTOturumGeriYuklendi": {
+      "message": "之前的会话已恢复"
+   },
+   "pkTOynaticiYok": {
+      "message": "未找到玩家"
+   },
+   "pkTOynaticiYokNokta": {
+      "message": "未找到播放器。"
+   },
+   "pkTOzellikAcildi": {
+      "message": "{1}已开机"
+   },
+   "pkTOzellikKapatildi": {
+      "message": "{1} 已关闭"
+   },
+   "pkTPanoDesteklenmiyor": {
+      "message": "该浏览器无法复制图像，请下载"
+   },
+   "pkTRenklerSifirlandi": {
+      "message": "角色颜色重置"
+   },
+   "pkTSadeceReklam": {
+      "message": "仅启用广告拦截器"
+   },
+   "pkTSeritYok": {
+      "message": "Kick 的播放器控件现在已关闭。将鼠标悬停在播放器上并重试。"
+   },
+   "pkTSifirlanamadi": {
+      "message": "重置失败"
+   },
+   "pkTSifirlandi": {
+      "message": "一切重置，重新加载页面"
+   },
+   "pkTSilBasladi": {
+      "message": "实时观看 — {1} 触发器"
+   },
+   "pkTSilDurdu": {
+      "message": "直播停止了"
+   },
+   "pkTSilEslesmeYok": {
+      "message": "没有匹配的消息"
+   },
+   "pkTSohbetAlaniYok": {
+      "message": "找不到聊天区"
+   },
+   "pkTSohbetKutusuYok": {
+      "message": "找不到聊天框"
+   },
+   "pkTSsAlinamadi": {
+      "message": "截图失败"
+   },
+   "pkTSsKaydedildi": {
+      "message": "截图已保存"
+   },
+   "pkTSsPanoya": {
+      "message": "屏幕截图已复制到剪贴板"
+   },
+   "pkTSsYasak": {
+      "message": "该直播无法截屏"
+   },
+   "pkTSureKaydedildi": {
+      "message": "已保存的持续时间选项"
+   },
+   "pkTSusturmaHata": {
+      "message": "超时失败（{1}）"
+   },
+   "pkTSusturuldu": {
+      "message": "{1} {2} 超时"
+   },
+   "pkTTemaKaydedildi": {
+      "message": "主题颜色已保存"
+   },
+   "pkTTemaVarsayilan": {
+      "message": "主题恢复默认"
+   },
+   "pkTToBasladi": {
+      "message": "实时观看 — {1} 触发器"
+   },
+   "pkTToDurdu": {
+      "message": "直播观看已停止"
+   },
+   "pkTToEslesmeYok": {
+      "message": "无人匹配"
+   },
+   "pkTToTetikGir": {
+      "message": "输入至少一个触发短语"
+   },
+   "pkTVodIndirildi": {
+      "message": "下载过去的广播"
+   },
+   "pkTYedekAlinamadi": {
+      "message": "备份失败"
+   },
+   "pkTYedekCokBuyuk": {
+      "message": "文件太大"
+   },
+   "pkTYedekOkunamadi": {
+      "message": "文件无法读取"
+   },
+   "pkTYedekUygulanamadi": {
+      "message": "无法加载设置"
+   },
+   "pkTYedekUygulandi": {
+      "message": "设置已加载，正在重新加载页面"
+   },
+   "pkTYetkiKaydedildi": {
+      "message": "角色更新"
+   },
+   "pkNot101911b": {
+      "message": "IVS 工作人员 yükleme biçimi ve yayın değişimindeki kanal başlığı istekleri kararlı hale getirildi"
+   },
+   "pkNot101911c": {
+      "message": "HLS reklam işaretleri ve Kick kaynaklı DNR reklam kuralları iyileştirildi"
+   },
+   "pkNot101911d": {
+      "message": "Genel bağlantı önizlemeleri için zorunlu tüm siteler izni kaldırıldı"
+   },
+   "pkNot101914a": {
+      "message": "聊天档案现在按频道分开；每日日志和已删除消息文本保留得到改进。"
+   },
+   "pkNot101914b": {
+      "message": "线上/线下关注频道可见性和频道数限制是固定的。"
+   },
+   "pkNot101914c": {
+      "message": "链接预览、频道悬停标题和个人资料卡页面范围已修复。"
+   },
+   "pkNot101914d": {
+      "message": "订户角色突出显示和有天赋的 KICKS 支持者记录得到改进。"
+   },
+   "pkNot101914e": {
+      "message": "语音剪辑命令现在支持 15 种语言、麦克风电平表和玩家徽章。"
+   },
+   "pkNot101914f": {
+      "message": "剪辑快捷方式切换、编解码器/质量回退和无声录制文件名标签均得到改进。"
+   },
+   "pkNot101912a": {
+      "message": "Kick sayfasındaki PureKick Mod simgesi ve yeşil böcek rozeti güncellendi"
+   },
+   "pkNot101912b": {
+      "message": "Araç çubuğu、sohbet ayarları、yönetim paneli ve profile önizlemesindeki ürün adı ve simge tutarlı hale getirildi"
+   },
+   "pkToTetikIpucu": {
+      "message": "任意球 \n follow4follow \n 检查我的简历"
+   },
+   "pkTumu": {
+      "message": "全部"
+   },
+   "pkUyarHiz": {
+      "message": "自适应速度"
+   },
+   "pkUyarHizD": {
+      "message": "当你在直播中落后时，它会加速以缩小差距。"
+   },
+   "pkUyarHizNot": {
+      "message": "图片永远不会跳动：位置不变，只是速度变为 1.25x，并在边缘返回到 1x。"
+   },
+   "pkVeriYok": {
+      "message": "还没有数据。"
+   },
+   "pkVideoBilgisiD": {
+      "message": "从播放器栏上的按钮打开。"
+   },
+   "pkVideoIstatistikleri": {
+      "message": "视频统计"
+   },
+   "pkVideoIstatistikleriD": {
+      "message": "分辨率、FPS、比特率、丢帧、缓冲区。"
+   },
+   "pkVideoReklamlari": {
+      "message": "视频广告"
+   },
+   "pkVideoReklamlariD": {
+      "message": "阻止前贴片和中贴片广告。"
+   },
+   "pkVideonunYuzdesi": {
+      "message": "视频的百分比"
+   },
+   "pkVodIndir": {
+      "message": "下载过去的广播"
+   },
+   "pkVodIndirBaslik": {
+      "message": "下载过去的广播"
+   },
+   "pkVodIndirKisa": {
+      "message": "下载点播"
+   },
+   "pkVodIndirNot": {
+      "message": "流被逐段写入磁盘；选项卡内存保持空闲。"
+   },
+   "pkVodReklamlari": {
+      "message": "点播广告"
+   },
+   "pkVodReklamlariD": {
+      "message": "跳过过去广播开始时的广告。"
+   },
+   "pkVodTsNotN": {
+      "message": "文件保存为.ts（VLC/MPV 播放）。最小流长度 {1}"
+   },
+   "pkVsAg": {
+      "message": "网络状态"
+   },
+   "pkVsBitHizi": {
+      "message": "比特率"
+   },
+   "pkVsCanliUzaklik": {
+      "message": "直播背后"
+   },
+   "pkVsCozunurluk": {
+      "message": "分辨率"
+   },
+   "pkVsDuraklatildi": {
+      "message": "已暂停"
+   },
+   "pkVsDusenKare": {
+      "message": "丢帧"
+   },
+   "pkVsHazir": {
+      "message": "就绪状态"
+   },
+   "pkVsKonum": {
+      "message": "职位"
+   },
+   "pkVsTampon": {
+      "message": "缓冲器"
+   },
+   "pkVurguMuaf": {
+      "message": "排除在突出显示之外"
+   },
+   "pkVurguMuafD": {
+      "message": "此处列出的人员无论其角色如何，都不会获得彩色条纹。"
+   },
+   "pkWebSitesi": {
+      "message": "网站"
+   },
+   "pkYanSohbet": {
+      "message": "拖动侧边聊天"
+   },
+   "pkYanSohbetD": {
+      "message": "让您可以用鼠标移动弹出的聊天框。"
+   },
+   "pkYanit": {
+      "message": "回复"
+   },
+   "pkYanitD": {
+      "message": "回复另一条消息的消息"
+   },
+   "pkYanitlarBaslik": {
+      "message": "回复"
+   },
+   "pkYaziliyor": {
+      "message": "写作…"
+   },
+   "pkYedekBos": {
+      "message": "该文件没有要应用的设置"
+   },
+   "pkYedekBozuk": {
+      "message": "该文件不是有效的 JSON"
+   },
+   "pkYedekNot": {
+      "message": "备份包含设置、注释、隐藏频道和人员、过滤器和保存点。"
+   },
+   "pkYedekOzet": {
+      "message": "该文件有 {1} 部分 · {2}"
+   },
+   "pkYedekYabanci": {
+      "message": "该文件不是 PureKick 备份"
+   },
+   "pkYeniSekmedeAc": {
+      "message": "在新标签页中打开 ↗"
+   },
+   "pkYenilik": {
+      "message": "此版本新增内容"
+   },
+   "pkYetkiAciklama": {
+      "message": "授予或删除此频道中的 VIP、OG 和版主。仅在您自己的频道中显示。"
+   },
+   "pkYetkiBaslik": {
+      "message": "{1} · 角色"
+   },
+   "pkYetkiDugme": {
+      "message": "编辑角色"
+   },
+   "pkYetkiMod": {
+      "message": "主持人"
+   },
+   "pkYetkiOg": {
+      "message": "奥格"
+   },
+   "pkYetkiOkunamadi": {
+      "message": "无法读取角色。"
+   },
+   "pkYetkiVip": {
+      "message": "贵宾"
+   },
+   "pkYildir": {
+      "message": "适用于 {1} 年"
+   },
+   "pkYonetimPaneli": {
+      "message": "PureKick 控制面板"
+   },
+   "pkYorumDengeli": {
+      "message": "表情和文字是平衡的"
+   },
+   "pkYorumEmoteCok": {
+      "message": "大多数消息仅包含表情"
+   },
+   "pkYorumEmoteFazla": {
+      "message": "情感多于文字"
+   },
+   "pkYorumHizli": {
+      "message": "聊天进展很快"
+   },
+   "pkYorumVeriYok": {
+      "message": "在发表任何评论之前，需要更多数据。随着聊天的进行，这会被填满。"
+   },
+   "pkYorumZirve": {
+      "message": "最忙的一分钟 {1}"
+   },
+   "pkYukseklik": {
+      "message": "身高"
+   },
+   "pkYuzde": {
+      "message": "百分比"
+   },
+   "pkZamanAsimi": {
+      "message": "超时"
+   },
+   "pkZirveDakika": {
+      "message": "{1} — 那一分钟的 {2} 消息"
+   },
+   "popupBadges": {
+      "message": "徽章"
+   },
+   "startBtn": {
+      "message": "启动保护"
+   },
+   "statusActive": {
+      "message": "无广告流活动"
+   },
+   "statusPaused": {
+      "message": "保护已暂停"
+   },
+   "themeColor": {
+      "message": "主题颜色"
+   },
+   "themeReset": {
+      "message": "重置（踢默认）"
+   },
+   "pkFiltreAra": {
+      "message": "在聊天中搜索..."
+   },
+   "pkSohbetFiltre": {
+      "message": "聊天搜索和过滤"
+   },
+   "pkCokluYayin": {
+      "message": "多码流"
+   },
+   "pkKlipAl": {
+      "message": "捕捉实时剪辑"
+   },
+   "pkSohbetTts": {
+      "message": "聊天文本转语音 (TTS)"
+   },
+   "pkEmoteSpamFiltre": {
+      "message": "表情垃圾邮件冷凝器"
+   },
+   "pkIzlemeSureTakip": {
+      "message": "观看时间跟踪"
+   },
+   "pkKanalNotlari": {
+      "message": "频道注释"
+   },
+   "pkYayinBildirim": {
+      "message": "流式传输实时通知"
+   },
+   "pkIzlemeSureleriBaslik": {
+      "message": "观看时间"
+   },
+   "pkSohbetCeviri": {
+      "message": "实时聊天翻译"
+   },
+   "pkAcik": {
+      "message": "开"
+   },
+   "pkNot101910a": {
+      "message": "Sohbet arşivi kalıcı IndexedDB deposuna taşındı;适度调整"
+   },
+   "pkNot101910b": {
+      "message": "Instagram、X/Twitter、Kick、TikTok 和其他应用程序"
+   },
+   "pkNot101910c": {
+      "message": "Yayın değişimi，HLS reklam işaretleri ve çevrimdışı oynatıcı durumu düzeltildi"
+   },
+   "pkNot101911a": {
+      "message": "PureKick Mod adı ve yeşil böcek rozeti eklenti simgelerine uygulandı"
+   },
+   "pkInterfaceLanguage": {
+      "message": "界面语言"
+   },
+   "pkInterfaceLanguageD": {
+      "message": "选择 PureKick Mod 的语言。 Auto 遵循浏览器语言。"
+   },
+   "pkSupportTitle": {
+      "message": "支持和错误报告"
+   },
+   "pkSupportDesc": {
+      "message": "通过 GitHub 发送错误报告或功能请求。在此处跟踪未完成和已完成的请求。"
+   },
+   "pkSupportLogin": {
+      "message": "提交需在 GitHub 上完成，并且需要登录 GitHub。扩展程序不会在报告中添加您的用户名或电子邮件。免登录匿名提交的中继服务器尚未配置。"
+   },
+   "pkSupportBug": {
+      "message": "报告错误"
+   },
+   "pkSupportFeature": {
+      "message": "请求功能"
+   },
+   "pkSupportQuestion": {
+      "message": "寻求帮助"
+   },
+   "pkSupportTitlePlaceholder": {
+      "message": "短标题"
+   },
+   "pkSupportBodyPlaceholder": {
+      "message": "描述步骤、预期结果和实际结果。请勿包含私人信息。"
+   },
+   "pkSupportSend": {
+      "message": "在 GitHub 上继续"
+   },
+   "pkSupportRequired": {
+      "message": "输入标题和描述。"
+   },
+   "pkSupportIssues": {
+      "message": "社区请求"
+   },
+   "pkSupportStatusHelp": {
+      "message": "状态来自 GitHub 打开/关闭状态和计划标签。"
+   },
+   "pkSupportLoading": {
+      "message": "正在加载 GitHub 请求..."
+   },
+   "pkSupportEmpty": {
+      "message": "尚未公开请求。"
+   },
+   "pkSupportClosed": {
+      "message": "解决了"
+   },
+   "pkSupportPlanned": {
+      "message": "计划中"
+   },
+   "pkSupportWaiting": {
+      "message": "等待"
+   },
+   "pkSupportOpen": {
+      "message": "打开"
+   },
+   "pkSupportError": {
+      "message": "无法加载 GitHub 请求。检查您的连接或 GitHub 状态。"
+   },
+   "pkHistoryTitle": {
+      "message": "聊天记录"
+   },
+   "pkHistorySearch": {
+      "message": "搜索聊天记录（用户或消息）"
+   },
+   "pkHistoryLoadOlder": {
+      "message": "加载更早的记录"
+   },
+   "pkHistoryMemoryLimit": {
+      "message": "已达到内存上限 · 请搜索更早的记录"
+   },
+   "pkHistoryLoading": {
+      "message": "正在加载存档…"
+   },
+   "pkHistoryNoMatch": {
+      "message": "没有找到匹配的记录。"
+   },
+   "pkHistoryEmpty": {
+      "message": "聊天日志中尚无已保存的消息。"
+   },
+   "pkHistorySearchResults": {
+      "message": "搜索结果："
+   },
+   "pkHistoryMessages": {
+      "message": "存档消息："
+   },
+   "pkHistoryOlderAvailable": {
+      "message": " · 有更早的记录"
+   },
+   "pkHistoryAllShown": {
+      "message": " · 已显示所有匹配项"
+   },
+   "pkHistoryDeletedTextMissing": {
+      "message": "Kick 未在此删除记录中提供消息内容"
+   },
+   "pkHistoryDailyTitle": {
+      "message": "聊天记录 · 每日日志"
+   },
+   "pkHistoryDailyDesc": {
+      "message": "今天的消息按频道和日期分别显示。每个频道都可下载带时间戳的独立 .log 文件。"
+   },
+   "pkHistoryDailyLoading": {
+      "message": "正在读取今天的日志…"
+   },
+   "pkHistoryDailyRefresh": {
+      "message": "刷新今天的日志"
+   },
+   "pkTimeoutExpires": {
+      "message": "禁言结束时间：{1}"
+   },
+   "pkTimeoutDays": {
+      "message": "（剩余 {1} 天）"
+   },
+   "pkActiveTimeout": {
+      "message": "当前禁言"
+   },
+   "pkPermanentBan": {
+      "message": "永久封禁"
+   },
+   "pkModEventsTitle": {
+      "message": "管理事件"
+   },
+   "pkTitleCount": {
+      "message": "{1} ({2})"
+   },
+   "pkTemizle": {
+      "message": "清除"
+   },
+   "pkAllSitesAccessDescription": {
+      "message": "一次性授予 HTTP 和 HTTPS 网站链接预览的广泛访问权限。"
+   },
+   "pkAllSitesAccessButton": {
+      "message": "允许访问所有网站"
+   },
+   "pkAllSitesGranted": {
+      "message": "已为所有 HTTP/HTTPS 网站启用链接访问。"
+   },
+   "pkAllSitesDenied": {
+      "message": "未授予网站访问权限。你可以在 Chrome 扩展程序设置中单独允许网站。"
+   },
+   "pkNot101915a": {
+      "message": "聊天中的剪辑现在播放对应剪辑 ID 的视频，而不是打开频道直播。"
+   },
+   "pkNot101915b": {
+      "message": "Kick 剪辑使用专用播放器；无法嵌入的 KickBot 剪辑页面会直接打开。"
+   },
+   "pkNot101915c": {
+      "message": "新增一键可选授权，以便在所有 HTTP/HTTPS 网站上显示链接预览。"
+   },
+   "pkNot101915d": {
+      "message": "更新了语言目录和 GitHub 支持报告流程，并增加剪辑与权限测试。"
+   }
+}

@@ -1,6 +1,6 @@
 {
   "name": "purekick-mod",
-  "version": "10.19.14",
+  "version": "10.19.15",
   "private": true,
   "description": "PureKick Mod browser extension validation",
   "scripts": {

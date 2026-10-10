@@ -1,0 +1,2702 @@
+{
+   "appDesc": {
+      "message": "يحظر PureKick Mod الإعلانات على موقع Kick.com ويضيف مجموعة أدوات محسنة للبث والدردشة."
+   },
+   "badgeCtaSub": {
+      "message": "قم بتسجيل الدخول باستخدام Kick"
+   },
+   "badgeCtaTitle": {
+      "message": "احصل على شارة الدردشة"
+   },
+   "badgeLinkedSub": {
+      "message": "الحساب مرتبط ✓"
+   },
+   "badgeLinkedTitle": {
+      "message": "شارة الدردشة نشطة"
+   },
+   "btnTitle": {
+      "message": "PureKick Mod — بث بدون إعلانات"
+   },
+   "dropDay": {
+      "message": "{1} يوم متبقي"
+   },
+   "dropDays": {
+      "message": "{1} أيام متبقية"
+   },
+   "dropHour": {
+      "message": "{1} ساعة متبقية"
+   },
+   "dropHours": {
+      "message": "{1} ساعة متبقية"
+   },
+   "dropTitle": {
+      "message": "عرض حملات Drops على Kick"
+   },
+   "dropsEmpty": {
+      "message": "لا قطرات نشطة"
+   },
+   "dropsTitle": {
+      "message": "قطرات نشطة"
+   },
+   "footHelp": {
+      "message": "المساعدة والدعم"
+   },
+   "footPrivacy": {
+      "message": "الخصوصية"
+   },
+   "pauseBtn": {
+      "message": "وقفة على هذا الموقع"
+   },
+   "pkAboneAktifNot": {
+      "message": "ينمو كل شهر تقيم فيه. شكرًا لك! 💚"
+   },
+   "pkAboneAy": {
+      "message": "{1} -مؤيد الشهر"
+   },
+   "pkAboneAy1": {
+      "message": "مؤيد لمدة شهر واحد"
+   },
+   "pkAboneBaslangic": {
+      "message": "بدأت"
+   },
+   "pkAboneBitti": {
+      "message": "لقد انتهت عضويتك. قم بالتجديد وستستأنف شارتك من حيث توقفت."
+   },
+   "pkAboneDemoBaslik": {
+      "message": "هكذا تبدو في الدردشة كمؤيد:"
+   },
+   "pkAboneDemoMesaj": {
+      "message": "مرحبًا! 👋"
+   },
+   "pkAboneKidem": {
+      "message": "فترة ولايتك"
+   },
+   "pkAboneOl": {
+      "message": "كن عضوا"
+   },
+   "pkAboneOnceGiris": {
+      "message": "قم بتسجيل الدخول باستخدام Kick أولاً - نحتاجه لمطابقة عضويتك بحسابك."
+   },
+   "pkAboneSonaErdi": {
+      "message": "انتهى"
+   },
+   "pkAboneYenile": {
+      "message": "تجديد العضوية"
+   },
+   "pkAboneYenileme": {
+      "message": "يجدد"
+   },
+   "pkAboneYukleniyor": {
+      "message": "جارٍ التحقق من حالة عضويتك…"
+   },
+   "pkAbonelik": {
+      "message": "الاشتراك"
+   },
+   "pkAbonelikTanit": {
+      "message": "كن داعمًا: احصل على شارة ثابتة بجوار اسمك في الدردشة وقم بتلوين اسمك كيفما تشاء."
+   },
+   "pkAiMod": {
+      "message": "وضع علامة على عمليات الحذف التلقائي"
+   },
+   "pkAiModD": {
+      "message": "إذا قام إشراف Kick's AI بحذفه، فإن السجل يميزه بعيدًا عن حذف المشرف."
+   },
+   "pkAltAdTakibi": {
+      "message": "مشاهدة الاسم"
+   },
+   "pkAltCezaSebepleri": {
+      "message": "أسباب جزائية"
+   },
+   "pkAltGezinme": {
+      "message": "شريط التنقل"
+   },
+   "pkAltGizliKanallar": {
+      "message": "القنوات المخفية"
+   },
+   "pkAltGizliKategoriler": {
+      "message": "الفئات المخفية"
+   },
+   "pkAltKaliteSes": {
+      "message": "الجودة والحجم التلقائي"
+   },
+   "pkAltKartBilgisi": {
+      "message": "تفاصيل البطاقة"
+   },
+   "pkAltKartSohbeti": {
+      "message": "دردشة البطاقة"
+   },
+   "pkAltKenarCubugu": {
+      "message": "الشريط الجانبي"
+   },
+   "pkAltModGunlugu": {
+      "message": "إعدادات السجل"
+   },
+   "pkAltOtomasyon": {
+      "message": "الأتمتة"
+   },
+   "pkAltOynaticiOzel": {
+      "message": "مميزات اللاعب"
+   },
+   "pkAltSagTikMenuleri": {
+      "message": "انقر بزر الماوس الأيمن والصور"
+   },
+   "pkAltSohbetGorunum": {
+      "message": "مظهر الدردشة"
+   },
+   "pkAltSohbetGorunumD": {
+      "message": "معاينة التعبيرات."
+   },
+   "pkAltSohbetMesaji": {
+      "message": "رسالة الدردشة"
+   },
+   "pkAltVideoIstat": {
+      "message": "شريط الفيديو والتحكم"
+   },
+   "pkAltVideoVod": {
+      "message": "مشغل الفيديو وVOD"
+   },
+   "pkAltVurgulama": {
+      "message": "تسليط الضوء على الرسالة"
+   },
+   "pkAninda": {
+      "message": "التغييرات نافذة المفعول على الفور."
+   },
+   "pkAnlikOrtZirve": {
+      "message": "الآن / المتوسط / الذروة"
+   },
+   "pkAralikSec": {
+      "message": "حدد نطاقًا"
+   },
+   "pkArayuzDuzeniD": {
+      "message": "إضافات صغيرة إلى واجهة Kick؛ لم يكسر أي منهم تصميم Kick الخاص."
+   },
+   "pkAySayisi": {
+      "message": "{1} شهر (أشهر)"
+   },
+   "pkAyarSatiri": {
+      "message": "إعدادات الدردشة PureKick"
+   },
+   "pkAyarYedegi": {
+      "message": "النسخ الاحتياطي للإعدادات"
+   },
+   "pkAyarYedegiD": {
+      "message": "جميع الإعدادات والقوائم الخاصة بك في ملف واحد. لا يتم إرسال أي شيء إلى الخادم."
+   },
+   "pkAramaAyarlar": {
+      "message": "إعدادات البحث..."
+   },
+   "pkAramaSonucYok": {
+      "message": "لم يتم العثور على إعدادات مطابقة"
+   },
+   "pkAyarlar": {
+      "message": "إعدادات بيور كيك"
+   },
+   "pkAyarlardanAc": {
+      "message": "يمكنك تشغيله في الإعدادات."
+   },
+   "pkAydir": {
+      "message": "لـ {1} شهر (أشهر)"
+   },
+   "pkAzOnce": {
+      "message": "الآن فقط"
+   },
+   "pkBaglantiDurum": {
+      "message": "حالة اتصال الدردشة"
+   },
+   "pkBaglantiDurumD": {
+      "message": "نقطة صغيرة بجانب الدردشة: هل الأحداث تتدفق أم توقفت."
+   },
+   "pkBaglanti_acik": {
+      "message": "اتصال الدردشة يعمل"
+   },
+   "pkBaglanti_bekliyor": {
+      "message": "في انتظار اتصال الدردشة"
+   },
+   "pkBaglanti_kopuk": {
+      "message": "يبدو أن اتصال الدردشة مفقود"
+   },
+   "pkBaglanti_sessiz": {
+      "message": "لا توجد أحداث لفترة من الوقت - قد تكون الدردشة هادئة"
+   },
+   "pkBaglantiyiKopyala": {
+      "message": "انسخ الرابط"
+   },
+   "pkBaglantiyiOnizle": {
+      "message": "معاينة الرابط"
+   },
+   "pkChatOnizle": {
+      "message": "عرض المعاينة في الدردشة"
+   },
+   "pkChatOnizleKapat": {
+      "message": "إغلاق المعاينة"
+   },
+   "pkBahsedenYok": {
+      "message": "لم يذكرك أحد بعد."
+   },
+   "pkBahsedilmeler": {
+      "message": "يذكر"
+   },
+   "pkBahsedilmelerBos": {
+      "message": "ويتم تجميعها هنا أثناء مشاهدة دردشة القناة."
+   },
+   "pkBahsedilmelerD": {
+      "message": "يجمع الرسائل التي تذكر اسمك."
+   },
+   "pkBahsetRozet": {
+      "message": "عداد الإخطارات"
+   },
+   "pkBahsetRozetD": {
+      "message": "يظهر العد الأحمر على زر PureKick عندما يظهر اسمك. قم بإيقاف تشغيله وسيستمر جمع الإشارات، ولا يتم احتسابها على الشاشة."
+   },
+   "pkBahsetSes": {
+      "message": "صوت الإخطار"
+   },
+   "pkBahsetSesD": {
+      "message": "يصدر صوتًا قصيرًا عندما يأتي اسمك."
+   },
+   "pkBahsetSesSeviye": {
+      "message": "الحجم"
+   },
+   "pkBahsetSesTon": {
+      "message": "الصوت"
+   },
+   "pkBahsetSesTonD": {
+      "message": "يتم تشغيله بمجرد اختياره - استمع ثم قرر."
+   },
+   "pkKanalSahibi": {
+      "message": "صاحب القناة"
+   },
+   "pkKanaliGizle": {
+      "message": "إخفاء هذه القناة"
+   },
+   "pkKanaliTakip": {
+      "message": "متابعة القناة"
+   },
+   "pkKapali": {
+      "message": "كتم الصوت"
+   },
+   "pkKapat": {
+      "message": "إغلاق"
+   },
+   "pkKareyiKaydet": {
+      "message": "حفظ الإطار الحالي"
+   },
+   "pkKartBilgiNot": {
+      "message": "تم جلبها من نقطة النهاية الخاصة بـ Kick بدون ملفات تعريف الارتباط، مرة واحدة لكل شخص، ثم يتم حفظها في الذاكرة."
+   },
+   "pkKartGenis": {
+      "message": "بطاقة شخصية واسعة"
+   },
+   "pkKartGenisD": {
+      "message": "تعمل على توسيع بطاقة Kick الضيقة بحيث لا تكون المعلومات المضافة والملاحظات وكتل الإشراف ضيقة."
+   },
+   "pkKartMesajlar": {
+      "message": "الرسائل والردود الأخيرة"
+   },
+   "pkKartMesajlarD": {
+      "message": "يعرض رسائل الشخص الأخيرة والردود المرسلة إليه كعلامات تبويب على بطاقة ملف التعريف."
+   },
+   "pkKartSabit": {
+      "message": "قم بتثبيت بطاقة الملف الشخصي"
+   },
+   "pkKartSabitD": {
+      "message": "إضافة زر إلى البطاقة؛ الضغط عليه يبقي نسخة قابلة للقراءة على الشاشة."
+   },
+   "pkKartSagTik": {
+      "message": "انقر بزر الماوس الأيمن على القائمة على بطاقات الدفق"
+   },
+   "pkKartSagTikD": {
+      "message": "انقر بزر الماوس الأيمن فوق قناة في الصفحة الرئيسية أو في فئات للاختصارات. Shift + النقر بزر الماوس الأيمن يفتح قائمة المتصفح."
+   },
+   "pkKartTakipci": {
+      "message": "عدد المتابعين على البطاقة"
+   },
+   "pkKartTakipciD": {
+      "message": "تم جلبها من نقطة النهاية الخاصة بـ Kick بدون ملفات تعريف الارتباط، مرة واحدة لكل شخص."
+   },
+   "pkKartYanit": {
+      "message": "ردود على هذا الشخص"
+   },
+   "pkKartYanitD": {
+      "message": "\"الرسائل الأخيرة\" تظهر ما كتبوه؛ تُظهر هذه الكتلة ما كتب لهم."
+   },
+   "pkKartiSabitle": {
+      "message": "قم بتثبيت هذه البطاقة"
+   },
+   "pkKategoriGizleYok": {
+      "message": "لم تقم بإخفاء فئة بعد. افتح صفحة فئة واستخدم الزر \"إخفاء الفئة\" بجوار العنوان."
+   },
+   "pkKategoriGizlemeyiKullan": {
+      "message": "استخدم إخفاء الفئة"
+   },
+   "pkKategoriGizlemeyiKullanD": {
+      "message": "قم بإيقاف التشغيل وسيظهرون جميعًا مرة أخرى."
+   },
+   "pkKategoriGoster": {
+      "message": "إظهار هذه الفئة مرة أخرى"
+   },
+   "pkKatilim": {
+      "message": "المشاركة"
+   },
+   "pkKatilimD": {
+      "message": "نسبة المشاهدين الذين يكتبون في الدردشة"
+   },
+   "pkKatilmaTakip": {
+      "message": "الانضمام ومتابعة المعلومات"
+   },
+   "pkKatilmaTakipD": {
+      "message": "تاريخ الانضمام إلى Kick، ومدة متابعة القناة، ومدة الاشتراك."
+   },
+   "pkKaydedildi": {
+      "message": "تم الحفظ"
+   },
+   "pkKaydet": {
+      "message": "حفظ"
+   },
+   "pkKayitNoktasi": {
+      "message": "المكان الذي توقفت عنده في VOD"
+   },
+   "pkKayitNoktasiD": {
+      "message": "اترك بثًا سابقًا في منتصف الطريق وسيعرض عليك العودة إلى تلك الثانية."
+   },
+   "pkKayitNoktasiHatirla": {
+      "message": "تذكر موقفي"
+   },
+   "pkKayitNoktasiHatirlaD": {
+      "message": "يتم الاحتفاظ بالموضع على جهازك فقط."
+   },
+   "pkKayitliNTemizle": {
+      "message": "مسح الموضع (المواضع) المحفوظة {1}"
+   },
+   "pkKaynagiYeniSekmede": {
+      "message": "افتح المصدر في علامة تبويب جديدة ↗"
+   },
+   "pkKaynakBulunuyor": {
+      "message": "العثور على المصدر…"
+   },
+   "pkKaynakYok": {
+      "message": "لم يتم العثور على مصدر هذا الدفق."
+   },
+   "pkKelimeVurgu": {
+      "message": "تسليط الضوء في الدردشة"
+   },
+   "pkKelimeVurguD": {
+      "message": "تحصل الرسائل التي تحتوي على هذه الكلمات على نفس الشريط الأخضر الذي يحصل عليه الأشخاص ذوو الأولوية."
+   },
+   "pkKenarGrup": {
+      "message": "انقسام عبر الإنترنت / غير متصل"
+   },
+   "pkKenarGrupD": {
+      "message": "يفصل القنوات المتبعة إلى مجموعات متصلة وغير متصلة بالإنترنت. يحتفظ نظام Kick's Show More بسلوكه الافتراضي."
+   },
+   "pkKenarGrupSayi": {
+      "message": "القنوات المعروضة في قوائم متصل / غير متصل"
+   },
+   "pkKenarGrupSayiD": {
+      "message": "اختر عدد القنوات التي تريد عرضها في كل مجموعة (1-20). يحتفظ زر \"إظهار المزيد\" الخاص بـ Kick بسلوكه الافتراضي."
+   },
+   "pkKenarGrupLimit": {
+      "message": "تطبيق حد عدد القنوات"
+   },
+   "pkKenarGrupLimitD": {
+      "message": "يحد من عدد القنوات المعروضة في القوائم المتصلة وغير المتصلة باستخدام القيمة 1–20 أدناه. مستقلة عن التجمع عبر الإنترنت/غير متصل."
+   },
+   "pkKickDahaFazlaGizle": {
+      "message": "إخفاء أزرار إظهار المزيد / إظهار أقل في Kick"
+   },
+   "pkKickDahaFazlaGizleD": {
+      "message": "يخفي أزرار التوسيع والطي الخاصة بـ Kick في قائمة القنوات المتبعة."
+   },
+   "pkKendiMenum": {
+      "message": "افتح القائمة الخاصة بي"
+   },
+   "pkKendiMenumD": {
+      "message": "Shift + النقر بزر الماوس الأيمن يفتح دائمًا قائمة المتصفح."
+   },
+   "pkKezSayisi": {
+      "message": "{1} ×"
+   },
+   "pkKickIleGiris": {
+      "message": "قم بتسجيل الدخول باستخدام Kick"
+   },
+   "pkKickeKatildi": {
+      "message": "انضم إلى ركلة"
+   },
+   "pkKisaDakika": {
+      "message": "م"
+   },
+   "pkKisaGun": {
+      "message": "د"
+   },
+   "pkKisaSaat": {
+      "message": "ح"
+   },
+   "pkKisiGizleme": {
+      "message": "إخفاء شخص"
+   },
+   "pkKisiGizlemeD": {
+      "message": "تختفي رسائلهم على شاشتك فقط."
+   },
+   "pkKisiGizli": {
+      "message": "{1} الناس مخفية."
+   },
+   "pkKisiMesajYok": {
+      "message": "لم يتم رؤية أي رسائل من هذا المستخدم هذه الجلسة."
+   },
+   "pkEmoteOnizlemeD": {
+      "message": "قم بتمرير الرمز التعبيري لرؤيته بحجم كبير مع اسمه."
+   },
+   "pkEmoteSayisi": {
+      "message": "عواطف {1}"
+   },
+   "pkEmoteYok": {
+      "message": "لم يتم استخدام أي عواطف حتى الآن."
+   },
+   "pkEnAktifSohbet": {
+      "message": "الدردشة الأكثر نشاطا"
+   },
+   "pkEnAktifSohbetD": {
+      "message": "من كتب أكثر هذه الجلسة."
+   },
+   "pkEnCokEmote": {
+      "message": "العواطف الأكثر استخداما"
+   },
+   "pkEnCokEmoteD": {
+      "message": "الأكثر تكرارًا في الدردشة هذه الجلسة."
+   },
+   "pkEnCokEmoteKisi": {
+      "message": "أهم مستخدمي التعبيرات التعبيرية"
+   },
+   "pkEnCokEmoteKisiD": {
+      "message": "المشاعر لكل شخص وعدد الرسائل التعبيرية فقط."
+   },
+   "pkEnYogunDakika": {
+      "message": "اللحظة الأكثر ازدحاما"
+   },
+   "pkEngellemeAyarlari": {
+      "message": "إعدادات الإعلان"
+   },
+   "pkEngellenenVideo": {
+      "message": "تم حظر إعلانات الفيديو"
+   },
+   "pkEvet": {
+      "message": "نعم"
+   },
+   "pkEvetSifirla": {
+      "message": "نعم، إعادة الضبط"
+   },
+   "pkGelenYanitYok": {
+      "message": "ولم يذكرهم أحد في هذه الجلسة."
+   },
+   "pkGelenYanitlar": {
+      "message": "مكتوب لهم"
+   },
+   "pkGelismis": {
+      "message": "متقدم"
+   },
+   "pkGeri": {
+      "message": "العودة"
+   },
+   "pkGizleIkonu": {
+      "message": "زر إخفاء على القناة تحوم"
+   },
+   "pkGizleIkonuD": {
+      "message": "يُظهر زر إخفاء في الزاوية العلوية اليمنى عند تحريك مؤشر الماوس فوق قناة على الصفحة الرئيسية أو الشريط الجانبي أو الفئات. الزر الموجود بجوار المشاركة على صفحة القناة منفصل."
+   },
+   "pkGizlemeyiKaldir": {
+      "message": "إظهار"
+   },
+   "pkGizlenenKanallar": {
+      "message": "القنوات المخفية"
+   },
+   "pkGizlenenKanallarD": {
+      "message": "تبقى هذه القنوات خارج القوائم والفئات والبحث."
+   },
+   "pkGizlenenKategoriler": {
+      "message": "الفئات المخفية"
+   },
+   "pkGizlenenKategorilerD": {
+      "message": "تظل هذه الفئات وبطاقات البث الموجودة بداخلها خارج القوائم."
+   },
+   "pkGizlenenleriTemizle": {
+      "message": "استعادة الأشخاص المخفيين {1}"
+   },
+   "pkGizliMesajTemizle": {
+      "message": "استعادة الرسائل المخفية {1}"
+   },
+   "pkGorselBuyut": {
+      "message": "تكبير الصورة (CTRL + النقر)"
+   },
+   "pkGorselBuyutD": {
+      "message": "انقر مع الضغط على مفتاح CTRL على التعبير التعبيري أو الشارة أو الصورة الرمزية لرؤيتها بالحجم الكامل."
+   },
+   "pkGorunurluk": {
+      "message": "العتامة"
+   },
+   "pkGrupCanli": {
+      "message": "اونلاين ({1})"
+   },
+   "pkGrupKapali": {
+      "message": "غير متصل ({1})"
+   },
+   "pkGunOnce": {
+      "message": "{1} منذ"
+   },
+   "pkGundur": {
+      "message": "لمدة {1} يوم (أيام)"
+   },
+   "pkHakkindaEk": {
+      "message": "معلومات القناة الإضافية"
+   },
+   "pkHakkindaEkD": {
+      "message": "يضيف شارات المشتركين والرموز التعبيرية للقناة والفئات الحديثة وقواعد الدردشة (عند تعيينها) إلى الصف حول ضمن ساحة المشاركات."
+   },
+   "pkHata": {
+      "message": "خطأ"
+   },
+   "pkHayir": {
+      "message": "لا"
+   },
+   "pkHazirlanamadi": {
+      "message": "لا يمكن أن تكون مستعدة."
+   },
+   "pkHersiSifirla": {
+      "message": "إعادة ضبط كل شيء"
+   },
+   "pkHersiSifirlaD": {
+      "message": "يتم حذف كافة الإعدادات والقوائم. يعود الامتداد إلى حالته في اليوم الأول."
+   },
+   "pkHersiSifirlaUyari": {
+      "message": "سيتم حذف ملاحظاتك وقنواتك المخفية والأشخاص والمرشحات ونقاط الحفظ. لا يمكن التراجع عن هذا — قد ترغب في التصدير أولاً."
+   },
+   "pkHesabinEki": {
+      "message": "حسابك: {1}"
+   },
+   "pkHizliMod": {
+      "message": "مهلة سريعة"
+   },
+   "pkHizliModD": {
+      "message": "يؤدي النقر على الساعة الرملية بجوار رسالة الدردشة إلى فتح شريط المدة؛ يتم تطبيق اختيارك بدلاً من مربع حوار Kick الخاص."
+   },
+   "pkHizliModNot": {
+      "message": "يتم كتابة الأمر فقط في المربع - الإرسال متروك لك، لذلك لا يتم معاقبة أي شخص عن طريق الصدفة."
+   },
+   "pkHkAboneye": {
+      "message": "المشتركين فقط"
+   },
+   "pkHkAy": {
+      "message": "{1} أشهر"
+   },
+   "pkHkEmoteler": {
+      "message": "عواطف القناة"
+   },
+   "pkHkKategoriler": {
+      "message": "الفئات الأخيرة"
+   },
+   "pkHkKurallar": {
+      "message": "قواعد الدردشة"
+   },
+   "pkHkRozetler": {
+      "message": "شارات المشتركين"
+   },
+   "pkIceAktar": {
+      "message": "استيراد"
+   },
+   "pkIcerikBos": {
+      "message": "المحتوى (فارغ = كافة الرسائل)"
+   },
+   "pkIleri": {
+      "message": "التالي"
+   },
+   "pkIlkSonMesaj": {
+      "message": "من الرسالة الأولى إلى الأخيرة"
+   },
+   "pkIndiriliyorEki": {
+      "message": "جاري التحميل · {1}"
+   },
+   "pkIndirmeBitti": {
+      "message": "تم · {1}"
+   },
+   "pkIndirmeDurdu": {
+      "message": "توقف التنزيل: {1}"
+   },
+   "pkIndirmeIlerleme": {
+      "message": "{1} % · شرائح {2}"
+   },
+   "pkIndirmeIptal": {
+      "message": "تم الإلغاء · تم تنزيل {1}"
+   },
+   "pkIptal": {
+      "message": "إلغاء"
+   },
+   "pkIstatBos": {
+      "message": "لا توجد بيانات حتى الآن. افتح ساحة مشاركات، ومع تدفق الدردشة، سيظهر هنا عدد الرسائل وأهم المحادثات واستخدام التعبيرات التعبيرية."
+   },
+   "pkIzleyici": {
+      "message": "المشاهدين"
+   },
+   "pkIzleyiciAnlik": {
+      "message": "المشاهدون (الآن)"
+   },
+   "pkIzleyiciOrt": {
+      "message": "المشاهدون (المتوسط)"
+   },
+   "pkIzleyiciZirve": {
+      "message": "المشاهدون (الذروة)"
+   },
+   "pkKaldir": {
+      "message": "إزالة"
+   },
+   "pkKaliteNot": {
+      "message": "إذا كانت الجودة الخاصة بك غير متوفرة، فسيتم استخدام الجودة التالية. مع تحديد \"تلقائي\"، لا تفعل هذه الميزة شيئًا."
+   },
+   "pkKaliteOkunamadi": {
+      "message": "لا يمكن قراءة قائمة الجودة."
+   },
+   "pkKaliteSecin": {
+      "message": "اختر الجودة:"
+   },
+   "pkKanalBilgisi": {
+      "message": "معلومات القناة"
+   },
+   "pkKanalCanli": {
+      "message": "مباشر: {1} · مشاهدي {2}"
+   },
+   "pkKanalCevrimdisi": {
+      "message": "غير متصل · متابعين {1}"
+   },
+   "pkKanalEngeliKaldir": {
+      "message": "إظهار هذه القناة"
+   },
+   "pkKanalGizleYok": {
+      "message": "أنت لم تخفي أحدا بعد. قم بتحريك بطاقة القناة ثم اضغط على ✕ لإخفائها."
+   },
+   "pkKanalHakkinda": {
+      "message": "نظرة عامة على {1}"
+   },
+   "pkBahsetTikla": {
+      "message": "@الإشارات القابلة للنقر عليها"
+   },
+   "pkBahsetTiklaD": {
+      "message": "يؤدي النقر فوق @name في الرسالة إلى وضع ذلك الشخص في مربع الدردشة."
+   },
+   "pkBanDetay": {
+      "message": "معلومات الحظر التفصيلية"
+   },
+   "pkBanDetayD": {
+      "message": "انقر فوق صف السجل للكشف عن السبب والمدة والوقت المتبقي وحالة الاستئناف."
+   },
+   "pkBanDoldu": {
+      "message": "انتهت صلاحيتها"
+   },
+   "pkBanItiraz": {
+      "message": "الاستئناف"
+   },
+   "pkBanItirazVar": {
+      "message": "وتم فتح باب الاستئناف على هذه العقوبة"
+   },
+   "pkBanKalan": {
+      "message": "الوقت المتبقي"
+   },
+   "pkBanKalici": {
+      "message": "دائم"
+   },
+   "pkBanMesaj": {
+      "message": "رسالة"
+   },
+   "pkBanOtomatik": {
+      "message": "تلقائي"
+   },
+   "pkBanSablon": {
+      "message": "أسباب العقوبة المحددة مسبقا"
+   },
+   "pkBanSablonD": {
+      "message": "احفظ الأسباب التي تستخدمها كثيرًا؛ بنقرة واحدة يكتبها كأمر من بطاقة الملف الشخصي."
+   },
+   "pkBanSebep": {
+      "message": "السبب"
+   },
+   "pkBanSure": {
+      "message": "المدة"
+   },
+   "pkBanYapan": {
+      "message": "تطبق من قبل"
+   },
+   "pkBindir": {
+      "message": "تراكب الدردشة على الدفق"
+   },
+   "pkBindirAc": {
+      "message": "قم بتشغيل التراكب"
+   },
+   "pkBindirAcD": {
+      "message": "تمر الطبقة عبر النقرات؛ لا يمنع أزرار المشغل أبدًا."
+   },
+   "pkBindirD": {
+      "message": "استمر في قراءة الدردشة في وضع ملء الشاشة أيضًا."
+   },
+   "pkBindirKonum": {
+      "message": "الموقف"
+   },
+   "pkBindirNot": {
+      "message": "تأتي الرسائل من اتصال الدردشة الموجود في Kick؛ لم يتم فتح أي جديد. الأشخاص الذين تخفيهم يظلون مختبئين هنا أيضًا."
+   },
+   "pkBirModerator": {
+      "message": "وسيط"
+   },
+   "pkBirModeratorIci": {
+      "message": "وسيط"
+   },
+   "pkBirlestir": {
+      "message": "دمج"
+   },
+   "pkBirlestirD": {
+      "message": "تتم كتابة الإعدادات الموجودة في الملف فقط؛ كل شيء آخر يبقى."
+   },
+   "pkBotYoksay": {
+      "message": "لا تسلط الضوء على الروبوتات"
+   },
+   "pkBotYoksayD": {
+      "message": "لا تحصل الرسائل الواردة من الحسابات التي تحمل شارة الروبوت على شريط ملون."
+   },
+   "pkBugun": {
+      "message": "اليوم"
+   },
+   "pkCevrimdisi": {
+      "message": "غير متصل"
+   },
+   "pkCevrimdisiEki": {
+      "message": "غير متصل · {1}"
+   },
+   "pkCezaYok": {
+      "message": "لا أحد انتهت مهلة حاليا."
+   },
+   "pkCrossAciklama": {
+      "message": "يتم تطبيق الإجراء على كل قناة محددة على حدة. تأتي قائمة القنوات من القنوات التي تشرف عليها."
+   },
+   "pkCrossAra": {
+      "message": "بحث في القنوات..."
+   },
+   "pkCrossAyar": {
+      "message": "الحظر المتقاطع · الحظر المتقاطع بالجملة"
+   },
+   "pkCrossAyarD": {
+      "message": "إضافة زر إلى بطاقة الملف الشخصي وصف \"الحظر الشامل\" إلى قائمة PureKick: حظر أو مهلة أو عفو عن شخص واحد - أو قائمة كاملة - عبر كل قناة تقوم بالإشراف عليها مرة واحدة."
+   },
+   "pkCrossBaslat": {
+      "message": "ابدأ"
+   },
+   "pkCrossBaslik": {
+      "message": "{1} — العمل عبر القنوات"
+   },
+   "pkCrossBekleme": {
+      "message": "التأخير بين القنوات (ثواني)"
+   },
+   "pkCrossBitti": {
+      "message": "تم — نجح {1}، وفشل {2}"
+   },
+   "pkCrossDugme": {
+      "message": "الحظر المتقاطع"
+   },
+   "pkCrossDurdur": {
+      "message": "توقف"
+   },
+   "pkCrossHepsi": {
+      "message": "حدد / امسح الكل"
+   },
+   "pkCrossIlerleme": {
+      "message": "{1} / {2} · {3}"
+   },
+   "pkCrossKaldir": {
+      "message": "إلغاء الحظر"
+   },
+   "pkCrossKanallar": {
+      "message": "القنوات"
+   },
+   "pkCrossListeYok": {
+      "message": "تعذر تحميل قائمة القنوات — يجب عليك تسجيل الدخول إلى Kick"
+   },
+   "pkCrossModYok": {
+      "message": "لم يتم العثور على قنوات حيث أنت مشرف"
+   },
+   "pkCrossNerede": {
+      "message": "استخدمه من زر الحظر المتبادل الموجود على بطاقة الملف الشخصي، أو صف \"الحظر الشامل\" في قائمة PureKick."
+   },
+   "pkCrossSebep": {
+      "message": "السبب"
+   },
+   "pkCrossSebepIpucu": {
+      "message": "اختياري"
+   },
+   "pkCrossSecili": {
+      "message": "تم تحديد {1} / {2}"
+   },
+   "pkCrossSure": {
+      "message": "المدة (بالدقائق)"
+   },
+   "pkCrossSustur": {
+      "message": "مهلة"
+   },
+   "pkCrossTekNot": {
+      "message": "الاعتدال السريع معطل. يتم عرض زر القنوات المتقاطعة فقط."
+   },
+   "pkCrossToplu": {
+      "message": "حظر متقاطع بالجملة"
+   },
+   "pkCrossTopluAciklama": {
+      "message": "يتم تطبيقه على كل مستخدم تقوم بإدراجه، بشكل منفصل في كل قناة تحددها. تأتي قائمة القنوات من القنوات التي تشرف عليها."
+   },
+   "pkCrossTopluAdlar": {
+      "message": "أسماء المستخدمين"
+   },
+   "pkCrossTopluBaslik": {
+      "message": "العمل الجماعي عبر القنوات"
+   },
+   "pkCrossTopluBekleme": {
+      "message": "الانتظار بين المستخدمين (ثواني)"
+   },
+   "pkCrossTopluBeklemeNot": {
+      "message": "تتم معالجة مستخدم واحد عبر جميع القنوات المحددة بشكل متتالي. ينطبق الانتظار فقط عند الانتقال إلى المستخدم التالي — على الأقل {1} ثانية."
+   },
+   "pkCrossTopluIpucu": {
+      "message": "أليس، بوب، كارول \n أو واحد في كل سطر"
+   },
+   "pkCrossTopluSayi": {
+      "message": "مستخدمي {1}"
+   },
+   "pkCrossYasakla": {
+      "message": "حظر"
+   },
+   "pkCrossYukleniyor": {
+      "message": "جارٍ تحميل القنوات…"
+   },
+   "pkDisaAktar": {
+      "message": "تصدير"
+   },
+   "pkDkOnce": {
+      "message": "{1} قبل دقيقة"
+   },
+   "pkDropsAciklama": {
+      "message": "الحملات النشطة التي يجب ألا تفوتها."
+   },
+   "pkDropsMenu": {
+      "message": "القطرات النشطة - المكافأة اليومية"
+   },
+   "pkEkle": {
+      "message": "أضف"
+   },
+   "pkEkranGoruntusu": {
+      "message": "لقطة الشاشة"
+   },
+   "pkEkranGoruntusuAl": {
+      "message": "التقط لقطة شاشة"
+   },
+   "pkEkranGoruntusuD": {
+      "message": "تنزيل الإطار الحالي بصيغة PNG."
+   },
+   "pkVideoKayit": {
+      "message": "مسجل فيديو"
+   },
+   "pkEminMisin": {
+      "message": "هل أنت متأكد؟"
+   },
+   "pkEmoteOnizleme": {
+      "message": "معاينة التعبيرات"
+   },
+   "pkNot102a": {
+      "message": "تم حظر الإعلانات في عمليات البث الماضية"
+   },
+   "pkNot102b": {
+      "message": "اخفاء القنوات"
+   },
+   "pkNot102c": {
+      "message": "شارات في كل مكان يظهر فيه اسم المستخدم"
+   },
+   "pkNot105a": {
+      "message": "إحصائيات الدردشة والإشارات وملاحظات المستخدم وسجل الإشراف"
+   },
+   "pkNot105b": {
+      "message": "إبراز الدور وإخفاء الأشخاص والأشخاص ذوي الأولوية"
+   },
+   "pkNot105c": {
+      "message": "إحصائيات الفيديو ووقت التشغيل والجودة التلقائية والترجيع/الأمام"
+   },
+   "pkNot105d": {
+      "message": "تراكب الدردشة على ساحة المشاركات وقائمة النقر بزر الماوس الأيمن على المشغل"
+   },
+   "pkNot105e": {
+      "message": "تمت ترجمة الواجهة إلى 7 لغات"
+   },
+   "pkNot107a": {
+      "message": "وضع مانع الإعلانات فقط - قم بإيقاف تشغيل كل شيء آخر بنقرة واحدة"
+   },
+   "pkNot107b": {
+      "message": "الشريط الجانبي: القنوات المثبتة والتقسيم المباشر/غير المتصل ومعاينات البث"
+   },
+   "pkNot107c": {
+      "message": "الجودة والحجم التلقائي. الشارات والعواطف والقواعد في قسم \"حول\" القناة"
+   },
+   "pkNot107d": {
+      "message": "صفحة رئيسية أسرع بشكل ملحوظ وعدد أقل من التأتأة"
+   },
+   "pkNot107e": {
+      "message": "يفتح رمز شريط الأدوات الآن لوحة الإعدادات مباشرة"
+   },
+   "pkNot107f": {
+      "message": "تم وضع علامة على الرسائل المحذوفة في الدردشة؛ الأحدث أولاً في الإشراف وسجلات الدردشة"
+   },
+   "pkNot107g": {
+      "message": "شريط الإشراف أعلى الدردشة - انقر لفتح الأحداث والرسائل المحذوفة والمهلة"
+   },
+   "pkNotPlaceholder": {
+      "message": "اترك لنفسك ملاحظة عن هذا الشخص..."
+   },
+   "pkNotun": {
+      "message": "ملاحظتك"
+   },
+   "pkOdulAlindi": {
+      "message": "تم استلام جائزة اليوم 🎉"
+   },
+   "pkOdulBaslik": {
+      "message": "المكافأة اليومية"
+   },
+   "pkOdulGirisGerek": {
+      "message": "يجب عليك تسجيل الدخول إلى Kick"
+   },
+   "pkOdulHata": {
+      "message": "لا يمكن قراءة حالة المكافأة"
+   },
+   "pkOdulIlerleme": {
+      "message": "تمت مشاهدة {1} / {2}"
+   },
+   "pkOdulKontrol": {
+      "message": "جارٍ التحقق من الحالة…"
+   },
+   "pkOdulYok": {
+      "message": "لا يوجد تحدي مشاهدة اليوم"
+   },
+   "pkOmAciklama": {
+      "message": "يتم إرسال الرسائل من حسابك. لم يتم لمس مربع الدردشة، لذا فإن المسودة التي تكتبها ستكون آمنة."
+   },
+   "pkOmAdet": {
+      "message": "الفاصل الزمني"
+   },
+   "pkOmAdetD": {
+      "message": "عدد الرسائل · على الأقل {1}"
+   },
+   "pkOmAdetEtiket": {
+      "message": "كل رسائل {1}"
+   },
+   "pkOmAdim1": {
+      "message": "1. اختر القناة"
+   },
+   "pkOmAdim2": {
+      "message": "2. كيف ينبغي إرسالها؟"
+   },
+   "pkOmAdim3": {
+      "message": "3. اكتب الفاصل الزمني"
+   },
+   "pkOmAdim4": {
+      "message": "4. اكتب الإعلان"
+   },
+   "pkOmAralik": {
+      "message": "إعلان الفاصل"
+   },
+   "pkOmAralikD": {
+      "message": "يرسل النصوص المدرجة بالتناوب."
+   },
+   "pkOmAyar": {
+      "message": "رسالة تلقائية"
+   },
+   "pkOmAyarD": {
+      "message": "نشر الإعلانات على فترات زمنية محددة والرد على الأوامر تلقائيًا. تم الإرسال من حسابك."
+   },
+   "pkOmBaskaKanal": {
+      "message": "أنت تقوم بتحرير {1} . يؤدي الحفظ إلى فتح نافذة الروبوت لـ {1}."
+   },
+   "pkOmBaslat": {
+      "message": "ابدأ"
+   },
+   "pkOmBaslik": {
+      "message": "رسالة تلقائية"
+   },
+   "pkOmDk": {
+      "message": "الفاصل الزمني"
+   },
+   "pkOmDkD": {
+      "message": "دقيقة · على الأقل {1}"
+   },
+   "pkOmEkle": {
+      "message": "حفظ الأمر"
+   },
+   "pkOmEksikKip": {
+      "message": "اختر كيفية إرسالها قبل الحفظ."
+   },
+   "pkOmEksikKomut": {
+      "message": "قم بإضافة أمر واحد على الأقل قبل الحفظ."
+   },
+   "pkOmEksikMetin": {
+      "message": "اكتب إعلانًا واحدًا على الأقل قبل الحفظ."
+   },
+   "pkOmKanalSecD": {
+      "message": "على أي قناة سيتم تشغيل البوت؟ يتم إدراج القنوات التي تشرف عليها وقناتك الخاصة فقط."
+   },
+   "pkOmKanalSecin": {
+      "message": "اختر قناة"
+   },
+   "pkOmKanalYok": {
+      "message": "لم يتم العثور على قنوات حيث أنت مشرف."
+   },
+   "pkOmKayitli": {
+      "message": "الأوامر المحفوظة"
+   },
+   "pkOmKipDk": {
+      "message": "بالدقائق"
+   },
+   "pkOmKipMesaj": {
+      "message": "حسب عدد الرسائل"
+   },
+   "pkOmKomut": {
+      "message": "ردود الأمر"
+   },
+   "pkOmKomutAd": {
+      "message": "الأمر"
+   },
+   "pkOmKomutAdIpucu": {
+      "message": "!اختبار"
+   },
+   "pkOmKomutCevap": {
+      "message": "الرد على هذا الأمر"
+   },
+   "pkOmKomutCevapIpucu": {
+      "message": "مرحبا!"
+   },
+   "pkOmKomutD": {
+      "message": "عندما يكتب شخص ما الأمر، يتم إرسال الرد المحفوظ."
+   },
+   "pkOmKomutIpucu": {
+      "message": "!اختبار = مرحبا! \n !discord = discord.gg/..."
+   },
+   "pkOmKomutSil": {
+      "message": "حذف"
+   },
+   "pkOmKomutYok": {
+      "message": "لم يتم حفظ أي أوامر حتى الآن."
+   },
+   "pkOmMenu": {
+      "message": "رسالة تلقائية"
+   },
+   "pkOmMetinD": {
+      "message": "إعلان واحد في كل سطر. مع عدة أسطر يتم إرسالها بالتناوب."
+   },
+   "pkOmMetinIpucu": {
+      "message": "Discord:... \n لا تنسى الاشتراك!"
+   },
+   "pkOmNerede": {
+      "message": "استخدمه من صف \"الرسالة التلقائية\" في قائمة PureKick."
+   },
+   "pkKisiOncelikliSayi": {
+      "message": "الأشخاص {1} هم الأولوية."
+   },
+   "pkKonumSagAlt": {
+      "message": "أسفل اليمين"
+   },
+   "pkKonumSagUst": {
+      "message": "أعلى اليمين"
+   },
+   "pkKonumSolAlt": {
+      "message": "أسفل اليسار"
+   },
+   "pkKonumSolUst": {
+      "message": "أعلى اليسار"
+   },
+   "pkKopyaKorumasi": {
+      "message": "بعض التدفقات محمية ضد النسخ؛ يقوم المتصفح بعد ذلك بحظر الالتقاط."
+   },
+   "pkKorumaAcikMetin": {
+      "message": "يتم حظر الإعلانات ركلة."
+   },
+   "pkKorumaKapaliMetin": {
+      "message": "تم إيقاف الحماية مؤقتًا."
+   },
+   "pkKullaniciAdi": {
+      "message": "اسم المستخدم"
+   },
+   "pkKullaniciAdiBos": {
+      "message": "اسم المستخدم (فارغ = الجميع)"
+   },
+   "pkKullaniciBul": {
+      "message": "ابحث عن مستخدم"
+   },
+   "pkKullaniciNotlari": {
+      "message": "ملاحظات المستخدم"
+   },
+   "pkKullaniciNotlariD": {
+      "message": "يحتفظ بملاحظة خاصة على بطاقة الملف الشخصي."
+   },
+   "pkKuralAdvertising": {
+      "message": "الإعلان"
+   },
+   "pkKuralBullying": {
+      "message": "البلطجة"
+   },
+   "pkKuralDoxxing": {
+      "message": "جمع المعلومات"
+   },
+   "pkKuralDrugs": {
+      "message": "المخدرات"
+   },
+   "pkKuralExtremism": {
+      "message": "التطرف"
+   },
+   "pkKuralGambling": {
+      "message": "القمار"
+   },
+   "pkKuralHarassment": {
+      "message": "التحرش"
+   },
+   "pkKuralHate": {
+      "message": "خطاب الكراهية"
+   },
+   "pkKuralHateSpeech": {
+      "message": "خطاب الكراهية"
+   },
+   "pkKuralHatefulConduct": {
+      "message": "سلوك الكراهية"
+   },
+   "pkKuralIllegal": {
+      "message": "محتوى غير قانوني"
+   },
+   "pkKuralIllegalActivity": {
+      "message": "نشاط غير قانوني"
+   },
+   "pkKuralImpersonation": {
+      "message": "انتحال الشخصية"
+   },
+   "pkKuralKabul": {
+      "message": "قبول قواعد الدردشة تلقائيًا"
+   },
+   "pkKuralKabulD": {
+      "message": "يقبل مربع حوار قواعد الدردشة لك عندما تدخل إلى قناة لها قواعد. معطل بشكل افتراضي - فهو يعمل نيابة عنك، لذا فإن تشغيله هو مكالمتك."
+   },
+   "pkKuralMisinfo": {
+      "message": "معلومات مضللة"
+   },
+   "pkKuralMisinformation": {
+      "message": "معلومات مضللة"
+   },
+   "pkKuralNudity": {
+      "message": "العري"
+   },
+   "pkKuralProfanity": {
+      "message": "الألفاظ النابية"
+   },
+   "pkKuralScam": {
+      "message": "احتيال"
+   },
+   "pkKuralSelfHarm": {
+      "message": "إيذاء النفس"
+   },
+   "pkKuralSexual": {
+      "message": "المحتوى الجنسي"
+   },
+   "pkKuralSexualContent": {
+      "message": "المحتوى الجنسي"
+   },
+   "pkKuralSpam": {
+      "message": "البريد العشوائي"
+   },
+   "pkKuralTerrorism": {
+      "message": "الإرهاب"
+   },
+   "pkKuralThreats": {
+      "message": "التهديدات"
+   },
+   "pkKuralUnderage": {
+      "message": "قاصر"
+   },
+   "pkKuralViolence": {
+      "message": "العنف"
+   },
+   "pkKuralWeapons": {
+      "message": "الأسلحة"
+   },
+   "pkKurtarilanBaslik": {
+      "message": "تم مسح الدردشة - آخر رسائل {1}"
+   },
+   "pkMBahset": {
+      "message": "اذكر هذا الشخص"
+   },
+   "pkMDaralt": {
+      "message": "طي"
+   },
+   "pkMGenislet": {
+      "message": "توسيع"
+   },
+   "pkMGizle": {
+      "message": "إخفاء هذه الرسالة"
+   },
+   "pkMKopyala": {
+      "message": "نسخ النص"
+   },
+   "pkMenuArayuz": {
+      "message": "واجهة"
+   },
+   "pkMenuKenar": {
+      "message": "الشريط الجانبي"
+   },
+   "pkMenuKullaniciKarti": {
+      "message": "بطاقة المستخدم"
+   },
+   "pkMenuSohbet": {
+      "message": "الدردشة"
+   },
+   "pkMesajEylemleri": {
+      "message": "إجراءات تمرير الرسالة"
+   },
+   "pkMesajEylemleriD": {
+      "message": "قم بتمرير رسالة للحصول على أزرار النسخ والإشارة والطابع الزمني والطي والإخفاء."
+   },
+   "pkMesajGizli": {
+      "message": "لقد قمت بإخفاء هذه الرسالة"
+   },
+   "pkMesajSayisi": {
+      "message": "رسائل {1}"
+   },
+   "pkMesajYok": {
+      "message": "لا توجد رسائل حتى الآن."
+   },
+   "pkMesajiGizle": {
+      "message": "إخفاء"
+   },
+   "pkMesajiGoster": {
+      "message": "عرض"
+   },
+   "pkMesajlar": {
+      "message": "الرسائل"
+   },
+   "pkMesajlariGoster": {
+      "message": "إظهار الرسائل"
+   },
+   "pkMesajlariniGizle": {
+      "message": "إخفاء رسائلهم"
+   },
+   "pkModBirMesajSilindi": {
+      "message": "تم حذف رسالة"
+   },
+   "pkModBos": {
+      "message": "لم يتم اتخاذ أي إجراء للإشراف منذ انضمامك إلى هذه القناة. يظهر هنا عمليات الحظر والمهلات والحذف."
+   },
+   "pkModCezaKaldirdi": {
+      "message": "قام {1} بإزالة العقوبة على {2}"
+   },
+   "pkModGunlugu": {
+      "message": "سجل الاعتدال"
+   },
+   "pkModGunluguD": {
+      "message": "الرسائل المحذوفة والحظر/المهلات والعقوبات النشطة."
+   },
+   "pkModIzle": {
+      "message": "مشاهدة أحداث الدردشة"
+   },
+   "pkModIzleD": {
+      "message": "يستمع إلى اتصال Kick الحالي؛ لم يتم فتح أي اتصال جديد."
+   },
+   "pkModOtoSilindi": {
+      "message": "تم حذف رسالة {1} بواسطة {2}"
+   },
+   "pkModSekmeOlaylar": {
+      "message": "الاعتدال"
+   },
+   "pkModSekmeSilinen": {
+      "message": "الرسائل المحذوفة"
+   },
+   "pkModSekmeSustur": {
+      "message": "المهلات"
+   },
+   "pkModSerit": {
+      "message": "شريط الإشراف في الدردشة"
+   },
+   "pkModSeritD": {
+      "message": "إضافة شريط في أعلى الدردشة؛ انقر فوقه لفتح لوحة الإشراف."
+   },
+   "pkModSilindi": {
+      "message": "تم حذف رسالة من {1}"
+   },
+   "pkModSohbetTemizlendi": {
+      "message": "تم مسح الدردشة"
+   },
+   "pkModSohbette": {
+      "message": "إظهار أحداث الإشراف في الدردشة"
+   },
+   "pkModSohbetteD": {
+      "message": "يظهر الحظر والمهلة ومسح الدردشة في دفق الدردشة. يعرض Kick هذه فقط للمشرفين."
+   },
+   "pkModSusturdu": {
+      "message": "{1} خرج بتوقيت {2} لـ {3}"
+   },
+   "pkModYasakladi": {
+      "message": "{1} تم حظر {2}"
+   },
+   "pkModerasyon": {
+      "message": "الاعتدال"
+   },
+   "pkMsjKisa": {
+      "message": "رسالة {1}"
+   },
+   "pkNot1015a": {
+      "message": "حذف الرسائل المجمعة - يزيل كل رسالة تحتوي على الكلمات التي تختارها"
+   },
+   "pkNot1015b": {
+      "message": "إعادة إنشاء الرسالة التلقائية: تظل الإعدادات لكل قناة، ونافذة الروبوت الخاصة بها، قيد التشغيل في الخلفية"
+   },
+   "pkNot1015c": {
+      "message": "يتم الآن تسجيل جميع رسائل الدردشة المتطابقة المتكررة، وكانت الإحصائيات والحذف المجمع أقل من العدد المطلوب"
+   },
+   "pkNot1015d": {
+      "message": "جولة أولى للميزات؛ أعد فتحه من القسم المتقدم"
+   },
+   "pkNot1015e": {
+      "message": "يقوم Cross-Ban الآن بكتابة القناة الأصلية ومن قام بتشغيلها في سبب الحظر"
+   },
+   "pkNot1015f": {
+      "message": "تعرض بطاقة الملف الشخصي التاريخ الدقيق الذي تابع فيه المستخدم القناة"
+   },
+   "pkNot1015g": {
+      "message": "تم إصلاح تنزيل VOD، حيث توقف بعد الجزء الأول"
+   },
+   "pkNot101a": {
+      "message": "إعلانات القائمة وشارة الإخطار"
+   },
+   "pkOmNot": {
+      "message": "يجب أن يبدأ الأمر الرسالة. يرد كل أمر مرة واحدة على الأكثر كل 10 ثوانٍ؛ رسائلك الخاصة لا تؤدي إلى أي شيء."
+   },
+   "pkOmOnayBaslik": {
+      "message": "بدء الروبوت؟"
+   },
+   "pkOmOnayGizle": {
+      "message": "لا تظهر هذا مرة أخرى"
+   },
+   "pkOmOnayKomut": {
+      "message": "تفتح نافذة الروبوت لـ {1} وتبدأ في الرد على الأوامر. إغلاق النافذة يوقف الروبوت."
+   },
+   "pkOmOnayMetin": {
+      "message": "ستبدأ الإعلانات في الخروج إلى {1} في الفترة الزمنية التي اخترتها. يعمل الروبوت في هذه النافذة؛ إغلاق علامة التبويب يوقفها."
+   },
+   "pkOmOzet": {
+      "message": "إعلانات {1} · أوامر {2}"
+   },
+   "pkOmPopoutD": {
+      "message": "يعمل الروبوت في هذه النافذة. يؤدي الحفظ إلى إغلاق الإعدادات ويستمر الروبوت في العمل؛ يؤدي إغلاق علامة التبويب إلى إيقاف الروبوت، وإعادة فتحه يستأنفه."
+   },
+   "pkOmSecAciklama": {
+      "message": "اختر قناة - تفتح نافذة الروبوت الخاصة بها وتنتهي من الإعدادات هناك. يعمل الروبوت في تلك النافذة."
+   },
+   "pkOmYetkiYok": {
+      "message": "لا يمكنك استخدام الرسائل التلقائية على هذه القناة — فأنت لست مشرفًا. اختر قناة يمكنك الوصول إليها أدناه."
+   },
+   "pkOncelikCikar": {
+      "message": "إزالة الأولوية"
+   },
+   "pkOncelikTemizleN": {
+      "message": "أولويات واضحة ({1})"
+   },
+   "pkOncelikliKisiler": {
+      "message": "الأشخاص ذوو الأولوية"
+   },
+   "pkOncelikliKisilerD": {
+      "message": "رسائلهم تحصل على علامة خضراء."
+   },
+   "pkOncelikliYap": {
+      "message": "جعل الأولوية"
+   },
+   "pkOnizleme": {
+      "message": "معاينة الشريط الجانبي"
+   },
+   "pkOnizlemeD": {
+      "message": "قم بتمرير قناة في القائمة اليسرى لفتح بطاقة صغيرة."
+   },
+   "pkOnizlemeKarti": {
+      "message": "بطاقة المعاينة"
+   },
+   "pkOnizlemeKartiD": {
+      "message": "دفق الصورة المصغرة والعنوان والفئة وعدد المشاهدين."
+   },
+   "pkOtoClaim": {
+      "message": "المطالبة بالمكافأة اليومية تلقائيا"
+   },
+   "pkOtoClaimD": {
+      "message": "يطالبك بمكافأة وقت المشاهدة اليومية من Kick بمجرد استيفاء المتطلبات. فقط تحدي وقت المشاهدة – لم يتم التطرق إلى أي شيء آخر."
+   },
+   "pkOtoSes": {
+      "message": "حجم تلقائي"
+   },
+   "pkOtoSesD": {
+      "message": "يفتح كل دفق بالحجم الذي تريده."
+   },
+   "pkOtoSesNot": {
+      "message": "يتذكر \"تلقائي\" الحجم الأخير الذي قمت بتعيينه ويطبقه على كل دفق. إذا قمت بتغيير مستوى الصوت في منتصف الدفق، فسيتم تركه بمفرده."
+   },
+   "pkOtoTiyatro": {
+      "message": "وضع المسرح التلقائي"
+   },
+   "pkOtoTiyatroD": {
+      "message": "يقوم بتوسيع المشغل مرة واحدة عند فتح القناة."
+   },
+   "pkOtomatikKalite": {
+      "message": "الجودة التلقائية"
+   },
+   "pkOtomatikKaliteD": {
+      "message": "يحدد الجودة المفضلة لديك مرة واحدة عند فتح القناة."
+   },
+   "pkOturum": {
+      "message": "جلسة"
+   },
+   "pkOturumSuresiEki": {
+      "message": "مدة الجلسة: {1}"
+   },
+   "pkOynatmaHizi": {
+      "message": "سرعة التشغيل"
+   },
+   "pkOzellikKapali": {
+      "message": "هذه الميزة متوقفة حاليًا."
+   },
+   "pkPaneliAc": {
+      "message": "افتح اللوحة"
+   },
+   "pkParcaListesi": {
+      "message": "جارٍ جلب قائمة المقاطع..."
+   },
+   "pkParcaYok": {
+      "message": "لا شرائح"
+   },
+   "pkProfilBuyuk": {
+      "message": "عرض الصورة الشخصية بحجم كبير"
+   },
+   "pkProfilKartiBilgisi": {
+      "message": "معلومات بطاقة الملف الشخصي"
+   },
+   "pkProfilKartiBilgisiD": {
+      "message": "انقر فوق شخص ما في الدردشة لرؤية سجله على البطاقة."
+   },
+   "pkProfiliAc": {
+      "message": "افتح الملف الشخصي"
+   },
+   "pkPureKick": {
+      "message": "بيور كيك مود"
+   },
+   "pkPureKickAciklama": {
+      "message": "مانع الإعلانات لـ Kick."
+   },
+   "pkRenkleriSifirla": {
+      "message": "استعادة الألوان الافتراضية"
+   },
+   "pkRolEtiket": {
+      "message": "الدور"
+   },
+   "pkRolNot": {
+      "message": "تأتي الأدوار من اتصال الدردشة الخاص بـ Kick، لذلك لا يتم التعرف إلا على الأشخاص الذين يكتبون بعد فتح الصفحة."
+   },
+   "pkRolVurgulama": {
+      "message": "تسليط الضوء على الدور"
+   },
+   "pkRolVurgulamaD": {
+      "message": "تحصل رسائل المذيع والمشرف وكبار الشخصيات والمشتركين على شريط ملون."
+   },
+   "pkRol_bot": {
+      "message": "بوت"
+   },
+   "pkRol_broadcaster": {
+      "message": "مذيع"
+   },
+   "pkRol_founder": {
+      "message": "مؤسس"
+   },
+   "pkRol_moderator": {
+      "message": "مشرف"
+   },
+   "pkRol_og": {
+      "message": "عوج"
+   },
+   "pkRol_staff": {
+      "message": "ركلة الموظفين"
+   },
+   "pkRol_sub_gifter": {
+      "message": "الموهوب الفرعي"
+   },
+   "pkRol_subscriber": {
+      "message": "المشترك"
+   },
+   "pkRol_verified": {
+      "message": "تم التحقق منه"
+   },
+   "pkRol_vip": {
+      "message": "VIP"
+   },
+   "pkSaOnce": {
+      "message": "{1} منذ ساعة"
+   },
+   "pkSabitKaldir": {
+      "message": "إزالة التثبيت"
+   },
+   "pkSabitKanalAyar": {
+      "message": "القنوات المثبتة في الأعلى"
+   },
+   "pkSabitKanalAyarD": {
+      "message": "قم بتمرير قناة في الشريط الجانبي للكشف عن دبوس. تظل القنوات المثبتة في أعلى القائمة التالية."
+   },
+   "pkSabitKanallar": {
+      "message": "تثبيت القناة"
+   },
+   "pkSabitKanallarD": {
+      "message": "احتفظ بالقنوات التي تتابعها في أعلى القائمة."
+   },
+   "pkSabitle": {
+      "message": "دبوس"
+   },
+   "pkSadeceEmote": {
+      "message": "رسائل عاطفية فقط"
+   },
+   "pkSadeceEmoteD": {
+      "message": "رسائل بدون نص على الإطلاق"
+   },
+   "pkSadeceEmoteEki": {
+      "message": "{1} رسائل تعبيرية فقط"
+   },
+   "pkSadeceEmoteMesajlari": {
+      "message": "الرسائل التعبيرية فقط"
+   },
+   "pkSadeceReklam": {
+      "message": "مانع الإعلانات فقط"
+   },
+   "pkSadeceReklamAcik": {
+      "message": "تم تفعيل حظر الإعلانات فقط. يؤدي تشغيل أي ميزة أخرى إلى ترك هذا الوضع."
+   },
+   "pkSadeceReklamBtn": {
+      "message": "تمكين"
+   },
+   "pkSadeceReklamD": {
+      "message": "يقوم بإيقاف تشغيل كل الميزات الأخرى ويحتفظ بحظر الإعلانات فقط."
+   },
+   "pkSadeceReklamRozet": {
+      "message": "نشط"
+   },
+   "pkSagTikMenusu": {
+      "message": "انقر بزر الماوس الأيمن على القائمة على المشغل"
+   },
+   "pkSagTikMenusuD": {
+      "message": "نشط فقط على الفيديو نفسه."
+   },
+   "pkSayfaReklamlari": {
+      "message": "إعلانات الصفحة"
+   },
+   "pkSayfaReklamlariD": {
+      "message": "يخفي الشرائح الإعلانية في واجهة Kick."
+   },
+   "pkScEtiket": {
+      "message": "علامة حالة الدردشة"
+   },
+   "pkScEtiketD": {
+      "message": "يظهر \"In chat\" أو \"Offline 5m\" بجوار الأسماء الموجودة في القائمة."
+   },
+   "pkScFiltre": {
+      "message": "مرشح الثرثرة"
+   },
+   "pkScFiltreD": {
+      "message": "يضيف أزرار الكل / في الدردشة / غير متصل أعلى القائمة."
+   },
+   "pkScSayac": {
+      "message": "تعزيز عدد الثرثرة"
+   },
+   "pkScSayacD": {
+      "message": "يُظهر عدد الأشخاص الذين شاهدتهم هذه الجلسة، حتى عندما يخفض Kick عدده."
+   },
+   "pkSebepYazin": {
+      "message": "اكتب السبب..."
+   },
+   "pkSebepYok": {
+      "message": "لم تقم بإضافة أي أسباب محددة مسبقا حتى الآن."
+   },
+   "pkSecili": {
+      "message": "تم تحديد {1}"
+   },
+   "pkSekmeGenel": {
+      "message": "نظرة عامة"
+   },
+   "pkSekmeHakkinda": {
+      "message": "حول"
+   },
+   "pkSekmeIci": {
+      "message": "فتح الروابط داخل الصفحة"
+   },
+   "pkSekmeIciD": {
+      "message": "YouTube وX وInstagram وReddit وKick clip وTwitch clip والروابط القابلة للبث في الدردشة المفتوحة في مشغل صغير."
+   },
+   "pkSekmeIciNot": {
+      "message": "هذه المواقع فقط هي التي تفتح بشكل مضمّن؛ يتم فتح رابط غير معروف في علامة تبويب جديدة كالمعتاد. يؤدي الضغط على CTRL+click إلى فتح علامة تبويب جديدة دائمًا."
+   },
+   "pkLinkOnizleme": {
+      "message": "بطاقات المعاينة المباشرة"
+   },
+   "pkLinkOnizlemeD": {
+      "message": "يعرض تلقائيًا بطاقات معاينة الصور المصغرة المباشرة أسفل الروابط في الدردشة."
+   },
+   "pkSendenBahsedenler": {
+      "message": "من ذكرك"
+   },
+   "pkSes": {
+      "message": "الحجم"
+   },
+   "pkSesBip": {
+      "message": "زمارة"
+   },
+   "pkSesCinlama": {
+      "message": "الرنين"
+   },
+   "pkSesDamla": {
+      "message": "إسقاط"
+   },
+   "pkSesKapali": {
+      "message": "إيقاف"
+   },
+   "pkSesOto": {
+      "message": "تلقائي"
+   },
+   "pkSesPuf": {
+      "message": "نفخة"
+   },
+   "pkSifirdan": {
+      "message": "من الصفر"
+   },
+   "pkSifirdanD": {
+      "message": "يتم حذف كل شيء الحالي واستبداله بالملف."
+   },
+   "pkSilAciklama": {
+      "message": "يتم حذف الرسائل التي تحتوي على مشغل؛ لا أحد انتهت مهلة. يتم تخطي رسائل المذيع والمشرفين ورسائلك الخاصة."
+   },
+   "pkSilAyar": {
+      "message": "حذف الرسائل الجماعية"
+   },
+   "pkSilAyarD": {
+      "message": "حذف الرسائل التي تحتوي على الكلمات أو العبارات التي تختارها. أثناء التشغيل، يظهر صف \"حذف الرسائل المجمعة\" في قائمة PureKick."
+   },
+   "pkSilBaslik": {
+      "message": "حذف الرسائل الجماعية"
+   },
+   "pkSilGecmis": {
+      "message": "تنطبق على الرسائل حتى الآن"
+   },
+   "pkSilMenu": {
+      "message": "حذف الرسائل الجماعية"
+   },
+   "pkSilNerede": {
+      "message": "يُستخدم من صف \"حذف الرسائل المجمعة\" في قائمة PureKick."
+   },
+   "pkSilNot": {
+      "message": "يمكنك إغلاق هذه النافذة أثناء تشغيل المشاهدة المباشرة؛ يتوقف عند مغادرة القناة أو إيقاف الإعداد. يغطي فحص السجل فقط الرسائل التي تمت مشاهدتها في هذه الجلسة."
+   },
+   "pkSilSayac": {
+      "message": "محذوف: {1}"
+   },
+   "pkSilTetikD": {
+      "message": "كلمة أو عبارة واحدة في كل سطر. التقسيم حسب السطر لأن العبارة يمكن أن تحتوي على فواصل."
+   },
+   "pkSilYetkiYok": {
+      "message": "لا يمكنك استخدام الحذف المجمع على هذه القناة، فأنت لست مشرفًا."
+   },
+   "pkSilindiEtiket": {
+      "message": "(محذوف)"
+   },
+   "pkSilinenGoster": {
+      "message": "إظهار الرسائل المحذوفة"
+   },
+   "pkSilinenGosterD": {
+      "message": "تظل الرسائل المحذوفة مرئية ومعتمة ومُحددة بعلامة \"(محذوفة)\"."
+   },
+   "pkSilinenYok": {
+      "message": "لا توجد رسائل محذوفة حتى الآن."
+   },
+   "pkSohbetCikarildi": {
+      "message": "تمت إزالتها من الدردشة التي شاهدتها في هذه الجلسة؛ لا توجد بيانات تترك جهازك."
+   },
+   "pkSohbetEdenler": {
+      "message": "الثرثرة"
+   },
+   "pkSohbetIstatistikleri": {
+      "message": "إحصائيات الدردشة"
+   },
+   "pkSohbetIstatistikleriBaslik": {
+      "message": "إحصائيات الدردشة"
+   },
+   "pkSohbetIstatistikleriD": {
+      "message": "الرسائل/الدقيقة، المحادثات الأكثر نشاطًا، استخدام الرموز التعبيرية."
+   },
+   "pkSohbetKaydi": {
+      "message": "سجل الدردشة"
+   },
+   "pkSohbetciIpucu": {
+      "message": "ركلة: {1} · رأى PureKick أشخاص {2} في هذه الجلسة"
+   },
+   "pkSohbetciListesi": {
+      "message": "قائمة الدردشة"
+   },
+   "pkSohbetciListesiD": {
+      "message": "الميزات تضيف PureKick إلى قائمة مشاهدي Kick."
+   },
+   "pkSohbette": {
+      "message": "في الدردشة"
+   },
+   "pkSonGuncellemeEki": {
+      "message": "التحديث الأخير: {1}"
+   },
+   "pkSonMesajiIpucu": {
+      "message": "الرسالة الأخيرة: {1} · إجمالي الرسائل {2}"
+   },
+   "pkSonMesajlar": {
+      "message": "الرسائل الأخيرة"
+   },
+   "pkSonucSayisiN": {
+      "message": "نتيجة (نتائج) {1}"
+   },
+   "pkSonucYok": {
+      "message": "لا توجد نتائج."
+   },
+   "pkSsAyarlari": {
+      "message": "سلوك لقطة الشاشة"
+   },
+   "pkSsBirincil": {
+      "message": "نقرة عادية"
+   },
+   "pkSsIkincil": {
+      "message": "السيطرة + النقر"
+   },
+   "pkSsIndir": {
+      "message": "تحميل إلى ملف"
+   },
+   "pkNot101911b": {
+      "message": "عامل IVS يعمل بشكل جيد ويسهل عملية إنشاء القنوات"
+   },
+   "pkNot101911c": {
+      "message": "إعلانات HLS الإعلانية وKick kaynaklı DNR reklam kuralları iileştirildi"
+   },
+   "pkNot101911d": {
+      "message": "يمكنك الوصول إلى مواقع الويب الخاصة بك بشكل عام عبر الإنترنت"
+   },
+   "pkNot101914a": {
+      "message": "يتم الآن فصل أرشيفات الدردشة حسب القناة؛ تم تحسين السجلات اليومية والاحتفاظ بنص الرسائل المحذوفة."
+   },
+   "pkNot101914b": {
+      "message": "تم إصلاح رؤية القناة التي تتم متابعتها عبر الإنترنت/دون الاتصال بالإنترنت والحد الأقصى لعدد القنوات."
+   },
+   "pkNot101914c": {
+      "message": "تم إصلاح معاينات الارتباط وعناوين تمرير القناة ونطاق صفحة بطاقة الملف الشخصي."
+   },
+   "pkNot101914d": {
+      "message": "تم تحسين إبراز دور المشترك وسجلات مؤيدي KICKS الموهوبين."
+   },
+   "pkNot101914e": {
+      "message": "تدعم أوامر المقطع الصوتي الآن 15 لغة، ومقياس مستوى الميكروفون، وشارة اللاعب."
+   },
+   "pkNot101914f": {
+      "message": "تم تحسين تبديل اختصارات المقطع والترميز/الجودة الاحتياطية وتسميات أسماء ملفات التسجيل الصامت."
+   },
+   "pkNot101912a": {
+      "message": "Kick sayfasındaki PureKick Mod simgesi وyeşil böcek rozeti güncellendi"
+   },
+   "pkNot101912b": {
+      "message": "Araç çubuğu, sohbet ayarları, yönetim Panels and Profile önizlemesindeki ürün and simge tutarlı hale getirildi"
+   },
+   "pkTYetkiKismi": {
+      "message": "فشل تغيير دور {1}"
+   },
+   "pkTakipKelime": {
+      "message": "الكلمات المتعقبة"
+   },
+   "pkTakipKelimeD": {
+      "message": "يتتبع هذه الكلمات بجانب اسمك. مفصولة بفاصلة."
+   },
+   "pkTakipKelimeOrnek": {
+      "message": "الهبة، رمز، الخادم"
+   },
+   "pkTakipciEki": {
+      "message": "متابعين {1}"
+   },
+   "pkTakipciSayisi": {
+      "message": "المتابعون"
+   },
+   "pkTamEkranSon": {
+      "message": "زر ملء الشاشة أخيرًا"
+   },
+   "pkTamEkranSonD": {
+      "message": "ينقل زر ملء الشاشة الخاص بـ Kick إلى أقصى يمين الشريط."
+   },
+   "pkTanArac": {
+      "message": "أدوات المشرف"
+   },
+   "pkTanAracD": {
+      "message": "يتم إيقاف تشغيل هذه العناصر — فهي تعمل في الدردشة نيابةً عنك، لذا فإن تشغيلها هو مكالمتك. يمكنك العثور عليها ضمن قائمة PureKick ›الاعتدال."
+   },
+   "pkTanBaslik": {
+      "message": "جولة"
+   },
+   "pkTanBaslikD": {
+      "message": "يستعرض ما يمكن أن تفعله PureKick، صفحة تلو الأخرى."
+   },
+   "pkTanBitir": {
+      "message": "ابدأ"
+   },
+   "pkTanGoster": {
+      "message": "عرض الجولة"
+   },
+   "pkTanHos": {
+      "message": "مرحبا بكم في PureKick"
+   },
+   "pkTanHosD": {
+      "message": "مجموعة أدوات لمشاهدة Kick بدون إعلانات وتشغيل الدردشة. معظم الميزات الواردة أدناه قيد التشغيل بالفعل، ولا تحتاج إلى القيام بأي شيء. استخدم التالي في أسفل اليمين للنظر فيها."
+   },
+   "pkTanKart": {
+      "message": "بطاقة الملف الشخصي"
+   },
+   "pkTanKartD": {
+      "message": "البطاقة التي تحصل عليها عند النقر على اسم في الدردشة."
+   },
+   "pkTanKenar": {
+      "message": "الشريط الجانبي"
+   },
+   "pkTanKenarD": {
+      "message": "القائمة التالية وصفحة القناة."
+   },
+   "pkTanListe": {
+      "message": "قائمة الدردشة"
+   },
+   "pkTanListeD": {
+      "message": "تمت إضافته إلى قائمة مشاهدي Kick."
+   },
+   "pkTanMod": {
+      "message": "الاعتدال"
+   },
+   "pkTanModD": {
+      "message": "تصبح الرسائل المحذوفة والحظر والمهلة مرئية."
+   },
+   "pkTanReklam": {
+      "message": "إعلانات"
+   },
+   "pkTanReklamD": {
+      "message": "أي شيء تقوم بإيقاف تشغيله يصبح ساري المفعول على الفور."
+   },
+   "pkTanSohbet": {
+      "message": "الدردشة"
+   },
+   "pkTanSohbetD": {
+      "message": "عليك أن تقرر من يبرز ومن لا تراه."
+   },
+   "pkTanSon": {
+      "message": "لقد انتهيت"
+   },
+   "pkTanSonD": {
+      "message": "يوجد كل إعداد في زر PK أسفل الدردشة. يمكنك إعادة فتح هذه الجولة من القسم المتقدم."
+   },
+   "pkTanVideo": {
+      "message": "فيديو ومشغل"
+   },
+   "pkTanVideoD": {
+      "message": "تمت إضافته إلى شريط اللاعب."
+   },
+   "pkTemaAciklama": {
+      "message": "يغير لون واجهة Kick."
+   },
+   "pkTemaKickYesili": {
+      "message": "ركلة خضراء"
+   },
+   "pkTemaKirmizi": {
+      "message": "أحمر"
+   },
+   "pkTemaMavi": {
+      "message": "أزرق"
+   },
+   "pkTemaMor": {
+      "message": "أرجواني"
+   },
+   "pkTemaPembe": {
+      "message": "وردي"
+   },
+   "pkTemaSari": {
+      "message": "أصفر"
+   },
+   "pkTemaTurkuaz": {
+      "message": "سماوي"
+   },
+   "pkTemaTuruncu": {
+      "message": "برتقالي"
+   },
+   "pkTemizlemeKoru": {
+      "message": "احتفظ بالرسائل عندما يتم مسح الدردشة"
+   },
+   "pkTemizlemeKoruD": {
+      "message": "إذا قام أحد المشرفين بمسح الدردشة، فستبقى الرسائل الأخيرة في مربع منفصل."
+   },
+   "pkTemizlenenAlan": {
+      "message": "تم تنظيف الشرائح الإعلانية"
+   },
+   "pkTiyatroNav": {
+      "message": "الشريط العلوي في وضع المسرح"
+   },
+   "pkTiyatroNavD": {
+      "message": "حرك المؤشر إلى الأعلى وسيعود شريط التنقل؛ لا حاجة لترك الوضع."
+   },
+   "pkTiyatroyaAl": {
+      "message": "أدخل وضع المسرح عند الانضمام"
+   },
+   "pkTiyatroyaAlD": {
+      "message": "يتركها بمفردها إذا كانت واسعة بالفعل؛ محاولة واحدة لكل قناة."
+   },
+   "pkToAciklama": {
+      "message": "تنتهي مهلة كل من يكتب عبارة تشغيل للمدة التي تختارها. تم تخطي المذيع والمشرفين وأنت؛ يتم التعامل مع كل شخص مرة واحدة."
+   },
+   "pkToAyar": {
+      "message": "مهلة بالجملة"
+   },
+   "pkToAyarD": {
+      "message": "يقوم تلقائيًا بإنهاء أي شخص يكتب كلمة أو عبارة تختارها. عند التشغيل، يظهر صف \"المهلة المجمعة\" في قائمة PureKick."
+   },
+   "pkToBaslat": {
+      "message": "ابدأ المشاهدة المباشرة"
+   },
+   "pkToBaslik": {
+      "message": "مهلة بالجملة"
+   },
+   "pkToDurdur": {
+      "message": "إيقاف المشاهدة المباشرة"
+   },
+   "pkToGecmis": {
+      "message": "تنطبق على الرسائل حتى الآن"
+   },
+   "pkToMenu": {
+      "message": "مهلة بالجملة"
+   },
+   "pkToNerede": {
+      "message": "استخدمه من صف \"المهلة المجمعة\" في قائمة PureKick."
+   },
+   "pkToNot": {
+      "message": "يمكنك إغلاق هذه النافذة أثناء تشغيل المشاهدة المباشرة؛ يتوقف عند مغادرة القناة أو إيقاف الإعداد."
+   },
+   "pkToSayac": {
+      "message": "انتهت المهلة: {1}"
+   },
+   "pkToSure": {
+      "message": "مدة المهلة"
+   },
+   "pkToSureD": {
+      "message": "نفس القائمة مثل المهلة السريعة. قم بتغييره ضمن الإشراف ›بطاقة المستخدم."
+   },
+   "pkToTamKelime": {
+      "message": "مطابقة الكلمة الكاملة"
+   },
+   "pkToTamKelimeD": {
+      "message": "في وضع التشغيل، يتطابق \"الرمز\" ولكن \"الترميز\" لا يتطابق. متوقف، أي رسالة تحتوي على النص متطابقة."
+   },
+   "pkToTetik": {
+      "message": "عبارات الزناد"
+   },
+   "pkToTetikD": {
+      "message": "كلمة أو عبارة واحدة في كل سطر. التقسيم حسب السطر لأن العبارة قد تحتوي على فواصل."
+   },
+   "pkSsPano": {
+      "message": "نسخ إلى الحافظة"
+   },
+   "pkSure": {
+      "message": "المدة"
+   },
+   "pkSureDakika": {
+      "message": "دقيقة {1}"
+   },
+   "pkSureDakika1": {
+      "message": "1 دقيقة"
+   },
+   "pkSureGun": {
+      "message": "{1} أيام"
+   },
+   "pkSureGun1": {
+      "message": "يوم واحد"
+   },
+   "pkSureSaat": {
+      "message": "ساعات {1}"
+   },
+   "pkSureSaat1": {
+      "message": "1 ساعة"
+   },
+   "pkSureSaniye": {
+      "message": "{1} ثانية"
+   },
+   "pkSureSaniye1": {
+      "message": "1 ثانية"
+   },
+   "pkSureSecenek": {
+      "message": "خيارات المدة"
+   },
+   "pkSureSecenekD": {
+      "message": "يتم عرض المدد عند النقر على الساعة الرملية بجوار رسالة الدردشة. بالدقائق، مفصولة بفاصلة (1440 = يوم واحد)."
+   },
+   "pkSurumEki": {
+      "message": "الإصدار {1}"
+   },
+   "pkSurumNotlari": {
+      "message": "ملاحظات الإصدار"
+   },
+   "pkSurumNotlariD": {
+      "message": "ما تغير في كل نسخة."
+   },
+   "pkSusturmaBitis": {
+      "message": "ينتهي: {1}"
+   },
+   "pkTAcikMenuKapat": {
+      "message": "أغلق القائمة المفتوحة أولاً"
+   },
+   "pkTAyarlarIndirildi": {
+      "message": "تم تصدير الإعدادات"
+   },
+   "pkTBaglantiKopyalandi": {
+      "message": "تم نسخ الرابط إلى الحافظة"
+   },
+   "pkTCrossAdGir": {
+      "message": "أدخل اسم مستخدم واحد على الأقل"
+   },
+   "pkTCrossKanalSec": {
+      "message": "حدد قناة واحدة على الأقل"
+   },
+   "pkTGizlenenlerTemiz": {
+      "message": "تم مسح الأشخاص المخفيين"
+   },
+   "pkTGoruntuHazirDegil": {
+      "message": "الصورة ليست جاهزة"
+   },
+   "pkTIndirmeDesteklenmiyor": {
+      "message": "لا يمكن لهذا المتصفح الكتابة إلى ملف"
+   },
+   "pkTIndirmeSuruyor": {
+      "message": "التنزيل قيد التشغيل بالفعل"
+   },
+   "pkTKaldiginYer": {
+      "message": "حيث توقفت: {1}"
+   },
+   "pkTKaliteMenusuAcilmadi": {
+      "message": "لم يتم فتح قائمة الجودة"
+   },
+   "pkTKaliteMenusuYok": {
+      "message": "لم يتم العثور على قائمة جودة المشغل"
+   },
+   "pkTKaliteOynaticiya": {
+      "message": "الجودة تركت للاعب"
+   },
+   "pkTKaliteYok": {
+      "message": "{1} غير متوفر في هذا الدفق"
+   },
+   "pkTKanalEngelKalkti": {
+      "message": "لم يعد {1} مخفيًا"
+   },
+   "pkTKanalGizlemeKalkti": {
+      "message": "القناة عادت للظهور من جديد"
+   },
+   "pkTKanalGizlendi": {
+      "message": "القناة مخفية"
+   },
+   "pkTKartAcilamadi": {
+      "message": "تعذر فتح البطاقة — تحتاج الدردشة إلى رسالة واحدة على الأقل"
+   },
+   "pkTKartSabitlendi": {
+      "message": "البطاقة مثبتة — يمكنك سحبها"
+   },
+   "pkTKategoriGizlendi": {
+      "message": "الفئة مخفية"
+   },
+   "pkTKategoriGorunur": {
+      "message": "الفئة مرئية مرة أخرى"
+   },
+   "pkTKayitNoktalariTemiz": {
+      "message": "تم مسح المواقف المحفوظة"
+   },
+   "pkTKelimeKaydedildi": {
+      "message": "الكلمات المتعقبة المحفوظة"
+   },
+   "pkTKisiGizlendi": {
+      "message": "الرسائل من {1} مخفية"
+   },
+   "pkTKisiGorunur": {
+      "message": "{1} مرئي مرة أخرى"
+   },
+   "pkTKisiOncelikli": {
+      "message": "{1} هي الأولوية الآن"
+   },
+   "pkTKisiSohbetteYok": {
+      "message": "لا توجد رسالة مرئية من هذا الشخص تبقى في الدردشة"
+   },
+   "pkTKomutYazildi": {
+      "message": "تم كتابة الأمر في مربع الدردشة"
+   },
+   "pkTKopyalanamadi": {
+      "message": "لا يمكن نسخ النص"
+   },
+   "pkTKopyalandi": {
+      "message": "تم نسخ النص إلى الحافظة"
+   },
+   "pkTKorumaAcildi": {
+      "message": "تشغيل الحماية"
+   },
+   "pkTKorumaDuraklatildi": {
+      "message": "توقفت الحماية مؤقتًا"
+   },
+   "pkTKullaniciBulunamadi": {
+      "message": "لم يتم العثور على مثل هذا المستخدم"
+   },
+   "pkTMesajlarGeriGeldi": {
+      "message": "لقد عادت الرسائل المخفية"
+   },
+   "pkTModGunluguKapali": {
+      "message": "سجل الإشراف معطل"
+   },
+   "pkTOdulAlindi": {
+      "message": "🎉 المطالبة بالمكافأة اليومية"
+   },
+   "pkTOmKaydedildi": {
+      "message": "تم حفظ إعدادات الرسائل التلقائية"
+   },
+   "pkTOmKomutBosluk": {
+      "message": "لا يمكن أن يحتوي الأمر على مسافات"
+   },
+   "pkTOmKomutEklendi": {
+      "message": "تم حفظ الأمر"
+   },
+   "pkTOmKomutEksik": {
+      "message": "أدخل كلاً من الأمر والرد الخاص به"
+   },
+   "pkTOmKomutGuncellendi": {
+      "message": "تم تحديث رد الأمر"
+   },
+   "pkTOmPencereAcildi": {
+      "message": "تم فتح نافذة الروبوت لـ {1}"
+   },
+   "pkTOncelikKalkti": {
+      "message": "تمت إزالة الأولوية من {1}"
+   },
+   "pkTOnceliklerTemiz": {
+      "message": "تم مسح الأولويات"
+   },
+   "pkTOturumGeriYuklendi": {
+      "message": "تمت استعادة الجلسة السابقة"
+   },
+   "pkTOynaticiYok": {
+      "message": "لم يتم العثور على اللاعب"
+   },
+   "pkTOynaticiYokNokta": {
+      "message": "لم يتم العثور على اللاعب."
+   },
+   "pkTOzellikAcildi": {
+      "message": "تم تشغيل {1}"
+   },
+   "pkTOzellikKapatildi": {
+      "message": "تم إيقاف تشغيل {1}"
+   },
+   "pkTPanoDesteklenmiyor": {
+      "message": "لا يمكن لهذا المتصفح نسخ الصور، بل يتم تنزيلها بدلاً من ذلك"
+   },
+   "pkTRenklerSifirlandi": {
+      "message": "إعادة تعيين ألوان الدور"
+   },
+   "pkTSadeceReklam": {
+      "message": "تم تمكين مانع الإعلانات فقط"
+   },
+   "pkTSeritYok": {
+      "message": "تم إغلاق عناصر التحكم في لاعب Kick في الوقت الحالي. قم بتحريك المشغل وحاول مرة أخرى."
+   },
+   "pkTSifirlanamadi": {
+      "message": "فشلت إعادة التعيين"
+   },
+   "pkTSifirlandi": {
+      "message": "إعادة ضبط كل شيء، وإعادة تحميل الصفحة"
+   },
+   "pkTSilBasladi": {
+      "message": "تشغيل المشاهدة المباشرة - مشغلات {1}"
+   },
+   "pkTSilDurdu": {
+      "message": "توقفت المشاهدة المباشرة"
+   },
+   "pkTSilEslesmeYok": {
+      "message": "لا توجد رسائل مطابقة"
+   },
+   "pkTSohbetAlaniYok": {
+      "message": "لم يتم العثور على منطقة الدردشة"
+   },
+   "pkTSohbetKutusuYok": {
+      "message": "لم يتم العثور على مربع الدردشة"
+   },
+   "pkTSsAlinamadi": {
+      "message": "فشلت لقطة الشاشة"
+   },
+   "pkTSsKaydedildi": {
+      "message": "تم حفظ لقطة الشاشة"
+   },
+   "pkTSsPanoya": {
+      "message": "تم نسخ لقطة الشاشة إلى الحافظة"
+   },
+   "pkTSsYasak": {
+      "message": "لقطات الشاشة غير ممكنة في هذا الدفق"
+   },
+   "pkTSureKaydedildi": {
+      "message": "تم حفظ خيارات المدة"
+   },
+   "pkTSusturmaHata": {
+      "message": "فشل انتهاء المهلة ({1})"
+   },
+   "pkTSusturuldu": {
+      "message": "انتهت مهلة {1} لـ {2}"
+   },
+   "pkTTemaKaydedildi": {
+      "message": "تم حفظ لون الموضوع"
+   },
+   "pkTTemaVarsayilan": {
+      "message": "تمت استعادة الموضوع إلى الوضع الافتراضي"
+   },
+   "pkTToBasladi": {
+      "message": "تشغيل المشاهدة المباشرة — مشغلات {1}"
+   },
+   "pkTToDurdu": {
+      "message": "توقفت المشاهدة المباشرة"
+   },
+   "pkTToEslesmeYok": {
+      "message": "لا أحد متطابق"
+   },
+   "pkTToTetikGir": {
+      "message": "أدخل عبارة تشغيل واحدة على الأقل"
+   },
+   "pkTVodIndirildi": {
+      "message": "تم تنزيل البث السابق"
+   },
+   "pkTYedekAlinamadi": {
+      "message": "فشل النسخ الاحتياطي"
+   },
+   "pkTYedekCokBuyuk": {
+      "message": "الملف كبير جدًا"
+   },
+   "pkTYedekOkunamadi": {
+      "message": "لا يمكن قراءة الملف"
+   },
+   "pkTYedekUygulanamadi": {
+      "message": "لا يمكن تحميل الإعدادات"
+   },
+   "pkTYedekUygulandi": {
+      "message": "تم تحميل الإعدادات، إعادة تحميل الصفحة"
+   },
+   "pkTYetkiKaydedildi": {
+      "message": "تم تحديث الأدوار"
+   },
+   "pkToTetikIpucu": {
+      "message": "الركلات الحرة \n Follow4follow \n تحقق من سيرتي الذاتية"
+   },
+   "pkTumu": {
+      "message": "الكل"
+   },
+   "pkUyarHiz": {
+      "message": "سرعة التكيف"
+   },
+   "pkUyarHizD": {
+      "message": "عندما تتخلف عن البث المباشر، فإنه يتسارع لسد الفجوة."
+   },
+   "pkUyarHizNot": {
+      "message": "الصورة لا تقفز أبدًا: لم يتم تغيير الموضع، فقط السرعة تصل إلى 1.25x وتعود إلى 1x عند الحافة."
+   },
+   "pkVeriYok": {
+      "message": "لا توجد بيانات حتى الآن."
+   },
+   "pkVideoBilgisiD": {
+      "message": "يفتح من الزر الموجود على شريط المشغل."
+   },
+   "pkVideoIstatistikleri": {
+      "message": "إحصائيات الفيديو"
+   },
+   "pkVideoIstatistikleriD": {
+      "message": "الدقة، FPS، معدل البت، الإطارات المسقطة، المخزن المؤقت."
+   },
+   "pkVideoReklamlari": {
+      "message": "إعلانات الفيديو"
+   },
+   "pkVideoReklamlariD": {
+      "message": "يحظر إعلانات ما قبل التشغيل وأثناء التشغيل."
+   },
+   "pkVideonunYuzdesi": {
+      "message": "النسبة المئوية للفيديو"
+   },
+   "pkVodIndir": {
+      "message": "قم بتنزيل هذا البث الماضي"
+   },
+   "pkVodIndirBaslik": {
+      "message": "تحميل البث الماضي"
+   },
+   "pkVodIndirKisa": {
+      "message": "تنزيل VOD"
+   },
+   "pkVodIndirNot": {
+      "message": "تتم كتابة الدفق إلى مقطع القرص بمقطع؛ تظل ذاكرة علامة التبويب مجانية."
+   },
+   "pkVodReklamlari": {
+      "message": "إعلانات الفيديو حسب الطلب"
+   },
+   "pkVodReklamlariD": {
+      "message": "تخطي الإعلان في بداية عمليات البث الماضية."
+   },
+   "pkVodTsNotN": {
+      "message": "يتم حفظ الملف بصيغة .ts (يقوم VLC/MPV بتشغيله). طول الدفق {1} دقيقة."
+   },
+   "pkVsAg": {
+      "message": "حالة الشبكة"
+   },
+   "pkVsBitHizi": {
+      "message": "معدل البت"
+   },
+   "pkVsCanliUzaklik": {
+      "message": "خلف حي"
+   },
+   "pkVsCozunurluk": {
+      "message": "القرار"
+   },
+   "pkVsDuraklatildi": {
+      "message": "متوقف مؤقتًا"
+   },
+   "pkVsDusenKare": {
+      "message": "الإطارات المسقطة"
+   },
+   "pkVsHazir": {
+      "message": "حالة الاستعداد"
+   },
+   "pkVsKonum": {
+      "message": "الموقف"
+   },
+   "pkVsTampon": {
+      "message": "المخزن المؤقت"
+   },
+   "pkVurguMuaf": {
+      "message": "مستبعد من تسليط الضوء"
+   },
+   "pkVurguMuafD": {
+      "message": "الأشخاص المدرجون هنا لا يحصلون على شريط ملون مهما كان دورهم."
+   },
+   "pkWebSitesi": {
+      "message": "موقع الكتروني"
+   },
+   "pkYanSohbet": {
+      "message": "اسحب الدردشة الجانبية"
+   },
+   "pkYanSohbetD": {
+      "message": "يتيح لك تحريك مربع الدردشة المنبثق باستخدام الماوس."
+   },
+   "pkYanit": {
+      "message": "الردود"
+   },
+   "pkYanitD": {
+      "message": "رسائل الرد على رسالة أخرى"
+   },
+   "pkYanitlarBaslik": {
+      "message": "الردود"
+   },
+   "pkYaziliyor": {
+      "message": "الكتابة…"
+   },
+   "pkYedekBos": {
+      "message": "لا يحتوي الملف على إعدادات لتطبيقها"
+   },
+   "pkYedekBozuk": {
+      "message": "هذا الملف غير صالح بتنسيق JSON"
+   },
+   "pkYedekNot": {
+      "message": "تحتوي النسخة الاحتياطية على الإعدادات والملاحظات والقنوات المخفية والأشخاص والمرشحات ونقاط الحفظ."
+   },
+   "pkYedekOzet": {
+      "message": "يحتوي الملف على قسم (أقسام) {1} · {2}"
+   },
+   "pkYedekYabanci": {
+      "message": "هذا الملف ليس نسخة احتياطية لـ PureKick"
+   },
+   "pkYeniSekmedeAc": {
+      "message": "افتح في علامة تبويب جديدة ↗"
+   },
+   "pkYenilik": {
+      "message": "الجديد في هذا الإصدار"
+   },
+   "pkYetkiAciklama": {
+      "message": "منح أو إزالة VIP وOG والمشرف في هذه القناة. يتم عرضه فقط في قناتك الخاصة."
+   },
+   "pkYetkiBaslik": {
+      "message": "{1} · الأدوار"
+   },
+   "pkYetkiDugme": {
+      "message": "تحرير الأدوار"
+   },
+   "pkYetkiMod": {
+      "message": "مشرف"
+   },
+   "pkYetkiOg": {
+      "message": "عوج"
+   },
+   "pkYetkiOkunamadi": {
+      "message": "لا يمكن قراءة الأدوار."
+   },
+   "pkYetkiVip": {
+      "message": "VIP"
+   },
+   "pkYildir": {
+      "message": "لـ {1} سنة (سنوات)"
+   },
+   "pkYonetimPaneli": {
+      "message": "لوحة التحكم بيور كيك"
+   },
+   "pkYorumDengeli": {
+      "message": "العواطف والنص متوازنة"
+   },
+   "pkYorumEmoteCok": {
+      "message": "معظم الرسائل عاطفية فقط"
+   },
+   "pkYorumEmoteFazla": {
+      "message": "عواطف أكثر من النص"
+   },
+   "pkYorumHizli": {
+      "message": "الدردشة تتحرك بسرعة"
+   },
+   "pkYorumVeriYok": {
+      "message": "هناك حاجة إلى مزيد من البيانات قبل أي تعليق. هذا يملأ مع تدفقات الدردشة."
+   },
+   "pkYorumZirve": {
+      "message": "أكثر الدقائق ازدحاما {1}"
+   },
+   "pkYukseklik": {
+      "message": "الارتفاع"
+   },
+   "pkYuzde": {
+      "message": "نسبة مئوية"
+   },
+   "pkZamanAsimi": {
+      "message": "انتهت المهلة"
+   },
+   "pkZirveDakika": {
+      "message": "{1} - رسائل {2} في تلك الدقيقة"
+   },
+   "popupBadges": {
+      "message": "شارات"
+   },
+   "startBtn": {
+      "message": "ابدأ الحماية"
+   },
+   "statusActive": {
+      "message": "تيار خالي من الإعلانات نشط"
+   },
+   "statusPaused": {
+      "message": "الحماية متوقفة مؤقتا"
+   },
+   "themeColor": {
+      "message": "لون الموضوع"
+   },
+   "themeReset": {
+      "message": "إعادة تعيين (الركلة الافتراضية)"
+   },
+   "pkFiltreAra": {
+      "message": "البحث في الدردشة..."
+   },
+   "pkSohbetFiltre": {
+      "message": "بحث الدردشة والتصفية"
+   },
+   "pkCokluYayin": {
+      "message": "متعدد الدفق"
+   },
+   "pkKlipAl": {
+      "message": "التقاط مقطع مباشر"
+   },
+   "pkSohbetTts": {
+      "message": "تحويل النص إلى كلام (TTS) في الدردشة"
+   },
+   "pkEmoteSpamFiltre": {
+      "message": "Emote البريد العشوائي المكثف"
+   },
+   "pkIzlemeSureTakip": {
+      "message": "مشاهدة تتبع الوقت"
+   },
+   "pkKanalNotlari": {
+      "message": "ملاحظات القناة"
+   },
+   "pkYayinBildirim": {
+      "message": "دفق الإخطارات الحية"
+   },
+   "pkIzlemeSureleriBaslik": {
+      "message": "شاهد الوقت"
+   },
+   "pkSohbetCeviri": {
+      "message": "ترجمة الدردشة الحية"
+   },
+   "pkAcik": {
+      "message": "على"
+   },
+   "pkNot101910a": {
+      "message": "Sohbet arşivi kalıcı IndexedDB deposuna taşındı; الاعتدال والرسالة الهادئة kayıtları iyileştirildi"
+   },
+   "pkNot101910b": {
+      "message": "Instagram وX/Twitter وKick وTikTok والعديد من الميزات الرائعة الأخرى"
+   },
+   "pkNot101910c": {
+      "message": "لقد تم بالفعل، إعلان HLS عن الإعلانات وإلغاء الاشتراكات التي تم إجراؤها بواسطة Düzeltildi"
+   },
+   "pkNot101911a": {
+      "message": "PureKick Mod يمكنك من إضافة المزيد من العناصر الإلكترونية المتماثلة"
+   },
+   "pkInterfaceLanguage": {
+      "message": "لغة الواجهة"
+   },
+   "pkInterfaceLanguageD": {
+      "message": "اختر لغة لتطبيق PureKick Mod. يتبع تلقائي لغة المتصفح."
+   },
+   "pkSupportTitle": {
+      "message": "الدعم وتقارير الأخطاء"
+   },
+   "pkSupportDesc": {
+      "message": "أرسل تقرير خطأ أو طلب ميزة من خلال GitHub. تتبع الطلبات المفتوحة والمكتملة هنا."
+   },
+   "pkSupportLogin": {
+      "message": "يكتمل الإرسال على GitHub ويتطلب تسجيل الدخول إلى GitHub. لا تضيف الإضافة اسم المستخدم أو البريد الإلكتروني إلى البلاغ. لم يتم إعداد خادم وسيط للإرسال المجهول دون تسجيل الدخول بعد。"
+   },
+   "pkSupportBug": {
+      "message": "الإبلاغ عن خطأ"
+   },
+   "pkSupportFeature": {
+      "message": "اطلب ميزة"
+   },
+   "pkSupportQuestion": {
+      "message": "اطلب المساعدة"
+   },
+   "pkSupportTitlePlaceholder": {
+      "message": "عنوان قصير"
+   },
+   "pkSupportBodyPlaceholder": {
+      "message": "وصف الخطوات والنتيجة المتوقعة والنتيجة الفعلية. لا تقم بتضمين معلومات خاصة."
+   },
+   "pkSupportSend": {
+      "message": "تابع على جيثب"
+   },
+   "pkSupportRequired": {
+      "message": "أدخل عنوانا ووصفا."
+   },
+   "pkSupportIssues": {
+      "message": "طلبات المجتمع"
+   },
+   "pkSupportStatusHelp": {
+      "message": "تأتي الحالة من حالة GitHub المفتوحة/المغلقة وتسميات التخطيط."
+   },
+   "pkSupportLoading": {
+      "message": "جارٍ تحميل طلبات GitHub..."
+   },
+   "pkSupportEmpty": {
+      "message": "لا توجد طلبات عامة حتى الآن."
+   },
+   "pkSupportClosed": {
+      "message": "تم الحل"
+   },
+   "pkSupportPlanned": {
+      "message": "المخطط لها"
+   },
+   "pkSupportWaiting": {
+      "message": "في انتظار"
+   },
+   "pkSupportOpen": {
+      "message": "مفتوح"
+   },
+   "pkSupportError": {
+      "message": "تعذر تحميل طلبات GitHub. تحقق من اتصالك أو حالة GitHub."
+   },
+   "pkHistoryTitle": {
+      "message": "سجل الدردشة"
+   },
+   "pkHistorySearch": {
+      "message": "البحث في سجل الدردشة (المستخدم أو الرسالة)"
+   },
+   "pkHistoryLoadOlder": {
+      "message": "تحميل السجلات الأقدم"
+   },
+   "pkHistoryMemoryLimit": {
+      "message": "تم بلوغ حد الذاكرة · ابحث للعثور على السجلات الأقدم"
+   },
+   "pkHistoryLoading": {
+      "message": "جارٍ تحميل الأرشيف…"
+   },
+   "pkHistoryNoMatch": {
+      "message": "لا توجد سجلات مطابقة."
+   },
+   "pkHistoryEmpty": {
+      "message": "لا توجد رسائل محفوظة في سجل الدردشة بعد."
+   },
+   "pkHistorySearchResults": {
+      "message": "نتائج البحث: "
+   },
+   "pkHistoryMessages": {
+      "message": "الرسائل المؤرشفة: "
+   },
+   "pkHistoryOlderAvailable": {
+      "message": " · توجد سجلات أقدم"
+   },
+   "pkHistoryAllShown": {
+      "message": " · تم عرض كل النتائج"
+   },
+   "pkHistoryDeletedTextMissing": {
+      "message": "لم توفر Kick نص الرسالة في سجل الحذف هذا"
+   },
+   "pkHistoryDailyTitle": {
+      "message": "سجل الدردشة · السجل اليومي"
+   },
+   "pkHistoryDailyDesc": {
+      "message": "تُعرض رسائل اليوم بشكل منفصل حسب القناة والتاريخ. يمكنك تنزيل ملف .log مستقل بطوابع زمنية لكل قناة."
+   },
+   "pkHistoryDailyLoading": {
+      "message": "جارٍ تحميل سجلات اليوم…"
+   },
+   "pkHistoryDailyRefresh": {
+      "message": "تحديث سجلات اليوم"
+   },
+   "pkTimeoutExpires": {
+      "message": "ينتهي الحظر المؤقت: {1}"
+   },
+   "pkTimeoutDays": {
+      "message": "(متبقي {1} يوم)"
+   },
+   "pkActiveTimeout": {
+      "message": "حظر مؤقت نشط"
+   },
+   "pkPermanentBan": {
+      "message": "حظر دائم"
+   },
+   "pkModEventsTitle": {
+      "message": "أحداث الإشراف"
+   },
+   "pkTitleCount": {
+      "message": "{1} ({2})"
+   },
+   "pkTemizle": {
+      "message": "مسح"
+   },
+   "pkAllSitesAccessDescription": {
+      "message": "إذن شامل لمرة واحدة لمعاينات الروابط عبر مواقع HTTP وHTTPS."
+   },
+   "pkAllSitesAccessButton": {
+      "message": "السماح بالوصول إلى جميع المواقع"
+   },
+   "pkAllSitesGranted": {
+      "message": "تم تفعيل الوصول إلى الروابط لجميع مواقع HTTP/HTTPS."
+   },
+   "pkAllSitesDenied": {
+      "message": "لم يتم منح إذن الوصول إلى المواقع. يمكنك السماح بمواقع محددة من إعدادات إضافات Chrome."
+   },
+   "pkNot101915a": {
+      "message": "تشغّل مقاطع الدردشة الآن فيديو المعرّف المحدد للمقطع بدلاً من بث القناة."
+   },
+   "pkNot101915b": {
+      "message": "تُعرض مقاطع Kick في مشغّل مخصص، وتُفتح صفحات KickBot مباشرةً عند تعذّر تضمينها."
+   },
+   "pkNot101915c": {
+      "message": "أُضيف إذن اختياري بنقرة واحدة لمعاينات الروابط على جميع مواقع HTTP/HTTPS."
+   },
+   "pkNot101915d": {
+      "message": "تم تحديث كتالوجات اللغات وبلاغات دعم GitHub وإضافة اختبارات للمقاطع والأذونات."
+   }
+}

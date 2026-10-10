@@ -1,0 +1,2702 @@
+{
+   "appDesc": {
+      "message": "PureKick Mod blokkeert advertenties op Kick.com en voegt een verbeterde streaming- en chattoolkit toe."
+   },
+   "badgeCtaSub": {
+      "message": "Meld je aan met Kick"
+   },
+   "badgeCtaTitle": {
+      "message": "Verdien een chatbadge"
+   },
+   "badgeLinkedSub": {
+      "message": "Account gekoppeld ✓"
+   },
+   "badgeLinkedTitle": {
+      "message": "Chatbadge actief"
+   },
+   "btnTitle": {
+      "message": "PureKick Mod - Advertentievrije stream"
+   },
+   "dropDay": {
+      "message": "{1} dag resterend"
+   },
+   "dropDays": {
+      "message": "{1} dagen resterend"
+   },
+   "dropHour": {
+      "message": "{1} uur resterend"
+   },
+   "dropHours": {
+      "message": "{1} uur resterend"
+   },
+   "dropTitle": {
+      "message": "Bekijk Drops-campagnes op Kick"
+   },
+   "dropsEmpty": {
+      "message": "Geen actieve druppels"
+   },
+   "dropsTitle": {
+      "message": "Actieve druppels"
+   },
+   "footHelp": {
+      "message": "Hulp en ondersteuning"
+   },
+   "footPrivacy": {
+      "message": "Privacy"
+   },
+   "pauseBtn": {
+      "message": "Pauzeer op deze site"
+   },
+   "pkAboneAktifNot": {
+      "message": "Het groeit elke maand dat je blijft. Bedankt! 💚"
+   },
+   "pkAboneAy": {
+      "message": "{1} - Maandondersteuner"
+   },
+   "pkAboneAy1": {
+      "message": "Supporter van 1 maand"
+   },
+   "pkAboneBaslangic": {
+      "message": "Gestart"
+   },
+   "pkAboneBitti": {
+      "message": "Je lidmaatschap is beëindigd. Verleng uw badge en ga verder waar hij gebleven was."
+   },
+   "pkAboneDemoBaslik": {
+      "message": "Zo zie je er als supporter uit in de chat:"
+   },
+   "pkAboneDemoMesaj": {
+      "message": "Hallo daar! 👋"
+   },
+   "pkAboneKidem": {
+      "message": "Jouw ambtstermijn"
+   },
+   "pkAboneOl": {
+      "message": "Word lid"
+   },
+   "pkAboneOnceGiris": {
+      "message": "Meld je eerst aan met Kick. Deze hebben we nodig om je lidmaatschap aan je account te koppelen."
+   },
+   "pkAboneSonaErdi": {
+      "message": "Beëindigd"
+   },
+   "pkAboneYenile": {
+      "message": "Verleng het lidmaatschap"
+   },
+   "pkAboneYenileme": {
+      "message": "Vernieuwt"
+   },
+   "pkAboneYukleniyor": {
+      "message": "Je lidmaatschapsstatus controleren..."
+   },
+   "pkAbonelik": {
+      "message": "Abonnement"
+   },
+   "pkAbonelikTanit": {
+      "message": "Word supporter: ontvang een ambtstermijnbadge naast je naam in de chat en kleur je naam zoals je wilt."
+   },
+   "pkAiMod": {
+      "message": "Markeer automatische verwijderingen"
+   },
+   "pkAiModD": {
+      "message": "Als de AI-moderatie van Kick het heeft verwijderd, vertelt het log dit, afgezien van een verwijdering door de moderator."
+   },
+   "pkAltAdTakibi": {
+      "message": "Naam kijken"
+   },
+   "pkAltCezaSebepleri": {
+      "message": "Strafredenen"
+   },
+   "pkAltGezinme": {
+      "message": "Navigatiebalk"
+   },
+   "pkAltGizliKanallar": {
+      "message": "Verborgen kanalen"
+   },
+   "pkAltGizliKategoriler": {
+      "message": "Verborgen categorieën"
+   },
+   "pkAltKaliteSes": {
+      "message": "Automatische kwaliteit en volume"
+   },
+   "pkAltKartBilgisi": {
+      "message": "Kaartgegevens"
+   },
+   "pkAltKartSohbeti": {
+      "message": "Kaartchat"
+   },
+   "pkAltKenarCubugu": {
+      "message": "Zijbalk"
+   },
+   "pkAltModGunlugu": {
+      "message": "Log-instellingen"
+   },
+   "pkAltOtomasyon": {
+      "message": "Automatisering"
+   },
+   "pkAltOynaticiOzel": {
+      "message": "Spelerfuncties"
+   },
+   "pkAltSagTikMenuleri": {
+      "message": "Klik met de rechtermuisknop en afbeeldingen"
+   },
+   "pkAltSohbetGorunum": {
+      "message": "Chat-uiterlijk"
+   },
+   "pkAltSohbetGorunumD": {
+      "message": "Emote-voorbeeld."
+   },
+   "pkAltSohbetMesaji": {
+      "message": "Chatbericht"
+   },
+   "pkAltVideoIstat": {
+      "message": "Video- en bedieningsbalk"
+   },
+   "pkAltVideoVod": {
+      "message": "Videospeler en VOD"
+   },
+   "pkAltVurgulama": {
+      "message": "Markering van berichten"
+   },
+   "pkAninda": {
+      "message": "Wijzigingen zijn onmiddellijk van kracht."
+   },
+   "pkAnlikOrtZirve": {
+      "message": "Nu / gemiddeld / piek"
+   },
+   "pkAralikSec": {
+      "message": "Selecteer een bereik"
+   },
+   "pkArayuzDuzeniD": {
+      "message": "Kleine toevoegingen aan de Kick-interface; geen van hen breekt Kick's eigen lay-out."
+   },
+   "pkAySayisi": {
+      "message": "{1} maand(en)"
+   },
+   "pkAyarSatiri": {
+      "message": "PureKick-chatinstellingen"
+   },
+   "pkAyarYedegi": {
+      "message": "Back-up van instellingen"
+   },
+   "pkAyarYedegiD": {
+      "message": "Al uw instellingen en lijsten in één bestand. Er wordt niets naar een server verzonden."
+   },
+   "pkAramaAyarlar": {
+      "message": "Zoekinstellingen..."
+   },
+   "pkAramaSonucYok": {
+      "message": "Geen overeenkomende instellingen gevonden"
+   },
+   "pkAyarlar": {
+      "message": "PureKick-instellingen"
+   },
+   "pkAyarlardanAc": {
+      "message": "Je kunt het inschakelen in Instellingen."
+   },
+   "pkAydir": {
+      "message": "voor {1} maand(en)"
+   },
+   "pkAzOnce": {
+      "message": "zojuist"
+   },
+   "pkBaglantiDurum": {
+      "message": "Status van chatverbinding"
+   },
+   "pkBaglantiDurumD": {
+      "message": "Een kleine stip naast chat: stromen de gebeurtenissen door of is deze gestopt."
+   },
+   "pkBaglanti_acik": {
+      "message": "Chatverbinding werkt"
+   },
+   "pkBaglanti_bekliyor": {
+      "message": "Wachten op de chatverbinding"
+   },
+   "pkBaglanti_kopuk": {
+      "message": "De chatverbinding lijkt verbroken"
+   },
+   "pkBaglanti_sessiz": {
+      "message": "Een tijdje geen evenementen. Het kan zijn dat de chat stil is"
+   },
+   "pkBaglantiyiKopyala": {
+      "message": "Kopieer de link"
+   },
+   "pkBaglantiyiOnizle": {
+      "message": "Bekijk een voorbeeld van de link"
+   },
+   "pkChatOnizle": {
+      "message": "Bekijk een voorbeeld in de chat"
+   },
+   "pkChatOnizleKapat": {
+      "message": "Voorbeeld sluiten"
+   },
+   "pkBahsedenYok": {
+      "message": "Niemand heeft je nog genoemd."
+   },
+   "pkBahsedilmeler": {
+      "message": "Vermeldingen"
+   },
+   "pkBahsedilmelerBos": {
+      "message": "Ze verzamelen zich hier terwijl de chat van een kanaal wordt bekeken."
+   },
+   "pkBahsedilmelerD": {
+      "message": "Verzamelt berichten waarin uw naam wordt vermeld."
+   },
+   "pkBahsetRozet": {
+      "message": "Meldingsteller"
+   },
+   "pkBahsetRozetD": {
+      "message": "Toont een rode telling op de PureKick-knop wanneer uw naam verschijnt. Schakel het uit en vermeldingen worden nog steeds verzameld, maar niet meegeteld op het scherm."
+   },
+   "pkBahsetSes": {
+      "message": "Meldingsgeluid"
+   },
+   "pkBahsetSesD": {
+      "message": "Speelt een kort geluid af als uw naam verschijnt."
+   },
+   "pkBahsetSesSeviye": {
+      "message": "Volume"
+   },
+   "pkBahsetSesTon": {
+      "message": "Geluid"
+   },
+   "pkBahsetSesTonD": {
+      "message": "Speelt af zodra je hem kiest: luister en beslis dan."
+   },
+   "pkBahsetTikla": {
+      "message": "Klikbare @vermeldingen"
+   },
+   "pkBahsetTiklaD": {
+      "message": "Als u op @naam in een bericht klikt, wordt die persoon in de chatbox geplaatst."
+   },
+   "pkBanDetay": {
+      "message": "Gedetailleerde verbodsinformatie"
+   },
+   "pkBanDetayD": {
+      "message": "Klik op een logboekrij om de reden, duur, resterende tijd en bezwaarstatus weer te geven."
+   },
+   "pkBanDoldu": {
+      "message": "Verlopen"
+   },
+   "pkBanItiraz": {
+      "message": "Beroep"
+   },
+   "pkBanItirazVar": {
+      "message": "Tegen deze boete werd beroep geopend"
+   },
+   "pkBanKalan": {
+      "message": "Nog tijd over"
+   },
+   "pkBanKalici": {
+      "message": "Permanent"
+   },
+   "pkBanMesaj": {
+      "message": "Bericht"
+   },
+   "pkBanOtomatik": {
+      "message": "Automatisch"
+   },
+   "pkBanSablon": {
+      "message": "Vooraf vastgestelde strafredenen"
+   },
+   "pkBanSablonD": {
+      "message": "Bewaar de redenen die u vaak gebruikt; één klik schrijft ze als een commando vanaf de profielkaart."
+   },
+   "pkBanSebep": {
+      "message": "Reden"
+   },
+   "pkBanSure": {
+      "message": "Duur"
+   },
+   "pkBanYapan": {
+      "message": "Toegepast door"
+   },
+   "pkBindir": {
+      "message": "Overlay-chat op de stream"
+   },
+   "pkBindirAc": {
+      "message": "Schakel overlay in"
+   },
+   "pkBindirAcD": {
+      "message": "De laag gaat kliksgewijs door; het blokkeert nooit spelerknoppen."
+   },
+   "pkBindirD": {
+      "message": "Blijf de chat ook op volledig scherm lezen."
+   },
+   "pkBindirKonum": {
+      "message": "Positie"
+   },
+   "pkBindirNot": {
+      "message": "Berichten komen van de bestaande chatverbinding van Kick; er wordt geen nieuwe geopend. Mensen die jij verbergt, blijven hier ook verborgen."
+   },
+   "pkBirModerator": {
+      "message": "Een moderator"
+   },
+   "pkBirModeratorIci": {
+      "message": "een moderator"
+   },
+   "pkBirlestir": {
+      "message": "Samenvoegen"
+   },
+   "pkBirlestirD": {
+      "message": "Alleen de instellingen in het bestand worden geschreven; al het andere blijft."
+   },
+   "pkBotYoksay": {
+      "message": "Markeer bots niet"
+   },
+   "pkBotYoksayD": {
+      "message": "Berichten van accounts met een botbadge krijgen geen kleurstreep."
+   },
+   "pkBugun": {
+      "message": "vandaag"
+   },
+   "pkCevrimdisi": {
+      "message": "Offline"
+   },
+   "pkCevrimdisiEki": {
+      "message": "Offline · {1}"
+   },
+   "pkCezaYok": {
+      "message": "Niemand heeft momenteel een time-out."
+   },
+   "pkCrossAciklama": {
+      "message": "De actie wordt afzonderlijk op elk geselecteerd kanaal toegepast. De zenderlijst is afkomstig van de zenders die u beheert."
+   },
+   "pkCrossAra": {
+      "message": "Kanalen zoeken…"
+   },
+   "pkCrossAyar": {
+      "message": "Cross-ban · Bulk-cross-ban"
+   },
+   "pkCrossAyarD": {
+      "message": "Voegt een knop toe aan de profielkaart en een rij 'Bulk cross-ban' aan het PureKick-menu: verban, time-out of gratie voor één persoon (of een hele lijst) op elk kanaal dat je in één keer modereert."
+   },
+   "pkCrossBaslat": {
+      "message": "Begin"
+   },
+   "pkCrossBaslik": {
+      "message": "{1} — actie over meerdere kanalen"
+   },
+   "pkCrossBekleme": {
+      "message": "Vertraging tussen kanalen (seconden)"
+   },
+   "pkCrossBitti": {
+      "message": "Klaar — {1} geslaagd, {2} mislukt"
+   },
+   "pkCrossDugme": {
+      "message": "Cross-verbod"
+   },
+   "pkCrossDurdur": {
+      "message": "Stop"
+   },
+   "pkCrossHepsi": {
+      "message": "Selecteer / wis alles"
+   },
+   "pkCrossIlerleme": {
+      "message": "{1} / {2} · {3}"
+   },
+   "pkCrossKaldir": {
+      "message": "Verbanning ongedaan maken"
+   },
+   "pkCrossKanallar": {
+      "message": "Kanalen"
+   },
+   "pkCrossListeYok": {
+      "message": "Kan de kanalenlijst niet laden. Je moet ingelogd zijn bij Kick"
+   },
+   "pkCrossModYok": {
+      "message": "Geen kanalen gevonden waar jij moderator bent"
+   },
+   "pkCrossNerede": {
+      "message": "Gebruik deze via de knop Cross-ban op de profielkaart, of via de rij 'Bulk cross-ban' in het PureKick-menu."
+   },
+   "pkCrossSebep": {
+      "message": "Reden"
+   },
+   "pkCrossSebepIpucu": {
+      "message": "optioneel"
+   },
+   "pkCrossSecili": {
+      "message": "{1} / {2} geselecteerd"
+   },
+   "pkCrossSure": {
+      "message": "Duur (minuten)"
+   },
+   "pkCrossSustur": {
+      "message": "Time-out"
+   },
+   "pkCrossTekNot": {
+      "message": "Snelle moderatie is uitgeschakeld; alleen de cross-channelknop wordt weergegeven."
+   },
+   "pkCrossToplu": {
+      "message": "Bulk kruisverbod"
+   },
+   "pkCrossTopluAciklama": {
+      "message": "Toegepast op elke gebruiker die u vermeldt, afzonderlijk in elk kanaal dat u selecteert. De zenderlijst is afkomstig van de zenders die u beheert."
+   },
+   "pkCrossTopluAdlar": {
+      "message": "Gebruikersnamen"
+   },
+   "pkCrossTopluBaslik": {
+      "message": "Bulk-cross-channelactie"
+   },
+   "pkCrossTopluBekleme": {
+      "message": "Wacht tussen gebruikers (seconden)"
+   },
+   "pkCrossTopluBeklemeNot": {
+      "message": "Eén gebruiker wordt rug aan rug over alle geselecteerde kanalen verwerkt. Het wachten is alleen van toepassing bij het verplaatsen naar de volgende gebruiker – minimaal {1} seconden."
+   },
+   "pkCrossTopluIpucu": {
+      "message": "Alice, Bob, Carol \n of één per regel"
+   },
+   "pkCrossTopluSayi": {
+      "message": "{1}-gebruikers"
+   },
+   "pkCrossYasakla": {
+      "message": "Verbod"
+   },
+   "pkCrossYukleniyor": {
+      "message": "Kanalen laden…"
+   },
+   "pkDisaAktar": {
+      "message": "Exporteren"
+   },
+   "pkDkOnce": {
+      "message": "{1} min geleden"
+   },
+   "pkDropsAciklama": {
+      "message": "Actieve campagnes die u niet mag missen."
+   },
+   "pkDropsMenu": {
+      "message": "Actieve druppels - dagelijkse beloning"
+   },
+   "pkEkle": {
+      "message": "Toevoegen"
+   },
+   "pkEkranGoruntusu": {
+      "message": "Schermafbeelding"
+   },
+   "pkEkranGoruntusuAl": {
+      "message": "Maak een schermafdruk"
+   },
+   "pkEkranGoruntusuD": {
+      "message": "Downloadt het huidige frame als PNG."
+   },
+   "pkVideoKayit": {
+      "message": "Videorecorder"
+   },
+   "pkEminMisin": {
+      "message": "Weet je het zeker?"
+   },
+   "pkEmoteOnizleme": {
+      "message": "Emote-voorbeeld"
+   },
+   "pkKanalSahibi": {
+      "message": "Kanaaleigenaar"
+   },
+   "pkKanaliGizle": {
+      "message": "Verberg dit kanaal"
+   },
+   "pkKanaliTakip": {
+      "message": "Het kanaal volgen"
+   },
+   "pkKapali": {
+      "message": "gedempt"
+   },
+   "pkKapat": {
+      "message": "Sluiten"
+   },
+   "pkKareyiKaydet": {
+      "message": "Huidig frame opslaan"
+   },
+   "pkKartBilgiNot": {
+      "message": "Zonder cookies opgehaald van Kick's eigen eindpunt, één keer per persoon, en vervolgens in het geheugen bewaard."
+   },
+   "pkKartGenis": {
+      "message": "Brede profielkaart"
+   },
+   "pkKartGenisD": {
+      "message": "Verbreedt de smalle kaart van Kick, zodat de toegevoegde informatie, notities en moderatieblokken niet krap zijn."
+   },
+   "pkKartMesajlar": {
+      "message": "Recente berichten en antwoorden"
+   },
+   "pkKartMesajlarD": {
+      "message": "Toont de recente berichten van de persoon en de antwoorden die naar hem of haar zijn verzonden als tabbladen op de profielkaart."
+   },
+   "pkKartSabit": {
+      "message": "Zet de profielkaart vast"
+   },
+   "pkKartSabitD": {
+      "message": "Voegt een knop toe aan de kaart; Als u erop drukt, blijft er een leesbare kopie op het scherm staan."
+   },
+   "pkKartSagTik": {
+      "message": "Klik met de rechtermuisknop op het menu op streamkaarten"
+   },
+   "pkKartSagTikD": {
+      "message": "Klik met de rechtermuisknop op een kanaal op de startpagina of in categorieën voor snelkoppelingen. Shift + klik met de rechtermuisknop opent het browsermenu."
+   },
+   "pkKartTakipci": {
+      "message": "Volgers tellen op de kaart"
+   },
+   "pkKartTakipciD": {
+      "message": "Zonder cookies opgehaald van Kick's eigen eindpunt, één keer per persoon."
+   },
+   "pkKartYanit": {
+      "message": "Antwoorden op deze persoon"
+   },
+   "pkKartYanitD": {
+      "message": "\"Recente berichten\" laat zien wat ze hebben geschreven; dit blok laat zien wat er naar hen is geschreven."
+   },
+   "pkKartiSabitle": {
+      "message": "Pin deze kaart"
+   },
+   "pkKategoriGizleYok": {
+      "message": "Je hebt nog geen categorie verborgen. Open een categoriepagina en gebruik de knop 'Categorie verbergen' naast de titel."
+   },
+   "pkKategoriGizlemeyiKullan": {
+      "message": "Gebruik het verbergen van categorieën"
+   },
+   "pkKategoriGizlemeyiKullanD": {
+      "message": "Schakel uit en ze worden allemaal weer weergegeven."
+   },
+   "pkKategoriGoster": {
+      "message": "Toon deze categorie opnieuw"
+   },
+   "pkKatilim": {
+      "message": "Deelname"
+   },
+   "pkKatilimD": {
+      "message": "Aandeel kijkers dat in de chat schrijft"
+   },
+   "pkKatilmaTakip": {
+      "message": "Doe mee en volg info"
+   },
+   "pkKatilmaTakipD": {
+      "message": "Datum van aanmelding op Kick, hoe lang ze het kanaal volgen, duur van het abonnement."
+   },
+   "pkKaydedildi": {
+      "message": "opgeslagen"
+   },
+   "pkKaydet": {
+      "message": "Opslaan"
+   },
+   "pkKayitNoktasi": {
+      "message": "Waar je was gebleven in een VOD"
+   },
+   "pkKayitNoktasiD": {
+      "message": "Laat een eerdere uitzending halverwege achter en er wordt aangeboden om terug te springen naar die tweede."
+   },
+   "pkKayitNoktasiHatirla": {
+      "message": "Onthoud mijn standpunt"
+   },
+   "pkKayitNoktasiHatirlaD": {
+      "message": "De positie wordt alleen op uw apparaat bewaard."
+   },
+   "pkKayitliNTemizle": {
+      "message": "{1} opgeslagen positie(s) wissen"
+   },
+   "pkKaynagiYeniSekmede": {
+      "message": "Open de bron in een nieuw tabblad ↗"
+   },
+   "pkKaynakBulunuyor": {
+      "message": "De bron vinden…"
+   },
+   "pkKaynakYok": {
+      "message": "De bron voor deze stream is niet gevonden."
+   },
+   "pkKelimeVurgu": {
+      "message": "Markeer in de chat"
+   },
+   "pkKelimeVurguD": {
+      "message": "Berichten die deze woorden bevatten, krijgen dezelfde groene balk als mensen met prioriteit."
+   },
+   "pkKenarGrup": {
+      "message": "Splitsen online/offline"
+   },
+   "pkKenarGrupD": {
+      "message": "Scheidt de gevolgde kanalen in online en offline groepen. Kick's Show More-systeem behoudt zijn standaardgedrag."
+   },
+   "pkKenarGrupSayi": {
+      "message": "Kanalen weergegeven in online/offline lijsten"
+   },
+   "pkKenarGrupSayiD": {
+      "message": "Kies hoeveel kanalen u in elke groep wilt weergeven (1–20). Kick's Show More-knop behoudt zijn standaardgedrag."
+   },
+   "pkKenarGrupLimit": {
+      "message": "Pas de limiet voor het aantal kanalen toe"
+   },
+   "pkKenarGrupLimitD": {
+      "message": "Beperkt het aantal kanalen dat wordt weergegeven in de online- en offlinelijsten met de onderstaande waarde van 1–20. Onafhankelijk van online/offline groepering."
+   },
+   "pkKickDahaFazlaGizle": {
+      "message": "Verberg de knoppen Meer weergeven/Minder van Kick"
+   },
+   "pkKickDahaFazlaGizleD": {
+      "message": "Verbergt Kick's eigen knoppen voor uitvouwen en samenvouwen in de lijst met gevolgde kanalen."
+   },
+   "pkKendiMenum": {
+      "message": "Open mijn eigen menu"
+   },
+   "pkKendiMenumD": {
+      "message": "Shift + klikken met de rechtermuisknop opent altijd het browsermenu."
+   },
+   "pkKezSayisi": {
+      "message": "{1} ×"
+   },
+   "pkKickIleGiris": {
+      "message": "Meld je aan met Kick"
+   },
+   "pkKickeKatildi": {
+      "message": "Aangesloten bij Kick"
+   },
+   "pkKisaDakika": {
+      "message": "m"
+   },
+   "pkKisaGun": {
+      "message": "d"
+   },
+   "pkKisaSaat": {
+      "message": "h"
+   },
+   "pkKisiGizleme": {
+      "message": "Verberg een persoon"
+   },
+   "pkKisiGizlemeD": {
+      "message": "Hun berichten verdwijnen alleen op uw scherm."
+   },
+   "pkKisiGizli": {
+      "message": "{1} mensen verborgen."
+   },
+   "pkKisiMesajYok": {
+      "message": "Er zijn deze sessie geen berichten van deze gebruiker gezien."
+   },
+   "pkEmoteOnizlemeD": {
+      "message": "Beweeg de muis over een emote om hem groot te zien met zijn naam."
+   },
+   "pkEmoteSayisi": {
+      "message": "{1}-emoties"
+   },
+   "pkEmoteYok": {
+      "message": "Nog geen emotes gebruikt."
+   },
+   "pkEnAktifSohbet": {
+      "message": "Meest actieve chatters"
+   },
+   "pkEnAktifSohbetD": {
+      "message": "Wie heeft het meeste geschreven deze sessie."
+   },
+   "pkEnCokEmote": {
+      "message": "Meest gebruikte emotes"
+   },
+   "pkEnCokEmoteD": {
+      "message": "De meest voorkomende in de chat deze sessie."
+   },
+   "pkEnCokEmoteKisi": {
+      "message": "Top Emote-gebruikers"
+   },
+   "pkEnCokEmoteKisiD": {
+      "message": "Emotes per persoon en het aantal berichten dat alleen emotes bevat."
+   },
+   "pkEnYogunDakika": {
+      "message": "Drukste minuut"
+   },
+   "pkEngellemeAyarlari": {
+      "message": "Advertentie-instellingen"
+   },
+   "pkEngellenenVideo": {
+      "message": "Videoadvertenties geblokkeerd"
+   },
+   "pkEvet": {
+      "message": "ja"
+   },
+   "pkEvetSifirla": {
+      "message": "Ja, opnieuw instellen"
+   },
+   "pkGelenYanitYok": {
+      "message": "Niemand heeft ze deze sessie genoemd."
+   },
+   "pkGelenYanitlar": {
+      "message": "Aan hen geschreven"
+   },
+   "pkGelismis": {
+      "message": "Geavanceerd"
+   },
+   "pkGeri": {
+      "message": "Terug"
+   },
+   "pkGizleIkonu": {
+      "message": "Knop Verbergen bij het zweven van het kanaal"
+   },
+   "pkGizleIkonuD": {
+      "message": "Toont een verbergknop in de rechterbovenhoek wanneer je een kanaal op de startpagina, zijbalk of categorieën plaatst. De knop naast Delen op een kanaalpagina is apart."
+   },
+   "pkGizlemeyiKaldir": {
+      "message": "Zichtbaar maken"
+   },
+   "pkGizlenenKanallar": {
+      "message": "Verborgen kanalen"
+   },
+   "pkGizlenenKanallarD": {
+      "message": "Deze kanalen blijven buiten lijsten, categorieën en zoekopdrachten."
+   },
+   "pkGizlenenKategoriler": {
+      "message": "Verborgen categorieën"
+   },
+   "pkGizlenenKategorilerD": {
+      "message": "Deze categorieën en de streamkaarten daarin blijven buiten de lijsten."
+   },
+   "pkGizlenenleriTemizle": {
+      "message": "{1} verborgen perso(o)n(en) herstellen"
+   },
+   "pkGizliMesajTemizle": {
+      "message": "{1} verborgen bericht(en) herstellen"
+   },
+   "pkGorselBuyut": {
+      "message": "Afbeelding vergroten (CTRL + klik)"
+   },
+   "pkGorselBuyutD": {
+      "message": "CTRL-klik op een emote, badge of avatar om deze op volledige grootte te bekijken."
+   },
+   "pkGorunurluk": {
+      "message": "Dekking"
+   },
+   "pkGrupCanli": {
+      "message": "Online ({1})"
+   },
+   "pkGrupKapali": {
+      "message": "Offline ({1})"
+   },
+   "pkGunOnce": {
+      "message": "{1} d geleden"
+   },
+   "pkGundur": {
+      "message": "voor {1} dag(en)"
+   },
+   "pkHakkindaEk": {
+      "message": "Extra zenderinformatie"
+   },
+   "pkHakkindaEkD": {
+      "message": "Voegt abonneebadges, kanaalemotes, recente categorieën en chatregels (indien ingesteld) toe aan de rij Over onder de stream."
+   },
+   "pkHata": {
+      "message": "fout"
+   },
+   "pkHayir": {
+      "message": "nee"
+   },
+   "pkHazirlanamadi": {
+      "message": "Kon niet worden voorbereid."
+   },
+   "pkHersiSifirla": {
+      "message": "Alles resetten"
+   },
+   "pkHersiSifirlaD": {
+      "message": "Alle instellingen en lijsten worden verwijderd; de extensie keert terug naar de staat van de eerste dag."
+   },
+   "pkHersiSifirlaUyari": {
+      "message": "Je notities, verborgen kanalen en mensen, filters en spaarpunten worden verwijderd. Dit kan niet ongedaan worden gemaakt; misschien wilt u eerst exporteren."
+   },
+   "pkHesabinEki": {
+      "message": "Uw account: {1}"
+   },
+   "pkHizliMod": {
+      "message": "Snelle time-out"
+   },
+   "pkHizliModD": {
+      "message": "Als u op de zandloper naast een chatbericht klikt, wordt een duurstrook geopend; jouw keuze wordt toegepast in plaats van Kick’s eigen dialoogvenster."
+   },
+   "pkHizliModNot": {
+      "message": "Het commando wordt alleen in het vakje getypt – het verzenden is aan jou, dus niemand wordt per ongeluk gestraft."
+   },
+   "pkHkAboneye": {
+      "message": "alleen abonnees"
+   },
+   "pkHkAy": {
+      "message": "{1} maanden"
+   },
+   "pkHkEmoteler": {
+      "message": "Kanaal-emoties"
+   },
+   "pkHkKategoriler": {
+      "message": "Recente categorieën"
+   },
+   "pkHkKurallar": {
+      "message": "Chatregels"
+   },
+   "pkHkRozetler": {
+      "message": "Abonneebadges"
+   },
+   "pkIceAktar": {
+      "message": "Importeren"
+   },
+   "pkIcerikBos": {
+      "message": "Inhoud (leeg = alle berichten)"
+   },
+   "pkIleri": {
+      "message": "Volgende"
+   },
+   "pkIlkSonMesaj": {
+      "message": "Van het eerste tot het laatste bericht"
+   },
+   "pkIndiriliyorEki": {
+      "message": "Aan het downloaden · {1}"
+   },
+   "pkIndirmeBitti": {
+      "message": "Klaar · {1}"
+   },
+   "pkIndirmeDurdu": {
+      "message": "Downloaden gestopt: {1}"
+   },
+   "pkIndirmeIlerleme": {
+      "message": "{1} % · {2}-segmenten"
+   },
+   "pkIndirmeIptal": {
+      "message": "Geannuleerd · {1} was gedownload"
+   },
+   "pkIptal": {
+      "message": "Annuleer"
+   },
+   "pkIstatBos": {
+      "message": "Nog geen gegevens. Open een stream en naarmate de chat stroomt, verschijnen hier het aantal berichten, de beste chatters en het gebruik van emotes."
+   },
+   "pkIzleyici": {
+      "message": "Kijkers"
+   },
+   "pkIzleyiciAnlik": {
+      "message": "Kijkers (nu)"
+   },
+   "pkIzleyiciOrt": {
+      "message": "Kijkers (gem.)"
+   },
+   "pkIzleyiciZirve": {
+      "message": "Kijkers (piek)"
+   },
+   "pkKaldir": {
+      "message": "Verwijderen"
+   },
+   "pkKaliteNot": {
+      "message": "Als uw kwaliteit niet beschikbaar is, wordt de volgende kwaliteit gebruikt. Als \"Automatisch\" is geselecteerd, doet deze functie niets."
+   },
+   "pkKaliteOkunamadi": {
+      "message": "De kwaliteitslijst kon niet worden gelezen."
+   },
+   "pkKaliteSecin": {
+      "message": "Kies een kwaliteit:"
+   },
+   "pkKanalBilgisi": {
+      "message": "Kanaalinformatie"
+   },
+   "pkKanalCanli": {
+      "message": "Live: {1} · {2}-kijkers"
+   },
+   "pkKanalCevrimdisi": {
+      "message": "Offline · {1} volgers"
+   },
+   "pkKanalEngeliKaldir": {
+      "message": "Maak dit kanaal zichtbaar"
+   },
+   "pkKanalGizleYok": {
+      "message": "Je hebt nog niemand verborgen. Beweeg de muis over een kanaalkaart en druk op ✕ om deze te verbergen."
+   },
+   "pkKanalHakkinda": {
+      "message": "Overzicht van {1}"
+   },
+   "pkNot102a": {
+      "message": "Advertenties op eerdere uitzendingen worden geblokkeerd"
+   },
+   "pkNot102b": {
+      "message": "Kanalen verbergen"
+   },
+   "pkNot102c": {
+      "message": "Badges overal waar een gebruikersnaam verschijnt"
+   },
+   "pkNot105a": {
+      "message": "Chatstatistieken, vermeldingen, gebruikersnotities en een moderatielogboek"
+   },
+   "pkNot105b": {
+      "message": "Rol uitlichten, mensen verbergen en prioriteitsmensen"
+   },
+   "pkNot105c": {
+      "message": "Videostatistieken, uptime, automatische kwaliteit en terug-/vooruitspoelen"
+   },
+   "pkNot105d": {
+      "message": "Chat-overlay op de stream en een rechtermuisknopmenu op de speler"
+   },
+   "pkNot105e": {
+      "message": "De interface is vertaald in 7 talen"
+   },
+   "pkNot107a": {
+      "message": "Modus alleen advertentieblokkering: schakel al het andere met één klik uit"
+   },
+   "pkNot107b": {
+      "message": "Zijbalk: vastgezette kanalen, live/offline splitsen en streamvoorbeelden"
+   },
+   "pkNot107c": {
+      "message": "Automatische kwaliteit en volume; badges, emotes en regels in de sectie Over het kanaal"
+   },
+   "pkNot107d": {
+      "message": "Merkbaar snellere startpagina en minder haperingen"
+   },
+   "pkNot107e": {
+      "message": "Het werkbalkpictogram opent nu rechtstreeks het instellingenpaneel"
+   },
+   "pkNot107f": {
+      "message": "Verwijderde berichten gemarkeerd in chat; nieuwste eerst met mate en chatlogs"
+   },
+   "pkNot107g": {
+      "message": "Moderatiebalk boven chat: klik om evenementen, verwijderde berichten en time-outs te openen"
+   },
+   "pkNotPlaceholder": {
+      "message": "Laat een bericht achter over deze persoon..."
+   },
+   "pkNotun": {
+      "message": "Jouw notitie"
+   },
+   "pkOdulAlindi": {
+      "message": "De beloning van vandaag geclaimd 🎉"
+   },
+   "pkOdulBaslik": {
+      "message": "Dagelijkse beloning"
+   },
+   "pkOdulGirisGerek": {
+      "message": "Je moet ingelogd zijn bij Kick"
+   },
+   "pkOdulHata": {
+      "message": "Kan de beloningsstatus niet lezen"
+   },
+   "pkOdulIlerleme": {
+      "message": "{1} / {2} bekeken"
+   },
+   "pkOdulKontrol": {
+      "message": "Status controleren…"
+   },
+   "pkOdulYok": {
+      "message": "Geen horloge-uitdaging vandaag"
+   },
+   "pkOmAciklama": {
+      "message": "Berichten worden verzonden vanuit uw account. De chatbox is onaangeroerd, dus een concept dat u typt, is veilig."
+   },
+   "pkOmAdet": {
+      "message": "Interval"
+   },
+   "pkOmAdetD": {
+      "message": "Aantal berichten · minimaal {1}"
+   },
+   "pkOmAdetEtiket": {
+      "message": "elke {1}-berichten"
+   },
+   "pkOmAdim1": {
+      "message": "1. Kies het kanaal"
+   },
+   "pkOmAdim2": {
+      "message": "2. Hoe moet het verzonden worden?"
+   },
+   "pkOmAdim3": {
+      "message": "3. Typ het interval"
+   },
+   "pkOmAdim4": {
+      "message": "4. Schrijf de aankondiging"
+   },
+   "pkOmAralik": {
+      "message": "Intervalaankondiging"
+   },
+   "pkOmAralikD": {
+      "message": "Verzendt de vermelde teksten afwisselend."
+   },
+   "pkOmAyar": {
+      "message": "Automatisch bericht"
+   },
+   "pkOmAyarD": {
+      "message": "Plaatst aankondigingen met vaste tussenpozen en antwoordt automatisch op opdrachten. Verzonden vanaf uw account."
+   },
+   "pkOmBaskaKanal": {
+      "message": "U bewerkt {1} . Door op te slaan wordt het botvenster voor {1} geopend."
+   },
+   "pkOmBaslat": {
+      "message": "Begin"
+   },
+   "pkOmBaslik": {
+      "message": "Automatisch bericht"
+   },
+   "pkOmDk": {
+      "message": "Interval"
+   },
+   "pkOmDkD": {
+      "message": "Minuten · minimaal {1}"
+   },
+   "pkOmEkle": {
+      "message": "Opdracht opslaan"
+   },
+   "pkOmEksikKip": {
+      "message": "Kies hoe het verzonden moet worden voordat u het opslaat."
+   },
+   "pkOmEksikKomut": {
+      "message": "Voeg ten minste één opdracht toe voordat u opslaat."
+   },
+   "pkOmEksikMetin": {
+      "message": "Schrijf ten minste één aankondiging voordat u deze opslaat."
+   },
+   "pkOmKanalSecD": {
+      "message": "Op welk kanaal zal de bot draaien? Alleen kanalen die u modereert en uw eigen kanaal worden vermeld."
+   },
+   "pkOmKanalSecin": {
+      "message": "Kies een kanaal"
+   },
+   "pkOmKanalYok": {
+      "message": "Geen kanalen gevonden waar jij moderator bent."
+   },
+   "pkOmKayitli": {
+      "message": "Opgeslagen opdrachten"
+   },
+   "pkOmKipDk": {
+      "message": "Per minuten"
+   },
+   "pkOmKipMesaj": {
+      "message": "Op basis van het aantal berichten"
+   },
+   "pkOmKomut": {
+      "message": "Commando antwoorden"
+   },
+   "pkOmKomutAd": {
+      "message": "Commando"
+   },
+   "pkOmKomutAdIpucu": {
+      "message": "!test"
+   },
+   "pkOmKomutCevap": {
+      "message": "Reageer op deze opdracht"
+   },
+   "pkOmKomutCevapIpucu": {
+      "message": "Hallo!"
+   },
+   "pkOmKomutD": {
+      "message": "Wanneer iemand de opdracht schrijft, wordt het opgeslagen antwoord verzonden."
+   },
+   "pkOmKomutIpucu": {
+      "message": "!test = Hallo! \n !onenigheid = onenigheid.gg/..."
+   },
+   "pkOmKomutSil": {
+      "message": "Verwijderen"
+   },
+   "pkOmKomutYok": {
+      "message": "Nog geen opdrachten opgeslagen."
+   },
+   "pkOmMenu": {
+      "message": "Automatisch bericht"
+   },
+   "pkOmMetinD": {
+      "message": "Eén aankondiging per regel. Met meerdere regels worden ze afwisselend verzonden."
+   },
+   "pkOmMetinIpucu": {
+      "message": "Discord: ... \n Vergeet niet te abonneren!"
+   },
+   "pkOmNerede": {
+      "message": "Gebruik het vanuit de rij \"Automatisch bericht\" in het PureKick-menu."
+   },
+   "pkKisiOncelikliSayi": {
+      "message": "{1} mensen hebben prioriteit."
+   },
+   "pkKonumSagAlt": {
+      "message": "Rechtsonder"
+   },
+   "pkKonumSagUst": {
+      "message": "Rechtsboven"
+   },
+   "pkKonumSolAlt": {
+      "message": "Linksonder"
+   },
+   "pkKonumSolUst": {
+      "message": "Linksboven"
+   },
+   "pkKopyaKorumasi": {
+      "message": "Sommige streams zijn beveiligd tegen kopiëren; de browser blokkeert vervolgens het vastleggen."
+   },
+   "pkKorumaAcikMetin": {
+      "message": "Kick-advertenties worden geblokkeerd."
+   },
+   "pkKorumaKapaliMetin": {
+      "message": "De bescherming is gepauzeerd."
+   },
+   "pkKullaniciAdi": {
+      "message": "Gebruikersnaam"
+   },
+   "pkKullaniciAdiBos": {
+      "message": "Gebruikersnaam (leeg = iedereen)"
+   },
+   "pkKullaniciBul": {
+      "message": "Zoek een gebruiker"
+   },
+   "pkKullaniciNotlari": {
+      "message": "Gebruikersnotities"
+   },
+   "pkKullaniciNotlariD": {
+      "message": "Houdt een privénotitie bij op de profielkaart."
+   },
+   "pkKuralAdvertising": {
+      "message": "Reclame"
+   },
+   "pkKuralBullying": {
+      "message": "Pesten"
+   },
+   "pkKuralDoxxing": {
+      "message": "Doxxen"
+   },
+   "pkKuralDrugs": {
+      "message": "Geneesmiddelen"
+   },
+   "pkKuralExtremism": {
+      "message": "Extremisme"
+   },
+   "pkKuralGambling": {
+      "message": "Gokken"
+   },
+   "pkKuralHarassment": {
+      "message": "Intimidatie"
+   },
+   "pkKuralHate": {
+      "message": "Haatdragende taal"
+   },
+   "pkKuralHateSpeech": {
+      "message": "Haatdragende taal"
+   },
+   "pkKuralHatefulConduct": {
+      "message": "Hatelijk gedrag"
+   },
+   "pkKuralIllegal": {
+      "message": "Illegale inhoud"
+   },
+   "pkKuralIllegalActivity": {
+      "message": "Illegale activiteit"
+   },
+   "pkKuralImpersonation": {
+      "message": "Nabootsing"
+   },
+   "pkKuralKabul": {
+      "message": "Chatregels automatisch accepteren"
+   },
+   "pkKuralKabulD": {
+      "message": "Accepteert het dialoogvenster met chatregels voor u wanneer u een kanaal betreedt dat regels heeft. Standaard uitgeschakeld: het handelt namens u, dus het inschakelen ervan is uw beslissing."
+   },
+   "pkKuralMisinfo": {
+      "message": "Verkeerde informatie"
+   },
+   "pkKuralMisinformation": {
+      "message": "Verkeerde informatie"
+   },
+   "pkKuralNudity": {
+      "message": "Naaktheid"
+   },
+   "pkKuralProfanity": {
+      "message": "Godslastering"
+   },
+   "pkKuralScam": {
+      "message": "Oplichting"
+   },
+   "pkKuralSelfHarm": {
+      "message": "Zelfbeschadiging"
+   },
+   "pkKuralSexual": {
+      "message": "Seksuele inhoud"
+   },
+   "pkKuralSexualContent": {
+      "message": "Seksuele inhoud"
+   },
+   "pkKuralSpam": {
+      "message": "Spam"
+   },
+   "pkKuralTerrorism": {
+      "message": "Terrorisme"
+   },
+   "pkKuralThreats": {
+      "message": "Bedreigingen"
+   },
+   "pkKuralUnderage": {
+      "message": "Minderjarig"
+   },
+   "pkKuralViolence": {
+      "message": "Geweld"
+   },
+   "pkKuralWeapons": {
+      "message": "Wapens"
+   },
+   "pkKurtarilanBaslik": {
+      "message": "Chat gewist — laatste {1} bericht(en)"
+   },
+   "pkMBahset": {
+      "message": "Noem deze persoon"
+   },
+   "pkMDaralt": {
+      "message": "Samenvouwen"
+   },
+   "pkMGenislet": {
+      "message": "Uitbreiden"
+   },
+   "pkMGizle": {
+      "message": "Verberg dit bericht"
+   },
+   "pkMKopyala": {
+      "message": "Kopieer tekst"
+   },
+   "pkMenuArayuz": {
+      "message": "Interface"
+   },
+   "pkMenuKenar": {
+      "message": "Zijbalk"
+   },
+   "pkMenuKullaniciKarti": {
+      "message": "Gebruikerskaart"
+   },
+   "pkMenuSohbet": {
+      "message": "Chatten"
+   },
+   "pkMesajEylemleri": {
+      "message": "Bericht hover-acties"
+   },
+   "pkMesajEylemleriD": {
+      "message": "Beweeg de muis over een bericht om knoppen voor kopiëren, vermelden, tijdstempel, samenvouwen en verbergen te zien."
+   },
+   "pkMesajGizli": {
+      "message": "Je hebt dit bericht verborgen"
+   },
+   "pkMesajSayisi": {
+      "message": "{1}-berichten"
+   },
+   "pkMesajYok": {
+      "message": "Nog geen berichten."
+   },
+   "pkMesajiGizle": {
+      "message": "Verbergen"
+   },
+   "pkMesajiGoster": {
+      "message": "Toon"
+   },
+   "pkMesajlar": {
+      "message": "Berichten"
+   },
+   "pkMesajlariGoster": {
+      "message": "Toon berichten"
+   },
+   "pkMesajlariniGizle": {
+      "message": "Verberg hun berichten"
+   },
+   "pkModBirMesajSilindi": {
+      "message": "Er is een bericht verwijderd"
+   },
+   "pkModBos": {
+      "message": "Geen moderatieactie sinds je lid bent geworden van dit kanaal. Verboden, time-outs en verwijderingen verschijnen hier."
+   },
+   "pkModCezaKaldirdi": {
+      "message": "{1} verwijderde de straf op {2}"
+   },
+   "pkModGunlugu": {
+      "message": "Moderatielogboek"
+   },
+   "pkModGunluguD": {
+      "message": "Verwijderde berichten, verboden/time-outs en actieve straffen."
+   },
+   "pkModIzle": {
+      "message": "Bekijk chatevenementen"
+   },
+   "pkModIzleD": {
+      "message": "Luistert naar de bestaande verbinding van Kick; er wordt geen nieuwe verbinding geopend."
+   },
+   "pkModOtoSilindi": {
+      "message": "Het bericht van {1} is verwijderd door {2}"
+   },
+   "pkModSekmeOlaylar": {
+      "message": "Matiging"
+   },
+   "pkModSekmeSilinen": {
+      "message": "Verwijderde berichten"
+   },
+   "pkModSekmeSustur": {
+      "message": "Time-outs"
+   },
+   "pkModSerit": {
+      "message": "Moderatiebalk in de chat"
+   },
+   "pkModSeritD": {
+      "message": "Voegt een balk bovenaan de chat toe; klik erop om het moderatiepaneel te openen."
+   },
+   "pkModSilindi": {
+      "message": "Een bericht van {1} is verwijderd"
+   },
+   "pkModSohbetTemizlendi": {
+      "message": "Chat is gewist"
+   },
+   "pkModSohbette": {
+      "message": "Toon moderatiegebeurtenissen in de chat"
+   },
+   "pkModSohbetteD": {
+      "message": "Bans, time-outs en chat-opruimingen verschijnen in de chatstream. Kick toont deze alleen aan moderators."
+   },
+   "pkModSusturdu": {
+      "message": "{1} getimede {2} uit voor {3}"
+   },
+   "pkModYasakladi": {
+      "message": "{1} verboden {2}"
+   },
+   "pkModerasyon": {
+      "message": "Matiging"
+   },
+   "pkMsjKisa": {
+      "message": "{1} bericht"
+   },
+   "pkNot1015a": {
+      "message": "Bulkbericht verwijderen — verwijdert elk bericht dat de door u gekozen woorden bevat"
+   },
+   "pkNot1015b": {
+      "message": "Automatisch bericht opnieuw opgebouwd: instellingen per kanaal, een eigen botvenster, blijft op de achtergrond actief"
+   },
+   "pkNot1015c": {
+      "message": "Herhaalde identieke chatberichten worden nu allemaal geregistreerd – statistieken en bulkverwijdering waren te laag"
+   },
+   "pkNot1015d": {
+      "message": "Een eerste rondleiding door de functies; open het opnieuw vanuit de sectie Geavanceerd"
+   },
+   "pkNot1015e": {
+      "message": "Cross-Ban schrijft nu het oorsprongskanaal en wie het heeft geleid tot de reden van het verbod"
+   },
+   "pkNot1015f": {
+      "message": "De profielkaart toont de exacte datum waarop de gebruiker het kanaal heeft gevolgd"
+   },
+   "pkNot1015g": {
+      "message": "VOD-download opgelost - het stopte na het eerste segment"
+   },
+   "pkNot101a": {
+      "message": "Menuaankondigingen en een meldingsbadge"
+   },
+   "pkOmNot": {
+      "message": "Het commando moet het bericht starten. Elke opdracht antwoordt maximaal één keer per 10 seconden; uw eigen berichten activeren niets."
+   },
+   "pkOmOnayBaslik": {
+      "message": "De bot starten?"
+   },
+   "pkOmOnayGizle": {
+      "message": "Laat dit niet nog een keer zien"
+   },
+   "pkOmOnayKomut": {
+      "message": "Het botvenster wordt geopend voor {1} en begint met het beantwoorden van opdrachten. Als u het venster sluit, stopt de bot."
+   },
+   "pkOmOnayMetin": {
+      "message": "Er worden aankondigingen verzonden naar {1} met het door u gekozen interval. De bot draait in dit venster; het sluiten van het tabblad stopt het."
+   },
+   "pkOmOzet": {
+      "message": "{1}-aankondigingen · {2}-opdrachten"
+   },
+   "pkOmPopoutD": {
+      "message": "De bot wordt in dit venster uitgevoerd. Door op te slaan worden de instellingen gesloten en blijft de bot doorgaan; Als u het tabblad sluit, wordt de bot gestopt en bij opnieuw openen wordt deze hervat."
+   },
+   "pkOmSecAciklama": {
+      "message": "Kies een kanaal - het botvenster wordt geopend en u voltooit daar de instellingen. De bot draait in dat venster."
+   },
+   "pkOmYetkiYok": {
+      "message": "Je kunt op dit kanaal geen automatische berichten gebruiken. Je bent geen moderator. Kies hieronder een kanaal waartoe u toegang heeft."
+   },
+   "pkOncelikCikar": {
+      "message": "Prioriteit verwijderen"
+   },
+   "pkOncelikTemizleN": {
+      "message": "Duidelijke prioriteiten ( {1} )"
+   },
+   "pkOncelikliKisiler": {
+      "message": "Prioritaire mensen"
+   },
+   "pkOncelikliKisilerD": {
+      "message": "Hun berichten krijgen een groene markering."
+   },
+   "pkOncelikliYap": {
+      "message": "Maak prioriteit"
+   },
+   "pkOnizleme": {
+      "message": "Voorbeeld van zijbalk"
+   },
+   "pkOnizlemeD": {
+      "message": "Beweeg de muis over een kanaal in het linkermenu om een kleine kaart te openen."
+   },
+   "pkOnizlemeKarti": {
+      "message": "Voorbeeldkaart"
+   },
+   "pkOnizlemeKartiD": {
+      "message": "Streamminiatuur, titel, categorie en aantal kijkers."
+   },
+   "pkOtoClaim": {
+      "message": "Claim automatisch de dagelijkse beloning"
+   },
+   "pkOtoClaimD": {
+      "message": "Claims Kick's dagelijkse kijktijdbeloning voor jou zodra je aan de vereiste voldoet. Alleen de kijktijduitdaging – verder wordt niets aangeraakt."
+   },
+   "pkOtoSes": {
+      "message": "Automatisch volume"
+   },
+   "pkOtoSesD": {
+      "message": "Opent elke stream op het gewenste volume."
+   },
+   "pkOtoSesNot": {
+      "message": "\"Auto\" onthoudt het laatste volume dat u hebt ingesteld en past dit toe op elke stream. Als je het volume halverwege de stream verandert, blijft het met rust."
+   },
+   "pkOtoTiyatro": {
+      "message": "Automatische theatermodus"
+   },
+   "pkOtoTiyatroD": {
+      "message": "Verbreedt de speler één keer als je een kanaal opent."
+   },
+   "pkOtomatikKalite": {
+      "message": "Automatische kwaliteit"
+   },
+   "pkOtomatikKaliteD": {
+      "message": "Selecteert één keer de gewenste kwaliteit wanneer u een kanaal opent."
+   },
+   "pkOturum": {
+      "message": "Sessie"
+   },
+   "pkOturumSuresiEki": {
+      "message": "Sessieduur: {1}"
+   },
+   "pkOynatmaHizi": {
+      "message": "Afspeelsnelheid"
+   },
+   "pkOzellikKapali": {
+      "message": "Deze functie is momenteel uitgeschakeld."
+   },
+   "pkPaneliAc": {
+      "message": "Open het paneel"
+   },
+   "pkParcaListesi": {
+      "message": "De segmentlijst ophalen…"
+   },
+   "pkParcaYok": {
+      "message": "geen segmenten"
+   },
+   "pkProfilBuyuk": {
+      "message": "Bekijk profielfoto groot"
+   },
+   "pkProfilKartiBilgisi": {
+      "message": "Profielkaartinformatie"
+   },
+   "pkProfilKartiBilgisiD": {
+      "message": "Klik op iemand in de chat om zijn of haar geschiedenis op de kaart te zien."
+   },
+   "pkProfiliAc": {
+      "message": "Profiel openen"
+   },
+   "pkPureKick": {
+      "message": "PureKick-mod"
+   },
+   "pkPureKickAciklama": {
+      "message": "Advertentieblokkering voor Kick."
+   },
+   "pkRenkleriSifirla": {
+      "message": "Standaardkleuren herstellen"
+   },
+   "pkRolEtiket": {
+      "message": "Rol"
+   },
+   "pkRolNot": {
+      "message": "Rollen komen uit Kick's eigen chatverbinding, dus alleen mensen die schrijven nadat je de pagina hebt geopend, worden herkend."
+   },
+   "pkRolVurgulama": {
+      "message": "Rolmarkering"
+   },
+   "pkRolVurgulamaD": {
+      "message": "Uitzender-, moderator-, VIP- en abonneeberichten krijgen een gekleurde streep."
+   },
+   "pkRol_bot": {
+      "message": "Bot"
+   },
+   "pkRol_broadcaster": {
+      "message": "Omroep"
+   },
+   "pkRol_founder": {
+      "message": "Oprichter"
+   },
+   "pkRol_moderator": {
+      "message": "Moderator"
+   },
+   "pkRol_og": {
+      "message": "OG"
+   },
+   "pkRol_staff": {
+      "message": "Schop personeel"
+   },
+   "pkRol_sub_gifter": {
+      "message": "Sub-donateur"
+   },
+   "pkRol_subscriber": {
+      "message": "Abonnee"
+   },
+   "pkRol_verified": {
+      "message": "Geverifieerd"
+   },
+   "pkRol_vip": {
+      "message": "VIP"
+   },
+   "pkSaOnce": {
+      "message": "{1} uur geleden"
+   },
+   "pkSabitKaldir": {
+      "message": "Losmaken"
+   },
+   "pkSabitKanalAyar": {
+      "message": "Vastgezette kanalen bovenaan"
+   },
+   "pkSabitKanalAyarD": {
+      "message": "Beweeg de muis over een kanaal in de zijbalk om een pin te onthullen. Vastgezette kanalen blijven bovenaan uw lijst met volgers staan."
+   },
+   "pkSabitKanallar": {
+      "message": "Kanaal vastzetten"
+   },
+   "pkSabitKanallarD": {
+      "message": "Houd de kanalen die je volgt bovenaan de lijst."
+   },
+   "pkSabitle": {
+      "message": "Vastzetten"
+   },
+   "pkSadeceEmote": {
+      "message": "Berichten met alleen emotes"
+   },
+   "pkSadeceEmoteD": {
+      "message": "Berichten zonder tekst"
+   },
+   "pkSadeceEmoteEki": {
+      "message": "{1} berichten met alleen emotes"
+   },
+   "pkSadeceEmoteMesajlari": {
+      "message": "Alleen-emote-berichten"
+   },
+   "pkSadeceReklam": {
+      "message": "Alleen advertentieblokkering"
+   },
+   "pkSadeceReklamAcik": {
+      "message": "Alleen advertentieblokkering is ingeschakeld. Als u een andere functie inschakelt, wordt deze modus verlaten."
+   },
+   "pkSadeceReklamBtn": {
+      "message": "Inschakelen"
+   },
+   "pkSadeceReklamD": {
+      "message": "Schakelt alle andere functies uit en houdt alleen advertentieblokkering in stand."
+   },
+   "pkSadeceReklamRozet": {
+      "message": "Actief"
+   },
+   "pkSagTikMenusu": {
+      "message": "Klik met de rechtermuisknop op het menu van de speler"
+   },
+   "pkSagTikMenusuD": {
+      "message": "Alleen actief via de video zelf."
+   },
+   "pkSayfaReklamlari": {
+      "message": "Pagina-advertenties"
+   },
+   "pkSayfaReklamlariD": {
+      "message": "Verbergt advertentieruimtes in de Kick-interface."
+   },
+   "pkScEtiket": {
+      "message": "Chatter-statustag"
+   },
+   "pkScEtiketD": {
+      "message": "Toont “In chat” of “Offline 5m” naast de namen in de lijst."
+   },
+   "pkScFiltre": {
+      "message": "Chatterfilter"
+   },
+   "pkScFiltreD": {
+      "message": "Voegt knoppen Alle / In chat / Offline toe boven de lijst."
+   },
+   "pkScSayac": {
+      "message": "Verbeterd aantal chatters"
+   },
+   "pkScSayacD": {
+      "message": "Laat zien hoeveel mensen je deze sessie hebt gezien, zelfs als Kick zijn eigen telling verlaagt."
+   },
+   "pkSebepYazin": {
+      "message": "Typ een reden…"
+   },
+   "pkSebepYok": {
+      "message": "U heeft nog geen vooraf ingestelde redenen toegevoegd."
+   },
+   "pkSecili": {
+      "message": "{1} geselecteerd"
+   },
+   "pkSekmeGenel": {
+      "message": "Overzicht"
+   },
+   "pkSekmeHakkinda": {
+      "message": "Over"
+   },
+   "pkSekmeIci": {
+      "message": "Open links binnen de pagina"
+   },
+   "pkSekmeIciD": {
+      "message": "YouTube, X, Instagram, Reddit, Kick clip, Twitch clip en Streamable links in chat openen in een kleine speler."
+   },
+   "pkSekmeIciNot": {
+      "message": "Alleen deze sites openen inline; een onbekende link opent zoals gewoonlijk in een nieuw tabblad. CTRL+klik opent altijd een nieuw tabblad."
+   },
+   "pkLinkOnizleme": {
+      "message": "Live voorbeeldkaarten"
+   },
+   "pkLinkOnizlemeD": {
+      "message": "Toont automatisch live miniatuurvoorbeeldkaarten onder links in de chat."
+   },
+   "pkSendenBahsedenler": {
+      "message": "Wie heeft jou genoemd"
+   },
+   "pkSes": {
+      "message": "Volume"
+   },
+   "pkSesBip": {
+      "message": "Piep"
+   },
+   "pkSesCinlama": {
+      "message": "Bel"
+   },
+   "pkSesDamla": {
+      "message": "Laat vallen"
+   },
+   "pkSesKapali": {
+      "message": "Uit"
+   },
+   "pkSesOto": {
+      "message": "Automatisch"
+   },
+   "pkSesPuf": {
+      "message": "Bladerdeeg"
+   },
+   "pkSifirdan": {
+      "message": "Vanaf nul"
+   },
+   "pkSifirdanD": {
+      "message": "Al het huidige wordt verwijderd en vervangen door het bestand."
+   },
+   "pkSilAciklama": {
+      "message": "Berichten met een trigger worden verwijderd; niemand heeft een time-out. De berichten van de uitzender, de moderators en uw eigen berichten worden overgeslagen."
+   },
+   "pkSilAyar": {
+      "message": "Bulkbericht verwijderen"
+   },
+   "pkSilAyarD": {
+      "message": "Verwijdert berichten die de door u gekozen woorden of zinnen bevatten. Wanneer ingeschakeld, verschijnt er een rij 'Bulkbericht verwijderen' in het PureKick-menu."
+   },
+   "pkSilBaslik": {
+      "message": "Bulkbericht verwijderen"
+   },
+   "pkSilGecmis": {
+      "message": "Toepassen op berichten tot nu toe"
+   },
+   "pkSilMenu": {
+      "message": "Bulkbericht verwijderen"
+   },
+   "pkSilNerede": {
+      "message": "Gebruikt vanuit de rij \"Bulkbericht verwijderen\" in het PureKick-menu."
+   },
+   "pkSilNot": {
+      "message": "Je kunt dit venster sluiten terwijl live kijken is ingeschakeld; het stopt wanneer u het kanaal verlaat of de instelling uitschakelt. De geschiedenisscan omvat alleen berichten die in deze sessie zijn gezien."
+   },
+   "pkSilSayac": {
+      "message": "Verwijderd: {1}"
+   },
+   "pkSilTetikD": {
+      "message": "Eén woord of zin per regel. Gesplitst per regel omdat een zin komma's kan bevatten."
+   },
+   "pkSilYetkiYok": {
+      "message": "Je kunt op dit kanaal geen bulkverwijdering gebruiken. Je bent geen moderator."
+   },
+   "pkSilindiEtiket": {
+      "message": "(verwijderd)"
+   },
+   "pkSilinenGoster": {
+      "message": "Toon verwijderde berichten"
+   },
+   "pkSilinenGosterD": {
+      "message": "Verwijderde berichten blijven zichtbaar, grijs en gemarkeerd met \"(verwijderd)\"."
+   },
+   "pkSilinenYok": {
+      "message": "Nog geen verwijderde berichten."
+   },
+   "pkSohbetCikarildi": {
+      "message": "Verwijderd uit de chat waar je deze sessie hebt bekeken; er verlaten geen gegevens uw apparaat."
+   },
+   "pkSohbetEdenler": {
+      "message": "Chatters"
+   },
+   "pkSohbetIstatistikleri": {
+      "message": "Chatstatistieken"
+   },
+   "pkSohbetIstatistikleriBaslik": {
+      "message": "Chatstatistieken"
+   },
+   "pkSohbetIstatistikleriD": {
+      "message": "Berichten/min, meest actieve chatters, gebruik van emotes."
+   },
+   "pkSohbetKaydi": {
+      "message": "Chatlogboek"
+   },
+   "pkSohbetciIpucu": {
+      "message": "Kick: {1} · PureKick zag {2}-mensen deze sessie"
+   },
+   "pkSohbetciListesi": {
+      "message": "Chatter-lijst"
+   },
+   "pkSohbetciListesiD": {
+      "message": "Functies die PureKick toevoegt aan Kick's kijkerslijst."
+   },
+   "pkSohbette": {
+      "message": "In de chat"
+   },
+   "pkSonGuncellemeEki": {
+      "message": "Laatste update: {1}"
+   },
+   "pkSonMesajiIpucu": {
+      "message": "Laatste bericht: {1} · Totaal aantal {2}-berichten"
+   },
+   "pkSonMesajlar": {
+      "message": "Recente berichten"
+   },
+   "pkSonucSayisiN": {
+      "message": "{1} resultaat(en)"
+   },
+   "pkSonucYok": {
+      "message": "Geen resultaten."
+   },
+   "pkSsAyarlari": {
+      "message": "Screenshot-gedrag"
+   },
+   "pkSsBirincil": {
+      "message": "Normale klik"
+   },
+   "pkSsIkincil": {
+      "message": "CTRL+klik"
+   },
+   "pkSsIndir": {
+      "message": "Downloaden naar een bestand"
+   },
+   "pkNot101911b": {
+      "message": "IVS-werknemer werkt graag samen en kan de beste resultaten behalen"
+   },
+   "pkNot101911c": {
+      "message": "HLS vraagt om steun en Kick kaynaklı DNR omschrijft de vraag om steun"
+   },
+   "pkNot101911d": {
+      "message": "Algemene informatie over het gebruik van de site om de kosten te verlagen"
+   },
+   "pkNot101914a": {
+      "message": "Chatarchieven zijn nu gescheiden per kanaal; dagelijkse logboeken en het bewaren van verwijderde berichten zijn verbeterd."
+   },
+   "pkNot101914b": {
+      "message": "Online/offline zichtbaarheid van gevolgde kanalen en de limiet voor het aantal kanalen staan ​​vast."
+   },
+   "pkNot101914c": {
+      "message": "Linkvoorbeelden, kanaalzweeftitels en profielkaartpaginabereik zijn opgelost."
+   },
+   "pkNot101914d": {
+      "message": "Het benadrukken van de rol van abonnees en de records van begaafde KICKS-supporters zijn verbeterd."
+   },
+   "pkNot101914e": {
+      "message": "Spraakclipopdrachten ondersteunen nu 15 talen, een microfoonniveaumeter en een spelersbadge."
+   },
+   "pkNot101914f": {
+      "message": "De snelkoppeling voor clips, terugval op codec/kwaliteit en bestandsnaamlabels voor stille opnames zijn verbeterd."
+   },
+   "pkNot101912a": {
+      "message": "Kick-say-fasındaki PureKick Mod simgesi en ja---------------------------------------"
+   },
+   "pkNot101912b": {
+      "message": "Er zijn veel mensen die een panel en een profiel hebben gevonden dat eenvoudigweg kan worden gebruikt"
+   },
+   "pkTYetkiKismi": {
+      "message": "{1} rolwijziging mislukt"
+   },
+   "pkTakipKelime": {
+      "message": "Bijgehouden woorden"
+   },
+   "pkTakipKelimeD": {
+      "message": "Volgt deze woorden naast uw naam. Komma gescheiden."
+   },
+   "pkTakipKelimeOrnek": {
+      "message": "weggeefactie, code, server"
+   },
+   "pkTakipciEki": {
+      "message": "{1} volgers"
+   },
+   "pkTakipciSayisi": {
+      "message": "Volgers"
+   },
+   "pkTamEkranSon": {
+      "message": "Knop Volledig scherm als laatste"
+   },
+   "pkTamEkranSonD": {
+      "message": "Verplaatst de schermvullende knop van Kick naar uiterst rechts van de balk."
+   },
+   "pkTanArac": {
+      "message": "Moderatorhulpmiddelen"
+   },
+   "pkTanAracD": {
+      "message": "Deze komen UIT: ze handelen namens u in de chat, dus u kunt ze inschakelen. Je vindt ze onder PureKick-menu › Moderatie."
+   },
+   "pkTanBaslik": {
+      "message": "Rondleiding"
+   },
+   "pkTanBaslikD": {
+      "message": "Bekijkt wat PureKick kan doen, pagina voor pagina."
+   },
+   "pkTanBitir": {
+      "message": "Begin"
+   },
+   "pkTanGoster": {
+      "message": "Laat de rondleiding zien"
+   },
+   "pkTanHos": {
+      "message": "Welkom bij PureKick"
+   },
+   "pkTanHosD": {
+      "message": "Een toolkit om Kick zonder advertenties te bekijken en uw chat uit te voeren. De meeste van de onderstaande functies zijn al AAN. U hoeft niets te doen. Gebruik Volgende rechtsonder om ze te bekijken."
+   },
+   "pkTanKart": {
+      "message": "Profiel kaart"
+   },
+   "pkTanKartD": {
+      "message": "De kaart die je krijgt als je in de chat op een naam klikt."
+   },
+   "pkTanKenar": {
+      "message": "Zijbalk"
+   },
+   "pkTanKenarD": {
+      "message": "Volgende lijst en kanaalpagina."
+   },
+   "pkTanListe": {
+      "message": "Chatter-lijst"
+   },
+   "pkTanListeD": {
+      "message": "Toegevoegd aan Kick's kijkerslijst."
+   },
+   "pkTanMod": {
+      "message": "Matiging"
+   },
+   "pkTanModD": {
+      "message": "Verwijderde berichten, bans en time-outs worden zichtbaar."
+   },
+   "pkTanReklam": {
+      "message": "Advertenties"
+   },
+   "pkTanReklamD": {
+      "message": "Alles wat u uitschakelt, wordt onmiddellijk van kracht."
+   },
+   "pkTanSohbet": {
+      "message": "Chatten"
+   },
+   "pkTanSohbetD": {
+      "message": "Jij bepaalt wie opvalt en wie je niet ziet."
+   },
+   "pkTanSon": {
+      "message": "Je bent klaar"
+   },
+   "pkTanSonD": {
+      "message": "Elke instelling bevindt zich in de PK-knop onder de chat. Je kunt deze tour opnieuw openen via de sectie Geavanceerd."
+   },
+   "pkTanVideo": {
+      "message": "Video en speler"
+   },
+   "pkTanVideoD": {
+      "message": "Toegevoegd aan de spelersbalk."
+   },
+   "pkTemaAciklama": {
+      "message": "Verandert de kleur van de Kick-interface."
+   },
+   "pkTemaKickYesili": {
+      "message": "Schop groen"
+   },
+   "pkTemaKirmizi": {
+      "message": "Rood"
+   },
+   "pkTemaMavi": {
+      "message": "Blauw"
+   },
+   "pkTemaMor": {
+      "message": "Paars"
+   },
+   "pkTemaPembe": {
+      "message": "Roze"
+   },
+   "pkTemaSari": {
+      "message": "Geel"
+   },
+   "pkTemaTurkuaz": {
+      "message": "Cyaan"
+   },
+   "pkTemaTuruncu": {
+      "message": "Oranje"
+   },
+   "pkTemizlemeKoru": {
+      "message": "Bewaar berichten wanneer de chat is gewist"
+   },
+   "pkTemizlemeKoruD": {
+      "message": "Als een moderator de chat wist, blijven de laatste berichten in een apart vak staan."
+   },
+   "pkTemizlenenAlan": {
+      "message": "Advertentieruimtes schoongemaakt"
+   },
+   "pkTiyatroNav": {
+      "message": "Bovenbalk in theatermodus"
+   },
+   "pkTiyatroNavD": {
+      "message": "Verplaats de cursor helemaal naar boven en de navigatiebalk komt terug; u hoeft de modus niet te verlaten."
+   },
+   "pkTiyatroyaAl": {
+      "message": "Ga naar de theatermodus als je lid wordt"
+   },
+   "pkTiyatroyaAlD": {
+      "message": "Laat het met rust als het al breed is; één poging per kanaal."
+   },
+   "pkToAciklama": {
+      "message": "Iedereen die een triggerzin schrijft, krijgt een time-out voor de door u gekozen duur. De uitzender, moderators en jij worden overgeslagen; elke persoon wordt één keer behandeld."
+   },
+   "pkToAyar": {
+      "message": "Bulk-time-out"
+   },
+   "pkToAyarD": {
+      "message": "Er wordt automatisch een time-out gegeven aan iedereen die een door u gekozen woord of zin schrijft. Indien ingeschakeld, verschijnt er een rij \"Bulktime-out\" in het PureKick-menu."
+   },
+   "pkToBaslat": {
+      "message": "Live kijken starten"
+   },
+   "pkToBaslik": {
+      "message": "Bulk-time-out"
+   },
+   "pkToDurdur": {
+      "message": "Live kijken stoppen"
+   },
+   "pkToGecmis": {
+      "message": "Toepassen op berichten tot nu toe"
+   },
+   "pkToMenu": {
+      "message": "Bulk-time-out"
+   },
+   "pkToNerede": {
+      "message": "Gebruik het vanuit de rij \"Bulk time-out\" in het PureKick-menu."
+   },
+   "pkToNot": {
+      "message": "U kunt dit venster sluiten terwijl de live-weergave loopt; het stopt wanneer u het kanaal verlaat of de instelling uitschakelt."
+   },
+   "pkToSayac": {
+      "message": "Time-out: {1}"
+   },
+   "pkToSure": {
+      "message": "Time-outduur"
+   },
+   "pkToSureD": {
+      "message": "Dezelfde lijst als snelle time-out. Wijzig dit onder Moderatie › Gebruikerskaart."
+   },
+   "pkToTamKelime": {
+      "message": "Match van hele woorden"
+   },
+   "pkToTamKelimeD": {
+      "message": "Aan: \"code\" komt overeen, maar \"codering\" niet. Uit: elk bericht dat de tekst bevat, komt overeen."
+   },
+   "pkToTetik": {
+      "message": "Trigger-zinnen"
+   },
+   "pkToTetikD": {
+      "message": "Eén woord of zin per regel. Gesplitst per regel, omdat een zinsdeel komma's kan bevatten."
+   },
+   "pkSsPano": {
+      "message": "Kopiëren naar klembord"
+   },
+   "pkSure": {
+      "message": "Duur"
+   },
+   "pkSureDakika": {
+      "message": "{1} minuten"
+   },
+   "pkSureDakika1": {
+      "message": "1 minuut"
+   },
+   "pkSureGun": {
+      "message": "{1} dagen"
+   },
+   "pkSureGun1": {
+      "message": "1 dag"
+   },
+   "pkSureSaat": {
+      "message": "{1} uur"
+   },
+   "pkSureSaat1": {
+      "message": "1 uur"
+   },
+   "pkSureSaniye": {
+      "message": "{1} seconden"
+   },
+   "pkSureSaniye1": {
+      "message": "1 seconde"
+   },
+   "pkSureSecenek": {
+      "message": "Duur opties"
+   },
+   "pkSureSecenekD": {
+      "message": "Duur die wordt weergegeven wanneer u op de zandloper naast een chatbericht klikt. In minuten, door komma's gescheiden (1440 = 1 dag)."
+   },
+   "pkSurumEki": {
+      "message": "Versie {1}"
+   },
+   "pkSurumNotlari": {
+      "message": "Release-opmerkingen"
+   },
+   "pkSurumNotlariD": {
+      "message": "Wat veranderde er in elke versie."
+   },
+   "pkSusturmaBitis": {
+      "message": "Eindigt: {1}"
+   },
+   "pkTAcikMenuKapat": {
+      "message": "Sluit eerst het geopende menu"
+   },
+   "pkTAyarlarIndirildi": {
+      "message": "Instellingen geëxporteerd"
+   },
+   "pkTBaglantiKopyalandi": {
+      "message": "Link gekopieerd naar het klembord"
+   },
+   "pkTCrossAdGir": {
+      "message": "Voer minimaal één gebruikersnaam in"
+   },
+   "pkTCrossKanalSec": {
+      "message": "Selecteer minimaal één kanaal"
+   },
+   "pkTGizlenenlerTemiz": {
+      "message": "Verborgen mensen gewist"
+   },
+   "pkTGoruntuHazirDegil": {
+      "message": "De foto is niet klaar"
+   },
+   "pkTIndirmeDesteklenmiyor": {
+      "message": "Deze browser kan niet naar een bestand schrijven"
+   },
+   "pkTIndirmeSuruyor": {
+      "message": "Er wordt al gedownload"
+   },
+   "pkTKaldiginYer": {
+      "message": "Waar je was gebleven: {1}"
+   },
+   "pkTKaliteMenusuAcilmadi": {
+      "message": "Het kwaliteitsmenu ging niet open"
+   },
+   "pkTKaliteMenusuYok": {
+      "message": "Spelerkwaliteitsmenu niet gevonden"
+   },
+   "pkTKaliteOynaticiya": {
+      "message": "Kwaliteit wordt aan de speler overgelaten"
+   },
+   "pkTKaliteYok": {
+      "message": "{1} is niet beschikbaar in deze stream"
+   },
+   "pkTKanalEngelKalkti": {
+      "message": "{1} is niet langer verborgen"
+   },
+   "pkTKanalGizlemeKalkti": {
+      "message": "Het kanaal is weer zichtbaar"
+   },
+   "pkTKanalGizlendi": {
+      "message": "Kanaal verborgen"
+   },
+   "pkTKartAcilamadi": {
+      "message": "Kan de kaart niet openen. Voor de chat is minimaal één bericht nodig"
+   },
+   "pkTKartSabitlendi": {
+      "message": "Kaart vastgezet: u kunt deze slepen"
+   },
+   "pkTKategoriGizlendi": {
+      "message": "Categorie verborgen"
+   },
+   "pkTKategoriGorunur": {
+      "message": "Categorie is weer zichtbaar"
+   },
+   "pkTKayitNoktalariTemiz": {
+      "message": "Opgeslagen posities gewist"
+   },
+   "pkTKelimeKaydedildi": {
+      "message": "Bijgehouden woorden opgeslagen"
+   },
+   "pkTKisiGizlendi": {
+      "message": "Berichten van {1} zijn verborgen"
+   },
+   "pkTKisiGorunur": {
+      "message": "{1} is weer zichtbaar"
+   },
+   "pkTKisiOncelikli": {
+      "message": "{1} heeft nu prioriteit"
+   },
+   "pkTKisiSohbetteYok": {
+      "message": "Er blijft geen zichtbaar bericht van deze persoon achter in de chat"
+   },
+   "pkTKomutYazildi": {
+      "message": "De opdracht is in de chatbox getypt"
+   },
+   "pkTKopyalanamadi": {
+      "message": "De tekst kon niet worden gekopieerd"
+   },
+   "pkTKopyalandi": {
+      "message": "Tekst gekopieerd naar het klembord"
+   },
+   "pkTKorumaAcildi": {
+      "message": "Bescherming aan"
+   },
+   "pkTKorumaDuraklatildi": {
+      "message": "De bescherming is onderbroken"
+   },
+   "pkTKullaniciBulunamadi": {
+      "message": "Er is geen dergelijke gebruiker gevonden"
+   },
+   "pkTMesajlarGeriGeldi": {
+      "message": "Verborgen berichten zijn terug"
+   },
+   "pkTModGunluguKapali": {
+      "message": "Moderatielogboek is uitgeschakeld"
+   },
+   "pkTOdulAlindi": {
+      "message": "🎉 Dagelijkse beloning geclaimd"
+   },
+   "pkTOmKaydedildi": {
+      "message": "Instellingen voor automatische berichten opgeslagen"
+   },
+   "pkTOmKomutBosluk": {
+      "message": "Een commando mag geen spaties bevatten"
+   },
+   "pkTOmKomutEklendi": {
+      "message": "Commando opgeslagen"
+   },
+   "pkTOmKomutEksik": {
+      "message": "Voer zowel de opdracht als het antwoord in"
+   },
+   "pkTOmKomutGuncellendi": {
+      "message": "Commandoantwoord bijgewerkt"
+   },
+   "pkTOmPencereAcildi": {
+      "message": "Botvenster geopend voor {1}"
+   },
+   "pkTOncelikKalkti": {
+      "message": "Prioriteit verwijderd uit {1}"
+   },
+   "pkTOnceliklerTemiz": {
+      "message": "Prioriteiten gewist"
+   },
+   "pkTOturumGeriYuklendi": {
+      "message": "Vorige sessie hersteld"
+   },
+   "pkTOynaticiYok": {
+      "message": "Speler niet gevonden"
+   },
+   "pkTOynaticiYokNokta": {
+      "message": "Speler niet gevonden."
+   },
+   "pkTOzellikAcildi": {
+      "message": "{1} ingeschakeld"
+   },
+   "pkTOzellikKapatildi": {
+      "message": "{1} uitgeschakeld"
+   },
+   "pkTPanoDesteklenmiyor": {
+      "message": "Deze browser kan geen afbeeldingen kopiëren, maar downloaden"
+   },
+   "pkTRenklerSifirlandi": {
+      "message": "Rolkleuren gereset"
+   },
+   "pkTSadeceReklam": {
+      "message": "Alleen advertentieblokkering ingeschakeld"
+   },
+   "pkTSeritYok": {
+      "message": "De spelerbedieningen van Kick zijn momenteel gesloten. Beweeg de speler en probeer het opnieuw."
+   },
+   "pkTSifirlanamadi": {
+      "message": "Resetten mislukt"
+   },
+   "pkTSifirlandi": {
+      "message": "Alles gereset, de pagina opnieuw geladen"
+   },
+   "pkTSilBasladi": {
+      "message": "Live kijken - {1} wordt geactiveerd"
+   },
+   "pkTSilDurdu": {
+      "message": "Live kijken gestopt"
+   },
+   "pkTSilEslesmeYok": {
+      "message": "Geen overeenkomende berichten"
+   },
+   "pkTSohbetAlaniYok": {
+      "message": "Chatgebied niet gevonden"
+   },
+   "pkTSohbetKutusuYok": {
+      "message": "De chatbox is niet gevonden"
+   },
+   "pkTSsAlinamadi": {
+      "message": "Schermafbeelding mislukt"
+   },
+   "pkTSsKaydedildi": {
+      "message": "Schermafbeelding opgeslagen"
+   },
+   "pkTSsPanoya": {
+      "message": "Schermafbeelding gekopieerd naar het klembord"
+   },
+   "pkTSsYasak": {
+      "message": "Screenshots zijn niet mogelijk op deze stream"
+   },
+   "pkTSureKaydedildi": {
+      "message": "Duuropties opgeslagen"
+   },
+   "pkTSusturmaHata": {
+      "message": "Time-out mislukt ( {1} )"
+   },
+   "pkTSusturuldu": {
+      "message": "Er is een time-out opgetreden voor {1} voor {2}"
+   },
+   "pkTTemaKaydedildi": {
+      "message": "Themakleur opgeslagen"
+   },
+   "pkTTemaVarsayilan": {
+      "message": "Thema hersteld naar standaard"
+   },
+   "pkTToBasladi": {
+      "message": "Live kijken aan - {1}-triggers"
+   },
+   "pkTToDurdu": {
+      "message": "Live kijken gestopt"
+   },
+   "pkTToEslesmeYok": {
+      "message": "Niemand kwam overeen"
+   },
+   "pkTToTetikGir": {
+      "message": "Voer ten minste één triggerzin in"
+   },
+   "pkTVodIndirildi": {
+      "message": "Eerdere uitzending gedownload"
+   },
+   "pkTYedekAlinamadi": {
+      "message": "Back-up mislukt"
+   },
+   "pkTYedekCokBuyuk": {
+      "message": "Het bestand is te groot"
+   },
+   "pkTYedekOkunamadi": {
+      "message": "Het bestand kon niet worden gelezen"
+   },
+   "pkTYedekUygulanamadi": {
+      "message": "Instellingen konden niet worden geladen"
+   },
+   "pkTYedekUygulandi": {
+      "message": "Instellingen geladen, pagina opnieuw geladen"
+   },
+   "pkTYetkiKaydedildi": {
+      "message": "Rollen bijgewerkt"
+   },
+   "pkToTetikIpucu": {
+      "message": "vrije trappen \n volg4volg \n check mijn bio"
+   },
+   "pkTumu": {
+      "message": "Allemaal"
+   },
+   "pkUyarHiz": {
+      "message": "Adaptieve snelheid"
+   },
+   "pkUyarHizD": {
+      "message": "Als je live achterop raakt, versnelt het om het gat te dichten."
+   },
+   "pkUyarHizNot": {
+      "message": "Het beeld verspringt nooit: de positie blijft onaangeroerd, alleen de snelheid gaat naar 1,25x en keert terug naar 1x aan de rand."
+   },
+   "pkVeriYok": {
+      "message": "Nog geen gegevens."
+   },
+   "pkVideoBilgisiD": {
+      "message": "Opent via de knop op de spelersbalk."
+   },
+   "pkVideoIstatistikleri": {
+      "message": "Videostatistieken"
+   },
+   "pkVideoIstatistikleriD": {
+      "message": "Resolutie, FPS, bitrate, verwijderde frames, buffer."
+   },
+   "pkVideoReklamlari": {
+      "message": "Videoadvertenties"
+   },
+   "pkVideoReklamlariD": {
+      "message": "Blokkeert preroll- en midroll-advertenties."
+   },
+   "pkVideonunYuzdesi": {
+      "message": "Percentage van de video"
+   },
+   "pkVodIndir": {
+      "message": "Download deze afgelopen uitzending"
+   },
+   "pkVodIndirBaslik": {
+      "message": "Vorige uitzending downloaden"
+   },
+   "pkVodIndirKisa": {
+      "message": "VOD downloaden"
+   },
+   "pkVodIndirNot": {
+      "message": "De stream wordt segment voor segment naar schijf geschreven; tabgeheugen blijft vrij."
+   },
+   "pkVodReklamlari": {
+      "message": "VOD-advertenties"
+   },
+   "pkVodReklamlariD": {
+      "message": "Slaat de advertentie over aan het begin van eerdere uitzendingen."
+   },
+   "pkVodTsNotN": {
+      "message": "Het bestand wordt opgeslagen als .ts (VLC/MPV speelt het af). Stroomlengte {1} min."
+   },
+   "pkVsAg": {
+      "message": "Netwerkstatus"
+   },
+   "pkVsBitHizi": {
+      "message": "Bitsnelheid"
+   },
+   "pkVsCanliUzaklik": {
+      "message": "Achter leven"
+   },
+   "pkVsCozunurluk": {
+      "message": "Resolutie"
+   },
+   "pkVsDuraklatildi": {
+      "message": "Gepauzeerd"
+   },
+   "pkVsDusenKare": {
+      "message": "Gevallen kaders"
+   },
+   "pkVsHazir": {
+      "message": "Klaar staat"
+   },
+   "pkVsKonum": {
+      "message": "Positie"
+   },
+   "pkVsTampon": {
+      "message": "Buffer"
+   },
+   "pkVurguMuaf": {
+      "message": "Uitgesloten van markeren"
+   },
+   "pkVurguMuafD": {
+      "message": "De hier genoemde mensen krijgen geen kleurstreep, ongeacht hun rol."
+   },
+   "pkWebSitesi": {
+      "message": "Website"
+   },
+   "pkYanSohbet": {
+      "message": "Sleep zijchat"
+   },
+   "pkYanSohbetD": {
+      "message": "Hiermee kunt u het uitgeklapte chatvenster met uw muis verplaatsen."
+   },
+   "pkYanit": {
+      "message": "Antwoorden"
+   },
+   "pkYanitD": {
+      "message": "Berichten die reageren op een ander bericht"
+   },
+   "pkYanitlarBaslik": {
+      "message": "Antwoorden"
+   },
+   "pkYaziliyor": {
+      "message": "schrijven…"
+   },
+   "pkYedekBos": {
+      "message": "Het bestand heeft geen instellingen die kunnen worden toegepast"
+   },
+   "pkYedekBozuk": {
+      "message": "Dit bestand is geen geldige JSON"
+   },
+   "pkYedekNot": {
+      "message": "De back-up bevat instellingen, notities, verborgen kanalen en personen, filters en spaarpunten."
+   },
+   "pkYedekOzet": {
+      "message": "Het bestand bevat sectie(s) {1} · {2}"
+   },
+   "pkYedekYabanci": {
+      "message": "Dit bestand is geen PureKick-back-up"
+   },
+   "pkYeniSekmedeAc": {
+      "message": "Openen in een nieuw tabblad ↗"
+   },
+   "pkYenilik": {
+      "message": "Nieuw in deze versie"
+   },
+   "pkYetkiAciklama": {
+      "message": "Verleen of verwijder VIP, OG en moderator in dit kanaal. Alleen te zien op je eigen kanaal."
+   },
+   "pkYetkiBaslik": {
+      "message": "{1} · Rollen"
+   },
+   "pkYetkiDugme": {
+      "message": "Rollen bewerken"
+   },
+   "pkYetkiMod": {
+      "message": "Moderator"
+   },
+   "pkYetkiOg": {
+      "message": "OG"
+   },
+   "pkYetkiOkunamadi": {
+      "message": "Kan rollen niet lezen."
+   },
+   "pkYetkiVip": {
+      "message": "VIP"
+   },
+   "pkYildir": {
+      "message": "voor {1} jaar/jaren"
+   },
+   "pkYonetimPaneli": {
+      "message": "PureKick-configuratiescherm"
+   },
+   "pkYorumDengeli": {
+      "message": "emoties en tekst zijn in balans"
+   },
+   "pkYorumEmoteCok": {
+      "message": "de meeste berichten zijn alleen emote-berichten"
+   },
+   "pkYorumEmoteFazla": {
+      "message": "meer emoties dan tekst"
+   },
+   "pkYorumHizli": {
+      "message": "Chatten gaat snel"
+   },
+   "pkYorumVeriYok": {
+      "message": "Er zijn wat meer gegevens nodig voordat er commentaar kan worden gegeven. Dit wordt gevuld naarmate de chat stroomt."
+   },
+   "pkYorumZirve": {
+      "message": "drukste minuut {1}"
+   },
+   "pkYukseklik": {
+      "message": "Hoogte"
+   },
+   "pkYuzde": {
+      "message": "Procent"
+   },
+   "pkZamanAsimi": {
+      "message": "Time-out"
+   },
+   "pkZirveDakika": {
+      "message": "{1} — {2} berichten in die minuut"
+   },
+   "popupBadges": {
+      "message": "Insignes"
+   },
+   "startBtn": {
+      "message": "Bescherming starten"
+   },
+   "statusActive": {
+      "message": "Advertentievrije stream actief"
+   },
+   "statusPaused": {
+      "message": "Bescherming onderbroken"
+   },
+   "themeColor": {
+      "message": "Thema Kleur"
+   },
+   "themeReset": {
+      "message": "Resetten (standaard kick)"
+   },
+   "pkFiltreAra": {
+      "message": "Zoeken in chat..."
+   },
+   "pkSohbetFiltre": {
+      "message": "Chat zoeken en filteren"
+   },
+   "pkCokluYayin": {
+      "message": "Multi-stream"
+   },
+   "pkKlipAl": {
+      "message": "Liveclip vastleggen"
+   },
+   "pkSohbetTts": {
+      "message": "Chat tekst-naar-spraak (TTS)"
+   },
+   "pkEmoteSpamFiltre": {
+      "message": "Emote Spamcondensator"
+   },
+   "pkIzlemeSureTakip": {
+      "message": "Kijk naar tijdregistratie"
+   },
+   "pkKanalNotlari": {
+      "message": "Kanaalnotities"
+   },
+   "pkYayinBildirim": {
+      "message": "Stream live-meldingen"
+   },
+   "pkIzlemeSureleriBaslik": {
+      "message": "Kijk tijd"
+   },
+   "pkSohbetCeviri": {
+      "message": "Livechatvertaling"
+   },
+   "pkAcik": {
+      "message": "Aan"
+   },
+   "pkNot101910a": {
+      "message": "Sohbet arşivi kalıcı IndexedDB deposuna taşındı; Moderasyon en silinen mesajıtları iyileştirildi"
+   },
+   "pkNot101910b": {
+      "message": "Instagram, X/Twitter, Kick, TikTok en algemene berichten zijn beschikbaar"
+   },
+   "pkNot101910c": {
+      "message": "Yayin değişimi, HLS vraagt zich af en heeft een lange termijn durumu-düzeltildi"
+   },
+   "pkNot101911a": {
+      "message": "PureKick Mod is een van de meest populaire roze en eenvoudige manieren om te gebruiken"
+   },
+   "pkInterfaceLanguage": {
+      "message": "Interfacetaal"
+   },
+   "pkInterfaceLanguageD": {
+      "message": "Kies een taal voor PureKick Mod. Auto volgt de browsertaal."
+   },
+   "pkSupportTitle": {
+      "message": "Ondersteuning en bugrapporten"
+   },
+   "pkSupportDesc": {
+      "message": "Stuur een bugrapport of functieverzoek via GitHub. Volg hier open en voltooide verzoeken."
+   },
+   "pkSupportLogin": {
+      "message": "Verzenden wordt op GitHub voltooid en vereist een GitHub-aanmelding. De extensie voegt je gebruikersnaam of e-mailadres niet toe aan het rapport. Een relayserver voor anonieme inzendingen zonder aanmelding is nog niet ingesteld."
+   },
+   "pkSupportBug": {
+      "message": "Rapporteer een bug"
+   },
+   "pkSupportFeature": {
+      "message": "Vraag een functie aan"
+   },
+   "pkSupportQuestion": {
+      "message": "Vraag om hulp"
+   },
+   "pkSupportTitlePlaceholder": {
+      "message": "Korte titel"
+   },
+   "pkSupportBodyPlaceholder": {
+      "message": "Beschrijf de stappen, het verwachte resultaat en het daadwerkelijke resultaat. Voeg geen privégegevens toe."
+   },
+   "pkSupportSend": {
+      "message": "Ga verder op GitHub"
+   },
+   "pkSupportRequired": {
+      "message": "Voer een titel en beschrijving in."
+   },
+   "pkSupportIssues": {
+      "message": "Gemeenschapsverzoeken"
+   },
+   "pkSupportStatusHelp": {
+      "message": "Status komt van de GitHub open/gesloten status en planningslabels."
+   },
+   "pkSupportLoading": {
+      "message": "GitHub-verzoeken laden…"
+   },
+   "pkSupportEmpty": {
+      "message": "Nog geen openbare verzoeken."
+   },
+   "pkSupportClosed": {
+      "message": "Opgelost"
+   },
+   "pkSupportPlanned": {
+      "message": "Gepland"
+   },
+   "pkSupportWaiting": {
+      "message": "Wachten"
+   },
+   "pkSupportOpen": {
+      "message": "Openen"
+   },
+   "pkSupportError": {
+      "message": "Kan GitHub-verzoeken niet laden. Controleer uw verbinding of GitHub-status."
+   },
+   "pkHistoryTitle": {
+      "message": "Chatlogboek"
+   },
+   "pkHistorySearch": {
+      "message": "Chatlogboek doorzoeken (gebruiker of bericht)"
+   },
+   "pkHistoryLoadOlder": {
+      "message": "Oudere gegevens laden"
+   },
+   "pkHistoryMemoryLimit": {
+      "message": "Geheugenlimiet bereikt · zoek naar oudere gegevens"
+   },
+   "pkHistoryLoading": {
+      "message": "Archief laden…"
+   },
+   "pkHistoryNoMatch": {
+      "message": "Geen overeenkomende gegevens gevonden."
+   },
+   "pkHistoryEmpty": {
+      "message": "Er zijn nog geen berichten opgeslagen in het chatlogboek."
+   },
+   "pkHistorySearchResults": {
+      "message": "Zoekresultaten: "
+   },
+   "pkHistoryMessages": {
+      "message": "Gearchiveerde berichten: "
+   },
+   "pkHistoryOlderAvailable": {
+      "message": " · oudere gegevens beschikbaar"
+   },
+   "pkHistoryAllShown": {
+      "message": " · alle overeenkomsten worden getoond"
+   },
+   "pkHistoryDeletedTextMissing": {
+      "message": "Kick heeft de berichttekst niet opgenomen in dit verwijderrecord"
+   },
+   "pkHistoryDailyTitle": {
+      "message": "Chatlogboek · Daglogboek"
+   },
+   "pkHistoryDailyDesc": {
+      "message": "De berichten van vandaag worden per kanaal en datum gescheiden weergegeven. Download voor elk kanaal een eigen .log-bestand met tijdstempels."
+   },
+   "pkHistoryDailyLoading": {
+      "message": "Daglogboeken laden…"
+   },
+   "pkHistoryDailyRefresh": {
+      "message": "Daglogboeken vernieuwen"
+   },
+   "pkTimeoutExpires": {
+      "message": "Time-out eindigt: {1}"
+   },
+   "pkTimeoutDays": {
+      "message": "({1} dagen resterend)"
+   },
+   "pkActiveTimeout": {
+      "message": "Actieve time-out"
+   },
+   "pkPermanentBan": {
+      "message": "Permanente ban"
+   },
+   "pkModEventsTitle": {
+      "message": "Moderatiegebeurtenissen"
+   },
+   "pkTitleCount": {
+      "message": "{1} ({2})"
+   },
+   "pkTemizle": {
+      "message": "Wissen"
+   },
+   "pkAllSitesAccessDescription": {
+      "message": "Eenmalige brede toestemming voor linkvoorbeelden op HTTP- en HTTPS-sites."
+   },
+   "pkAllSitesAccessButton": {
+      "message": "Toegang tot alle sites toestaan"
+   },
+   "pkAllSitesGranted": {
+      "message": "Linktoegang is ingeschakeld voor alle HTTP/HTTPS-sites."
+   },
+   "pkAllSitesDenied": {
+      "message": "Geen sitetoegang verleend. Je kunt afzonderlijke sites toestaan in de Chrome-extensie-instellingen."
+   },
+   "pkNot101915a": {
+      "message": "Chatclips spelen nu de video van de exacte clip-ID af in plaats van de kanaaluitzending te openen."
+   },
+   "pkNot101915b": {
+      "message": "Kick-clips gebruiken een eigen speler; KickBot-clippagina’s worden direct geopend als insluiten niet werkt."
+   },
+   "pkNot101915c": {
+      "message": "Optionele toegang met één klik tot alle HTTP/HTTPS-sites toegevoegd voor linkvoorbeelden."
+   },
+   "pkNot101915d": {
+      "message": "Taalkatalogi en GitHub-ondersteuningsmeldingen bijgewerkt; tests toegevoegd voor clips en machtigingen."
+   }
+}

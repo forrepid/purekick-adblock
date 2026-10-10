@@ -25,7 +25,7 @@ var DEFAULT_SETTINGS = {
   bahsetSes: false, bahsetSesTon: 'cinlama', bahsetSesSeviye: 60,
   bahsetTikla: true, banDetay: true,
   banSablon: false, bindir: false, bindirBoy: 55, bindirKonum: 'sol-alt', bindirSaydam: 90,
-  blockDom: true, blockVideoAds: true, blockVodAds: true, botYoksay: true, consented: true,
+  blockDom: true, blockVideoAds: true, blockVodAds: true, botYoksay: true, consented: true, arayuzDili: 'auto',
   /* KAPALI BAŞLIYOR (opt-in): hesabın adına Kick'e istek atan tek özellik bu.
      Kullanıcı bilmeden ödül talep etmek sürpriz olurdu; açan bilerek açsın. */
   otoClaim: false,
@@ -713,11 +713,51 @@ function odulAl(jeton) {
 chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
   if (!msg || !msg.type) { sendResponse({}); return false; }
 
+  if (msg.type === 'pkRequestAllSiteLinkAccess') {
+    var permissionSource = '';
+    try { permissionSource = new URL(sender.url || (sender.tab && sender.tab.url) || '').hostname; } catch (e) {}
+    if (permissionSource !== 'kick.com' && !/\.kick\.com$/.test(permissionSource)) {
+      sendResponse({ granted: false, error: 'invalid-source' }); return false;
+    }
+    chrome.permissions.request({ origins: ['https://*/*', 'http://*/*'] })
+      .then(function (granted) { sendResponse({ granted: !!granted }); })
+      .catch(function () { sendResponse({ granted: false, error: 'request-failed' }); });
+    return true;
+  }
+
   if (msg.type === 'getInstagramProfilePreview') {
     var from = '';
     try { from = new URL(sender.url || (sender.tab && sender.tab.url) || '').hostname; } catch (e) {}
     if (from !== 'kick.com' && !/\.kick\.com$/.test(from)) { sendResponse(null); return false; }
     instagramProfilOnizlemesi(msg.username).then(function (p) { sendResponse(p); });
+    return true;
+  }
+
+  if (msg.type === 'pkGetKickClipStream') {
+    var clipSource = '';
+    try { clipSource = new URL(sender.url || (sender.tab && sender.tab.url) || '').hostname; } catch (e) {}
+    var clipId = String(msg.clipId || '');
+    if ((clipSource !== 'kick.com' && !/\.kick\.com$/.test(clipSource)) || !/^clip_[A-Za-z0-9_-]{8,80}$/.test(clipId)) {
+      sendResponse({ ok: false, error: 'invalid-request' }); return false;
+    }
+    var clipController = typeof AbortController !== 'undefined' ? new AbortController() : null;
+    var clipTimer = clipController ? setTimeout(function () { clipController.abort(); }, 12000) : null;
+    fetch('https://kick.com/api/v2/clips/' + encodeURIComponent(clipId), {
+      credentials: 'omit', cache: 'no-store', signal: clipController ? clipController.signal : undefined,
+      headers: { 'Accept': 'application/json', 'x-app-platform': 'web' }
+    }).then(function (r) { return r.ok ? r.json() : null; }).then(function (body) {
+      if (clipTimer) clearTimeout(clipTimer);
+      var clip = body && body.clip;
+      var stream = '';
+      try {
+        var parsedStream = new URL(clip && (clip.video_url || clip.clip_url) || '');
+        if (parsedStream.protocol === 'https:' && parsedStream.hostname === 'clips.kick.com' && /\.m3u8$/i.test(parsedStream.pathname)) stream = parsedStream.href;
+      } catch (e) {}
+      sendResponse(stream ? { ok: true, videoUrl: stream, title: String(clip.title || '').slice(0, 240), thumbnail: String(clip.thumbnail_url || '') } : { ok: false, error: 'clip-unavailable' });
+    }).catch(function () {
+      if (clipTimer) clearTimeout(clipTimer);
+      sendResponse({ ok: false, error: 'clip-unavailable' });
+    });
     return true;
   }
 

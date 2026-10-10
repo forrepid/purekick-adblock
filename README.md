@@ -8,7 +8,7 @@
 
 [![GitHub license](https://img.shields.io/badge/license-Proprietary-blue.svg)](LICENSE)
 [![Manifest Version](https://img.shields.io/badge/Manifest-V3-brightgreen.svg)](manifest.json)
-[![PureKick Version](https://img.shields.io/badge/Version-10.19.14-orange.svg)](manifest.json)
+[![PureKick Version](https://img.shields.io/badge/Version-10.19.15-orange.svg)](manifest.json)
 [![Platform](https://img.shields.io/badge/Platform-Kick.com-53fc18.svg)](https://kick.com)
 
 </div>
@@ -104,21 +104,21 @@
 
 ## 📜 Sürüm Geçmişi (Changelog)
 
+### 🌐 Dil seçimi ve destek talepleri
+* Gelişmiş ayarlardan tarayıcı dilini kullanabilir veya 15 arayüz dilinden birini seçebilirsiniz. Çeviriler `_locales/<dil>/messages.json` dosyalarında tutulur; seçilen dil ayarlara kaydedilir ve eklenti bu kataloglardan okur. Çeviri için harici hizmet kullanılmaz.
+* Gelişmiş bölümündeki Destek ve Hata Bildirimleri kartı herkese açık GitHub taleplerini durumlarıyla listeler; yeni raporu başlık ve açıklamayla GitHub'da gönderime hazır açar.
+* Raporu GitHub'da göndermek için GitHub oturumu gerekir. Eklenti GitHub kişisel erişim anahtarı kullanmaz; hesap adı veya e-posta bilgisini rapor metnine eklemez. Oturumsuz anonim gönderim için güvenli bir aracı sunucu gerekir; böyle bir sunucu ayarlanana kadar anonim gönderim sunulmaz.
+
 Detaylı sürüm geçmişi ve versiyon bazlı değişiklikler için [CHANGELOG.md](CHANGELOG.md) dosyasını inceleyebilirsiniz.
 
-* **v10.19.14 (Son Sürüm):**
-  * 💬 Kanal bazlı sohbet arşivi, günlük log ve silinen mesaj metnini koruma.
-  * 👥 Çevrimiçi/çevrimdışı takip listesi gizleme ve kişi sınırı düzeltmeleri.
-  * 🔗 Sohbet bağlantı önizlemeleri, hover yayın başlığı ve profil kartı sayfa kapsamı iyileştirmeleri.
-  * 🎁 Abone rolü ve hediye KICKS destekçi kayıtlarının iyileştirilmesi.
-  * 🎙️ 15 dilli sesli klip komutu, mikrofon seviye göstergesi ve oynatıcı rozeti.
-  * 🎥 Kısayol aç/kapat, codec/bitrate geri dönüşü ve sessiz kayıt dosyası etiketi.
-  * 🎙️ Canlı Altyazı & Sesli AI Dublaj Motoru (Audio Ducking ve 25+ dil entegrasyonu).
-  * 🔍 Video İçi Dijital Büyüteç & Yakınlaştırma (Digital Zoom & Pan).
-  * 📝 AI Yayın Özeti & Kaçırılanları Yakala ("Ne Kaçırdım?" TL;DR bülteni).
-  * 💰 Canlı Yayın Bağış, Kicks, Hediye Abonelik & Blerp İstatistik Takipçisi (CSV dışa aktarma).
-  * 🎨 25 Farklı Doğa/Element/Büyü İsim Animasyon Efekti ve `🚫 Efektsiz (Varsayılan)` seçeneği.
-  * ⚙️ Kalıcı ayar depolama ve senkronizasyon optimizasyonu.
+* **v10.19.15 (Son Sürüm):**
+  * 🎬 Sohbet klipleri artık seçilen klibin gerçek HLS akışını oynatır; yanlış kanal yayını açılmaz.
+  * 🔗 Kick klipleri için ayrı HLS oynatıcı, KickBot sayfaları için doğrudan kaynak açılışı.
+  * 🔐 Link önizlemeleri için isteğe bağlı tüm HTTP/HTTPS site erişimi.
+  * 🌐 15 dil katalogları ve GitHub destek bildirim akışı güncellendi.
+  * ✅ Klip akışı, API ve izin senaryoları için regresyon testleri eklendi.
+
+> Eklenti içindeki **Gelişmiş → Sürüm notları** da aynı sürüm maddelerini gösterir. Yeni sürüm hazırlarken `content.js` sürüm listesi ve `_locales/tr/messages.json` çevirileri birlikte güncellenmelidir; test manifest sürümünün notlarda bulunmasını zorunlu kılar.
 
 * **v10.17:**
   * 🖼️ Picture-in-Picture (PiP) mini oynatıcı desteği.
